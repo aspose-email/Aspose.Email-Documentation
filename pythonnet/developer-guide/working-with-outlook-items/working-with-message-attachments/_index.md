@@ -45,6 +45,11 @@ You can also call the MapiMessage class static method DestoryAttachment(). It wo
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-DestroyAttachment-DestroyAttachment.cs" >}}
 ### **Adding MSG Attachments**
 An Outlook message can contain other Microsoft Outlook messages in attachments either as regular or embedded messages. The MapiAttachmentCollection provides overloaded members of the Add method to create Outlook messages with both types of attachments.
+{{% alert %}}
+**Try it out!**
+
+Add or remove email attachments online with the free [**Aspose.Email Editor App**](https://products.aspose.app/email/editor).
+{{% /alert %}}
 ### **Embedding Message as Attachment**
 The following code snippet shows you how to outlook MSG files embedded in a MSG file contains a PR_ATTACH_METHOD whose value equals 5.
 

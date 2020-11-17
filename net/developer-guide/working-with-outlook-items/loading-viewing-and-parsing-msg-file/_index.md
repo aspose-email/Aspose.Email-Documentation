@@ -24,6 +24,11 @@ Converting EML to MSG preserving embedded EML format
 
 EML files can be loaded into [MapiMessage](https://apireference.aspose.com/net/email/aspose.email.mapi/mapimessage) class by instantiating a [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage) object and passing it to [MapiMessage.FromMailMessage](https://apireference.aspose.com/net/email/aspose.email.mapi/mapimessage/methods/frommailmessage/index) method. If the EML file contains embedded EML files, use [MapiConversionOptions.PreserveEmbeddedMessageFormat](https://apireference.aspose.com/net/email/aspose.email.mapi/mapiconversionoptions/properties/preserveembeddedmessageformat) to retain the format of embedded EML files. The below code snippet shows how to load EML files into [MapiMessage](https://apireference.aspose.com/net/email/aspose.email.mapi/mapimessage) while preserving the format of embedded EML files.
 
+{{% alert %}}
+**Try it out!**
+
+Convert emails & message archives online with the free [**Aspose.Email Conversion App**](https://products.aspose.app/email/Conversion).
+{{% /alert %}}
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-PreservingEmbeddedMsgFormat-PreservingEmbeddedMsgFormat.cs" >}}

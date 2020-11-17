@@ -25,6 +25,13 @@ The following code snippet shows you how to merge into a single PST.
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-MergeMultiplePSTsInToSinglePST-MergePSTFiles.cs" >}}
+
+{{% alert %}}
+**Try it out!**
+
+Merge and combine multiple email files online into a single one with the free [**Aspose.Email Merger App**](https://products.aspose.app/email/merger).
+{{% /alert %}}
+
 ## **Merging Folders from another PST**
 The following code snippet shows you how to merge folders from another PST.
 

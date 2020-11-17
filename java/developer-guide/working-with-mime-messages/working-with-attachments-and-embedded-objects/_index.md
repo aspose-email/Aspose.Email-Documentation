@@ -7,6 +7,11 @@ url: /java/working-with-attachments-and-embedded-objects/
 
 ## **Managing Email Attachments**
 Email messages can contain attachments, files that are included either to improve the look and layout of the message, or files that the sender wants to share with the recipient. Sometimes, developers need to access and manipulate a message's attachments. Aspose.Email Java provides a handful of collections and methods for this purpose. Furthermore, it allows developers to add or remove attachments at run time. To demonstrate these features, this article loads an email message from the disk and accesses its attachment collection.
+{{% alert %}}
+**Try it out!**
+
+Add or remove email attachments with the free [**Aspose.Email Editor App**](https://products.aspose.app/email/editor).
+{{% /alert %}}
 ### **Adding Attachment**
 The code below shows how to add several attachments to an email message, after first creating the message.
 

@@ -8,6 +8,11 @@ url: /pythonnet/working-with-attachments-and-embedded-objects/
 
 ## **Managing Email Attachments**
 An email attachment is a computer file which is sent along with an email message. The file may be sent as a separate message as well as a part of the message to which it is attached. The Attachment class is used with the MailMessage class class. All messages include a body. In addition to the body, you might want to send additional files. These are sent as attachments and are represented as instance of the Attachment class. You can send any number of attachments but the size of the attachment is limited by the mail server. Gmail, for example, does not support file sizes greater than 10MB.
+{{% alert %}}
+**Try it out!**
+
+Add or remove email attachments online with the free [**Aspose.Email Editor App**](https://products.aspose.app/email/editor).
+{{% /alert %}}
 ### **Adding Attachment**
 To attach an attachment to an email, please follow these steps:
 

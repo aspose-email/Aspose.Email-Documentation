@@ -12,6 +12,11 @@ Any attachments and embedded images are included when converting from EML to MSG
 
 {{% /alert %}} 
 ## **Converting Email Messages**
+{{% alert %}}
+**Try it out!**
+
+Convert emails & message archives online with the free [**Aspose.Email Conversion App**](https://products.aspose.app/email/Conversion).
+{{% /alert %}}
 To convert a file:
 
 1. In the document library, right-click a file.

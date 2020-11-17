@@ -7,6 +7,13 @@ url: /pythonnet/splitting-and-merging-pst-files/
 
 
 Aspose.Email API provides the capability to split a single PST file into multiple PST files of desired file size. It can also merge multiple PST files into a single PST file. Both the splitting and merging of PSTs operations can be tracked by adding events to these operations.
+
+{{% alert %}}
+**Try it out!**
+
+Merge and combine multiple email files online into a single one with the free [**Aspose.Email Merger App**](https://products.aspose.app/email/merger).
+{{% /alert %}}
+
 ## **Splitting into multiple PSTs**
 The following code snippet shows you how to splitting multiple PSTs.
 

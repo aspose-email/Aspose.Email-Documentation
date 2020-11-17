@@ -71,6 +71,11 @@ Apose.Email for Java is divided into several separate components, each with part
 - Supports backup SMTP connection.
 - Specify the number of attempts for SMTP connections.
 ## **Aspose.Email.Mime**
+{{% alert %}}
+**Try it out!**
+
+Parse email files with the free [**Aspose.Email Parser App**](https://products.aspose.app/email/parser).
+{{% /alert %}}
 ### **General Parsing Features**
 - Extract email headers and message bodies.
 - Retrieve names and values from email headers.
@@ -88,6 +93,12 @@ Apose.Email for Java is divided into several separate components, each with part
 - Supports multiple parts.
 - Supports all character sets.
 - Retrieve metadata such as contentType, MimeVersion and XMailer.
+
+{{% alert %}}
+**Try it out!**
+
+Use [**Aspose.Email Metadata App**](https://products.aspose.app/email/metadata) to view and edit metadata online, built-in properties or custom properties of the message.
+{{% /alert %}}
 ### **Advance Parsing Features**
 - Load and parse emails in MSG, MHT and EML formats.
 ## **Aspose.Email.Pop3**

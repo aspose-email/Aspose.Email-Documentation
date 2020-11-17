@@ -28,3 +28,9 @@ The following sequence of steps serves this purpose:
 
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-ParsingOutlookMessageFiles-.java" >}}
+
+{{% alert %}}
+**Try it out!**
+
+Parse email files online with the free [**Aspose.Email Parser App**](https://products.aspose.app/email/parser).
+{{% /alert %}}

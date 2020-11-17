@@ -14,6 +14,13 @@ The following code samples illustrate how to split a large PST file into multipl
 The following code sample shows how multiple PSTs can be merged into a single large PST file.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-SplitAndMergePSTFile-MergeMultiplePSTsIntoASinglePST.java" >}}
+
+{{% alert %}}
+**Try it out!**
+
+Merge and combine multiple email files into a single one with the free [**Aspose.Email Merger App**](https://products.aspose.app/email/merger).
+{{% /alert %}}
+
 ## **Merge Folders from another PST**
 Aspose.Email API allows merging complete folders from another PST to a destination PST, thus resulting in a large size PST.
 
