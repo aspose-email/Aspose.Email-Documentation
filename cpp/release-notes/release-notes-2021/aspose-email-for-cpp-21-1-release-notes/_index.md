@@ -40,7 +40,7 @@ smtpClient->set_AllowedAuthentication(Aspose::Email::Clients::Smtp::SmtpKnownAut
 
 ### Returning the Recurring Calendar Items Within the Specified Date Range
 
-Now, **EWSClient** supports the return of the recurring calendar items within the range specified by **StartDate** and **EndDate**.
+Now, **EWSClient** supports the return of the recurring calendar items within the range specified by **StartDate** and **EndDate**.
 
 The following API has been added:
 
@@ -58,4 +58,4 @@ builder->get_Appointment()->SetCalendarView(System::DateTime::get_Now(), System:
 System::ArrayPtr<System::SharedPtr<Appointment>> appointments = client->ListAppointments(builder->GetQuery());
 ```
 
-The full code of the example can be found at **[Aspose Email for C++ GitHub examples repository](https://github.com/aspose-email/Aspose.Email-for-C).**
+The full code of the example can be found at **[Aspose Email for C++ GitHub examples repository](https://github.com/aspose-email/Aspose.Email-for-C).**
