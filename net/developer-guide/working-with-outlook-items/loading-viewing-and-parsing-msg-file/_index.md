@@ -13,6 +13,27 @@ The following code snippet shows you how to load MSG files.
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-LoadMSGFiles-LoadMSGFiles.cs" >}}
+
+The following code example shows how to use MailMessage to load a message in MSG format.
+
+```csharp
+
+MailMessage eml = MailMessage.Load("message.msg");
+
+```
+
+It should be noted that a resulting message is converted to eml format, including embedded message attachments. Don't use this loading method if you want to preserve some specific msg format properties of the original message.
+
+To preserve the original format of embedded message attachments, use the msgLoadOptions.PreserveEmbeddedMessageFormat property.
+
+```csharp
+
+MsgLoadOptions msgLoadOptions = new MsgLoadOptions();
+msgLoadOptions.PreserveEmbeddedMessageFormat = true;
+var msg = MailMessage.Load(stream, msgLoadOptions);
+
+```
+
 ## **Loading from Stream**
 The following code snippet shows you how to load file from stream.
 
