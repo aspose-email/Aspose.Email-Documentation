@@ -22,9 +22,9 @@ MailMessage eml = MailMessage.Load("message.msg");
 
 ```
 
-It should be noted that a resulting message is converted to eml format, including embedded message attachments. Don't use this loading method if you want to preserve some specific msg format properties of the original message.
+It should be noted that a resulting message is converted to EML format, including embedded message attachments. Don't use this loading method if you want to preserve some specific msg format properties of the original message.
 
-To preserve the original format of embedded message attachments, use the msgLoadOptions.PreserveEmbeddedMessageFormat property.
+To preserve the original format of embedded message attachments, use the [msgLoadOptions.PreserveEmbeddedMessageFormat](https://apireference.aspose.com/email/net/aspose.email/loadoptions/properties/preserveembeddedmessageformat) property.
 
 ```csharp
 
