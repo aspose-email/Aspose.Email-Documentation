@@ -419,7 +419,8 @@ You can also permanently remove a folder from the Deleted Items folder, if neces
 deletedItemsFolder.DeleteChildItem(emptyFolder.EntryId);
 ```
 
-The DeleteChildItem method can be used for any folders if you want to immediately and permanently delete subfolder, bypassing the Deleted Items folder.
+The [DeleteChildItem()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method can be used for any folders if you want to immediately and permanently delete subfolder, bypassing the Deleted Items folder.
+
 
 ```csharp
 FolderInfo someFolder = pst.RootFolder.GetSubFolder("Some folder");
@@ -692,7 +693,7 @@ using (PersonalStorage personalstorage = PersonalStorage.FromFile(dataDir + "Out
 Microsoft Outlook's key functionality is managing emails, calendars, tasks, contacts and journal entries. In addition, files can also be added to a PST folder and the resulting PST keeps record of the documents added. Aspose.Email provides the facility to add files to a folder in the same way in addition to adding messages, contacts, tasks and journal entries to PST. The following code snippet shows you how to add documents to a PST folder using Aspose.Email.
 
 ```csharp
-/ For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
 using (PersonalStorage personalStorage = PersonalStorage.Create(dataDir + "Ps1_out.pst", FileFormatVersion.Unicode))
 {
     FolderInfo folder = personalStorage.RootFolder.AddSubFolder("Files");
