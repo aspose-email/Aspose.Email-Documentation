@@ -15,9 +15,27 @@ The [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmes
 
 The following code snippet shows you how to display email information on the screen.
 
+```csharp
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// The path to the File directory.
+string dataDir = RunExamples.GetDataDir_Email();
 
+// Create MailMessage instance by loading an Eml file
+MailMessage message = MailMessage.Load(dataDir + "test.eml", new EmlLoadOptions());
 
-{{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-DisplayEmailInformation-DisplayEmailInformation.cs" >}}
+// Gets the sender info, recipient info, Subject, htmlbody and textbody
+Console.Write("From:");
+Console.WriteLine(message.From);
+Console.Write("To:");
+Console.WriteLine(message.To);
+Console.Write("Subject:");
+Console.WriteLine(message.Subject);
+Console.WriteLine("HtmlBody:");
+Console.WriteLine(message.HtmlBody);
+Console.WriteLine("TextBody");
+Console.WriteLine(message.Body);
+```
+
 ## **Extracting Email Headers**
 The email header represents an Internet and RFC defined standard set of header fields included in Internet email messages. An email header can be specified using the [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage) class. Common header types are defined in the [HeaderType](https://apireference.aspose.com/net/email/aspose.email/headertype) class. It is a sealed class working like normal enumeration. To extract headers from an email, follow these steps:
 
@@ -35,14 +53,38 @@ The following code snippet shows you how to extract email headers.
 ## **Get Decoded Header Values**
 The following code snippet shows you how to get decoded header values.
 
+```csharp
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+MailMessage mailMessage = MailMessage.Load(dataDir + "emlWithHeaders.eml");
+string decodedValue = mailMessage.Headers.GetDecodedValue("Thread-Topic");
+Console.WriteLine(decodedValue);
+```
+
+## **Get plain text body**
+The [Body](https://apireference.aspose.com/net/email/aspose.email/mailmessage/properties/body) property returns a plain text representation of message's body.
+
+```csharp
+string plainTextBody = mailMessage.Body;
+```
+
+Note: If the text/plain MIME part is present in a message, the property returns its text data. Otherwise, it returns the separated text content from the [HtmlBody](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/htmlbody) property without html markup. 
 
 
-{{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-GetDecodedHeaderValues-GetDecodedHeaderValue.cs" >}}
 ## **Get HTML body as plain text**
-The [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage) class provides the feature to extract the HTML body of the message as plain text. The [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage) class provides a [GetHtmlBodyText](https://apireference.aspose.com/net/email/aspose.email/mailmessage/methods/gethtmlbodytext) method that returns the HTML body in plain text. The [GetHtmlBodyText](https://apireference.aspose.com/net/email/aspose.email/mailmessage/methods/gethtmlbodytext) method accepts a boolean parameter that indicates whether the body should contain URLs or not. Passing the parameter as true indicates that the HTML body should contain URLs.
+The [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage) class provides the feature to extract the HTML body of the message as plain text. The [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage) class provides a [GetHtmlBodyText](https://apireference.aspose.com/net/email/aspose.email/mailmessage/methods/gethtmlbodytext) method that returns the HTML body in plain text. This method parses the [HtmlBody](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/htmlbody) property and returns separated plain text content ignoring the html markup. The [GetHtmlBodyText](https://apireference.aspose.com/net/email/aspose.email/mailmessage/methods/gethtmlbodytext) method accepts a boolean parameter that indicates whether the body should contain URLs or not. Passing the parameter as true indicates that the HTML body should contain URLs.
 
 The following code snippet demonstrates the use of [GetHtmlBodyText](https://apireference.aspose.com/net/email/aspose.email/mailmessage/methods/gethtmlbodytext) method to extract the HTML body of the email as plain text.
 
+```csharp
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// The path to the File directory.
+string dataDir = RunExamples.GetDataDir_Email();
 
+MailMessage mail = MailMessage.Load(dataDir + "HtmlWithUrlSample.eml");
 
-{{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-GetHTMLBodyAsPlainText-1.cs" >}}
+string body_with_url = mail.GetHtmlBodyText(true);// body will contain URL
+string body_without_url = mail.GetHtmlBodyText(false);// body will not contain URL
+
+Console.WriteLine("Body with URL: " + body_with_url);
+Console.WriteLine("Body without URL: " + body_without_url);
+```

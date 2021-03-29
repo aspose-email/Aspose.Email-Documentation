@@ -38,9 +38,24 @@ for (MapiAttachment att : msg.getAttachments())
     System.out.println("Attachment Display Name: " + att.getDisplayName());
 }
 ~~~
+The following code example shows how to use MailMessage to load a message in MSG format.
+
+
+```Java
+MailMessage eml = MailMessage.load("message.msg");
+```
+It should be noted that a resulting message is converted to EML format, including embedded message attachments. Don't use this loading method if you want to preserve some specific msg format properties of the original message.
+
+To preserve the original format of embedded message attachments, use the [MsgLoadOptions.PreserveEmbeddedMessageFormat](https://apireference.aspose.com/email/java/com.aspose.email/LoadOptions#setPreserveEmbeddedMessageFormat(boolean)) property.
+
+
+```Java
+MsgLoadOptions msgLoadOptions = new MsgLoadOptions();
+msgLoadOptions.setPreserveEmbeddedMessageFormat(true);
+MailMessage msg = MailMessage.load(stream, msgLoadOptions);
+```
 ## **Loading From Stream**
 The following code snippet shows you how to load file from stream.
-
 
 
 ~~~Java

@@ -1,10 +1,25 @@
 ---
-title: Support for IMAP Idle Command
+title: Support for IMAP IDLE Command
 type: docs
-weight: 40
+weight: 100
 url: /java/support-for-imap-idle-command/
 ---
 
-Aspose.Email API's [ImapClient](https://apireference.aspose.com/java/email/com.aspose.email/ImapClient) provides the capability to open a connection to the server and wait for the arrival of an email message. This allows avoiding polling the server again and again for any incoming email. The following code snippet demonstrates connecting to the server and waiting for emails.
 
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-imap-SupportForIMAPIdleCommand-.java" >}}
+Aspoe.Email API's [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) provides the capability to open a connection to the server and wait for the arrival of an email message. This allows avoiding polling the server again and again for any incoming email. The following code snippet shows you how to Support for IMAP Idle Command.
+
+
+
+~~~Java
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Connect and log in to IMAP
+ImapClient client = new ImapClient("imap.domain.com", "username", "password");
+
+client.startMonitoring(new ImapMonitoringEventHandler() {
+    public void invoke(Object sender, ImapMonitoringEventArgs e) {
+        System.out.println(e.getNewMessages().length);
+        System.out.println(e.getDeletedMessages().length);
+    }
+});
+client.stopMonitoring("Inbox");
+~~~

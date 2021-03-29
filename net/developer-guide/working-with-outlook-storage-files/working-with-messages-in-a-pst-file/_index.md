@@ -421,6 +421,7 @@ deletedItemsFolder.DeleteChildItem(emptyFolder.EntryId);
 
 The [DeleteChildItem()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method can be used for any folders if you want to immediately and permanently delete subfolder, bypassing the Deleted Items folder.
 
+
 ```csharp
 FolderInfo someFolder = pst.RootFolder.GetSubFolder("Some folder");
 pst.RootFolder.DeleteChildItem(someFolder.EntryId);

@@ -1,65 +1,139 @@
 ---
-title: Creating and Saving MSG files
+title: Creating and Saving MSG Files
 type: docs
 weight: 10
 url: /java/creating-and-saving-msg-files/
 ---
 
-{{% alert color="primary" %}} 
 
-Aspose.Email can create Outlook message (MSG) files. The [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class has a [save()](https://apireference.aspose.com/java/email/com.aspose.email/MailMessage#save\(java.lang.String\)) method that can save the Outlook MSG file to disk or stream. The code snippet below creates an instance of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class and set properties like from, to, subject, body, before saving it.
+Aspose.Email supports creating Outlook message (MSG) files. This article explains how to:
 
-{{% /alert %}} 
-## **Creating and Saving an MSG file**
-To create and save an MSG file:
+- Create MSG messages.
+- Create MSG messages with attachments.
+- Create a MSG message with an RTF body.
+- Save a message as a draft.
+- Work with body compression.
+## **Creating and Saving Outlook Messages**
+The [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class has the [save](https://apireference.aspose.com/java/email/com.aspose.email/MailMessage#save\(java.lang.String\)) method that can save Outlook MSG files to disk or stream. The code snippets below create an instance of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class, set properties like from, to, subject and body. The [save](https://apireference.aspose.com/java/email/com.aspose.email/MailMessage#save\(java.lang.String\)) method takes the file name as an argument. In addition, the Outlook Messages can be created with a [compressed RTF body](#creating-msg-files-with-rtf-body) using the [MapiConversionOptions](https://apireference.aspose.com/email/java/com.aspose.email/MapiConversionOptions).
 
-1. Creates a new instance of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class and set properties such as from, to, subject and body.
-1. Call the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class' [fromMailMessage()](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#fromMailMessage\(com.aspose.email.MailMessage\)) method which accepts the object of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage).
-1. Use the [fromMailMessage()](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#fromMailMessage\(com.aspose.email.MailMessage\)) method to convert the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) into [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) (MSG).
-1. Calls the [MapiMessage.save()](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#save\(java.lang.String\)) method to save the MSG file.
-
-If you open the saved file in Microsoft Outlook, it will look like the screenshot below.
-
-|![todo:image_alt_text](http://i.imgur.com/nx1w6WC.png)|
-| :- |
-|**Figure: The saved email message**|
-The following code snippet shows the use of [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) and [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) classes to save the email in MSG file
+1. Create a new instance of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class and set the From, To, Subject and Body properties.
+1. Call the [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) class [fromMailMessage](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#fromMailMessage\(java.lang.String\)) method which accepts the object of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) type. The [fromMailMessage](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#fromMailMessage\(java.lang.String\)) method converts the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) into a [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) (MSG).
+1. Call the [MapiMessage.save](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#save\(java.lang.String\)) method to save the MSG file.
 
 
+~~~Java
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// The path to the File directory.
+String dataDir = "outlook/";
 
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateAndSaveOutlookMessageFile-CreateAndSaveOutlookMessageFile.java" >}}
-## **Save Message as Draft**
-A draft is an unfinished message that has not yet been sent, instead, it is stored in a separate folder for future use. With Aspose.Email for Java, programmers can create a message using the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class and store it on disk using the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class.
+// Create an instance of the MailMessage class
+MailMessage mailMsg = new MailMessage();
 
-Draft email messages are always in Outlook (MSG) format.
+// Set from, to, subject and body properties
+mailMsg.setFrom(MailAddress.to_MailAddress("sender@domain.com"));
+mailMsg.setTo(MailAddressCollection.to_MailAddressCollection("receiver@domain.com"));
+mailMsg.setSubject("This is test message");
+mailMsg.setBody("This is test body");
 
-To save a draft email:
+// Create an instance of the MapiMessage class and pass MailMessage as argument
+MapiMessage outlookMsg = MapiMessage.fromMailMessage(mailMsg);
 
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) class.
-1. Set the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) object's properties like the subject, body, from, to and CC.
-1. Create an instance of the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class.
-1. Load a [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) instance in the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) object using the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class' [fromMailMessage()](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#fromMailMessage\(com.aspose.email.MailMessage\)) method.
-1. Set the message flags using the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class' [setMessageFlags()](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessageItemBase#setMessageFlags\(long\)) method.
-1. Save the message to disk in Outlook format using the [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class' [save()](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#save\(java.lang.String\)) method.
+// Save the message (MSG) file
+String strMsgFile = "CreatingAndSavingOutlookMessages_out.msg";
+outlookMsg.save(dataDir + strMsgFile);
+~~~
+## **Creating MSG Files With Attachments**
+[In the example above](#creating-and-saving-outlook-messages), we created a simple MSG file. Aspose.Email also supports saving message files with attachments. All you need to do is to add the attachments to the [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) instance. Add attachments by calling the *addItem* method on the [MailMessage.Attachments](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#getAttachments()) collection.
 
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-SaveMessageAsDraft-.java" >}}
+
+
+~~~Java
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// The path to the File directory.
+String dataDir = "outlook/";
+
+String[] files = new String[2];
+files[0] = "attachment.doc";
+files[1] = "attachment.png";
+
+// Create an instance of the MailMessage class
+MailMessage mailMsg = new MailMessage();
+
+// Set from, to, subject and body properties
+mailMsg.setFrom(MailAddress.to_MailAddress("sender@domain.com"));
+mailMsg.setTo(MailAddressCollection.to_MailAddressCollection("receiver@domain.com"));
+mailMsg.setSubject("This is test message");
+mailMsg.setBody("This is test body");
+
+// Add the attachments
+for (String strFileName : files)
+{
+    mailMsg.getAttachments().addItem(new Attachment(strFileName));
+}
+
+// Create an instance of MapiMessage class and pass MailMessage as argument
+MapiMessage outlookMsg = MapiMessage.fromMailMessage(mailMsg);
+String strMsgFile = "CreateMessagesWithAttachments.msg";
+outlookMsg.save(dataDir + strMsgFile);
+~~~
+## **Creating MSG Files With RTF Body**
+You can also create Outlook Message (MSG) files with rich text (RTF) bodies with Aspose.Email. The RTF body supports text formatting. Create one by setting the [MailMessage.HtmlBody](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#getHtmlBody()) property. When you convert a [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) instance into a [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) instance, the HTML body is converted into RTF. This way, the formatting of the email body is preserved.
+
+The following example creates an MSG file with an RTF body. There is one heading, bold and underline formatting applied in the HTML body. This formatting is retained when the HTML is converted into RTF.
+
+
+
+~~~Java
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// The path to the File directory.
+String dataDir = "outlook/";
+
+// Create an instance of the MailMessage class
+MailMessage mailMsg = new MailMessage();
+
+// Set from, to, subject and body properties
+mailMsg.setFrom(MailAddress.to_MailAddress("sender@domain.com"));
+mailMsg.setTo(MailAddressCollection.to_MailAddressCollection("receiver@domain.com"));
+mailMsg.setSubject("This is test message");
+mailMsg.setHtmlBody("<h3>rtf example</h3><p>creating an <b><u>outlook message (msg)</u></b> file using Aspose.Email.</p>");
+
+MapiMessage outlookMsg = MapiMessage.fromMailMessage(mailMsg);
+outlookMsg.save(dataDir + "CreatingMSGFilesWithRTFBody_out.msg");
+~~~
+## **Saving Message in Draft Status**
+Emails are saved as drafts when someone has started editing them but wants to return to them to complete them later. Aspose.Email supports saving email messages in draft status by setting a message flag. Below is the sample code to save an Outlook email message (MSG) as a draft.
+
+
+
+~~~Java
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// The path to the File directory.
+String dataDir = "outlook/";
+
+// Change properties of an existing MSG file
+String strExistingMsg = "message.msg";
+
+// Load the existing file in MailMessage and Change the properties
+MailMessage msg = MailMessage.load(dataDir + strExistingMsg, new MsgLoadOptions());
+msg.setSubject(msg.getSubject() + " NEW SUBJECT (updated by Aspose.Email)");
+msg.setHtmlBody(msg.getHtmlBody() + " NEW BODY (udpated by Aspose.Email)");
+
+// Create an instance of type MapiMessage from MailMessage, Set message flag to un-sent (draft status) and Save it
+MapiMessage mapiMsg = MapiMessage.fromMailMessage(msg);
+mapiMsg.setMessageFlags(MapiMessageFlags.MSGFLAG_UNSENT);
+mapiMsg.save(dataDir + "SavingMessageInDraftStatus_out.msg");
+~~~
 ## **Implications of Body Compression**
-The RTF body compression method can be used to generate a smaller size MSG. However, this results in slower speed. To creating messages with improved speed, set the flag to **false**. This flag, in turn, has an effect on the created PSTs: smaller MSG files result in smaller PST, and large MSG files result in slower PST creation.
-
-**Smaller Size**
-
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateAndSaveOutlookMessageFile-BodyCompressionFlagSetToTrue.java" >}}
+The RTF body compression method can be used to generate a smaller size MSG. However, this results in slower creation speed. To create messages with improved speed, set the flag to **false**. This flag, in turn, has an effect on the created PSTs: smaller MSG files result in smaller PST, and large MSG files result in slower PST creation.
 
 
 
-**Faster**
+~~~Java
+// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+String fileName = "outlook/test.msg";
 
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateAndSaveOutlookMessageFile-BodyCompressionFlagSetToFalse.java" >}}
-## **Preserving Original Email Address**
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-ConvertEmailMessages-PreservingOriginalEmailAddress.java" >}}
-## **Status of Recipients from a Meeting Request**
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-ConvertEmailMessages-StatusOfRecipientsFromAMeetingRequest.java" >}}
-## **Converting EML to MSG Preserving Embedded EML format**
-EML files can be loaded into [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) class by instantiating a [MailMessage](https://apireference.aspose.com/java/email/com.aspose.email/mailmessage) object and passing it to [MapiMessage.FromMailMessage](https://apireference.aspose.com/java/email/com.aspose.email/MapiMessage#fromMailMessage\(com.aspose.email.MailMessage\)) method. If the EML file contains embedded EML files, use [MapiConversionOptions.setPreserveEmbeddedMessageFormat](https://apireference.aspose.com/java/email/com.aspose.email/MapiConversionOptions#setPreserveEmbeddedMessageFormat\(boolean\)) to retain the format of embedded EML files. The below code snippet shows how to load EML files into [MapiMessage](https://apireference.aspose.com/java/email/com.aspose.email/mapimessage) while preserving the format of embedded EML files.
-
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-PreservingEmbeddedMsgFormat-PreservingEmbeddedMsgFormat.java" >}}
+MailMessage message = MailMessage.load(fileName);
+MapiConversionOptions options = new MapiConversionOptions();
+options.setUseBodyCompression(true);
+MapiMessage ae_mapi = MapiMessage.fromMailMessage(message, options);
+~~~
