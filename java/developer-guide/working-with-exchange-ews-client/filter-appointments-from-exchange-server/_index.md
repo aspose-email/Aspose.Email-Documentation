@@ -1,16 +1,37 @@
 ---
 title: Filter Appointments from Exchange Server
 type: docs
-weight: 150
+weight: 130
 url: /java/filter-appointments-from-exchange-server/
 ---
 
+
 ## **Filtering Appointments with EWS**
-The [IEWSClient](https://apireference.aspose.com/java/email/com.aspose.email/IEWSClient) provides the facility to filter appointments from the Exchange server using the [ExchangeQueryBuilder](https://apireference.aspose.com/java/email/com.aspose.email/ExchangeQueryBuilder). Appointments can be filtered based on:
+The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the facility to filter appointments from the Exchange server using the [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Appointments can be filtered based on:
 
 - Dates
 - Recurrences
 ### **Filtering Appointments by Dates**
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-exchangeews-FilterAppointmentsUsingEWS-FilterAppointmentsByDateUsingEWS.java" >}}
+
+
+~~~Java
+IEWSClient client = EWSClient.getEWSClient(mailboxUri, username, password, domain);
+
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+Date startTime = sdf.parse("15/09/2017 00:00:00");
+Date endTime = sdf.parse("10/10/2017 00:00:00");
+ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
+builder.getAppointment().getStart().since(startTime);
+builder.getAppointment().getEnd().beforeOrEqual(endTime);
+MailQuery query = builder.getQuery();
+Appointment[] appointments = client.listAppointments(query);
+~~~
 ### **Filtering Appointments by Recurring Events**
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-exchangeews-FilterAppointmentsUsingEWS-FilterAppointmentsByRecurrenceUsingEWS.java" >}}
+
+
+~~~Java
+builder = new ExchangeQueryBuilder();
+builder.getAppointment().isRecurring().equals(false);
+query = builder.getQuery();
+appointments = client.listAppointments(query);
+~~~
