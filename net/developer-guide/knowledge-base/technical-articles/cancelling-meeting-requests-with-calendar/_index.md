@@ -30,10 +30,10 @@ To cancel a meeting request, first get the email message's message ID. Since we 
 1. Selecting the row for which to send the cancellation request.
 1. Click **Send Cancel Request** to send the request.
 1. The code gets the ID from the selected row of the grid and queries the database to get the attendee, message and calendar related information.
-1. Create an instances of the Calendar Class and [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage)
+1. Create an instances of the Calendar Class and [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage)
    class classes using the information retrieved from the database.
 1. Use the Appointment.CancelAppointment() method to send the cancellation request.
-1. Send the mail using the [SMTP](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient).
+1. Send the mail using the [SMTP](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient).
 
 The following code snippet shows you how to cancel the meeting request.
 

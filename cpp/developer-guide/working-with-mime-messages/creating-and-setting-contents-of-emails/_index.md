@@ -45,7 +45,7 @@ In addition to HtmlBody and TextBody, Aspose.Email has another two read-only pro
 This article shows how to define plain text or HTML body text, set alternate text and encode the email body.
 
 ### **Setting HTML Body**
-[HtmlBody](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) is used to specify the HTML content of a message body. HtmlBody must be enclosed between <html> </html> tags. The following code snippet shows you how to set HTML body.
+[HtmlBody](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) is used to specify the HTML content of a message body. HtmlBody must be enclosed between <html> </html> tags. The following code snippet shows you how to set HTML body.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-SetHTMLBody-SetHTMLBody.cpp" >}}
 

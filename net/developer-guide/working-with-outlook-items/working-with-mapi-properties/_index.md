@@ -7,16 +7,16 @@ url: /net/working-with-mapi-properties/
 
 
 ## **Accessing and Setting Outlook MAPI Property**
-The [MapiProperty](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiproperty) class represents a MAPI property, which contains:
+The [MapiProperty](https://reference.aspose.com/email/net/aspose.email.mapi/mapiproperty) class represents a MAPI property, which contains:
 
-- [Name](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/name): a string that represents the property's name.
-- [Tag](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/tag): a long that represents the property's tag.
-- [Data](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/data): a byte array which represents the property's data.
+- [Name](https://reference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/name): a string that represents the property's name.
+- [Tag](https://reference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/tag): a long that represents the property's tag.
+- [Data](https://reference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/data): a byte array which represents the property's data.
 ### **Getting MAPI Property using the MAPI Property Tag**
 To get MAPI properties:
 
-1. Create an instance of [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) by [loading from files or stream](/email/net/managing-message-files-with-aspose-email-outlook/).
-1. Get the [MapiProperty](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiproperty) from [MapiMessage.Properties](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/index) by [MapiPropertyTag](https://apireference.aspose.com/email/net/aspose.email.mapi/mapipropertytag) keys.
+1. Create an instance of [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) by [loading from files or stream](/email/net/managing-message-files-with-aspose-email-outlook/).
+1. Get the [MapiProperty](https://reference.aspose.com/email/net/aspose.email.mapi/mapiproperty) from [MapiMessage.Properties](https://reference.aspose.com/email/net/aspose.email.mapi/mapiproperty/properties/index) by [MapiPropertyTag](https://reference.aspose.com/email/net/aspose.email.mapi/mapipropertytag) keys.
 
 The following code snippet shows you how to get MAPI property using the MAPI property tag.
 
@@ -56,7 +56,7 @@ The following code snippet shows you how to read named MAPI properties from the 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadNamedMAPIProperties-ReadNamedMAPIProperties.cs" >}}
 ### **Reading Named MAPI Property from Attachment**
-Aspose.Email also allows you to traverse through the properties of a [MapiAttachment](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiattachment) and search for a named property, in a way similar to the example above, for [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage). The following code snippet shows you how to search for a named property through the attachment's property collection.
+Aspose.Email also allows you to traverse through the properties of a [MapiAttachment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment) and search for a named property, in a way similar to the example above, for [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage). The following code snippet shows you how to search for a named property through the attachment's property collection.
 
 
 

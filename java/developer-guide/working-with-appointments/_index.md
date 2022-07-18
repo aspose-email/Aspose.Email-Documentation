@@ -78,7 +78,7 @@ Aspose.Email for Java API allows to get or set the product identifier that creat
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-appointment-WorkingWithAppointments-ICSSaveOptions.cs" >}}
 
 ## **How to get around Address Validation when trying to Load Appointments**
-Aspose.Email for Java API allows to get around the email validation error by setting the [IgnoreSmtpAddressCheck](https://apireference.aspose.com/email/java/com.aspose.email/AppointmentLoadOptions#setIgnoreSmtpAddressCheck\(boolean\)) option on the [AppointmentLoadOptions](https://apireference.aspose.com/email/java/com.aspose.email/AppointmentLoadOptions) object and passing it in to the load call.
+Aspose.Email for Java API allows to get around the email validation error by setting the [IgnoreSmtpAddressCheck](https://reference.aspose.com/email/java/com.aspose.email/AppointmentLoadOptions#setIgnoreSmtpAddressCheck\(boolean\)) option on the [AppointmentLoadOptions](https://reference.aspose.com/email/java/com.aspose.email/AppointmentLoadOptions) object and passing it in to the load call.
 
 ~~~Java
 AppointmentLoadOptions lo = new AppointmentLoadOptions();

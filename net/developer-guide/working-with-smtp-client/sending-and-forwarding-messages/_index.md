@@ -6,22 +6,22 @@ url: /net/sending-and-forwarding-messages/
 ---
 
 
-The [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class allows applications to send email using the Simple Mail Transfer Protocol (SMTP).
+The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class allows applications to send email using the Simple Mail Transfer Protocol (SMTP).
 
-- The [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class is the only major entry developers use to send mail messages.
-- The [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class also provides other common email delivery methods, including writing email messages to the file system, message queue etc.
-- The [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class fully supports these two programming models:
+- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class is the only major entry developers use to send mail messages.
+- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class also provides other common email delivery methods, including writing email messages to the file system, message queue etc.
+- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class fully supports these two programming models:
   - [Synchronous](#sending-emails-synchronously)
   - [Asynchronous](#sending-emails-asynchronously)
-- The [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class also supports [sending messages as TNEF](#sending-message-as-tnef)
+- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class also supports [sending messages as TNEF](#sending-message-as-tnef)
 
-To send the email message and block while waiting for the email to be transmitted to the SMTP server, use one of the synchronous Send methods. To allow your program's main thread to continue executing while the email is transmitted, use the [BeginSend](https://apireference.aspose.com/error/404?path=email/net/aspose.email.clients.smtp/smtpclient/methods/beginsend/index) method.
+To send the email message and block while waiting for the email to be transmitted to the SMTP server, use one of the synchronous Send methods. To allow your program's main thread to continue executing while the email is transmitted, use the [BeginSend](https://reference.aspose.com/error/404?path=email/net/aspose.email.clients.smtp/smtpclient/methods/beginsend/index) method.
 ## **Sending Emails Synchronously**
-An email message can be sent synchronously using the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method. It sends the specified email message through an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using String objects. To send an email message synchronously, follow the steps given below:
+An email message can be sent synchronously using the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method. It sends the specified email message through an SMTP server for delivery. The message sender, recipients, subject, and message body are specified using String objects. To send an email message synchronously, follow the steps given below:
 
-1. Create an instance of [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class and set its properties.
-1. Create an instance of [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and specify the Host, port, username & Password.
-1. Send the Message using the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp.smtpclient/send/methods/5) method and pass the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
+1. Create an instance of [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class and set its properties.
+1. Create an instance of [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and specify the Host, port, username & Password.
+1. Send the Message using the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp.smtpclient/send/methods/5) method and pass the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
 
 The following code snippet shows you how to send emails synchronously.
 
@@ -67,7 +67,7 @@ using (var client = new SmtpClient(host, smtpPort, username, password))
 ```
 
 ## **Sending Stored Messages from Disc**
-EML files, (Outlook Express Electronic Mail files) contains an email's header, message body, and any attachments. Aspose.Email lets developers work with EML files in different ways. This article shows how to load EML files from disk and send them as emails with SMTP. You can load .eml files from disk or stream into the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class and send the email message using the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class. The [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class is the main class for creating new email messages, loading email message files from disk or stream and saving the messages. The following code snippet shows how to sending stored messages from the disc.
+EML files, (Outlook Express Electronic Mail files) contains an email's header, message body, and any attachments. Aspose.Email lets developers work with EML files in different ways. This article shows how to load EML files from disk and send them as emails with SMTP. You can load .eml files from disk or stream into the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class and send the email message using the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class. The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class is the main class for creating new email messages, loading email message files from disk or stream and saving the messages. The following code snippet shows how to sending stored messages from the disc.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -87,12 +87,12 @@ catch (Exception ex)
 }            
 ```
 ## **Sending Plain Text Email**
-The programming samples below show how to send a plain text email message. The [Body](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/body) property, a property of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class, is used to specify the plain text content of the message body. To send a plain text email message, follow these steps:
+The programming samples below show how to send a plain text email message. The [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/properties/body) property, a property of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class, is used to specify the plain text content of the message body. To send a plain text email message, follow these steps:
 
-- Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-- Specify the sender and receiver email addresses in the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
-- Specify the [Body](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/body) content, used for the plain text message.
-- Create an instance of the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email.
+- Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+- Specify the sender and receiver email addresses in the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
+- Specify the [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/properties/body) content, used for the plain text message.
+- Create an instance of the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email.
 
 The following code snippet shows you how to send a plain text email.
 
@@ -127,12 +127,12 @@ catch (Exception ex)
 }
 ```
 ## **Sending Email with HTML body**
-The programming samples below show how you can send a simple HTML email message. The [HtmlBody](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/htmlbody), a property of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class, is used to specify the HTML content of the message body. To send a simple HTML email, follow these steps:
+The programming samples below show how you can send a simple HTML email message. The [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/properties/htmlbody), a property of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class, is used to specify the HTML content of the message body. To send a simple HTML email, follow these steps:
 
-- Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-- Specify sender and receiver email address in the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
-- Specify the [HtmlBody](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/htmlbody) content.
-- Create an instance of the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email using the [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method.
+- Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+- Specify sender and receiver email address in the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
+- Specify the [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/properties/htmlbody) content.
+- Create an instance of the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email using the [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method.
 
 For the purposes of this article, the HTML content of the email is rudimentary: <html><body>This is the HTML body</body></html> Most HTML emails will be more complex. The following code snippet shows you how to send an email with HTML body.
 
@@ -171,16 +171,16 @@ private static SmtpClient GetSmtpClient()
 }
 ```
 ## **Sending Email with Alternate Message Text**
-The programming samples below show how to send a simple HTML email message with alternative content. Use the [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) class to specify copies of an email message in different formats. For example, if you send a message in HTML, you might also want to provide a plain text version for recipients who use email readers that cannot display HTML content. Or, if you are sending a newsletter, you might want to provide a plain text copy of the text for those recipients who have chosen to receive a plain text version. To send an email with alternate text, follow these steps:
+The programming samples below show how to send a simple HTML email message with alternative content. Use the [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview) class to specify copies of an email message in different formats. For example, if you send a message in HTML, you might also want to provide a plain text version for recipients who use email readers that cannot display HTML content. Or, if you are sending a newsletter, you might want to provide a plain text copy of the text for those recipients who have chosen to receive a plain text version. To send an email with alternate text, follow these steps:
 
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-1. Specify sender and receiver email addresses in the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
-1. Create an instance of the [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) class.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+1. Specify sender and receiver email addresses in the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
+1. Create an instance of the [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview) class.
 
 This creates an alternate view to an email message using the content specified in the string.
 
-1. Add the instance of the [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) class to the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) object.
-1. Create an instance of the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email using the [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method.
+1. Add the instance of the [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview) class to the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) object.
+1. Create an instance of the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email using the [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method.
 
 The following code snippet shows you how to send an email with alternate text.
 
@@ -196,16 +196,16 @@ AlternateView alternate = AlternateView.CreateAlternateViewFromString("Alternate
 message.AlternateViews.Add(alternate);
 ```
 ## **Sending Bulk Emails**
-Sending emails in bulk means sending a batch of emails in one message. We can send a batch of email using the of [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method overload that accepts a [MailMessageCollection](https://apireference.aspose.com/email/net/aspose.email/mailmessagecollection):
+Sending emails in bulk means sending a batch of emails in one message. We can send a batch of email using the of [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method overload that accepts a [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection):
 
-1. Create an instance of [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class.
-1. Specify the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class properties.
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-1. Specify sender, receiver, mail subject and message in the instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
+1. Create an instance of [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class.
+1. Specify the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class properties.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+1. Specify sender, receiver, mail subject and message in the instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
 1. Repeat the above two steps again, if you want to send email to a different person.
-1. Create an instance of [MailMessageCollection](https://apireference.aspose.com/email/net/aspose.email/mailmessagecollection) class.
-1. Add an instance of [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class in the object of the [MailMessageCollection](https://apireference.aspose.com/email/net/aspose.email/mailmessagecollection) class.
-1. Now send your email using the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method by passing the instance of [MailMessageCollection](https://apireference.aspose.com/email/net/aspose.email/mailmessagecollection) class in it.
+1. Create an instance of [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection) class.
+1. Add an instance of [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class in the object of the [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection) class.
+1. Now send your email using the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method by passing the instance of [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection) class in it.
 
 The following code snippet shows you how to send bulk emails.
 
@@ -240,7 +240,7 @@ catch (Exception ex)
 
 ### Getting information about bulk messages sent
 
-When you send messages in bulk, you can get an information about the number of successfully sent messages and moreover, it is possible to get a list of these messages. A new [SucceededSending](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/events/succeededsending) event was added to [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) for this purpose.
+When you send messages in bulk, you can get an information about the number of successfully sent messages and moreover, it is possible to get a list of these messages. A new [SucceededSending](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/events/succeededsending) event was added to [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) for this purpose.
 
 Code sample:
 ```csharp
@@ -261,7 +261,7 @@ using (SmtpClient client = new SmtpClient(host, SecurityOptions.Auto))
 ```
 
 ## **Sending Emails with MultiConnection**
-[SmtpClient](https://apireference.aspose.com/error/404?path=email/net/aspose.email.mail/smtpclient) provides a [UseMultiConnection](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/properties/usemulticonnection) property which can be used to create multiple connections for heavy operations. You may also set the number of connections to be used during multiconnection mode by using [SmtpClient.ConnectionsQuantity](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/properties/connectionsquantity). The following code snippet demonstrates the use of the multiconnection mode for sending multiple messages.
+[SmtpClient](https://reference.aspose.com/error/404?path=email/net/aspose.email.mail/smtpclient) provides a [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/properties/usemulticonnection) property which can be used to create multiple connections for heavy operations. You may also set the number of connections to be used during multiconnection mode by using [SmtpClient.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/properties/connectionsquantity). The following code snippet demonstrates the use of the multiconnection mode for sending multiple messages.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -295,7 +295,7 @@ Please note that the usage of multiconnection mode does not guarantee performanc
 
 {{% /alert %}} 
 ## **Sending Message as TNEF**
-TNEF emails have special formatting which may be lost if sent using the standard API. Aspose.Email provides the capability to send emails as TNEF, thus preserving the format. The [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [UseTnef](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/properties/usetnef) property can be set to send the email as TNEF. The following code snippet shows you how to send a message as TNEF.
+TNEF emails have special formatting which may be lost if sent using the standard API. Aspose.Email provides the capability to send emails as TNEF, thus preserving the format. The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [UseTnef](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/properties/usetnef) property can be set to send the email as TNEF. The following code snippet shows you how to send a message as TNEF.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -318,11 +318,11 @@ Microsoft Outlook offers calendar functions as well as email management. When a 
 ### **Sending Requests via Email**
 To send meeting requests via email, follow these steps:
 
-- Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-- Specify sender and recipient addresses using an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-- Initialize an instance of the [Appointment](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment) class and pass its values.
-- Specify summary and description in the [Calendar](https://apireference.aspose.com/tasks/net/aspose.tasks/calendar) instance.
-- Add the [Calendar](https://apireference.aspose.com/tasks/net/aspose.tasks/calendar) to the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance and pass it the [Appointment](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment) instance.
+- Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+- Specify sender and recipient addresses using an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+- Initialize an instance of the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment) class and pass its values.
+- Specify summary and description in the [Calendar](https://reference.aspose.com/tasks/net/aspose.tasks/calendar) instance.
+- Add the [Calendar](https://reference.aspose.com/tasks/net/aspose.tasks/calendar) to the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance and pass it the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment) instance.
 
 |**iCalendar meeting request sent by email**|
 | :- |
@@ -362,7 +362,7 @@ catch (Exception ex)
 Aspose.Email calendar feature is based on the iCalendar standard, a standard for calendar data exchange (RFC 2445 or RFC2445 Syntax Reference). Therefore, it supports not only Microsoft Outlook but also IBM Lotus Notes. To send a meeting request in Lotus Notes, follow the same steps as mentioned above.
 ## **Forward an Email using SMTP Client**
 ### **Forwarding Email with SMTP client**
-Forwarding an email is common practice in daily life digital communication. An email received can be forwarded to specific recipients without sharing with the original senders. Aspose.Email API's [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) provides the capability to forward an email to specific recipients. Its Forward method can be used to forward a received or saved email to desired recipients as shown in this article. The following code snippet shows you how to Forward an Email using SMTP Client.
+Forwarding an email is common practice in daily life digital communication. An email received can be forwarded to specific recipients without sharing with the original senders. Aspose.Email API's [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) provides the capability to forward an email to specific recipients. Its Forward method can be used to forward a received or saved email to desired recipients as shown in this article. The following code snippet shows you how to Forward an Email using SMTP Client.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -382,7 +382,7 @@ MailMessage message = MailMessage.Load(dataDir + "Message.eml");
 client.Forward("Recipient1@domain.com", "Recipient2@domain.com", message);
 ```
 ### **Forwarding Email without using MailMessage**
-The API also supports forwarding EML messages without first loading into [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage). This is useful in cases where there are limited resources in terms of system memory.
+The API also supports forwarding EML messages without first loading into [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage). This is useful in cases where there are limited resources in terms of system memory.
 
 ```csharp
 
@@ -417,19 +417,19 @@ Aspose.Email lets developers set up mail merges that include data from a variety
 To perform a mail merge with Aspose.Email, take the following steps:
 
 1. Create a function with the name signature
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
 1. Specify the sender, receiver, subject, and body.
 1. Create a signature for the end of the email.
-1. Create an instance of the [TemplateEngine](https://apireference.aspose.com/email/net/aspose.email.tools.merging/templateengine) class and pass it the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
-1. Take signature in the [TemplateEngine](https://apireference.aspose.com/email/net/aspose.email.tools.merging/templateengine) instance.
+1. Create an instance of the [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine) class and pass it the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
+1. Take signature in the [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine) instance.
 1. Create an instance of the DataTable class.
 1. Add the columns **Receipt**, **FirstName** and **LastName** as data sources in the DataTable class.
 1. Create an instance of the DataRow class.
 1. Specify the receipt address, first and last names in the DataRow object.
-1. Create an instance of the [MailMessageCollection](https://apireference.aspose.com/email/net/aspose.email/mailmessagecollection) class
-1. Specify the [TemplateEngine](https://apireference.aspose.com/email/net/aspose.email.tools.merging/templateengine)  and DataTable instances in the [MailMessageCollection](https://apireference.aspose.com/email/net/aspose.email/mailmessagecollection) instance.
-1. Create an instance of the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and specify the server, port, username, and password.
-1. Send emails using the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method.
+1. Create an instance of the [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection) class
+1. Specify the [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine)  and DataTable instances in the [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection) instance.
+1. Create an instance of the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and specify the server, port, username, and password.
+1. Send emails using the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/methods/send/index) method.
 
 In the sample below, #FirstName# indicates a column's DataTable, whose value is set by the user. The following code snippet shows you how to perform Mail Merge.
 
@@ -515,7 +515,7 @@ static object GetSignature(object[] args)
 }
 ```
 ## **Performing Row-Wise Mail Merge**
-User can merge individual data row as well to get a complete and prepared [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) object. The [TemplateEngine.Merge](https://apireference.aspose.com/email/net/aspose.email.tools.merging/templateengine/methods/merge/index) method can be used to perform a row-wise mail merge.
+User can merge individual data row as well to get a complete and prepared [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) object. The [TemplateEngine.Merge](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/methods/merge/index) method can be used to perform a row-wise mail merge.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

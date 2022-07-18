@@ -6,7 +6,7 @@ url: /cpp/working-with-user-configuration-on-server/
 ---
 
 ## **Managing User Configuration**
-Aspose.Email API can be used to manage user configuration on an Exchange Server with the [EWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.e_w_s_client/) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. In this article, we will see how to read, create, update, and delete user configurations on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features described in this article. The following code snippet shows you how to connect to Exchange Server 2010 in all the examples in this article.
+Aspose.Email API can be used to manage user configuration on an Exchange Server with the [EWSClient](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.e_w_s_client/) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. In this article, we will see how to read, create, update, and delete user configurations on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features described in this article. The following code snippet shows you how to connect to Exchange Server 2010 in all the examples in this article.
 
 
 
@@ -14,8 +14,8 @@ Aspose.Email API can be used to manage user configuration on an Exchange Server 
 ### **Reading User Configuration**
 To get the user configuration information of a specific folder from the Exchange Server:
 
-1. Connect to Exchange Server using [IEWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
-1. Call the [GetUserConfiguration()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a33a6fd6cd562b05c84b656a3c2515111) method to get the user configuration for a folder.
+1. Connect to Exchange Server using [IEWSClient](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
+1. Call the [GetUserConfiguration()](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a33a6fd6cd562b05c84b656a3c2515111) method to get the user configuration for a folder.
 1. Display the user configuration properties like ID, name and dictionary items as key-value pairs.
 
 The following code snippet shows you how to read user configuration.
@@ -26,8 +26,8 @@ The following code snippet shows you how to read user configuration.
 ### **Creating User Configurations**
 To create the user configuration for a specific folder on the Exchange Server:
 
-1. Connect to the Exchange Server using [IEWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
-1. Call the [CreateUserConfiguration()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a5dfcc5761b64ed0d0da8a6e45fc768db) method to create the user configuration for a folder.
+1. Connect to the Exchange Server using [IEWSClient](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
+1. Call the [CreateUserConfiguration()](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a5dfcc5761b64ed0d0da8a6e45fc768db) method to create the user configuration for a folder.
 
 The following code snippet shows you how to create user configurations.
 
@@ -37,8 +37,8 @@ The following code snippet shows you how to create user configurations.
 ### **Updating User Configuration**
 To update the user configuration for a specific folder in the Exchange Server:
 
-1. Connect to the Exchange Server using [IEWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
-1. Call the [UpdateUserConfiguration()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a0abf4f3032f63918fca528cbf1d4418e) method to update the user configuration for a folder.
+1. Connect to the Exchange Server using [IEWSClient](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
+1. Call the [UpdateUserConfiguration()](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a0abf4f3032f63918fca528cbf1d4418e) method to update the user configuration for a folder.
 
 The following code snippet shows you how to update user configuration.
 
@@ -48,8 +48,8 @@ The following code snippet shows you how to update user configuration.
 ### **Deleting User Configuration**
 To delete the user configuration for a specific folder in the Exchange Server:
 
-1. Connect to the Exchange Server using [IEWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
-1. Call the [DeleteUserConfiguration()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a7e0d6d6b432cf8db13af6638b639806c) method to delete the user configuration for a folder.
+1. Connect to the Exchange Server using [IEWSClient](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/).
+1. Call the [DeleteUserConfiguration()](https://reference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#a7e0d6d6b432cf8db13af6638b639806c) method to delete the user configuration for a folder.
 
 The following code snippet shows you how to delete user configuration.
 

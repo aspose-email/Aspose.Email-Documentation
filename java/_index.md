@@ -23,7 +23,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for Java Release Notes](/email/java/release-notes/)
 - [Aspose.Email for Java Product Page](https://products.aspose.com/email/java)
 - [Install Aspose.Email for Java from Maven Repository](/email/java/installation/)
-- [Aspose.Email for Java API Reference Guide](https://apireference.aspose.com/email/java)
+- [Aspose.Email for Java API Reference Guide](https://reference.aspose.com/email/java)
 - [Download Aspose.Email for Java from GitHub Repository](https://github.com/aspose-email/Aspose.Email-for-Java)
 - [Aspose.Email for Java Free Support Forum](https://forum.aspose.com/c/email/12)
 - [Aspose.Email for Java Paid Support Helpdesk](https://helpdesk.aspose.com/)

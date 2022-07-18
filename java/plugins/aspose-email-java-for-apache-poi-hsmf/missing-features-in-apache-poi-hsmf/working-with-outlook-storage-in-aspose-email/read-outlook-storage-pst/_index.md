@@ -6,7 +6,7 @@ url: /java/read-outlook-storage-pst/
 ---
 
 ## **Aspose.Email - Read Outlook Storage PST**
-An Outlook PST file can be loaded into an instance of the [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) class.
+An Outlook PST file can be loaded into an instance of the [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) class.
 
 **Java**
 

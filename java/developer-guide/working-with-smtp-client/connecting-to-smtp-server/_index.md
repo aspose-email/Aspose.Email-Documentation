@@ -8,7 +8,7 @@ url: /java/connecting-to-smtp-server/
 
 The following properties need to be set when connecting with an SMTP server with SSL support.
 
-- [SecurityOptions](https://apireference.aspose.com/email/java/com.aspose.email/SecurityOptions)
+- [SecurityOptions](https://reference.aspose.com/email/java/com.aspose.email/SecurityOptions)
 - Port
 
 In the examples below we show how to:
@@ -36,8 +36,8 @@ client.setSecurityOptions(SecurityOptions.SSLExplicit);
 Sometimes we use proxy servers for communicating with the outside world. In such cases, mail clients are not able to communicate over the Internet without specifying the proxy address. Aspose.Email provides support for versions 4, 4a and 5 of SOCKS proxy protocol. This article provides a working sample of sending email using a proxy mail server. To send an email via a proxy server:
 
 1. Initialize Proxy with the required information, that is proxy address, port, and SOCKS version.
-1. Initialize [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient) with the host address, user name and password, and any other settings.
-1. Set the client's Proxy property to the [Proxy](https://apireference.aspose.com/email/java/com.aspose.email/EmailClient#setProxy\(com.aspose.email.Proxy\)) object created earlier.
+1. Initialize [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient) with the host address, user name and password, and any other settings.
+1. Set the client's Proxy property to the [Proxy](https://reference.aspose.com/email/java/com.aspose.email/EmailClient#setProxy\(com.aspose.email.Proxy\)) object created earlier.
 
 The following code snippet shows you how to connect to a server via proxy server.
 
@@ -68,7 +68,7 @@ try (SmtpClient client = new SmtpClient("host", 587, "username", "password")) {
 }
 ~~~
 ## **Bind SMTP Client to Specific IP Address on Host**
-The possibility of a host having multiple ports available for sending out emails cannot be ruled out. In such cases, the requirement may arise to bind the email sending client to a specific port on the host for sending out emails. This can be achieved with Aspose.Email API as well using the [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient) [bindIPEndPoint](https://apireference.aspose.com/email/java/com.aspose.email/EmailClient#bindIPEndPoint\(com.aspose.email.BindIPEndPointHandler\)) property. The API's [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient) can be set to use a specific IP address on the host by specifying the specific IP Endpoint. The following code snippet shows you how to bind SMTP Client to Specific IP Address on Host.
+The possibility of a host having multiple ports available for sending out emails cannot be ruled out. In such cases, the requirement may arise to bind the email sending client to a specific port on the host for sending out emails. This can be achieved with Aspose.Email API as well using the [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient) [bindIPEndPoint](https://reference.aspose.com/email/java/com.aspose.email/EmailClient#bindIPEndPoint\(com.aspose.email.BindIPEndPointHandler\)) property. The API's [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient) can be set to use a specific IP address on the host by specifying the specific IP Endpoint. The following code snippet shows you how to bind SMTP Client to Specific IP Address on Host.
 
 
 ~~~Java
@@ -93,7 +93,7 @@ try {
 ~~~
 
 ## **How to Set Timeout for Mail Operations**
-Each mail operation takes some time depending on many factors (network delays, data size, server performance, etc.). You can set a timeout for all mail operations. The code example below shows you how to do that using the [Timeout](https://apireference.aspose.com/email/java/com.aspose.email/EmailClient#setTimeout\(int\)) property. Note: you should not set large values to avoid long waits in your application.
+Each mail operation takes some time depending on many factors (network delays, data size, server performance, etc.). You can set a timeout for all mail operations. The code example below shows you how to do that using the [Timeout](https://reference.aspose.com/email/java/com.aspose.email/EmailClient#setTimeout\(int\)) property. Note: you should not set large values to avoid long waits in your application.
 
 ~~~Java
 try (SmtpClient smtpClient = new SmtpClient("host", 587, "username", "password", SecurityOptions.SSLExplicit))

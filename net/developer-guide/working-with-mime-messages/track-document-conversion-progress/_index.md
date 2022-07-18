@@ -6,13 +6,13 @@ url: /net/track-document-conversion-progress/
 ---
 
 
-Aspose.Email provides the facility to track the document conversion progress. For this, the API provides [SaveOptions.CustomProgressHandler](https://apireference.aspose.com/email/net/aspose.email/saveoptions/properties/customprogresshandler). which represents the method that handles the progress events. The progress event types are represented by the [ProgressEventType](https://apireference.aspose.com/email/net/aspose.email/progresseventtype) enumeration. The [ProgressEventType](https://apireference.aspose.com/email/net/aspose.email/progresseventtype) enumeration has the following members.
+Aspose.Email provides the facility to track the document conversion progress. For this, the API provides [SaveOptions.CustomProgressHandler](https://reference.aspose.com/email/net/aspose.email/saveoptions/properties/customprogresshandler). which represents the method that handles the progress events. The progress event types are represented by the [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype) enumeration. The [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype) enumeration has the following members.
 
 - MimeStructureCreated: This event informs that the mime structure is created.
 - MimePartSaved: This event informs that saving of one mime part is finished.
 - SavedToStream: This event informs that all mime parts are saved to stream.
 
-The following sample code demonstrates the use of [SaveOptions.CustomProgressHandler](https://apireference.aspose.com/email/net/aspose.email/saveoptions/properties/customprogresshandler) and [ProgressEventType](https://apireference.aspose.com/email/net/aspose.email/progresseventtype) enumeration track the document conversion progress.
+The following sample code demonstrates the use of [SaveOptions.CustomProgressHandler](https://reference.aspose.com/email/net/aspose.email/saveoptions/properties/customprogresshandler) and [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype) enumeration track the document conversion progress.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-TrackDocumentConversionProgress-1.cs" >}}
 

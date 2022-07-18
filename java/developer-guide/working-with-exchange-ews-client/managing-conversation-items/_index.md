@@ -6,7 +6,7 @@ url: /java/managing-conversation-items/
 ---
 
 
-Aspose.Email for Java can be used to manage the conversation items on Exchange Server with the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. This article shows how to [find](#finding-conversations), [copy](#copying-conversations), [move](#moving-conversations) and [delete](#deleting-conversations) conversation items on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features included in this section.
+Aspose.Email for Java can be used to manage the conversation items on Exchange Server with the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. This article shows how to [find](#finding-conversations), [copy](#copying-conversations), [move](#moving-conversations) and [delete](#deleting-conversations) conversation items on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features included in this section.
 ## **Finding Conversations**
 To get the conversation information from a specific folder on the Exchange Server:
 

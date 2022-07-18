@@ -15,6 +15,7 @@ The process for reading an OST file with Aspose.Email is exactly the same as for
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-LoadAndConvertOSTFile-ReadAnOSTFile.java" >}}
 ## **Converting OST to PST**
 
+
 {{% alert %}}
 **Try it out!**
 

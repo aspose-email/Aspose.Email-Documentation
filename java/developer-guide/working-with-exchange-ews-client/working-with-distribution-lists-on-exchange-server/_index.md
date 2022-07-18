@@ -7,7 +7,7 @@ url: /java/working-with-distribution-lists-on-exchange-server/
 
 
 ## **Working with Distribution Lists**
-Aspose.Email API provides the capability to create and read distributions lists from the Exchange server. Distribution lists can be created on the server as well as members can be added to it using the [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). This article shows how to work with distribution lists on the Exchange server.
+Aspose.Email API provides the capability to create and read distributions lists from the Exchange server. Distribution lists can be created on the server as well as members can be added to it using the [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient). This article shows how to work with distribution lists on the Exchange server.
 ### **Creating Distribution List**
 The following code snippet shows you how to create a distribution list.
 

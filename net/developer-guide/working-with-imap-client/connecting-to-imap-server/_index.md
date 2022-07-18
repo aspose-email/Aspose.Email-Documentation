@@ -6,14 +6,14 @@ url: /net/connecting-to-imap-server/
 ---
 
 
-The [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class allows applications to manage IMAP mailboxes using the IMAP protocol. The [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class is used to connect to IMAP mail servers and manage emails in the IMAP email folders. To connect to an IMAP server
+The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class allows applications to manage IMAP mailboxes using the IMAP protocol. The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class is used to connect to IMAP mail servers and manage emails in the IMAP email folders. To connect to an IMAP server
 
-1. Create an instance of the [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class.
-1. Specify the hostname, username, and password in the [ImapClient constructor](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient/constructors/8).
+1. Create an instance of the [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class.
+1. Specify the hostname, username, and password in the [ImapClient constructor](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/constructors/8).
 
 **Note, password restrictions must meet the requirements of the server. The email client doesn't add password restrictions.**
 
-Once the [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) instance is initiated, the next call to any operation using this instance will connect to the server. The following code snippet shows you how to connect to an IMAP server using the steps above.
+Once the [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) instance is initiated, the next call to any operation using this instance will connect to the server. The following code snippet shows you how to connect to an IMAP server using the steps above.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -24,7 +24,7 @@ ImapClient client = new ImapClient("localhost", "user", "password");
 ## **Connecting with SSL Enabled IMAP Server**
 [Connecting with IMAP Server](/email/net/connecting-to-imap-server#connecting-with-imap-server) described how to connect to an IMAP server in four simple steps:
 
-1. Create an instance of the [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class.
+1. Create an instance of the [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class.
 1. Specify the hostname, username, and password.
 1. Specify the port.
 1. Specify the Security Options.
@@ -50,9 +50,9 @@ client.SecurityOptions = SecurityOptions.SSLImplicit;
 ## **Connecting to Server via Proxy**
 Proxy servers are commonly used to communicate with the outside world. In such cases, mail clients are not able to communicate over the Internet without specifying the proxy address. Aspose.Email provides support for versions 4, 4a and 5 of the SOCKS proxy protocol. This article provides a working sample of accessing the mailbox using a proxy mail server. To access the mailbox via a proxy server:
 
-1. Initialize [SocksProxy](https://apireference.aspose.com/email/net/aspose.email.clients/socksproxy) with the required information, that is proxy address, port, and SOCKS version.
-1. Initialize [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) with host address, user name, password, and any other settings.
-1. Set the client's [SocksProxy](https://apireference.aspose.com/email/net/aspose.email.clients/socksproxy) property to the [SocksProxy](https://apireference.aspose.com/email/net/aspose.email.clients/socksproxy) object created above.
+1. Initialize [SocksProxy](https://reference.aspose.com/email/net/aspose.email.clients/socksproxy) with the required information, that is proxy address, port, and SOCKS version.
+1. Initialize [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) with host address, user name, password, and any other settings.
+1. Set the client's [SocksProxy](https://reference.aspose.com/email/net/aspose.email.clients/socksproxy) property to the [SocksProxy](https://reference.aspose.com/email/net/aspose.email.clients/socksproxy) object created above.
 
 The following code snippet shows you how to retrieve mailbox via a proxy server.
 
@@ -92,7 +92,7 @@ using (ImapClient client = new ImapClient("imap.domain.com", "username", "passwo
 ```
 
 ## **Connecting to Server in Read-Only mode**
-The [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class provides a [ReadOnly](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient/properties/readonly) property which when set to **true**, indicates that no changes should be made to the permanent state of the mailbox. The following code sample demonstrates the use of [ImapClient.ReadOnly](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient/properties/readonly) property. It gets the count of unread messages, then fetches one message and then gets the count of unread messages again in read-only mode. The count of the unread messages remains the same indicating that the permanent state of the mailbox was not changed.
+The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class provides a [ReadOnly](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/properties/readonly) property which when set to **true**, indicates that no changes should be made to the permanent state of the mailbox. The following code sample demonstrates the use of [ImapClient.ReadOnly](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/properties/readonly) property. It gets the count of unread messages, then fetches one message and then gets the count of unread messages again in read-only mode. The count of the unread messages remains the same indicating that the permanent state of the mailbox was not changed.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -127,7 +127,7 @@ else
 ```
 
 ## **How to Set Timeout for Mail Operations**
-Each mail operation takes some time depending on many factors (network delays, data size, server performance, etc.). You can set a timeout for all mail operations. The code example below shows you how to do that using the [Timeout](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/properties/timeout) property. Note: you should not set large values to avoid long waits in your application.
+Each mail operation takes some time depending on many factors (network delays, data size, server performance, etc.). You can set a timeout for all mail operations. The code example below shows you how to do that using the [Timeout](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/properties/timeout) property. Note: you should not set large values to avoid long waits in your application.
 
 ```csharp
 using (ImapClient imapClient = new ImapClient("host", 993, "username", "password", SecurityOptions.SSLImplicit))
@@ -152,9 +152,9 @@ using (ImapClient client = new ImapClient("localhost", 993, "username", "passwor
 ## **Using Cryptographic Protocols with IMAP Client**
 Aspose.Email supports SSL (obsolete) and TLS cryptographic protocols to provide communications security. You can enable cryptographic encryption to protect data exchange between your application and mail servers.
 
-> **_NOTE:_**  You should set only those versions of the protocol, which are supported by .NET Framework. If some versions of the cryptographic protocol are not supported by your current version of .NET Framework, they will be ignored and skipped. In this case, exceptions won't be generated. Please use [SetSupportedEncryptionUnsafe](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/methods/setsupportedencryptionunsafe) method if you want to set the protocols without any compatibility checks.
+> **_NOTE:_**  You should set only those versions of the protocol, which are supported by .NET Framework. If some versions of the cryptographic protocol are not supported by your current version of .NET Framework, they will be ignored and skipped. In this case, exceptions won't be generated. Please use [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/methods/setsupportedencryptionunsafe) method if you want to set the protocols without any compatibility checks.
 
-The code example below shows you how to set TLS 1.3 for [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class instance.
+The code example below shows you how to set TLS 1.3 for [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class instance.
 
 ```csharp
 using (ImapClient imapClient = new ImapClient("host", 993, "username", "password", SecurityOptions.SSLImplicit))
@@ -165,6 +165,6 @@ using (ImapClient imapClient = new ImapClient("host", 993, "username", "password
 }
 ```
 
-In case of a specified encryption protocol is not supported in the current version of .NET Framework, the difference in behavior between [SetSupportedEncryptionUnsafe](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/methods/setsupportedencryptionunsafe) method and [SupportedEncryption](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/properties/supportedencryption) property is the following:
-- If [SupportedEncryption](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/properties/supportedencryption) property is used, the email client downgrades the encryption protocol to a supported level.
-- If [SetSupportedEncryptionUnsafe](https://apireference.aspose.com/email/net/aspose.email.clients/emailclient/methods/setsupportedencryptionunsafe) method is used, the email client throws exceptions.
+In case of a specified encryption protocol is not supported in the current version of .NET Framework, the difference in behavior between [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/methods/setsupportedencryptionunsafe) method and [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/properties/supportedencryption) property is the following:
+- If [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/properties/supportedencryption) property is used, the email client downgrades the encryption protocol to a supported level.
+- If [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/methods/setsupportedencryptionunsafe) method is used, the email client throws exceptions.

@@ -6,13 +6,13 @@ url: /net/pop3client-activity-logging/
 ---
 
 
-[Pop3Client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client) activity can be logged by modifying the configSections in the config file. Following are the steps to perform diagnostics logging:
+[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client) activity can be logged by modifying the configSections in the config file. Following are the steps to perform diagnostics logging:
 
 1. Add a **sectionGroup** called "applicationSettings".
 1. Add a **section** called "Aspose.Email.Properties.Settings".
 1. Include the setting ImapDiagonosticLog where the file name is defined in the **applicationSettings/Aspose.Email.Properties.Settings**.
 
-Here is a sample form application which uses [Pop3Client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client) to process mail. This whole activity is logged by modifying the App.config file.
+Here is a sample form application which uses [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client) to process mail. This whole activity is logged by modifying the App.config file.
 
 - Create a form based application with a single button on it. Add the following sample code for button's click:
 

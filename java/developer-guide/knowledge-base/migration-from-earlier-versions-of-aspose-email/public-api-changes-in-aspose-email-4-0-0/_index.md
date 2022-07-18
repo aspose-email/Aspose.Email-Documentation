@@ -12,7 +12,7 @@ The following is a list of any changes made to the public API such as [added](/e
 ## **Added Methods and Enumeration Options**
 **MapiTask.getReminderFileParameter(), MapiTask.getReminderSet(), MapiTask.getReminderTime(), MapiTask.setReminderFileParameter(java.lang.String), MapiTask.setReminderSet(Boolean) and MapiTask.setReminderTime(java.util.Date)**
 
-These properties get or set reminder information for a [MapiTask](https://apireference.aspose.com/email/java/com.aspose.email.class-use/mapitask).
+These properties get or set reminder information for a [MapiTask](https://reference.aspose.com/email/java/com.aspose.email.class-use/mapitask).
 
 **MailMessageSaveOptions.NoEncodeCharactersToMht Option**
 

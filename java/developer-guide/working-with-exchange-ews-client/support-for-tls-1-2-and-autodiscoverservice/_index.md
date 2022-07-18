@@ -5,12 +5,12 @@ weight: 180
 url: /java/support-for-tls-1-2-and-autodiscoverservice/
 ---
 
-Aspose.Email for Java now supports TLS 1.2 by using SAAJ API. The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) provides a static property [useSAAJAPI](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) which can be set to **true** for using TLS 1.2. Aspose.Email for Java also supports [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) for TLS 1.2. The following code samples demonstrate the use of SAAJ API and [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) for TLS 1.2.
+Aspose.Email for Java now supports TLS 1.2 by using SAAJ API. The [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) provides a static property [useSAAJAPI](https://reference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) which can be set to **true** for using TLS 1.2. Aspose.Email for Java also supports [AutodiscoverService](https://reference.aspose.com/email/java/com.aspose.email/AutodiscoverService) for TLS 1.2. The following code samples demonstrate the use of SAAJ API and [AutodiscoverService](https://reference.aspose.com/email/java/com.aspose.email/AutodiscoverService) for TLS 1.2.
 ## **Use SAAJ API**
 The Java EE SOAP Client used with SAAJAPI mode - <https://docs.oracle.com/cd/E19651-01/817-2151-10/wsgjaxm.html>. 
 
 
-The following code sample demonstrates using the SAAJ API by setting [EWSClient.useSAAJAPI](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) property to **true**.
+The following code sample demonstrates using the SAAJ API by setting [EWSClient.useSAAJAPI](https://reference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) property to **true**.
 
 In the next code snippet Basic authentication header will be assigned:
 
@@ -210,7 +210,7 @@ Maven JAXB dependencies:
 ~~~
 
 ## **Use AutodiscoverService**
-The following code sample demonstrates the use of [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) for TLS 1.2
+The following code sample demonstrates the use of [AutodiscoverService](https://reference.aspose.com/email/java/com.aspose.email/AutodiscoverService) for TLS 1.2
 
 
 ~~~Java

@@ -8,7 +8,8 @@ url: /java/gmail-utility-features/
 
 ## **Working with FreeBusy Query**
 Aspose.Email provides querying mechanism to check whether some appointment is due or not as per the criteria. [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery) class is provided for this purpose which allows to prepare a query for a particular calendar.
-### **Querying a calendar**
+**Querying a calendar**
+
 This code sample demonstrates the feature of querying a calendar. Following tasks are performed in this sample:
 
 1. Create and insert a calendar

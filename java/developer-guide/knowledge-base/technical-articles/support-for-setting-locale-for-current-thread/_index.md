@@ -5,7 +5,7 @@ weight: 50
 url: /java/support-for-setting-locale-for-current-thread/
 ---
 
-Aspose.Email provides the ability to set the Locale for the current thread. Aspose.Email provides a class [CurrentThreadSettings](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) that provides the [setLocale](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.util.Locale\)) method for this purpose. The following code snippet demonstrates the use of the [CurrentThreadSettings](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) class to set the current Locale. The snippet fist sets the Locale to an invalid value and then uses the [CurrentThreadSettings.setLocale](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.lang.String\)) method to set the Locale for the current thread.
+Aspose.Email provides the ability to set the Locale for the current thread. Aspose.Email provides a class [CurrentThreadSettings](https://reference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) that provides the [setLocale](https://reference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.util.Locale\)) method for this purpose. The following code snippet demonstrates the use of the [CurrentThreadSettings](https://reference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) class to set the current Locale. The snippet fist sets the Locale to an invalid value and then uses the [CurrentThreadSettings.setLocale](https://reference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.lang.String\)) method to set the Locale for the current thread.
 
 
 

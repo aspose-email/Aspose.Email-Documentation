@@ -6,7 +6,7 @@ url: /java/receiving-notifications-for-successfully-sent-and-failed-messages/
 ---
 
 
-When you want to get the delivery notification for both successfully sent and failed messages, you can use the pipe (|) operator for the [DeliveryNotificationOptions](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#getDeliveryNotificationOptions\(\)) property of the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) class. The following code snippet shows you how to receive notifications for successfully sent and failed messages.
+When you want to get the delivery notification for both successfully sent and failed messages, you can use the pipe (|) operator for the [DeliveryNotificationOptions](https://reference.aspose.com/email/java/com.aspose.email/MailMessage#getDeliveryNotificationOptions\(\)) property of the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) class. The following code snippet shows you how to receive notifications for successfully sent and failed messages.
 
 
 

@@ -12,16 +12,16 @@ Exchange Server accounts hold more than just email messages. As well as [fetchin
 
 {{% /alert %}} 
 ## **Getting Contacts from an Exchange Server**
-The [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class’ [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) method can be used to get contact information from an Exchange Server. [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) method requires the URI of the Contacts folder, which can be easily got with the [ExchangeMailboxInfo.ContactsUri](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri) property.
+The [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class’ [ListContacts()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) method can be used to get contact information from an Exchange Server. [ListContacts()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) method requires the URI of the Contacts folder, which can be easily got with the [ExchangeMailboxInfo.ContactsUri](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri) property.
 
 To get contacts from an Exchange Server:
 
-1. Initialize the [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class with address and credentials.
-1. Get the Contacts folder's URI with the [ExchangeClient.MailboxInfo.ContactsUri](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri) property.
-1. Call the [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) method. It returns an array of [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/mapicontact).
-1. Do a foreach loop on the [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/mapicontact) array to read the contact information.
+1. Initialize the [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class with address and credentials.
+1. Get the Contacts folder's URI with the [ExchangeClient.MailboxInfo.ContactsUri](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri) property.
+1. Call the [ListContacts()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) method. It returns an array of [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact).
+1. Do a foreach loop on the [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact) array to read the contact information.
 
-The following code snippet shows you how to use [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class to read all contacts from an Exchange Server.
+The following code snippet shows you how to use [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class to read all contacts from an Exchange Server.
 
 
 

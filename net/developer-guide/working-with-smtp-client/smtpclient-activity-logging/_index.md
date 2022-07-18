@@ -13,7 +13,7 @@ SMTP client activity can be logged by modifying the configSections in the config
 - Add a section called "Aspose.Email.Properties.Settings".
 - Include the setting with the name SmtpDiagonosticLog where the file name is defined in the applicationSettings/Aspose.Email.Properties.Settings
 
-Here is a sample form based application which uses [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) to send an email. This whole activity is logged by modifying the App.config file. Create a form application with a single button on it. Add the following code for button’s click:
+Here is a sample form based application which uses [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) to send an email. This whole activity is logged by modifying the App.config file. Create a form application with a single button on it. Add the following code for button’s click:
 
 
 

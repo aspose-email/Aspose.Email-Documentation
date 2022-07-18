@@ -6,11 +6,11 @@ url: /net/filter-messages-from-server-using-imap-client/
 ---
 
 
-The [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class provides the [ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient/methods/listmessages) method which gets all the messages from a mailbox. To get only messages which match some condition, use the overloaded [ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient/methods/listmessages) method which takes [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) as an argument. The [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) class provides various properties for specifying the conditions, for example, date, subject, sender, recipient and so on. The first example illustrates how to filter messages based on date and subject. We also show how to filter on other criteria and how to build more complex queries. The API also provides the capability to apply case-sensitive searching criteria to match exact filtering criteria. The API also allows specifying the search string encoding for filtering messages from the mailbox.
+The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) class provides the [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/methods/listmessages) method which gets all the messages from a mailbox. To get only messages which match some condition, use the overloaded [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/methods/listmessages) method which takes [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery) as an argument. The [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery) class provides various properties for specifying the conditions, for example, date, subject, sender, recipient and so on. The first example illustrates how to filter messages based on date and subject. We also show how to filter on other criteria and how to build more complex queries. The API also provides the capability to apply case-sensitive searching criteria to match exact filtering criteria. The API also allows specifying the search string encoding for filtering messages from the mailbox.
 ## **Filtering Messages from Mailbox**
 1. [Connect and log in to an IMAP server](/email/net/connecting-to-imap-server#connecting-with-imap-server)
-1. Create an instance of the [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) and set the properties
-1. Call the [ImapClient.ListMessages(MailQuery query)](https://apireference.aspose.com/error/404?path=email/net/aspose.email.imap.imapclient/listmessages/methods/11) method and pass the [MailQuery](https://apireference.aspose.com/email/net/aspose.email.clients.imap.imapclient/listmessages/methods/11) with the parameters to get filtered messages only.
+1. Create an instance of the [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery) and set the properties
+1. Call the [ImapClient.ListMessages(MailQuery query)](https://reference.aspose.com/error/404?path=email/net/aspose.email.imap.imapclient/listmessages/methods/11) method and pass the [MailQuery](https://reference.aspose.com/email/net/aspose.email.clients.imap.imapclient/listmessages/methods/11) with the parameters to get filtered messages only.
 
 The following code snippet shows you how to connect to an IMAP mailbox and get messages that arrived today and have the word "newsletter" in the subject.
 
@@ -18,7 +18,7 @@ The following code snippet shows you how to connect to an IMAP mailbox and get m
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-FilteringMessagesFromIMAPMailbox-FilteringMessagesFromIMAPMailbox.cs" >}}
 ## **Get Messages that Meet Specific Criteria**
-[The code samples above](#filtering-messages-from-mailbox) filter messages based on the email subject and date. We can use other properties to set other supported conditions as well. Below are some examples of setting the conditions using [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery). The code snippets that follow show how to filter emails on:
+[The code samples above](#filtering-messages-from-mailbox) filter messages based on the email subject and date. We can use other properties to set other supported conditions as well. Below are some examples of setting the conditions using [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery). The code snippets that follow show how to filter emails on:
 
 1. Today's date.
 1. A date range.
@@ -56,7 +56,7 @@ The following code snippet shows you how to filter emails on a specific recipien
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-GetMessagesWithSpecificCriteria-GetSpecificRecipientEmails.cs" >}}
 ## **Building Complex Queries**
-If different [MailQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder) properties are set in separate statements, then all the conditions would be matched. For example, if we want to get messages between a date range and from a specific host, we need to write three statements.
+If different [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder) properties are set in separate statements, then all the conditions would be matched. For example, if we want to get messages between a date range and from a specific host, we need to write three statements.
 ### **Combining Queries with AND**
 The following code snippet shows you how to combine queries with AND.
 
@@ -64,13 +64,13 @@ The following code snippet shows you how to combine queries with AND.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-BuildingComplexQueries-CombineQueriesWithAND.cs" >}}
 ### **Combining Queries with OR**
-[MailQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder) provides the [Or()](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or) method which takes two [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) instances as parameters. It gets the messages that match any of the two conditions specified. The following code snippet shows how to filter messages that either have “test” in the subject or “noreply@host.com” as the sender. The following code snippet shows you how to combine queries with OR.
+[MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder) provides the [Or()](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or) method which takes two [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery) instances as parameters. It gets the messages that match any of the two conditions specified. The following code snippet shows how to filter messages that either have “test” in the subject or “noreply@host.com” as the sender. The following code snippet shows you how to combine queries with OR.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-BuildingComplexQueries-CombiningQueriesWithOR.cs" >}}
 ## **Filtration on InternalDate**
-Messages can be extracted from the server based upon the InternalDate however sometimes the server does not return all messages as visible in the inbox. Its reason can be the server timezone because it may not be UTC for all the servers like [Gmail](https://www.google.com.ua/search?client=opera&q=timezone+gmail&sourceid=opera&ie=utf-8&oe=utf-8&channel=suggest#channel=suggest&q=gmail+server+timezone++). Aspose sends commands like 008 SEARCH ON 4-May-2014 as per the [IMAP protocol](http://tools.ietf.org/html/rfc1730) however result can differ due to server timezone settings. A new member is added in [ImapMessageInfo](https://apireference.aspose.com/net/email/aspose.email.clients.imap/imapmessageinfo) as [InternalDate](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/properties/internaldate) which further helps in filtering the messages. The following code snippet shows the use of [InternalDate](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/properties/internaldate) to filter messages.
+Messages can be extracted from the server based upon the InternalDate however sometimes the server does not return all messages as visible in the inbox. Its reason can be the server timezone because it may not be UTC for all the servers like [Gmail](https://www.google.com.ua/search?client=opera&q=timezone+gmail&sourceid=opera&ie=utf-8&oe=utf-8&channel=suggest#channel=suggest&q=gmail+server+timezone++). Aspose sends commands like 008 SEARCH ON 4-May-2014 as per the [IMAP protocol](http://tools.ietf.org/html/rfc1730) however result can differ due to server timezone settings. A new member is added in [ImapMessageInfo](https://reference.aspose.com/net/email/aspose.email.clients.imap/imapmessageinfo) as [InternalDate](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/properties/internaldate) which further helps in filtering the messages. The following code snippet shows the use of [InternalDate](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/properties/internaldate) to filter messages.
 
 
 
@@ -82,13 +82,13 @@ The following code snippet shows you how to use case-sensitive emails filtering.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-CaseSensitiveEmailsFiltering-CaseSensitiveEmailsFiltering.cs" >}}
 ### **Specify Encoding for Query Builder**
-The API's [ImapQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapquerybuilder) constructor can be used to specify the Encoding for the search string. This can also be set using the [DefaultEncoding](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/properties/defaultencoding) property of the MailQueryBuilder. The following code snippet shows you how to specify the encoding for query builder.
+The API's [ImapQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapquerybuilder) constructor can be used to specify the Encoding for the search string. This can also be set using the [DefaultEncoding](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/properties/defaultencoding) property of the MailQueryBuilder. The following code snippet shows you how to specify the encoding for query builder.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SpecifyEncodingForQueryBuilder-SpecifyEncodingForQueryBuilder.cs" >}}
 ### **Filter Messages with Paging Support**
-The [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) provides the capability to search for messages from the mailbox and list them with paging support. The following code snippet shows you how to filter messages with paging support.
+The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) provides the capability to search for messages from the mailbox and list them with paging support. The following code snippet shows you how to filter messages with paging support.
 
 
 

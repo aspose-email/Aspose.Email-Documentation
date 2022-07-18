@@ -24,31 +24,31 @@ In the bottom pane, we have used tab controls to show other message details like
 ## **Parsing and Viewing MSG File Contents Programmatically**
 In this section, we will present the code that we used in the demo to show the MSG file contents.
 ### **Loading an MSG File**
-The Aspose.Email library provides the [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class for loading and parsing MSG files. You can load the MSG file using a single line of code by calling the FromFile() static method and passing the path to the MSG file. The following code snippet shows you how to load an MSG file.
+The Aspose.Email library provides the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class for loading and parsing MSG files. You can load the MSG file using a single line of code by calling the FromFile() static method and passing the path to the MSG file. The following code snippet shows you how to load an MSG file.
 
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-LoadingMSGFile-LoadingMSGFile.cs" >}}
 ### **Getting the From, To, Cc and Subject from an MSG File**
-The [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class exposes properties and collections for getting the subject, from, to, and cc information. Following is the sample code for getting these properties. The following code snippet shows you how to gett the From, To, Cc and Subject from an MSG File.
+The [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class exposes properties and collections for getting the subject, from, to, and cc information. Following is the sample code for getting these properties. The following code snippet shows you how to gett the From, To, Cc and Subject from an MSG File.
 
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-GetMessageProperties-GetMessageProperties.cs" >}}
 ### **Getting the Text and RTF Bodies**
-We can get the text and RTF bodies of the message by using properties of the [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class. The following code snippet shows you how to get text and RTF bodies.
+We can get the text and RTF bodies of the message by using properties of the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class. The following code snippet shows you how to get text and RTF bodies.
 
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-GetTheTextAndRTFBodies-GetTheTextAndRTFBodies.cs" >}}
 ### **Getting Attachments from MSG File and Saving to Disk**
-The [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class provides the [Attachments](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/properties/attachments) collection for getting all the attachments in the message (MSG) file. The MapiMessage.Attachments property returns an object of type MapiAttachmentCollection. You can use a for-each loop to iterate through the attachments collection and list the attachments. The Attachment class contains the Save() method for saving the individual attachment to disk. The following code snippet shows you how to get the list of attachments and saving them.
+The [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class provides the [Attachments](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/properties/attachments) collection for getting all the attachments in the message (MSG) file. The MapiMessage.Attachments property returns an object of type MapiAttachmentCollection. You can use a for-each loop to iterate through the attachments collection and list the attachments. The Attachment class contains the Save() method for saving the individual attachment to disk. The following code snippet shows you how to get the list of attachments and saving them.
 
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-GetAttachmentsFromMSGFile-GetAttachmentsFromMSGFile.cs" >}}
 ### **Getting the MAPI Properties of the MSG File**
-You can get the MAPI Properties from the MSG file using the [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class Properties collection. The sample code below shows how to get all the MAPI properties in the message file.
+You can get the MAPI Properties from the MSG file using the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class Properties collection. The sample code below shows how to get all the MAPI properties in the message file.
 
 
 

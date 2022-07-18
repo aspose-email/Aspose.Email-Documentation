@@ -7,9 +7,9 @@ url: /java/how-to-use-graphclient-for-microsoft-graph/
 
 
 ## **Working with GraphClient**
-An instance of the [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) class handles building requests, sending them to the Microsoft Graph API, and processing the responses.
+An instance of the [IGraphClient](https://reference.aspose.com/email/java/com.aspose.email/IGraphClient) class handles building requests, sending them to the Microsoft Graph API, and processing the responses.
 ### **Create an ITokenProvider Object**
-To create a new instance of [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) class, you need to provide an instance of [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), which can authenticate requests to Microsoft Graph.
+To create a new instance of [IGraphClient](https://reference.aspose.com/email/java/com.aspose.email/IGraphClient) class, you need to provide an instance of [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/ITokenProvider), which can authenticate requests to Microsoft Graph.
 
 
 ~~~Java
@@ -37,8 +37,8 @@ ITokenProvider tokenProvider = new ITokenProvider() {
 };
 ~~~
 ### **Get a GraphClient object**
-After you have set the TokenProvider, you must get a [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) object to make requests against the service.
-After you have a [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) that is authenticated, you can begin making calls against the service.
+After you have set the TokenProvider, you must get a [IGraphClient](https://reference.aspose.com/email/java/com.aspose.email/IGraphClient) object to make requests against the service.
+After you have a [IGraphClient](https://reference.aspose.com/email/java/com.aspose.email/IGraphClient) that is authenticated, you can begin making calls against the service.
 
 
 ~~~Java

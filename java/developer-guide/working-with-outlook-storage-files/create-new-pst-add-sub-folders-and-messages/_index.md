@@ -8,9 +8,11 @@ url: /java/create-new-pst-add-sub-folders-and-messages/
 
 As well as parsing an existing PST file, Aspose.Email provides the means to create a PST file from scratch. This article demonstrates how to create an Outlook PST file and add a subfolder to it.
 
+
 1. [Creating a new PST file](#creating-a-new-pst-file-and-add-subfolders).
 1. [Changing Container class of a folder](#changing-a-folders-container-class).
 1. [Add Bulk Messages with Improved Performance](#add-bulk-messages-with-improved-performance) 
+
 
 Use the [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email/PersonalStorage) class to create a PST file at some location on a local disk. To create a PST file from scratch:
 

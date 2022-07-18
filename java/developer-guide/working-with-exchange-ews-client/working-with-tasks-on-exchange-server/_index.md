@@ -7,7 +7,7 @@ url: /java/working-with-tasks-on-exchange-server/
 
 
 ## **Working with Tasks**
-Aspose.Email supports processing tasks on Exchange using the [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask) class. Different properties exposed by [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask), like [Subject](https://apireference.aspose.com/email/java/com.aspose.email/Task#getSubject\(\)), [Status](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeTask#getStatus\(\)), [DueDate](https://apireference.aspose.com/email/java/com.aspose.email/Task#getDueDate\(\)), and [Priority](https://apireference.aspose.com/email/java/com.aspose.email/Task#getPriority\(\)), can be used to configure the task on Exchange. The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class exposes functions like [createTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createTask\(com.aspose.email.ExchangeTask\)), [updateTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateTask\(com.aspose.email.ExchangeTask\)), and [deleteTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteTask\(java.lang.String\)) which are used to process tasks on Exchange. This article shows how to:
+Aspose.Email supports processing tasks on Exchange using the [ExchangeTask](https://reference.aspose.com/email/java/com.aspose.email/exchangetask) class. Different properties exposed by [ExchangeTask](https://reference.aspose.com/email/java/com.aspose.email/exchangetask), like [Subject](https://reference.aspose.com/email/java/com.aspose.email/Task#getSubject\(\)), [Status](https://reference.aspose.com/email/java/com.aspose.email/ExchangeTask#getStatus\(\)), [DueDate](https://reference.aspose.com/email/java/com.aspose.email/Task#getDueDate\(\)), and [Priority](https://reference.aspose.com/email/java/com.aspose.email/Task#getPriority\(\)), can be used to configure the task on Exchange. The [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class exposes functions like [createTask](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#createTask\(com.aspose.email.ExchangeTask\)), [updateTask](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#updateTask\(com.aspose.email.ExchangeTask\)), and [deleteTask](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteTask\(java.lang.String\)) which are used to process tasks on Exchange. This article shows how to:
 
 - Create a new task.
 - Set a task's timezone.
@@ -33,7 +33,7 @@ task.setStatus(ExchangeTaskStatus.InProgress);
 client.createTask(client.getMailboxInfo().getTasksUri(), task);
 ~~~
 ### **Specifying Timezone**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) interface and [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask) provide the TimeZoneId property for setting timezone information when creating a task. The following code snippet shows you how to specify Timezone.
+The [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) interface and [ExchangeTask](https://reference.aspose.com/email/java/com.aspose.email/exchangetask) provide the TimeZoneId property for setting timezone information when creating a task. The following code snippet shows you how to specify Timezone.
 
 
 
@@ -96,7 +96,7 @@ for (ExchangeMessageInfo info : (Iterable<ExchangeMessageInfo>) tasks) {
 }
 ~~~
 ### **Sending Task Request**
-Aspose.Email Exchange service provides the capability to send task requests similar to Outlook. The following code snippet shows you how to load a task request message from the disc and send it using the [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
+Aspose.Email Exchange service provides the capability to send task requests similar to Outlook. The following code snippet shows you how to load a task request message from the disc and send it using the [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient).
 
 
 
@@ -131,7 +131,7 @@ task.setDueDate(cal.getTime());
 task.save(dstEmail);
 ~~~
 ### **Listing Tasks from Exchange Server**
-[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the [listTasks](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listTasks\(\)) method that can be used to fetch tasks from an Exchange Web Service. It has several overloads that can be used to retrieve the list of tasks from a specific folder or using some search criteria. The below code sample illustrates getting all or specific tasks from the Tasks folder.
+[IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the [listTasks](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#listTasks\(\)) method that can be used to fetch tasks from an Exchange Web Service. It has several overloads that can be used to retrieve the list of tasks from a specific folder or using some search criteria. The below code sample illustrates getting all or specific tasks from the Tasks folder.
 
 
 
@@ -169,7 +169,7 @@ for (int i = 0; i < iTasksCount; i++) {
 }
 ~~~
 ### **Filtering Tasks from Exchange Server**
-Aspose.Email provides the capability to retrieve specific tasks from the server instead of retrieving all tasks from the server. The API can be used to retrieve tasks by task's status such as Completed, Deferred, In Progress, Not started or Waiting on others. The [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder) class can be used to specify the desired criterion utilizing the Status property. It also allows specifying multiple conditions for retrieving desired tasks from Exchange Server. This is demonstrated by the following code sample.
+Aspose.Email provides the capability to retrieve specific tasks from the server instead of retrieving all tasks from the server. The API can be used to retrieve tasks by task's status such as Completed, Deferred, In Progress, Not started or Waiting on others. The [ExchangeQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder) class can be used to specify the desired criterion utilizing the Status property. It also allows specifying multiple conditions for retrieving desired tasks from Exchange Server. This is demonstrated by the following code sample.
 
 
 ~~~Java

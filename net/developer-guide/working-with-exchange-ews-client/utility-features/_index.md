@@ -21,7 +21,7 @@ The following code snippet shows you how to use methods used in above example.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateAndSendingMessageWithVotingOptions-CreateTestMessage.cs" >}}
 ## **Ignore or Bypass Invalid or Expired SSL Certificate**
-Aspose.Email can handle SSL certificates on Exchange Server using both the [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) and [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) classes. If the SSL certificate has expired or become invalid, Aspose.Email throws an exception due to invalid SSL certificate. Avoid such SSL certificate errors by ignoring them using the method used in the code below. Register the callback handler in your main() or init() method and add the method below as the member of the class.
+Aspose.Email can handle SSL certificates on Exchange Server using both the [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) and [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) classes. If the SSL certificate has expired or become invalid, Aspose.Email throws an exception due to invalid SSL certificate. Avoid such SSL certificate errors by ignoring them using the method used in the code below. Register the callback handler in your main() or init() method and add the method below as the member of the class.
 
 
 
@@ -61,13 +61,13 @@ Aspose.Email can retrieve unified messaging information from Exchange Server 201
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-GettingUnifiedMessagingConfigurationInformation-GettingUnifiedMessagingConfigurationInformation.cs" >}}
 ## **Getting Mail Tips**
-Microsoft Exchange Server added several new features with Exchange Server 2010 and 2013. One of them lets users get mail tips when composing an email message. These tips are very useful as they provide information before the email is sent. For example, if an email address is wrong in the recipient’s list, a tip is displayed to let the you know that the email address is invalid. Mail tips also lets you see out of office replies before sending an email: Exchange Server (2010 & 2013) sends the mail tip when the email is being composed if one or more of the recipients have set out of office replies. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features demonstrated in this article. The following code snippet shows you how to uses the [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class which uses Exchange Web Services, available in Microsoft Exchange Server 2007 and later versions.
+Microsoft Exchange Server added several new features with Exchange Server 2010 and 2013. One of them lets users get mail tips when composing an email message. These tips are very useful as they provide information before the email is sent. For example, if an email address is wrong in the recipient’s list, a tip is displayed to let the you know that the email address is invalid. Mail tips also lets you see out of office replies before sending an email: Exchange Server (2010 & 2013) sends the mail tip when the email is being composed if one or more of the recipients have set out of office replies. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features demonstrated in this article. The following code snippet shows you how to uses the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class which uses Exchange Web Services, available in Microsoft Exchange Server 2007 and later versions.
 
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-GetMailTips-GetMailTips.cs" >}}
 ## **Exchange Impersonation**
-Exchange impersonation allows someone to impersonate another account and perform tasks and operations using the impersonated account's permissions instead of their own. Where delegation lets users act on behalf of other users, Impersonation allows them to act as other users. Aspose.Email supports Exchange Impersonation. The [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class provides the ImpersonateUser and ResetImpersonation methods to facilitate this feature.
+Exchange impersonation allows someone to impersonate another account and perform tasks and operations using the impersonated account's permissions instead of their own. Where delegation lets users act on behalf of other users, Impersonation allows them to act as other users. Aspose.Email supports Exchange Impersonation. The [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class provides the ImpersonateUser and ResetImpersonation methods to facilitate this feature.
 
 To perform this task:
 
@@ -77,7 +77,7 @@ To perform this task:
 1. Enable Impersonation.
 1. Reset Impersonation.
 
-The following code snippet shows you how to use the [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class to implement the Impersonation feature.
+The following code snippet shows you how to use the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class to implement the Impersonation feature.
 
 
 

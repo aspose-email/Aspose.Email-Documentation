@@ -12,7 +12,7 @@ This article explains how to retrieve contact information from an Exchange Serve
 
 {{% /alert %}} 
 ## **Getting Contacts from an Exchange Server**
-The [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient) class’ [listContacts()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) method can be used to get contact information from an Exchange Server. [listContacts()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) method requires the URI of the Contacts folder, which can be easily got with the [ExchangeMailboxInfo.ContactsUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getContactsUri\(\)) property.
+The [ExchangeClient](https://reference.aspose.com/email/java/com.aspose.email/ExchangeClient) class’ [listContacts()](https://reference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) method can be used to get contact information from an Exchange Server. [listContacts()](https://reference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) method requires the URI of the Contacts folder, which can be easily got with the [ExchangeMailboxInfo.ContactsUri](https://reference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getContactsUri\(\)) property.
 
 To get contacts from an Exchange Server:
 
@@ -21,7 +21,7 @@ To get contacts from an Exchange Server:
 1. Call the listContacts() method. It returns an array of MapiContact.
 1. Do a foreach loop on the MapiContact array to read the contact information.
 
-The following code snippet shows you how to use [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient) class to read all contacts from an Exchange Server.
+The following code snippet shows you how to use [ExchangeClient](https://reference.aspose.com/email/java/com.aspose.email/ExchangeClient) class to read all contacts from an Exchange Server.
 
 
 ~~~Java

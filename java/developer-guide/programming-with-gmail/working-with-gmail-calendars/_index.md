@@ -7,24 +7,24 @@ url: /java/working-with-gmail-calendars/
 
 
 ## **Adding, Editing and Deleting a Calendar**
-Aspose.Email allows applications to manage the Gmail calendars using [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) which provides feature like adding, deleting and updating Gmail calendars. This client class returns list of ExtendedCalendar type objects which contain information about the Gmail calendar items. [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) class exposes following functions for calendars:
+Aspose.Email allows applications to manage the Gmail calendars using [IGmailClient](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient) which provides feature like adding, deleting and updating Gmail calendars. This client class returns list of ExtendedCalendar type objects which contain information about the Gmail calendar items. [IGmailClient](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient) class exposes following functions for calendars:
 
-- [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\))
+- [createCalendar](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\))
   To insert new calendar
-- [listCalendars](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\))
+- [listCalendars](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\))
 
 Get list of all calendars of a client
 
-- [deleteCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteCalendar\(java.lang.String\))
+- [deleteCalendar](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteCalendar\(java.lang.String\))
   It can be used to delete a calendar
-- [fetchCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchCalendar\(java.lang.String\))
+- [fetchCalendar](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchCalendar\(java.lang.String\))
   It can be used to fetch particular calendar of a client
-- [updateCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateCalendar\(com.aspose.email.Calendar\))
+- [updateCalendar](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#updateCalendar\(com.aspose.email.Calendar\))
   This function is used for inserting back a modified calendar of a client
 
-To Access the calendars, GoogleTestUser is initialized using gmail account credentials. GoogleOAuthHelper is used to get the access token for the user which is further used to initialize [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient).
+To Access the calendars, GoogleTestUser is initialized using gmail account credentials. GoogleOAuthHelper is used to get the access token for the user which is further used to initialize [IGmailClient](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient).
 ### **Insert, Fetch and Update**
-For inserting a calendar, initialize a [Calendar](https://apireference.aspose.com/email/java/com.aspose.email/Calendar) type object and insert it using [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) function. [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) returns the id of the newly inserted calendar. This id can be used to fetch the calendar from the server. The following code snippet shows you how to insert, fetch and update calendar.
+For inserting a calendar, initialize a [Calendar](https://reference.aspose.com/email/java/com.aspose.email/Calendar) type object and insert it using [createCalendar](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) function. [createCalendar](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) returns the id of the newly inserted calendar. This id can be used to fetch the calendar from the server. The following code snippet shows you how to insert, fetch and update calendar.
 
 
 
@@ -44,7 +44,7 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 }
 ~~~
 ### **Delete Particular Calendar**
-For deleting a particular calendar, we need to get the list of all the calendars of a client and then delete as required. [listCalendars](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\)) returns the list of [ExtendedCalendar](https://apireference.aspose.com/email/java/com.aspose.email/ExtendedCalendar) which contains Gmail calendars. The following code snippet shows you how to delete particular calendar.
+For deleting a particular calendar, we need to get the list of all the calendars of a client and then delete as required. [listCalendars](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\)) returns the list of [ExtendedCalendar](https://reference.aspose.com/email/java/com.aspose.email/ExtendedCalendar) which contains Gmail calendars. The following code snippet shows you how to delete particular calendar.
 
 
 
@@ -64,17 +64,17 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 }
 ~~~
 ## **Working with Calendar Access Control**
-Aspose.Email provides full control over the access control to the calendar items. [listAccessRules](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\)) function is exposed by [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) which returns list of [AccessControlRule](https://apireference.aspose.com/email/java/com.aspose.email/AccessControlRule). Individual rule information can be retrieved, modified and saved back for the calendar of a client. [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) contains following functions for managing the access control rules.
+Aspose.Email provides full control over the access control to the calendar items. [listAccessRules](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\)) function is exposed by [IGmailClient](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient) which returns list of [AccessControlRule](https://reference.aspose.com/email/java/com.aspose.email/AccessControlRule). Individual rule information can be retrieved, modified and saved back for the calendar of a client. [IGmailClient](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient) contains following functions for managing the access control rules.
 
-- [listAccessRules](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\))
-  This function provides list of [AccessControlRule](https://apireference.aspose.com/email/java/com.aspose.email/AccessControlRule)
-- [createAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createAccessRule\(java.lang.String,%20com.aspose.email.AccessControlRule\))
+- [listAccessRules](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\))
+  This function provides list of [AccessControlRule](https://reference.aspose.com/email/java/com.aspose.email/AccessControlRule)
+- [createAccessRule](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#createAccessRule\(java.lang.String,%20com.aspose.email.AccessControlRule\))
   This function creates a new access rule for a calendar.
-- [updateAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAccessRule\(java.lang.String,%20com.aspose.email.AccessControlRule\))
+- [updateAccessRule](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAccessRule\(java.lang.String,%20com.aspose.email.AccessControlRule\))
   This function is used for updating an access rule.
-- [fetchAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAccessRule\(java.lang.String,%20java.lang.String\))
+- [fetchAccessRule](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAccessRule\(java.lang.String,%20java.lang.String\))
   It can be used to fetch particular access rule for calendar of a client
-- [deleteAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteAccessRule\(java.lang.String,%20java.lang.String\))
+- [deleteAccessRule](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteAccessRule\(java.lang.String,%20java.lang.String\))
   This function is used for deleting an access rule.
 
 The following code snippet shows you how the functions used for managing the access rules:
@@ -129,7 +129,7 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 }
 ~~~
 ## **Working with Client Settings and Color Info**
-Aspose.Email supports accessing the Client settings by using [IGmailClient.getSettings](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#getSettings\(\)). It returns list of settings as given below:
+Aspose.Email supports accessing the Client settings by using [IGmailClient.getSettings](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#getSettings\(\)). It returns list of settings as given below:
 
 1. dateFieldOrder
 1. displayAllTimezones
@@ -151,7 +151,7 @@ Aspose.Email supports accessing the Client settings by using [IGmailClient.getSe
 1. useKeyboardShortcuts
 1. country
 
-Similarly color info for clients can also be retrieved using [IGmailClient.getColors](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#getColors\(\)). This color info object returns the list of Foreground colors, background colors and update date and time.
+Similarly color info for clients can also be retrieved using [IGmailClient.getColors](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#getColors\(\)). This color info object returns the list of Foreground colors, background colors and update date and time.
 ### **Access Client Settings**
 The following code snippet shows you how the functions used for accessing the client settings:
 
@@ -194,14 +194,14 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 }
 ~~~
 ## **Working with Appointments**
-Aspose.Email provides features for working with [Appointments](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) in Google calendars. Following is the list of tasks that can be performed on appointments in google calendar:
+Aspose.Email provides features for working with [Appointments](https://reference.aspose.com/email/java/com.aspose.email/Appointment) in Google calendars. Following is the list of tasks that can be performed on appointments in google calendar:
 
-1. Add Appointments - [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createAppointment\(java.lang.String,%20com.aspose.email.Appointment\)), [importAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#importAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
-1. Retrieve list off appointments - [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointments\(java.lang.String\))
-1. Retrieve particular appointment - [fetchAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAppointment\(java.lang.String,%20java.lang.String\)), [listAppointmentInstances](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointmentInstances\(java.lang.String,%20java.lang.String\))
-1. Update an appointment - [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
-1. Move appointment from one calendar to another - [moveAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#moveAppointment\(java.lang.String,%20java.lang.String,%20java.lang.String\))
-1. Delete appointment - [deleteAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteAppointment\(java.lang.String,%20java.lang.String\))
+1. Add Appointments - [createAppointment](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#createAppointment\(java.lang.String,%20com.aspose.email.Appointment\)), [importAppointment](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#importAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
+1. Retrieve list off appointments - [listAppointments](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointments\(java.lang.String\))
+1. Retrieve particular appointment - [fetchAppointment](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAppointment\(java.lang.String,%20java.lang.String\)), [listAppointmentInstances](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointmentInstances\(java.lang.String,%20java.lang.String\))
+1. Update an appointment - [updateAppointment](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
+1. Move appointment from one calendar to another - [moveAppointment](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#moveAppointment\(java.lang.String,%20java.lang.String,%20java.lang.String\))
+1. Delete appointment - [deleteAppointment](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteAppointment\(java.lang.String,%20java.lang.String\))
 
 ### **Adding an Appointment**
 Following code sample demonstrates the feature of adding an appointment in a calendar. In this sample following steps are followed:
@@ -296,7 +296,7 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 }
 ~~~
 ### **Move and Delete Appointment**
-[Appointment](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) can be moved by providing the source calendar, destination calendar and unique id of appointment in the source calendar. The following code snippet shows you how to move and delete appointment.
+[Appointment](https://reference.aspose.com/email/java/com.aspose.email/Appointment) can be moved by providing the source calendar, destination calendar and unique id of appointment in the source calendar. The following code snippet shows you how to move and delete appointment.
 
 
 ~~~Java

@@ -6,13 +6,13 @@ url: /net/imapclient-activity-logging/
 ---
 
 
-[ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) activity can be logged by modifying the configSections in the config file. Following are the steps to perform diagnostics logging:
+[ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) activity can be logged by modifying the configSections in the config file. Following are the steps to perform diagnostics logging:
 
 1. Add a **sectionGroup** called "applicationSettings".
 1. Add a **section** called "Aspose.Email.Properties.Settings".
 1. Include the setting ImapDiagonosticLog where the file name is defined in the **applicationSettings/Aspose.Email.Properties.Settings**.
 
-Here is a sample form application which uses [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) to process mail. This whole activity is logged by modifying the App.config file.
+Here is a sample form application which uses [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient) to process mail. This whole activity is logged by modifying the App.config file.
 
 - Create a form based application with a single button on it. Add the following sample code for button's click:
 

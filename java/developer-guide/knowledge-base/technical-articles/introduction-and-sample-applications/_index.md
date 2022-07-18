@@ -21,7 +21,7 @@ Aspose.Email Mail can be used in almost all kinds of business applications to pe
 ### **Email Clients**
 Aspose.Email Mail can also be used in email clients to send normal emails. It supports attachments, embedded objects, iCalendar events, mail merges, sending bulk emails, and so on, so Aspose.Email Mail is the best option for creating email client applications.
 ## **Aspose.Email Mail Sample Application**
-To illustrate how to use Aspose.Email Mail, we will create an application that demonstrates how to construct a email message with the [MailMessage class](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) and then send it using the SmtpClient class.
+To illustrate how to use Aspose.Email Mail, we will create an application that demonstrates how to construct a email message with the [MailMessage class](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) and then send it using the SmtpClient class.
 ### **Mail : Sample Application Steps**
 Please follow the steps below to create application using Aspose.Email.
 
@@ -74,7 +74,7 @@ client.setSecurityOptions(SecurityOptions.SSLExplicit);
 ### **Conclusion**
 Aspose.Email Mail is a very powerful component with which developers can perform almost emails tasks, like sending multi-threaded bulk emails, using mail merge, adding attachments, embedding pictures and sounds into email messages, adding iCalendar events to emails, receiving emails and much more.
 ## **Aspose.Email Pop3**
-[Aspose.Email Pop3](https://apireference.aspose.com/email/java/com.aspose.email/pop3client) implements the Post Office Protocol v3 (POP3) on the Java. It lets Java developers add email querying and receiving features to their Java applications without getting involved in protocol details and the complexity of email and network programming. Aspose.Email Pop3 supports all the commands defined in the standard POP3 protocol, and provides easy-to-use interfaces along with a compact and intuitive object model. It greatly reduces the usual learning curve for Java developers.
+[Aspose.Email Pop3](https://reference.aspose.com/email/java/com.aspose.email/pop3client) implements the Post Office Protocol v3 (POP3) on the Java. It lets Java developers add email querying and receiving features to their Java applications without getting involved in protocol details and the complexity of email and network programming. Aspose.Email Pop3 supports all the commands defined in the standard POP3 protocol, and provides easy-to-use interfaces along with a compact and intuitive object model. It greatly reduces the usual learning curve for Java developers.
 ### **Pop3 : Main Features**
 As part of Aspose.Email, Aspose.Email Pop3 is designed specifically for Java and is written in managed Java code. It lets you:
 
@@ -91,7 +91,7 @@ Aspose.Email Pop3 can be used to query email inboxes and fetch email messages. I
 ### **Email Clients**
 Aspose.Email Pop3 can be used in email client applications to receive emails.
 ### **Pop3 : Sample Application**
-Here, we'll demonstrate how to use [Aspose.Email Pop3](https://apireference.aspose.com/email/java/com.aspose.email/pop3client). This class has many features but we'll concentrate on how to connect to a POP3 server and retrieve messages. The example shows how to create an application as well as the code examples that get the application to work. Follow the steps given below to create a sample application using Aspose.Email Pop3.
+Here, we'll demonstrate how to use [Aspose.Email Pop3](https://reference.aspose.com/email/java/com.aspose.email/pop3client). This class has many features but we'll concentrate on how to connect to a POP3 server and retrieve messages. The example shows how to create an application as well as the code examples that get the application to work. Follow the steps given below to create a sample application using Aspose.Email Pop3.
 
 1. Create an instance of Pop3Client.
 1. Set the POP3 host name, login and password in this instance.
@@ -135,7 +135,7 @@ For SSL enabled servers, we need to change the following properties of the Pop3C
 client.setSecurityOptions(SecurityOptions.SSLImplicit);
 ~~~
 ## **Aspose.Email Imap**
-[Aspose.Email Imap](https://apireference.aspose.com/email/java/com.aspose.email/imapclient) implements the Internet Message Access Protocol (IMAP) on Java. Aspose.Email Imap lets Java developers add IMAP capabilities to their Java applications quickly, without having to understand the protocol detail. The component supports fetching and uploading messages, checking messages' new/read/unread status, and so on.
+[Aspose.Email Imap](https://reference.aspose.com/email/java/com.aspose.email/imapclient) implements the Internet Message Access Protocol (IMAP) on Java. Aspose.Email Imap lets Java developers add IMAP capabilities to their Java applications quickly, without having to understand the protocol detail. The component supports fetching and uploading messages, checking messages' new/read/unread status, and so on.
 ### **Imap : Main Features**
 Aspose.Email Imap allows you to:
 
@@ -148,7 +148,7 @@ Aspose.Email Imap allows you to:
 ### **Using Aspose.Email Imap**
 Aspose.Email Imap implements the Internet Message Access Protocol on Java. With it, developers can easily query and manage IMAP server emails, and create, delete or rename email folders. Using Aspose.Email Imap, developers can take advantage of the IMAP protocol with easy to use APIs. They can access emails from any PC as the emails remain saved on the server. Using Aspose.Email Imap, developers can create web or desktop applications that receive and manipulate emails from IMAP servers. Aspose implemented the IMAP protocol according to the internet authentication and RFC standards. Hence Aspose.Email Imap is a secure and fully featured implementation of the IMAP protocol with an easy to understand object model and interfaces.
 ### **Imap : Sample Application**
-This article explains how how to use [Aspose.Email Imap](https://apireference.aspose.com/email/java/com.aspose.email/imapclient). We create a small application that gets the number of email messages in your IMAP email account. Follow the steps given below to create a sample application using with Aspose.Email Imap.
+This article explains how how to use [Aspose.Email Imap](https://reference.aspose.com/email/java/com.aspose.email/imapclient). We create a small application that gets the number of email messages in your IMAP email account. Follow the steps given below to create a sample application using with Aspose.Email Imap.
 
 1. Create an instance of ImapClient by passing the IMAP server name, login and password.
 1. Call the ImapClient instance's selectFolder() function to select the folder you want to count the number of messages in.
@@ -184,7 +184,7 @@ For SSL enabled mail servers, set the following properties of the ImapClient obj
 client.setSecurityOptions(SecurityOptions.SSLImplicit);
 ~~~
 ## **Aspose.Email Exchange**
-[Aspose.Email Exchange](https://apireference.aspose.com/email/java/com.aspose.email/iewsclient) enables the developers to manage emails on Microsoft Exchange Server. Using this component you can connect, list messages and download emails from exchange server mailbox without understanding the underlying protocol details. The component supports listing messages, sending emails, downloading messages and saving to eml or msg format on your local disk etc.
+[Aspose.Email Exchange](https://reference.aspose.com/email/java/com.aspose.email/iewsclient) enables the developers to manage emails on Microsoft Exchange Server. Using this component you can connect, list messages and download emails from exchange server mailbox without understanding the underlying protocol details. The component supports listing messages, sending emails, downloading messages and saving to eml or msg format on your local disk etc.
 ### **Exchange : Main Features**
 Aspose.Email Exchange lets you:
 
@@ -195,7 +195,7 @@ Aspose.Email Exchange lets you:
 ### **Using Aspose.Email Exchange**
 With Aspose.Email Exchange, developers can access Exchange Server mailboxes from their Java applications. It provides an easy to use API for managing emails on Exchange Servers. Developers can create console, desktop or web applications that manages emails in Exchange mailboxes.
 ## **Aspose.Email Exchange Sample Application**
-This article demonstrates how to use [Aspose.Email Exchange](https://apireference.aspose.com/email/java/com.aspose.email/iewsclient). We create a simple desktop application that connects to an Exchange Server mailbox, get the list of messages in the Inbox folder and display them on the windows form.
+This article demonstrates how to use [Aspose.Email Exchange](https://reference.aspose.com/email/java/com.aspose.email/iewsclient). We create a simple desktop application that connects to an Exchange Server mailbox, get the list of messages in the Inbox folder and display them on the windows form.
 ### **Exchange : Sample Application Steps**
 To run the application successfully, you need the right credentials to accessing the Exchange Server. Here, we get the credential information - Exchange Server URI, username, password and domain - from the Windows form. This is a very basic sample so the message properties - subject, from and to - are simply displayed in the listbox.
 ### **Exchange : Code Examples**

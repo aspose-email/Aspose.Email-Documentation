@@ -75,7 +75,7 @@ Following helper classes are required to run the codes in this section. These cl
 
 ### **AzureROPCTokenProvider Class**
 
-An instance of the [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this  class, you need to provide an instance of [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), which can authenticate requests to Microsoft Graph.
+An instance of the [IGraphClient](https://reference.aspose.com/email/java/com.aspose.email/IGraphClient) class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this  class, you need to provide an instance of [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/ITokenProvider), which can authenticate requests to Microsoft Graph.
 
 ~~~Java
 import java.io.BufferedReader;

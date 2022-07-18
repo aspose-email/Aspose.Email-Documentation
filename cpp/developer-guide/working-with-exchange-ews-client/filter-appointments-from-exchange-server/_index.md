@@ -5,7 +5,7 @@ weight: 130
 url: /cpp/filter-appointments-from-exchange-server/
 ---
 
-The [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) provides the facility to filter appointments from the Exchange server using the *ExchangeQueryBuilder*. Appointments can be filtered based on:
+The [IEWSClient](https://reference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) provides the facility to filter appointments from the Exchange server using the *ExchangeQueryBuilder*. Appointments can be filtered based on:
 
 - Dates
 - Recurrences

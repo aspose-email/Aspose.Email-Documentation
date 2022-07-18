@@ -7,10 +7,10 @@ url: /net/working-with-messages-in-a-pst-file/
 
 
 ## **Adding Messages to PST Files**
-[Create a New PST File and Add Subfolders](/email/net/create-new-pst-file-and-add-subfolders/#creating-a-new-pst-file-and-add-subfolders) showed how to create a PST file and add a subfolder to it. With Aspose.Email you can add messages to subfolders of a PST file that you have created or loaded. This article adds two messages from disk to the Inbox subfolder of a PST. Use the [PersonalStorage](https://apireference.aspose.com/email/net/aspose.email.storage.pst/personalstorage) and [FolderInfo](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) classes to add messages to PST files. To add messages to a PST file's Inbox folder:
+[Create a New PST File and Add Subfolders](/email/net/create-new-pst-file-and-add-subfolders/#creating-a-new-pst-file-and-add-subfolders) showed how to create a PST file and add a subfolder to it. With Aspose.Email you can add messages to subfolders of a PST file that you have created or loaded. This article adds two messages from disk to the Inbox subfolder of a PST. Use the [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage) and [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) classes to add messages to PST files. To add messages to a PST file's Inbox folder:
 
 1. Create an instance of the FolderInfo class and load it with the contents of the Inbox folder.
-1. Add messages from disk to the Inbox folder by calling the [FolderInfo.AddMessage()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/addmessage) method. The [FolderInfo](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) class exposes the [AddMessages](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/addmessages) method that enables to add large number of messages to the folder, reducing I/O operations to disc and improving performance. A complete example can be found below, in [Adding Bulk Messages](#adding-bulk-messages).
+1. Add messages from disk to the Inbox folder by calling the [FolderInfo.AddMessage()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/addmessage) method. The [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) class exposes the [AddMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/addmessages) method that enables to add large number of messages to the folder, reducing I/O operations to disc and improving performance. A complete example can be found below, in [Adding Bulk Messages](#adding-bulk-messages).
 
 The code snippets below shows how to add messages to a PST subfolder called Inbox.
 
@@ -129,7 +129,7 @@ public class MapiMessageEnumerator : IEnumerator<MapiMessage>
 ```
 
 ### **Adding Messages from Other PST**
-For adding messages from the another PST, use the [FolderInfo.EnumerateMapiMessages()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/enumeratemapimessages) method that returns IEnumerable<MapiMessage>. The following code snippet shows you how to add messages from other PST.
+For adding messages from the another PST, use the [FolderInfo.EnumerateMapiMessages()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/enumeratemapimessages) method that returns IEnumerable<MapiMessage>. The following code snippet shows you how to add messages from other PST.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -228,7 +228,7 @@ private static void DisplayFolderContents(FolderInfo folderInfo, PersonalStorage
 ```
 
 ## **Extracting Messages Form PST Files**
-This article shows how to read Microsoft Outlook PST files and [extract messages](#extracting-messages-form-pst-files). The messages are then saved to disk in MSG format. The article also shows how to [extract a specific number of messages](#extracting-n-number-of-messages-from-a-pst-file) from a PST file. Use a recursive method to browse all the folders (including any nested folders) and call the PersonalStorage.ExtractMessage() method to get Outlook messages into an instance of the [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/index) class. After that, call the MapiMessage.Save() method to save the message to either disk or stream in MSG format. The following code snippet shows you how to extract messages from PST file is give below.
+This article shows how to read Microsoft Outlook PST files and [extract messages](#extracting-messages-form-pst-files). The messages are then saved to disk in MSG format. The article also shows how to [extract a specific number of messages](#extracting-n-number-of-messages-from-a-pst-file) from a PST file. Use a recursive method to browse all the folders (including any nested folders) and call the PersonalStorage.ExtractMessage() method to get Outlook messages into an instance of the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/index) class. After that, call the MapiMessage.Save() method to save the message to either disk or stream in MSG format. The following code snippet shows you how to extract messages from PST file is give below.
 
 
 ```csharp
@@ -359,12 +359,12 @@ MessageInfoCollection messages = inbox.GetContents(10, 100);
 ```
 
 ## **Delete Items from PST Files**
-[Add Messages to PST Files](#adding-messages-to-pst-files) showed how to add messages to PST files. It is, of course, also possible to delete items (contents) from a PST file and it may also be desirable to delete messages in bulk. Items from a PST file can be deleted using the [FolderInfo.DeleteChildItem()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method. The API also provides [FolderInfo.DeleteChildItems()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditems) method to delete items in bulk from the PST file.
+[Add Messages to PST Files](#adding-messages-to-pst-files) showed how to add messages to PST files. It is, of course, also possible to delete items (contents) from a PST file and it may also be desirable to delete messages in bulk. Items from a PST file can be deleted using the [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method. The API also provides [FolderInfo.DeleteChildItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditems) method to delete items in bulk from the PST file.
 ### **Deleting Messages from PST Files**
-This articles shows how to Use the [FolderInfo](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) class to access specific folders in a PST file. To delete messages from the Sent subfolder of a previously loaded or created PST file:
+This articles shows how to Use the [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) class to access specific folders in a PST file. To delete messages from the Sent subfolder of a previously loaded or created PST file:
 
-1. Create an instance of the [FolderInfo](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) class and load it with the contents of the sent subfolder.
-1. Delete messages from the Sent folder by calling the [FolderInfo.DeleteChildItem()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method and passing the [MessageInfo.EntryId](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/properties/entryid) as a parameter. The following code snippet shows you how to delete messages from a PST file's Sent subfolder.
+1. Create an instance of the [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo) class and load it with the contents of the sent subfolder.
+1. Delete messages from the Sent folder by calling the [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method and passing the [MessageInfo.EntryId](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/properties/entryid) as a parameter. The following code snippet shows you how to delete messages from a PST file's Sent subfolder.
 
 
 ```csharp
@@ -419,7 +419,7 @@ You can also permanently remove a folder from the Deleted Items folder, if neces
 deletedItemsFolder.DeleteChildItem(emptyFolder.EntryId);
 ```
 
-The [DeleteChildItem()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method can be used for any folders if you want to immediately and permanently delete subfolder, bypassing the Deleted Items folder.
+The [DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditem) method can be used for any folders if you want to immediately and permanently delete subfolder, bypassing the Deleted Items folder.
 
 
 ```csharp
@@ -428,7 +428,7 @@ pst.RootFolder.DeleteChildItem(someFolder.EntryId);
 ```
 
 ### **Delete Items in Bulk from PST File**
-Aspose.Email API can be used to delete items in bulk from a PST file. This is achieved using the [DeleteChildItems()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditems) method which accepts a list of Entry ID items referring to the items to be deleted. The following code snippet shows you how to delete Items in bulk from PST file.
+Aspose.Email API can be used to delete items in bulk from a PST file. This is achieved using the [DeleteChildItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/deletechilditems) method which accepts a list of Entry ID items referring to the items to be deleted. The following code snippet shows you how to delete Items in bulk from PST file.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -456,9 +456,9 @@ using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir))
 ```
 
 ## **Search Messages and Folders in a PST by Criterion**
-Personal Storage (PST) files can contain a huge amount of data and searching for data that meets a specific criteria in such large files needs to include multiple check points in the code to filter the information. With the [PersonalStorageQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder) class, Aspose.Email makes it possible to search for specific records in a PST based on a specified search criteria. A PST can be searched for messages based on search parameters such as sender, receiver, subject, message importance, presence of attachments, message size, and even message ID. The [PersonalStorageQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder) can also be used to search for subfolders.
+Personal Storage (PST) files can contain a huge amount of data and searching for data that meets a specific criteria in such large files needs to include multiple check points in the code to filter the information. With the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder) class, Aspose.Email makes it possible to search for specific records in a PST based on a specified search criteria. A PST can be searched for messages based on search parameters such as sender, receiver, subject, message importance, presence of attachments, message size, and even message ID. The [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder) can also be used to search for subfolders.
 ### **Searching Messages and Folders in PST**
-The following code snippet shows you how to use the [PersonalStorageQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder) class to search for contents in a PST based on different search criteria. For example, it shows searching a PST based on:
+The following code snippet shows you how to use the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder) class to search for contents in a PST based on different search criteria. For example, it shows searching a PST based on:
 
 - Message importance.
 - Message class.
@@ -548,7 +548,7 @@ using (PersonalStorage personalStorage = PersonalStorage.Create("CaseSensitivity
 ```
 
 ### **Searching for Message Subjects by Multiple Keywords in a PST File**
-You can use [MailQueryBuilder.Or](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or) method to find messages with a subject containing at least one of the specified words as shown below:
+You can use [MailQueryBuilder.Or](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or) method to find messages with a subject containing at least one of the specified words as shown below:
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -605,7 +605,7 @@ using(PersonalStorage personalStorage = PersonalStorage.FromFile("test.pst"))
 ```
 
 ## **Updating Message Properties in a PST File**
-It's sometimes required to update certain properties of messages such as changing the subject, marking message importance and similarly others. Updating a message in a PST file, with such changes in the message properties, can be achieved using the [FolderInfo.ChangeMessages](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/changemessages/index) method. This article shows how to update messages in bulk in a PST file for changes in the properties. The following code snippet shows you how to update properties of messages in bulk mode for multiple messages in a PST file.
+It's sometimes required to update certain properties of messages such as changing the subject, marking message importance and similarly others. Updating a message in a PST file, with such changes in the message properties, can be achieved using the [FolderInfo.ChangeMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/changemessages/index) method. This article shows how to update messages in bulk in a PST file for changes in the properties. The following code snippet shows you how to update properties of messages in bulk mode for multiple messages in a PST file.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

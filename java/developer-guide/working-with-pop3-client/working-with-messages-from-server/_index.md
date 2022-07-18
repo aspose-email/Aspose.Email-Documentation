@@ -7,14 +7,14 @@ url: /java/working-with-messages-from-server/
 
 
 ## **Getting Mailbox Information**
-We can get information about the mailbox such as the number of messages and the mailbox size using the [getMailBoxSize](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxSize\(\)) and [getMailBoxInfo](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxInfo\(\)) methods of the [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) class.
+We can get information about the mailbox such as the number of messages and the mailbox size using the [getMailBoxSize](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxSize\(\)) and [getMailBoxInfo](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxInfo\(\)) methods of the [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) class.
 
-- The [getMailBoxSize](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxSize\(\)) method returns the size of the mailbox in bytes.
-- The [getMailBoxInfo](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxInfo\(\)) method returns an object of type [Pop3MailBoxInfo](https://apireference.aspose.com/email/java/com.aspose.email/Pop3MailBoxInfo).
+- The [getMailBoxSize](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxSize\(\)) method returns the size of the mailbox in bytes.
+- The [getMailBoxInfo](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#getMailboxInfo\(\)) method returns an object of type [Pop3MailBoxInfo](https://reference.aspose.com/email/java/com.aspose.email/Pop3MailBoxInfo).
 
-It is also possible to get the number of messages using the [MessageCount](https://apireference.aspose.com/email/java/com.aspose.email/Pop3MailboxInfo#getMessageCount\(\)) property and the size using the [OccupiedSize](https://apireference.aspose.com/email/java/com.aspose.email/Pop3MailboxInfo#getOccupiedSize\(\)) property of the [Pop3MailBoxInfo](https://apireference.aspose.com/email/java/com.aspose.email/Pop3MailBoxInfo) class. The following sample code shows how to get information about the mailbox. It shows how to:
+It is also possible to get the number of messages using the [MessageCount](https://reference.aspose.com/email/java/com.aspose.email/Pop3MailboxInfo#getMessageCount\(\)) property and the size using the [OccupiedSize](https://reference.aspose.com/email/java/com.aspose.email/Pop3MailboxInfo#getOccupiedSize\(\)) property of the [Pop3MailBoxInfo](https://reference.aspose.com/email/java/com.aspose.email/Pop3MailBoxInfo) class. The following sample code shows how to get information about the mailbox. It shows how to:
 
-1. Create a [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client).
+1. Create a [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client).
 1. Connect to a POP3 server.
 1. Get the size of the mailbox.
 1. Get mailbox info.
@@ -88,7 +88,7 @@ try {
 }
 ~~~
 ## **Retrieving Email Messages**
-The [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) class component provides the capability to retrieve email messages from the POP3 server, and parse them into a [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) instance with the help of [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) components. The [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) class contains several properties and methods for manipulating email content. By using [fetchMessage](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessage\(java.lang.String\)) method of the [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) class, you can get a [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) instance directly from the POP3 server. The following code snippet shows you how to retrieves a complete email message from the POP3 server.
+The [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) class component provides the capability to retrieve email messages from the POP3 server, and parse them into a [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) instance with the help of [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) components. The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) class contains several properties and methods for manipulating email content. By using [fetchMessage](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessage\(java.lang.String\)) method of the [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) class, you can get a [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) instance directly from the POP3 server. The following code snippet shows you how to retrieves a complete email message from the POP3 server.
 
 
 ~~~Java
@@ -135,7 +135,7 @@ if (messageInfo != null) {
 }
 ~~~
 ## **Listing Messages with MultiConnection**
-[Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) provides a [UseMultiConnection](https://apireference.aspose.com/email/java/com.aspose.email/EmailClient#setUseMultiConnection\(int\)) property which can be used to create multiple connections for heavy operations. You may also set the number of connections to be used during multiconnection mode by using [Pop3Client.ConnectionsQuantity](https://apireference.aspose.com/email/java/com.aspose.email/EmailClient#setConnectionsQuantity\(int\)). The following code snippet demonstrates the use of the multiconnection mode for listing messages and compares its performance with single connection mode.
+[Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) provides a [UseMultiConnection](https://reference.aspose.com/email/java/com.aspose.email/EmailClient#setUseMultiConnection\(int\)) property which can be used to create multiple connections for heavy operations. You may also set the number of connections to be used during multiconnection mode by using [Pop3Client.ConnectionsQuantity](https://reference.aspose.com/email/java/com.aspose.email/EmailClient#setConnectionsQuantity\(int\)). The following code snippet demonstrates the use of the multiconnection mode for listing messages and compares its performance with single connection mode.
 
 
 ~~~Java
@@ -171,7 +171,7 @@ Please note that the usage of multiconnection mode does not guarantee performanc
 {{% /alert %}} 
 ## **Fetching Messages from Server and saving to Disc**
 ### **Save Message to Disk without Parsing**
-If you want to download email messages from the POP3 server without parsing them, use the [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) class [saveMessage](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#saveMessage\(java.lang.String,%20java.io.OutputStream\)) function. The [saveMessage](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#saveMessage\(java.lang.String,%20java.io.OutputStream\)) function does not parse the email message so it is faster than the [fetchMessage](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessage\(java.lang.String\)) function. The following code snippet shows how to saves a message by its sequence number, in this case, number 1. The [saveMessage](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#saveMessage\(java.lang.String,%20java.io.OutputStream\)) method saves the message in the original EML format without parsing it.
+If you want to download email messages from the POP3 server without parsing them, use the [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) class [saveMessage](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#saveMessage\(java.lang.String,%20java.io.OutputStream\)) function. The [saveMessage](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#saveMessage\(java.lang.String,%20java.io.OutputStream\)) function does not parse the email message so it is faster than the [fetchMessage](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessage\(java.lang.String\)) function. The following code snippet shows how to saves a message by its sequence number, in this case, number 1. The [saveMessage](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#saveMessage\(java.lang.String,%20java.io.OutputStream\)) method saves the message in the original EML format without parsing it.
 
 
 ~~~Java
@@ -200,7 +200,7 @@ try {
 System.out.println("Retrieved email messages using POP3 ");
 ~~~
 ### **Parse Message Before Saving**
-The following code snippet uses the [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) [fetchMessage](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessage\(java.lang.String\)) method to retrieve a message from a POP3 server by its sequence number, then save the message to disk using the subject as the file name.
+The following code snippet uses the [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) [fetchMessage](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessage\(java.lang.String\)) method to retrieve a message from a POP3 server by its sequence number, then save the message to disk using the subject as the file name.
 
 
 ~~~Java
@@ -230,7 +230,7 @@ try {
 }
 ~~~
 ## **Group Fetch Messages**
-[Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) provides a [fetchMessages](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessagesBySequences\(java.lang.Iterable\)) method which accepts iterable of Sequence Numbers or Unique ID and returns a list of [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). The following code snippet demonstrates the use of the [fetchMessages](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessagesBySequences\(java.lang.Iterable\)) method to fetch messages by Sequence Numbers and Unique ID.
+[Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) provides a [fetchMessages](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessagesBySequences\(java.lang.Iterable\)) method which accepts iterable of Sequence Numbers or Unique ID and returns a list of [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage). The following code snippet demonstrates the use of the [fetchMessages](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#fetchMessagesBySequences\(java.lang.Iterable\)) method to fetch messages by Sequence Numbers and Unique ID.
 
 
 ~~~Java
@@ -261,13 +261,13 @@ for (MailMessage m : pop3Client.fetchMessagesByUids(uniqueIdAr)) {
 }
 ~~~
 ## **Filtering Messages on Sender, Recipient or Date**
-The [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) class, described in [Connecting to a POP3 Server](/email/java/connect-to-pop3-server/#connecting-to-pop3-server), provides the [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#listMessages\(\)) method which gets all the messages from a mailbox. To get only messages which match some condition, use the overloaded [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#listMessages\(\)) method which takes [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) as an argument. The [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) class provides various properties for specifying the query conditions, for example, date, subject, sender, recipient and so on. The [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) class is used to build the search expression. First, all the conditions and constraints are set and then [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) is filled with the query developed by [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder). The [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) class object is used by [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client) to extract the filtered information from the server. This article shows how to filter email messages from a mailbox. The first example illustrates how to filter messages based on date and subject. We also show how to filter on other criteria and how to build more complex queries. It also shows the application of Date and Time filter to retrieve the specific emails from the mailbox. In addition, it also shows how to apply case-sensitive filtering.
+The [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) class, described in [Connecting to a POP3 Server](/email/java/connect-to-pop3-server/#connecting-to-pop3-server), provides the [listMessages](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#listMessages\(\)) method which gets all the messages from a mailbox. To get only messages which match some condition, use the overloaded [listMessages](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#listMessages\(\)) method which takes [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) as an argument. The [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) class provides various properties for specifying the query conditions, for example, date, subject, sender, recipient and so on. The [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) class is used to build the search expression. First, all the conditions and constraints are set and then [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) is filled with the query developed by [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder). The [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) class object is used by [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client) to extract the filtered information from the server. This article shows how to filter email messages from a mailbox. The first example illustrates how to filter messages based on date and subject. We also show how to filter on other criteria and how to build more complex queries. It also shows the application of Date and Time filter to retrieve the specific emails from the mailbox. In addition, it also shows how to apply case-sensitive filtering.
 ### **Filtering Messages from Mailbox**
 To filter messages from a mailbox:
 
 1. [Connect and log in to a POP3 server](/email/java/connect-to-pop3-server#connecting-to-pop3-server).
-1. Create an instance of [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) and set the desired properties.
-1. Call the [Pop3Client.listMessages(MailQuery query)](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client#listMessages\(com.aspose.email.MailQuery\)) method and pass the [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) in parameters to get the filtered messages only.
+1. Create an instance of [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) and set the desired properties.
+1. Call the [Pop3Client.listMessages(MailQuery query)](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client#listMessages\(com.aspose.email.MailQuery\)) method and pass the [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) in parameters to get the filtered messages only.
 
 The following code snippet shows you how to connect to a POP3 mailbox and get messages that arrived today and have the word "newsletter" in the subject.
 
@@ -291,7 +291,7 @@ Pop3MessageInfoCollection messages = client.listMessages(query);
 System.out.println("Pop3: " + messages.size() + " message(s) found.");
 ~~~
 ### **Getting Messages that Meet Specific Criteria**
-[The code samples above](/email/java/working-with-messages-from-server/#filtering-messages-from-mailbox) filter messages based on the email subject and date. We can use other properties to set other supported conditions as well. Below are some examples of setting the conditions using [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery).
+[The code samples above](/email/java/working-with-messages-from-server/#filtering-messages-from-mailbox) filter messages based on the email subject and date. We can use other properties to set other supported conditions as well. Below are some examples of setting the conditions using [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery).
 
 The code snippets that follow show how to filter emails on other criteria:
 
@@ -351,7 +351,7 @@ The following code snippet shows you how to find emails sent to a specific recip
 builder.getTo().contains("recipient");
 ~~~
 ### **Building Complex Queries**
-If different [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) properties are set in separate statements, then all the conditions would be matched. For example, if we want to get messages between a date range and from a specific host, we need to write three statements.
+If different [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) properties are set in separate statements, then all the conditions would be matched. For example, if we want to get messages between a date range and from a specific host, we need to write three statements.
 #### **Combining Queries with AND**
 The following code snippet shows you how to combine queries with AND.
 
@@ -368,7 +368,7 @@ calendar.add(Calendar.DATE, -7);
 builder.getInternalDate().since(calendar.getTime());
 ~~~
 #### **Combining Queries with OR**
-[MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) provides the [or](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) method which takes two [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) instances as parameters. It gets the messages that match any of the two conditions specified. The following code snippet shows how to filter messages that either have "test" in the subject or "noreply@host.com" as the sender. The following code snippet shows you how to combine queries with OR.
+[MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) provides the [or](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) method which takes two [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) instances as parameters. It gets the messages that match any of the two conditions specified. The following code snippet shows how to filter messages that either have "test" in the subject or "noreply@host.com" as the sender. The following code snippet shows you how to combine queries with OR.
 
 
 ~~~Java

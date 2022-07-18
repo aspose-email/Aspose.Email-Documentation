@@ -27,6 +27,6 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for .NET Release Notes](/email/net/release-notes/)
 - [Aspose.Email for .NET Product Page](https://products.aspose.com/email/net)
 - [Install Aspose.Email for .NET NuGet Package](https://www.nuget.org/packages/Aspose.Email/)
-- [Aspose.Email for .NET API Reference Guide](https://apireference.aspose.com/email/net)
+- [Aspose.Email for .NET API Reference Guide](https://reference.aspose.com/email/net)
 - [Aspose.Email for .NET Free Support Forum](https://forum.aspose.com/c/email/12)
 - [Aspose.Email for .NET Paid Support Helpdesk](https://helpdesk.aspose.com/)

@@ -8,11 +8,11 @@ url: /java/filter-messages-from-exchange-mailbox/
 
 {{% alert color="primary" %}} 
 
-Aspose.Email for Java provides the capability to filter messages from Exchange Mailbox using the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) and [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Messages can be filtered via different criteria such as by date, domain, message-id, and by Mail Delivery Notifications. This article shows how to filter messages from Exchange Server using different Criteria.
+Aspose.Email for Java provides the capability to filter messages from Exchange Mailbox using the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) and [ExchangeQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Messages can be filtered via different criteria such as by date, domain, message-id, and by Mail Delivery Notifications. This article shows how to filter messages from Exchange Server using different Criteria.
 
 {{% /alert %}} 
 ## **Filtering Messages using EWS**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) class provides the [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(\)) method which gets all messages from a mailbox. To get only messages which match some condition, use the overloaded [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20com.aspose.email.MailQuery\)) method which takes the [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) class as an argument. The [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) class provides various properties for specifying conditions, for example, date, subject, sender and recipient. In addition, the API also allows applying case-sensitivity filters for retrieving emails from the mailbox.
+The [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) class provides the [listMessages()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(\)) method which gets all messages from a mailbox. To get only messages which match some condition, use the overloaded [listMessages()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20com.aspose.email.MailQuery\)) method which takes the [MailQuery](https://reference.aspose.com/email//java/com.aspose.email/mailquery) class as an argument. The [MailQuery](https://reference.aspose.com/email//java/com.aspose.email/mailquery) class provides various properties for specifying conditions, for example, date, subject, sender and recipient. In addition, the API also allows applying case-sensitivity filters for retrieving emails from the mailbox.
 ### **Filtering Messages**
 To get filtered messages from a mailbox:
 
@@ -52,7 +52,7 @@ try {
 }
 ~~~
 ### **Filter Messages on Criteria**
-The code samples above filters messages based on the email subject and date. We can filter on other properties too. Below are some examples of setting the conditions using [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery).
+The code samples above filters messages based on the email subject and date. We can filter on other properties too. Below are some examples of setting the conditions using [MailQuery](https://reference.aspose.com/email//java/com.aspose.email/mailquery).
 #### **Filter Criteria Today's Date**
 The following code snippet shows you how to filter all emails on the basis of today's date.
 
@@ -116,7 +116,7 @@ builder = new ExchangeQueryBuilder();
 builder.getItemSize().greater(80000);
 ~~~
 ### **Building Complex Queries**
-If different [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) properties are set in a separate statement, all the conditions are matched. For example, to get a message in a particular date range and from a specific host, write three statements:
+If different [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) properties are set in a separate statement, all the conditions are matched. For example, to get a message in a particular date range and from a specific host, write three statements:
 #### **Combining Queries with AND**
 The following code snippet shows you how to Combine Queries with AND.
 
@@ -129,7 +129,7 @@ cal.add(Calendar.DATE, -7);
 builder.getInternalDate().since(cal.getTime());
 ~~~
 #### **Combining Queries with OR**
-[MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) provides the [or()](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) method which takes two [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either have the word "test" in the subject or "noreply@host.com" as the sender. The following code snippet shows you how to combine queries with OR.
+[MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) provides the [or()](https://reference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) method which takes two [MailQuery](https://reference.aspose.com/email//java/com.aspose.email/mailquery) instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either have the word "test" in the subject or "noreply@host.com" as the sender. The following code snippet shows you how to combine queries with OR.
 
 ~~~Java
 builder.or(builder.getSubject().contains("test"), builder.getFrom().contains("noreply@host.com"));

@@ -7,7 +7,7 @@ url: /java/working-with-user-configuration-on-server/
 
 
 ## **Managing User Configuration**
-Aspose.Email for Java can be used to manage user configuration on an Exchange Server with the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. In this article, we will see how to read, create, update, and delete user configurations on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features described in this article. The following code snippet shows you how to connect to Exchange Server 2010 in all the examples in this article.
+Aspose.Email for Java can be used to manage user configuration on an Exchange Server with the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. In this article, we will see how to read, create, update, and delete user configurations on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features described in this article. The following code snippet shows you how to connect to Exchange Server 2010 in all the examples in this article.
 
 
 

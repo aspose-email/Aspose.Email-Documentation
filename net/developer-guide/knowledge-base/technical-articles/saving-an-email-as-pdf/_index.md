@@ -10,7 +10,7 @@ This article shows how to convert an email message to PDF using Aspose.Email.  
 ## **Converting Email message to PDF**
 The following code shows converting email messages to PDF using Aspose.Email in combination with Aspose.Words for .NET. This involves the following steps:
 
-1. Load the email message using [MailMessage](https://apireference.aspose.com/net/email/aspose.email/mailmessage)
+1. Load the email message using [MailMessage](https://reference.aspose.com/net/email/aspose.email/mailmessage)
 1. Save the email message to MemoryStream as MHTML
 1. Load the stream using Aspose.Words
 1. Save the message as PDF

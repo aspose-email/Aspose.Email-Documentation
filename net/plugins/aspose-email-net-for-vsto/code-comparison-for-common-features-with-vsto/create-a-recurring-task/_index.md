@@ -40,7 +40,7 @@ Below is the code snippet showing recurring of task on the basis of date:
 ## **Aspose.Email**
 {{% alert color="primary" %}} 
 
-Aspose.Email for .NET allows you to create Outlook tasks and save them to MSG format. The [MapiTask](https://apireference.aspose.com/email/net/aspose.email.mapi/mapitask) class provides a number of properties such as Percentcomplete, Estimatedeffort, ActualEffort, History, LastUpdate, and others, to accommodate and set information required for an Outlook task. This article shows how to create, save and read a MapiTask from disc.
+Aspose.Email for .NET allows you to create Outlook tasks and save them to MSG format. The [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask) class provides a number of properties such as Percentcomplete, Estimatedeffort, ActualEffort, History, LastUpdate, and others, to accommodate and set information required for an Outlook task. This article shows how to create, save and read a MapiTask from disc.
 
 {{% /alert %}} 
 

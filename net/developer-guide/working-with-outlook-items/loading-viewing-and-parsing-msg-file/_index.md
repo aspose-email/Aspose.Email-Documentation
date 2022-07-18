@@ -6,7 +6,7 @@ url: /net/loading-viewing-and-parsing-msg-file/
 ---
 
 
-This topic explains how to load a Microsoft Outlook Message file (*.msg). The [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class is used to load MSG files and provides several static loading functions for different scenarios. The following code snippet shows you how to load MSG files from file or from stream.
+This topic explains how to load a Microsoft Outlook Message file (*.msg). The [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class is used to load MSG files and provides several static loading functions for different scenarios. The following code snippet shows you how to load MSG files from file or from stream.
 ## **Loading MSG Files**
 The following code snippet shows you how to load MSG files.
 
@@ -24,7 +24,7 @@ MailMessage eml = MailMessage.Load("message.msg");
 
 It should be noted that a resulting message is converted to EML format, including embedded message attachments. Don't use this loading method if you want to preserve some specific msg format properties of the original message.
 
-To preserve the original format of embedded message attachments, use the [msgLoadOptions.PreserveEmbeddedMessageFormat](https://apireference.aspose.com/email/net/aspose.email/loadoptions/properties/preserveembeddedmessageformat) property.
+To preserve the original format of embedded message attachments, use the [msgLoadOptions.PreserveEmbeddedMessageFormat](https://reference.aspose.com/email/net/aspose.email/loadoptions/properties/preserveembeddedmessageformat) property.
 
 ```csharp
 
@@ -43,7 +43,7 @@ The following code snippet shows you how to load file from stream.
 
 Converting EML to MSG preserving embedded EML format
 
-EML files can be loaded into [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) class by instantiating a [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) object and passing it to [MapiMessage.FromMailMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage/methods/frommailmessage/index) method. If the EML file contains embedded EML files, use [MapiConversionOptions.PreserveEmbeddedMessageFormat](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/properties/preserveembeddedmessageformat) to retain the format of embedded EML files. The below code snippet shows how to load EML files into [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) while preserving the format of embedded EML files.
+EML files can be loaded into [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) class by instantiating a [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) object and passing it to [MapiMessage.FromMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/methods/frommailmessage/index) method. If the EML file contains embedded EML files, use [MapiConversionOptions.PreserveEmbeddedMessageFormat](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/properties/preserveembeddedmessageformat) to retain the format of embedded EML files. The below code snippet shows how to load EML files into [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) while preserving the format of embedded EML files.
 
 {{% alert %}}
 **Try it out!**

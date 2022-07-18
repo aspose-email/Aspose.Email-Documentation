@@ -6,7 +6,7 @@ url: /net/working-with-pop3client-asynchronously/
 ---
 
 
-Working with messages can be performed asynchronously as well by using the Aspose.Email's [Pop3Client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client). This article shows how to retrieve messages from a mailbox asynchronously. It also shows how to list messages by providing search criteria using [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery). It will be shown separately how to interrupt an operation with a mailbox started by a task-based asynchronous pattern ([TAP](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)) method.
+Working with messages can be performed asynchronously as well by using the Aspose.Email's [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client). This article shows how to retrieve messages from a mailbox asynchronously. It also shows how to list messages by providing search criteria using [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery). It will be shown separately how to interrupt an operation with a mailbox started by a task-based asynchronous pattern ([TAP](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)) method.
 
 ## **Retrieve Messages Asynchronously**
 The following code snippet shows you how to retrieve messages asynchronously.
@@ -14,7 +14,7 @@ The following code snippet shows you how to retrieve messages asynchronously.
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-RetrieveMessagesAsynchronously-RetrieveMessagesAsynchronously.cs" >}}
 
 ## **List Messages Asynchronously with MailQuery**
-The [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) class can be used to specify search criteria for retrieving a list of messages asynchronously as is shown in the following code sample.
+The [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery) class can be used to specify search criteria for retrieving a list of messages asynchronously as is shown in the following code sample.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-ListMessagesAsynchronouslyWithMailQuery-ListMessagesAsynchronouslyWithMailQuery.cs" >}}
 

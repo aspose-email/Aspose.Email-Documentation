@@ -8,8 +8,10 @@ url: /java/working-with-attachments-and-embedded-objects/
 
 ## **Managing Email Attachments**
 An email attachment is a file that is sent along with an email message. The file may be sent as a separate message as well as a part of the message to which it is attached. The [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment) class is used with the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class. All messages include a body. In addition to the body, you might want to send additional files. These are sent as attachments and are represented as an instance of the [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment) class. You can send any number of attachments but the size of the attachment is limited by the mail server. Gmail, for example, does not support file sizes greater than 10MB.
+
 {{% alert %}}
 **Try it out!**
+
 
 Add or remove email attachments online with the free [**Aspose.Email Editor App**](https://products.aspose.app/email/editor).
 {{% /alert %}}
@@ -210,7 +212,8 @@ This topic explains how to extract embedded objects from an email file. An embed
 1. Create a loop and create an instance of the [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment) class in it.
 1. Save the attachment and display it on screen.
 1. Specify the sender and recipient address in the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) instance.
-1. Send email using the [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) class.
+
+1. Send email using the [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient) class.
 
 The code snippet below extracts embedded objects from an email.
 

@@ -6,7 +6,7 @@ url: /java/working-with-pop3client-asynchronously/
 ---
 
 ## **Working with Pop3Client Asynchronously**
-Messages can be retrieved from mailboxes asynchronously as well by using the Aspose.Email [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/Pop3Client). This article shows how to retrieve messages from a mailbox asynchronously. It also shows how to list messages by providing search criteria using [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery).
+Messages can be retrieved from mailboxes asynchronously as well by using the Aspose.Email [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client). This article shows how to retrieve messages from a mailbox asynchronously. It also shows how to list messages by providing search criteria using [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery).
 ### **Retrieving Messages Asynchronously**
 
 
@@ -30,7 +30,7 @@ try {
 }
 ~~~
 ### **List Messages Asynchronously with MailQuery**
-The [MailQuery](https://apireference.aspose.com/email/java/com.aspose.email/MailQuery) class can be used to specify search criteria for retrieving a list of messages asynchronously as is shown in the following code sample.
+The [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/MailQuery) class can be used to specify search criteria for retrieving a list of messages asynchronously as is shown in the following code sample.
 
 
 ~~~Java

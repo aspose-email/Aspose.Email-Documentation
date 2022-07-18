@@ -68,7 +68,7 @@ contact.SaveAs("OutlookContact.vcf", OlSaveAsType.olVCard);
 
 ```
 ## **Aspose.Email for .NET**
-The samples below use Aspose.Email to create the Outlook contact in VCard format and save it to disc. The example shows how to create a contact using the [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/index) class and setting the contact details in the object before saving the contact.
+The samples below use Aspose.Email to create the Outlook contact in VCard format and save it to disc. The example shows how to create a contact using the [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/index) class and setting the contact details in the object before saving the contact.
 ### **Programming Samples**
 **C#**
 

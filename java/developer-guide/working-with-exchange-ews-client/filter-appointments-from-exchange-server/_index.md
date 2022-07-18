@@ -7,7 +7,7 @@ url: /java/filter-appointments-from-exchange-server/
 
 
 ## **Filtering Appointments with EWS**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the facility to filter appointments from the Exchange server using the [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Appointments can be filtered based on:
+The [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the facility to filter appointments from the Exchange server using the [ExchangeQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Appointments can be filtered based on:
 
 - Dates
 - Recurrences

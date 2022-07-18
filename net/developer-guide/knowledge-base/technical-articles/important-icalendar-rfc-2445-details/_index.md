@@ -7,7 +7,7 @@ url: /net/important-icalendar-rfc-2445-details/
 
 
 ## **About Aspose.iCalendar Object Model**
-The [Aspose.iCalendar](https://apireference.aspose.com/email/net/aspose.email.calendar) namespace contains all the classes provided by the Aspose.iCalendar component RecurrencePattern and RecurrenceRule are the central classes of Aspose.iCalendar, and provide concrete implementations of the corresponding RFC 2445 elements. 
+The [Aspose.iCalendar](https://reference.aspose.com/email/net/aspose.email.calendar) namespace contains all the classes provided by the Aspose.iCalendar component RecurrencePattern and RecurrenceRule are the central classes of Aspose.iCalendar, and provide concrete implementations of the corresponding RFC 2445 elements. 
 
 The RecurrencePattern class represents the whole recurrence pattern. You can create a new recurrence pattern from scratch using the default constructor or load an existing pattern in iCalendar format using the static FromiCalendar method. The RecurrenceRule class represents the RRULE or EXRULE part of a recurrence pattern. RecurrenceRule exposes a number of properties that directly map to their counterparts in the iCalendar standard. For example, ByMonth maps to BYMONTH in iCalendar and so on. By examining or setting values of the RecurrenceRule properties you can analyze or modify a recurrence rule. For more information and code samples, see RecurrencePattern and RecurrenceRule in the API Reference. 
 ## **Important iCalendar RFC 2445 Details**

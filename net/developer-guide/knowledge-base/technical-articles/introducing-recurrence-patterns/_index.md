@@ -19,7 +19,7 @@ Recurrence patterns are most often periodic, but they don’t have to be. A recu
 - EXRULE - specifies a repeating rule for exceptions from a recurrence set.
 - EXDATE - defines a list of date and time exceptions from a recurrence set.
 
-Only DTSTART is required and there must be only one DTSTART. All other properties are optional and can be specified more than once Aspose.iCalendar takes a string in iCalendar format and reads the recurrence pattern into a [RecurrencePattern](https://apireference.aspose.com/email/net/aspose.email.calendar.recurrences/recurrencepattern) object. The string can be a complete description of an iCalendar component (for example, a complete VEVENT) or it can be just a fragment that contains only the recurrence pattern. Once the recurrence pattern is loaded into a RecurrencePattern object, you can:
+Only DTSTART is required and there must be only one DTSTART. All other properties are optional and can be specified more than once Aspose.iCalendar takes a string in iCalendar format and reads the recurrence pattern into a [RecurrencePattern](https://reference.aspose.com/email/net/aspose.email.calendar.recurrences/recurrencepattern) object. The string can be a complete description of an iCalendar component (for example, a complete VEVENT) or it can be just a fragment that contains only the recurrence pattern. Once the recurrence pattern is loaded into a RecurrencePattern object, you can:
 
 - Examine and modify the pattern programmatically via methods and properties provided by Aspose.iCalendar
 - Generate occurrence dates/times in a specified date range.
