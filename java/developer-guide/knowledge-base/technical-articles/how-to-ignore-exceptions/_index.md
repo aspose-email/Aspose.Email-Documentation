@@ -7,7 +7,7 @@ url: /java/how-to-ignore-exceptions/
 
 
 ## **Ignore Exception Support**
-[ExceptionManager](https://apireference.aspose.com/email/java/com.aspose.email/ExceptionManager) class provide ignore exceptions ability:
+[ExceptionManager](https://reference.aspose.com/email/java/com.aspose.email/ExceptionManager) class provide ignore exceptions ability:
 
 ### **Code examples:**
 

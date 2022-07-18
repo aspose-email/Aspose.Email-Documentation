@@ -25,7 +25,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for .NET Release Notes](/email/net/release-notes)
 - [Aspose.Email for .NET Product Page](https://products.aspose.com/email/net)
 - [Install Aspose.Email for .NET NuGet Package](https://www.nuget.org/packages/Aspose.Email/)
-- [Aspose.Email for .NET API Reference Guide](https://apireference.aspose.com/email/net)
+- [Aspose.Email for .NET API Reference Guide](https://reference.aspose.com/email/net)
 - [Aspose.Email for .NET Free Support Forum](https://forum.aspose.com/c/email/12)
 - [Aspose.Email for .NET Paid Support Helpdesk](https://helpdesk.aspose.com/)
 
@@ -46,7 +46,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for Java Release Notes](/email/java/release-notes)
 - [Aspose.Email for Java Product Page](https://products.aspose.com/email/java)
 - [Install Aspose.Email for Java from Maven Repository](/email/java/installation/)
-- [Aspose.Email for Java API Reference Guide](https://apireference.aspose.com/email/java)
+- [Aspose.Email for Java API Reference Guide](https://reference.aspose.com/email/java)
 - [Download Aspose.Email for Java from GitHub Repository](https://github.com/aspose-email/Aspose.Email-for-Java)
 - [Aspose.Email for Java Free Support Forum](https://forum.aspose.com/c/email/12)
 - [Aspose.Email for Java Paid Support Helpdesk](https://helpdesk.aspose.com/)
@@ -70,7 +70,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for C++ Release Notes](/email/cpp/release-notes)
 - [Aspose.Email for C++ Product Page](https://products.aspose.com/email/cpp)
 - [Install Aspose.Email for C++ NuGet Package](https://www.nuget.org/packages/aspose.email.cpp.vc140/)
-- [Aspose.Email for C++ API Reference Guide](https://apireference.aspose.com/email/cpp)
+- [Aspose.Email for C++ API Reference Guide](https://reference.aspose.com/email/cpp)
 - [Download Examples at GitHub Repository](https://github.com/aspose-email/Aspose.Email-for-C)
 - [Aspose.Email for C++ Free Support Forum](https://forum.aspose.com/c/email/12)
 - [Aspose.Email for C++ Paid Support Helpdesk](https://helpdesk.aspose.com/)
@@ -93,7 +93,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for Python via .NET Features](/email/python-net/features/)
 - [Aspose.Email for Python via .NET Release Notes](/email/python-net/release-notes)
 - [Aspose.Email for Python via .NET Product Page](https://products.aspose.com/email/python-net)
-- [Aspose.Email for Python via .NET API Reference Guide](https://apireference.aspose.com/email/net)
+- [Aspose.Email for Python via .NET API Reference Guide](https://reference.aspose.com/email/net)
 - [Aspose.Email for Python via .NET Free Support Forum](https://forum.aspose.com/)
 - [Aspose.Email for Python via .NET Paid Support Helpdesk](https://helpdesk.aspose.com/)
 
@@ -114,7 +114,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Aspose.Email for Android via Java Limitations and API Differences](/email/androidjava/limitations-and-api-differences/)
 - [Aspose.Email for Android via Java Release Notes](/email/java/android-via-java-release-notes)
 - [Aspose.Email for Android via Java Product Page](https://products.aspose.com/email/android-java)
-- [Aspose.Email for Android via Java API Reference Guide](https://apireference.aspose.com/email/java) 
+- [Aspose.Email for Android via Java API Reference Guide](https://reference.aspose.com/email/java) 
 
 ## Aspose.Email for SharePoint
 

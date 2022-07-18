@@ -11,7 +11,7 @@ With POP3 accounts you can leave messages on the server when downloading and rea
 - Read all the messages from the POP3 mail server using Aspose.Email.
 - Download the messages to your local database.
 
-The messages don't get deleted but stay on the server. The first time it runs, this process works fine. All the required messages are downloaded to the database. But the second time it runs, the same messages are downloaded because they are still on the email server. This causes duplicate records. To solve this issue, use the [Pop3MessageInfo.UniqueID](https://apireference.aspose.com/net/email/aspose.email.clients.pop3/pop3messageinfo/properties/uniqueid) property to check whether a message has already been downloaded. The message's unique ID must be stored in the database: it is the search key for detecting new messages.
+The messages don't get deleted but stay on the server. The first time it runs, this process works fine. All the required messages are downloaded to the database. But the second time it runs, the same messages are downloaded because they are still on the email server. This causes duplicate records. To solve this issue, use the [Pop3MessageInfo.UniqueID](https://reference.aspose.com/net/email/aspose.email.clients.pop3/pop3messageinfo/properties/uniqueid) property to check whether a message has already been downloaded. The message's unique ID must be stored in the database: it is the search key for detecting new messages.
 ## **Detecting New Messages**
 To identify new emails from a list of emails on a POP3 server:
 

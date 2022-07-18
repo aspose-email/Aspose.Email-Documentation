@@ -20,6 +20,6 @@ The following features are not implemented in Aspose.Email for Python via .NET�
 ## **API Resources**
 The following API resources can be of help to you in getting started with Aspose.Email for Python via .NET API:
 
-[Product Page](https://products.aspose.com/email/python-net) | [Documentation](/email/python-net/home/) | [API Reference](https://apireference.aspose.com/email/net) | [Code Examples](https://github.com/aspose-email/aspose.email-python-dotnet) | [Blog](https://blog.aspose.com/category/email/) | [Free Support](https://forum.aspose.com/c/email/12) | [Temporary License](https://purchase.aspose.com/temporary-license)
+[Product Page](https://products.aspose.com/email/python-net) | [Documentation](/email/python-net/home/) | [API Reference](https://reference.aspose.com/email/net) | [Code Examples](https://github.com/aspose-email/aspose.email-python-dotnet) | [Blog](https://blog.aspose.com/category/email/) | [Free Support](https://forum.aspose.com/c/email/12) | [Temporary License](https://purchase.aspose.com/temporary-license)
 
 

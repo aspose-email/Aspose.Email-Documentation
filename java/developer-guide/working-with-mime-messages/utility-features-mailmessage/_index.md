@@ -6,7 +6,7 @@ url: /java/utility-features-mailmessage/
 ---
 
 ## **Encrypting and Decrypting Messages**
-Aspose.Email provides facility to Encrypt and decrypt Email messages. This topic shows how an existing or new message can be loaded and encrypted using [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage). The encrypt() and [decrypt()](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage#decrypt\(\)) methods return the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) object for the applied effects and needs to be taken care of while encrypting/decrypting messages. Encrypting and decrypting messages involves the following steps:
+Aspose.Email provides facility to Encrypt and decrypt Email messages. This topic shows how an existing or new message can be loaded and encrypted using [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage). The encrypt() and [decrypt()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage#decrypt\(\)) methods return the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) object for the applied effects and needs to be taken care of while encrypting/decrypting messages. Encrypting and decrypting messages involves the following steps:
 
 1. Create a new message or load an existing one
 1. Encrypt the message using the certificate file
@@ -19,7 +19,7 @@ The following code snippet shows you how to encrypt and decrypt messages.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-EncryptAndDecryptMessage-EncryptAndDecryptMessage.java" >}}
 ### **Checking a Message for Encryption**
-Aspose.Email [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class allows checking a message if it is encrypted or not. The [isEncrypted](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage#isEncrypted\(\)) property of [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) allows checking this as shown in the following code sample.
+Aspose.Email [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class allows checking a message if it is encrypted or not. The [isEncrypted](https://reference.aspose.com/email/java/com.aspose.email/mailmessage#isEncrypted\(\)) property of [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) allows checking this as shown in the following code sample.
 
 
 
@@ -58,15 +58,15 @@ To create the TNEF, the following sample code can be used.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-TNEFAttachment-DetectIfAMessageIsTNEF.java" >}}
 ## **Processing of Bounced Messages**
-It is very common that a message sent to a recipient may bounce for any reason such as an invalid recipient address. Aspose.Email API has the capability to process such a message for checking if it is a bounced email or a regular email message. The [CheckBounced](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage#checkBounced\(\)) method of the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class returns a valid result if the email message is a bounced email.
+It is very common that a message sent to a recipient may bounce for any reason such as an invalid recipient address. Aspose.Email API has the capability to process such a message for checking if it is a bounced email or a regular email message. The [CheckBounced](https://reference.aspose.com/email/java/com.aspose.email/mailmessage#checkBounced\(\)) method of the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class returns a valid result if the email message is a bounced email.
 
-This article shows the usage of [BounceResult](https://apireference.aspose.com/email/java/com.aspose.email/BounceResult) class that provides the capability of checking if a message is a bounced email. It further gives detailed information about the recipients, action taken and the reason for the notification.
+This article shows the usage of [BounceResult](https://reference.aspose.com/email/java/com.aspose.email/BounceResult) class that provides the capability of checking if a message is a bounced email. It further gives detailed information about the recipients, action taken and the reason for the notification.
 
 
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-ProcessBouncedMessages-.java" >}}
 ## **Bayesian Spam Analyzer**
-Aspose.Email provides the facility of e-mail filtering using the Bayes spam analyzer. It provides the [SpamAnalyzer](https://apireference.aspose.com/email/java/com.aspose.email/SpamAnalyzer) class for this purpose. This article shows how to train the filter to distinguish between the spam and regular emails based on the words database.
+Aspose.Email provides the facility of e-mail filtering using the Bayes spam analyzer. It provides the [SpamAnalyzer](https://reference.aspose.com/email/java/com.aspose.email/SpamAnalyzer) class for this purpose. This article shows how to train the filter to distinguish between the spam and regular emails based on the words database.
 
 
 

@@ -67,7 +67,7 @@ mailItem.Send();
 
 ```
 ## **Sending Meeting Request using Aspose.Email for .NET**
-The code below uses Aspose.Email for .NET to send a meeting request. First, create the meeting request using the [Aspose.Email.Appointment](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment) class. Then send the email, attach the meeting request and send the email using the [Aspose.Email.Mail.SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp) class.
+The code below uses Aspose.Email for .NET to send a meeting request. First, create the meeting request using the [Aspose.Email.Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment) class. Then send the email, attach the meeting request and send the email using the [Aspose.Email.Mail.SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp) class.
 #### **Advantages of using Aspose.Email for .NET**
 Outlook Interop requires Microsoft Outlook to be installed on the system where it is used. Aspose.Email for .NET does not require Microsoft Outlook to be installed and is suitable in server applications.
 #### **Programming Samples**

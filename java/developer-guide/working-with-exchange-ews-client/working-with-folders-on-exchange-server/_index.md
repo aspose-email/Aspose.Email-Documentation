@@ -50,7 +50,7 @@ private static void listSubFolders(IEWSClient client, ExchangeFolderInfo folderI
 }
 ~~~
 ## **Get Folder Type Information using EWS**
-The [FolderType](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderInfo#getFolderType\(\)) property provided by [ExchangeFolderInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangefolderinfo) class can be used to get information about the type of the folder. This is as shown in the code sample below.
+The [FolderType](https://reference.aspose.com/email/java/com.aspose.email/ExchangeFolderInfo#getFolderType\(\)) property provided by [ExchangeFolderInfo](https://reference.aspose.com/email/java/com.aspose.email/exchangefolderinfo) class can be used to get information about the type of the folder. This is as shown in the code sample below.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
@@ -106,7 +106,7 @@ while (!pagedMessageInfoCol.getLastPage()) {
 }
 ~~~
 ## **Accessing Mailbox Custom Folders or Subfolders**
-[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) lets developers access any custom folder or subfolder from the mailbox. The [folderExists()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#folderExists\(java.lang.String,%20java.lang.String\)) function of [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) returns the URI of a specified custom folder/sub-folder, which can be used then to access the target folder. In the following example, a custom folder named "TestInbox", which is created under INBOX is accessed and all the messages are displayed from this custom folder. To perform this task, the following are the steps:
+[IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) lets developers access any custom folder or subfolder from the mailbox. The [folderExists()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#folderExists\(java.lang.String,%20java.lang.String\)) function of [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) returns the URI of a specified custom folder/sub-folder, which can be used then to access the target folder. In the following example, a custom folder named "TestInbox", which is created under INBOX is accessed and all the messages are displayed from this custom folder. To perform this task, the following are the steps:
 
 1. Initialize the IEWSClient object by providing valid credentials.
 1. Access the default mailbox.
@@ -148,7 +148,7 @@ if (subfolderInfo != null) {
 }
 ~~~
 ## **Listing Public Folders**
-Microsoft Exchange Server lets users create public folders and post messages in them. To do this through your application, use Aspose.Email's [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class to connect to the Exchange Server and read and download messages and posts from public folders. The following code snippet shows you how to read all public folders, and subfolders, and lists and download any messages found in these folders. This example only works with Microsoft Exchange Server 2007 or above since only these support EWS.
+Microsoft Exchange Server lets users create public folders and post messages in them. To do this through your application, use Aspose.Email's [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class to connect to the Exchange Server and read and download messages and posts from public folders. The following code snippet shows you how to read all public folders, and subfolders, and lists and download any messages found in these folders. This example only works with Microsoft Exchange Server 2007 or above since only these support EWS.
 
 
 
@@ -193,7 +193,7 @@ private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, I
 }
 ~~~
 ## **Copy a Message to another Folder**
-Aspose.Email API allows copying a message from one folder to another folder using the [copyItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#copyItem\(java.lang.String,%20java.lang.String\)) method. The overloaded version of this method returns the Unique URI of the copied message as shown in this article.
+Aspose.Email API allows copying a message from one folder to another folder using the [copyItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#copyItem\(java.lang.String,%20java.lang.String\)) method. The overloaded version of this method returns the Unique URI of the copied message as shown in this article.
 
 
 
@@ -210,7 +210,7 @@ try {
 }
 ~~~
 ## **Synching Folder Items**
-Aspose.Email for Java API's [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the feature of syncing an Exchange folder for its contents. The [syncFolder](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#syncFolder\(java.lang.String\)) method exposed by the [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) class can be used to perform folder sync information on a specified folder. The following code snippet shows you how to sync exchange folder information.
+Aspose.Email for Java API's [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) provides the feature of syncing an Exchange folder for its contents. The [syncFolder](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#syncFolder\(java.lang.String\)) method exposed by the [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) class can be used to perform folder sync information on a specified folder. The following code snippet shows you how to sync exchange folder information.
 
 
 
@@ -230,7 +230,7 @@ System.out.println(result.getReadFlagChanged().size());
 System.out.println(result.getDeletedItems().length);
 ~~~
 ## **Retrieving Permissions for Exchange Folders**
-Users are assigned permissions to public folders on Exchange Server, which limits/determine the level of access a user has to these folders. The [ExchangeFolderPermission](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission) class provides a set of permission properties for Exchange folders such as the [PermissionLevel](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission#getPermissionLevel\(\)), whether they can [canCreateItems](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#canCreateItems\(\)), [deleteItems](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#setDeleteItems\(int\)), and perform other tasks as specified by the permission properties. Permissions can be retrieved using the [getFolderPermissions()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#getFolderPermissions\(java.lang.String\)) method of [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). This article shows how to retrieve the permissions applied to a public folder for all the users who have access to the shared folders.
+Users are assigned permissions to public folders on Exchange Server, which limits/determine the level of access a user has to these folders. The [ExchangeFolderPermission](https://reference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission) class provides a set of permission properties for Exchange folders such as the [PermissionLevel](https://reference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission#getPermissionLevel\(\)), whether they can [canCreateItems](https://reference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#canCreateItems\(\)), [deleteItems](https://reference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#setDeleteItems\(int\)), and perform other tasks as specified by the permission properties. Permissions can be retrieved using the [getFolderPermissions()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#getFolderPermissions\(java.lang.String\)) method of [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient). This article shows how to retrieve the permissions applied to a public folder for all the users who have access to the shared folders.
 
 To perform this task:
 
@@ -238,7 +238,7 @@ To perform this task:
 1. Use the listPublicFolders to get a list of all public folders
 1. Retrieve the permissions associated with a folder using the getFolderPermissions() method
 
-The following code snippet shows you how to use the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class to retrieve permissions applied to a folder.
+The following code snippet shows you how to use the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class to retrieve permissions applied to a folder.
 
 
 
@@ -284,7 +284,7 @@ try {
 }
 ~~~
 ## **Creating Folders and Sub-Folders**
-Aspose.Email API provides the capability to create folders in an Exchange mailbox. The [CreateFolder](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createFolder\(java.lang.String\)) method of [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) can be used for this purpose. In order to create a folder in the Exchange server mailbox, the following steps can be used.
+Aspose.Email API provides the capability to create folders in an Exchange mailbox. The [CreateFolder](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#createFolder\(java.lang.String\)) method of [IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) can be used for this purpose. In order to create a folder in the Exchange server mailbox, the following steps can be used.
 
 1. Create an instance of IEWSClient.
 1. Set the UseSlashAsFolderSeparator property as required. If set to **true**, the application will consider the "Slash" as folder separator and the subfolder will be created after the slash.

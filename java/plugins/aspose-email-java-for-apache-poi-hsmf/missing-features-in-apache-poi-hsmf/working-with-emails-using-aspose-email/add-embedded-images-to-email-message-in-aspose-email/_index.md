@@ -6,7 +6,7 @@ url: /java/add-embedded-images-to-email-message-in-aspose-email/
 ---
 
 ## **Aspose.Email - Add Embedded Images to Email Message**
-With Aspose.Email Java developers can easily embed any image into an email message as well as attach it, as discussed in [Manage Attachments in Email Message](/email/java/working-with-message-attachments). To embed an image, Aspose.Email uses a specialized class, [LinkedResource](https://apireference.aspose.com/email/java/com.aspose.email/linkedresource).
+With Aspose.Email Java developers can easily embed any image into an email message as well as attach it, as discussed in [Manage Attachments in Email Message](/email/java/working-with-message-attachments). To embed an image, Aspose.Email uses a specialized class, [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource).
 
 **Java**
 

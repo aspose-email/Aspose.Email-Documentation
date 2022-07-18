@@ -6,11 +6,11 @@ url: /net/working-with-appointments/
 ---
 
 ## **Load and Save Appointment in ICS Format**
-The [Appointment](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment) class in Aspose.Email for .NET can be used to load an appointment in ICS format as well as create a new appointment and save it to disk in ICS format. In this article, we first create an appointment and save it to disk in ICS format, and then we load it.
+The [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment) class in Aspose.Email for .NET can be used to load an appointment in ICS format as well as create a new appointment and save it to disk in ICS format. In this article, we first create an appointment and save it to disk in ICS format, and then we load it.
 ### **Create Appointment and Save to Disk in ICS Format**
 Following steps are required to create an appointment and save it in ICS format.
 
-1. Create an instance of the [Appointment](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment) class and initialize it with this constructor.
+1. Create an instance of the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment) class and initialize it with this constructor.
 1. Pass the following arguments in the above constructor
    1. Location
    1. Summary
@@ -19,7 +19,7 @@ Following steps are required to create an appointment and save it in ICS format.
    1. End Date
    1. Organizer
    1. Attendees
-1. Call the [Save()](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment/methods/save/index) method and specify the file name and format in the arguments.
+1. Call the [Save()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/methods/save/index) method and specify the file name and format in the arguments.
 
 The appointment can be opened in Microsoft Outlook or any program that can load an ICS file. If the file is opened in Microsoft Outlook it automatically adds the appointment in the Outlook calendar.
 
@@ -31,8 +31,8 @@ The following code snippet shows you how to create and save an appointment to di
 ### **Load Appointment ICS Format**
 To load an appointment in ICS format, the following steps are required:
 
-1. Create an instance of the [Appointment](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment) class.
-1. Call the [Load()](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment/methods/load/index) method by providing the path of the ICS file.
+1. Create an instance of the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment) class.
+1. Call the [Load()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/methods/load/index) method by providing the path of the ICS file.
 1. Read any property to get any information from the appointment (ICS file).
 
 The following code snippet shows you how to load an appointment in ICS format.
@@ -45,7 +45,7 @@ The following code snippet shows you how to load an appointment in ICS format.
 ## **Write Multiple Events to ICS File**
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-WriteMultipleEventsToICS-WriteMultipleEventsToICS.cs" >}}
 ## **Create a Draft Appointment Request**
-It was shown in our earlier articles how to create and save an appointment in ICS format. It is often required to create an Appointment request in Draft mode, so as the basic information is added and then the same draft Appointment be forwarded to other users for necessary changes according to individual users. In order to save an Appointment in Draft mode, the [MethodType](https://apireference.aspose.com/email/net/aspose.email.calendar/appointment/properties/methodtype) property of Appointment class should be set to [AppointmentMethodType.Publish](https://apireference.aspose.com/email/net/aspose.email.calendar/appointmentmethodtype). The following code snippet shows you how to create a draft appointment request.
+It was shown in our earlier articles how to create and save an appointment in ICS format. It is often required to create an Appointment request in Draft mode, so as the basic information is added and then the same draft Appointment be forwarded to other users for necessary changes according to individual users. In order to save an Appointment in Draft mode, the [MethodType](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/properties/methodtype) property of Appointment class should be set to [AppointmentMethodType.Publish](https://reference.aspose.com/email/net/aspose.email.calendar/appointmentmethodtype). The following code snippet shows you how to create a draft appointment request.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-DraftAppointmentRequest-DraftAppointmentRequest.cs" >}}
 ### **Draft Appointment Creation from Text**

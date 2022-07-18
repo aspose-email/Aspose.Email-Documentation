@@ -12,10 +12,10 @@ As well as parsing an existing PST file, Aspose.Email provides the means to crea
 1. [Changing Container class of a folder](#changing-a-folders-container-class).
 1. [Add Bulk Messages with Improved Performance](#add-bulk-messages-with-improved-performance) 
 
-Use the [PersonalStorage](https://apireference.aspose.com/email/net/aspose.email.storage.pst/personalstorage) class to create a PST file at some location on a local disk. To create a PST file from scratch:
+Use the [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage) class to create a PST file at some location on a local disk. To create a PST file from scratch:
 
-1. Create a PST using the [PersonalStorage.Create()](https://apireference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/methods/create/index) method.
-1. Add a sub-folder at the root of the PST file by accessing the Root folder and then calling the [AddSubFolder](https://apireference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/addsubfolder/index) method.
+1. Create a PST using the [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/methods/create/index) method.
+1. Add a sub-folder at the root of the PST file by accessing the Root folder and then calling the [AddSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/methods/addsubfolder/index) method.
 
 The following code snippet shows you how to create a PST file and add a subfolder called Inbox.
 

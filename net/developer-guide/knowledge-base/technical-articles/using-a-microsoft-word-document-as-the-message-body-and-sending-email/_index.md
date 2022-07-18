@@ -10,11 +10,11 @@ This article shows you how to use a Microsoft Word document as the email body an
 ## **Using Microsoft Word Documents as Email Body**
 The programming samples below illustrate how to send a Word document as an email body using Aspose.Words for .NET and Aspose.Email for .NET:
 
-1. Load a Microsoft Word document using Aspose.Word for .NET's [Document](https://apireference.aspose.com/words/net/aspose.words/document) class.
+1. Load a Microsoft Word document using Aspose.Word for .NET's [Document](https://reference.aspose.com/words/net/aspose.words/document) class.
 1. Save it in MHTML format.
-1. Load the MHTML document using Aspose.Email for .NET's [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class to set the email body.
-1. Set other message properties using different [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class properties and methods.
-1. Send the email using Aspose.Email for .NET's [SMTPClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class.
+1. Load the MHTML document using Aspose.Email for .NET's [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class to set the email body.
+1. Set other message properties using different [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class properties and methods.
+1. Send the email using Aspose.Email for .NET's [SMTPClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class.
 
 The source document, a sales invoice exported to Microsoft Word from the Microsoft Northwind sample can be seen below. 
 
@@ -28,7 +28,7 @@ The HTML formatting and images are preserved as in the original source document 
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_3.png)
 
-The following code snippet shows you how to use a Microsoft Word document as the message body and send an email by using [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class instance.
+The following code snippet shows you how to use a Microsoft Word document as the message body and send an email by using [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class instance.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

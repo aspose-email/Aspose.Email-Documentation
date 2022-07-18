@@ -6,18 +6,18 @@ url: /java/creating-and-setting-contents-of-emails/
 ---
 
 ## **Create New Email Message**
-Aspose.Email for Java enables developers to create MIME (Multipurpose Internet Mail Extensions) Messages from scratch. The main class for this purpose in the Aspose.Email for Java API is the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class.
+Aspose.Email for Java enables developers to create MIME (Multipurpose Internet Mail Extensions) Messages from scratch. The main class for this purpose in the Aspose.Email for Java API is the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class.
 This topic explains the steps required to create email messages in EML, MSG and MTH file formats using Aspose.Email for Java.
 
 To create an email message from scratch:
 
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class.
-1. Set the message subject using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class' setSubject() method.
-1. Set the message body using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class' setHtmlBody() method.
-1. Set the email sender using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class' setFrom() method.
-1. Set the recipient in the **TO** field by using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class' getTo().add() method.
-1. Set the recipient in the **CC** field by using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class' getCC().add() method.
-1. Call the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class' Save() method to save the message file to disk in MSG, EML, and MHT formats.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class.
+1. Set the message subject using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class' setSubject() method.
+1. Set the message body using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class' setHtmlBody() method.
+1. Set the email sender using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class' setFrom() method.
+1. Set the recipient in the **TO** field by using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class' getTo().add() method.
+1. Set the recipient in the **CC** field by using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class' getCC().add() method.
+1. Call the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class' Save() method to save the message file to disk in MSG, EML, and MHT formats.
  
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-CreateNewEmail-.java" >}}
@@ -137,7 +137,7 @@ The following code snippet shows you how to request a read receipt.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-RequestReadReceipt-RequestReadReceipt.java" >}}
 ## **Set Email Headers**
-Email headers represent an Internet standard and RFC define header fields which are included in Internet email messages. An email header can be specified using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class. Common header types are defined in the [HeaderType](https://apireference.aspose.com/email/java/com.aspose.email/headertype) class. It is a sealed class that works like a normal enumeration.
+Email headers represent an Internet standard and RFC define header fields which are included in Internet email messages. An email header can be specified using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class. Common header types are defined in the [HeaderType](https://reference.aspose.com/email/java/com.aspose.email/headertype) class. It is a sealed class that works like a normal enumeration.
 
 Normally an email header contains these fields:
 
@@ -171,10 +171,10 @@ X-Mailer: Aspose.Email
 
 To customize an email header, follow these steps:
 
-- Create an instance of the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class.
-- Specify To, From, CC, Bcc, ReplyTo, Subject, Date & XMailer using an instance of the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class.
-- Create an instance of the [MimeHeader](https://apireference.aspose.com/email/java/com.aspose.email/mimeheader) class and specify secret header.
-- Add the secret header to the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) instance.
+- Create an instance of the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class.
+- Specify To, From, CC, Bcc, ReplyTo, Subject, Date & XMailer using an instance of the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class.
+- Create an instance of the [MimeHeader](https://reference.aspose.com/email/java/com.aspose.email/mimeheader) class and specify secret header.
+- Add the secret header to the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) instance.
 
 In the code given below, we have customized an email header.
 
@@ -250,19 +250,19 @@ Mail merges help you create and send a batch of similar email messages. The core
 To perform a mail merge with Aspose.Email, take the following steps:
 
 1. Create a function with name signature
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) class.
 1. Specify the sender, receiver, subject and body.
 1. Create a signature for the end of the email.
-1. Create an instance of the [TemplateRoutine](https://apireference.aspose.com/email/java/com.aspose.email/templateroutine) class and pass it the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) instance.
-1. Take signature in the [TemplateRoutine](https://apireference.aspose.com/email/java/com.aspose.email/templateroutine) instance.
+1. Create an instance of the [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine) class and pass it the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage) instance.
+1. Take signature in the [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine) instance.
 1. Create an instance of the DataTable class.
 1. Add the columns Receipt, FirstName and LastName as data sources in the DataTable class
 1. Create an instance of the DataRow class
 1. Specify the receipt address, first and last names in the DataRow object
-1. Create an instance of the [MailMessageCollection](https://apireference.aspose.com/email/java/com.aspose.email/mailmessageCollection) class
-1. Specify the [TemplateRoutine](https://apireference.aspose.com/email/java/com.aspose.email/templateroutine) and DataTable instances in the [MailMessageCollection](https://apireference.aspose.com/email/java/com.aspose.email/mailmessageCollection) instance.
-1. Create an instance of the [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) class and specify the server, port, username and password
-1. Send emails using the [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) class' BulkSendAsync method
+1. Create an instance of the [MailMessageCollection](https://reference.aspose.com/email/java/com.aspose.email/mailmessageCollection) class
+1. Specify the [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine) and DataTable instances in the [MailMessageCollection](https://reference.aspose.com/email/java/com.aspose.email/mailmessageCollection) instance.
+1. Create an instance of the [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient) class and specify the server, port, username and password
+1. Send emails using the [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient) class' BulkSendAsync method
 
 The code below sends an email to one person from three others.
 

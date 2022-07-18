@@ -6,7 +6,7 @@ url: /java/working-with-gmail-contacts/
 ---
 
 
-Aspose.Email supports working with Gmail contacts. Using the [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) interface, users can retrieve contacts from a Gmail account, create new contacts, and update as well as delete existing contacts. Gmail allows developers to perform all these using its public developer's API. The following user information is required for working with Gmail contacts:
+Aspose.Email supports working with Gmail contacts. Using the [IGmailClient](https://reference.aspose.com/email/java/com.aspose.email/IGmailClient) interface, users can retrieve contacts from a Gmail account, create new contacts, and update as well as delete existing contacts. Gmail allows developers to perform all these using its public developer's API. The following user information is required for working with Gmail contacts:
 User name, email address, password, client ID, client secret refresh token.
 
 ## **Access Gmail Contacts**

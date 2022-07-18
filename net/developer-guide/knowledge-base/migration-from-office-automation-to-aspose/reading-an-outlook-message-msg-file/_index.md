@@ -58,7 +58,7 @@ System.Console.WriteLine(string.Format("Text Body:{0}", item.Body));
 ## **Aspose.Email for .NET**
 The following code snippet does the same thing as [the code above](/#office-automation) using Aspose.Email for .NET.
 
-To access the [Aspose.Email.Outlook](https://apireference.aspose.com/email/net/aspose.email.clients) objects, you need to add a reference to Aspose.Email to your project.
+To access the [Aspose.Email.Outlook](https://reference.aspose.com/email/net/aspose.email.clients) objects, you need to add a reference to Aspose.Email to your project.
 ### **Programming Samples**
 **C#**
 

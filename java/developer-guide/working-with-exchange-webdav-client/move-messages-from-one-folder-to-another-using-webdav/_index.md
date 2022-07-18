@@ -5,7 +5,7 @@ weight: 70
 url: /java/move-messages-from-one-folder-to-another-using-webdav/
 ---
 
-You can move email messages from one folder to another with the help of the [ExchangeClient.moveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#moveMessage\(com.aspose.email.ExchangeMessageInfo,%20java.lang.String\)) method. It takes the parameters:
+You can move email messages from one folder to another with the help of the [ExchangeClient.moveMessage()](https://reference.aspose.com/email/java/com.aspose.email/ExchangeClient#moveMessage\(com.aspose.email.ExchangeMessageInfo,%20java.lang.String\)) method. It takes the parameters:
 
 - The unique URI of the message which is to be moved.
 - The unique URI of the destination folder.

@@ -6,7 +6,7 @@ url: /java/create-new-calendar-item/
 ---
 
 ## **Aspose.Email - Create New Calendar Item**
-Aspose.Email's [MapiCalendar](https://apireference.aspose.com/email/java/com.aspose.email/mapicalendar) class provides methods and attributes that set various properties of a calendar item.
+Aspose.Email's [MapiCalendar](https://reference.aspose.com/email/java/com.aspose.email/mapicalendar) class provides methods and attributes that set various properties of a calendar item.
 
 **Java**
 

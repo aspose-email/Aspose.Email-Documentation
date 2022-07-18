@@ -78,11 +78,11 @@ The following code snippet shows you how to set alternate text.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithMimeMessages-AlternateText-AlternateText.py" >}}
 ## **MailMessage Features**
-The [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class represents the content of an email message. Instances of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class are used to construct an email message that is transmitted to a SMTP server for delivery using the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class. This article shows how to use [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class utility features for controlling the following email features:
+The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class represents the content of an email message. Instances of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class are used to construct an email message that is transmitted to a SMTP server for delivery using the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class. This article shows how to use [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class utility features for controlling the following email features:
 
-- **Date and time** - Through the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class Date property we get or set an email's date and time.
-- **Message priority** - The [MailPriority](https://apireference.aspose.com/email/net/aspose.email/mailpriority) class specifies priority levels for sending an email message. It can be low, normal or high. Priority influences transmission speed and delivery.
-- **Message sensitivity** - The [MailSensitivity](https://apireference.aspose.com/email/net/aspose.email/mailsensitivity) class specifies five levels of sensitivity.
+- **Date and time** - Through the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class Date property we get or set an email's date and time.
+- **Message priority** - The [MailPriority](https://reference.aspose.com/email/net/aspose.email/mailpriority) class specifies priority levels for sending an email message. It can be low, normal or high. Priority influences transmission speed and delivery.
+- **Message sensitivity** - The [MailSensitivity](https://reference.aspose.com/email/net/aspose.email/mailsensitivity) class specifies five levels of sensitivity.
 - **Delivery notification** - Delivery notifications let senders know that the email they sent have been delivered to the recipient's inbox.
 
 By default, the date is the actual date that the message was sent, and time is the time it was sent, as displayed by Microsoft Outlook. However, the real email delivery time is added by the SMTP server itself in the mail header. For example, below is a common mail header, where Date sets the field Date.
@@ -99,12 +99,12 @@ The code snippet below illustrates how each of the feature discussed above can b
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-MailMessageFeatures-MailMessageFeatures.py" >}}
 ## **Requesting a Read Receipt**
-The programming samples below show how you can request a read receipt. The [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class [DeliveryNotificationOptions](https://apireference.aspose.com/email/net/aspose.email/deliverynotificationoptions) Enumeration property describes the delivery notification options for an email. To request a read receipt after sending an email, follow these steps:
+The programming samples below show how you can request a read receipt. The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class [DeliveryNotificationOptions](https://reference.aspose.com/email/net/aspose.email/deliverynotificationoptions) Enumeration property describes the delivery notification options for an email. To request a read receipt after sending an email, follow these steps:
 
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-1. Specify the sender, receiver and HTML body for the email in the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
-1. Specify the [DeliveryNotificationOptions](https://apireference.aspose.com/email/net/aspose.email/deliverynotificationoptions) in other [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instances.
-1. Create an instance of the [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email using Send method.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+1. Specify the sender, receiver and HTML body for the email in the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
+1. Specify the [DeliveryNotificationOptions](https://reference.aspose.com/email/net/aspose.email/deliverynotificationoptions) in other [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instances.
+1. Create an instance of the [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class and send the email using Send method.
 
 Read receipt requests may not be always honored because:
 
@@ -152,10 +152,10 @@ X-Mailer: Aspose.Email
 
 To customize an email header, follow these steps:
 
-- Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
-- Specify To, From, CC, Bcc, ReplyTo, Subject, Date & XMailer using an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage).
-- Create an instance of the [MimeHeader](https://apireference.aspose.com/email/net/aspose.email.mime/mimeheader) class and specify secret header.
-- Add the secret header to the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
+- Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
+- Specify To, From, CC, Bcc, ReplyTo, Subject, Date & XMailer using an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage).
+- Create an instance of the [MimeHeader](https://reference.aspose.com/email/net/aspose.email.mime/mimeheader) class and specify secret header.
+- Add the secret header to the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
 
 The following code snippet shows you how to set email headers.
 
@@ -189,17 +189,17 @@ secret-header: mystery
 
 ```
 ### **Insert Header at Specific Location**
-The [Add](https://apireference.aspose.com/email/net/aspose.email.mime.headercollection/add/methods/1) method of [HeadersCollection](https://apireference.aspose.com/email/net/aspose.email.mime/headercollection) class inserts the header at the end of the collection. However, it may sometimes be necessary to insert a header at a specific location. In such case, the [Add](https://apireference.aspose.com/email/net/aspose.email.mime.headercollection/add/methods/1) method won't be of help. To achieve this, use the [Insert](https://apireference.aspose.com/email/net/aspose.email.mime/headercollection/methods/insert) method of the [HeadersCollection](https://apireference.aspose.com/email/net/aspose.email.mime/headercollection). If collection contains headers with the same name, this header will be inserted before other headers with the same name. The following code snippet shows you how to insert header at specific location.
+The [Add](https://reference.aspose.com/email/net/aspose.email.mime.headercollection/add/methods/1) method of [HeadersCollection](https://reference.aspose.com/email/net/aspose.email.mime/headercollection) class inserts the header at the end of the collection. However, it may sometimes be necessary to insert a header at a specific location. In such case, the [Add](https://reference.aspose.com/email/net/aspose.email.mime.headercollection/add/methods/1) method won't be of help. To achieve this, use the [Insert](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/methods/insert) method of the [HeadersCollection](https://reference.aspose.com/email/net/aspose.email.mime/headercollection). If collection contains headers with the same name, this header will be inserted before other headers with the same name. The following code snippet shows you how to insert header at specific location.
 
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-InsertHeaderAtSpecificLocation-InsertHeaderAtSpecificLocation.py" >}}
 ### **Adding Custom headers to email**
-The programming samples below demonstrates how to specify a custom header in an email message. An email header can be specified using the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class. To specify a custom header in an email message, please follow these steps:
+The programming samples below demonstrates how to specify a custom header in an email message. An email header can be specified using the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class. To specify a custom header in an email message, please follow these steps:
 
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) class.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) class.
 1. Specify the to, from and subject values using the MailMessage instance.
-1. Add the secret header into the [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) instance.
+1. Add the secret header into the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) instance.
 1. Create an instance of the SmtpClient class and send the email using the Send method.
 
 The following code snippet shows you how to add custom headers to email.

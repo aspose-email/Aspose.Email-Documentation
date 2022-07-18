@@ -11,8 +11,8 @@ The following is a list of any changes made to the public API such as [added](/e
 ## **Added Enumeration Members**
 ### **MhtFormatOptions Enumeration with Members WriteCompleteEmailAddressToMht and HideExtraPrintHeader**
 
-Provides control of whether the top header is visible in MHT output. The [MhtMessageFormatter](https://apireference.aspose.com/email/java/com.aspose.email/MhtFormatOptions).format([MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) message, Boolean writeCompleteEmailAddress) method is marked as deprecated. Use the [MhtMessageFormatter](https://apireference.aspose.com/email/java/com.aspose.email/MhtFormatOptions).format([MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) message, int formatOptions) method instead.
+Provides control of whether the top header is visible in MHT output. The [MhtMessageFormatter](https://reference.aspose.com/email/java/com.aspose.email/MhtFormatOptions).format([MailMessage](https://reference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) message, Boolean writeCompleteEmailAddress) method is marked as deprecated. Use the [MhtMessageFormatter](https://reference.aspose.com/email/java/com.aspose.email/MhtFormatOptions).format([MailMessage](https://reference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) message, int formatOptions) method instead.
 ### **MailMessageSaveOptions.HideExtraPrintHeader Enumeration Member**
-The [MailMessageSaveOptions](https://apireference.aspose.com/email/java/com.aspose.email/SaveOptions).HideExtraPrintHeader enumeration member provides control of the top header visibility in MHT output.
+The [MailMessageSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/SaveOptions).HideExtraPrintHeader enumeration member provides control of the top header visibility in MHT output.
 
 {{% /alert %}}

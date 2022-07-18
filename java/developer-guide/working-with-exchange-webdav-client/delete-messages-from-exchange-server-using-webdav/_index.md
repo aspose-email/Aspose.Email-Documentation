@@ -5,7 +5,7 @@ weight: 20
 url: /java/delete-messages-from-exchange-server-using-webdav/
 ---
 
-You can delete email messages from a folder with the help of the [ExchangeClient.deleteMessage()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#deleteMessage\(java.lang.String\)) method. It takes the message's unique URI as a parameter.
+You can delete email messages from a folder with the help of the [ExchangeClient.deleteMessage()](https://reference.aspose.com/email/java/com.aspose.email/ExchangeClient#deleteMessage\(java.lang.String\)) method. It takes the message's unique URI as a parameter.
 
 The sample code below deletes a message from the Inbox folder. For the purpose of this example, the code:
 

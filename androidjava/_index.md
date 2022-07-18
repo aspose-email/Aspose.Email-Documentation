@@ -25,7 +25,7 @@ Following are the links to some useful resources you may need to accomplish your
 - [Release Notes](/email/java/release-notes/)
 - [Product Page](https://products.aspose.com/email/android-java)
 - [Install Aspose.Email from Maven Repository](/email/java/installation/)
-- [Reference Guide](https://apireference.aspose.com/email/java)
+- [Reference Guide](https://reference.aspose.com/email/java)
 - [Download from GitHub Repository](https://github.com/aspose-email/Aspose.Email-for-Java)
 - [Free Support Forum](https://forum.aspose.com/c/email/12)
 - [Paid Support Helpdesk](https://helpdesk.aspose.com/)

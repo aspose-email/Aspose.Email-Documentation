@@ -6,7 +6,7 @@ url: /java/working-with-outlook-calendar-items/
 ---
 
 ## **Working with MapiCalendar**
-Aspose.Email's [MapiCalendar](https://apireference.aspose.com/email/java/com.aspose.email/MapiCalendar) class provides methods and attributes to set various properties of a calendar item. This article provides code samples for:
+Aspose.Email's [MapiCalendar](https://reference.aspose.com/email/java/com.aspose.email/MapiCalendar) class provides methods and attributes to set various properties of a calendar item. This article provides code samples for:
 
 - [Creating and saving calendar items](#creating-and-saving-calendar-items)
 - [Setting reminders for MapiCalendar items](#adding-display-reminder-to-a-calendar)
@@ -168,7 +168,7 @@ for (MapiRecipient recipient : message.getRecipients()) {
 }
 ~~~
 ### **Create MapiCalendarTimeZone from Standard Timezone**
-The following code snippet shows you how to Create [MapiCalendarTimeZone](https://apireference.aspose.com/email/java/com.aspose.email/MapiCalendarTimeZone) from standard Timezone.
+The following code snippet shows you how to Create [MapiCalendarTimeZone](https://reference.aspose.com/email/java/com.aspose.email/MapiCalendarTimeZone) from standard Timezone.
 
 
 
@@ -253,9 +253,9 @@ target.getReminders().addItem(procReminder);
 target.save(dataDir + "savedFile_out.ics");
 ~~~
 ## **Convert Appointment EML to MSG with HTML Body**
-Since version 19.3, Aspose.Email provides the ability to convert Appointment EML to MSG while retaining the HTML body of the appointment. Aspose.Email provides a [MapiConversionOptions.ForcedRtfBodyForAppointment](https://apireference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\))[ ](https://apireference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/properties/forcedrtfbodyforappointment)property which has a default value of **true.** When the value of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://apireference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\)) is set to **true**, the appointment body is converted to RTF format. To keep the appointment body format in HTML format, set the value of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://apireference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\)) to **false.**
+Since version 19.3, Aspose.Email provides the ability to convert Appointment EML to MSG while retaining the HTML body of the appointment. Aspose.Email provides a [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\))[ ](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/properties/forcedrtfbodyforappointment)property which has a default value of **true.** When the value of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\)) is set to **true**, the appointment body is converted to RTF format. To keep the appointment body format in HTML format, set the value of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\)) to **false.**
 
-The following example demonstrates the use of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://apireference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\)) property to keep the appointment body format in HTML format.
+The following example demonstrates the use of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/MapiConversionOptions#setForcedRtfBodyForAppointment\(boolean\)) property to keep the appointment body format in HTML format.
 
 
 

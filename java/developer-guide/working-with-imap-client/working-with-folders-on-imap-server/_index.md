@@ -7,7 +7,7 @@ url: /java/working-with-folders-on-imap-server/
 
 
 ## **Getting Folders Information**
-Getting information about folders from an IMAP server is very easy with Aspose.Email. Call the [listFolders()](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#listFolders\(\)) method of the [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) class. It returns an object of the [ImapFolderInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/imapfolderinfocollection) type. Iterate through this collection and get information about individual folders in a loop. The method is overloaded. You can pass a folder name as a parameter to get a list of subfolders. The following code snippet shows you how to get folder information from an IMAP server using Aspose.Email using the method described in the information.
+Getting information about folders from an IMAP server is very easy with Aspose.Email. Call the [listFolders()](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#listFolders\(\)) method of the [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) class. It returns an object of the [ImapFolderInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapfolderinfocollection) type. Iterate through this collection and get information about individual folders in a loop. The method is overloaded. You can pass a folder name as a parameter to get a list of subfolders. The following code snippet shows you how to get folder information from an IMAP server using Aspose.Email using the method described in the information.
 
 
 
@@ -29,8 +29,8 @@ for (ImapFolderInfo folderInfo : (Iterable<ImapFolderInfo>) folderInfoColl) {
 ## **Deleting and Renaming Folders**
 A folder on an IMAP server can be deleted or renamed in a single line with Aspose.Email:
 
-- The [deleteFolder()](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#deleteFolder\(java.lang.String\)) method accepts the folder name as a parameter.
-- For the [renameFolder()](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#renameFolder\(java.lang.String,%20java.lang.String\)) method, you need to pass the current folder name and new folder name.
+- The [deleteFolder()](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#deleteFolder\(java.lang.String\)) method accepts the folder name as a parameter.
+- For the [renameFolder()](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#renameFolder\(java.lang.String,%20java.lang.String\)) method, you need to pass the current folder name and new folder name.
   The following code snippet shows you how to remove a folder from an IMAP server, and how to rename a folder. Each operation is performed with one line of code.
 
 
@@ -42,7 +42,7 @@ client.deleteFolder("foldername");
 client.renameFolder("foldername", "newfoldername");
 ~~~
 ## **Adding a New Message in a Folder**
-You can add a new message to the folder using the [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) and [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) classes. First create a [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) object by providing the subject, to and from values. Then subscribe to a folder and add the message to it. The following code snippet shows you how to add a new Message in a folder.
+You can add a new message to the folder using the [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) and [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) classes. First create a [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) object by providing the subject, to and from values. Then subscribe to a folder and add the message to it. The following code snippet shows you how to add a new Message in a folder.
 
 
 
@@ -57,7 +57,7 @@ client.subscribeFolder(client.getCurrentFolder().getName());
 client.appendMessage(client.getCurrentFolder().getName(), msg);
 ~~~
 ## **Add Multiple Messages with MultiConnection Support**
-You can add multiple messages by using the [appendMessages](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#appendMessages\(com.aspose.email.IConnection,%20java.lang.Iterable\)) method provided by the [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) classes. The [appendMessages](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#appendMessages\(com.aspose.email.IConnection,%20java.lang.Iterable\)) method accepts a list of [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) and adds it to the current folder if the folder is not provided as a parameter. ImapClient also supports MultiConnection mode for heavy loaded operations. The following code snippet shows you how to add multiple messages by using the MultiConnection mode.
+You can add multiple messages by using the [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#appendMessages\(com.aspose.email.IConnection,%20java.lang.Iterable\)) method provided by the [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) classes. The [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#appendMessages\(com.aspose.email.IConnection,%20java.lang.Iterable\)) method accepts a list of [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) and adds it to the current folder if the folder is not provided as a parameter. ImapClient also supports MultiConnection mode for heavy loaded operations. The following code snippet shows you how to add multiple messages by using the MultiConnection mode.
 
 
 
@@ -88,7 +88,7 @@ Please note that the usage of multiconnection mode does not guarantee performanc
 
 {{% /alert %}} 
 ## **Move Messages to Another Mailbox Folder**
-Aspose.Email for Java allows moving message from one mailbox folder to another using the [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) API. The [moveMessage](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#moveMessage\(int,%20java.lang.String\)) method uses the message's unique id and destination folder name for moving a message to the destination folder. The following code snippet shows you how to move messages to another mailbox folder.
+Aspose.Email for Java allows moving message from one mailbox folder to another using the [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) API. The [moveMessage](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#moveMessage\(int,%20java.lang.String\)) method uses the message's unique id and destination folder name for moving a message to the destination folder. The following code snippet shows you how to move messages to another mailbox folder.
 
 
 
@@ -142,7 +142,7 @@ try {
 }
 ~~~
 ## **Copy Messages to Another Mailbox Folder**
-Aspose.Email API provides the capability to copy message from one mailbox folder to another. It allows copying a single as well as multiple messages using the [copyMessage](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#copyMessage\(com.aspose.email.IConnection,%20int,%20java.lang.String\)) and [copyMessages](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#copyMessage\(int,%20java.lang.String\)) methods. The [copyMessages](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#copyMessage\(int,%20java.lang.String\)) method provides the capability to copy multiple messages from source folder of a mailbox to the destination mailbox folder. The following code snippet shows you how to copy messages to another mailbox folder.
+Aspose.Email API provides the capability to copy message from one mailbox folder to another. It allows copying a single as well as multiple messages using the [copyMessage](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#copyMessage\(com.aspose.email.IConnection,%20int,%20java.lang.String\)) and [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#copyMessage\(int,%20java.lang.String\)) methods. The [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#copyMessage\(int,%20java.lang.String\)) method provides the capability to copy multiple messages from source folder of a mailbox to the destination mailbox folder. The following code snippet shows you how to copy messages to another mailbox folder.
 
 
 
@@ -189,7 +189,7 @@ try {
 }
 ~~~
 ## **Working with Special-Use Mailbox Folders**
-Some IMAP message stores include special-use mailboxes, such as those used to hold draft messages or sent messages. Many mail clients allow users to specify where the draft or sent messages should be put, but configuring them requires that the user know which mailboxes the server has set aside for these purposes. Aspose.Email can identify these special-use mailboxes by using the [ImapMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/ImapMailboxInfo) class to make it easier to work with them. The following code sample demonstrates how to access these special-use mailboxes by using the [ImapMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/ImapMailboxInfo) class.
+Some IMAP message stores include special-use mailboxes, such as those used to hold draft messages or sent messages. Many mail clients allow users to specify where the draft or sent messages should be put, but configuring them requires that the user know which mailboxes the server has set aside for these purposes. Aspose.Email can identify these special-use mailboxes by using the [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/ImapMailboxInfo) class to make it easier to work with them. The following code sample demonstrates how to access these special-use mailboxes by using the [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/ImapMailboxInfo) class.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

@@ -39,7 +39,7 @@ private static MailMessage createTestMessage(String address) {
 }
 ~~~
 ## **Creating RE and FW messages from MSG files**
-[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) lets developers create RE (Reply/Reply All) and FW (Forward) messages from a source message. The source message is identified by selecting a particular [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) from [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection) obtained by IEWSClient.listMessages(). The other argument is the actual [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) to be sent as RE or FW message. The following code snippet shows you how to create a sample account is used to send a message and then the Reply and Forward message features are demonstrated against that sample message. To perform this task:
+[IEWSClient](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient) lets developers create RE (Reply/Reply All) and FW (Forward) messages from a source message. The source message is identified by selecting a particular [ExchangeMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) from [ExchangeMessageInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection) obtained by IEWSClient.listMessages(). The other argument is the actual [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/MailMessage) to be sent as RE or FW message. The following code snippet shows you how to create a sample account is used to send a message and then the Reply and Forward message features are demonstrated against that sample message. To perform this task:
 
 1. Initialize the IEWSClient object by providing valid credentials.
 1. Send a few sample messages.
@@ -87,7 +87,7 @@ try {
 }
 ~~~
 ## **OAuth Support for EWS with Office 365**
-Aspose.Email API provides support for Exchange Web Service (EWS) with Office 365. The API’s [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) interface provides overload method that provides the [OAuthNetworkCredential](https://apireference.aspose.com/email/java/com.aspose.email/OAuthNetworkCredential) as input for accessing the Exchange account via OAuth. User needs to provide the Authority, Client Id, Client App Uri, and Resource parameters for this to work. The following code snippet shows OAuth Support for EWS with Office 365.
+Aspose.Email API provides support for Exchange Web Service (EWS) with Office 365. The API’s [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) interface provides overload method that provides the [OAuthNetworkCredential](https://reference.aspose.com/email/java/com.aspose.email/OAuthNetworkCredential) as input for accessing the Exchange account via OAuth. User needs to provide the Authority, Client Id, Client App Uri, and Resource parameters for this to work. The following code snippet shows OAuth Support for EWS with Office 365.
 
 
 ~~~Java
@@ -151,7 +151,7 @@ IEWSClient client = EWSClient.getEWSClient(mailboxUri, credential);
 UnifiedMessagingConfiguration umConf = client.getUMConfiguration();
 ~~~
 ## **Getting Mail Tips**
-Microsoft Exchange Server added several new features with Exchange Server 2010 and 2013. One of them lets users get mail tips when composing an email message. These tips are very useful as they provide information before the email is sent. For example, if an email address is wrong in the recipient’s list, a tip is displayed to let the you know that the email address is invalid. Mail tips also lets you see out of office replies before sending an email: Exchange Server (2010 & 2013) sends the mail tip when the email is being composed if one or more of the recipients have set out of office replies. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features demonstrated in this article. The following code snippet shows you how to uses the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class which uses Exchange Web Services, available in Microsoft Exchange Server 2007 and later versions.
+Microsoft Exchange Server added several new features with Exchange Server 2010 and 2013. One of them lets users get mail tips when composing an email message. These tips are very useful as they provide information before the email is sent. For example, if an email address is wrong in the recipient’s list, a tip is displayed to let the you know that the email address is invalid. Mail tips also lets you see out of office replies before sending an email: Exchange Server (2010 & 2013) sends the mail tip when the email is being composed if one or more of the recipients have set out of office replies. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features demonstrated in this article. The following code snippet shows you how to uses the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class which uses Exchange Web Services, available in Microsoft Exchange Server 2007 and later versions.
 
 
 
@@ -182,7 +182,7 @@ for (MailTips tip : tips) {
 }
 ~~~
 ## **Exchange Impersonation**
-Exchange impersonation allows someone to impersonate another account and perform tasks and operations using the impersonated account's permissions instead of their own. Where delegation lets users act on behalf of other users, Impersonation allows them to act as other users. Aspose.Email supports Exchange Impersonation. The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class provides the ImpersonateUser and ResetImpersonation methods to facilitate this feature.
+Exchange impersonation allows someone to impersonate another account and perform tasks and operations using the impersonated account's permissions instead of their own. Where delegation lets users act on behalf of other users, Impersonation allows them to act as other users. Aspose.Email supports Exchange Impersonation. The [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class provides the ImpersonateUser and ResetImpersonation methods to facilitate this feature.
 
 To perform this task:
 
@@ -192,7 +192,7 @@ To perform this task:
 1. Enable Impersonation.
 1. Reset Impersonation.
 
-The following code snippet shows you how to use the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class to implement the Impersonation feature.
+The following code snippet shows you how to use the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class to implement the Impersonation feature.
 
 
 

@@ -7,7 +7,7 @@ url: /java/deleting-messages-from-server/
 
 
 ## **Deleting Messages**
-The [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) class can delete messages from an IMAP server. The [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) class [deleteMessage()](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessage\(int\)) function is used to delete messages. It takes the message sequence number or unique ID as a parameter. The [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) provides [deleteMessage](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessage\(int\)) and [deleteMessages](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessagesBySequences\(com.aspose.email.IConnection,%20java.lang.Iterable\)) methods for deleting messages one by one or multiple. The following code snippet shows you how to delete an email message with the message ID 1 from an IMAP server.
+The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) class can delete messages from an IMAP server. The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) class [deleteMessage()](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessage\(int\)) function is used to delete messages. It takes the message sequence number or unique ID as a parameter. The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) provides [deleteMessage](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessage\(int\)) and [deleteMessages](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessagesBySequences\(com.aspose.email.IConnection,%20java.lang.Iterable\)) methods for deleting messages one by one or multiple. The following code snippet shows you how to delete an email message with the message ID 1 from an IMAP server.
 
 
 
@@ -41,7 +41,7 @@ try {
 }
 ~~~
 ## **Deleting Multiple Messages**
-Multiple emails can be deleted from mailbox using the [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) of Aspose.Email API. The [deleteMessages](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessagesBySequences\(com.aspose.email.IConnection,%20java.lang.Iterable\)) method provides a number of options to delete multiple messages from the server using unique ids, sequence numbers or [ImapMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/imapmessageinfocollection) elements. The following code snippet shows you how to delete multiple messages.
+Multiple emails can be deleted from mailbox using the [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) of Aspose.Email API. The [deleteMessages](https://reference.aspose.com/email/java/com.aspose.email/ImapClient#deleteMessagesBySequences\(com.aspose.email.IConnection,%20java.lang.Iterable\)) method provides a number of options to delete multiple messages from the server using unique ids, sequence numbers or [ImapMessageInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfocollection) elements. The following code snippet shows you how to delete multiple messages.
 
 
 

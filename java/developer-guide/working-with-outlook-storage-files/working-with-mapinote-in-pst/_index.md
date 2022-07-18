@@ -11,12 +11,12 @@ url: /java/working-with-mapinote-in-pst/
 Below are the steps to add MapiNote to a PST:
 
 1. Create a template MapiNote using Microsoft Outlook and save it as an MSG file.
-1. Load saved MSG note into [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) object.
-1. Create a [MapiNote](https://apireference.aspose.com/email/java/com.aspose.email/MapiNote) object and load the template MSG note.
-1. Set the [MapiNote](https://apireference.aspose.com/email/java/com.aspose.email/MapiNote) properties using different methods.
-1. Create a PST using the [PersonalStorage.create()](https://apireference.aspose.com/email/java/com.aspose.email/PersonalStorage#create\(java.io.OutputStream,%20int\)) method.
-1. Create a pre-defined folder (Notes) at the root of the PST file by accessing the root folder and then calling the [addMapiMessageItem()](https://apireference.aspose.com/email/java/com.aspose.email/FolderInfo#addMapiMessageItem\(com.aspose.email.IMapiMessageItem\)) method.
+1. Load saved MSG note into [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/MapiMessage) object.
+1. Create a [MapiNote](https://reference.aspose.com/email/java/com.aspose.email/MapiNote) object and load the template MSG note.
+1. Set the [MapiNote](https://reference.aspose.com/email/java/com.aspose.email/MapiNote) properties using different methods.
+1. Create a PST using the [PersonalStorage.create()](https://reference.aspose.com/email/java/com.aspose.email/PersonalStorage#create\(java.io.OutputStream,%20int\)) method.
+1. Create a pre-defined folder (Notes) at the root of the PST file by accessing the root folder and then calling the [addMapiMessageItem()](https://reference.aspose.com/email/java/com.aspose.email/FolderInfo#addMapiMessageItem\(com.aspose.email.IMapiMessageItem\)) method.
 
-The code snippet below shows how to create a [MapiNote](https://apireference.aspose.com/email/java/com.aspose.email/MapiNote) and then add it to the Notes folder of a newly created PST file.
+The code snippet below shows how to create a [MapiNote](https://reference.aspose.com/email/java/com.aspose.email/MapiNote) and then add it to the Notes folder of a newly created PST file.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-AddMapiNoteToPST-.java" >}}

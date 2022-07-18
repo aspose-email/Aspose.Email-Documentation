@@ -7,7 +7,7 @@ url: /python-net/working-with-folders-on-imap-server/
 
 
 ## **Getting Folders Information**
-Getting information about folders from an IMAP server is very easy with Aspose.Email. Call the Aspose.Email.Imap namespace's ListFolders() method. It returns an object of the [ImapFolderInfoCollection](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapfolderinfocollection) type. Iterate through this collection and get information about individual folders in a loop. The method is overloaded. You can pass a folder name as a parameter to get a list of subfolders. The following code snippet shows you how to get folder information from an IMAP server using Aspose.Email using the method described in the information.
+Getting information about folders from an IMAP server is very easy with Aspose.Email. Call the Aspose.Email.Imap namespace's ListFolders() method. It returns an object of the [ImapFolderInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapfolderinfocollection) type. Iterate through this collection and get information about individual folders in a loop. The method is overloaded. You can pass a folder name as a parameter to get a list of subfolders. The following code snippet shows you how to get folder information from an IMAP server using Aspose.Email using the method described in the information.
 
 
 

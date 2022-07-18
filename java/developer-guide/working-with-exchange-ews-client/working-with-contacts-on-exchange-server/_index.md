@@ -8,7 +8,7 @@ url: /java/working-with-contacts-on-exchange-server/
 
 {{% alert color="primary" %}} Exchange Server accounts hold more than just email messages. As well as [fetching](/email/java/working-with-exchange-mailbox-and-messages/#fetch-messages-from-an-exchange-server-mailbox), [moving](/email/java/working-with-exchange-mailbox-and-messages/#moving-messages), [sending](/email/java/working-with-exchange-mailbox-and-messages/#sending-email-messages) and [deleting email messages](/email/java/working-with-exchange-mailbox-and-messages/#deleting-messages) from Exchange Servers, Aspose.Email allows you to work with contacts. This article explains how to retrieve contact information using Exchange Web Services. This article also shows how you can list contacts from the Contacts folder or resolve contacts based on contact name. {{% /alert %}} 
 ## **Getting Contacts with EWS**
-Aspose.Email provides the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets that follow use Exchange Web Services to read all the contacts. The following code snippet shows you how to get Contacts with EWS.
+Aspose.Email provides the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets that follow use Exchange Web Services to read all the contacts. The following code snippet shows you how to get Contacts with EWS.
 
 
 
@@ -53,7 +53,7 @@ A particular contact can be retrieved from the server using its contact id as sh
 Contact fetchedContact = client.getContact(id);
 ~~~
 ## **Adding Contacts**
-The [EWSClient](https://apireference.aspose.com/email//java/com.aspose.email/iewsclient) class [createContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) method can be used to add Contact information to an Exchange Server. The [createContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) method takes a [Contact](https://apireference.aspose.com/email/java/com.aspose.email/Contact) object as an input parameter.
+The [EWSClient](https://reference.aspose.com/email//java/com.aspose.email/iewsclient) class [createContact()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) method can be used to add Contact information to an Exchange Server. The [createContact()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) method takes a [Contact](https://reference.aspose.com/email/java/com.aspose.email/Contact) object as an input parameter.
 
 To add contacts to an Exchange Server:
 
@@ -61,7 +61,7 @@ To add contacts to an Exchange Server:
 1. Initialize the Contact object with the desired properties.
 1. Call the CreateContact method to add the contact to the Exchange Server.
 
-Aspose.Email provides the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets shows you how to follow use Exchange Web Services to add contacts to an Exchange Server.
+Aspose.Email provides the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets shows you how to follow use Exchange Web Services to add contacts to an Exchange Server.
 
 
 
@@ -127,7 +127,7 @@ try {
 }
 ~~~
 ## **Updating Contacts**
-Contact information can be updated using Microsoft Outlook. Aspose.Email can also update contact information on Exchange Server using the Exchange Web Service (EWS). The [IEWSClient's](https://apireference.aspose.com/email//java/com.aspose.email/iewsclient) [updateContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateContact\(com.aspose.email.Contact\)) method can update contact information on Exchange Server.
+Contact information can be updated using Microsoft Outlook. Aspose.Email can also update contact information on Exchange Server using the Exchange Web Service (EWS). The [IEWSClient's](https://reference.aspose.com/email//java/com.aspose.email/iewsclient) [updateContact()](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#updateContact\(com.aspose.email.Contact\)) method can update contact information on Exchange Server.
 
 
 
@@ -142,7 +142,7 @@ contact.setDisplayName("David Ch");
 client.updateContact(contact);
 ~~~
 ## **Deleting Contacts**
-The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/iewsclient) class provides the [deleteItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteItem\(java.lang.String,%20com.aspose.email.DeletionOptions\)) to access and delete contacts from an Exchange Server's contacts folder. This method takes the contact ID as an input parameter.
+The [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/iewsclient) class provides the [deleteItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteItem\(java.lang.String,%20com.aspose.email.DeletionOptions\)) to access and delete contacts from an Exchange Server's contacts folder. This method takes the contact ID as an input parameter.
 
 To delete contacts from an Exchange Server:
 

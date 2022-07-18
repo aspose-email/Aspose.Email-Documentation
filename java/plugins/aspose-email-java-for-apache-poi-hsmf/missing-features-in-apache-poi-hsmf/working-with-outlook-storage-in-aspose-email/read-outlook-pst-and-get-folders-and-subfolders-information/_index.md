@@ -6,9 +6,9 @@ url: /java/read-outlook-pst-and-get-folders-and-subfolders-information/
 ---
 
 ## **Aspose.Email - Read Outlook PST and Get Folders and Subfolders Information**
-Aspose.Email for Java lets you read Microsoft Outlook PST files. You can load a PST file from disk or stream into an instance of the [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) class and get the information about its contents, for example folders, subfolders and messages.
+Aspose.Email for Java lets you read Microsoft Outlook PST files. You can load a PST file from disk or stream into an instance of the [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) class and get the information about its contents, for example folders, subfolders and messages.
 
-After loading the PST file into the [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) class, you can get the information about the file display name, root folder, subfolders and messages count.
+After loading the PST file into the [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) class, you can get the information about the file display name, root folder, subfolders and messages count.
 
 **Java**
 

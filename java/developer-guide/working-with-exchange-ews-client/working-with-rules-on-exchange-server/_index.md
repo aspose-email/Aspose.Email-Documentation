@@ -7,7 +7,7 @@ url: /java/working-with-rules-on-exchange-server/
 
 
 ## **Managing Rules**
-Aspose.Email for Java can be used to manage the rules on Exchange Server using the [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) class. This class uses Exchange Web Services (EWS), which are available in Exchange Server 2007 and later releases. To show how to manage rules, this article explains how to:
+Aspose.Email for Java can be used to manage the rules on Exchange Server using the [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/ewsclient) class. This class uses Exchange Web Services (EWS), which are available in Exchange Server 2007 and later releases. To show how to manage rules, this article explains how to:
 
 - Read the rules already on the server.
 - Create a new rule.

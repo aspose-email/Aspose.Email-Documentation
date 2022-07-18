@@ -6,7 +6,7 @@ url: /net/working-with-exchange-extended-attributes-of-exchange-items/
 ---
 
 
-Aspose.Email API lets you create, retrieve and update Extended properties of messages using the EWS client of API. The following code sample illustrates this by creating an extended attribute, adding it to the message on the server and retrieve the message as [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) from Exchange server using the client's [FetchItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitem/).
+Aspose.Email API lets you create, retrieve and update Extended properties of messages using the EWS client of API. The following code sample illustrates this by creating an extended attribute, adding it to the message on the server and retrieve the message as [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) from Exchange server using the client's [FetchItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitem/).
 
 ```csharp
 // Define a PidTagBodyContentId extended property

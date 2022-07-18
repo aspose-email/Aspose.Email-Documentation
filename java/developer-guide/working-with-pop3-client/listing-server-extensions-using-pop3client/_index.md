@@ -6,7 +6,7 @@ url: /java/listing-server-extensions-using-pop3client/
 ---
 
 
-Aspose.Email's [Pop3Client](https://apireference.aspose.com/email/java/com.aspose.email/pop3client) lets you retrieve the server extensions that a server supports such as IDLE, UNSELECT, QUOTA, etc. This helps in identifying the availability of an extension before using the client for that particular functionality. The [getCapabilities()](https://apireference.aspose.com/email/java/com.aspose.email/EmailClient#getCapabilities\(\)) method returns the supported extension types in the form of a string array.
+Aspose.Email's [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client) lets you retrieve the server extensions that a server supports such as IDLE, UNSELECT, QUOTA, etc. This helps in identifying the availability of an extension before using the client for that particular functionality. The [getCapabilities()](https://reference.aspose.com/email/java/com.aspose.email/EmailClient#getCapabilities\(\)) method returns the supported extension types in the form of a string array.
 ## **Retrieving Server Extensions**
 The following code sample demonstrates retrieving server extensions using Pop3Client for Gmail server.
 

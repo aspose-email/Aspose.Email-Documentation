@@ -6,7 +6,7 @@ url: /java/working-with-exchange-extended-attributes-of-exchange-items/
 ---
 
 
-Aspose.Email API lets you create, retrieve and Update Extended Attributes of messages using the EWS client of API. The following code sample illustrates this by creating an extended attribute, adding it to the message on the server and retrieve the message as [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/mapimessage) from Exchange server using the client's [fetchMapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchMapiMessages\(java.lang.Iterable,%20java.lang.Iterable\)).
+Aspose.Email API lets you create, retrieve and Update Extended Attributes of messages using the EWS client of API. The following code sample illustrates this by creating an extended attribute, adding it to the message on the server and retrieve the message as [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage) from Exchange server using the client's [fetchMapiMessage](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchMapiMessages\(java.lang.Iterable,%20java.lang.Iterable\)).
 
 ~~~Java
 // Create a new Property

@@ -8,7 +8,7 @@ url: /net/working-with-contacts-on-exchange-server/
 
 {{% alert color="primary" %}} Exchange Server accounts hold more than just email messages. As well as [fetching](/email/net/working-with-exchange-mailbox-and-messages/#fetch-messages-from-an-exchange-server-mailbox), [moving](/email/net/working-with-exchange-mailbox-and-messages/#moving-messages), [sending](/email/net/working-with-exchange-mailbox-and-messages/#sending-email-messages) and [deleting email messages](/email/net/working-with-exchange-mailbox-and-messages/#deleting-messages) from Exchange Servers, Aspose.Email allows you to work with contacts. This article explains how to retrieve contact information using Exchange Web Services. This article also shows how you can list contacts from the Contacts folder or resolve contacts based on contact name. {{% /alert %}} 
 ## **Getting Contacts with EWS**
-Aspose.Email provides the [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets that follow use Exchange Web Services to read all the contacts. The following code snippet shows you how to get Contacts with EWS.
+Aspose.Email provides the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets that follow use Exchange Web Services to read all the contacts. The following code snippet shows you how to get Contacts with EWS.
 
 
 
@@ -36,7 +36,7 @@ To add contacts to an Exchange Server:
 1. Initialize the Contact object with the desired properties.
 1. Call the CreateContact method to add the contact to the Exchange Server.
 
-Aspose.Email provides the [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets shows you how to follow use Exchange Web Services to add contacts to an Exchange Server.
+Aspose.Email provides the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets shows you how to follow use Exchange Web Services to add contacts to an Exchange Server.
 
 
 
@@ -48,7 +48,7 @@ Contact information can be updated using Microsoft Outlook. Aspose.Email can als
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-UpdateContactInformationUsingEWS-UpdateContactInformationUsingEWS.cs" >}}
 ## **Deleting Contacts**
-The [EWSClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class provides the DeleteContact to access and delete contacts from an Exchange Server's contacts folder. This method takes the contact ID or MapiContact as an input parameter.
+The [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient) class provides the DeleteContact to access and delete contacts from an Exchange Server's contacts folder. This method takes the contact ID or MapiContact as an input parameter.
 
 To delete contacts from an Exchange Server:
 

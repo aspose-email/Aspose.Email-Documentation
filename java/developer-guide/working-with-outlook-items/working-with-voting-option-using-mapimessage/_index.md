@@ -7,9 +7,9 @@ url: /java/working-with-voting-option-using-mapimessage/
 
 
 ## **Creating Voting Option Using MapiMessage**
-Microsoft Outlook lets users create a poll when composing a new message. It lets them include voting options such as Yes, No, Maybe, etc. Aspose.Email allows the same while creating a new Outlook message. The [FollowUpOptions](https://apireference.aspose.com/email/java/com.aspose.email/FollowUpOptions) class provides the [VotingButtons](https://apireference.aspose.com/email/java/com.aspose.email/FollowUpOptions#setVotingButtons\(java.lang.String\)) property that can be used to set or get the value of voting options. This article provides a detailed example of creating a [MapiMesasge](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) with voting options for creating a poll.
+Microsoft Outlook lets users create a poll when composing a new message. It lets them include voting options such as Yes, No, Maybe, etc. Aspose.Email allows the same while creating a new Outlook message. The [FollowUpOptions](https://reference.aspose.com/email/java/com.aspose.email/FollowUpOptions) class provides the [VotingButtons](https://reference.aspose.com/email/java/com.aspose.email/FollowUpOptions#setVotingButtons\(java.lang.String\)) property that can be used to set or get the value of voting options. This article provides a detailed example of creating a [MapiMesasge](https://reference.aspose.com/email/java/com.aspose.email/MapiMessage) with voting options for creating a poll.
 ### **Creating a Poll using MapiMessage**
-The following code snippet shows you how to create a poll, the [FollowUpManager](https://apireference.aspose.com/email/java/com.aspose.email/FollowUpManager) class can be used as shown in the following code snippet.
+The following code snippet shows you how to create a poll, the [FollowUpManager](https://reference.aspose.com/email/java/com.aspose.email/FollowUpManager) class can be used as shown in the following code snippet.
 
 
 
@@ -25,7 +25,7 @@ options.setVotingButtons("Yes;No;Maybe;Exactly!");
 client.send(message, options);
 ~~~
 ### **Reading Voting Options from a MapiMessage**
-The following code snippet shows you how to Read Voting Options from a [MapiMesasge](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage).
+The following code snippet shows you how to Read Voting Options from a [MapiMesasge](https://reference.aspose.com/email/java/com.aspose.email/MapiMessage).
 
 
 

@@ -6,7 +6,7 @@ url: /java/read-outlook-template-file-oft/
 ---
 
 ## **Aspose.Email - Read Outlook Template OFT**
-Aspose.Email's [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) class can be used to load a Microsoft Outlook template (OFT) file. Once the Outlook template is loaded in an instance of theMailMessage class, you may update the sender, recipient, body, subject and other properties.
+Aspose.Email's [MailMessage](https://reference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) class can be used to load a Microsoft Outlook template (OFT) file. Once the Outlook template is loaded in an instance of theMailMessage class, you may update the sender, recipient, body, subject and other properties.
 
 **Java**
 

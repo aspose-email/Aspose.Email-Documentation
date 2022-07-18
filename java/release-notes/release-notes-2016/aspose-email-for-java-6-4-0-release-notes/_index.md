@@ -18,7 +18,7 @@ Aspose.Email for Java is a class library that enables applications to manipulate
 
 |**Key** |**Summary** |**Category** |
 | :- | :- | :- |
-|EMAILNET-35183 |Support saving [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) and [MapiMessage](https://apireference.aspose.com/email/net/aspose.email.mapi/mapimessage) to OFT format |Feature |
+|EMAILNET-35183 |Support saving [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage) and [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage) to OFT format |Feature |
 |EMAILNET-35136 |Sending Calendar Invitation Email |Feature |
 |EMAILNET-35145 |Issue while having hyphen in domain name |Enhancement |
 |EMAILNET-35180 |Can we leave out Attachment Name while saving using Aspose.Email? |Enhancement |
