@@ -12,32 +12,20 @@ The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapCl
 
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-final ImapClient client = new ImapClient("exchange.aspose.com", "username", "password");
-try {
-    try {
-        System.out.println(client.getUidPlusSupported());
-        // Append some test messages
-        client.selectFolder(ImapFolderInfo.IN_BOX);
-        MailMessage message = new MailMessage("from@Aspose.com", "to@Aspose.com", "EMAILNET-35227 - " + UUID.randomUUID(),
-                "EMAILNET-35227 Add ability in ImapClient to delete message");
-        String emailId = client.appendMessage(message);
+try (ImapClient client = new ImapClient("host", "username", "password")) {
+    client.setSecurityOptions(SecurityOptions.SSLImplicit);
 
-        // Now verify that all the messages have been appended to the mailbox
-        ImapMessageInfoCollection messageInfoCol = null;
-        messageInfoCol = client.listMessages();
-        System.out.println(messageInfoCol.size());
+    // Append test message
+    client.selectFolder(ImapFolderInfo.IN_BOX);
 
-        // Select the inbox folder and Delete message
-        client.selectFolder(ImapFolderInfo.IN_BOX);
-        client.deleteMessage(emailId);
-        client.commitDeletes();
-    } finally {
+    MailMessage eml = new MailMessage("from@from.com", "to@to.com");
+    eml.setSubject("Message to delete");
+    eml.setBody("Hey! This Message will be deleted!");
+    String emlId = client.appendMessage(eml);
 
-    }
-} finally {
-    if (client != null)
-        client.dispose();
+    // Delete appended message
+    client.deleteMessage(emlId);
+    client.commitDeletes();
 }
 ~~~
 ## **Deleting Multiple Messages**
@@ -46,38 +34,27 @@ Multiple emails can be deleted from mailbox using the [ImapClient](https://refer
 
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-final ImapClient client = new ImapClient("exchange.aspose.com", "username", "password");
-try {
-    try {
-        System.out.println(client.getUidPlusSupported());
-        // Append some test messages
-        client.selectFolder(ImapFolderInfo.IN_BOX);
-        List<String> uidList = new ArrayList<String>();
-        final int messageNumber = 5;
-        for (int i = 0; i < messageNumber; i++) {
-            MailMessage message = new MailMessage("from@Aspose.com", "to@Aspose.com", "EMAILNET-35226 - " + UUID.randomUUID(),
-                    "EMAILNET-35226 Add ability in ImapClient to delete messages and change flags for set of messages");
-            String uid = client.appendMessage(message);
-            uidList.add(uid);
-        }
+try (ImapClient client = new ImapClient("host", "username", "password")) {
+    client.selectFolder(ImapFolderInfo.IN_BOX);
 
-        // Now verify that all the messages have been appended to the mailbox
-        ImapMessageInfoCollection messageInfoCol = null;
-        messageInfoCol = client.listMessages();
-        System.out.println(messageInfoCol.size());
+    // Append test messages
+    List<MailMessage> emlList = new ArrayList<>();
+    for (int i = 0; i < 3; i++) {
+        MailMessage eml = new MailMessage("from@from.com", "to@to.com");
+        eml.setSubject("Message to delete " + i);
+        eml.setBody("Hey! This Message will be deleted!");
 
-        // Bulk Delete Messages and Verify that the messages are deleted
-        client.deleteMessagesByUids(uidList, true);
-        client.commitDeletes();
-        messageInfoCol = null;
-        messageInfoCol = client.listMessages();
-        System.out.println(messageInfoCol.size());
-    } finally {
-
+        emlList.add(eml);
     }
-} finally {
-    if (client != null)
-        client.dispose();
+
+    AppendMessagesResult appendMessagesResult = client.appendMessages(emlList);
+    List<String> uidList = new ArrayList<>();
+    for (String uid : appendMessagesResult.getSucceeded().getValues()) {
+        uidList.add(uid);
+    }
+
+    // Bulk Delete appended Messages
+    client.deleteMessagesByUids(uidList, true);
+    client.commitDeletes();
 }
 ~~~

@@ -1,83 +1,110 @@
 ---
-title: Microsoft Graph Utility Features
+title: Access Mail Services using OAuth
 type: docs
-weight: 10
-url: /java/microsoft-graph-utility-features/
+weight: 190
+url: /java/access-mail-services-using-oauth/
 ---
 
 
-## **Creating Project in Azure Active Directory Admin Center**
+OAuth 2.0 support has been added to Aspose.Email and can be used to access **SMTP**, **POP3**, **IMAP** and **EWS** servers.
+In general, all servers supporting **OAuth 2.0** bearer tokens can be used with Aspose.Email, but our email clients have been tested with Google mail servers and Microsoft Office 365 servers.
+Access to the server from the [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient), [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client), [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) and [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) with OAuth may be implemented in 2 ways.
 
-A Project is to be created on Azure Active Directory admin center for a user having MS Office account.
-### **Steps to Create a Project in Azure Active Directory Admin Center**
+1. Provide access token directly into the constructor of email client. In this case, the user has to understand that lifetime of access tokens is limited. When the token is expired, email client can't be used to access the server.
+2. Provide a custom implementation of token provider based on [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) interface into the constructor of email client. In this case, the client checks token expiration time and requests [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) for a new access token when the previous is expired. In this way, the client refreshes tokens periodically and may work with the server for unlimited time. Оften services support a simple way to refresh access tokens. For example, using refresh tokens in google services or ROPC authentication flow in Microsoft identity platform can be used for implementation token provider.
 
-Following is a step by step tutorial for creating a project in Azure Active Directory admin center.
+## **Configure an Account on the Appropriate Server**
 
-#### 1. Go to Azure Active Directory and login using your MS Office credentials.
+The following articles help you to configure accounts to access mail services.
 
-**Azure Active Directory** Link - <https://aad.portal.azure.com/>
+- For [Office 365](https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth)
+- For [Gmail](https://developers.google.com/gmail/imap/imap-smtp)
 
-#### 2. Create an Azure AD Application in your tenant.
+## **Access Mail Services with the Access Tokens**
 
-In the left side pane click the label **Azure Active Directory**. This will open up the blade for Azure Active Directory. In that screen should see a label **App registrations**. This is the starting point of a registering an Azure AD Application. This blade will allow you to create a new application for Azure AD.
+The following code examples show you how to connect to mail services using access tokens.
 
-Click on the button **New registration** to create a new application.
+```java
+// Connecting to SMTP server
+try (SmtpClient client = new SmtpClient(
+        "smtp.gmail.com",
+        587,
+        "user1@gmail.com",
+        "accessToken",
+        true,
+        SecurityOptions.SSLExplicit)) {
 
-![todo:image_alt_text](microsoft-graph-utility-features_1.png)
+}
 
-#### 3. Now you will see the new application registration blade.
+// Connecting to IMAP server
+try (ImapClient client = new ImapClient(
+        "imap.gmail.com",
+        993,
+        "user1@gmail.com",
+        "accessToken",
+        true,
+        SecurityOptions.SSLImplicit)) {
 
-- **Name** This will be the name of your application.
-- **Supported account types** This section will restrict the access.
+}
 
-Click **Register** button.
+// Connecting to POP3 server
+try (Pop3Client client = new Pop3Client(
+        "pop.gmail.com",
+        995,
+        "user1@gmail.com",
+        "accessToken",
+        true,
+        SecurityOptions.Auto)) {
 
-![todo:image_alt_text](microsoft-graph-utility-features_2.png)
+}
+```
 
-#### 4. You should see the newly registered applications blade.
+## **Access Mail Services with the Token Providers**
 
-- **Application (client) ID** The id of your application.
-- **Directory (tenant) ID** The Azure AD tenant id.
+The following code examples show you how to connect to mail services using a token provider.
 
-![todo:image_alt_text](microsoft-graph-utility-features_6.png)
+```java
+ITokenProvider tokenProvider = TokenProvider.Google.getInstance(
+        "ClientId",
+        "ClientSecret",
+        "RefreshToken");
 
-#### 5. Allowing permissions for Microsoft Graph API.
+// Connecting to SMTP server
+try (SmtpClient client = new SmtpClient(
+        "smtp.gmail.com",
+        587,
+        "user1@gmail.com",
+        tokenProvider,
+        SecurityOptions.SSLExplicit)) {
 
-Click on the **API permissions** label.
+}
 
-Azure has already given you **User.Read** delegated permissions for your application. This permission will allow us to read user information for a logged in user. These are Microsoft Graph API permissions, in other hand we can call them as **Scopes**.
+// Connecting to IMAP server
+try (ImapClient client = new ImapClient(
+        "imap.gmail.com",
+        993,
+        "user1@gmail.com",
+        tokenProvider,
+        SecurityOptions.SSLImplicit)) {
 
-The full list of scopes for Microsoft Graph API - <https://docs.microsoft.com/en-us/graph/permissions-reference>.
+}
 
-Click on **+ Add a permission** button and select **Microsoft Graph**.
+// Connecting to POP3 server
+try (Pop3Client client = new Pop3Client(
+        "pop.gmail.com",
+        995,
+        "user1@gmail.com",
+        tokenProvider,
+        SecurityOptions.Auto)) {
 
-Click on **Delegated permissions**. Now you see a list of permissions available for Microsoft Graph API.
+}
+```
 
-Select required permissions, click **Add permissions** button.
+## **Implementation of Custom ITokenProvider for Office 365**
 
-Click **Grant admin consent** button.
+You can use the token provider implementation below to access Office 365 mail services.
 
-![todo:image_alt_text](microsoft-graph-utility-features_3.png)
-
-#### 6. Allow public client flows.
-
-Specifies whether the application is a public client. Appropriate for apps using token grant flows that don't use a redirect URI.
-
-![todo:image_alt_text](microsoft-graph-utility-features_4.png)
-
-#### 7. Create a key for the application
-
-![todo:image_alt_text](microsoft-graph-utility-features_5.png)
-
-## **Helper Classes**
-
-Following helper classes are required to run the codes in this section. These classes are just for simplification of demonstration.
-
-### **AzureROPCTokenProvider Class**
-
-An instance of the [IGraphClient](https://reference.aspose.com/email/java/com.aspose.email/IGraphClient) class handles building requests, sending them to the Microsoft Graph API, and processing the responses. To create a new instance of this  class, you need to provide an instance of [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/ITokenProvider), which can authenticate requests to Microsoft Graph.
-
-~~~Java
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -249,4 +276,53 @@ class AzureROPCTokenProvider implements ITokenProvider {
         return sb.toString();
     }
 }
-~~~
+```
+
+The next code examples show you how to connect to Office 365 services using the custom token provider. 
+
+```java
+ITokenProvider tokenProvider = new AzureROPCTokenProvider(
+        "Tenant",
+        "ClientId",
+        "ClientSecret",
+        "EMail",
+        "Password",
+        scopes);
+
+// Connecting to SMTP server
+try (SmtpClient client = new SmtpClient(
+        "smtp.office365.com",
+        587,
+        "Test1@test.onmicrosoft.com",
+        tokenProvider,
+        SecurityOptions.SSLExplicit)) {
+
+}
+
+// Connecting to IMAP server
+try (ImapClient client = new ImapClient(
+        "outlook.office365.com",
+        993,
+        "Test1@test.onmicrosoft.com",
+        tokenProvider,
+        SecurityOptions.SSLImplicit)) {
+
+}
+
+// Connecting to POP3 server
+try (Pop3Client client = new Pop3Client(
+        "outlook.office365.com",
+        995,
+        "Test1@test.onmicrosoft.com",
+        tokenProvider,
+        SecurityOptions.Auto)) {
+
+}
+
+// Connecting to EWS server
+final String mailboxUri = "https://outlook.office365.com/ews/exchange.asmx";
+ICredentials credentials = new OAuthNetworkCredential(tokenProvider);
+try (IEWSClient ewsClient = EWSClient.getEWSClient(mailboxUri, credentials)) {
+
+}
+```

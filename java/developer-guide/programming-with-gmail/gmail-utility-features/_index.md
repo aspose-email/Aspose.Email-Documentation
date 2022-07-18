@@ -8,7 +8,8 @@ url: /java/gmail-utility-features/
 
 ## **Working with FreeBusy Query**
 Aspose.Email provides querying mechanism to check whether some appointment is due or not as per the criteria. [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery) class is provided for this purpose which allows to prepare a query for a particular calendar.
-### **Querying a Calendar**
+**Querying a calendar**
+
 This code sample demonstrates the feature of querying a calendar. Following tasks are performed in this sample:
 
 1. Create and insert a calendar
@@ -17,8 +18,8 @@ This code sample demonstrates the feature of querying a calendar. Following task
 1. Prepare a [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery)
 1. Get the [FreebusyResponse](https://reference.aspose.com/email/java/com.aspose.email/FreebusyResponse)
 
-
-~~~Java
+```java
+// Use the OAuthUser and GoogleOAuthHelper classes below to receive an access token
 IGmailClient client = GmailClient.getInstance(accessToken, "user@domain.com");
 try {
     Calendar newCalendar = new Calendar("summary", null, null, "Europe/Kiev");
@@ -72,10 +73,10 @@ try {
 } finally {
     client.dispose();
 }
-~~~
-## **Creating Project in Google Developer Console**
+```
+## **Creating project in Google Developer Console**
 A Project is to be created on Google Developer Console for a user having Gmail account. In the API & auth -> Credentials page of the Google project, information is to be noted like Client ID and Client Secret. This information along with the gmail account user name and password will be required for executing the code e.g. google calendar, access control lists, appointments, contacts, settings etc. in this section.
-### **Steps to Create a Project in Google Developer Console**
+### **Steps to create a project in Google Developer Console**
 Following is a step by step tutorial for creating a project in Google Developer Console.
 
 1. Go to link <https://console.cloud.google.com> and login using your gmail credentials
@@ -117,12 +118,11 @@ Following is a step by step tutorial for creating a project in Google Developer 
 ![todo:image_alt_text](gmail-utility-features_9.png)
 
 ## **Helper Classes**
-Following helper classes are required to run the codes in this section. These classes are just for simplification of demonstration. The methods in these classes use non-public structure of web-pages that may change any time.
+Following helper classes are required to run the code examples in this section. These classes `GoogleOAuthHelper` and `OAuthUser` are just for simplification of demonstration. The methods in these classes use non-public structure of web-pages that may change any time.
 ### **GoogleOAuthHelper Class**
-The following code snippet shows you how to use GoogleOAuthHelper Class.
+The following code snippet shows you how to implement `GoogleOAuthHelper` class.
 
-
-~~~Java
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -324,7 +324,7 @@ class GoogleOAuthHelper {
         return result.toString();
     }
 }
-~~~
+```
 
 **Google OAuth Helper** should be used as follows:
 1. An authorization code URL has to be generated first.
@@ -332,7 +332,7 @@ class GoogleOAuthHelper {
 1. Use the authorization code to receive a refresh token.
 1. When the refresh token exists, you may use it to retrieve access tokens.
 
-~~~Java
+```java
 static class OAuthUser {
     String email;
     String clientId;
@@ -372,4 +372,4 @@ static void getRefreshToken() {
     // Use "Access Token" in API
     IGmailClient client = GmailClient.getInstance(accessToken, user.email);
 }
-~~~
+```

@@ -32,3 +32,54 @@ A PST/OST may contain searchable folders in addition to the normal type of folde
 The following code snippet shows you how to retrieve parent folder information from [MessageInfo](https://reference.aspose.com/email/java/com.aspose.email/MessageInfo).
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-ReadOutlookPSTFile-RetrieParentFolderInformationFromMessageInfo.java" >}}
+
+
+## **PST file traversal API**
+
+The traversal API allows extracting all PST items as far as possible, without throwing out exceptions, even if some data of the original file is corrupted.
+The following steps show how to use this API.
+
+Use [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email/PersonalStorage) constructor and [load](https://reference.aspose.com/email/java/com.aspose.email/PersonalStorage#load\(java.io.InputStream\)) method instead of fromFile method.
+
+The constructor allows defining a callback method.
+
+```java
+try (PersonalStorage currentPst = new PersonalStorage(new TraversalExceptionsCallback() {
+    public void invoke(TraversalAsposeException exception, String itemId) {
+        // Exception handling code.
+    }
+})) {
+    //
+}
+```
+
+Loading and traversal exceptions will be available through the callback method.
+
+The [load](https://reference.aspose.com/email/java/com.aspose.email/PersonalStorage#load\(java.io.InputStream\)) method returns 'true' if the file has been loaded successfully and further traversal is possible. If a file is corrupted and no traversal is possible, 'false' is returned.
+
+```java
+if (currentPst.load(inputStream))
+```
+
+This allows to open and traverse even corrupted PST files without throwing out exceptions. And exceptions and corrupted items will be handled by the callback method.
+
+```java
+try (PersonalStorage pst = new PersonalStorage(new TraversalExceptionsCallback() {
+    public void invoke(TraversalAsposeException exception, String itemId) {
+        // Exception handling code.
+    }
+})) {
+    if (pst.load("test.pst")) {
+        getAllMessages(pst, pst.getRootFolder());
+    }
+}
+
+private static void getAllMessages(PersonalStorage pst, FolderInfo folder) {
+    for (String messageEntryId : folder.enumerateMessagesEntryId()) {
+        MapiMessage message = pst.extractMessage(messageEntryId);
+    }
+    for (FolderInfo subFolder : folder.getSubFolders()) {
+        getAllMessages(pst, subFolder);
+    }
+}
+```
