@@ -10,7 +10,7 @@ To Add File to PST using **Aspose.Email Java for Jython**, simply invoke **AddFi
 
 **Jython Code**
 
-{{< highlight python >}}
+```python
 
  from aspose-email import Settings
 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
 
     AddFileToPST()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Adding Files to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

@@ -157,6 +157,7 @@ cal.add(Calendar.DATE, -7);
 builder.getInternalDate().since(cal.getTime());
 ~~~
 #### **Combining Queries with OR**
+
 [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) provides the [or()](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) method which takes two [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either have the word "test" in the subject or "noreply@host.com" as the sender. The following code snippet shows you how to combine queries with OR.
 
 ~~~Java

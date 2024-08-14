@@ -10,7 +10,7 @@ To string Searching in PST with Ignore Case using **Aspose.Email Java for Ruby**
 
 **Ruby Code**
 
-{{< highlight ruby >}}
+```ruby
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
@@ -32,7 +32,7 @@ coll = fi.getContents(query)
 
 puts "Total Results:" + coll.size().to_s
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 

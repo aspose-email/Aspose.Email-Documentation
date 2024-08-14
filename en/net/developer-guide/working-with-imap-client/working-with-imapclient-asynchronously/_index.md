@@ -79,7 +79,7 @@ The following features will help you implement asynchronous sending into your pr
 
 - [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Allows applications to access and manipulate messages by using the Internet Message Access Protocol (IMAP).
 
-- [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Creates a new instance of the Aspose.Email.Clients.Imap.ImapClientclass
+- [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Creates a new instance of the `Aspose.Email.Clients.Imap.ImapClient` class
 
 The code sample given below demonstrates how to list messages in the background:
 

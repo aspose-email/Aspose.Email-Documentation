@@ -10,7 +10,7 @@ String Searching in PST with Ignore Case using **Aspose.Email Java for Python**,
 
 **Python Code**
 
-{{< highlight python >}}
+```python
 
 
 
@@ -42,7 +42,7 @@ print "Total Results:"
 
 print coll.size()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 

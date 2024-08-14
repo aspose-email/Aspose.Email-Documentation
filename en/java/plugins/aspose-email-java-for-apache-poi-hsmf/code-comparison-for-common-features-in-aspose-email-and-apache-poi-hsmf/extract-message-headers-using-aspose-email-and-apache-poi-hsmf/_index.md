@@ -10,7 +10,7 @@ The email header represents an Internet and RFC defined standard set of header f
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  //Gets Email Headers
 
@@ -24,13 +24,13 @@ System.out.println("Bcc: " 	+ message.getBcc());
 
 System.out.println("Subject: " 	+ message.getSubject());
 
-{{< /highlight >}}
+```
 ## **Apache POI HSMF - Extract Message Headers**
 MAPIMessage class provides the methods to access headers of email messages.
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  MAPIMessage msg = new MAPIMessage(dataDir + "message.msg");
 
@@ -44,7 +44,7 @@ System.out.println("BCC: " + msg.getDisplayBCC());
 
 System.out.println("Subject: " + msg.getSubject());
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/releases/view/618811)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

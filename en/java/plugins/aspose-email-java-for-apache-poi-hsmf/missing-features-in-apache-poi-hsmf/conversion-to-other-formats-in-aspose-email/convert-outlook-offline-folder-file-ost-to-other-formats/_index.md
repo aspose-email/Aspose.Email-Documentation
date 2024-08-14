@@ -16,13 +16,13 @@ Aspose.Email makes it possible to convert an OST file to PST with a single line 
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  PersonalStorage ost = PersonalStorage.fromFile(dataDir + "outlook.ost");
 
 ost.saveAs(dataDir + "AsposeOST-PST.pst", FileFormat.Pst);
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

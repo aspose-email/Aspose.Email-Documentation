@@ -10,7 +10,7 @@ To Create Outlook Contacts using **Aspose.Email Java for Jython**, simply invoke
 
 **Jython Code**
 
-{{< highlight python >}}
+```python
 
  from aspose-email import Settings
 
@@ -148,7 +148,7 @@ if __name__ == '__main__':
 
     CreateOutlookContact()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Creating and Saving Outlook Contacts (Aspose.Email)** from any of the below mentioned social coding sites:
 

@@ -10,13 +10,13 @@ url: /net/working-with-messages-from-imap-server/
 When retrieving and processing email messages, you can fetch the details of those messages using their sequence numbers.
 The following features are used to interact with an IMAP mailbox:
 
-- Aspose.Email.MailboxInfo class - Represents identification information about message in a mailbox.
+- `Aspose.Email.MailboxInfo` class - Represents identification information about message in a mailbox.
 
-    - Aspose.Email.MailboxInfo.SequenceNumber property - The sequence number of a message.
+    - `Aspose.Email.MailboxInfo.SequenceNumber` property - The sequence number of a message.
 
-    - Aspose.Email.MailboxInfo.UniqueId property - The unique id of a message.
+    - `Aspose.Email.MailboxInfo.UniqueId` property - The unique id of a message.
 
-- Aspose.Email.MailMessage.ItemId property - Represents identification information about the message in a mailbox.
+- `Aspose.Email.MailMessage.ItemId` property - Represents identification information about the message in a mailbox.
 
 The code snippet below shows how to obtain identification info about messages:
 
@@ -67,7 +67,7 @@ Please note that the usage of multiconnection mode does not guarantee performanc
 
 ## **Get Messages in descending order**
 
-Aspose.Email provides [ImapClient.ListMessagesByPage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) method which lists messages with paging support. Some overloads of [ImapClient.ListMessagesByPage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) accept [PageSettings](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) as a parameter. [PageSettings](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) provides an [AscendingSorting](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/) property which, when set to **false**, returns emails in descending order.
+Aspose.Email provides [`ImapClient.ListMessagesByPage`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) method which lists messages with paging support. Some overloads of [`ImapClient.ListMessagesByPage`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) accept [`PageSettings`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) as a parameter. [`PageSettings`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) provides an [`AscendingSorting`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/) property which, when set to **false**, returns emails in descending order.
 
 The following example code demonstrates the use of [AscendingSorting](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/) property of the [PageSettings](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) class to change the order of emails.
 
@@ -120,9 +120,9 @@ The code sample with steps below will show you how to use the APIs:
 2. Iterate through each message in the messageInfoCollection using a foreach loop.
 3. Call the [ListAttachments()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/#imapclientlistattachments-method) method on the imapClient object, passing the SequenceNumber property of the message object as a parameter. This method will return an ImapAttachmentInfoCollection containing information about the attachments in the message.
 4. Iterate through each attachment in the attachmentInfoCollection using a foreach loop.
-5. Within the inner loop, you can access the information about each attachment using properties of the attachmentInfo object. In this example, the name and size of each attachment are logged to the console using Console.WriteLine().
+5. Within the inner loop, you can access the information about each attachment using properties of the attachmentInfo object. In this example, the name and size of each attachment are logged to the console using `Console.WriteLine()`.
    
-   Console.WriteLine("Attachment: {0} (size: {1})", attachmentInfo.Name, attachmentInfo.Size);
+   `Console.WriteLine("Attachment: {0} (size: {1})", attachmentInfo.Name, attachmentInfo.Size);`
 ```cs
 var messageInfoCollection = imapClient.ListMessages();
     

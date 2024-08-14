@@ -10,7 +10,7 @@ To Add MapiContact to PST using **Aspose.Email Java for Python**, Use following 
 
 **Python Code**
 
-{{< highlight python >}}
+```python
 
 
 
@@ -106,7 +106,7 @@ contactFolder.addMapiMessageItem(contact6)
 
 print "Added MapiContacts Successfully."
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Adding MapiContact to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

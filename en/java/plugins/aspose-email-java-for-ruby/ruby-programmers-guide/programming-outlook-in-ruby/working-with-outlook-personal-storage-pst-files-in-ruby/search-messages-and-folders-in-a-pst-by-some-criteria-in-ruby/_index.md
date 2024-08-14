@@ -10,7 +10,7 @@ To Search Messages and Folders in a PST using **Aspose.Email Java for Ruby**, si
 
 **Ruby Code**
 
-{{< highlight ruby >}}
+```ruby
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
@@ -74,7 +74,7 @@ messages = folder.getContents(builder.getQuery())
 
 puts "Unread msgs with atts: " + messages.size().to_s
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Search Messages and Folders in a PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

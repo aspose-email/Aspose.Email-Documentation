@@ -32,14 +32,14 @@ Aspose.Email provides the capability to add, update and cancel appointments usin
 
 The ListAppointments method exposed by the [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) API retrieves the complete list of appointments from the Exchange server. This may take time if there is a large number of appointments on the Exchange Server. The API provides overloaded methods of [ListAppointments](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listappointments/#listappointments/) method that gives paging support to the operation. This can be used in different combinations with the querying feature as well. The following overloaded methods are available to list appointments from Exchange Server with Paging support.
 
-- AppointmentCollection IEWSClient.ListAppointments(int itemsPerPage).
-- AppointmentCollection IEWSClient.ListAppointments(string folderUri, int itemsPerPage).
-- AppointmentCollection IEWSClient.ListAppointments(MailQuery query, int itemsPerPage).
-- AppointmentCollection IEWSClient.ListAppointments(string folderUri, MailQuery query, int itemsPerPage).
-- AppointmentCollection IEWSClient.ListAppointments(int itemsPerPage, int itemOffset).
-- AppointmentCollection IEWSClient.ListAppointments(string folderUri, int itemsPerPage, int itemOffset).
-- AppointmentCollection IEWSClient.ListAppointments(MailQuery query, int itemsPerPage, int itemOffset).
-- AppointmentCollection IEWSClient.ListAppointments(string folderUri, MailQuery query, int itemsPerPage, int itemOffset).
+- `AppointmentCollection IEWSClient.ListAppointments(int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.ListAppointments(string folderUri, int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.ListAppointments(MailQuery query, int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.ListAppointments(string folderUri, MailQuery query, int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.ListAppointments(int itemsPerPage, int itemOffset)`.
+- `AppointmentCollection IEWSClient.ListAppointments(string folderUri, int itemsPerPage, int itemOffset)`.
+- `AppointmentCollection IEWSClient.ListAppointments(MailQuery query, int itemsPerPage, int itemOffset)`.
+- `AppointmentCollection IEWSClient.ListAppointments(string folderUri, MailQuery query, int itemsPerPage, int itemOffset)`.
 
 The following code snippet shows you how to list appointments with paging support.
 
@@ -49,13 +49,13 @@ The following code snippet shows you how to list appointments with paging suppor
 
 Aspose.Email API lets you create a secondary Calendar folder on Exchange Server using the [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). Appointments can then be added, updated or canceled from the secondary calendar using the [CreateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createappointment/#createappointment/), [UpdateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateappointment/#updateappointment/) and [CancelAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/cancelappointment/#cancelappointment/) methods. The following API methods and properties are used in the code samples below to show the functionality of this feature. Please note that this feature is supported by Aspose.Email for .NET 6.5.0 onwards.
 
-- Method IEWSClient.CancelAppointment(Appointment, String).
-- Method IEWSClient.CancelAppointment(String, String).
-- Method IEWSClient.CreateAppointment(Appointment, String).
-- Method IEWSClient.CreateFolder(String, String, ExchangeFolderPermissionCollection, String).
-- Method IEWSClient.FetchAppointment(String, String).
-- Method IEWSClient.UpdateAppointment(Appointment, String).
-- Property IEWSClient.CurrentCalendarFolderUri.
+- Method `IEWSClient.CancelAppointment(Appointment, String)`.
+- Method `IEWSClient.CancelAppointment(String, String)`.
+- Method `IEWSClient.CreateAppointment(Appointment, String)`.
+- Method `IEWSClient.CreateFolder(String, String, ExchangeFolderPermissionCollection, String)`.
+- Method `IEWSClient.FetchAppointment(String, String)`.
+- Method `IEWSClient.UpdateAppointment(Appointment, String)`.
+- Property `IEWSClient.CurrentCalendarFolderUri`.
 
 The following code snippet shows you how to add an event to the secondary calendar folder on the exchange server.
 

@@ -12,7 +12,7 @@ The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.im
 
 1. [Connect and log in to an IMAP server](https://docs.aspose.com/email/net/connecting-to-imap-server/#connecting-with-imap-server)
 2. Create an instance of the [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) and set the properties
-3. Call the [ImapClient.ListMessages(MailQuery query)](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/#listmessages_14) method and pass the [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) with the parameters to get filtered messages only.
+3. Call the [`ImapClient.ListMessages(MailQuery query)`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/#listmessages_14) method and pass the [`MailQuery`](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) with the parameters to get filtered messages only.
 
 The following code snippet shows you how to connect to an IMAP mailbox and get messages that arrived today and have the word "newsletter" in the subject.
 

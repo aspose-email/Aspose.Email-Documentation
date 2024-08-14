@@ -10,7 +10,7 @@ To Search Messages and Folders in a PST by Some Criteria using **Aspose.Email Ja
 
 **Python Code**
 
-{{< highlight python >}}
+```python
 
 
 
@@ -92,7 +92,7 @@ print "Unread msgs with atts: "
 
 print messages.size()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Search Messages and Folders in a PST by Some Criteria (Aspose.Email)** from any of the below mentioned social coding sites:
 

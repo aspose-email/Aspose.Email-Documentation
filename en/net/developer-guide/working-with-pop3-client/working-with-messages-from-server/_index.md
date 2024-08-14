@@ -92,7 +92,7 @@ To filter messages from a mailbox:
 
 1. [Connect and log in to a POP3 server](https://docs.aspose.com/email/net/connect-to-pop3-server/#connecting-to-pop3-server).
 2. Create an instance of [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) and set the desired properties.
-3. Call the [Pop3Client.ListMessages(MailQuery query)](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages_8) method and pass the [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) in parameters to get the filtered messages only.
+3. Call the [`Pop3Client.ListMessages(MailQuery query)`](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages_8) method and pass the [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) in parameters to get the filtered messages only.
 
 The following code snippet shows you how to connect to a POP3 mailbox and get messages that arrived today and have the word "newsletter" in the subject.
 
@@ -160,9 +160,9 @@ The following code snippet shows you how to combine queries with AND.
 
 The API also provides the capability to filter emails from the mailbox based on a case sensitive criteria. The following methods provide the capability to search emails specifying case sensitive flag.
 
-- Method Aspose.Email.StringComparisonField.Contains(string value, bool ignoreCase)
-- Method Aspose.Email.StringComparisonField.Equals(string value, bool ignoreCase)
-- Method Aspose.Email.StringComparisonField.NotContains(string value, bool ignoreCase)
-- Method Aspose.Email.StringComparisonField.NotEquals(string value, bool ignoreCase)
+- Method `Aspose.Email.StringComparisonField.Contains(string value, bool ignoreCase)`
+- Method `Aspose.Email.StringComparisonField.Equals(string value, bool ignoreCase)`
+- Method `Aspose.Email.StringComparisonField.NotContains(string value, bool ignoreCase)`
+- Method `Aspose.Email.StringComparisonField.NotEquals(string value, bool ignoreCase)`
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-ApplyCaseSensitiveFilters-ApplyCaseSensitiveFilters.cs" >}}

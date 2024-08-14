@@ -10,7 +10,7 @@ Extra print headers can be shown or hidden with MhtFormatOptions and MailMessage
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  String dataPath = "src/asposefeatures/programmingemail/showhideextraprintheaders/data/";
 
@@ -32,7 +32,7 @@ else
 
 	System.out.println("False");
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Show and Hide Extra Print Headers using MHTFormatOptions** from any of the below mentioned social coding sites:
 

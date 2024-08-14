@@ -10,7 +10,7 @@ To Search Messages and Folders in a PST using **Aspose.Email Java for PHP**, sim
 
 **PHP Code**
 
-{{< highlight php >}}
+```php
 
  # Load the Outlook PST file
 
@@ -78,7 +78,7 @@ $messages = $folder->getContents($builder->getQuery());
 
 print "Unread msgs with atts: " . (string)$messages->size();
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Search Messages and Folders in a PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

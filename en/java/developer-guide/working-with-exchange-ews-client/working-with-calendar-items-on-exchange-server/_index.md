@@ -112,14 +112,14 @@ Appointment[] appointments = client.listAppointments(builder.getQuery());
 ## **Listing Appointments with Paging Support**
 The ListAppointments method exposed by the [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) API retrieves the complete list of appointments from the Exchange server. This may take time if there are a large number of appointments on the Exchange Server. The API provides overloaded methods of [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listAppointments\(\)) method that gives paging support to the operation. This can be used in different combinations with the querying feature as well. The following overloaded methods are available to list appointments from Exchange Server with Paging support.
 
-- AppointmentCollection IEWSClient.listAppointments(int itemsPerPage).
-- AppointmentCollection IEWSClient.listAppointments(String folderUri, int itemsPerPage).
-- AppointmentCollection IEWSClient.listAppointments(MailQuery query, int itemsPerPage).
-- AppointmentCollection IEWSClient.listAppointments(String folderUri, MailQuery query, int itemsPerPage).
-- AppointmentCollection IEWSClient.listAppointments(int itemsPerPage, int itemOffset).
-- AppointmentCollection IEWSClient.listAppointments(String folderUri, int itemsPerPage, int itemOffset).
-- AppointmentCollection IEWSClient.listAppointments(MailQuery query, int itemsPerPage, int itemOffset).
-- AppointmentCollection IEWSClient.listAppointments(String folderUri, MailQuery query, int itemsPerPage, int itemOffset).
+- `AppointmentCollection IEWSClient.listAppointments(int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.listAppointments(String folderUri, int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.listAppointments(MailQuery query, int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.listAppointments(String folderUri, MailQuery query, int itemsPerPage)`.
+- `AppointmentCollection IEWSClient.listAppointments(int itemsPerPage, int itemOffset)`.
+- `AppointmentCollection IEWSClient.listAppointments(String folderUri, int itemsPerPage, int itemOffset)`.
+- `AppointmentCollection IEWSClient.listAppointments(MailQuery query, int itemsPerPage, int itemOffset)`.
+- `AppointmentCollection IEWSClient.listAppointments(String folderUri, MailQuery query, int itemsPerPage, int itemOffset)`.
 
 The following code snippet shows you how to list appointments with paging support.
 
@@ -180,13 +180,13 @@ The following code snippet shows you how to list appointments with paging suppor
 ## **Adding Event to Secondary Calendar folder on Exchange Server**
 Aspose.Email API lets you create a secondary Calendar folder on Exchange Server using the [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Appointments can then be added, updated or canceled from the secondary calendar using the [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)) and [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) methods. The following API methods and properties are used in the code samples below to show the functionality of this feature. Please note that this feature is supported by Aspose.Email for Java 6.5.0 onwards.
 
-- Method IEWSClient.cancelAppointment(Appointment, String).
-- Method IEWSClient.cancelAppointment(String, String).
-- Method IEWSClient.createAppointment(Appointment, String).
-- Method IEWSClient.createFolder(String, String, ExchangeFolderPermissionCollection, String).
-- Method IEWSClient.fetchAppointment(String, String).
-- Method IEWSClient.updateAppointment(Appointment, String).
-- Property IEWSClient.CurrentCalendarFolderUri.
+- Method `IEWSClient.cancelAppointment(Appointment, String)`.
+- Method `IEWSClient.cancelAppointment(String, String)`.
+- Method `IEWSClient.createAppointment(Appointment, String)`.
+- Method `IEWSClient.createFolder(String, String, ExchangeFolderPermissionCollection, String)`.
+- Method `IEWSClient.fetchAppointment(String, String)`.
+- Method `IEWSClient.updateAppointment(Appointment, String)`.
+- Property `IEWSClient.CurrentCalendarFolderUri`.
 
 The following code snippet shows you how to add an event to the secondary calendar folder on the exchange server.
 

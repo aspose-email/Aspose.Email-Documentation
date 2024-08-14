@@ -124,7 +124,8 @@ builder.getInternalDate().before(new Date());
 builder.getInternalDate().since(new Date(new Date().getTime() + TimeUnit.DAYS.toDays(-7)));
 ~~~
 #### **Combining Queries with OR**
-QueryBuilder provides the or() method which takes two MailQuery instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either has the word "test" in the subject or "noreply@host.com" as the sender.
+
+`QueryBuilder` provides the `or()` method which takes two `MailQuery` instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either has the word "test" in the subject or "noreply@host.com" as the sender.
 
 
 ~~~Java

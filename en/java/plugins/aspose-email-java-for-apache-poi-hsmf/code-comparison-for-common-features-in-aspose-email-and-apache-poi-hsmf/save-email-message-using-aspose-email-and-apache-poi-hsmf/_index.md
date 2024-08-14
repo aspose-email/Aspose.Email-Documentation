@@ -10,7 +10,7 @@ MailMessage.save method is available to save EMail messages in various formats.
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  MailMessage messageMSG 	= MailMessage.load(dataDir + "message.msg");
 
@@ -22,13 +22,13 @@ messageMSG.save(dataDir + "AsposeMessage.emlx");
 
 messageMSG.save(dataDir + "AsposeMessage.mht");
 
-{{< /highlight >}}
+```
 ## **Apache POI HSMF - Save Email Message**
 EMail body can be extracted to create new file.
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  String filename = "message.msg";
 
@@ -40,7 +40,7 @@ txtOut.println("Email Body: " + msg.getTextBody());
 
 txtOut.close();
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

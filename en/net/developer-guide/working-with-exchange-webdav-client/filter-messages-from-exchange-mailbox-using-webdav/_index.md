@@ -70,7 +70,9 @@ The following code snippet shows you how to Combine Queries with AND.
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterWithComplexQueriesUsingExchangeClient-CombineQueriesWithAND.cs" >}}
+
 #### **Combining Queries with OR**
+
 [ExchangeQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder) provides the [Or()](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or) method which takes two [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery)instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either have the word “test” in the subject or “noreply@host.com” as the sender. The following code snippet shows you how to combine queries with OR.
 
 

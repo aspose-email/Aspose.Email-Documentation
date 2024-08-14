@@ -10,7 +10,7 @@ The ImapClient class provides the ListMessages() method which gets all the m
 ## **Filtering Messages from Mailbox**
 1. Connect and log in to an IMAP server
 1. Create an instance of the MailQuery and set the properties
-1. Call the ImapClient.ListMessages(MailQuery query) method and pass the MailQuery with the parameters to get filtered messages only.
+1. Call the `ImapClient.ListMessages(MailQuery query)` method and pass the MailQuery with the parameters to get filtered messages only.
 
 The following code snippet shows you how to connect to an IMAP mailbox and get messages that arrived to day and have the word "newsletter" in the subject.
 
@@ -163,10 +163,10 @@ mailQuery = builder.get_query()
 
 The API also provides the capability to filter emails from the mailbox based on a case sensitive criteria. The following methods of the [StringComparisonField](https://reference.aspose.com/email/python-net/aspose.email.tools.search/stringcomparisonfield/#stringcomparisonfield-class) class provide the capability to search emails specifying case sensitive flags.  
 
-Method Aspose.Email.StringComparisonField.contains(value, ignore_case)
-Method Aspose.Email.StringComparisonField.equals(value, ignore_case)
-Method Aspose.Email.StringComparisonField.not_contains(value, ignore_case)
-Method Aspose.Email.StringComparisonField.not_equals(value, ignore_case)
+- Method `Aspose.Email.StringComparisonField.contains(value, ignore_case)`
+- Method `Aspose.Email.StringComparisonField.equals(value, ignore_case)`
+- Method `Aspose.Email.StringComparisonField.not_contains(value, ignore_case)`
+- Method `Aspose.Email.StringComparisonField.not_equals(value, ignore_case)`
 
 The following code snippet shows you how to implement this capability into your project:
 
@@ -175,3 +175,4 @@ import aspose.email as ae
 
 builder = ae.tools.search.MailQueryBuilder()
 builder.from_address.contains("noreply@host.com", True)
+```

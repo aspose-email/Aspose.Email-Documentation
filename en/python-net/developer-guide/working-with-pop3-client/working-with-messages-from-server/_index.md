@@ -8,8 +8,8 @@ url: /python-net/working-with-messages-from-server/
 ## **Getting Mailbox Information**
 We can get information about the mailbox such as the number of messages and the mailbox size using the GetMailBoxSize() and GetMailBoxInfo() methods.
 
-- The GetMailBoxSize() method returns the size of the mailbox in bytes.
-- The GetMailBoxInfo() method returns an object of type Pop3MailBoxInfo.
+- The `GetMailBoxSize()` method returns the size of the mailbox in bytes.
+- The `GetMailBoxInfo()` method returns an object of type Pop3MailBoxInfo.
 
 It is also possible to get the number of messages using the MessageCount property and the size using the OccupiedSize property. The following sample code shows how to get information about the mailbox. It shows how to:
 
@@ -93,7 +93,7 @@ To filter messages from a mailbox:
 
 1. Connect and log in to a POP3 server.
 1. Create an instance of MailQuery and set the desired properties.
-1. Call the Pop3Client.list_messages(MailQuery query) method and pass the MailQuery in parameters to get the filtered messages only.
+1. Call the `Pop3Client.list_messages(MailQuery query)` method and pass the MailQuery in parameters to get the filtered messages only.
 
 The following code snippet shows you how to connect to a POP3 mailbox and get messages that arrived to day and have the word "newsletter" in the subject.
 
@@ -197,10 +197,10 @@ builder.either(builder.subject.contains("test"), builder.from_address.contains("
 
 The API also provides the capability to filter emails from the mailbox based on a case sensitive criteria. The following methods of the [StringComparisonField](https://reference.aspose.com/email/python-net/aspose.email.tools.search/stringcomparisonfield/#stringcomparisonfield-class) class provide the capability to search emails specifying case sensitive flags.  
 
-Method Aspose.Email.StringComparisonField.contains(value, ignore_case)
-Method Aspose.Email.StringComparisonField.equals(value, ignore_case)
-Method Aspose.Email.StringComparisonField.not_contains(value, ignore_case)
-Method Aspose.Email.StringComparisonField.not_equals(value, ignore_case)
+- Method `Aspose.Email.StringComparisonField.contains(value, ignore_case)`
+- Method `Aspose.Email.StringComparisonField.equals(value, ignore_case)`
+- Method `Aspose.Email.StringComparisonField.not_contains(value, ignore_case)`
+- Method `Aspose.Email.StringComparisonField.not_equals(value, ignore_case)`
 
 The following code snippet shows you how to implement this capability into your project:
 

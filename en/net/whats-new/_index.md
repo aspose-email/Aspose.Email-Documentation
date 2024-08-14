@@ -190,12 +190,12 @@ MailAddressCollection Bcc - Gets the address collection that contains BCC recipi
 
 - **Enumerate Messages with Paging Support via Graph Client** - The API provides the paging and filtering support for listing messages. This is very helpful where the mailbox has a large number of messages and requires a lot of time for retrieving the summary information about these.
 - **Asynchronous Mode in Handling Mail Clients** - A new approach to the task includes the following API members:
-  - [IAsyncSmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/) - Allows applications to send messages by using the Simple Mail Transfer Protocol (SMTP).
-  - [SmtpClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/#smtpclientcreateasync-method) - Creates a new instance of the Aspose.Email.Clients.Smtp.SmtpClient class.
-  - [IAsyncSmtpClient.SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)(Aspose.Email.Clients.Smtp.Models.SmtpSend) method parameter set.
-  - [IAsyncSmtpClient.ForwardAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/)(Aspose.Email.Clients.Smtp.Models.SmtpForward) arguments.
-  - [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Allows applications to access and manipulate messages by using the Internet Message Access Protocol (IMAP).
-  - [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Creates a new instance of the Aspose.Email.Clients.Imap.ImapClientclass.
+  - [`IAsyncSmtpClient`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/) - Allows applications to send messages by using the Simple Mail Transfer Protocol (SMTP).
+  - [`SmtpClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/#smtpclientcreateasync-method) - Creates a new instance of the `Aspose.Email.Clients.Smtp.SmtpClient` class.
+  - [`IAsyncSmtpClient.SendAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpSend`) method parameter set.
+  - [`IAsyncSmtpClient.ForwardAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpForward`) arguments.
+  - [`IAsyncImapClient`](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Allows applications to access and manipulate messages by using the Internet Message Access Protocol (IMAP).
+  - [`ImapClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Creates a new instance of the `Aspose.Email.Clients.Imap.ImapClient` class.
 
 ## [Aspose.Email for .NET 22.4](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-4-release-notes/)
 

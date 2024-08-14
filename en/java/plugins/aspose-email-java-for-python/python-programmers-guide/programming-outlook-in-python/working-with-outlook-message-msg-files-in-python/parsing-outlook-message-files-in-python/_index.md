@@ -10,7 +10,7 @@ To Parse Outlook Message Files using **Aspose.Email Java for Python**, Use follo
 
 **Python Code**
 
-{{< highlight python >}}
+```python
 
 
 
@@ -36,7 +36,7 @@ print "Body : "
 
 print outlook_message_file.getBody()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Parsing Outlook Message Files (Aspose.Email)** from any of the below mentioned social coding sites:
 

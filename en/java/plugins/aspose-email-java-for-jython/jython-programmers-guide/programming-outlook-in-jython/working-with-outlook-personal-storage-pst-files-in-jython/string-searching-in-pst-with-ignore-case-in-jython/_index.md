@@ -10,7 +10,7 @@ To string Searching in PST with Ignore Case using **Aspose.Email Java for Jython
 
 **Jython Code**
 
-{{< highlight python >}}
+```python
 
  from aspose-email import Settings
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
 
     StringSearchInPST()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 

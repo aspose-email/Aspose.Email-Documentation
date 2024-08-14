@@ -10,7 +10,7 @@ To Add Files to PST using **Aspose.Email Java for Python**, Use following code.
 
 **Python Code**
 
-{{< highlight python >}}
+```python
 
 
 
@@ -30,7 +30,7 @@ pst.dispose()
 
 print "Added file to PST"
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Adding Files to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

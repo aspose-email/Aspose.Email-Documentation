@@ -16,7 +16,7 @@ Load different type of email messages
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  //Create MailMessage instance by loading an Eml/Msg/Emlx/Mht file
 
@@ -28,7 +28,7 @@ MailMessage messageEMLX = MailMessage.load(dataDir + "message.emlx");
 
 MailMessage messageMHT 	= MailMessage.load(dataDir + "message.mht");
 
-{{< /highlight >}}
+```
 ## **Apache POI HSMF - Load Email Messages**
 {{% alert color="primary" %}} 
 
@@ -38,13 +38,13 @@ Apache POI HSMF provides MAPIMessages constructor which takes filename to load n
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  String filename = dataDir + "message.msg";
 
 MAPIMessage msg = new MAPIMessage(filename);
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

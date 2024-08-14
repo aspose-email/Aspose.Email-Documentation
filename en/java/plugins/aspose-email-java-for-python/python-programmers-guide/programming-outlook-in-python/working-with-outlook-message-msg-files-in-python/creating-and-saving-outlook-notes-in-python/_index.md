@@ -10,7 +10,7 @@ To Create and Save Outlook Notes using **Aspose.Email Java for Python**, Use fol
 
 **Python Code**
 
-{{< highlight python >}}
+```python
 
 
 
@@ -34,7 +34,7 @@ note.save(self.dataDir + "MapiNote.msg", noteSaveFormat.Msg)
 
 print "Created outlook note successfully."
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Creating and Saving Outlook Notes (Aspose.Email)** from any of the below mentioned social coding sites:
 

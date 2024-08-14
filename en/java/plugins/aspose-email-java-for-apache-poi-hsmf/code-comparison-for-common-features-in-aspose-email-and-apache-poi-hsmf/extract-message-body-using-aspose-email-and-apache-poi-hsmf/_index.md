@@ -10,7 +10,7 @@ The MailMessage represents an email message and allows developers to access em
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  MailMessage msg = MailMessage.load(dataDir + "message.msg");
 
@@ -20,19 +20,19 @@ System.out.println("Text Body:"+ msg.getTextBody());
 
 System.out.println("Text Body HTML:"+ msg.getHtmlBody());
 
-{{< /highlight >}}
+```
 ## **Apache POI HSMF - Extract Message Body**
 MAPIMessage can access email message body.
 
 **Java**
 
-{{< highlight java >}}
+```java
 
  MAPIMessage msg = new MAPIMessage(dataDir + "message.msg");
 
 System.out.println("Text Body:"+ msg.getTextBody());
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

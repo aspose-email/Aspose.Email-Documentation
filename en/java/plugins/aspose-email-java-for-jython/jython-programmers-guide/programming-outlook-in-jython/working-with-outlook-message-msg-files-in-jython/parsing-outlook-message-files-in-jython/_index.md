@@ -10,7 +10,7 @@ To Parse Outlook Message file using **Aspose.Email Java for Jython**, simply inv
 
 **Jython Code**
 
-{{< highlight python >}}
+```python
 
  from aspose-email import Settings
 
@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
     ParseOutlookMessageFile()
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Parsing Outlook Message Files (Aspose.Email)** from any of the below mentioned social coding sites:
 

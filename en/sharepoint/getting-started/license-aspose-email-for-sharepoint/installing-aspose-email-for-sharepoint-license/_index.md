@@ -54,7 +54,7 @@ If the Windows SharePoint Services Administration service has not been started w
 ## **Installing the License from LIC file**
 In order to install the license from Lic file, you need to place the license file in the Aspose.Network.SharePoint.License folder as follow:
 
-InstalledDrive\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\Template\Features\Aspose.Network.SharePoint.License
+`InstalledDrive\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\Template\Features\Aspose.Network.SharePoint.License`
 
 The following License names are recognized by Aspose.Email for Sharepoint API:
 

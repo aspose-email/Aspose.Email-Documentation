@@ -10,7 +10,7 @@ To Add MapiJournal to PST using **Aspose.Email Java for Ruby**, simply invoke **
 
 **Ruby Code**
 
-{{< highlight ruby >}}
+```ruby
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
@@ -38,7 +38,7 @@ journal_folder.addMapiMessageItem(journal)
 
 puts "Added MapiJournal Successfully."
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **Adding MapiJournal to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

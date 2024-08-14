@@ -10,7 +10,7 @@ To string Searching in PST with Ignore Case using **Aspose.Email Java for PHP**,
 
 **PHP Code**
 
-{{< highlight php >}}
+```php
 
  $personalStorage=new PersonalStorage();
 
@@ -38,7 +38,7 @@ $coll = $fi->getContents($query);
 
 print "Total Results:" . (string)$coll->size();
 
-{{< /highlight >}}
+```
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 
