@@ -30,8 +30,11 @@ Aspose.Email makes it easy to convert any message type to another format. To dem
 - [Outlook MSG](/email/java/loading-and-saving-message/#loading-eml-saving-to-msg).
 - [MHTML format](/email/java/loading-and-saving-message/#saving-mailmessage-as-mhtml).
 - [HTML format](/email/java/loading-and-saving-message/#exporting-email-to-eml).
-  and also shows how to preserver original email address
+
+And also shows how to preserver original email address
+
 - [Preserve Original Email Address](/email/java/loading-and-saving-message/)
+
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

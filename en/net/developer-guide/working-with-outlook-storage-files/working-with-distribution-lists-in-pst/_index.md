@@ -17,6 +17,7 @@ The following code snippet shows you how to create and save a distribution list.
 
 The following code snippet shows you how to read a distribution list from a PST.
 
+```cs
 using Aspose.Email.Storage.Pst;
 using Aspose.Email.Mapi;
 
@@ -42,6 +43,7 @@ using (var pst = PersonalStorage.FromFile("your.pst"))
         }
     }
 }
+```
 
 ### **Update a Distribution List in PST**
 
