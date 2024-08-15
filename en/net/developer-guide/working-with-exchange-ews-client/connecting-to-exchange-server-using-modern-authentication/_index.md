@@ -14,8 +14,7 @@ To use Modern Authentication, make sure that it is enabled. However, for tenants
 In the [Microsoft 365 admin center](https://admin.microsoft.com/), go **Settings > Org Settings > Modern Authentication**. In the **Modern authentication flyout** that appears, you can identify the protocols that no longer require Basic authentication.
 For new Microsoft365 tenants in Azure, Basic Authentication is disabled by default for all applications. Therefore, the text will be displayed in this section.
 
-> Your organization has security defaults enabled, which means modern authentication to Exchange Online is required, and basic authentication connections are blocked.
-> You must turn off security defaults in the Azure portal before you can change any settings here.
+> Your organization has security defaults enabled, which means modern authentication to Exchange Online is required, and basic authentication connections are blocked. You must turn off security defaults in the Azure portal before you can change any settings here.
 
 
 You can enable Basic Auth support for tenant from the [Azure](https://aad.portal.azure.com/) portal, go **Azure Active Directory > Properties > Manage Security defaults > Enable Security defaults > No**.

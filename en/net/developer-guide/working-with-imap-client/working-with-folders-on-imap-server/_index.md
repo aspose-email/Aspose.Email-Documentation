@@ -16,9 +16,10 @@ Getting information about folders from an IMAP server is very easy with Aspose.E
 
 A folder on an IMAP server can be deleted or renamed in a single line with Aspose.Email:
 
-- The [DeleteFolder()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletefolder/#deletefolder/) method accepts the folder name as a parameter.
-- For the [RenameFolder()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/renamefolder/#renamefolder/) method, you need to pass the current folder name and new folder name.
-  The following code snippet shows you how to remove a folder from an IMAP server, and how to rename a folder. Each operation is performed with one line of code.
+- The [`DeleteFolder()`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletefolder/#deletefolder/) method accepts the folder name as a parameter.
+- For the [`RenameFolder()`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/renamefolder/#renamefolder/) method, you need to pass the current folder name and new folder name.
+
+The following code snippet shows you how to remove a folder from an IMAP server, and how to rename a folder. Each operation is performed with one line of code.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-DeletingAndRenamingFolders-DeletingAndRenamingFolders.cs" >}}
 

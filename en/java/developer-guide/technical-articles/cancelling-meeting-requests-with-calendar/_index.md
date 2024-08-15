@@ -106,8 +106,7 @@ To cancel a meeting request, first get the email message's message ID. Since we 
 1. Selecting the message for which to send the cancellation request.
 1. Click **Send Cancel Request** to send the request.
 1. Queries the database to get the attendee, message and calendar related information.
-1. Create an instances of the Calendar Class and MailMessage
-   class classes using the information retrieved from the database.
+1. Create an instances of the Calendar Class and MailMessage class classes using the information retrieved from the database.
 1. Use the Appointment.cancelAppointment() method to send the cancellation request.
 1. Send the mail using the SMTP.
 

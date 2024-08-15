@@ -95,23 +95,20 @@ Please extract the downloaded ZIP file. You will need FTP or direct access to th
 **Step 2: Register the Aspose .NET Exchange Sync for Sitefinity add-on in Sitefinity**
 
 1. Log into your Sitefinity CMS with an ‘**Administrator**’ account. The login page can be reached by <https://ownwebsite.com/>
-1. Click **Administration** and then **Settings**.
-   The Basic Settings page appears.
-1. **Click the Advanced** **link.** 
-   The Settings page appears.
+1. Click **Administration** and then **Settings**. The Basic Settings page appears.
+1. **Click the Advanced** **link.** The Settings page appears.
 1. In the left pane, click **Toolboxes** followed by **Toolboxes**, then **PageControls**, **Sections** and **ContentToolboxSection**, then **Tools.**
-1. Click **Create new**.
-   The widget registration form appears.
+1. Click **Create new**. The widget registration form appears.
 1. Fill the form fields as follows: 
    1. Make sure **Enabled** is selected.
    1. Add ~/Addons/AsposeExchangeSync/AsposeExchangeSync.ascx in the **Control CLR Type or Virtual Path** field.
    1. Add **Name**, **Title** and **Description** as follows:
-      AsposeExchangeSync
-      Aspose Exchange Sync
+      - AsposeExchangeSync
+      - Aspose Exchange Sync
+
       Sync Sitefinity Users with Microsoft Exchange Contacts using Aspose .NET Exchange Sync for Sitefinity
    1. You may leave all other fields as they are.
-1. When finished, click **Save changes**.
-   The widget is registered in the toolbox and can be used in Sitefinity. The settings are also shown in the picture below 
+1. When finished, click **Save changes**. The widget is registered in the toolbox and can be used in Sitefinity. The settings are also shown in the picture below 
 
 ![todo:image_alt_text](http://www.aspose.com/blogs/wp-content/uploads/2015/01/How-to-use-Aspose-.NET-Exchange-Sync-for-Sitefinity.png)
 ## **Using and Video Demo**

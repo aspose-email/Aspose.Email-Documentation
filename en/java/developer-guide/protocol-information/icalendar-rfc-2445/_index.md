@@ -26,7 +26,8 @@ We encounter schedules or recurrence patterns in many situations, for example:
 - Run backup every 4 hours on work days.
 - Generate sales report on …
 - Update website statistics every …
-  Almost any event that occurs periodically can be represented as a recurrence pattern. For example, the following code will return an array containing ten occurrences of the previous team meeting example: 
+
+Almost any event that occurs periodically can be represented as a recurrence pattern. For example, the following code will return an array containing ten occurrences of the previous team meeting example: 
 
 ~~~java
 CalendarRecurrence recurrencePattern = new CalendarRecurrence("DTSTART:20040301T100000\nRRULE:FREQ=WEEKLY;COUNT=10;BYDAY=MO");

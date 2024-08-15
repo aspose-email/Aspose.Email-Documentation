@@ -58,8 +58,7 @@ To enable POP3 and IMAP:
 
 
 1. Verify the connection by clicking **Click to test connection parameters**. If there is anything wrong with the credentials or host address, an error message is displayed.
-1. Click **Save** to save the settings.
-   Aspose.Email for SharePoint tries to connect to Gmail every 5 minutes (or any other time specified). It downloads messages and updates email list.
+1. Click **Save** to save the settings. Aspose.Email for SharePoint tries to connect to Gmail every 5 minutes (or any other time specified). It downloads messages and updates email list.
 
 All attachments, embedded images and body formatting is preserved when downloading the messages and creating emails in SharePoint’s custom list of emails. 
 ### **Synchronizing Emails Manually**

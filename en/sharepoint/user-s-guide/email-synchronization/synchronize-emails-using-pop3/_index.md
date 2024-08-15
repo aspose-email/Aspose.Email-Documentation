@@ -30,8 +30,7 @@ This article shows how to use the Aspose.Email's email synchronization feature t
 
 
 
-1. Click **Click to test connection parameters** to verify the connection.
-   If there is anything wrong with the credentials or host address, an error message is displayed.
+1. Click **Click to test connection parameters** to verify the connection. If there is anything wrong with the credentials or host address, an error message is displayed.
 1. Click **Save** to save the settings.
 
 {{% alert color="primary" %}} 

@@ -12,8 +12,7 @@ With Aspose.Email for SharePoint, you can select any file and send it to an FTP 
 {{% /alert %}} 
 
 1. In a document library, select a file.
-1. Click **Send To FTP** on the **Aspose Tools** ribbon.
-   The Send To FTP dialog is displayed. 
+1. Click **Send To FTP** on the **Aspose Tools** ribbon. The Send To FTP dialog is displayed. 
 
    **The Send to FTP dialog.** 
 

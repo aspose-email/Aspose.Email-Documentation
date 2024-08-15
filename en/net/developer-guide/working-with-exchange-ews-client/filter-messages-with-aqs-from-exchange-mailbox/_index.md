@@ -11,9 +11,8 @@ url: /net/filter-messages-with-aqs-from-exchange-mailbox/
 
 You can create a search query with AQS by:
 
-- [ExchangeAdvancedSyntaxQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), which represents the builder of search expression based on the Advanced Query Syntax (AQS).
-  or
-- [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), which creates an AQS string directly based on the supported keywords.
+- [`ExchangeAdvancedSyntaxQueryBuilder`](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), which represents the builder of search expression based on the Advanced Query Syntax (AQS). Or
+- [`ExchangeAdvancedSyntaxMailQuery`](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), which creates an AQS string directly based on the supported keywords.
 
 ## Create a search query using query builder
 

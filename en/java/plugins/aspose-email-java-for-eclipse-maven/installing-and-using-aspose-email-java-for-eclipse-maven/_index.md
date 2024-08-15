@@ -32,8 +32,7 @@ To create **Maven Project** by wizard for using [Aspose.Email for Java API](http
 
 ![todo:image_alt_text](/download/thumbnails/11665891/2135011380)
 
-1. The created **Maven Project** is configured to use **Aspose.Email for Java API** and ready to be enhanced as per your Project requirements.
-   If you have opted to download [Code Examples](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples), you can use **Aspose.Email Code Example (wizard)** for importing needed **Code Examples** of [Aspose.Email for Java](http://www.aspose.com/java/email-component.aspx) API into your project.
+1. The created **Maven Project** is configured to use **Aspose.Email for Java API** and ready to be enhanced as per your Project requirements. If you have opted to download [Code Examples](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples), you can use **Aspose.Email Code Example (wizard)** for importing needed **Code Examples** of [Aspose.Email for Java](http://www.aspose.com/java/email-component.aspx) API into your project.
 ### **Aspose.Email Code Example (wizard)**
 **Aspose.Email Code Example wizard** allows you to try out many samples provided for [Aspose.Email for Java](http://www.aspose.com/java/email-component.aspx) API.
 

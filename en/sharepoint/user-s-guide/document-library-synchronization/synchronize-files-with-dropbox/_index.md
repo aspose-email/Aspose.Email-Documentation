@@ -23,8 +23,7 @@ In the illustration below, the synchronization goes from Dropbox to SharePoint.
 ## **Synchronizing Files with Dropbox**
 To setup the synchronization:
 
-1. In a SharePOint document library, click **Sync List with Dropbox** on the **Aspose Tools** ribbon.
-   The Sync with Dropbox dialog appears. 
+1. In a SharePOint document library, click **Sync List with Dropbox** on the **Aspose Tools** ribbon. The Sync with Dropbox dialog appears. 
 
    **Setting up Dropbox synchronization.** 
 
@@ -34,5 +33,4 @@ To setup the synchronization:
 
 
 1. Provide the Dropbox authentication information, direction, and schedule.
-1. Click **Save**.
-   When the setting have been saved, all the files will be synchronized. 
+1. Click **Save**. When the setting have been saved, all the files will be synchronized. 

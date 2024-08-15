@@ -81,8 +81,7 @@ Here, we'll demonstrate how to use [Aspose.Email.Pop3](https://apireference.aspo
 1. Create an instance of Pop3Client.
 1. Set the POP3 host name, login and password in this instance.
 1. Call the Pop3Client's Connect() and Login() functions.
-1. Create a MailMessage instance and fetch the first email in your account into it by calling the FetchMessage() function.
-   This brings the first message from your email account into the MailMessage instance.
+1. Create a MailMessage instance and fetch the first email in your account into it by calling the FetchMessage() function. This brings the first message from your email account into the MailMessage instance.
 1. Use the MailMessage instance's From, Subject and HtmlBody properties to see the sender, subject and body of the message.
 
 The above steps is demonstrated in the code examples below. Use the following code behind any button or in the OnLoad event of a form.

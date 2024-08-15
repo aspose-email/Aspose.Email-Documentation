@@ -15,8 +15,7 @@ Aspose.Email for SharePoint allows the users to extract all or selected attachme
 To extract an email message's attachments:
 
 1. Right-click the email in a document library.
-1. Select **Extract All Attachments** from the menu.
-   The Extract All Attachments dialog is displayed. It shows the name of the message and gives a list of attached files. 
+1. Select **Extract All Attachments** from the menu. The Extract All Attachments dialog is displayed. It shows the name of the message and gives a list of attached files. 
 
    **The Extract All Attachments dialog.** 
 
@@ -26,8 +25,7 @@ To extract an email message's attachments:
 
 
 1. Select the attachments that you want to save or click Select All to select all attachments.
-1. Click **Extract**.
-   The attachments are saved to the document library.
+1. Click **Extract**. The attachments are saved to the document library.
 
 The screenshot below shows a document library that contains the MSG file used in this example, as well as the attachments extracted from it. 
 
