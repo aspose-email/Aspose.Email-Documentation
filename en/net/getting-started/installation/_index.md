@@ -36,10 +36,8 @@ In order to use any component in your application, add a reference to it. The st
 1. Right-click the **References** node for the project and select **Add Reference** from the menu.
 1. In the Add Reference dialog box, select the **.NET** tab (it's usually selected by default).
 1. If you have used MSI installer to install Aspose.Email, you will see Aspose.Email in the top pane. Select it and then click the **Select** button.
-1. If you have downloaded and unpacked the DLL only, click the **Browse** button and locate the Aspose.Email.dll file. 
-   You have referenced Aspose.Email and it should appear in the **SelectedComponents** pane of the dialog box.
-1. Click **OK**. 
-   An Aspose.Email reference appears under the **References** node of the project.
+1. If you have downloaded and unpacked the DLL only, click the **Browse** button and locate the Aspose.Email.dll file. You have referenced Aspose.Email and it should appear in the **SelectedComponents** pane of the dialog box.
+1. Click **OK**. An Aspose.Email reference appears under the **References** node of the project.
 ## **Uninstalling Aspose.Email for .NET**
 If you have used MSI installer to deploy Aspose.Email, follow these steps to completely remove the component and the associated demos and documentation:
 
@@ -50,10 +48,8 @@ If you have used MSI installer to deploy Aspose.Email, follow these steps to com
 ## **Targeting Specific .NET Framework Version**
 Although Aspose.Email references .NET Framework 1.1, it is possible to use it on a machine with only version 1.0 installed. But you need to add an entry to the application configuration file to redirect the references because otherwise the component will try to load assemblies from .NET Framework 1.1. Each assembly that makes up the .NET Framework must be redirected to use .NET Framework version 1.0. Configuration file is an XML file that can be changed as needed. Developers can use it to change settings without recompiling applications. The name and location of the application configuration file depend on the application's host, which can be one of the following:
 
-- Executable--hosted application:
-  The configuration file for an application hosted by the executable host is in the same directory as the application. The name of the configuration file is the name of the application with a .config extension. For example, an application called myApp.exe can be associated with a configuration file called myApp.exe.config.
-- ASP.NET-hosted application:
-  ASP.NET configuration files are called Web.config and placed in the application directory as well. Enter the following XML in the application configuration file:
+- Executable--hosted application: The configuration file for an application hosted by the executable host is in the same directory as the application. The name of the configuration file is the name of the application with a .config extension. For example, an application called myApp.exe can be associated with a configuration file called myApp.exe.config.
+- ASP.NET-hosted application: ASP.NET configuration files are called Web.config and placed in the application directory as well. Enter the following XML in the application configuration file:
 
 **XML**
 

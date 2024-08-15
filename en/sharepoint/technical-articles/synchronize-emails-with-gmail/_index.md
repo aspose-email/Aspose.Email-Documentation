@@ -27,8 +27,7 @@ To enable POP3 and IMAP:
 1. Enable POP and choose the appropriate “Enable POP” option: 
    1. **Enable POP for all mail** to download all emails (new and old).
    1. **Enable POP for mail that arrives from now on** to download new emails only.
-1. Enable IMAP. 
-   For IMAP, there are only two choices: 
+1. Enable IMAP. For IMAP, there are only two choices: 
    1. **Enable** to download all messages from your mailbox.
    1. **Disable** turns off the service. Don't select this option. 
 

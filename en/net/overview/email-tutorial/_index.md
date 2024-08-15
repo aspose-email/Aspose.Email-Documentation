@@ -113,6 +113,7 @@ MBOX comes in several variants, each with slight differences in how they handle 
   
     **Example:**
     
+    ```
     From user@example.com Fri Jan 01 00:00:00 2021
     (Headers)
     
@@ -122,7 +123,7 @@ MBOX comes in several variants, each with slight differences in how they handle 
     (Headers)
     
     (Body)
-    
+    ```
 
 ### PST/OST
 

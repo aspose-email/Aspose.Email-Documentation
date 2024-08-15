@@ -64,8 +64,8 @@ Try the following code sample to create an appointment with alternative HTML des
    - Specify the attendee.
 3. Set the [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) property of the appointment object, indicating that the description is in HTML format.
 4. Set the Description property of the appointment object to an HTML-formatted string, enclosed within a multiline string:
-   - The HTML markup includes a &lt;style&gt; block defining a CSS class named "text" with font styles.
-   - The HTML body contains a paragraph tag &lt;p&gt; with the CSS class "text", and the actual invitation message.
+   - The HTML markup includes a `<style>` block defining a CSS class named "text" with font styles.
+   - The HTML body contains a paragraph tag `<p>` with the CSS class "text", and the actual invitation message.
 5. The appointment object is now ready, and you can perform further operations or save it as an iCalendar file.
 
 ```cs
