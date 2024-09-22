@@ -1,0 +1,9 @@
+{
+  "baseUrl": "https://docs.aspose.com",
+  "fixUrlPrefixes": [
+    "/email/",
+    "https://docs.aspose.com/email/",
+    "https://products.aspose.app/email/",
+    "https://products.aspose.com/email/"
+  ]
+}

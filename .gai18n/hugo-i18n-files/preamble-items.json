@@ -1,0 +1,12 @@
+[
+  { "name": "title", "type": "I18nText" },
+  { "name": "description", "type": "I18nText" },
+  { "name": "bcTitle", "type": "I18nText" },
+  { "name": "url", "type": "Url" },
+  { "name": "weight", "type": "Unquoted" },
+  { "name": "is_root", "type": "Unquoted" },
+  { "name": "type", "type": "Unquoted" },
+  { "name": "ArticleTitle", "type": "I18nText" },
+  { "name": "linktitle", "type": "I18nText" },
+  { "name": "keywords", "type": "I18nText" }
+]
