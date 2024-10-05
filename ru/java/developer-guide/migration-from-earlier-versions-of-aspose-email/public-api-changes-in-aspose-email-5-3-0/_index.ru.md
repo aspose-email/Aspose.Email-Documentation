@@ -1,32 +1,32 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 5.3.0"
+title: "Изменения в публичном API Aspose.Email 5.3.0"
 url: /ru/java/public-api-changes-in-aspose-email-5-3-0/
 weight: 140
 type: docs
 ---
 
-Ниже приведен список всех изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание членов, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
-## **Добавлены API:**
-- Class `SyncFolderResult`
-- Class `TextFormat`
+Ниже приведен список всех изменений, внесенных в публичный API, таких как добавленные, переименованные, удаленные или устаревшие элементы, а также любые изменения, не совместимые с предыдущими версиями, внесенные в Aspose.Email для Java. Если у вас есть какие-либо вопросы по приведенным изменениям, пожалуйста, поднимите их на форуме поддержки Aspose.Email.
+## **Добавленные API:**
+- Класс `SyncFolderResult`
+- Класс `TextFormat`
 
-- Field/Enum `TextFormat.Html`
-- Field/Enum `TextFormat.Text`
+- Поле/перечисление `TextFormat.Html`
+- Поле/перечисление `TextFormat.Text`
 
-- Method `IEWSClient.syncFolder(String folder, String syncState)`
-- Method `IEWSClient.syncFolder(String folder, String syncState, IGenericEnumerable<String> ignoreList)`
-- Method `MailMessage.createReadReceipt(String from, String bodyText)`
+- Метод `IEWSClient.syncFolder(String folder, String syncState)`
+- Метод `IEWSClient.syncFolder(String folder, String syncState, IGenericEnumerable<String> ignoreList)`
+- Метод `MailMessage.createReadReceipt(String from, String bodyText)`
 
-- Property `Exchange.SyncFolderResult.getChangedItems()`
-- Property `Exchange.SyncFolderResult.getDeletedItems()`
-- Property `Exchange.SyncFolderResult.getNewItems()`
-- Property `Exchange.SyncFolderResult.getReadFlagChanged()`
-- Property `Exchange.SyncFolderResult.getSyncState()`
-- Property `Contact.getNotesFormat(), Contact.setNotesFormat(/**TextFormat**/int value)`
-- Property `MailMessage.isEncrypted()`
-- Property `MailMessage.getReadReceiptTo(), MailMessage.setReadReceiptTo(MailAddressCollection value)`
+- Свойство `Exchange.SyncFolderResult.getChangedItems()`
+- Свойство `Exchange.SyncFolderResult.getDeletedItems()`
+- Свойство `Exchange.SyncFolderResult.getNewItems()`
+- Свойство `Exchange.SyncFolderResult.getReadFlagChanged()`
+- Свойство `Exchange.SyncFolderResult.getSyncState()`
+- Свойство `Contact.getNotesFormat(), Contact.setNotesFormat(/**TextFormat**/int value)`
+- Свойство `MailMessage.isEncrypted()`
+- Свойство `MailMessage.getReadReceiptTo(), MailMessage.setReadReceiptTo(MailAddressCollection value)`
 
-- Property `MapiMessage.getReadReceiptRequested(), setReadReceiptRequested(boolean value)`
+- Свойство `MapiMessage.getReadReceiptRequested(), setReadReceiptRequested(boolean value)`
 - `com.aspose.email.CallInformation`
 - `com.aspose.email.CallInformation.getSIPResponseCode`
 - `com.aspose.email.CallInformation.getCallState`
@@ -238,72 +238,7 @@ type: docs
 - `com.aspose.email.ExchangeClient.setCredentials(com.aspose.email.internal.l.ah)`
 - `com.aspose.email.ExchangeClient.setMailboxUri(java.lang.String)`
 - `com.aspose.email.ExchangeClient.setProxy(com.aspose.email.internal.l.bw)`
-- `com.aspose.email.ExchangeClient.getFolderInfo(java.lang.String)`
-- `com.aspose.email.ExchangeClient.fetchMapiMessage(java.lang.String)`
-- `com.aspose.email.ExchangeClient.getClientCertificate`
-- `com.aspose.email.ExchangeClient.getCookieContainer`
-- `com.aspose.email.ExchangeClient.getPreAuthenticate`
-- `com.aspose.email.ExchangeClient.getSendChunked`
-- `com.aspose.email.ExchangeClient.listMessagesById(java.lang.String,java.lang.String)`
-- `com.aspose.email.ExchangeClient.moveItems(java.lang.String,java.lang.String[])`
-- `com.aspose.email.ExchangeClient.moveMessage(com.aspose.email.ExchangeMessageInfo,java.lang.String)`
-- `com.aspose.email.ExchangeClient.moveMessage(com.aspose.email.ExchangeMessageInfo,java.lang.String,boolean)`
-- `com.aspose.email.ExchangeClient.setClientCertificate(com.aspose.email.internal.x.f)`
-- `com.aspose.email.ExchangeClient.setCookieContainer(com.aspose.email.internal.l.i)`
-- `com.aspose.email.ExchangeClient.setPreAuthenticate(boolean)`
-- `com.aspose.email.ExchangeClient.setSendChunked(boolean)com.aspose.email.IExchangeClientBase`
-- `com.aspose.email.IExchangeClientBase.send(com.aspose.email.MailMessage)`
-- `com.aspose.email.IExchangeClientBase.dispose`
-- `com.aspose.email.IExchangeClientBase.getProxy`
-- `com.aspose.email.IExchangeClientBase.setTimeout(int)`
-- `com.aspose.email.IExchangeClientBase.getTimeout`
-- `com.aspose.email.IExchangeClientBase.setReadFlag(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.createFolder(java.lang.String,java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.deleteFolder(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.deleteMessage(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.fetchMessage(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.getMailboxInfo(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.getMailboxInfo`
-- `com.aspose.email.IExchangeClientBase.getMailboxSize`
-- `com.aspose.email.IExchangeClientBase.getMailboxSize(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.listMessages(java.lang.String,int,int)`
-- `com.aspose.email.IExchangeClientBase.listMessages(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.saveMessage(java.lang.String,java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.saveMessage(java.lang.String,java.io.OutputStream)`
-- `com.aspose.email.IExchangeClientBase.appendMessage(java.lang.String,com.aspose.email.MailMessage,boolean)`
-- `com.aspose.email.IExchangeClientBase.appendMessage(java.lang.String,com.aspose.email.MailMessage)`
-- `com.aspose.email.IExchangeClientBase.backup(com.aspose.email.ExchangeFolderInfoCollection,java.lang.String,int)`
-- `com.aspose.email.IExchangeClientBase.backup(com.aspose.email.ExchangeFolderInfoCollection,java.io.OutputStream,int)`
-- `com.aspose.email.IExchangeClientBase.fetchAttachment(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.restore(java.lang.String,com.aspose.email.ExchangeFolderInfoCollection,int)`
-- `com.aspose.email.IExchangeClientBase.restore(java.io.InputStream,com.aspose.email.ExchangeFolderInfoCollection,int)`
-- `com.aspose.email.IExchangeClientBase.restore(com.aspose.email.PersonalStorage,int)`
-- `com.aspose.email.IExchangeClientBase.restore(java.lang.String,int)`
-- `com.aspose.email.IExchangeClientBase.restore(com.aspose.email.PersonalStorage,com.aspose.email.ExchangeFolderInfoCollection,int)`
-- `com.aspose.email.IExchangeClientBase.restore(java.io.InputStream,int)`
-- `com.aspose.email.IExchangeClientBase.backupInternal(com.aspose.email.ExchangeFolderInfoCollection,com.aspose.email.system.io.Stream,int)`
-- `com.aspose.email.IExchangeClientBase.createContact(com.aspose.email.MapiContact)`
-- `com.aspose.email.IExchangeClientBase.deleteContact(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.deleteContact(com.aspose.email.MapiContact)`
-- `com.aspose.email.IExchangeClientBase.folderExists(java.lang.String,java.lang.String,com.aspose.email.ExchangeFolderInfo[])`
-- `com.aspose.email.IExchangeClientBase.folderExists(java.lang.String,java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.getCredentials`
-- `com.aspose.email.IExchangeClientBase.getMailboxUri`
-- `com.aspose.email.IExchangeClientBase.getVersionInfo`
-- `com.aspose.email.IExchangeClientBase.listContacts(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.listMailboxes`
-- `com.aspose.email.IExchangeClientBase.listMessagesByMaxNumberOfMessages(java.lang.String,int)`
-- `com.aspose.email.IExchangeClientBase.listMessagesByOption(java.lang.String,int)`
-- `com.aspose.email.IExchangeClientBase.listPublicFolders`
-- `com.aspose.email.IExchangeClientBase.listSubFolders(com.aspose.email.ExchangeFolderInfo)`
-- `com.aspose.email.IExchangeClientBase.listSubFolders(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.resolveContact(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.restoreInternal(com.aspose.email.system.io.Stream,com.aspose.email.ExchangeFolderInfoCollection,int)`
-- `com.aspose.email.IExchangeClientBase.restoreInternal(com.aspose.email.system.io.Stream,int)`
-- `com.aspose.email.IExchangeClientBase.saveMessageInternal(java.lang.String,com.aspose.email.system.io.Stream)`
-- `com.aspose.email.IExchangeClientBase.setCredentials(com.aspose.email.internal.l.ah)`
-- `com.aspose.email.IExchangeClientBase.setMailboxUri(java.lang.String)`
-- `com.aspose.email.IExchangeClientBase.setProxy(com.aspose.email.internal.l.bw)com.aspose.email.ExchangeConversation`
+- `com.aspose.email.ExchangeConversation`
 - `com.aspose.email.ExchangeConversation.getSize`
 - `com.aspose.email.ExchangeConversation.getMessageCount`
 - `com.aspose.email.ExchangeConversation.getConversationTopic`
