@@ -1,12 +1,6 @@
 default:
   tags:
     - linux-k8s
-  variables:
-    TERM: "xterm"
-    NUKE_TELEMETRY_OPTOUT: 1
-    DOTNET_NOLOGO: 1
-    DOTNET_CLI_TELEMETRY_OPTOUT: 1
-
   image:
     name: hugomods/hugo:0.129.0
     entrypoint: ["/bin/sh", "-c"]
@@ -17,6 +11,11 @@ default:
 
 stages:
   - test-translation
+variables:
+  TERM: "xterm"
+  NUKE_TELEMETRY_OPTOUT: 1
+  DOTNET_NOLOGO: 1
+  DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
 clone_repo:
   stage: test-translation
