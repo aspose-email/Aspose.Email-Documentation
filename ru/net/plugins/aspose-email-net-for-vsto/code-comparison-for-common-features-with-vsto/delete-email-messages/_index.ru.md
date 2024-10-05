@@ -1,17 +1,17 @@
 ---
-title: "Удалить сообщения электронной почты"
+title: "Удалить электронные сообщения"
 url: /ru/net/delete-email-messages/
 weight: 100
 type: docs
 ---
 
-
 ## **VSTO**
-Ниже приведен код для удаления сообщений с помощью VSTO Outlook.
 
-``` cs
+Ниже приведен код для удаления сообщений с использованием VSTO Outlook.
 
-  // Create Application class and get namespace
+```cs
+
+  // Создайте класс Application и получите пространство имен
 
  Outlook.Application outlook = new Outlook.Application();
 
@@ -21,19 +21,21 @@ type: docs
 
  ns.Logon(_missing, _missing, false, true);
 
- // Get Inbox information in objec of type MAPIFolder
+ // Получите информацию о папке "Входящие" в объекте типа MAPIFolder
 
  Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
  Outlook.MailItem item = inbox.Items[0];
 
- item.Delete();     
+ item.Delete();
 
 ```
-## **Aspose.Email**
-Ниже приведен код для удаления сообщений с помощью aspose.email для .NET.
 
-``` cs
+## **Aspose.Email**
+
+Ниже приведен код для удаления сообщений с использованием aspose.email для .NET.
+
+```cs
 
   string MailBoxURI = "http://MachineName/exchange/Username";
 
@@ -43,28 +45,33 @@ type: docs
 
  string Domain = "domain";
 
- // Create instance of ExchangeClient class by giving credentials
+ // Создайте экземпляр класса ExchangeClient, указав учетные данные
 
  ExchangeClient client = new ExchangeClient(MailBoxURI, UserName, Password, Domain);
 
- // Call ListMessages method to list messages info from Inbox
+ // Вызовите метод ListMessages, чтобы получить информацию о сообщениях из папки "Входящие"
 
  ExchangeMessageInfoCollection msgCollection = client.ListMessages(client.MailboxInfo.InboxUri);
 
- // Get URI of Message to Delete
+ // Получите URI сообщения для удаления
 
  string MessageURI= msgCollection[0].UniqueUri;
 
- // Delete the message
+ // Удалите сообщение
 
  client.DeleteMessage(MessageURI);
 
 ```
-## **Загрузить исходный код**
+
+## **Скачать исходный код**
+
 - [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Delete%20Messages)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Загрузить пример запуска**
+
+## **Скачать работающий пример**
+
 - [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)
+

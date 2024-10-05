@@ -5,14 +5,15 @@ weight: 30
 type: docs
 ---
 
-## **Aspose.Email - отображение информации об электронной почте**
-Для отображения информации об электронной почте с помощью **Aspose.Электронная почта Java для PHP**, просто вызовите **GetEmailInfo** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Отображение информации об электронной почте**
 
-**Код PHP**
+Чтобы отобразить информацию об электронной почте с использованием **Aspose.Email Java для PHP**, просто вызовите модуль **GetEmailInfo**. Здесь вы можете видеть пример кода.
 
-``` php
+**PHP Код**
 
- # Create MailMessage instance by loading an Eml file
+```php
+
+ # Создание экземпляра MailMessage путем загрузки файла Eml
 
 $message_format = new MessageFormat();
 
@@ -31,8 +32,11 @@ print "HtmlBody: " . (string)$message->getHtmlBody();
 print "TextBody: " . (string)$message->getTextBody();
 
 ```
-## **Загрузить рабочий код**
-Download **Отображение информации об электронной почте (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+
+## **Скачать рабочий код**
+
+Скачайте **Отображение информации об электронной почте (Aspose.Email)** с любого из нижеупомянутых социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/GetEmailInfo.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingEmail/GetEmailInfo.php)
+
