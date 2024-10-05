@@ -6,7 +6,7 @@ default:
     entrypoint: ["/bin/sh", "-c"]
   before_script:
     - apk update && apk upgrade && apk add --no-cache nodejs npm bash curl perl git
-    - git config --global http.extraheader "Authorization: Bearer $GITLAB_ACCESS_TOKEN"
+    - "git config --global http.extraheader 'Authorization: Bearer $GITLAB_ACCESS_TOKEN'"
     - git clone https://git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
 
 stages:
