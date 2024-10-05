@@ -1,39 +1,38 @@
 ---
-title: "Отправка и пересылка сообщений - отправка электронных писем Outlook с помощью C #"
+title: "Отправка и пересылка сообщений - Отправка email через Outlook с использованием C#"
 url: /ru/net/sending-and-forwarding-messages/
 weight: 20
 type: docs
 linktitle: "Отправка и пересылка сообщений"
 ---
 
+Класс [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) позволяет приложениям отправлять электронные письма с использованием протокола простой почты (SMTP).
 
-The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс позволяет приложениям отправлять электронную почту с использованием простого протокола передачи почты (SMTP).
+- Класс [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) является единственным основным интерфейсом, который разработчики используют для отправки почтовых сообщений.
+- Класс [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) также предоставляет другие распространенные методы доставки сообщений, включая запись электронных писем в файловую систему, в очередь сообщений и т. д.
+- Класс [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) полностью поддерживает эти две модели программирования:
+  - [Синхронная](https://docs.aspose.com/email/ru/net/sending-and-forwarding-messages/#sending-emails-synchronously)
+  - [Асинхронная](https://docs.aspose.com/email/ru/net/sending-and-forwarding-messages/#sending-emails-asynchronously)
+- Класс [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) также поддерживает [отправку сообщений в формате TNEF](https://docs.aspose.com/email/ru/net/sending-and-forwarding-messages/#sending-message-as-tnef)
 
-- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class — единственная крупная запись, которую разработчики используют для отправки почтовых сообщений.
-- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс также предоставляет другие распространенные методы доставки электронной почты, включая запись сообщений электронной почты в файловую систему, очередь сообщений и т. д.
-- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс полностью поддерживает эти две модели программирования:
-  - [Synchronous](https://docs.aspose.com/email/ru/net/sending-and-forwarding-messages/#sending-emails-synchronously)
-  - [Asynchronous](https://docs.aspose.com/email/ru/net/sending-and-forwarding-messages/#sending-emails-asynchronously)
-- The [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс также поддерживает [отправка сообщений в формате TNEF](https://docs.aspose.com/email/ru/net/sending-and-forwarding-messages/#sending-message-as-tnef)
+Чтобы отправить электронное сообщение и заблокировать выполнение программы во время ожидания передачи электронной почты на SMTP-сервер, используйте один из синхронных методов Send. Чтобы позволить основному потоку вашей программы продолжать выполнение во время передачи электронной почты, используйте метод [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/sendasync/).
 
-Чтобы отправить сообщение электронной почты и заблокировать его в ожидании передачи на SMTP-сервер, используйте один из синхронных методов отправки. Чтобы основной поток программы продолжал выполняться во время передачи электронного письма, используйте [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/sendasync/) method.
+## **Отправка электронных писем синхронно**
 
-## **Синхронная отправка электронных писем**
+Электронное сообщение можно отправить синхронно с использованием метода [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/). Он отправляет указанное электронное сообщение через SMTP-сервер для доставки. Отправитель сообщения, получатели, тема и текст сообщения задаются с помощью объектов String. Чтобы отправить электронное сообщение синхронно, выполните следующие действия:
 
-Сообщение электронной почты можно отправить синхронно с помощью [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) метод. Он отправляет указанное сообщение электронной почты через SMTP-сервер для доставки. Отправитель, получатели, тема и тело сообщения указываются с помощью объектов String. Чтобы отправить сообщение электронной почты синхронно, выполните следующие действия:
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и задайте его свойства.
+1. Создайте экземпляр класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) и укажите хост, порт, имя пользователя и пароль.
+1. Отправьте сообщение, используя метод [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) и передайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс и задайте его свойства.
-1. Создайте экземпляр [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс и укажите хост, порт, имя пользователя и пароль.
-1. Отправьте сообщение, используя [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) метод и передайте [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-
-В следующем фрагменте кода C# показано, как синхронно отправлять электронные письма Outlook.
+Следующий пример кода C# показывает, как отправить электронные письма Outlook синхронно.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
 // Declare msg as MailMessage instance
 MailMessage msg = new MailMessage();
 
-// Создайте экземпляр SmtpClient class
+// Create an instance of SmtpClient class
 SmtpClient client = new SmtpClient();
 
 // Specify your mailing host server, Username, Password, Port # and Security option
@@ -55,21 +54,21 @@ catch (Exception ex)
 }
 ```
 
-## **Асинхронная отправка электронных писем**
+## **Отправка электронных писем асинхронно**
 
-Иногда вы можете захотеть отправить почту асинхронно, чтобы программа продолжала выполнять другие операции, пока электронное письмо отправляется в фоновом режиме. В частности, если вы отправляете много почты через приложение, синхронный подход может не сработать.
-Начиная с платформы.NET Framework 4.5 можно использовать асинхронные методы, реализованные в соответствии с [TAP](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) модель. В приведенном ниже фрагменте кода C# показано, как отправлять сообщения электронной почты Outlook с использованием методов асинхронных шаблонов, основанных на задачах:
+Иногда вам может понадобиться отправить почту асинхронно, чтобы позволить программе продолжить выполнение других операций, пока электронное письмо отправляется в фоновом режиме. Особенно, если вы отправляете много писем через ваше приложение, синхронный подход может не сработать. 
+Начиная с .NET Framework 4.5, вы можете использовать асинхронные методы, реализованные в соответствии с моделью [TAP](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap). Пример кода C# ниже показывает, как отправить сообщения электронной почты Outlook, используя методы асинхронного паттерна на основе задач:
 
 - [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)
 Отправляет указанные сообщения.
 
-- [IAsyncSmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/#iasyncsmtpclient-interface) - Позволяет приложениям отправлять сообщения с использованием простого протокола передачи почты (SMTP).
+- [IAsyncSmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/#iasyncsmtpclient-interface) - Позволяет приложениям отправлять сообщения с использованием протокола простой почты (SMTP).
 
-- [SmtpClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/) - Создает новый экземпляр класса Aspose.Email.clients.smtpClient
+- [SmtpClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/) - Создает новый экземпляр класса Aspose.Email.Clients.Smtp.SmtpClient.
 
-- [SmtpSend](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/) - Набор параметров метода aspose.email.clients.smtp.iasyncSmtpClient.sendAsync (aSpose.email.clients.smtp.models.smtpSend).
+- [SmtpSend](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/) - Параметры метода Aspose.Email.Clients.Smtp.IAsyncSmtpClient.SendAsync(Aspose.Email.Clients.Smtp.Models.SmtpSend).
 
-- [SmtpForward](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/) - Аргументы aspose.email.clients.smtp.iasyncSmtpClient.ForwardAsync (aspose.email.clients.smtp.models.smtpforward).
+- [SmtpForward](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/) - Аргументы Aspose.Email.Clients.Smtp.IAsyncSmtpClient.ForwardAsync(Aspose.Email.Clients.Smtp.Models.SmtpForward).
 
 ```csharp
 // Authenticate the client to obtain necessary permissions
@@ -94,7 +93,7 @@ static async Task SmtpAsync()
 	
 	// Create a message to send
     var eml = new MailMessage("from@domain.com", "to@domain.com", "test subj async", "test body async");
-   
+    
     // send message
     var sendOptions = SmtpSend.Create();
     sendOptions.AddMessage(eml);
@@ -162,7 +161,7 @@ public class TokenProvider : IAsyncTokenProvider
 
 ## **Отправка сохраненных сообщений с диска**
 
-Файлы EML (файлы электронной почты Outlook Express) содержат заголовок, текст сообщения и все вложения. Aspose.Email позволяет разработчикам работать с файлами EML по-разному. В этой статье показано, как загружать файлы EML с диска и отправлять их по электронной почте с помощью SMTP. Вы можете загружать файлы.eml с диска или в потоковом режиме на [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс и отправьте сообщение электронной почты, используя [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс. [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class является основным классом для создания новых сообщений электронной почты, загрузки файлов сообщений электронной почты с диска или потока и сохранения сообщений. В следующем фрагменте кода C# показано, как отправлять сохраненные сообщения с диска.
+Файлы EML (файлы электронной почты Outlook Express) содержат заголовок электронной почты, текст сообщения и любые вложения. Aspose.Email позволяет разработчикам работать с файлами EML различными способами. Эта статья показывает, как загрузить файлы EML с диска и отправить их как электронные письма через SMTP. Вы можете загрузить файлы .eml с диска или из потока в класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и отправить сообщение электронной почты с использованием класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/). Класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) является основным классом для создания новых электронных сообщений, загрузки файлов сообщений электронной почты с диска или потока и сохранения сообщений. Следующий пример кода C# показывает, как отправить сохраненные сообщения с диска.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -171,7 +170,7 @@ MailMessage message = MailMessage.Load(dataDir + "test.eml");
 
 // Send this message using SmtpClient
 SmtpClient client = new SmtpClient("host", "username", "password");
-           
+            
 try
 {
     client.Send(message);
@@ -179,23 +178,23 @@ try
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
-}           
+}            
 ```
 
-## **Отправка электронного письма в виде обычного текста**
+## **Отправка простого текстового сообщения**
 
-В приведенных ниже примерах программирования показано, как отправить текстовое сообщение по электронной почте. [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) имущество, собственность [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class, используется для указания текстового содержимого тела сообщения. Чтобы отправить сообщение электронной почты в виде обычного текста, выполните следующие действия:
+Примеры программирования ниже показывают, как отправить простое текстовое сообщение. Свойство [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) используется для указания содержимого простого текстового тела сообщения. Чтобы отправить простое текстовое сообщение, выполните следующие шаги:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Укажите адреса электронной почты отправителя и получателя в поле [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-- Укажите [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) содержимое, используемое для текстового сообщения.
-- Создайте экземпляр [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс и отправьте электронное письмо.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Укажите адреса электронной почты отправителя и получателя в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Укажите содержимое [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/), которое используется для простого текстового сообщения.
+- Создайте экземпляр класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) и отправьте электронную почту.
 
-В следующем фрагменте кода показано, как отправить электронное письмо в виде обычного текста.
+Следующий фрагмент кода показывает, как отправить простое текстовое сообщение.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-//Создайте экземпляр MailMessage class
+//Create an instance of the MailMessage class
 MailMessage message = new MailMessage();
 
 // Set From field, To field and Plain text body
@@ -203,7 +202,7 @@ message.From = "sender@sender.com";
 message.To.Add("receiver@receiver.com");
 message.Body = "This is Plain Text Body";
 
-// Создайте экземпляр SmtpClient class
+// Create an instance of the SmtpClient class
 SmtpClient client = new SmtpClient();
 
 // And Specify your mailing host server, Username, Password and Port
@@ -224,16 +223,16 @@ catch (Exception ex)
 }
 ```
 
-## **Отправка электронной почты с текстом HTML**
+## **Отправка сообщения с HTML-телом**
 
-В приведенных ниже примерах программирования показано, как отправить простое HTML-сообщение по электронной почте. [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/), собственность [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class, используется для указания HTML-содержимого тела сообщения. Чтобы отправить простое электронное письмо в формате HTML, выполните следующие действия:
+Примеры программирования ниже показывают, как отправить простое HTML-сообщение. Свойство [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/), класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) используется для указания HTML-содержимого тела сообщения. Чтобы отправить простое HTML-сообщение, выполните следующие шаги:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Укажите адрес электронной почты отправителя и получателя в поле [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-- Укажите [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) content.
-- Создайте экземпляр [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс и отправьте электронное письмо, используя [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) method.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Укажите адреса электронной почты отправителя и получателя в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Укажите содержимое [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/).
+- Создайте экземпляр класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) и отправьте электронное письмо с использованием метода [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/).
 
-Для целей этой статьи HTML-содержимое электронного письма является элементарным: <html><body>Это тело HTML</body></html> Большинство писем в формате HTML будут более сложными. В следующем фрагменте кода показано, как отправить электронное письмо с текстом HTML.
+В целях этой статьи HTML-содержимое электронной почты является простым: <html><body>This is the HTML body</body></html> Большинство HTML-писем будет более сложным. Следующий код показывает, как отправить сообщение с HTML-телом.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -246,7 +245,7 @@ public static void Run()
     msg.From = "newcustomeronnet@gmail.com";
     msg.To = "asposetest123@gmail.com";
     msg.Subject = "Test subject";
-    msg.HtmlBody = "<html><body>Это тело HTML</body></html>";
+    msg.HtmlBody = "<html><body>This is the HTML body</body></html>";
     SmtpClient client = GetSmtpClient();
     try
     {
@@ -270,20 +269,18 @@ private static SmtpClient GetSmtpClient()
 }
 ```
 
-## **Отправка электронной почты с альтернативным текстом**
+## **Отправка сообщения с альтернативным текстом**
 
-В приведенных ниже примерах программирования показано, как отправить простое HTML-сообщение электронной почты с альтернативным содержимым. Используйте [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) класс для указания копий сообщения электронной почты в разных форматах. Например, если вы отправляете сообщение в формате HTML, вы также можете захотеть предоставить текстовую версию для получателей, использующих программы чтения электронной почты, которые не могут отображать содержимое HTML. Или, если вы отправляете информационный бюллетень, вы можете предоставить копию текста в виде обычного текста тем получателям, которые решили получить текстовую версию. Чтобы отправить электронное письмо с альтернативным текстом, выполните следующие действия:
+Примеры программирования ниже показывают, как отправить простое HTML-сообщение с альтернативным содержимым. Используйте класс [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) для указания копий электронного сообщения в разных форматах. Например, если вы отправляете сообщение в HTML, вы также хотите предоставить просто текстовую версию для получателей, которые используют почтовые читатели, которые не могут отображать HTML-содержимое. Или, если вы отправляете информационный бюллетень, вы можете захотеть предоставить простую текстовую копию текста для тех получателей, которые выбрали получение простой текстовой версии. Чтобы отправить электронную почту с альтернативным текстом, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Укажите адреса электронной почты отправителя и получателя в поле [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Создайте экземпляр [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) class.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Укажите адреса электронной почты отправителя и получателя в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Создайте экземпляр класса [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) для создания альтернативного представления электронного сообщения с использованием содержания, указанного в строке.
 
-Это создает альтернативное представление сообщения электронной почты с использованием содержимого, указанного в строке.
+1. Добавьте экземпляр класса [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) в объект [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Создайте экземпляр класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) и отправьте электронную почту с использованием метода [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/).
 
-1. Добавьте экземпляр [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) от класса до [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) object.
-1. Создайте экземпляр [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс и отправьте электронное письмо, используя [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) method.
-
-В следующем фрагменте кода показано, как отправить электронное письмо с альтернативным текстом.
+Следующий фрагмент кода показывает, как отправить электронную почту с альтернативным текстом.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -292,25 +289,25 @@ MailMessage message = new MailMessage();
 
 // Creates AlternateView to view an email message using the content specified in the //string
 AlternateView alternate = AlternateView.CreateAlternateViewFromString("Alternate Text");
-           
+            
 // Adding alternate text
 message.AlternateViews.Add(alternate);
 ```
 
-## **Отправка массовых писем**
+## **Отправка массовых электронных писем**
 
-Массовая отправка электронных писем означает отправку пакета писем одним сообщением. Мы можем отправить партию электронных писем, используя  [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) перегрузка метода, который принимает [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/):
+Отправка электронных писем массово означает отправку партии электронных писем в одном сообщении. Мы можем отправить партию электронных писем, используя класс [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) с методом [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) с перегрузкой, которая принимает [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/):
 
-1. Создайте экземпляр [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class.
-1. Укажите [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) свойства класса.
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Укажите отправителя, получателя, тему письма и сообщение в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Повторите два вышеуказанных шага еще раз, если вы хотите отправить электронное письмо другому человеку.
-1. Создайте экземпляр [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) class.
-1. Добавьте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс в объекте [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) class.
-1. Теперь отправьте электронное письмо, используя [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) метод путем передачи экземпляра [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) класс в нем.
+1. Создайте экземпляр класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/).
+1. Укажите свойства класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/).
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Укажите отправителя, получателя, тему почты и сообщение в экземпляре класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Повторите два вышеуказанных шага, если хотите отправить электронное письмо другому человеку.
+1. Создайте экземпляр класса [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) .
+1. Добавьте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) в объект класса [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/).
+1. Теперь отправьте свое электронное письмо, используя метод [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) передав экземпляр класса [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) в него.
 
-В следующем фрагменте кода показано, как отправлять массовые электронные письма.
+Следующий фрагмент кода показывает, как отправить массовые электронные письма.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -322,7 +319,7 @@ MailMessage message1 = new MailMessage("msg1@from.com", "msg1@to.com", "Subject1
 MailMessage message2 = new MailMessage("msg1@from.com", "msg2@to.com", "Subject2", "message2, how are you?");
 MailMessage message3 = new MailMessage("msg1@from.com", "msg3@to.com", "Subject3", "message3, how are you?");
 
-// Создайте экземпляр MailMessageCollection class
+// Create an instance of MailMessageCollection class
 MailMessageCollection manyMsg = new MailMessageCollection();
 manyMsg.Add(message1);
 manyMsg.Add(message2);
@@ -332,7 +329,7 @@ manyMsg.Add(message3);
 try
 {
     // Send Message using BulkSend method
-    client.Send(manyMsg);               
+    client.Send(manyMsg);                
     Console.WriteLine("Message sent");
 }
 catch (Exception ex)
@@ -341,9 +338,9 @@ catch (Exception ex)
 }
 ```
 
-### Получение информации об отправленных массовых сообщениях
+### Получение информации о массовых сообщениях
 
-При массовой отправке сообщений вы можете получить информацию о количестве успешно отправленных сообщений и даже получить список этих сообщений. Новое [SucceededSending](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient//events/succeededsending) событие добавлено в [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) для этого.
+Когда вы отправляете сообщения массово, вы можете получить информацию о числе успешно отправленных сообщений и даже получить список этих сообщений. Для этой цели в [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) было добавлено новое событие [SucceededSending](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient//events/succeededsending).
 
 Пример кода:
 ```csharp
@@ -363,9 +360,9 @@ using (SmtpClient client = new SmtpClient(host, SecurityOptions.Auto))
 }
 ```
 
-## **Отправка электронных писем с помощью мультиподключения**
+## **Отправка электронных писем с MultiConnection**
 
-[SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) обеспечивает [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/) свойство, которое можно использовать для создания нескольких соединений для тяжелых операций. Вы также можете настроить количество подключений, которое будет использоваться в режиме нескольких подключений, используя [SmtpClient.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/connectionsquantity/). Следующий фрагмент кода демонстрирует использование режима нескольких подключений для отправки нескольких сообщений.
+[SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) предоставляет свойство [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/), которое можно использовать для создания нескольких соединений для тяжелых операций. Вы также можете установить количество соединений, которые будут использоваться в режиме многосоединений, с помощью [SmtpClient.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/connectionsquantity/). Следующий пример кода демонстрирует использование режима многосоединений для отправки нескольких сообщений.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -393,15 +390,15 @@ smtpClient.UseMultiConnection = MultiConnectionMode.Enable;
 smtpClient.Send(messages);
 ```
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Обратите внимание, что использование режима нескольких подключений не гарантирует повышения производительности.
+Обратите внимание, что использование режима многосоединений не гарантирует повышения производительности.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-## **Отправка сообщения как TNEF**
+## **Отправка сообщения в формате TNEF**
 
-Письма в формате TNEF имеют специальное форматирование, которое может быть потеряно при отправке с использованием стандартного API. Aspose.Email предоставляет возможность отправлять электронные письма в формате TNEF, тем самым сохраняя формат. [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class [UseTnef](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/usetnef/) свойство можно настроить для отправки электронного письма в формате TNEF. В следующем фрагменте кода показано, как отправить сообщение в формате TNEF.
+Электронные письма TNEF имеют специальное форматирование, которое может быть утеряно, если отправить с помощью стандартного API. Aspose.Email предоставляет возможность отправлять электронные письма в формате TNEF, сохраняя тем самым формат. Свойство [UseTnef](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/usetnef/) класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) можно установить, чтобы отправить электронное письмо в формате TNEF. Следующий код показывает, как отправить сообщение в формате TNEF.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -420,28 +417,28 @@ client.UseTnef = true;     // Use this flag to send as TNEF
 client.Send(eml1);
 ```
 
-## **Отправка приглашений на собрание**
+## **Отправка приглашений на встречи**
 
-Microsoft Outlook предлагает функции календаря, а также управление электронной почтой. Когда пользователь открывает электронное письмо с приглашением на мероприятие, Outlook предлагает ему принять или отклонить приглашение. Aspose.Email позволяет разработчикам добавлять функции календаря в ваши электронные письма.
+Microsoft Outlook предлагает функции календаря, а также управление электронной почтой. Когда пользователь открывает электронное письмо с приглашением на событие, Outlook предлагает ему принять или отклонить приглашение. Aspose.Email позволяет разработчикам добавлять функции календаря в ваши электронные письма.
 
 ### **Отправка запросов по электронной почте**
 
-Чтобы отправить приглашения на собрание по электронной почте, выполните следующие действия:
+Чтобы отправить запросы на встречу по электронной почте, выполните следующие шаги:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Укажите адреса отправителя и получателя, используя экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Инициализируйте экземпляр [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) класс и передайте его значения.
-- Укажите краткое описание и описание в поле [Calendar](https://reference.aspose.com/tasks/net/aspose.tasks/calendar/) instance.
-- Добавьте [Calendar](https://reference.aspose.com/tasks/net/aspose.tasks/calendar/) к [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр и передайте его [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) instance.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Укажите адреса отправителя и получателя, используя экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Инициализируйте экземпляр класса [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) и передайте его значения.
+- Укажите сводку и описание в экземпляре [Calendar](https://reference.aspose.com/tasks/net/aspose.tasks/calendar/).
+- Добавьте [Calendar](https://reference.aspose.com/tasks/net/aspose.tasks/calendar/) в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и передайте ему экземпляр [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/).
 
-|**Запрос на собрание iCalendar отправлен по электронной почте**|
-|: - |
+|**Запрос iCalendar, отправленный по электронной почте**|
+| :- |
 |![todo:image_alt_text](sending-and-forwarding-messages_1.png)|
-В следующем фрагменте кода показано, как отправлять запросы по электронной почте.
+Следующий пример кода показывает, как отправить запросы по электронной почте.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// Создайте экземпляр MailMessage class
+// Create an instance of the MailMessage class
 MailMessage msg = new MailMessage();
 
 // Set the sender, recipient, who will receive the meeting request. Basically, the recipient is the same as the meeting attendees
@@ -453,7 +450,7 @@ Appointment app = new Appointment("Room 112", new DateTime(2015, 7, 17, 13, 0, 0
 app.Summary = "Release Meetting";
 app.Description = "Discuss for the next release";
 
-// Add appointment к message and Создайте экземпляр SmtpClient class
+// Add appointment to the message and Create an instance of SmtpClient class
 msg.AddAlternateView(app.RequestApointment());
 SmtpClient client = GetSmtpClient();
 
@@ -469,22 +466,22 @@ catch (Exception ex)
 }
 ```
 
-### **iCalendar поддерживает IBM Lotus Notes**
+### **Поддержка iCalendar для IBM Lotus Notes**
 
-Функция календаря Aspose.Email основана на стандарте iCalendar, стандарте обмена календарными данными (справочник по синтаксису RFC 2445 или RFC2445). Таким образом, он поддерживает не только Microsoft Outlook, но и IBM Lotus Notes. Чтобы отправить приглашение на собрание в Lotus Notes, выполните те же действия, что и выше.
+Функции календаря Aspose.Email основаны на стандарте iCalendar, стандарт для обмена данными о календаре (RFC 2445 или ссылка на синтаксис RFC2445). Поэтому он поддерживает не только Microsoft Outlook, но и IBM Lotus Notes. Чтобы отправить запрос на встречу в Lotus Notes, выполните те же шаги, что и выше.
 
-## **Пересылка электронной почты с помощью SMTP-клиента**
+## **Пересылка электронного письма с помощью SMTP-клиента**
 
-### **Пересылка электронной почты с помощью SMTP-клиента**
+### **Пересылка электронного письма с помощью SMTP-клиента**
 
-Пересылка электронной почты — обычная практика в повседневной цифровой коммуникации. Полученное электронное письмо можно переслать определенным получателям, не передавая его первоначальным отправителям. API Aspose.Email [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) предоставляет возможность переслать электронное письмо определенным получателям. Метод «Переслать» можно использовать для пересылки полученного или сохраненного электронного письма нужным получателям, как показано в этой статье. В следующем фрагменте кода показано, как переслать электронное письмо с помощью SMTP-клиента.
+Пересылка электронного письма является обычной практикой в повседневной цифровой коммуникации. Полученное электронное письмо можно переслать определенным получателям, не раскрывая при этом оригинальных отправителей. API Aspose.Email [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) предоставляет возможность пересылать электронные письма конкретным получателям. Его метод Forward можно использовать для пересылки полученного или сохраненного электронного письма желаемым получателям, как показано в этой статье. Следующий пример кода показывает, как переслать электронное письмо с помощью SMTP-клиента.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// The path к File directory.
+// The path to the File directory.
 string dataDir = RunExamples.GetDataDir_SMTP();
 
-//Создайте экземпляр SmtpClient class
+//Create an instance of SmtpClient class
 SmtpClient client = new SmtpClient();
 
 // Specify your mailing host server, Username, Password, Port and SecurityOptions
@@ -499,7 +496,7 @@ client.Forward("Recipient1@domain.com", "Recipient2@domain.com", message);
 
 ### **Пересылка электронной почты без использования MailMessage**
 
-API также поддерживает пересылку сообщений EML без предварительной загрузки в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Это полезно в тех случаях, когда ресурсы системной памяти ограничены.
+API также поддерживает пересылку сообщений EML без предварительной загрузки в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Это полезно в случаях, когда имеются ограниченные ресурсы в терминах системной памяти.
 
 ```csharp
 
@@ -512,7 +509,7 @@ using (var client = new SmtpClient(host, smtpPort, username, password, SecurityO
 }
 ```
 
-### **Пересылка электронной почты без асинхронного использования MailMessage**
+### **Пересылка электронной почты без использования MailMessage асинхронно**
 
 ```csharp
 using (var client = new SmtpClient(host, smtpPort, username, password))
@@ -524,39 +521,39 @@ using (var client = new SmtpClient(host, smtpPort, username, password))
 }
 ```
 
-## **Выполнение слияния писем**
+## **Выполнение слияния почты**
 
-Объединение писем позволяет создавать и отправлять пакеты похожих сообщений электронной почты. Суть писем одна и та же, но их содержимое можно персонализировать. Как правило, контактные данные получателя (имя, отчество, компания и т. д.) используются для персонализации письма.
+Слияние почты помогает вам создавать и отправлять партию схожих сообщений электронной почты. Основная часть электронных писем одинакова, но содержимое может быть персонализировано. Обычно данные контакта получателя (имя, фамилия, компания и т. д.) используются для персонализации электронной почты.
 
-|**Иллюстрация того, как работает слияние писем:**|
-|: - |
+|**Иллюстрация того, как работает слияние почты:**|
+| :- |
 |![todo:image_alt_text](sending-and-forwarding-messages_2.png)|
-Aspose.Email позволяет разработчикам настраивать слияния писем, включающие данные из различных источников данных.
+Aspose.Email позволяет разработчикам настраивать слияния почты, которые включают данные из различных источников данных.
 
-Чтобы выполнить слияние писем с помощью Aspose.Email, выполните следующие шаги:
+Чтобы выполнить слияние почты с помощью Aspose.Email, выполните следующие шаги:
 
-1. Создайте функцию с подписью имени
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Укажите отправителя, получателя, тему и текст.
-1. Создайте подпись в конце письма.
-1. Создайте экземпляр [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/) класс и сдайте его [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Сделайте подпись в [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/) instance.
+1. Создайте функцию с именем подписи.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Укажите отправителя, получателя, тему и тело.
+1. Создайте подпись в конце электронной почты.
+1. Создайте экземпляр класса [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/) и передайте ему экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Взять подпись в экземпляре [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/).
 1. Создайте экземпляр класса DataTable.
-1. Добавьте столбцы **Receipt**, **FirstName** and **LastName** в качестве источников данных в классе DataTable.
+1. Добавьте столбцы **Receipt**, **FirstName** и **LastName** в качестве источников данных в класс DataTable.
 1. Создайте экземпляр класса DataRow.
 1. Укажите адрес получения, имя и фамилию в объекте DataRow.
-1. Создайте экземпляр [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) class
-1. Укажите [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/)  и экземпляры DataTable в [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) instance.
-1. Создайте экземпляр [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс и укажите сервер, порт, имя пользователя и пароль.
-1. Отправляйте электронные письма с помощью [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) method.
+1. Создайте экземпляр класса [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/) .
+1. Укажите экземпляры [TemplateEngine](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/) и DataTable в экземпляре [MailMessageCollection](https://reference.aspose.com/email/net/aspose.email/mailmessagecollection/).
+1. Создайте экземпляр класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) и укажите сервер, порт, имя пользователя и пароль.
+1. Отправьте письма с использованием метода [Send](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/send/#send/) класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/).
 
-В приведенном ниже примере #FirstName # обозначает столбец DataTable, значение которого задается пользователем. В следующем фрагменте кода показано, как выполнить Mail Merge.
+В следующем примере #FirstName# указывает столбец DataTable, значение которого задается пользователем. Следующий код показывает, как выполнить слияние почты.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
 public static void Run()
 {
-    // The path к File directory.
+    // The path to the File directory.
     string dataDir = RunExamples.GetDataDir_SMTP();
     string dstEmail = dataDir + "EmbeddedImage.msg";
 
@@ -579,7 +576,7 @@ public static void Run()
     TemplateEngine engine = new TemplateEngine(msg);
     engine.RegisterRoutine("GetSignature", GetSignature);
 
-    // Создайте экземпляр DataTable and Fill a DataTable as data source
+    // Create an instance of DataTable and Fill a DataTable as data source
     DataTable dt = new DataTable();
     dt.Columns.Add("Receipt", typeof(string));
     dt.Columns.Add("FirstName", typeof(string));
@@ -607,7 +604,7 @@ public static void Run()
         // Create messages from the message and datasource.
         messages = engine.Instantiate(dt);
 
-        // Создайте экземпляр SmtpClient and specify server, port, username and password
+        // Create an instance of SmtpClient and specify server, port, username and password
         SmtpClient client = new SmtpClient("smtp.gmail.com", 587, "your.email@gmail.com", "your.password");
         client.SecurityOptions = SecurityOptions.Auto;
 
@@ -634,9 +631,9 @@ static object GetSignature(object[] args)
 }
 ```
 
-## **Выполнение слияния писем по строкам**
+## **Выполнение слияния по строкам**
 
-Пользователь может объединить отдельные строки данных, а также получить полную и подготовленную [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) объект. [TemplateEngine.Merge](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/merge/#merge/) метод можно использовать для объединения писем по строкам.
+Пользователь может объединить отдельную строку данных, а также получить полный и подготовленный объект [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Метод [TemplateEngine.Merge](https://reference.aspose.com/email/net/aspose.email.tools.merging/templateengine/merge/#merge/) можно использовать для выполнения слияния по строкам.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
