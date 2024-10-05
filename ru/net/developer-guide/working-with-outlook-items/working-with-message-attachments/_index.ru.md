@@ -6,15 +6,15 @@ type: docs
 ---
 
 
-## **Управление вложениями с помощью Aspose Outlook**
+## **Управление вложениями с Aspose Outlook**
 
-[Создание и сохранение файлов сообщений Outlook (MSG)](https://docs.aspose.com/email/ru/net/creating-and-saving-msg-files/) объясняет, как создавать и сохранять сообщения, а также как создавать файлы MSG с вложениями. В этой статье объясняется, как управлять вложениями Microsoft Outlook с помощью Aspose.Email. Доступ к вложениям из файла сообщений и их сохранение на диск осуществляется с помощью [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) class [Attachments](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/attachments/) имущество. Это [Attachments](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/attachments/) свойство представляет собой набор типов [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/) class.
+[Создание и сохранение файлов сообщений Outlook (MSG)](https://docs.aspose.com/email/ru/net/creating-and-saving-msg-files/) объясняет, как создавать и сохранять сообщения, а также как создавать файлы MSG с вложениями. Эта статья объясняет, как управлять вложениями Microsoft Outlook с помощью Aspose.Email. Вложения из файла сообщения получаются и сохраняются на диск с использованием свойства [Attachments](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/attachments/) класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/). Свойство [Attachments](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/attachments/) представляет собой коллекцию типа [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/).
 
-### **Проверьте, является ли вложение встроенным или обычным**
+### **Проверка, является ли вложение встроенным или обычным**
 
-Встроенные и обычные насадки служат разным целям. Встроенные вложения визуально интегрированы в сообщение электронной почты и обычно представляют собой изображения или медиафайлы. Между тем, обычные вложения представляют собой отдельные файлы, прикрепленные к электронному письму, и могут включать различные типы файлов. [MapiAttachment.IsInline](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isinline/) собственность [MapiAttachment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/#mapiattachment-class) class получает значение, указывающее, является ли вложение встроенным или обычным.
+Встроенные и обычные вложения служат разным целям. Встроенные вложения визуально интегрированы в сообщение электронной почты и обычно являются изображениями или мультимедийными файлами. В то время как обычные вложения — это отдельные файлы, прикрепленные к электронной почте, и могут включать различные типы файлов. Свойство [MapiAttachment.IsInline](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isinline/) класса [MapiAttachment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/#mapiattachment-class) получает значение, указывающее, является ли вложение встроенным или обычным.
 
-В следующем примере кода извлекается и отображается информация о каждом вложении в загруженном MAPIMessage, включая их отображаемые имена и сведения о том, являются ли они встроенными вложениями или нет.
+Следующий фрагмент кода извлекает и отображает информацию о каждом вложении в загруженном MapiMessage, включая их отображаемые имена и информацию о том, являются ли они встроенными вложениями или нет.
 
 ```cs
 var message = MapiMessage.Load(fileName);
@@ -25,131 +25,131 @@ foreach (var attach in message.Attachments)
 }
 ```
 
-### **Сохранить вложения из файла сообщений Outlook (MSG)**
+### **Сохранение вложений из файла сообщения Outlook (MSG)**
 
-Чтобы сохранить вложения из файла MSG, выполните следующие действия:
+Чтобы сохранить вложения из файла MSG:
 
-1. Пройдите итерацию через [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/) соберите и получите отдельные вложения.
-1. Чтобы сохранить вложения, вызовите метод Save () класса MapiAttachment.
+1. Переберите коллекцию [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/) и получите отдельные вложения.
+1. Для сохранения вложений вызовите метод Save() класса MapiAttachment.
 
-В следующем фрагменте кода показано, как сохранять вложения на локальный диск.
+Следующий фрагмент кода демонстрирует, как сохранить вложения на локальный диск.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SaveAttachmentsFromOutlookMSGFile-SaveAttachmentsFromOutlookMSGFile.cs" >}}
 
-### **Получение вложений вложенных почтовых сообщений**
+### **Получение вложений вложенного почтового сообщения**
 
-Встроенные вложения OLE также отображаются в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) класс «Коллекция вложений». В следующем примере кода файл сообщений анализируется на наличие вложенных сообщений и сохраняется на диске. [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) статический метод class FromProperties () может создать новое сообщение из встроенного вложения. В следующем фрагменте кода показано, как получать вложенные вложения в почтовые сообщения.
+Встроенные OLE-вложения также появляются в коллекции вложений класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/). Следующий пример кода разбирает файл сообщения на предмет встроенных вложений и сохраняет его на диск. Статический метод класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) FromProperties() может создать новое сообщение из встроенного вложения. Следующий фрагмент кода показывает, как получить вложенные почтовые сообщения.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-GetNestedMailMessageAttachments-GetNestedMailMessageAttachments.cs" >}}
 
 ### **Удаление вложений**
 
-Библиотека Aspose Outlook предоставляет возможность удаления вложений из файлов сообщений Microsoft Outlook (.msg):
+Библиотека Aspose Outlook предоставляет функциональность для удаления вложений из файлов сообщений Microsoft Outlook (.msg):
 
-- Вызовите метод removeAttachments (). В качестве параметра он принимает путь к файлу сообщения. Он реализован как публичный статический метод, поэтому вам не нужно создавать экземпляр объекта.
+- Вызовите метод RemoveAttachments(). Он принимает путь к файлу сообщения в качестве параметра. Этот метод реализован как открытый статический метод, поэтому вам не нужно создавать объект.
 
-В следующем фрагменте кода показано, как удалить вложения.
+Следующий фрагмент кода показывает, как удалить вложения.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-RemoveAttachmentsFromFile-RemoveAttachmentsFromFile.cs" >}}
 
-Вы также можете позвонить в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) статический метод класса [DestoryAttachment()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/destroyattachments/). Он работает быстрее, чем removeAttachment (), поскольку метод removeAttachment () анализирует файл сообщения.
+Вы также можете вызвать статический метод класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) [DestoryAttachment()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/destroyattachments/). Он работает быстрее, чем RemoveAttachment(), поскольку метод RemoveAttachment() разбирает файл сообщения.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-DestroyAttachment-DestroyAttachment.cs" >}}
 
 ### **Добавление вложений MSG**
 
-Сообщение Outlook может содержать другие сообщения Microsoft Outlook во вложениях в виде обычных или встроенных сообщений. [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/) предоставляет перегруженным участникам метода Add возможность создавать сообщения Outlook с обоими типами вложений.
+Сообщение Outlook может содержать другие сообщения Microsoft Outlook в качестве вложений либо в виде обычных, либо встроенных сообщений. Коллекция [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/) предоставляет перегруженные члены метода Add для создания сообщений Outlook с обоими типами вложений.
 
 {{% alert %}}
 **Попробуйте!**
 
-Добавляйте или удаляйте вложения электронной почты бесплатно [**Приложение для редактирования электронной почты Aspose.Email**](https://products.aspose.app/email/ru/editor).
+Добавьте или удалите вложения электронной почты с помощью бесплатного [**Aspose.Email Editor App**](https://products.aspose.app/email/ru/editor).
 {{% /alert %}}
 
-### **Добавление справочного вложения в сообщение MapiMessage**
+### **Добавление ReferencAttachments к MapiMessage**
 
-The [MAPIattachmentCollection.add (строковое имя, строка SharedLink, URL-адрес строки, имя поставщика строки)](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/add/#add_4) метод [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/#mapiattachmentcollection-class) класс позволяет добавить ссылочное вложение в MapiMessage. Когда получатели письма нажмут на ссылочное вложение, они смогут получить доступ к связанному файлу, если у них есть на это соответствующие разрешения. Используя вложение ссылки, вы можете отправить электронное сообщение меньшего размера и обеспечить всем доступ к самой последней версии файла или элемента.
+Метод [MapiAttachmentCollection.Add(string name, string sharedLink, string url, string providerName)](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/add/#add_4) класса [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/#mapiattachmentcollection-class) позволяет добавлять ссылочные вложения в MapiMessage. Когда получатели электронного письма нажимают на ссылочное вложение, они могут получить доступ к связанному файлу, если у них есть соответствующие разрешения для этого. Используя ссылочное вложение, вы можете отправить меньшее сообщение электронной почты и убедиться, что у всех есть доступ к самой последней версии файла или элемента.
 
-Метод имеет следующие параметры:
+У метода следующие параметры:
 
 - *name* - имя вложения
-- *sharedLink* - полная общедоступная ссылка на вложение, предоставленная веб-сервисом, манипулирующим вложением
+- *sharedLink* - полностью квалифицированная ссылка на вложение, предоставленная веб-сервисом, управляющим вложением
 - *url* - местоположение файла
-- *providerName* - имя поставщика эталонных вложений
+- *providerName* - имя поставщика ссылочного вложения
 
-В приведенном ниже примере кода показано, как добавить к сообщению справочное вложение:
+Пример кода ниже демонстрирует, как добавить ссылочное вложение к сообщению:
 
 ```cs
-// Let's say you want to send an email message that includes a link to a Document.pdf file stored on a Google Drive.
-// Instead of attaching the document directly to the email message,
-// you can create a reference attachment that links to the file on the Google Drive.
+// Допустим, вы хотите отправить электронное сообщение, которое включает ссылку на файл Document.pdf, хранящийся на Google Drive.
+// Вместо того, чтобы прикреплять документ непосредственно к электронному сообщению,
+// вы можете создать ссылочное вложение, которое ссылается на файл на Google Drive.
 
-// Create a message
-var msg = new MapiMessage("from@domain.com", "to@domain.com", "Outlook message file",
-    "This message is created by Aspose.Email", OutlookMessageFormat.Unicode);
+// Создайте сообщение
+var msg = new MapiMessage("from@domain.com", "to@domain.com", "Файл сообщения Outlook",
+    "Это сообщение создано с помощью Aspose.Email", OutlookMessageFormat.Unicode);
 
-// Add reference attachment
+// Добавьте ссылочное вложение
 msg.Attachments.Add("Document.pdf",
     "https://drive.google.com/file/d/1HJ-M3F2qq1oRrTZ2GZhUdErJNy2CT3DF/",
     "https://drive.google.com/drive/my-drive",
     "GoogleDrive");
-//Also, you can set additional attachment properties
+//Кроме того, вы можете установить дополнительные свойства вложения
 msg.Attachments[0].SetProperty(KnownPropertyList.AttachmentPermissionType, AttachmentPermissionType.AnyoneCanEdit);
 msg.Attachments[0].SetProperty(KnownPropertyList.AttachmentOriginalPermissionType, 0);
 msg.Attachments[0].SetProperty(KnownPropertyList.AttachmentIsFolder, false);
 msg.Attachments[0].SetProperty(KnownPropertyList.AttachmentProviderEndpointUrl, "");
 msg.Attachments[0].SetProperty(KnownPropertyList.AttachmentPreviewUrl, "");
 msg.Attachments[0].SetProperty(KnownPropertyList.AttachmentThumbnailUrl, "");
-// Finally save the message
+// Наконец, сохраните сообщение
 msg.Save(@"my.msg");
 ```
 
-### **Встраивание сообщения в виде вложения**
+### **Встраивание сообщения как вложения**
 
-В следующем фрагменте кода показано, как встроить вложенный файл MSG в сообщение.
+Следующий фрагмент кода показывает, как встроить вложение MSG в сообщение.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-EmbedMessageAsAttachment-EmbedMessageAsAttachment.cs" >}}
 
 ### **Чтение встроенных сообщений из вложений**
 
-В следующем фрагменте кода показано, как читать встроенные сообщения из вложений.
+Следующий фрагмент кода показывает, как читать встроенные сообщения из вложений.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-ReadEmbeddedMessageFromAttachment-ReadEmbeddedMessageFromAttachment.cs" >}}
 
-## **Установка и замена навесного оборудования**
+## **Вставка и замена вложений**
 
-Aspose.Email API предоставляет возможность вставлять вложения в определенном индексе в родительское сообщение. Он также предоставляет возможность заменять содержимое вложения другим вложением сообщения.
+API Aspose.Email предоставляет возможность вставлять вложения в определенный индекс в родительском сообщении. Он также предоставляет возможность заменить содержимое вложения другим вложением сообщения.
 
 {{% alert %}}
 **Попробуйте!**
 
-Запустите [ReplaceAttach](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/ReplaceAttach/ReplaceAttach) простой проект приложения и попробуйте возможности Aspose.Email для замены вложений в действии.
-{{% /alert %}}
+Запустите простой проект приложения [ReplaceAttach](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/ReplaceAttach/ReplaceAttach) и опробуйте возможности Aspose.Email для замены вложений в действии.
+{{% /alert %}} 
 
-### **Вставить в определенном месте**
+### **Вставка в определенное место**
 
-API Aspose.Email предоставляет возможность вставлять вложение MSG в родительское сообщение с помощью метода вставки MapiAttachmentCollection Insert (индекс int, строковое имя, сообщение MapiMessage). В следующем фрагменте кода показано, как вставить вложение в определенное место.
+API Aspose.Email предоставляет возможность вставить вложение MSG в родительский MSG, используя метод вставки MapiAttachmentCollection MapiAttachmentCollection Insert(int index, string name, MapiMessage msg). Следующий фрагмент кода показывает, как вставить вложение в определенное место.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-InsertMSGAttachmentAtSpecificlocation-InsertMSGAttachmentAtSpecificlocation.cs" >}}
 
-### **Заменить содержимое вложения**
+### **Замена содержимого вложения**
 
-Это можно использовать для замены содержимого встроенного вложения новым с помощью метода Replace. Однако его нельзя использовать для вставки вложений с PR_ATTACH_NUM = 4 (например) в коллекцию с Collection.count = 2. В следующем фрагменте кода показано, как заменить содержимое вложения.
+Это можно использовать для замены содержимого встроенного вложения на новые с помощью метода Replace. Однако его нельзя использовать для вставки вложения с PR_ATTACH_NUM = 4 (например) в коллекцию с collection.Count = 2. Следующий фрагмент кода показывает, как заменить содержимое вложения.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-ReplaceEmbeddedMSGAttachmentContents-ReplaceEmbeddedMSGAttachmentContents.cs" >}}
 
-### **Переименование вложения в MAPImessage**
+### **Переименование вложения в MapiMessage**
 
-Можно изменить значение свойства DisplayName во вложениях MapiMessage.
+Возможно редактировать значение свойства DisplayName в вложениях MapiMessage.
 
 ```cs
 var msg = MapiMessage.Load(fileName);
-msg.Attachments[0].DisplayName = "New display name 1";
-msg.Attachments[1].DisplayName = "New display name 2";
+msg.Attachments[0].DisplayName = "Новое отображаемое имя 1";
+msg.Attachments[1].DisplayName = "Новое отображаемое имя 2";
 ```
 
-## **Сохраняйте вложения из сообщений с цифровой подписью**
+## **Сохранение вложений из цифровых подписанных сообщений**
 
-Aspose.Email API предоставляет возможность получить или установить значение, указывающее, будет ли декодировано сообщение с четкой подписью. 
+API Aspose.Email предоставляет возможность получать или устанавливать значение, указывающее, будет ли декодироваться сообщение с чистой подписью.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-DecodeClearSignedContent-DecodeClearSignedContent.cs" >}}

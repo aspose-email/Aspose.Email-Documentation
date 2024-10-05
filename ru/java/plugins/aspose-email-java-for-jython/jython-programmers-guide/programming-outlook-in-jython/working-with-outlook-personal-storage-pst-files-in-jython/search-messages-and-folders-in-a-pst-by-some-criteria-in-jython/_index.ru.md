@@ -1,14 +1,14 @@
 ---
-title: "Поиск сообщений и папок в PST по некоторым критериям в Jython"
+title: "Поиск сообщений и папок в PST по заданным критериям в Jython"
 url: /ru/java/search-messages-and-folders-in-a-pst-by-some-criteria-in-jython/
 weight: 70
 type: docs
 ---
 
-## **Aspose.Email - поиск сообщений и папок в PST**
-Для поиска сообщений и папок в PST с помощью **Aspose.Электронная почта Java для Mython**, просто вызовите **SearchMessagesAndFoldersInPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Поиск сообщений и папок в PST**
+Чтобы искать сообщения и папки в PST с использованием **Aspose.Email Java для Jython**, просто вызовите модуль **SearchMessagesAndFoldersInPST**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код на Jython**
 
 ```python
 
@@ -32,7 +32,7 @@ class SearchMessagesAndFoldersInPST:
 
 
 
-        # Load the Outlook PST file
+        # Загрузите файл PST Outlook
 
         personalStorage=PersonalStorage()
 
@@ -42,7 +42,7 @@ class SearchMessagesAndFoldersInPST:
 
         builder = PersonalStorageQueryBuilder()
 
-            # High importance messages
+            # Сообщения с высокой важностью
 
         mapiImportance=MapiImportance
 
@@ -50,7 +50,7 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Messages with High Imp:"
+        print "Сообщения с высокой важностью:" 
 
         print messages.size()
 
@@ -60,11 +60,11 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Messages with IPM.Note:"
+        print "Сообщения с IPM.Note:" 
 
         print messages.size()
 
-        # Messages with attachments AND high importance
+        # Сообщения с вложениями И высокой важностью
 
         builder.getImportance().equals(mapiImportance.High)
 
@@ -74,31 +74,31 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Messages with atts: "
+        print "Сообщения с вложениями: " 
 
         print messages.size()
 
-        # Messages with size > 15 KB
+        # Сообщения размером > 15 КБ
 
         builder.getMessageSize().greater(15000)
 
         messages = folder.getContents(builder.getQuery())
 
-        print "messags size > 15Kb:"
+        print "сообщения размером > 15Кб:" 
 
         print messages.size()
 
-        # Unread messages
+        # Непрочитанные сообщения
 
         builder.hasNoFlags(mapiMessageFlags.MSGFLAG_READ)
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Unread:"
+        print "Непрочитанные:" 
 
         print messages.size()
 
-        # Unread messages with attachments
+        # Непрочитанные сообщения с вложениями
 
         builder.hasNoFlags(mapiMessageFlags.MSGFLAG_READ)
 
@@ -106,7 +106,7 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Unread msgs with atts: "
+        print "Непрочитанные сообщения с вложениями: " 
 
         print messages.size()
 
@@ -114,13 +114,13 @@ class SearchMessagesAndFoldersInPST:
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     SearchMessagesAndFoldersInPST()
 
 ```
-## **Загрузить рабочий код**
-Download **Поиск сообщений и папок в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачать **Поиск сообщений и папок в PST (Aspose.Email)** с любого из нижеприведенных сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

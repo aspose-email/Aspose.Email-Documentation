@@ -1,17 +1,17 @@
 ---
-title: "Работа со списками рассылки в файле PST"
+title: "Работа с Распределительными Списками в PST Файле"
 url: /ru/python-net/working-with-distribution-lists/
 weight: 90
 type: docs
 ---
 
-Список рассылки — это группа контактов, которыми можно управлять с помощью автоматизированного программного обеспечения, позволяющего пользователю отправлять электронные письма нескольким получателям одновременно.
+Распределительный список - это группа контактов, с которыми можно взаимодействовать с помощью автоматизированного программного обеспечения, позволяющего пользователю отправлять электронные письма нескольким получателям одновременно.
 
-Программное обеспечение Aspose.Email позволяет пользователям создавать списки рассылки, управлять ими и управлять ими. Сюда входят создание и сохранение участников из списка, чтение списков рассылки, обновление свойств списка и другие сопутствующие операции.
+Программное обеспечение Aspose.Email позволяет пользователям создавать, управлять и изменять распределительные списки. Это включает в себя создание и сохранение участников из списка, чтение распределительных списков, обновление свойств списка и другие связанные операции.
 
-## **Создание и сохранение списков рассылки**
+## **Создание и Сохранение Распределительных Списков**
 
-Создайте и сохраните список рассылки, как показано в примере кода ниже:
+Создайте и сохраните распределительный список, как показано в примере кода ниже:
 
 ```py
 import aspose.email as ae
@@ -42,9 +42,9 @@ members.append(member1)
 members.append(member2)
 
 distributionList = ae.mapi.MapiDistributionList("Contact list", members)
-distributionList.body = "Distribution List Body"
-distributionList.subject = "Sample Distribution List using Aspose.Email"
-# Add distribution list to PST
+distributionList.body = "Текст Распределительного Списка"
+distributionList.subject = "Пример Распределительного Списка с использованием Aspose.Email"
+# Добавить распределительный список в PST
 contactFolder.add_mapi_message_item(distributionList)
 ```
 
@@ -69,9 +69,9 @@ one_off_members_list = ae.mapi.MapiDistributionList("Simple list", one_off_membe
 contact_folder.add_mapi_message_item(one_off_members_list)
 ```
 
-## **Чтение списков рассылки из PST**
+## **Чтение Распределительных Списков из PST**
 
-Чтобы прочитать список рассылки из PST, используйте следующий пример кода:
+Чтобы прочитать распределительный список из PST, используйте следующий пример кода:
 
 ```py
 import aspose.email as ae
@@ -81,18 +81,18 @@ pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.CONTACTS)
 
 for msg in folder.enumerate_messages():
-    # Check if the message has the "IPM.DistList" message class
+    # Проверьте, имеет ли сообщение класс "IPM.DistList"
     if msg.message_class == "IPM.DistList":
         dist_list = pst.extract_message(msg).to_mapi_message_item()
-        # Now, you can work with the distribution list
-        # (e.g., access its members, display its properties, or make modifications)
+        # Теперь вы можете работать с распределительным списком
+        # (например, получать доступ к его участникам, отображать его свойства или вносить изменения)
         for member in dist_list.members:
             print(f"{member.display_name}")
 ```
 
-## **Обновление списков рассылки в PST**
+## **Обновление Распределительных Списков в PST**
 
-Чтобы обновить список рассылки в файле PST, например добавить нового члена, используйте следующий пример кода:
+Чтобы обновить распределительный список в файле PST, например, чтобы добавить нового участника, используйте следующий пример кода:
 
 ```py
 import aspose.email as ae
@@ -101,14 +101,14 @@ pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 
 folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.CONTACTS)
 
-# add a new member to each distribution list in pst
+# добавьте нового участника в каждый распределительный список в pst
 for msg in folder.enumerate_messages():
-    # Check if the message has the "IPM.DistList" message class
+    # Проверьте, имеет ли сообщение класс "IPM.DistList"
     if msg.message_class == "IPM.DistList":
         dist_list = pst.extract_message(msg).to_mapi_message_item()
-        # Create new member to add
+        # Создайте нового участника для добавления
         member = ae.mapi.MapiDistributionListMember("Edward R. Manuel", "EdwardRManuel@example.com")
         dist_list.members.append(member)
-        # update DL in PST
+        # обновите DL в PST
         folder.update_message(msg.entry_id_string, dist_list)
 ```

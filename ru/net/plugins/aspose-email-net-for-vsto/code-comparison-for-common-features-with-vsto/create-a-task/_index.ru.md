@@ -11,7 +11,7 @@ type: docs
 
 ``` cs
 
-   // Date operations
+   // Дата операции
 
   DateTime today = DateTime.Parse("10:00 AM");
 
@@ -37,15 +37,15 @@ type: docs
 ```
 ## **Aspose.Email**
 #### **Создание и сохранение задач Outlook**
-Чтобы создать и сохранить задачу на диске, выполните следующие действия:
+Чтобы создать и сохранить задачу на диск:
 
 1. Создайте новый объект класса MapiTask.
 2. Введите информацию о свойствах задачи.
-3. Сохраните задачу на диске в формате MSG.
+3. Сохраните задачу на диск в формате MSG.
 
 ``` cs
 
-   MapiTask task = new MapiTask("To Do", "Just click and type to add new task", DateTime.Now, DateTime.Now.AddDays(3));
+   MapiTask task = new MapiTask("To Do", "Просто щелкните и введите, чтобы добавить новую задачу", DateTime.Now, DateTime.Now.AddDays(3));
 
   task.PercentComplete = 20;
 
@@ -69,11 +69,11 @@ type: docs
 
   task.Categories = new string[] { "category1", "category2", "category3" };
 
-  task.Mileage = "Some test mileage";
+  task.Mileage = "Некоторые тестовые пробеги";
 
-  task.Billing = "Test billing information";
+  task.Billing = "Тестовая информация о выставлении счетов";
 
-  task.Users.Delegator = "Test Delegator";
+  task.Users.Delegator = "Тестовый делегатор";
 
   task.Sensitivity = MapiSensitivity.Personal;
 
@@ -85,11 +85,11 @@ type: docs
 
 
 ```
-## **Загрузить образец кода**
+## **Скачать образец кода**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Загрузить рабочий код**
+## **Скачать работающий код**
 - [Codeplex](https://asposevsto.codeplex.com/SourceControl/latest#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20a%20Task)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

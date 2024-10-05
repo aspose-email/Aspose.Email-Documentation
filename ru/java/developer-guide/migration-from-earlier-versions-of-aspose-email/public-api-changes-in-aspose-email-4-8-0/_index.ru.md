@@ -1,11 +1,11 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 4.8.0"
+title: "Изменения в публичном API Aspose.Email 4.8.0"
 url: /ru/java/public-api-changes-in-aspose-email-4-8-0/
 weight: 100
 type: docs
 ---
 
-Ниже приведен список всех изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание членов, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
+Следующий список содержит изменения, внесенные в публичный API, такие как добавленные, переименованные, удаленные или устаревшие члены, а также любые изменения, несовместимые с предыдущими версиями, внесенные в Aspose.Email для Java. Если у вас есть вопросы по любому из перечисленных изменений, пожалуйста, поднимите их на форуме поддержки Aspose.Email.
 
 **Новые классы:**
 
@@ -13,7 +13,7 @@ type: docs
 - `MapiContactOtherPropertySet`
 - `MapiMessageItemBase`
 
-Добавлены базовый класс SaveOptions и отдельные классы EMLSaveOptions, MsgSaveOptions, MHTSaveOptions, HTSaveOptions, HTMLSaveOptions для дополнительных настроек сохранения MailMessage:
+Базовый класс SaveOptions и конкретные классы EmlSaveOptions, MsgSaveOptions, MhtSaveOptions, HtmlSaveOptions для дополнительных настроек сохранения MailMessage были добавлены:
 
 - `SaveOptions`
 - `EmlSaveOptions`
@@ -21,7 +21,7 @@ type: docs
 - `MhtSaveOptions`
 - `MsgSaveOptions`
 
-Следующие классы входят в `aspose-email-4.8.0.0-jdk17.jar` only:
+Следующие классы доступны только в `aspose-email-4.8.0.0-jdk17.jar`:
 
 - `ValidationResult`
 - `ValidationResponseCode`
@@ -133,8 +133,8 @@ type: docs
 
 **Устаревшие методы в классе MailMessage:**
 
-- `public boolean getPreserveOriginalBoundaries(), public void setPreserveOriginalBoundaries(boolean value)` - Метод использования `save(Stream stream, SaveOptions options)` с настройкой `EmlSaveOptions.PreserveOriginalBoundaries` вместо этого свойства.
-- `public boolean getPreserveOriginalDates(), public void setPreserveOriginalDates(boolean value)` - Метод использования `save(Stream stream, SaveOptions options)` с настройкой `MsgSaveOptions.PreserveOriginalDates` вместо этого свойства.
+- `public boolean getPreserveOriginalBoundaries(), public void setPreserveOriginalBoundaries(boolean value)` - Используйте метод `save(Stream stream, SaveOptions options)` с установкой `EmlSaveOptions.PreserveOriginalBoundaries` вместо этого свойства.
+- `public boolean getPreserveOriginalDates(), public void setPreserveOriginalDates(boolean value)` - Используйте метод `save(Stream stream, SaveOptions options)` с установкой `MsgSaveOptions.PreserveOriginalDates` вместо этого свойства.
 - `void save(String fileName, MailMessageSaveType savetype)`
 - `void save(String fileName, MailMessageSaveType savetype, int saveOptions)`
 - `void save(String fileName, MessageFormat format)`

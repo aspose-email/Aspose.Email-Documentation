@@ -1,36 +1,33 @@
 ---
-title: "Использование документа Microsoft Word в качестве текста сообщения и отправка электронной почты"
+title: "Использование документа Microsoft Word в качестве тела сообщения и отправка электронной почты"
 url: /ru/java/using-a-microsoft-word-document-as-the-message-body-and-sending-email/
 weight: 140
 type: docs
 ---
 
+Эта статья показывает, как использовать документ Microsoft Word в качестве тела электронной почты и отправить его получателям. Пример документа — это счет-фактура из базы данных Northwind, экспортированный в формат Microsoft Word. Aspose.Email для Java работает с сетевыми протоколами и функциями Microsoft Outlook и не может обрабатывать документы Microsoft Word. Чтобы преодолеть это, примеры в этой статье используют [Aspose.Words для Java](https://products.aspose.com/words/java/) для загрузки документа Word и преобразования его в формат MHTML. Aspose.Email для Java использует документ MHTML в теле электронного письма.
+## **Использование документов Microsoft Word в качестве тела электронной почты**
+Программистские примеры ниже иллюстрируют, как отправить документ Word в качестве тела электронной почты, используя Aspose.Words для Java и Aspose.Email для Java:
 
-В этой статье показано, как использовать документ Microsoft Word в качестве текста письма и отправлять его получателям. Образец документа представляет собой товарный счет из образца базы данных Northwind, экспортированный в формат Microsoft Word. Aspose.Email для Java занимается сетевыми протоколами и функциями Microsoft Outlook и не может обрабатывать документы Microsoft Word. Чтобы преодолеть эту проблему, в примерах в этой статье используются [Aspose.Слова для Java](https://products.aspose.com/words/java/) чтобы загрузить документ Word и преобразовать его в формат MHTML. Aspose.Email для Java использует документ MHTML в теле письма.
-## **Использование документов Microsoft Word в качестве текста письма**
-В приведенных ниже примерах программирования показано, как отправить документ Word в виде тела электронного письма с помощью Aspose.Words для Java и Aspose.Email для Java:
-
-1. Загрузите документ Microsoft Word с помощью Aspose.Word для Java [Document](https://apireference.aspose.com/words/java/com.aspose.words/Document) class.
+1. Загрузите документ Microsoft Word с помощью класса [Document](https://apireference.aspose.com/words/java/com.aspose.words/Document) из Aspose.Word для Java.
 1. Сохраните его в формате MHTML.
-1. Загрузите документ MHTML с помощью Aspose.Email для Java [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) класс для установки тела письма.
-1. Задайте другие свойства сообщения, используя разные [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) свойства и методы класса.
-1. Отправьте электронное письмо с помощью Aspose.Email для Java [SMTPClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) class.
+1. Загрузите документ MHTML с помощью класса [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) из Aspose.Email для Java, чтобы установить тело электронной почты.
+1. Установите другие свойства сообщения с помощью различных свойств и методов класса [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage).
+1. Отправьте электронное письмо с использованием класса [SMTPClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) из Aspose.Email для Java.
 
-Исходный документ, счет-фактура продажи, экспортированный в Microsoft Word из образца Microsoft Northwind, можно увидеть ниже.
+Исходный документ, счет-фактура, экспортированный в Microsoft Word из примера Microsoft Northwind, можно увидеть ниже.
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_1.png)
 
-Когда сообщение отправлено и получено в Microsoft Outlook, оно выглядит так, как показано ниже.
+Когда сообщение было отправлено и получено в Microsoft Outlook, оно выглядит как сообщение ниже.
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_2.png)
 
-При просмотре в Outlook или веб-почтовом клиенте, таком как Gmail или Hotmail, форматирование и изображения в формате HTML сохраняются в том же виде, в каком они были в исходном документе. Ниже приведен скриншот сообщения, открываемого в Gmail в браузере Chrome.
+HTML-форматирование и изображения сохраняются, как в исходном документе, при просмотре как в Outlook, так и в веб-клиенте электронной почты, таком как Gmail или Hotmail. Ниже приведен скриншот сообщения, открытого с помощью Gmail в браузере Chrome.
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_3.png)
 
-В следующем фрагменте кода показано, как использовать документ Microsoft Word в качестве текста сообщения и отправить электронное письмо с помощью [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) экземпляр класса.
-
-
+Следующий фрагмент кода показывает, как использовать документ Microsoft Word в качестве тела сообщения и отправить электронное письмо, используя экземпляр класса [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient).
 
 ~~~Java
 // The path to the File directory

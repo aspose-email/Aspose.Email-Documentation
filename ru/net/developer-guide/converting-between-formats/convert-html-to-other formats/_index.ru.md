@@ -1,80 +1,77 @@
 ---
-title: "Конвертируйте HTML в другие форматы"
+title: "Конвертация HTML в другие форматы"
 url: /ru/net/converting-between-formats/convert-html-to-other-formats
 weight: 60
 type: docs
 ---
 
-## **Конвертировать HTML в EML**
+## **Конвертация HTML в EML**
 
-Aspose.Email для .NET предоставляет метод преобразования файлов HTML в формат EML с помощью [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) and [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) методы загрузки существующего HTML-файла и его сохранения в формате EML соответственно:
-
+Aspose.Email для .NET предоставляет метод для конвертации HTML файлов в формат EML с использованием методов [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) и [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) для загрузки существующего HTML файла и сохранения его в формате EML соответственно:
 
 ```cs
 var eml = MailMessage.Load("myContent.html", new HtmlLoadOptions());
 eml.Save("output.eml", SaveOptions.DefaultEml);
 ```
 
-В примере кода [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/#htmlloadoptions-class) класс позволяет указать дополнительные параметры при загрузке MailMessage из формата HTML. Следующий пример кода демонстрирует использование этого класса. В примере задано текстовое представление тела сообщения:
+В приведенном примере [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/#htmlloadoptions-class) позволяет указать дополнительные параметры при загрузке MailMessage из HTML формата. Следующий пример кода демонстрирует использование этого класса. В примере задается текстовое представление тела сообщения:
 
 ```cs
-// Create an instance of HtmlLoadOptions
+// Создание экземпляра HtmlLoadOptions
 var loadOptions = new HtmlLoadOptions();
 
-// Set the ShouldAddPlainTextView property to true to generate a plain text view along with HTML
+// Установка свойства ShouldAddPlainTextView в true для генерации представления в простом тексте вместе с HTML
 loadOptions.ShouldAddPlainTextView = true;
 
-// Load an HTML file
+// Загрузка HTML файла
 var mailMessage = MailMessage.Load("input.html", loadOptions);
 
-// Access the plain text view of the email message
+// Доступ к представлению в простом тексте email сообщения
 var plainTextView = mailMessage.GetAlternateViewContent("text/plain");
 
-// Print or further process the plain text view
-Console.WriteLine("Plain Text View:");
+// Печать или дальнейшая обработка представления в простом тексте
+Console.WriteLine("Представление в простом тексте:");
 Console.WriteLine(plainTextView);
 ```
 
-## **Конвертируйте HTML в EMLX**
+## **Конвертация HTML в EMLX**
 
-Вы можете легко конвертировать HTML-файлы в EMLX. Для этого типа преобразования также доступны все свойства и классы, предоставляемые API для преобразования HTML в EML:
+Вы можете легко конвертировать HTML файлы в EMLX. Все свойства и классы, предоставляемые API для конвертации HTML в EML, доступны и для этого типа конвертации:
 
 ```cs
 var eml = MailMessage.Load("myContent.html", new HtmlLoadOptions());
 eml.Save("output.emlx", SaveOptions.DefaultEmlx);
 ```
-Дополнительные настройки см. [Конвертировать HTML в EML](#convert-html-to-eml) paragraph.
+Для дополнительных настроек см. параграф [Конвертация HTML в EML](#convert-html-to-eml).
 
-## **Конвертируйте HTML в ICS**
+## **Конвертация HTML в ICS**
 
-Для выполнения задачи библиотека предлагает [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) класс для представления календарных событий и управления ими. В следующем примере кода показано, как создать HTML-содержимое формы встречи и сохранить его в формате файла ICS (iCalendar):
+Для выполнения задачи библиотека предлагает класс [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) для представления и управления календарными событиями. Следующий пример кода демонстрирует, как создать встречу из HTML контента и сохранить её в формате ICS (iCalendar):
 
 ```cs
-// Sample HTML content
+// Пример HTML контента
 var htmlContent = File.ReadAllText("content.html");
 
-// Create and initialize an instance of the Appointment class
+// Создание и инициализация экземпляра класса Appointment
 var appointment = new Appointment(
-    "Meeting Room 3 at Office Headquarters",// Location
-    "Monthly Meeting",                      // Summary
-    "Please confirm your availability.",    // Description
-    new DateTime(2015, 2, 8, 13, 0, 0),     // Start date
-    new DateTime(2015, 2, 8, 14, 0, 0),     // End date
-    "from@domain.com",                      // Organizer
+    "Комната для переговоров 3 в главном офисе", // Место
+    "Ежемесячная встреча",                          // Резюме
+    "Пожалуйста, подтвердите вашу доступность.",    // Описание
+    new DateTime(2015, 2, 8, 13, 0, 0),            // Дата начала
+    new DateTime(2015, 2, 8, 14, 0, 0),            // Дата окончания
+    "from@domain.com",                             // Организатор
     "attendees@domain.com")
 {
     HtmlDescription = htmlContent
 };
 
-// Save the event to an ICS file
+// Сохранение события в ICS файл
 appointment.Save("output.ics", AppointmentSaveFormat.Ics);
 ```
 
+## **Генерация MBOX из HTML контента**
 
-## **Генерация MBOX из HTML-контента**
-
-Чтобы выполнить преобразование HTML в MBOX, используйте [Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) метод [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class) класс, указывающий путь к файлу содержимого HTML и экземпляр [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/). Этот метод анализирует содержимое HTML и генерирует соответствующий объект MailMessage, сохраняя структуру и форматирование исходного HTML. После загрузки содержимого HTML в объект MailMessage запишите сообщение в файл MBOX, используя [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/#mboxrdstoragewriter-class) class:
-
+Для выполнения конвертации HTML в MBOX используйте метод [Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class), указав путь к HTML контенту и экземпляр [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/). Этот метод анализирует HTML контент и создаёт соответствующий объект MailMessage, сохраняя структуру и форматирование оригинального HTML. После загрузки HTML контента в объект MailMessage запишите сообщение в файл MBOX с помощью класса [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/#mboxrdstoragewriter-class):
 
 ```cs
 using (var eml = MailMessage.Load("content.html", new HtmlLoadOptions())){
@@ -84,24 +81,24 @@ using (var eml = MailMessage.Load("content.html", new HtmlLoadOptions())){
 }
 ```
 
-## **Конвертировать HTML в MHTML**
+## **Конвертация HTML в MHTML**
 
-Используйте [Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) метод [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class) класс для загрузки существующего файла с указанием пути к нему и экземпляра [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/). Этот метод анализирует содержимое HTML и генерирует соответствующий объект MailMessage, сохраняя структуру и форматирование исходного HTML. После загрузки содержимого HTML в объект MailMessage разработчики могут сохранить его в виде файла MHTML, используя [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) метод, указывающий желаемый путь к выходному файлу и использующий [SaveOptions.DefaultMhtml](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaultmhtml/) option:
+Используйте метод [Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class) для загрузки существующего файла, указав путь к нему и экземпляр [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/). Этот метод анализирует HTML контент и создаёт соответствующий объект MailMessage, сохраняя структуру и форматирование оригинального HTML. После загрузки HTML контента в объект MailMessage разработчики могут сохранить его как MHTML файл, используя метод [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3), указав желаемый путь к выходному файлу и используя опцию [SaveOptions.DefaultMhtml](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaultmhtml/):
 
 ```cs
 var eml = MailMessage.Load("content.html", new HtmlLoadOptions());
 eml.Save("output.mhtml", SaveOptions.DefaultMhtml);
 ```
 
-The [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/#mhtsaveoptions-class) класс предоставляет множество опций для настройки поведения и параметров выходного файла MHTML вместо SaveOptions.defaultMhtml. С его помощью [properties](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/#properties), вы можете указать дополнительные параметры при сохранении MailMessage в формате MHTML.
-Самые популярные из них:
+Класс [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/#mhtsaveoptions-class) предоставляет различные параметры для настройки поведения и настроек выходного MHTML файла вместо SaveOptions.DefaultMhtml. С его помощью можно указать дополнительные опции при сохранении MailMessage в формате MHTML.
+Наиболее популярные из них:
 
-- [MhtFormatOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/mhtformatoptions/) - Позволяет настроить способ сохранения сообщения электронной почты в формате MHT в соответствии с вашими потребностями.
-- [SaveAttachments](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveattachments/) - Определяет или задает значение, указывающее, следует ли сохранять вложения.
-- [SaveAllHeaders](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveallheaders/) - Определяет, нужно ли сохранять все заголовки в выходном файле mhtml или нет. Значение по умолчанию — false.
-- [PreserveOriginalDate](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/preserveoriginaldate/) - Определяет, нужно ли сохранять исходную дату в почтовом сообщении при сохранении или нет. Значение по умолчанию — true.
+- [MhtFormatOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/mhtformatoptions/) - Позволяет настроить, как email сообщение сохраняется в формате MHT, чтобы наилучшим образом соответствовать вашим потребностям.
+- [SaveAttachments](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveattachments/) - Получает или устанавливает значение, указывающее, нужно ли сохранять вложения.
+- [SaveAllHeaders](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveallheaders/) - Определяет, нужно ли сохранять все заголовки в выходном mhtml или нет. Значение по умолчанию - false.
+- [PreserveOriginalDate](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/preserveoriginaldate/) - Определяет, нужно ли сохранять оригинальную дату в mail сообщении при сохранении или нет. Значение по умолчанию - true.
 
-В следующем примере кода показано, как можно использовать эти свойства:
+Следующий пример кода демонстрирует, как можно использовать эти свойства:
 
 ```cs
 var mhtSaveOprtions = new MhtSaveOptions
@@ -113,82 +110,82 @@ var mhtSaveOprtions = new MhtSaveOptions
 }
 ```
 
-## **Конвертировать HTML в MSG**
+## **Конвертация HTML в MSG**
 
-После загрузки содержимого HTML в объект MailMessage сохраните его как файл MSG, используя [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) метод, указывающий желаемый путь к выходному файлу и использующий [SaveOptions.DefaultMsgUnicode](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaultmsgunicode/) вариант. Эта опция гарантирует сохранение выходного файла в формате MSG с кодировкой Unicode.
+После загрузки HTML контента в объект MailMessage сохраните его как файл MSG, используя метод [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3), указав желаемый путь к выходному файлу и используя опцию [SaveOptions.DefaultMsgUnicode](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaultmsgunicode/). Эта опция гарантирует, что выходной файл сохранен в формате MSG с кодировкой Unicode.
 
 ```cs
 var eml = MailMessage.Load("content.html", new HtmlLoadOptions());
 eml.Save("output.msg", SaveOptions.DefaultMsgUnicode);
 ```
-Кроме того, Aspose.Email для .NET предлагает ряд дополнительных функций и опций для преобразования HTML в MSG:
+Кроме того, Aspose.Email для .NET предлагает множество расширенных функций и опций для конвертации HTML в MSG:
 
-## **Конвертируйте HTML в OFT**
+## **Конвертация HTML в OFT**
 
-После загрузки содержимого HTML в объект MailMessage сохраните его как файл OFT, используя [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) метод, указывающий желаемый путь к выходному файлу и использующий [SaveOptions.DefaultOft](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaultoft/) option:
+После загрузки HTML контента в объект MailMessage сохраните его как файл OFT, используя метод [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3), указав желаемый путь к выходному файлу и используя опцию [SaveOptions.DefaultOft](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaultoft/):
 
 ```cs
 var eml = MailMessage.Load("content.html", new HtmlLoadOptions());
 eml.Save("template.oft", SaveOptions.DefaultOft);
 ```
 
-## **Добавить сообщение с исходным HTML-содержимым в PST**
+## **Добавление сообщения с исходным HTML контентом в PST**
 
-Преобразование HTML в PST включает создание нового файла PST (Personal Storage Table) с новой папкой, загрузку HTML-файла и добавление его в новую папку:
+Конвертация HTML в PST включает создание нового файла PST (Таблица персонального хранилища) с новой папкой, загрузку HTML файла и добавление его в новую папку:
 
-1. Создайте экземпляр объекта PersonalStorage, представляющего новый файл PST, используя [Create](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create_4) метод [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class.
-2. Откройте корневую папку файла PST и добавьте в нее подпапку, используя [AddSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addsubfolder/#addsubfolder) метод [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/#folderinfo-class) class.
-3. Загрузите содержимое HTML-файла в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/#mapimessage-class) объект, использующий [Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_3) метод с экземпляром [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/#htmlloadoptions-class) чтобы указать, что содержимое находится в формате HTML.
-4. Добавьте загруженный объект MapiMessage (представляющий содержимое HTML) в папку в файле PST, используя [AddMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/) method.
+1. Создайте экземпляр объекта PersonalStorage, представляющего новый файл PST, с помощью метода [Create](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create_4) класса [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class).
+2. Получите корневую папку файла PST и добавьте к ней подпапку с помощью метода [AddSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addsubfolder/#addsubfolder) класса [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/#folderinfo-class).
+3. Загрузите содержимое HTML файла в объект [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/#mapimessage-class) с помощью метода [Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_3) с экземпляром [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/#htmlloadoptions-class), чтобы указать, что содержимое в формате HTML.
+4. Добавьте загруженный объект MapiMessage (представляющий HTML контент) в папку в пределах файла PST с помощью метода [AddMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/).
 
 ```cs
 using (var pst = PersonalStorage.Create("outputFile.pst", FileFormatVersion.Unicode))
-{
-    var inbox = pst.RootFolder.AddSubFolder("Inbox");
+{ 
+    var inbox = pst.RootFolder.AddSubFolder("Входящие");
     var msg = MapiMessage.Load("content.html", new HtmlLoadOptions());
     inbox.AddMessage(msg);
 }
 ```
 
-## **Добавить сообщение с исходным HTML-содержимым в OST**
+## **Добавление сообщения с исходным HTML контентом в OST**
 
-В следующем примере кода с пошаговыми инструкциями показано, как эти компоненты работают вместе для добавления HTML-содержимого в OST-файл:
+Следующий пример кода с этапами покажет, как эти компоненты работают вместе, чтобы добавить HTML контент в файл OST:
 
-1. Загрузите существующий OST-файл с помощью [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/fromfile/#fromfile) метод [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) класс, используемый для представления файла хранения, в котором будут храниться сообщения электронной почты.
-2. Загрузите HTML-файл с помощью [Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_3) метод [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/#mapimessage-class) класс, представляющий сообщение электронной почты в формате Microsoft Outlook.
-3. Specify [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/#htmlloadoptions-class) чтобы включить дополнительные опции при загрузке MailMessage из формата HTML.
-4. Извлеките корневую папку OST-файла с помощью [RootFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/rootfolder/) собственность [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) object.
-5. Получите папку «Входящие» в OST-файле, используя [GetSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getsubfolder/#getsubfolder) метод в корневой папке.
-6. Добавьте загруженный объект MapiMessage (представляющий содержимое HTML) в папку «Входящие», используя [AddMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/) метод в папке.
+1. Загрузите существующий файл OST с помощью метода [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/fromfile/#fromfile) класса [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class), который будет представлять файл хранения, в котором будут храниться email сообщения.
+2. Загрузите HTML файл с помощью метода [Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_3) класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/#mapimessage-class), представляющего email сообщение в формате Microsoft Outlook.
+3. Укажите [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/#htmlloadoptions-class), чтобы включить дополнительные опции при загрузке MailMessage из HTML формата.
+4. Получите корневую папку файла OST, используя свойство [RootFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/rootfolder/) объекта [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class).
+5. Получите папку Входящие в рамках файла OST, используя метод [GetSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getsubfolder/#getsubfolder) на корневой папке.
+6. Добавьте загруженный объект MapiMessage (представляющий HTML контент) в папку Входящие с помощью метода [AddMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/) на папке.
 
 ```cs
 using (var ost = PersonalStorage.FromFile("storage.ost"))
 {
     var msg = MapiMessage.Load("content.html", new HtmlLoadOptions());
-    var folderInfo = ost.RootFolder.GetSubFolder("Inbox");
+    var folderInfo = ost.RootFolder.GetSubFolder("Входящие");
     folderInfo.AddMessage(msg);
 }
-```
+``` 
 
-## **Конвертировать HTML в VCF**
+## **Конвертация HTML в VCF**
 
-В следующем примере кода показано, как создать контактный элемент, заполнить его содержимым HTML и сохранить в файле VCF:
+Следующий пример кода демонстрирует, как создать элемент контакта, заполнить его HTML контентом и сохранить в файл VCF:
 
-1. Прочитайте содержимое HTML-файла в строковую переменную с помощью метода File.readAllText.
-2. Создайте новый объект MapiContact, создав экземпляр [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/#mapicontact-class) class.
-3. Задайте свойства контакта: отображаемое имя, адрес электронной почты.
-4. Настройте содержимое тела контакта в формате HTML, используя [SetBodyContent](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/setbodycontent/#setbodycontent).
-5. Сохраните контакт в виде файла VCF, используя [Save](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/save/#save_4) method.
+1. Прочитайте содержимое HTML файла в строковую переменную, используя метод File.ReadAllText.
+2. Создайте новый объект MapiContact, инстанцируя класс [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/#mapicontact-class).
+3. Установите свойства контакта: отображаемое имя, адрес электронной почты.
+4. Установите тело контента контакта в HTML, используя [SetBodyContent](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/setbodycontent/#setbodycontent).
+5. Сохраните контакт как файл VCF, используя метод [Save](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/save/#save_4).
 
 ```cs
 var content = File.ReadAllText("content.html");
-           
-// Create a new MapiContact
+            
+// Создайте новый MapiContact
 var contact = new MapiContact();
-contact.NameInfo.DisplayName = "John Doe";
+contact.NameInfo.DisplayName = "Джон Доу";
 contact.ElectronicAddresses.Email1.EmailAddress = "john.doe@example.com";
 contact.SetBodyContent(content, BodyContentType.Html);
 
-// Save the contact to a VCF file
+// Сохраните контакт в файл VCF
 contact.Save("contact.vcf", ContactSaveFormat.VCard)
 ```

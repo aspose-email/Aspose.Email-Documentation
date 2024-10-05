@@ -9,6 +9,6 @@ type: docs
 
 {{% alert color="primary" %}}
 
-The **Функции печати** не поддерживается в программе Aspose.Email для Java.
+Функции **печати** не поддерживаются в Aspose.Email для Java.
 
 {{% /alert %}}

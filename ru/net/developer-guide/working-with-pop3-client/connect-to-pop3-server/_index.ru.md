@@ -1,60 +1,60 @@
 ---
-title: "Подключение к серверу POP3"
+title: "Подключение к POP3 серверу"
 url: /ru/net/connect-to-pop3-server/
 weight: 10
 type: docs
 ---
 
-## Подключение к серверу POP3
+## Подключение к POP3 серверу
 
-The [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) класс позволяет приложениям управлять почтовыми ящиками с использованием протокола Post Office Protocol версии 3 (POP3). Чтобы подключиться к серверу, используйте [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) класс. [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class — основная статья для разработчиков, которые хотят добавить управление POP3 в свои приложения.NET. В этой статье объясняется, как его использовать. Чтобы подключиться к серверу POP3, выполните следующие действия:
+Класс [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) позволяет приложениям управлять почтовыми ящиками с использованием Протокола Почтового Офиса, версия 3 (POP3). Чтобы подключиться к серверу, используйте класс [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/). Класс [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) является основным входом для разработчиков, которые хотят добавить управление POP3 в свои .NET приложения. Эта статья объясняет, как его использовать. Чтобы подключиться к POP3 серверу:
 
-1. Создайте экземпляр [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class.
-2. Укажите хост, имя пользователя и пароль в поле [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) instance.
+1. Создайте экземпляр класса [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
+2. Укажите хост, имя пользователя и пароль в экземпляре [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 
-В следующем фрагменте кода показано, как подключиться к серверу POP3.
+Следующий фрагмент кода показывает, как подключиться к POP3 серверу.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-ConnectingToPOP3-ConnectingToPOP3.cs" >}}
 
-## **Подключение к серверу SSL**
+## **Подключение к SSL серверу**
 
-[Подключение к серверу POP3](#connecting-to-a-pop3-server) описал, как подключиться к серверу POP3 за два простых шага:
+[Подключение к POP3 серверу](#connecting-to-a-pop3-server) описывает, как подключиться к POP3 серверу в два простых шага:
 
-1. Создайте экземпляр [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class.
+1. Создайте экземпляр класса [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 1. Укажите хост, имя пользователя и пароль.
 
-Процесс подключения к серверу POP3 с поддержкой SSL аналогичен, но требует установки еще нескольких свойств:
+Процесс подключения к SSL-совместимому POP3 серверу похож, но требует установки еще нескольких свойств:
 
 - [SecurityOptions](https://reference.aspose.com/email/net/aspose.email.clients/securityoptions/)
-- Port
+- Порт
 
-Чтобы подключиться к серверу POP3 с поддержкой SSL, используйте [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) класс и установите [SecurityOptions](https://reference.aspose.com/email/net/aspose.email.clients/securityoptions/) и портовая недвижимость. В следующем фрагменте кода показано, как подключиться к серверу POP3 с поддержкой SSL.
+Чтобы подключиться к SSL-совместимому POP3 серверу, используйте класс [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) и установите свойства [SecurityOptions](https://reference.aspose.com/email/net/aspose.email.clients/securityoptions/) и Port. Следующий фрагмент кода показывает, как подключиться к SSL-совместимому POP3 серверу.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-SSLEnabledPOP3Server-SSLEnabledPOP3Server.cs" >}}
 
-## **Подключение к серверу APOP**
+## **Подключение с APOP сервером**
 
-POP означает Почтовый протокол. APOP означает аутентифицированный почтовый протокол. APOP — это расширенная версия настройки сервера POP3, которая шифрует ваше имя пользователя и пароль и использует механизм аутентификации, предназначенный для защиты пароля учетной записи POP3 при проверке электронной почты. Аутентификация APOP не требует отправки пароля учетной записи в виде обычного текста на почтовый сервер POP3.
+POP означает Протокол Почтового Офиса. APOP означает Аутентифицированный Протокол Почтового Офиса. APOP является расширенной версией настройки сервера POP3, которая шифрует ваше имя пользователя и пароль и использует механизм аутентификации, предназначенный для защиты пароля вашей учетной записи POP3 при проверке электронной почты. Аутентификация APOP не требует, чтобы пароль учетной записи отправлялся в открытом виде на почтовый сервер POP3.
 
-## **Подключение к серверу через прокси-сервер**
+## **Подключение к серверу через прокси**
 
-Прокси-серверы очень распространены для связи с внешним миром. В таких случаях прокси-адреса используются почтовыми клиентами для доступа к почтовым ящикам через Интернет. Aspose.Email обеспечивает поддержку версий 4, 4a и 5 протокола прокси-сервера SOCKS. В этой статье представлен рабочий пример получения электронной почты с помощью прокси-почтового сервера. Чтобы получить электронную почту через прокси-сервер, выполните следующие действия:
+Прокси-серверы очень распространены для общения с внешним миром. В таких случаях адреса прокси используются для почтовых клиентов для доступа к почтовым ящикам через Интернет. Aspose.Email поддерживает версии 4, 4a и 5 протокола SOCKS. Эта статья предоставляет рабочий пример получения электронной почты с использованием прокси-почтового сервера. Чтобы получить электронную почту через прокси-сервер:
 
-1. Initialize [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) с необходимой информацией, то есть адресом прокси-сервера, портом и версией SOCKS.
-1. Initialize [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) с адресом хоста, именем пользователя, паролем и любыми другими настройками.
-1. Задайте свойству Proxy клиента значение [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) объект, созданный выше.
+1. Инициализируйте [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) с необходимой информацией, то есть адресом прокси, портом и версией SOCKS.
+1. Инициализируйте [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) с адресом хоста, именем пользователя, паролем и любыми другими настройками.
+1. Установите свойство Proxy клиента в созданный выше объект [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/).
 
-В следующем фрагменте кода показано, как получить электронную почту через прокси-сервер.
+Следующий фрагмент кода показывает, как получить электронную почту через прокси-сервер.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-RetrieveEmailViaProxyServer-RetrieveEmailViaProxyServer.cs" >}}
 
-## **Подключение к серверу через HTTP-прокси-сервер**
+## **Подключение к серверу через HTTP-прокси**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-AccessMailboxViaHttpProxy-AccessPOP3MailboxViaHttpProxy.cs" >}}
 
 ## **Подключение к серверу через механизм аутентификации CRAM-MD5**
 
-Используя аутентификацию CRAM-MD5, Aspose.Email for .NET позволяет пользователям безопасно аутентифицироваться и получать доступ к серверам электронной почты, поддерживающим этот метод аутентификации. В приведенном ниже примере кода показано, как использовать этот механизм в вашем проекте:
+Используя аутентификацию CRAM-MD5, Aspose.Email для .NET позволяет пользователям безопасно аутентифицироваться и получать доступ к почтовым серверам, поддерживающим этот метод аутентификации. Пример кода ниже показывает, как использовать механизм в вашем проекте:
 
 ```cs
 popClient.AllowedAuthentication = Pop3KnownAuthenticationType.CramMD5;
@@ -62,36 +62,36 @@ popClient.AllowedAuthentication = Pop3KnownAuthenticationType.CramMD5;
 
 ## **Как установить тайм-аут для почтовых операций**
 
-Каждая почтовая операция занимает некоторое время в зависимости от многих факторов (сетевых задержек, размера данных, производительности сервера и т. д.). Можно установить тайм-аут для всех почтовых операций. В приведенном ниже примере кода показано, как это сделать с помощью [Timeout](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/timeout/) имущество. Примечание: не следует устанавливать большие значения, чтобы избежать длительного ожидания в приложении.
+Каждая почтовая операция занимает некоторое время в зависимости от многих факторов (задержки сети, размер данных, производительность сервера и т.д.). Вы можете установить тайм-аут для всех почтовых операций. Пример кода ниже показывает, как это сделать с помощью свойства [Timeout](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/timeout/). Примечание: не устанавливайте большие значения, чтобы избежать долгих ожиданий в вашем приложении.
 
 ```csharp
 using (Pop3Client pop3Client = new Pop3Client("host", 995, "username", "password", SecurityOptions.Auto))
 {
-    pop3Client.Timeout = 60000; // 60 seconds
+    pop3Client.Timeout = 60000; // 60 секунд
 
-    // some code...
+    // какой-то код...
 }
 ```
 
-## **Использование криптографических протоколов с клиентом POP3**
+## **Использование криптографических протоколов с POP3 клиентом**
 
-Aspose.Email поддерживает криптографические протоколы SSL (устаревшие) и TLS для обеспечения безопасности связи. Для защиты обмена данными между приложением и почтовыми серверами можно включить криптографическое шифрование.
+Aspose.Email поддерживает SSL (устаревший) и TLS криптографические протоколы для обеспечения безопасности коммуникаций. Вы можете включить криптографическое шифрование для защиты обмена данными между вашим приложением и почтовыми серверами.
 
-> **_NOTE:_**  Следует устанавливать только те версии протокола, которые поддерживаются платформе.NET Framework. Если некоторые версии криптографического протокола не поддерживаются текущей версией .NET Framework, они будут проигнорированы и пропущены. В этом случае исключения не будут созданы. Пожалуйста, используйте [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) метод, если вы хотите установить протоколы без каких-либо проверок совместимости.
+> **_ПРИМЕЧАНИЕ:_** Вы должны устанавливать только те версии протокола, которые поддерживаются .NET Framework. Если некоторые версии криптографического протокола не поддерживаются вашей текущей версией .NET Framework, они будут проигнорированы и пропущены. В этом случае исключения не будут сгенерированы. Пожалуйста, используйте метод [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe), если вы хотите установить протоколы без проверок совместимости.
 
-В приведенном ниже примере кода показано, как установить TLS 1.3 для [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) экземпляр класса.
+Пример кода ниже показывает, как установить TLS 1.3 для экземпляра класса [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 
 ```csharp
 using (Pop3Client pop3Client = new Pop3Client("host", 995, "username", "password", SecurityOptions.Auto))
 {
     pop3Client.SupportedEncryption = EncryptionProtocols.Tls13;
 
-    // some code...
+    // какой-то код...
 }
 ```
 
-В случае, если указанный протокол шифрования не поддерживается в текущей версии .NET Framework, разница в поведении между [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) метод и [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) свойство следующее:
+В случае, если указанный протокол шифрования не поддерживается в текущей версии .NET Framework, разница в поведении между методом [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) и свойством [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) следующая:
 
-- If [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) используется свойство, почтовый клиент понижает протокол шифрования до поддерживаемого уровня.
- 
-- If [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) используется метод, почтовый клиент генерирует исключения.
+- Если используется свойство [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/), почтовый клиент понижает протокол шифрования до поддерживаемого уровня.
+  
+- Если используется метод [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe), почтовый клиент выбрасывает исключения.

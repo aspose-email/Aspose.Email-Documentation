@@ -1,29 +1,29 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 6.3.0"
+title: "Изменения публичного API в Aspose.Email 6.3.0"
 url: /ru/java/public-api-changes-in-aspose-email-6-3-0/
 weight: 240
 type: docs
 ---
 
-Ниже приведен список всех изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание членов, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
+Следующий список содержит изменения, внесенные в публичный API, такие как добавленные, переименованные, удаленные или устаревшие члены, а также любые изменения, несовместимые с предыдущими версиями, внесенные в Aspose.Email для Java. Если у вас есть опасения по поводу любого из перечисленных изменений, пожалуйста, озвучьте их на форуме поддержки Aspose.Email.
 
-Класс `RecurrencePattern` переименован в `CalendarRecurrence` класс.
-Класс `CalendarRecurrencePattern` переименован в `RecurrencePattern` класс.
-Класс `CalendarRecurrencePattern` устарела и скоро будет удалена. Пожалуйста, используйте `RecurrencePattern` класс вместо него.
-## **Добавлены API**
-- Class `FileFormatType`
-- Class `FileFormatInfo`
-- Class `FileFormatUtil`
-- Method `FileFormatUtil.detectFileFormat(InputStream)`
-- Method `FileFormatUtil.detectFileFormat(String)`
+Класс `RecurrencePattern` переименован в класс `CalendarRecurrence`.
+Класс `CalendarRecurrencePattern` переименован в класс `RecurrencePattern`.
+Класс `CalendarRecurrencePattern` устарел и будет скоро удален. Пожалуйста, используйте класс `RecurrencePattern` вместо него.
+## **Добавленные API**
+- Класс `FileFormatType`
+- Класс `FileFormatInfo`
+- Класс `FileFormatUtil`
+- Метод `FileFormatUtil.detectFileFormat(InputStream)`
+- Метод `FileFormatUtil.detectFileFormat(String)`
 
-- Method `MailMessage.attachSignature(CmsSigner, boolean)`
-- Method `MailMessage.attachSignature(X509Certificate2, boolean)`
+- Метод `MailMessage.attachSignature(CmsSigner, boolean)`
+- Метод `MailMessage.attachSignature(X509Certificate2, boolean)`
 
-- Class `TimeoutException`
-- Method `TimeoutException.#ctor`
-- Method `TimeoutException.#ctor(String)`
+- Класс `TimeoutException`
+- Метод `TimeoutException.#ctor`
+- Метод `TimeoutException.#ctor(String)`
 
-- Property `EmlSaveOptions.getCheckBodyContentEncoding, setCheckBodyContentEncoding`
-- Property `HtmlSaveOptions.getCheckBodyContentEncoding, setCheckBodyContentEncoding`
-- Property `MhtSaveOptions.getCheckBodyContentEncoding, setCheckBodyContentEncoding`
+- Свойство `EmlSaveOptions.getCheckBodyContentEncoding, setCheckBodyContentEncoding`
+- Свойство `HtmlSaveOptions.getCheckBodyContentEncoding, setCheckBodyContentEncoding`
+- Свойство `MhtSaveOptions.getCheckBodyContentEncoding, setCheckBodyContentEncoding`

@@ -1,61 +1,61 @@
 ---
-title: "Отправка приглашения на собрание с помощью Outlook Interop и Aspose.Email для Java"
+title: "Отправка запроса на встречу с использованием Outlook Interop и Aspose.Email для Java"
 url: /ru/java/sending-meeting-request-using-outlook-interop-and-aspose-email-for-java/
 weight: 40
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Наши советы по миграции показывают, как продукты Aspose можно использовать для улучшения приложений и избавления вас от зависимости от традиционной автоматизации.
+Наши советы по миграции показывают, как продукты Aspose могут быть использованы для улучшения ваших приложений и освобождения от зависимости от традиционной автоматизации.
 
-Этот совет по миграции отправляет получателю приглашение на собрание. В нем показано, как отправить приглашение на собрание двумя способами:
+Этот совет по миграции отправляет запрос на встречу получателю. Он демонстрирует, как отправить запрос на встречу двумя способами:
 
-- [Использование взаимодействия с Outlook](#sending-meeting-request-with-outlook-interop).
-- [Использование Aspose.Email для Java](#advantages-of-using-asposeemail-for-java).
+- [Используя Outlook Interop](#sending-meeting-request-with-outlook-interop).
+- [Используя Aspose.Email для Java](#advantages-of-using-asposeemail-for-java).
 
 Мы также обсудим преимущества последнего подхода.
 
-{{% /alert %}}
-## **Отправка приглашения на собрание с помощью Outlook Interop**
-Чтобы использовать классы Outlook, в вашем проекте.NET необходимо указать ссылку на Outlook.Interop. Ниже приведен фрагмент кода:
+{{% /alert %}} 
+## **Отправка запроса на встречу с использованием Outlook Interop**
+Чтобы использовать классы Outlook, необходимо ссылаться на Outlook.Interop в вашем .NET проекте. Приведенный ниже код:
 
-1. Создает приглашение на собрание.
-1. Задает такие свойства, как объект, тело, местоположение и время.
-1. Отправляет приглашение на собрание получателю.
+1. Создает запрос на встречу.
+1. Устанавливает свойства, такие как тема, текст и время.
+1. Отправляет запрос на встречу получателю.
 
-Microsoft Outlook должен быть установлен в системе, где будет работать этот образец приложения.
-### **Примеры программирования**
+Microsoft Outlook должен быть установлен на системе, где будет работать это демонстрационное приложение.
+### **Программные примеры**
 **C#**
 
 ~~~cs
 
-// Create an instance of Outlook Application class
+// Создание экземпляра класса Outlook Application
 
 Outlook.Application outlookApp = new Outlook.Application ();
 
-// Create an instance of AppointmentItem object and set the properties:
+// Создание экземпляра объекта AppointmentItem и установка свойств:
 
 Outlook.AppointmentItem oAppointment = (Outlook.AppointmentItem) outlookApp.CreateItem (Outlook.OlItemType.olAppointmentItem);
 
-oAppointment.Subject = "subject of appointment";
+oAppointment.Subject = "тема встречи";
 
-oAppointment.Body = "body text of appointment";
+oAppointment.Body = "текст встречи";
 
-oAppointment.Location = "Appointment location";
+oAppointment.Location = "Место проведения встречи";
 
-// Set the start date and end dates
+// Установка даты начала и окончания
 
 oAppointment.Start = Convert.ToDateTime ("01/22/2010 10:00:00 AM");
 
 oAppointment.End = Convert.ToDateTime("01/22/2010 2:00:00 PM");
 
-// Save the appointment
+// Сохранение встречи
 
 oAppointment.Save ();
 
-// Send the appointment
+// Отправка встречи
 
 Outlook.MailItem mailItem = oAppointment.ForwardAsVcal ();
 
@@ -65,15 +65,15 @@ mailItem.Send();
 
 
 ~~~
-## **Отправка приглашения на собрание с помощью Aspose.Email для Java**
-Приведенный ниже код использует Aspose.Email для Java для отправки приглашения на собрание. Сначала создайте приглашение на собрание, используя [Встреча по электронной почте Aspose.Email](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) класс. Затем отправьте электронное письмо, прикрепите приглашение на собрание и отправьте электронное письмо, используя [SMTP-клиент Aspose.Email](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient) class.
+## **Отправка запроса на встречу с использованием Aspose.Email для Java**
+Код ниже использует Aspose.Email для Java для отправки запроса на встречу. Сначала создайте запрос на встречу, используя класс [Aspose.Email Appointment](https://apireference.aspose.com/email/java/com.aspose.email/Appointment). Затем отправьте электронное письмо, прикрепите запрос на встречу и отправьте электронное письмо с использованием класса [Aspose.Email SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient).
 ### **Преимущества использования Aspose.Email для Java**
-Outlook Interop требует установки Microsoft Outlook в системе, в которой он используется. Aspose.Email для Java не требует установки Microsoft Outlook и подходит для серверных приложений.
-### **Примеры программирования**
+Outlook Interop требует установки Microsoft Outlook на системе, где он используется. Aspose.Email для Java не требует установки Microsoft Outlook и подходит для серверных приложений.
+### **Программные примеры**
 
 ~~~Java
 
-// Create attendees of the meeting
+// Создание участников встречи
 MailAddressCollection attendees = new MailAddressCollection();
 attendees.add("recipient1@domain.com");
 attendees.add("recipient2@domain.com");
@@ -83,25 +83,25 @@ Date startDate = c.getTime();
 c.add(java.util.Calendar.HOUR_OF_DAY, 1);
 Date endDate = c.getTime();
 
-// Set up appointment
+// Настройка встречи
 Appointment app = new Appointment(
-    "Location", // location of meeting
-    startDate, // start date
-    endDate, // end date
-    new MailAddress("organizer@domain.com"), // organizer
-    attendees); // attendees
+    "Место", // место встречи
+    startDate, // дата начала
+    endDate, // дата окончания
+    new MailAddress("organizer@domain.com"), // организатор
+    attendees); // участники
 
-// Set up message that needs to be sent
+// Настройка сообщения, которое нужно отправить
 MailMessage msg = new MailMessage();
 msg.setFrom(new MailAddress("from@domain.com"));
 msg.setTo(MailAddressCollection.to_MailAddressCollection("to@domain.com"));
-msg.setSubject("appointment request");
-msg.setBody("you are invited");
+msg.setSubject("запрос на встречу");
+msg.setBody("вы приглашены");
 
-// Add meeting request to the message
+// Добавление запроса на встречу в сообщение
 msg.addAlternateView(app.requestApointment());
 
-// Set up the SMTP client to send email with meeting request
+// Настройка SMTP-клиента для отправки электронного письма с запросом на встречу
 try (SmtpClient client = new SmtpClient("host", 25, "user", "password")) {
     client.send(msg);
 }

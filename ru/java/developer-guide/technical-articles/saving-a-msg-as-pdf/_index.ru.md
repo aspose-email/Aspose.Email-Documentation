@@ -1,38 +1,37 @@
 ---
-title: "Сохранение файла MSG в формате PDF"
+title: "Сохранение MSG в PDF"
 url: /ru/java/saving-a-msg-as-pdf/
 weight: 30
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-В этой статье показано, как преобразовать сообщение электронной почты в PDF с помощью Aspose.Email.
-Aspose.Email для Java предоставляет функции Microsoft Outlook и не поддерживает прямое преобразование в PDF. Чтобы решить эту проблему, в примерах, приведенных в этой статье, используйте Aspose.Email для преобразования сообщения электронной почты в поток MHTML, а затем используйте Aspose.Words для Java для загрузки потока MHTML и последующего сохранения его в формате PDF.
+В этой статье показано, как преобразовать электронное сообщение в PDF с помощью Aspose.Email. Aspose.Email для Java обрабатывает функции Microsoft Outlook и не может выполнять прямое преобразование в PDF. Чтобы обойти это, в примерах в этой статье используется Aspose.Email для преобразования электронного сообщения в поток MHTML, а затем используется Aspose.Words для Java для загрузки потока MHTML и последующего сохранения его в PDF.
 
-{{% /alert %}} {{% alert color="primary" %}}
+{{% /alert %}} {{% alert color="primary" %}} 
 
-Сообщение электронной почты также может содержать вложения. Поскольку каждое вложение может иметь различный тип носителя, Aspose.Email игнорирует эти вложения при преобразовании в MHTML, то есть только встроенные изображения в сообщении будут частью MHTML, а любые обычные вложения будут игнорироваться.
+Электронное сообщение также может содержать вложения. Поскольку каждое вложение может быть разных типов медиа, Aspose.Email игнорирует эти вложения при преобразовании в MHTML, т.е. только встроенные изображения в сообщении будут частью MHTML, а любые обычные вложения будут проигнорированы.
 
-{{% /alert %}}
-## **Конвертировать сообщение электронной почты в PDF**
-Следующий код показывает преобразование сообщения электронной почты в PDF с помощью Aspose.Email в сочетании с Aspose.Words для Java. Это включает в себя следующие шаги:
+{{% /alert %}} 
+## **Преобразование электронного сообщения в PDF**
+Следующий код показывает, как преобразовать электронное сообщение в PDF с помощью Aspose.Email в сочетании с Aspose.Words для Java. Это включает в себя следующие шаги:
 
-1. Загрузите сообщение электронной почты с помощью MailMessage
-1. Сохраните сообщение электронной почты в MemoryStream в формате MHTML
-1. Загрузите трансляцию с помощью Aspose.Words
-1. Сохранить сообщение в формате PDF
+1. Загрузите электронное сообщение с помощью MailMessage
+2. Сохраните электронное сообщение в MemoryStream в формате MHTML
+3. Загрузите поток с помощью Aspose.Words
+4. Сохраните сообщение в PDF
 
-Исходное сообщение электронной почты можно увидеть следующим образом:
+Исходное электронное сообщение можно увидеть следующим образом:
 
 |![todo:image_alt_text](saving-a-msg-as-pdf_1.png)|
-|: - |
-|**Рис.: Исходный MSG-файл** |
+| :- |
+|**Рисунок: Исходный файл MSG** |
 
 
 |![todo:image_alt_text](saving-a-msg-as-pdf_2.png)|
-|: - |
-|**Рис.: Конвертированный PDF-файл** |
+| :- |
+|**Рисунок: Преобразованный файл PDF** |
 **Java**
 
 ``` java
@@ -45,13 +44,13 @@ Aspose.Email для Java предоставляет функции Microsoft Out
 
        MailMessage eml = MailMessage.load(fstream);
 
-       //Save the Message to output stream in MHTML format
+       //Сохраните сообщение в выходной поток в формате MHTML
 
        ByteArrayOutputStream emlStream = new ByteArrayOutputStream();
 
        eml.save(emlStream, SaveOptions.getDefaultMhtml());
 
-       //Load the stream in Word document
+       //Загрузите поток в документ Word
 
        LoadOptions lo = new LoadOptions();
 
@@ -59,11 +58,11 @@ Aspose.Email для Java предоставляет функции Microsoft Out
 
        Document doc = new Document(new ByteArrayInputStream(emlStream.toByteArray()), lo);
 
-       //Save to disc
+       //Сохраните на диск
 
        doc.save("About Aspose.Pdf", SaveFormat.PDF);
 
-       //or Save to stream
+       //или Сохраните в поток
 
        ByteArrayOutputStream foStream = new ByteArrayOutputStream();
 

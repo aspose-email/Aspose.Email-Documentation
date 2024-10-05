@@ -7,43 +7,43 @@ type: docs
 
 
 ## **Поддержка игнорирования исключений**
-[ExceptionManager](https://apireference.aspose.com/email/java/com.aspose.email/ExceptionManager) класс предоставляет возможность игнорировать исключения:
+Класс [ExceptionManager](https://apireference.aspose.com/email/java/com.aspose.email/ExceptionManager) предоставляет возможность игнорирования исключений:
 
 ### **Примеры кода:**
 
-Настройте обратный вызов для обработки исключений:
+Установите обратный вызов для обработки исключений:
 ~~~java
 ExceptionManager.setIgnoreExceptionsHandler(new IgnoreExceptionsCallback() {
-    //exception path: {Module}\{Method}\{Action}\{GUID}
-    //example: MailMessage\Load\DecodeTnefAttachment\64149867-679e-4645-9af0-d46566cae598
+    //путь исключения: {Module}\{Method}\{Action}\{GUID}
+    //пример: MailMessage\Load\DecodeTnefAttachment\64149867-679e-4645-9af0-d46566cae598
     public boolean invoke(AsposeException ex, String path) {
-        //Ignore all exceptions on MailMessage.Load
+        //Игнорировать все исключения на MailMessage.Load
         return path.equals("MailMessage\\Load");
     }
 });
 ~~~
 
-Или используйте **alternative**:
+Или используйте **альтернативу**:
 ~~~java
-//Ignore all exceptions
+//Игнорировать все исключения
 ExceptionManager.setIgnoreAll(true);
 ~~~
 
-Кроме того, вы можете установить обратный вызов для игнорируемых **журнал исключений**:
+Также вы можете установить обратный вызов для игнорируемого **журнала исключений**:
 ~~~java
 ExceptionManager.setIgnoreExceptionsLogHandler(new IgnoreExceptionsLogCallback() {
     public void invoke(String message) {
-        System.out.println("=== EXCEPTION IGNORED === " + message);
+        System.out.println("=== ИСКЛЮЧЕНИЕ ИГНОРИРОВАНО === " + message);
     }
 });
 ~~~
 
-Пользователь будет уведомлен о том, что исключение может быть проигнорировано сообщением об ошибке. Например:
+Пользователь будет уведомлён о том, что исключение может быть проигнорировано сообщением об ошибке. Например:
 ~~~
-Exceptioin message:
+Сообщение об исключении:
 
-AsposeArgumentException: properties should not be empty.
-If you want to ignore an exception and want to proceed further then you can use:
+AsposeArgumentException: свойства не должны быть пустыми.
+Если вы хотите игнорировать исключение и хотите продолжить, то можете использовать:
 ExceptionManager.getIgnoreList().add("MailMessage\\Load\\DecodeTnefAttachment\\64149867-679e-4645-9af0-d46566cae598")
-Invalid TNEF Attachment will be interpreted as regular attachment.
+Неверное вложение TNEF будет интерпретировано как обычное вложение.
 ~~~

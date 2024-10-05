@@ -1,5 +1,5 @@
 ---
-title: "Работа с элементами календаря в файле PST"
+title: "Работа с элементами календаря в PST-файле"
 url: /ru/python-net/working-with-calendar-items-in-pst-file/
 weight: 50
 type: docs
@@ -7,39 +7,37 @@ type: docs
 
 
 ## **Добавление MapiCalendar в PST**
-В статье «Создание нового файла PST и добавление подпапок» показано, как создать файл PST и добавить к нему подпапку. С помощью Aspose.Email вы можете добавить MapicaLendar в подпапку «Календарь» созданного или загруженного вами PST-файла. Ниже приведены шаги по добавлению MapicaLendar в PST:
+В статье "Создание нового PST-файла и добавление подпапок" описано, как создать PST-файл и добавить в него подпапку. С помощью Aspose.Email вы можете добавить MapiCalendar в подкаталог Календара PST-файла, который вы создали или загрузили. Ниже приведены шаги для добавления MapiCalendar в PST:
 
-1. Создайте объект MapicaLendar.
-1. Задайте свойства MapicaLendar с помощью конструктора и методов.
-1. Создайте PST с помощью метода PersonalStorage.create ().
-1. Создайте предопределенную папку (Calendar) в корне файла PST, открыв корневую папку и вызвав метод add_mapi_message_item ().
+1. Создайте объект MapiCalendar.
+1. Установите свойства MapiCalendar с помощью конструктора и методов.
+1. Создайте PST с помощью метода PersonalStorage.create().
+1. Создайте предопределенную папку (Календарь) в корне PST-файла, получив доступ к корневой папке, а затем вызвав метод add_mapi_message_item().
 
-В следующем фрагменте кода показано, как создать файл MapicaLendar, а затем добавить его в папку календаря вновь созданного файла PST.
+Следующий код показывает, как создать MapiCalendar, а затем добавить его в папку календаря вновь созданного PST-файла.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddMapiCalendarToPST-AddMapiCalendarToPST.py" >}}
 ## **Сохранение элементов календаря из PST на диск в формате ICS**
-В этой статье показано, как получить доступ к элементам календаря из файла Outlook PST и сохранить календарь на диск в формате ICS. Используйте классы PersonalStorage и MapicaLendar для получения информации из календаря. Ниже приведены шаги по сохранению элементов календаря:
+Данная статья показывает, как получить доступ к элементам календаря из PST-файла Outlook и сохранить календарь на диск в формате ICS. Используйте классы PersonalStorage и MapiCalendar для получения информации о календаре. Ниже приведены шаги для сохранения элементов календаря:
 
-1. Загрузите файл PST в класс PersonalStorage.
-1. Перейдите в папку «Календарь».
-1. Получите содержимое папки «Календарь», чтобы получить коллекцию сообщений.
-1. Просмотрите коллекцию сообщений.
-1. Вызовите метод PersonalStorage.extract_Message (), чтобы получить контактную информацию в классе MapicaLendar.
-1. Вызовите метод MapiCalendar.save (), чтобы сохранить элемент календаря на диск в формате ICS.
+1. Загрузите PST-файл в класс PersonalStorage.
+1. Просмотрите папку Календарь.
+1. Получите содержимое папки Календарь, чтобы получить коллекцию сообщений.
+1. Пройдитесь по коллекции сообщений.
+1. Вызовите метод PersonalStorage.extract_message(), чтобы получить контактную информацию в классе MapiCalendar.
+1. Вызовите метод MapiCalendar.save(), чтобы сохранить элемент календаря на диск в формате ICS.
 
-Приведенная ниже программа загружает файл PST с диска и сохраняет все элементы календаря в формате ICS. Затем файлы ICS можно использовать в любой другой программе, которая может загрузить стандартный файл календаря ICS. Файл ICS, открытый в Microsoft Outlook, выглядит так, как показано на скриншоте ниже.
+Программа ниже загружает PST-файл с диска и сохраняет все элементы календаря в формате ICS. Файлы ICS затем могут использоваться в любой другой программе, которая может загрузить стандартный файл календаря ICS. Открытый в Microsoft Outlook, файл ICS выглядит как на скриншоте ниже.
 
 |![todo:image_alt_text](working-with-calendar-items-in-pst-file_1.png)|
-|: - |
-В следующем фрагменте кода показано, как экспортировать элементы календаря из Outlook PST в формат ICS.
-
-
+| :- |
+Следующий код показывает, как экспортировать элементы календаря из PST Outlook в формат ICS.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-SaveCalendarItems-SaveCalendarItems.py" >}}
 
-### **Сохранение в виде ICS с исходной меткой времени**
+### **Сохранение в формате ICS с оригинальной меткой времени**
 
-The *keep_original_date_time_stamp* метод [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapicalendaricssaveoptions/#mapicalendaricssaveoptions-class) класс позволяет сохранить исходные метки даты и времени элементов календаря при их сохранении в виде файла ICS (iCalendar). Следующий пример кода демонстрирует реализацию этого метода:
+Метод *keep_original_date_time_stamp* класса [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapicalendaricssaveoptions/#mapicalendaricssaveoptions-class) позволяет сохранять оригинальные метки времени элементов календаря при сохранении их в файл ICS (iCalendar). Следующий пример кода демонстрирует реализацию этого метода:
 
 ```python
 import aspose.email as ae
@@ -57,9 +55,9 @@ for msg_info in calendar_folder.enumerate_messages():
     if not (cal is None):
       cal.save("cal.ics", save_options)
 ```
-## **Изменить/удалить повторения из повторов**
+## **Изменение/удаление вхождений из повторений**
 
-Исключения можно добавлять к существующим рекурсиям с помощью Aspose.Email для .NET API. Следующий пример кода иллюстрирует использование этой функции. 
+Исключения могут быть добавлены к существующим повторениям с использованием API Aspose.Email для .NET. Следующий пример кода иллюстрирует использование этой функции.
 
 ```py
 from datetime import datetime, timedelta
@@ -80,27 +78,27 @@ recurrence.recurrence_pattern = pattern
 
 exception_date = start_date + timedelta(days=1)
 
-# adding one exception
+# добавление одного исключения
 exception_info = MapiCalendarExceptionInfo()
-exception_info.location = "London"
-exception_info.subject = "Subj"
+exception_info.location = "Лондон"
+exception_info.subject = "Тема"
 exception_info.original_start_date = exception_date
 exception_info.start_date_time = exception_date
 exception_info.end_date_time = exception_date + timedelta(hours=5)
 pattern.exceptions.append(exception_info)
 pattern.modified_instance_dates.append(exception_date)
-# every modified instance also has to have an entry in the DeletedInstanceDates field with the original instance date.
+# каждая измененная копия также должна иметь запись в поле DeletedInstanceDates с оригинальной датой экземпляра.
 pattern.deleted_instance_dates.append(exception_date)
 
-# adding one deleted instance
+# добавление одного удаленного экземпляра
 pattern.deleted_instance_dates.append(exception_date + timedelta(days=2))
 
 rec_coll = MapiRecipientCollection()
 rec_coll.add("receiver@domain.com", "receiver", MapiRecipientType.TO)
 new_cal = MapiCalendar(
-    "This is Location",
-    "This is Summary",
-    "This is recurrence test",
+    "Это местоположение",
+    "Это резюме",
+    "Это тест повторения",
     start_date,
     start_date + timedelta(hours=3),
     "organizer@domain.com",
@@ -109,6 +107,6 @@ new_cal = MapiCalendar(
 new_cal.recurrence = recurrence
 
 with PersonalStorage.create("output.pst", FileFormatVersion.UNICODE) as pst:
-    calendar_folder = pst.create_predefined_folder("Calendar", StandardIpmFolder.APPOINTMENTS)
+    calendar_folder = pst.create_predefined_folder("Календарь", StandardIpmFolder.APPOINTMENTS)
     calendar_folder.add_message(new_cal)
 ```

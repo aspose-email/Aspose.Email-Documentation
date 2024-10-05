@@ -1,31 +1,28 @@
 ---
-title: "Доступ к почтовым службам с помощью OAuth"
+title: "Доступ к почтовым услугам с использованием OAuth"
 url: /ru/java/access-mail-services-using-oauth/
 weight: 190
 type: docs
 ---
 
+Поддержка OAuth 2.0 была добавлена в Aspose.Email и может быть использована для доступа к **SMTP**, **POP3**, **IMAP** и **EWS** серверам. В целом, все серверы, поддерживающие **OAuth 2.0** токены доступа, могут быть использованы с Aspose.Email, но наши почтовые клиенты были протестированы с сервером Gmail и серверами Microsoft Office 365. Доступ к серверу через [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient), [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client), [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) и [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) с OAuth может быть реализован двумя способами.
 
-В Aspose.Email добавлена поддержка OAuth 2.0, которую можно использовать для доступа **SMTP**, **POP3**, **IMAP** and **EWS** серверы.
-В общем, все серверы, поддерживающие **OAuth 2.0** токены на предъявителя можно использовать с Aspose.Email, но наши почтовые клиенты были протестированы на почтовых серверах Google и серверах Microsoft Офис 365.
-Доступ к серверу с [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient), [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client), [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) and [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) с помощью OAuth может быть реализовано двумя способами.
+1. Предоставить токен доступа непосредственно в конструктор почтового клиента. В этом случае пользователю необходимо понимать, что срок действия токенов доступа ограничен. Когда токен истекает, почтовый клиент не может быть использован для доступа к серверу.
+2. Предоставить собственную реализацию провайдера токенов на основе интерфейса [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) в конструктор почтового клиента. В этом случае клиент проверяет время истечения токена и запрашивает [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) для получения нового токена доступа, когда предыдущий истек. Таким образом, клиент периодически обновляет токены и может работать с сервером неограниченное время. Часто службы поддерживают простой способ обновления токенов доступа. Например, для реализации провайдера токенов могут быть использованы обновляющие токены в сервисах Google или поток аутентификации ROPC в платформе идентификации Microsoft.
 
-1. Предоставьте токен доступа непосредственно в конструктор почтового клиента. В этом случае пользователь должен понимать, что срок действия токенов доступа ограничен. По истечении срока действия токена почтовый клиент нельзя использовать для доступа к серверу.
-2. Предоставьте индивидуальную реализацию поставщика токенов на основе [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) интерфейс в конструкторе почтового клиента. В этом случае клиент проверяет время истечения срока действия токена и запросы [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) для нового токена доступа по истечении срока действия предыдущего. Таким образом, клиент периодически обновляет токены и может работать с сервером неограниченное время. Часто сервисы поддерживают простой способ обновления токенов доступа. Например, использование токенов обновления в сервисах Google или потока аутентификации ROPC в платформе идентификации Microsoft можно использовать для реализации поставщика токенов.
+## **Настройка учетной записи на соответствующем сервере**
 
-## **Настройте учетную запись на соответствующем сервере**
+Следующие статьи помогут вам настроить учетные записи для доступа к почтовым услугам.
 
-Следующие статьи помогут вам настроить учетные записи для доступа к почтовым службам.
+- Для [Office 365](https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth)
+- Для [Gmail](https://developers.google.com/gmail/imap/imap-smtp)
 
-- For [Офис 365](https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth)
-- For [Gmail](https://developers.google.com/gmail/imap/imap-smtp)
+## **Доступ к почтовым услугам с токенами доступа**
 
-## **Доступ к почтовым службам с помощью токенов доступа**
-
-В следующих примерах кода показано, как подключиться к почтовым службам с помощью токенов доступа.
+Следующие примеры кода показывают, как подключиться к почтовым услугам, используя токены доступа.
 
 ```java
-// Connecting to SMTP server
+// Подключение к SMTP-серверу
 try (SmtpClient client = new SmtpClient(
         "smtp.gmail.com",
         587,
@@ -36,7 +33,7 @@ try (SmtpClient client = new SmtpClient(
 
 }
 
-// Connecting to IMAP server
+// Подключение к IMAP-серверу
 try (ImapClient client = new ImapClient(
         "imap.gmail.com",
         993,
@@ -47,7 +44,7 @@ try (ImapClient client = new ImapClient(
 
 }
 
-// Connecting to POP3 server
+// Подключение к POP3-серверу
 try (Pop3Client client = new Pop3Client(
         "pop.gmail.com",
         995,
@@ -59,9 +56,9 @@ try (Pop3Client client = new Pop3Client(
 }
 ```
 
-## **Доступ к почтовым службам у поставщиков токенов**
+## **Доступ к почтовым услугам с провайдерами токенов**
 
-В следующих примерах кода показано, как подключиться к почтовым службам с помощью поставщика токенов.
+Следующие примеры кода показывают, как подключиться к почтовым услугам, используя провайдера токенов.
 
 ```java
 ITokenProvider tokenProvider = TokenProvider.Google.getInstance(
@@ -69,7 +66,7 @@ ITokenProvider tokenProvider = TokenProvider.Google.getInstance(
         "ClientSecret",
         "RefreshToken");
 
-// Connecting to SMTP server
+// Подключение к SMTP-серверу
 try (SmtpClient client = new SmtpClient(
         "smtp.gmail.com",
         587,
@@ -79,7 +76,7 @@ try (SmtpClient client = new SmtpClient(
 
 }
 
-// Connecting to IMAP server
+// Подключение к IMAP-серверу
 try (ImapClient client = new ImapClient(
         "imap.gmail.com",
         993,
@@ -89,7 +86,7 @@ try (ImapClient client = new ImapClient(
 
 }
 
-// Connecting to POP3 server
+// Подключение к POP3-серверу
 try (Pop3Client client = new Pop3Client(
         "pop.gmail.com",
         995,
@@ -100,9 +97,9 @@ try (Pop3Client client = new Pop3Client(
 }
 ```
 
-## **Внедрение специального поставщика iTokenProvider для Офис 365**
+## **Реализация пользовательского ITokenProvider для Office 365**
 
-Для доступа к почтовым службам Офис 365 можно использовать приведенную ниже реализацию поставщика токенов.
+Вы можете использовать реализацию провайдера токенов ниже для доступа к почтовым услугам Office 365.
 
 ```java
 import java.io.BufferedReader;
@@ -121,12 +118,12 @@ import java.util.Map;
 
 /**
  * <p>
- * Azure resource owner password credential (ROPC) token provider
+ * Провайдер токенов учетных данных владельца ресурса Azure (ROPC)
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc
  * https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth
  * https://portal.azure.com
  * https://developer.microsoft.com/en-us/graph/graph-explorer/#
- * token parser https://jwt.io
+ * парсер токенов https://jwt.io
  * </p>
  */
 class AzureROPCTokenProvider implements ITokenProvider {
@@ -261,7 +258,7 @@ class AzureROPCTokenProvider implements ITokenProvider {
                 result.append(line);
             }
         } catch (IOException e) {
-            // ignore
+            // игнорировать
         }
         return result.toString();
     }
@@ -278,7 +275,7 @@ class AzureROPCTokenProvider implements ITokenProvider {
 }
 ```
 
-В следующих примерах кода показано, как подключиться к службам Офис 365 с помощью специального поставщика токенов.
+Следующие примеры кода показывают, как подключиться к службам Office 365 с использованием пользовательского провайдера токенов.
 
 ```java
 ITokenProvider tokenProvider = new AzureROPCTokenProvider(
@@ -289,7 +286,7 @@ ITokenProvider tokenProvider = new AzureROPCTokenProvider(
         "Password",
         scopes);
 
-// Connecting to SMTP server
+// Подключение к SMTP-серверу
 try (SmtpClient client = new SmtpClient(
         "smtp.office365.com",
         587,
@@ -299,7 +296,7 @@ try (SmtpClient client = new SmtpClient(
 
 }
 
-// Connecting to IMAP server
+// Подключение к IMAP-серверу
 try (ImapClient client = new ImapClient(
         "outlook.office365.com",
         993,
@@ -309,7 +306,7 @@ try (ImapClient client = new ImapClient(
 
 }
 
-// Connecting to POP3 server
+// Подключение к POP3-серверу
 try (Pop3Client client = new Pop3Client(
         "outlook.office365.com",
         995,
@@ -319,7 +316,7 @@ try (Pop3Client client = new Pop3Client(
 
 }
 
-// Connecting to EWS server
+// Подключение к EWS-серверу
 final String mailboxUri = "https://outlook.office365.com/ews/exchange.asmx";
 ICredentials credentials = new OAuthNetworkCredential(tokenProvider);
 try (IEWSClient ewsClient = EWSClient.getEWSClient(mailboxUri, credentials)) {

@@ -5,13 +5,13 @@ weight: 10
 type: docs
 ---
 
-## **Отправка сообщений с помощью MailGun и SendGrid**
+## **Отправка сообщений с использованием MailGun и SendGrid**
 
-Aspose.Email предоставляет унифицированный API для отправки сообщений электронной почты с помощью сервисов MailGun или SendGrid. API позволяет инициализировать клиента, подготовить и отправить сообщение электронной почты.
+Aspose.Email предоставляет унифицированный API для отправки электронных писем с использованием услуг MailGun или SendGrid. API позволяет инициализировать клиента, подготовить и отправить электронное сообщение.
 
-Во-первых, важно настроить параметры в зависимости от того, какой сервис будет использоваться для отправки сообщений. С помощью [DeliveryServiceOptions](https://reference.aspose.com/email/java/com.aspose.email/deliveryserviceoptions/) класс, задайте параметры DeliveryServiceClient. В следующем примере кода показано, как настроить параметры сервисов.
+Сначала важно настроить параметры в зависимости от того, какая служба будет использоваться для отправки сообщений. С помощью класса [DeliveryServiceOptions](https://reference.aspose.com/email/java/com.aspose.email/deliveryserviceoptions/) установите параметры DeliveryServiceClient. Следующий образец кода покажет, как настроить параметры для служб.
 
-**Клиент MailGun** options:
+**Параметры клиента MailGun**:
 
 ```java
 String domain = "YOUR_MAILGUN_DOMEN";
@@ -21,19 +21,19 @@ opt.setDomain(domain);
 opt.setApiKey(privApiKey);
 ```
 
-**Клиент SendGrid** options:
+**Параметры клиента SendGrid**:
 
 ```java
 String privApiKey = "YOUR_SENDGRID_PRIVATE_API_KEY";
 SendGridClientOptions opt = new SendGridClientOptions();
 opt.setApiKey(privApiKey);
 ```
-Затем вызовите требуемый экземпляр клиента с помощью конструктора.
+Затем вызовите необходимый экземпляр клиента, используя строитель.
 
 ```java
 IDeliveryServiceClient client = DeliveryServiceClientFactory.get(opt);
 ```
-Наконец, подготовьте и отправьте сообщение по электронной почте.
+Наконец, подготовьте и отправьте электронное сообщение.
 
 ```java
 MailMessage eml = new MailMessage("fromAddress", "toAddress", "subject", "body");
@@ -46,5 +46,3 @@ if (!resp.isSuccessful()) {
     }
 }
 ```
-
-

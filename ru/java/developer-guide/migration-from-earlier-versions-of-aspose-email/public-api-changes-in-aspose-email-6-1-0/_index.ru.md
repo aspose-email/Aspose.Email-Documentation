@@ -1,109 +1,109 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 6.1.0"
+title: "Изменения в публичном API Aspose.Email 6.1.0"
 url: /ru/java/public-api-changes-in-aspose-email-6-1-0/
 weight: 220
 type: docs
 ---
 
-Ниже приведен список всех изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание членов, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
-## **Добавлены API**
-- Class `WebDavContactSaveOptions`
-- Method `WebDavContactSaveOptions.#ctor`
-- Property `WebDavContactSaveOptions.getDefault`
+Ниже приведен список изменений, внесенных в публичный API, таких как добавленные, переименованные, удаленные или устаревшие члены, а также любые изменения, несовместимые с предыдущими версиями, сделанные в Aspose.Email для Java. Если у вас есть сомнения по поводу любого из перечисленных изменений, пожалуйста, поднимите этот вопрос на форуме поддержки Aspose.Email.
+## **Добавленные API**
+- Класс `WebDavContactSaveOptions`
+- Метод `WebDavContactSaveOptions.#ctor`
+- Свойство `WebDavContactSaveOptions.getDefault`
 
-- Class `MapiContactSaveOptions`
-- Method `MapiContactSaveOptions.#ctor`
-- Property `MapiContactSaveOptions.getDefault`
+- Класс `MapiContactSaveOptions`
+- Метод `MapiContactSaveOptions.#ctor`
+- Свойство `MapiContactSaveOptions.getDefault`
 
-- Class `PipeliningMode`
-- Field/Enum `PipeliningMode.Auto`
-- Field/Enum `PipeliningMode.Disabled`
-- Field/Enum `PipeliningMode.Enabled`
+- Класс `PipeliningMode`
+- Поле/Перечисление `PipeliningMode.Auto`
+- Поле/Перечисление `PipeliningMode.Disabled`
+- Поле/Перечисление `PipeliningMode.Enabled`
 
-- Class `PipeliningStatus`
-- Method `PipeliningStatus.to_PipeliningStatus(boolean mode)`
-- Method `PipeliningStatus.to_PipeliningStatus(int mode)`
-- Method `PipeliningStatus.to_Boolean(PipeliningStatus status)`
-- Method `PipeliningStatus.to_Boolean()`
-- Method `PipeliningStatus.toString`
-- Property `PipeliningStatus.getClientMode, setClientMode`
-- Property `PipeliningStatus.getPipeliningEnabled`
-- Property `PipeliningStatus.getSupportedByServer, setSupportedByServer`
+- Класс `PipeliningStatus`
+- Метод `PipeliningStatus.to_PipeliningStatus(boolean mode)`
+- Метод `PipeliningStatus.to_PipeliningStatus(int mode)`
+- Метод `PipeliningStatus.to_Boolean(PipeliningStatus status)`
+- Метод `PipeliningStatus.to_Boolean()`
+- Метод `PipeliningStatus.toString`
+- Свойство `PipeliningStatus.getClientMode, setClientMode`
+- Свойство `PipeliningStatus.getPipeliningEnabled`
+- Свойство `PipeliningStatus.getSupportedByServer, setSupportedByServer`
 
-- Field/Enum `PhoneNumberCategory.PrimaryValue`
-- Field/Enum `MapiPropertyTag.PidTagUrlName`
+- Поле/Перечисление `PhoneNumberCategory.PrimaryValue`
+- Поле/Перечисление `MapiPropertyTag.PidTagUrlName`
 
-- Method `IEWSClient.createFolder(String, String)`
-- Property `IEWSClient.getUseSlashAsFolderSeparator, setUseSlashAsFolderSeparator`
+- Метод `IEWSClient.createFolder(String, String)`
+- Свойство `IEWSClient.getUseSlashAsFolderSeparator, setUseSlashAsFolderSeparator`
 
-- Method `Contact.to_MapiContact(Contact contact)`
-- Method `Contact.to_Contact(MapiContact contact)`
-- Method `Contact.toString`
+- Метод `Contact.to_MapiContact(Contact contact)`
+- Метод `Contact.to_Contact(MapiContact contact)`
+- Метод `Contact.toString`
 
-- Method `MapiAttachmentCollection.remove(MapiAttachment)`
+- Метод `MapiAttachmentCollection.remove(MapiAttachment)`
 
-- Method `PersonalStorage.extractAttachments( MessageInfo)`
-- Method `PersonalStorage.extractAttachments(String)`
-- Method `PersonalStorage.getParentFolder(byte[])`
-- Method `PersonalStorage.getParentFolder(SString)`
+- Метод `PersonalStorage.extractAttachments( MessageInfo)`
+- Метод `PersonalStorage.extractAttachments(String)`
+- Метод `PersonalStorage.getParentFolder(byte[])`
+- Метод `PersonalStorage.getParentFolder(SString)`
 
-- Property `AssociatedPerson.getPrefered, setPrefered`
-- Property `InstantMessengerAddress.getPrefered, setPrefered`
-- Property `ObjectIdentifier.getWebDavId, setWebDavId`
-- Property `PhoneNumberCategory.getPrimary, setPrimary`
-- Property `Url.getPrefered, setPrefered`
-- Property `UrlList.getFtp, setFtp`
+- Свойство `AssociatedPerson.getPrefered, setPrefered`
+- Свойство `InstantMessengerAddress.getPrefered, setPrefered`
+- Свойство `ObjectIdentifier.getWebDavId, setWebDavId`
+- Свойство `PhoneNumberCategory.getPrimary, setPrimary`
+- Свойство `Url.getPrefered, setPrefered`
+- Свойство `UrlList.getFtp, setFtp`
 
-- Method `SmtpClient.beginForward(IConnection, String, MailAddressCollection, MailMessage)`
-- Method `SmtpClient.beginForward(IConnection, String, MailAddressCollection, MailMessage, AsyncCallback)`
-- Method `SmtpClient.beginForward(IConnection, String, MailAddressCollection, MailMessage, AsyncCallback, Object)`
-- Method `SmtpClient.beginForward(IConnection, String, String, MailMessage)`
-- Method `SmtpClient.beginForward(IConnection, String, String, MailMessage, AsyncCallback)`
-- Method `SmtpClient.beginForward(IConnection, String, String, MailMessage, AsyncCallback, Object)`
-- Method `SmtpClient.beginForward(String, MailAddressCollection, MailMessage)`
-- Method `SmtpClient.beginForward(String, MailAddressCollection, MailMessage, AsyncCallback)`
-- Method `SmtpClient.beginForward(String, MailAddressCollection, MailMessage, AsyncCallback,
+- Метод `SmtpClient.beginForward(IConnection, String, MailAddressCollection, MailMessage)`
+- Метод `SmtpClient.beginForward(IConnection, String, MailAddressCollection, MailMessage, AsyncCallback)`
+- Метод `SmtpClient.beginForward(IConnection, String, MailAddressCollection, MailMessage, AsyncCallback, Object)`
+- Метод `SmtpClient.beginForward(IConnection, String, String, MailMessage)`
+- Метод `SmtpClient.beginForward(IConnection, String, String, MailMessage, AsyncCallback)`
+- Метод `SmtpClient.beginForward(IConnection, String, String, MailMessage, AsyncCallback, Object)`
+- Метод `SmtpClient.beginForward(String, MailAddressCollection, MailMessage)`
+- Метод `SmtpClient.beginForward(String, MailAddressCollection, MailMessage, AsyncCallback)`
+- Метод `SmtpClient.beginForward(String, MailAddressCollection, MailMessage, AsyncCallback,
   Object)`
-- Method `SmtpClient.beginForward(String, String, MailMessage)`
-- Method `SmtpClient.beginForward(String, String, MailMessage, AsyncCallback)`
-- Method `SmtpClient.beginForward(String, String, MailMessage, AsyncCallback, Object)`
+- Метод `SmtpClient.beginForward(String, String, MailMessage)`
+- Метод `SmtpClient.beginForward(String, String, MailMessage, AsyncCallback)`
+- Метод `SmtpClient.beginForward(String, String, MailMessage, AsyncCallback, Object)`
 
-- Method `SmtpClient.beginNoop`
-- Method `SmtpClient.beginNoop(IConnection)`
-- Method `SmtpClient.beginNoop(IConnection, AsyncCallback)`
-- Method `SmtpClient.beginNoop(IConnection, AsyncCallback, Object)`
-- Method `SmtpClient.beginNoop(AsyncCallback)`
-- Method `SmtpClient.beginNoop(AsyncCallback, Object)`
+- Метод `SmtpClient.beginNoop`
+- Метод `SmtpClient.beginNoop(IConnection)`
+- Метод `SmtpClient.beginNoop(IConnection, AsyncCallback)`
+- Метод `SmtpClient.beginNoop(IConnection, AsyncCallback, Object)`
+- Метод `SmtpClient.beginNoop(AsyncCallback)`
+- Метод `SmtpClient.beginNoop(AsyncCallback, Object)`
 
-- Method `SmtpClient.beginSend(IConnection, MailMessage)`
-- Method `SmtpClient.beginSend(IConnection, MailMessage, AsyncCallback)`
-- Method `SmtpClient.beginSend(IConnection, MailMessage, AsyncCallback, Object)`
-- Method `SmtpClient.beginSend(IConnection, MailMessage[])`
-- Method `SmtpClient.beginSend(IConnection, String, String, String, String)`
-- Method `SmtpClient.beginSend(IConnection, String, String, String, String, AsyncCallback)`
-- Method `SmtpClient.beginSend(IConnection, String, String, String, String, AsyncCallback, Object)`
-- Method `SmtpClient.beginSend(MailMessage)`
-- Method `SmtpClient.beginSend(MailMessage, AsyncCallback)`
-- Method `SmtpClient.beginSend(MailMessage, AsyncCallback, Object)`
-- Method `SmtpClient.beginSend(MailMessage[])`
-- Method `SmtpClient.beginSend(String, String, String, String)`
-- Method `SmtpClient.beginSend(String, String, String, String, AsyncCallback)`
-- Method `SmtpClient.beginSend(String, String, String, String, AsyncCallback, Object)`
+- Метод `SmtpClient.beginSend(IConnection, MailMessage)`
+- Метод `SmtpClient.beginSend(IConnection, MailMessage, AsyncCallback)`
+- Метод `SmtpClient.beginSend(IConnection, MailMessage, AsyncCallback, Object)`
+- Метод `SmtpClient.beginSend(IConnection, MailMessage[])`
+- Метод `SmtpClient.beginSend(IConnection, String, String, String, String)`
+- Метод `SmtpClient.beginSend(IConnection, String, String, String, String, AsyncCallback)`
+- Метод `SmtpClient.beginSend(IConnection, String, String, String, String, AsyncCallback, Object)`
+- Метод `SmtpClient.beginSend(MailMessage)`
+- Метод `SmtpClient.beginSend(MailMessage, AsyncCallback)`
+- Метод `SmtpClient.beginSend(MailMessage, AsyncCallback, Object)`
+- Метод `SmtpClient.beginSend(MailMessage[])`
+- Метод `SmtpClient.beginSend(String, String, String, String)`
+- Метод `SmtpClient.beginSend(String, String, String, String, AsyncCallback)`
+- Метод `SmtpClient.beginSend(String, String, String, String, AsyncCallback, Object)`
 
-- Method `SmtpClient.endForward(IAsyncResult)`
-- Method `SmtpClient.endNoop(IAsyncResult)`
-- Method `SmtpClient.endSend(IAsyncResult)`
+- Метод `SmtpClient.endForward(IAsyncResult)`
+- Метод `SmtpClient.endNoop(IAsyncResult)`
+- Метод `SmtpClient.endSend(IAsyncResult)`
 
-- Method `SmtpClient.forward(IConnection, String, MailAddressCollection, MailMessage)`
-- Method `SmtpClient.forward(IConnection, String, String, MailMessage)`
+- Метод `SmtpClient.forward(IConnection, String, MailAddressCollection, MailMessage)`
+- Метод `SmtpClient.forward(IConnection, String, String, MailMessage)`
 
-- Method `SmtpClient.noop`
-- Method `SmtpClient.noop(IConnection)`
+- Метод `SmtpClient.noop`
+- Метод `SmtpClient.noop(IConnection)`
 
-- Method `SmtpClient.send(IConnection, MailMessage)`
-- Method `SmtpClient.send(IConnection, MailMessage[])`
-- Method `SmtpClient.send(IConnection, MailMessageCollection)`
-- Method `SmtpClient.send(IConnection, IEnumerable)`
-- Method `SmtpClient.send(IConnection, String, String, String, String)`
-- Method `SmtpClient.send(MailMessage[])`
-- Method `SmtpClient.send(MailMessageCollection)`
+- Метод `SmtpClient.send(IConnection, MailMessage)`
+- Метод `SmtpClient.send(IConnection, MailMessage[])`
+- Метод `SmtpClient.send(IConnection, MailMessageCollection)`
+- Метод `SmtpClient.send(IConnection, IEnumerable)`
+- Метод `SmtpClient.send(IConnection, String, String, String, String)`
+- Метод `SmtpClient.send(MailMessage[])`
+- Метод `SmtpClient.send(MailMessageCollection)`

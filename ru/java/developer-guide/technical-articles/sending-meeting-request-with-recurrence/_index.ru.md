@@ -5,76 +5,71 @@ weight: 240
 type: docs
 ---
 
-
-С помощью Aspose.Email можно повторно генерировать запрос на встречу. В этой статье объясняется, как можно создать приглашение на собрание с определенной периодичностью. Уникальный идентификатор встречи можно сохранить для последующего использования для отправки любых обновлений о встрече.
-## **Создание запроса на собрание с повторением**
-В следующем примере кода показано, как этого добиться.
-
-
+С помощью Aspose.Email возможно генерировать запрос на встречу с повторением. В этой статье объясняется, как можно сгенерировать запрос на встречу с определенным повторением. Уникальный идентификатор назначения может быть сохранен для дальнейшего использования при отправке любого обновления к встрече.
+## **Генерация запроса на встречу с повторением**
+Следующий образец кода показывает, как это достичь.
 
 ~~~Java
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 String szUniqueId;
 
-// Create a mail message
+// Создание сообщения электронной почты
 MailMessage msg1 = new MailMessage();
 msg1.getTo().add("to@domain.com");
 msg1.setFrom(new MailAddress("from@gmail.com"));
 
-// Fill appointment object
+// Заполнение объекта назначения
 Date startDate = sdf.parse("2013-12-01 17:00:00");
 Date endDate = sdf.parse("2013-12-31 17:30:00");
 
-// Create appointment object
-Appointment agendaAppointment = new Appointment("same place", startDate, endDate, msg1.getFrom(), msg1.getTo());
+// Создание объекта назначения
+Appointment agendaAppointment = new Appointment("то же место", startDate, endDate, msg1.getFrom(), msg1.getTo());
 
-// Create unique id as it will help to access this appointment later
+// Создание уникального идентификатора, так как это поможет получить доступ к этому назначению позже
 szUniqueId = UUID.randomUUID().toString();
 agendaAppointment.setUniqueId(szUniqueId);
 agendaAppointment.setDescription("----------------");
 
-// Create a weekly reccurence pattern object
+// Создание объекта шаблона повторения для недели
 WeeklyRecurrencePattern pattern1 = new WeeklyRecurrencePattern(14);
 
-// Set weekly pattern properties like days: Mon, Tue and Thu
+// Установка свойств недельного шаблона, таких как дни: Пн, Вт и Чт
 pattern1.setStartDays(new int[3]);
 pattern1.getStartDays()[0] = CalendarDay.Monday;
 pattern1.getStartDays()[1] = CalendarDay.Tuesday;
 pattern1.getStartDays()[2] = CalendarDay.Thursday;
 pattern1.setInterval(1);
 
-// Set recurrence pattern for the appointment
+// Установка шаблона повторения для назначения
 agendaAppointment.setRecurrence(pattern1);
 
-// Attach this appointment with mail
+// Привязка этого назначения к почте
 msg1.getAlternateViews().addItem(agendaAppointment.requestApointment());
 
-// Create SmtpCleint
+// Создание SmtpCleint
 SmtpClient client = new SmtpClient("smtp.gmail.com", 587, "your.email@gmail.com", "your.password");
 client.setSecurityOptions(SecurityOptions.Auto);
 
-// Send mail with appointment request
+// Отправка почты с запросом на назначение
 client.send(msg1);
 
-// Return unique id for later usage
+// Возврат уникального идентификатора для дальнейшего использования
 // return szUniqueId;
 ~~~
-## **Отправить запрос на обновление встречи**
-Чтобы отправить обновление о предыдущей встрече, требуется уникальный идентификатор. В следующем примере кода показано, как можно отправить запрос на обновление записи
-
-
+## **Отправка запроса на обновление назначения**
+Для отправки обновления предыдущего назначения необходим уникальный идентификатор. Следующий пример кода показывает, как можно отправить запрос на обновление этого назначения.
 
 ~~~Java
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 Date startDate = sdf.parse("2013-12-12 17:00:00");
 Date endDate = sdf.parse("2013-12-12 17:30:00");
-Appointment appUpdate = new Appointment("Different Place", startDate, endDate, new MailAddress("newcustomeronnet@gmail.com"),
+Appointment appUpdate = new Appointment("Другое место", startDate, endDate, new MailAddress("newcustomeronnet@gmail.com"),
         MailAddressCollection.to_MailAddressCollection("kashif.iqbal@aspose.com"));
 appUpdate.setUniqueId(szUniqueId);
 WeeklyRecurrencePattern pattern3 = (WeeklyRecurrencePattern) appUpdate.getRecurrence();
-appUpdate.setSummary("update meeting request summary");
-appUpdate.setDescription("update");
-MailMessage msgUpdate = new MailMessage("newcustomeronnet@gmail.com", "kashif.iqbal@aspose.com", "06 - test email - update meeting request", "test email");
+appUpdate.setSummary("обновленное резюме запроса на встречу");
+appUpdate.setDescription("обновление");
+MailMessage msgUpdate = new MailMessage("newcustomeronnet@gmail.com", "kashif.iqbal@aspose.com", "06 - тестовое письмо - обновление запроса на встречу", "тестовое письмо");
 msgUpdate.addAlternateView(appUpdate.updateAppointment());
 SmtpClient smtp = new SmtpClient("server.domain.com", 587, "username", "password");
 smtp.send(msgUpdate);

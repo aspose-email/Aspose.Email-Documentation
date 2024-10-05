@@ -8,26 +8,26 @@ type: docs
 
 ## **Конвертировать OLM в PST**
 
-OLM (Outlook для Mac) — это формат файлов, используемый Microsoft Outlook для Mac для хранения сообщений электронной почты, контактов, календарей, задач и других данных. Это собственный формат файлов Outlook для Mac, поэтому открыть файл Outlook для Mac (OLM) в Outlook для Windows невозможно. Для работы с файлами OLM в Windows Aspose Email предоставляет инструменты, специально разработанные для обработки файлов OLM. Его подход заключается в преобразовании файлов OLM в формат PST (файл данных Outlook), который широко поддерживается в средах Windows. После преобразования в формат PST вы можете импортировать данные в Outlook для Windows или любой другой совместимый почтовый клиент. В следующем примере кода показано, как преобразовать OLM в PST.
+OLM (Outlook для Mac) — это формат файла, используемый Microsoft Outlook для Mac для хранения электронных писем, контактов, календарей, задач и других данных. Это родной формат файла для Outlook для Mac, поэтому невозможно открыть файл Outlook для Mac (OLM) в Outlook для Windows. Для работы с файлами OLM в Windows Aspose Email предоставляет инструменты, специально разработанные для обработки файлов OLM. Его подход заключается в конвертации файлов OLM в формат PST (файл данных Outlook), который широко поддерживается в средах Windows. После преобразования в формат PST вы можете импортировать данные в Outlook для Windows или любой другой совместимый почтовый клиент. Следующий пример кода покажет вам, как конвертировать OLM в PST.
 
-**Перенос данных электронной почты из формата OLM в формат PST**
+**Миграция данных электронной почты из формата OLM в формат PST**
 
 ```py
 
 import aspose.email as ae
 
-# create an instance of OlmStorage class to open source OLM
+# создайте экземпляр класса OlmStorage для открытия исходного OLM
 olm = ae.storage.olm.OlmStorage("my.olm")
-# create a new PST file
+# создайте новый файл PST
 pst = ae.storage.pst.PersonalStorage.create("my.pst", ae.storage.pst.FileFormatVersion.UNICODE)
 
-# recursively reads each folder and its messages
-# and adds them to the PST in the same order
+# рекурсивно считывает каждую папку и ее сообщения
+# и добавляет их в PST в том же порядке
 
 for folder in olm.folder_hierarchy:
     add_to_pst(pst.root_folder, folder)
 ```
-**Реализация get_container_class для классификации различных типов элементов Outlook**
+**Реализация 'get_container_class' для категоризации различных типов элементов Outlook**
 
 ```py
 def get_container_class(message_class):
@@ -48,7 +48,7 @@ def get_container_class(message_class):
 
     return "IPF.Note"
 ```
-**Реализация функции add_to_pst для переноса данных из файла OLM в файл PST**
+**Реализация функции 'add_to_pst' для передачи данных из файла OLM в файл PST**
 
 ```py
 

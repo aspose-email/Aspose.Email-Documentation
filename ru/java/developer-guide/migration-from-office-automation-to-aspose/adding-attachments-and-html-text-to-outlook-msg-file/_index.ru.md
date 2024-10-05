@@ -6,91 +6,91 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Наши советы по миграции показывают, как продукты Aspose можно использовать для улучшения приложений и избавления вас от зависимости от традиционной автоматизации.
+Наши советы по миграции показывают, как продукты Aspose могут быть использованы для улучшения ваших приложений и освобождения от зависимости от традиционной автоматизации.
 
-В этом совете по миграции показано, как создать файл MSG с телом в формате HTML и добавить к нему несколько вложений:
+Этот совет по миграции показывает, как создать файл MSG с форматированным в HTML телом и добавить к нему несколько вложений:
 
-- Раздел кода VBA, в котором используется [Автоматизация работы Microsoft Office](#office-automation) для создания файла MSG с вложениями и телом HTML.
-- То же самое было сделано с помощью [Aspose.Электронная почта для Java](#asposeemail-for-java).
+- Секция кода VBA, которая использует [Microsoft Office Automation](#office-automation) для создания файла MSG с вложениями и HTML телом.
+- То же самое, выполненное с использованием [Aspose.Email для Java](#asposeemail-for-java).
 
-{{% /alert %}}
-## **Автоматизация делопроизводства**
-Используя этот метод, Microsoft Outlook должен быть установлен на компьютере, где работает код VBA. Приведенный ниже фрагмент кода создает MSG-файл Outlook с вложениями и телом HTML.
+{{% /alert %}} 
+## **Office Automation**
+Используя этот метод, Microsoft Outlook должен быть установлен на машине, где выполняется код VBA. Приведённый ниже фрагмент кода создает файл Outlook MSG с вложениями и HTML телом.
 
 **VBA**
 
 ~~~cs
 
- ' Create an object of type Outlook.Application
+ ' Создать объект типа Outlook.Application
 
 Set objOutlookApplication = CreateObject("Outlook.Application")
 
-' Create an object of type olMailItem
+' Создать объект типа olMailItem
 
 Set objMsg = objOutlookApplication.CreateItem(olMailItem)
 
-' Set properties of the message file e.g. subject, body and to address
+' Установить свойства файла сообщения, такие как тема, тело и адрес назначения
 
-' Set subject
+' Установить тему
 
-objMsg.Subject = "This MSG file is created using Автоматизация делопроизводства."
+objMsg.Subject = "Этот файл MSG создан с использованием автоматизации Office."
 
-' Set to (recipient) address
+' Установить адрес (получателя)
 
 objMsg.To = "to@domain.com"
 
-' Set body of the email message
+' Установить тело электронного сообщения
 
-objMsg.HTMLBody = "<html><p>This MSG file is created using VBA code.</p>"
+objMsg.HTMLBody = "<html><p>Этот файл MSG создан с использованием кода VBA.</p>"
 
-' Add attachments to the message
+' Добавить вложения к сообщению
 
 objMsg.Attachments.Add "C:\test.bmp"
 
 objMsg.Attachments.Add "C:\test2.jpg"
 
-' Save as Outlook MSG file
+' Сохранить как файл Outlook MSG
 
 objMsg.SaveAs ("c:\testvba.msg")
 
-' Open the MSG file
+' Открыть файл MSG
 
 objMsg.Display
 
 
 ~~~
-## **Aspose.Электронная почта для Java**
-В приведенном ниже фрагменте кода используется библиотека Aspose.Email для Java для создания файла MSG, аналогичного [тот, который создан выше](#office-automation), с несколькими вложениями и телом HTML. Поскольку Aspose.Email для Java написан исключительно на Java, взаимодействие COM не требуется. Кроме того, на компьютере не нужно устанавливать Microsoft Outlook 2003/2007. Описанный ниже метод подходит, когда Microsoft Outlook не установлен или когда вы хотите создать файлы MSG на сервере.
+## **Aspose.Email для Java**
+Приведенный ниже фрагмент кода использует библиотеку Aspose.Email для Java для создания файла MSG, аналогичного [созданному выше](#office-automation), с несколькими вложениями и HTML телом. Поскольку Aspose.Email для Java написан полностью на Java, COM-интероп не требуется. Также Microsoft Outlook 2003/2007 не обязательно должен быть установлен на машине. Метод, описанный ниже, подходит, когда Microsoft Outlook не установлен или когда вы хотите генерировать файлы MSG на сервере.
 
-В приведенных ниже фрагментах кода показано, как выполнить ту же задачу на Java с помощью Aspose.Email для Java:
+Приведённые ниже фрагменты кода показывают, как выполнить ту же задачу на Java с использованием Aspose.Email для Java:
 
 ~~~Java
 
-// Create an instance of type MailMessage
+// Создать экземпляр типа MailMessage
 MailMessage msg = new MailMessage();
 
-// Set properties of message like subject, to and HTML body
-// Set subject
-msg.setSubject("This MSG file is created using Aspose.Email for .NET");
+// Установить свойства сообщения, такие как тема, адрес и HTML тело
+// Установить тему
+msg.setSubject("Этот файл MSG создан с использованием Aspose.Email для .NET");
 
-// Set from (sender) address
-msg.setSender(new MailAddress("from@domain.com", "From Name"));
+// Установить адрес (отправителя)
+msg.setSender(new MailAddress("from@domain.com", "Имя отправителя"));
 
-// Set to (recipient) address and name
-msg.getTo().addItem(new MailAddress("to@domain.com", "To Name"));
+// Установить адрес и имя (получателя)
+msg.getTo().addItem(new MailAddress("to@domain.com", "Имя получателя"));
 
-// Set HTML body of the email message
-msg.setHtmlBody("<html><p>This MSG file is created using Java code.</p>"
-        + "<p>Microsoft Outlook does not need to be installed on the machine running this code.</p>"
-        + "<p>This method is suitable for creating MSG files on the server side.</html>");
+// Установить HTML тело электронного сообщения
+msg.setHtmlBody("<html><p>Этот файл MSG создан с использованием кода Java.</p>" 
+        + "<p>Microsoft Outlook не нужно устанавливать на машине, выполняющей этот код.</p>"
+        + "<p>Этот метод подходит для создания файлов MSG на стороне сервера.</html>");
 
-// Add attachments to the message file
+// Добавить вложения к файлу сообщения
 msg.getAttachments().addItem(new Attachment("C:\\test.bmp"));
 msg.getAttachments().addItem(new Attachment("C:\\test2.jpg"));
 
-// Save as Outlook MSG file
+// Сохранить как файл Outlook MSG
 String strSaveFile = "C:\\TestAspose.msg";
 
 msg.save(strSaveFile, SaveOptions.getDefaultMsgUnicode());

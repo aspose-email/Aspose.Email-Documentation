@@ -1,14 +1,14 @@
 ---
-title: "Обновите и сохраните электронное письмо в Ruby"
+title: "Обновление и сохранение электронной почты в Ruby"
 url: /ru/java/update-and-save-an-email-in-ruby/
 weight: 80
 type: docs
 ---
 
-## **Aspose.Email - Обновите и сохраните электронное письмо**
-Чтобы обновить и сохранить электронное письмо, используя **Aspose.Электронная почта Java для Ruby**, просто вызовите **UpdateEmail** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Обновление и сохранение электронной почты**
+Для обновления и сохранения электронной почты с использованием **Aspose.Email Java для Ruby** просто вызовите модуль **UpdateEmail**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ``` ruby
 
@@ -16,76 +16,76 @@ type: docs
 
 
 
-\# Initialize and Load an existing MSG file by specifying the MessageFormat
+\# Инициализация и загрузка существующего MSG файла, указывая формат сообщения
 
 email = Rjb::import('com.aspose.email.MailMessage').load(data_dir + "Message.msg")
 
-\# Initialize a String variable to get the Email Subject
+\# Инициализация строковой переменной для получения темы электронной почты
 
 subject = email.getSubject()
 
-\# Append some more information to Subject
+\# Добавление дополнительной информации к теме
 
-subject = subject + " This text is added to the existing subject"
+subject = subject + " Этот текст добавлен к существующей теме"
 
-\# Set the Email Subject
+\# Установка темы электронной почты
 
 email.setSubject(subject)
 
-\# Initialize a String variable to get the Email's HTML Body
+\# Инициализация строковой переменной для получения HTML-содержимого электронной почты
 
 body = email.getHtmlBody()
 
-\# Apppend some more information to the Body variable
+\# Добавление дополнительной информации к переменной Body
 
-body = body + "<br> This text is added to the existing body"
+body = body + "<br> Этот текст добавлен к существующему содержимому"
 
-\# Set the Email Body
+\# Установка содержимого электронной почты
 
 email.setHtmlBody(body)
 
-\# Initialize MailAddressCollection object
+\# Инициализация объекта MailAddressCollection
 
 contacts = Rjb::import('com.aspose.email.MailAddressCollection').new
 
-\# Retrieve Email's TO list
+\# Получение списка получателей электронного письма
 
 contacts = email.getTo()
 
-\# Add another email address to collection
+\# Добавление еще одного адреса электронной почты в коллекцию
 
 contacts.add("to1@domain.com")
 
-\# Set the collection as Email's TO list
+\# Установка коллекции как списка получателей электронной почты
 
 email.setTo(contacts)
 
-\# Initialize MailAddressCollection
+\# Инициализация MailAddressCollection
 
 contacts = Rjb::import('com.aspose.email.MailAddressCollection').new
 
-\# Retrieve Email's CC list
+\# Получение списка CC электронной почты
 
 contacts = email.getCC()
 
-\# Add another email address to collection
+\# Добавление еще одного адреса электронной почты в коллекцию
 
 contacts.add("cc2@domain.com")
 
-\# Set the collection as Email's CC list
+\# Установка коллекции как списка CC электронной почты
 
 email.setCC(contacts)
 
-\# Save the Email message to disk by specifying the MessageFormat
+\# Сохранение сообщения электронной почты на диск, указывая формат сообщения
 
 email.save(data_dir + "UpdateMessage.msg", Rjb::import('com.aspose.email.MailMessageSaveType').getOutlookMessageFormat())
 
-\# Display Status
+\# Отображение статуса
 
-puts "Updated email message Successfully."
+puts "Сообщение электронной почты успешно обновлено."
 
 ```
-## **Загрузить рабочий код**
-Download **Обновить и сохранить электронное письмо (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Обновление и сохранение электронной почты (Aspose.Email)** с любого из нижеупомянутых сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/updateemail.rb)

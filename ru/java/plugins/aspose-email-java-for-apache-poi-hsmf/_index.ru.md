@@ -1,89 +1,89 @@
 ---
-title: "Aspose.Электронная почта Java для APACHE POI — HSMF"
+title: "Aspose.Email Java для Apache POI - HSMF"
 url: /ru/java/aspose-email-java-for-apache-poi-hsmf/
 weight: 10
 type: docs
 ---
 
-## **Introduction**
-### **POI Apache — HSMF**
-**HSMF** представляет собой чистую Java-реализацию формата Outlook MSG в проекте POI.
+## **Введение**
+### **Apache POI - HSMF**
+**HSMF** - это чистая Java-реализация формата Outlook MSG проекта POI.
 
-В настоящее время оно обеспечивает низкоуровневый доступ ко всем файлам для чтения, а также удобный для пользователя способ просмотра обычного текстового содержимого файлов MSG.
+На данный момент она предоставляет низкоуровневый доступ к чтению ко всему файлу, а также удобный интерфейс для извлечения общего текстового содержимого файлов MSG.
 
 Подробнее читайте на [poi.apache.org](http://poi.apache.org/hsmf/index.html)
-### **Aspose.Электронная почта для Java**
-Aspose.Email для Java — это библиотека классов Java, которая позволяет Java-приложениям читать и записывать файлы сообщений электронной почты в различных форматах без использования Microsoft Outlook.
+### **Aspose.Email для Java**
+Aspose.Email для Java - это библиотека классов Java, которая позволяет приложениям на Java читать и записывать файлы электронных сообщений в различных форматах без Microsoft Outlook.
 
-Он предоставляет классы для чтения и обновления файлов MSG, EML, EMLX, OFT, добавления/удаления вложений и получателей, обновления темы, текста и других свойств файла MSG.
+Она предоставляет классы для чтения и обновления файлов MSG, EML, EMLX, OFT, для добавления/удаления вложений и получателей, обновления темы, тела и других свойств файлов MSG.
 
 Подробнее читайте на [aspose.com](http://www.aspose.com/java/email-component.aspx)
-### **Aspose.Электронная почта Java для APACHE POI — HSMF**
-Проект Aspose.Email для POI Apache — HSMF показывает, как с помощью API Aspose.Email Java можно выполнять различные задачи по сравнению с POI Apache HSMF. В проекте также рассматриваются функции, доступные только в API-интерфейсах Aspose.Email, но не в POI Apache HSMF для работы с сообщениями электронной почты.
+### **Aspose.Email Java для Apache POI - HSMF**
+Проект Aspose.Email для Apache POI - HSMF демонстрирует, как различные задачи могут быть выполнены с использованием Aspose.Email Java API по сравнению с Apache POI HSMF. Проект также охватывает функции, которые доступны только в Aspose.Email API, но не в Apache POI HSMF для работы с электронными сообщениями.
 
-Этот проект полезен разработчикам, которые хотят сравнить POI Apache HSMF с Aspose.Email ИЛИ перейти с POI Apache HSMF на Aspose.Email.
+Этот проект полезен для разработчиков, которые хотят сравнить Apache POI HSMF с Aspose.Email или совершить миграцию с Apache POI HSMF на Aspose.Email.
 ## **Системные требования и поддерживаемые платформы**
 ### **Системные требования**
-**Ниже приведены системные требования для выполнения Aspose.Email Java для POI Apache — HSMF:**
+**Следующие системные требования для выполнения Aspose.Email Java для Apache POI - HSMF:**
 
-- Установлена Java 1.4 или выше.
+- Установлен Java 1.4 или выше.
 - Загружен компонент Aspose.Email.
-- Загружены библиотеки POI Apache — HSMF.
+- Загружены библиотеки Apache POI - HSMF.
 ## **Поддерживаемые платформы**
-**Ниже перечислены поддерживаемые платформы:**
+**Следующие платформы поддерживаются:**
 
-- API Apache 3.11.
+- Apache POI 3.11.
 - Aspose.Email 4.2.0.0 и выше.
-- Java IDE (Eclipse, NetBeans, IntelliJ,...).
-## **Загрузка и настройка**
-Вы можете напрямую включить исходный код **Aspose.Электронная почта Java для APACHE POI** в вашем собственном проекте следующие версии запущенных примеров доступны для загрузки на всех нижеперечисленных сайтах социального программирования:
-### **Релизы на базе Maven**
+- Java IDE (Eclipse, NetBeans, IntelliJ и др.).
+## **Скачивание и настройка**
+Вы можете напрямую включить исходный код **Aspose.Email Java для Apache POI** в ваш собственный проект. Следующие версии работающих примеров доступны для скачивания на всех нижеуказанных социальных кодирующих сайтах:
+### **Релизы - на базе Maven**
 #### **CodePlex**
-- [Aspose.Электронная почта Java для POI Apache HSMF - версия 1.0](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
+- [Aspose.Email Java для Apache POI HSMF - v 1.0](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 #### **GitHub**
-- [Aspose.Электронная почта Java для POI Apache HSMF - версия 1.0](https://github.com/aspose-Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-### **Релизы — на основе Java**
-Следующие версии примеров запуска доступны для загрузки на всех нижеперечисленных сайтах социального программирования:
+- [Aspose.Email Java для Apache POI HSMF - v 1.0](https://github.com/aspose-Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
+### **Релизы - на базе Java**
+Следующие версии работающих примеров доступны для скачивания на всех нижеуказанных социальных кодирующих сайтах:
 #### **CodePlex**
-- **Примеры сравнения**
-  - [Aspose.Email и POI Apache — HSMF — версия 1.0](https://archive.codeplex.com/?p=asposeapachepoi)
-- **Дополнительные возможности Aspose.Email**
-  - [Недостающие функции APACHE POI — HSMF — версия 1.1](https://archive.codeplex.com/?p=asposeapachepoi)
-  - [Недостающие функции APACHE POI — HSMF — версия 1.0](https://archive.codeplex.com/?p=asposeapachepoi)
+- **Примеры сравнений** 
+  - [Aspose.Email против Apache POI - HSMF - v 1.0](https://archive.codeplex.com/?p=asposeapachepoi)
+- **Больше функций Aspose.Email** 
+  - [Недостающие функции Apache POI - HSMF - v 1.1](https://archive.codeplex.com/?p=asposeapachepoi)
+  - [Недостающие функции Apache POI - HSMF - v 1.0](https://archive.codeplex.com/?p=asposeapachepoi)
 -----
 #### **GitHub**
-- **Примеры сравнения**
-  - [Aspose.Email и POI Apache — HSMF — версия 1.0](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/tag/Email-vs-HSMF-1.0)
-- **Дополнительные возможности Aspose.Email**
-  - [Недостающие функции APACHE POI — HSMF — версия 1.1](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/tag/More-Features-in-Aspose.Email-v1.1)
-  - [Недостающие функции APACHE POI — HSMF — версия 1.0](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/tag/More-Features-in-Aspose.Email-v1.0)
-### **Загрузка необходимых библиотек**
-Загрузите необходимые библиотеки, указанные ниже. Они необходимы для выполнения сравнительных примеров.
+- **Примеры сравнений** 
+  - [Aspose.Email против Apache POI - HSMF - v 1.0](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/tag/Email-vs-HSMF-1.0)
+- **Больше функций Aspose.Email** 
+  - [Недостающие функции Apache POI - HSMF - v 1.1](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/tag/More-Features-in-Aspose.Email-v1.1)
+  - [Недостающие функции Apache POI - HSMF - v 1.0](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/tag/More-Features-in-Aspose.Email-v1.0)
+### **Скачивание необходимых библиотек**
+Скачайте необходимые библиотеки, указанные ниже. Эти библиотеки необходимы для выполнения примеров сравнений.
 
-- **Aspose:** [Компонент Aspose.Email для компонента Java](https://downloads.aspose.com/)
-- **POI Apache**: [POI Apache — HSMF](http://poi.apache.org/download.html)
+- **Aspose:** [Aspose.Email для Java Компонент](https://downloads.aspose.com/)
+- **Apache POI**: [Apache POI - HSMF](http://poi.apache.org/download.html)
 ### **Как настроить исходный код**
-Выполните следующие простые шаги, чтобы открыть и расширить исходный код во время использования:
-#### **Интегрированная среда разработки**
-1. Скачайте или клонируйте исходный код.
-1. Откройте Eclipse и выберите **File** > **Import...**
-1. Select **General** > **Существующие проекты в рабочем пространстве**.
-1. Перейти к **выберите корневой каталог** последнего исходного кода, который вы скачали.
-1. Click **Finish** для успешного импорта загруженного проекта.
-#### **IDE NetBeans**
-1. Скачайте или клонируйте исходный код.
-1. Откройте NetBeans и выберите **File** > **Новый проект...**
-1. In **Выберите проект** вкладка: Выберите **Java** > **Java-проект с существующими исходными текстами**.
-1. In **Имя и местонахождение** вкладка: Укажите желаемое **Название проекта** and **Папка проекта**.
-1. In **Существующие источники** вкладка: нажмите **Добавить папку...** и выберите корневой каталог с последним загруженным исходным кодом.
-1. Click **Finish** для успешного создания загруженного проекта.
+Пожалуйста, следуйте этим простым шагам, чтобы открыть и расширить исходный код, используя:
+#### **Eclipse IDE**
+1. Скачайте/клонируйте исходный код.
+1. Откройте Eclipse и выберите **Файл** > **Импортировать...**
+1. Выберите **Общее** > **Существующие проекты в рабочей области**.
+1. Перейдите к **выбору корневого каталога** последнего скачанного исходного кода.
+1. Нажмите **Готово**, чтобы успешно импортировать скачанный проект.
+#### **NetBeans IDE**
+1. Скачайте/клонируйте исходный код.
+1. Откройте NetBeans и выберите **Файл** > **Новый проект...**
+1. На вкладке **Выберите проект**: выберите **Java** > **Java проект с существующими источниками**.
+1. На вкладке **Имя и расположение**: укажите желаемое **Имя проекта** и **Папку проекта**.
+1. На вкладке **Существующие источники**: нажмите **Добавить папку...** и перейдите к корневому каталогу последнего скачанного исходного кода.
+1. Нажмите **Готово**, чтобы успешно создать скачанный проект.
 #### **Обзор исходного кода**
-Есть два проекта, связанных с Aspose.Email Java для POI Apache — HSMF
+Существуют два проекта, связанные с Aspose.Email Java для Apache POI - HSMF
 
-- **Aspose.Email и APACHE POI HSMF** - Содержит сравнение кода функций POI Apache HSMF и Aspose.Email.
-- **Дополнительные возможности Aspose.Email** - Содержит множество функций Aspose.Email по сравнению с POI Apache HSMF для управления форматами файлов электронной почты Outlook из приложений
+- **Aspose.Email против Apache POI HSMF** - Содержит сравнительный код для функций в Apache POI HSMF и Aspose.Email.
+- **Больше функций Aspose.Email** - Содержит множество функций Aspose.Email в сравнении с Apache POI HSMF для манипулирования форматами файлов электронной почты Outlook в приложениях.
 
-Для настройки **Aspose.Электронная почта для Java API**, включите URL-адрес репозитория Aspose и зависимость Aspose.Email для Java API maven в свой **pom.xml** следующим образом:
+Чтобы настроить **Aspose.Email для Java API**, добавьте URL репозитория Aspose и зависимость maven Aspose.Email для Java API в ваш **pom.xml** следующим образом:
 #### **Репозиторий Aspose Maven**
 ``` java
 
@@ -102,7 +102,7 @@ Aspose.Email для Java — это библиотека классов Java, к
 </repositories>
 
 ```
-#### **Aspose.Email для зависимости Java Maven**
+#### **Зависимость Aspose.Email для Java Maven**
 ``` java
 
  <dependency>
@@ -119,56 +119,56 @@ Aspose.Email для Java — это библиотека классов Java, к
 
 ```
 
-**Note:** Пожалуйста, используйте доступную последнюю версию Aspose API.
-## **Поддерживайте, расширяйте и вносите свой вклад**
-### **Support**
-С самых первых дней существования Aspose мы знали, что просто предлагать нашим клиентам хорошие продукты будет недостаточно. Нам также необходимо было предоставлять хороший сервис. Мы сами являемся разработчиками и понимаем, как неприятно, когда технические проблемы или неполадки в программном обеспечении мешают вам делать то, что вам нужно. Мы здесь для того, чтобы решать проблемы, а не создавать их.
+**Примечание:** Пожалуйста, используйте доступную последнюю версию API Aspose.
+## **Поддержка, расширение и участие**
+### **Поддержка**
+С самых первых дней Aspose мы знали, что простого предоставления нашим клиентам хороших продуктов будет недостаточно. Нам также нужно было обеспечить хорошее обслуживание. Мы сами разработчики и понимаем, как неприятно, когда техническая проблема или особенность ПО мешает вам делать то, что нужно. Мы здесь, чтобы решать проблемы, а не создавать их.
 
-Вот почему мы предлагаем бесплатную поддержку. Любой, кто использует наш продукт, независимо от того, купил ли он его или использует оценку, заслуживает нашего полного внимания и уважения.
+Вот почему мы предлагаем бесплатную поддержку. Каждый, кто использует наш продукт, независимо от того, купили ли они его или используют оценочную версию, заслуживает нашего полного внимания и уважения.
 
-Вы можете регистрировать любые проблемы или предложения, связанные с Aspose.Email Java для POI Apache HSMF, используя любую из следующих платформ:
+Вы можете сообщить о любых проблемах или предложениях, связанных с Aspose.Email Java для Apache POI HSMF, используя любую из следующих платформ:
 
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [Github](https://github.com/aspose-Aspose.Email-for-Java/issues)
-### **Расширяйте и вносите**
-Aspose.Email Java для POI Apache HSMF имеет открытый исходный код, а его исходный код доступен на основных сайтах социального программирования, перечисленных ниже. Разработчикам рекомендуется загрузить исходный код и внести свой вклад, предложив или добавив новые функции или улучшив существующие, чтобы другие также могли воспользоваться этим.
+### **Расширение и участие**
+Aspose.Email Java для Apache POI HSMF является открытым исходным кодом, и его исходный код доступен на основных социальных кодирующих сайтах, перечисленных ниже. Разработчики поощряются скачивать исходный код и вносить свой вклад, предлагая или добавляя новые функции или улучшая существующие, чтобы и другие могли извлечь из этого выгоду.
 ### **Исходный код**
-Вы можете получить последний исходный код в одном из следующих мест
+Вы можете получить последний исходный код из одного из следующих мест
 
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [Github](https://github.com/aspose-Aspose.Email-for-Java/tree/master/Plugins/Aspose_Email_for_Apache_POI)
 ## **Примеры кода**
-В этом разделе рассматриваются следующие темы:
+Этот раздел включает в себя следующие темы
 
-- [Сравнение кода общих функций в Aspose.Email и POI Apache HSMF](/email/java/code-comparison-for-common-features-in-aspose-email-and-apache-poi-hsmf/)
-  - [Извлекайте вложения сообщений с помощью Aspose.Email и POI Apache HSMF](/email/java/extract-message-attachments-using-aspose-email-and-apache-poi-hsmf/)
-  - [Извлеките текст сообщения с помощью Aspose.Email и POI Apache HSMF](/email/java/extract-message-body-using-aspose-email-and-apache-poi-hsmf/)
-  - [Извлеките заголовки сообщений с помощью Aspose.Email и POI Apache HSMF](/email/java/extract-message-headers-using-aspose-email-and-apache-poi-hsmf/)
-  - [Загрузите сообщение электронной почты с помощью Aspose.Email и POI Apache HSMF](/email/java/load-email-message-using-aspose-email-and-apache-poi-hsmf/)
-  - [Сохраните сообщение электронной почты с помощью Aspose.Email и POI Apache HSMF](/email/java/save-email-message-using-aspose-email-and-apache-poi-hsmf/)
-- [Отсутствующие функции в POI Apache HSMF](/email/java/missing-features-in-apache-poi-hsmf/)
-  - [Работа с встречами с помощью Aspose.Email](/email/java/working-with-appointments-using-aspose-email/)
-    - [Создать новый элемент календаря](/email/java/create-new-calendar-item/)
-    - [Форматирование встречи в Aspose.Email](/email/java/formatting-an-appointment-in-aspose-email/)
-    - [Задать цветовую категорию для сообщения Outlook](/email/java/set-color-category-for-outlook-message/)
-    - [Создайте черновик запроса на встречу](/email/java/create-draft-appointment-request/)
+- [Сравнение кода для общих функций в Aspose.Email и Apache POI HSMF](/email/java/code-comparison-for-common-features-in-aspose-email-and-apache-poi-hsmf/)
+  - [Извлечение вложений сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-attachments-using-aspose-email-and-apache-poi-hsmf/)
+  - [Извлечение тела сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-body-using-aspose-email-and-apache-poi-hsmf/)
+  - [Извлечение заголовков сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-headers-using-aspose-email-and-apache-poi-hsmf/)
+  - [Загрузка электронного сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/load-email-message-using-aspose-email-and-apache-poi-hsmf/)
+  - [Сохранение электронного сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/save-email-message-using-aspose-email-and-apache-poi-hsmf/)
+- [Недостающие функции в Apache POI HSMF](/email/java/missing-features-in-apache-poi-hsmf/)
+  - [Работа с назначениями с помощью Aspose.Email](/email/java/working-with-appointments-using-aspose-email/)
+    - [Создание нового элемента календаря](/email/java/create-new-calendar-item/)
+    - [Форматирование назначения в Aspose.Email](/email/java/formatting-an-appointment-in-aspose-email/)
+    - [Установка цветовой категории для сообщения Outlook](/email/java/set-color-category-for-outlook-message/)
+    - [Создание черновика запроса назначения](/email/java/create-draft-appointment-request/)
     - [Создание звукового напоминания](/email/java/creating-audio-reminder/)
     - [Добавление вложений к элементам календаря](/email/java/adding-attachments-to-calendar-items/)
     - [Извлечение вложений из элементов календаря](/email/java/retrieving-attachments-from-calendar-items/)
-  - [Работа с электронной почтой с помощью Aspose.Email](/email/java/working-with-emails-using-aspose-email/)
+  - [Работа с электронными сообщениями с помощью Aspose.Email](/email/java/working-with-emails-using-aspose-email/)
     - [Получение информации о папках из почтового ящика IMAP](/email/java/get-folders-information-from-imap-mailbox/)
-    - [Добавьте встроенные изображения в сообщение электронной почты в Aspose.Email](/email/java/add-embedded-images-to-email-message-in-aspose-email/)
+    - [Добавление встроенных изображений в электронное сообщение в Aspose.Email](/email/java/add-embedded-images-to-email-message-in-aspose-email/)
     - [Чтение встроенных вложений электронной почты из сообщения в Aspose.Email](/email/java/read-embedded-email-attachments-from-message-in-aspose-email/)
-    - [Показать и скрыть дополнительные заголовки для печати с помощью MHTFormatOptions](/email/java/show-and-hide-extra-print-headers-using-mhtformatoptions/)
+    - [Показать и скрыть дополнительные заголовки печати с помощью MHTFormatOptions](/email/java/show-and-hide-extra-print-headers-using-mhtformatoptions/)
   - [Работа с контактами в Aspose.Email](/email/java/working-with-contacts-in-aspose-email/)
     - [Создание, сохранение и чтение контактов Outlook](/email/java/create-save-and-read-outlook-contacts/)
-  - [Конвертация в другие форматы в Aspose.Email](/email/java/conversion-to-other-formats-in-aspose-email/)
-    - [Конвертируйте MSG в другие форматы](/email/java/convert-msg-to-other-formats/)
-    - [Преобразование файла автономной папки Outlook (OST) в другие форматы](/email/java/convert-outlook-offline-folder-file-ost-to-other-formats/)
-    - [Сохранить сообщение электронной почты в формате PDF](/email/java/save-email-message-as-pdf/)
+  - [Преобразование в другие форматы в Aspose.Email](/email/java/conversion-to-other-formats-in-aspose-email/)
+    - [Преобразование MSG в другие форматы](/email/java/convert-msg-to-other-formats/)
+    - [Преобразование файла оффлайновой папки Outlook (OST) в другие форматы](/email/java/convert-outlook-offline-folder-file-ost-to-other-formats/)
+    - [Сохранение электронного сообщения в формате PDF](/email/java/save-email-message-as-pdf/)
   - [Работа с хранилищем Outlook в Aspose.Email](/email/java/working-with-outlook-storage-in-aspose-email/)
-    - [Проверьте защиту паролем PST](/email/java/check-pst-password-protection/)
+    - [Проверка защиты паролем PST](/email/java/check-pst-password-protection/)
     - [Чтение Outlook PST и получение информации о папках и подпапках](/email/java/read-outlook-pst-and-get-folders-and-subfolders-information/)
-    - [Прочитайте PST в хранилище Outlook](/email/java/read-outlook-storage-pst/)
-    - [Прочитайте файл шаблона Outlook OFT](/email/java/read-outlook-template-file-oft/)
-    - [Показать или скрыть дополнительные заголовки для печати](/email/java/show-or-hide-extra-print-headers/)
+    - [Чтение хранилища Outlook PST](/email/java/read-outlook-storage-pst/)
+    - [Чтение файла шаблона Outlook OFT](/email/java/read-outlook-template-file-oft/)
+    - [Показать или скрыть дополнительные заголовки печати](/email/java/show-or-hide-extra-print-headers/)

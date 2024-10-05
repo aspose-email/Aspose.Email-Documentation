@@ -1,21 +1,18 @@
 ---
-title: "Настройка кодировки текста по умолчанию в сообщении электронной почты"
+title: "Установка Кодировки Текста по Умолчанию в Электронном Сообщении"
 url: /ru/java/setting-default-text-encoding-in-email-message/
 weight: 120
 type: docs
 ---
 
+В этой статье представлено свойство [MailMessage.PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) и объясняется, как его использовать. С помощью этого свойства вы можете установить кодировку текста по умолчанию для следующих свойств:
 
-В этой статье представлены [MailMessage.PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) свойство и объясняет, как оно используется. С помощью этого свойства можно задать кодировку текста по умолчанию для следующих свойств:
-
-- Откуда: Отображаемое имя
+- От: Отображаемое имя
 - Кому: Отображаемое имя
-- Subject
-- Body
-## **Настройка кодировки текста по умолчанию**
-В предыдущих версиях Aspose.Email кодировка текста для свойств «от», «до», «тема» и «тело» задавалась отдельно. Чтобы повысить удобство использования, мы добавили [PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) свойство, которое устанавливает все сразу. Теперь стало проще убедиться, что весь текст в вышеуказанных свойствах правильно закодирован в сообщении электронной почты. В следующем фрагменте кода показано, как использовать французское слово в качестве отображаемого имени для адресов электронной почты, темы и текста.
-
-
+- Тема
+- Тело
+## **Установка Кодировки Текста по Умолчанию**
+В предыдущих версиях Aspose.Email кодировка текста для свойств от, кому, тема и тело устанавливали отдельно. Для улучшения удобства мы добавили свойство [PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)), которое устанавливает все сразу. Теперь проще убедиться, что весь текст в указанных свойствах закодирован правильно в электронном сообщении. Следующий фрагмент кода показывает, как использовать французское слово в качестве отображаемого имени для адресов электронной почты, темы и тела.
 
 ~~~Java
 // Create an instance of MailMessage

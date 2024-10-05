@@ -6,56 +6,48 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
 ![todo:image_alt_text](product-overview_1.png)
 ## **Добро пожаловать в Aspose.Email для Sharepoint!**
-[Aspose.Электронная почта для SharePoint](https://www.aspose.com/categories/sharepoint-components/aspose.email-for-sharepoint/default.aspx) это гибкое решение для преобразования файлов электронной почты и синхронизации писем из приложений Microsoft SharePoint.
+[Aspose.Email для SharePoint](https://www.aspose.com/categories/sharepoint-components/aspose.email-for-sharepoint/default.aspx) – это гибкое решение для конвертации файлов электронной почты и синхронизации электронных писем из приложений MicroSoft SharePoint.
 
-В этом руководстве описывается Aspose.Email для SharePoint [features](/email/sharepoint/features/), [installation](/email/sharepoint/installing-aspose-email-for-sharepoint/), [licensing](/email/sharepoint/license-aspose-email-for-sharepoint/), настройки и [общее использование](/email/sharepoint/overview/).
+Этот справочник описывает [особенности](/email/sharepoint/features/), [установку](/email/sharepoint/installing-aspose-email-for-sharepoint/), [лицензирование](/email/sharepoint/license-aspose-email-for-sharepoint/), настройки и [общие способы использования](/email/sharepoint/overview/) Aspose.Email для SharePoint. 
 
-{{% /alert %}}
-## **Конверсия электронной почты**
-Утилита преобразования электронной почты поддерживает загрузку следующих форматов файлов:
+{{% /alert %}} 
+## **Конвертация электронной почты**
+Утилита конвертации электронной почты поддерживает загрузку следующих форматов файлов:
 
-- EML — стандартная электронная почта MIME
-- MSG — формат файла сообщений Microsoft Outlook
+- EML – Стандартная MIME электронная почта
+- MSG – Формат файла сообщений Microsoft Outlook
 ## **Поддержка платформы**
-Aspose.Email для SharePoint предназначен для использования со следующими продуктами:
+Aspose.Email для SharePoint разработан для работы с следующими продуктами:
 
-- Сервер Microsoft SharePoint 2010
+- Microsoft SharePoint Server 2010
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email для SharePoint не предъявляет никаких системных требований, кроме требований к серверу SharePoint, на котором она установлена.
+Aspose.Email для SharePoint не имеет никаких системных требований, помимо тех, которые необходимы для сервера SharePoint, на котором он установлен.
 
 {{% /alert %}}
 ## **Обзор функций**
-### **Конвертируйте электронное письмо**
-Используйте Aspose.Email для SharePoint из библиотеки документов SharePoint для [преобразовать документ электронной почты](/email/sharepoint/email-conversion/):
+### **Конвертировать электронное письмо**
+Используйте Aspose.Email для SharePoint из библиотеки документов SharePoint, чтобы [конвертировать документ электронной почты](/email/sharepoint/email-conversion/): 
 
 ![todo:image_alt_text](product-overview_2.png)
 
 
 
-### **Синхронизация файлов**
-Синхронизация файлов в [Библиотека документов SharePoint](/email/sharepoint/document-library-synchronization/) с FTP-сервером:
+### **Синхронизировать файлы**
+Синхронизируйте файлы в [библиотеке документов SharePoint](/email/sharepoint/document-library-synchronization/) с FTP-сервером: 
 
 ![todo:image_alt_text](product-overview_3.png)
 
-
-
-
-[Синхронизация настраиваемого списка писем SharePoint](/email/sharepoint/email-synchronization/) с почтовым сервером, использующим протоколы POP3, IMAP или Exchange:
+[Synchronize a SharePoint custom list of emails](/email/sharepoint/email-synchronization/) с почтовым сервером, используя POP3, IMAP или Exchange: 
 
 ![todo:image_alt_text](product-overview_4.png)
 
-
-
-
-Синхронизация файлов в библиотеке документов SharePoint с [Обмен файлами в Dropbox](/email/sharepoint/synchronize-files-with-dropbox/):
+Синхронизируйте файлы в библиотеке документов SharePoint с [обменом файлами Dropbox](/email/sharepoint/synchronize-files-with-dropbox/): 
 
 ![todo:image_alt_text](product-overview_5.png)
-
-
 

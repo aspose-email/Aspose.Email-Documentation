@@ -1,51 +1,51 @@
 ---
-title: "Работа со свойствами MAPI"
+title: "Работа с MAPI-свойствами"
 url: /ru/java/working-with-mapi-properties/
 weight: 60
 type: docs
 ---
 
-## **Настройка свойств Outlook MAPI и доступ к ним**
+## **Установка и доступ к MAPI-свойствам Outlook**
 
-Aspose.Email для Java предоставляет [MapiProperty](https://reference.aspose.com/email/java/com.aspose.email/mapiproperty/) класс, представляющий свойство MAPI:
+Aspose.Email для Java предоставляет класс [MapiProperty](https://reference.aspose.com/email/java/com.aspose.email/mapiproperty/), который представляет MAPI-свойство:
 
 - Имя: имя свойства.
 - Тег: тег свойства.
-- Данные: данные об объекте недвижимости.
+- Данные: данные свойства.
 
-В этом разделе также рассматривается, как настроить свойства MAPI файла сообщений Outlook (MSG) и получить к ним доступ с помощью Aspose.Email для Java. Кроме того, был предоставлен пример кода по удалению свойств из файлов MSG и вложений.
+В этой теме также обсуждается, как установить и получить доступ к MAPI-свойствам файла сообщения Outlook (MSG) с использованием Aspose.Email для Java. Кроме того, предоставлен пример кода о том, как удалить свойства из MSG и вложений.
 
-### **Свойства чтения**
+### **Чтение свойств**
 
-Чтобы прочитать данные свойств MAPI из файла MSG, выполните следующие действия:
+Чтобы прочитать данные MAPI-свойств из MSG-файла:
 
-1. Создайте экземпляр [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) класс для загрузки файла MSG с использованием [Load()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#load-java.lang.String-) статический метод.
-2. Укажите ссылку на [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) object [getProperties()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getProperties--) метод получения [MapiPropertyCollection](https://reference.aspose.com/email/java/com.aspose.email/mapipropertycollection/).
-3. Получите [MapiProperty](https://reference.aspose.com/email/java/com.aspose.email/mapiproperty/) объект из [MapiPropertyCollection](https://reference.aspose.com/email/java/com.aspose.email/mapipropertycollection/) от [MapiPropertyTag](https://reference.aspose.com/email/java/com.aspose.email/mapipropertytag/) keys.
-4. Получите данные свойства с помощью соответствующего метода getXXX ().
+1. Создайте экземпляр класса [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/), чтобы загрузить MSG-файл, используя статический метод [Load()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#load-java.lang.String-).
+2. Установите ссылку на объект [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) метода [getProperties()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getProperties--) для получения [MapiPropertyCollection](https://reference.aspose.com/email/java/com.aspose.email/mapipropertycollection/).
+3. Получите объект [MapiProperty](https://reference.aspose.com/email/java/com.aspose.email/mapiproperty/) из [MapiPropertyCollection](https://reference.aspose.com/email/java/com.aspose.email/mapipropertycollection/) по ключам [MapiPropertyTag](https://reference.aspose.com/email/java/com.aspose.email/mapipropertytag/).
+4. Получите данные свойства с использованием соответствующего метода getXXX().
  
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-SetAndAccessOutlookMAPIProperties-AccessOutlookMAPIProperties.java" >}}
 
-### **Задайте дополнительные свойства**
+### **Установка дополнительных свойств**
 
-Следующий пример кода можно использовать для настройки дополнительных свойств Outlook [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/).
+Следующий пример кода можно использовать для установки дополнительных свойств сообщения Outlook [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/).
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-SetAdditionalMAPIProperties-SetAdditionalProperties.java" >}}
 
-### **Удалить свойства**
+### **Удаление свойств**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-SetAndAccessOutlookMAPIProperties-RemoveProperties.java" >}}
 
-## **Чтение именованных свойств Mapi из сообщений электронной почты**
+## **Чтение именованных Mapi-свойств из сообщений электронной почты**
 
-Microsoft Outlook поддерживает добавление именованных свойств MAPI в файл MSG. Эти свойства добавляются пользователем. Разработчики могут добавить именованное свойство, например «MyProp», в файл MSG с помощью Aspose.Email.
+Microsoft Outlook поддерживает добавление именованных MAPI-свойств в MSG-файл. Эти свойства добавляются пользователем. Разработчики могут добавить именованное свойство, например, “MyProp”, в MSG-файл с использованием Aspose.Email.
 
-Эта статья иллюстрирует Aspose.Email [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) [getNamedProperties()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getNamedProperties--) коллекция для чтения именованных свойств MAPI из файла MSG.
+В этой статье иллюстрируется Aspose.Email [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) коллекция [getNamedProperties()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getNamedProperties--) для чтения именованных MAPI-свойств из MSG-файла.
 
-### **Чтение именованного свойства MAPI**
+### **Чтение именованного MAPI-свойства**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-ReadNamedMapiProperties-ReadingNamedMAPIProperty.java" >}}
 
-### **Чтение именованного свойства Mapi из вложения**
+### **Чтение именованного Mapi-свойства из вложения**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-ReadNamedMapiProperties-ReadingNamedMapiPropertyFromAttachment.java" >}}

@@ -6,16 +6,16 @@ type: docs
 ---
 
 
-Иногда встроенные данные OLE представлены в виде вложения «OleData.mso» следующим образом [MapiAttachment](https://apireference.aspose.com/email/java/com.aspose.email/MapiAttachment) и его нужно извлекать вручную. Эти файлы OleData.mso представляют собой формат файлов компьютерных документов Microsoft (MCDF), и Aspose.Email не может поддерживать такие файлы. Однако Aspose.Email можно использовать в сочетании с другими библиотеками с открытым исходным кодом, такими как OpenMCDF, для чтения содержимого таких файлов для сохранения на диск. Aspose.Email предоставляет [InlineAttachmentExtractor](https://apireference.aspose.com/email/java/com.aspose.email/InlineAttachmentExtractor) класс для перечисления пакетов MSO из двоичных данных oledata.mso, которые затем можно использовать для извлечения содержимого библиотеками чтения Compound Files.
+Иногда данные встроенных OLE представляются в виде вложения "oleData.mso" через [MapiAttachment](https://apireference.aspose.com/email/java/com.aspose.email/MapiAttachment) и требуют ручного извлечения. Эти файлы oleData.mso имеют формат Microsoft Computer Document File (MCDF), и поддержка таких файлов выходит за рамки возможностей Aspose.Email. Однако Aspose.Email можно использовать в комбинации с другими библиотеками с открытым исходным кодом, такими как OpenMCDF, для чтения содержимого таких файлов для сохранения на диск. Aspose.Email предоставляет класс [InlineAttachmentExtractor](https://apireference.aspose.com/email/java/com.aspose.email/InlineAttachmentExtractor) для перечисления MSO-пакетов из двоичных данных oledata.mso, которые затем могут быть использованы для извлечения содержимого библиотеками для чтения составных файлов.
 
-Если тип тела сообщения — HTML (а не RTF) и в сообщении есть объекты OLE, свойство MapiPropertyTag.pr_attach_data_obj отсутствует. В этом случае информация об объектах OLE содержится в oldedata.mso.
+Если тип тела сообщения — HTML (не RTF), и в сообщении есть OLE-объекты, свойство MapiPropertyTag.PR_ATTACH_DATA_OBJ отсутствует. В этом случае информация об OLE-объектах содержится в oldedata.mso.
 ## **Извлечение встроенных объектов**
-В этой статье показано, как извлечь содержимое из такого файла с помощью Aspose.Email:
+В этой статье показано, как извлечь содержимое из такого файла, используя Aspose.Email:
 
 
 
 ~~~Java
-// The path to the File directory
+// Путь к директории файлов
 String dataDir = "/data";
 
 MapiMessage msg = MapiMessage.fromFile(dataDir + "double.msg");
@@ -24,7 +24,7 @@ for (MapiAttachment mapiAttachment : msg.getAttachments()) {
         IGenericDictionary<String, byte[]> oledata = InlineAttachmentExtractor.enumerateMsoPackage(new ByteArrayInputStream(mapiAttachment.getBinaryData()));
 
         for (String oleItem : oledata.getKeys()) {
-            // Use binary data
+            // Используйте двоичные данные
             processBynaryData(oledata.get_Item(oleItem));
         }
     }

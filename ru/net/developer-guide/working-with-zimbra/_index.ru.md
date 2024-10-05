@@ -6,21 +6,21 @@ type: docs
 ---
 
 
-## **О Зимбре**
+## **О Zimbra**
 
-Zimbra — это пакет электронной почты, календаря и совместной работы, созданный для облака. Zimbra включает полный набор функций электронной почты, контактов, календаря, обмена файлами, задач, обмена сообщениями и видеоконференций, доступ к которым осуществляется через веб-клиент Zimbra с любого устройства.
+Zimbra — это пакет для электронной почты, календаря и совместной работы, созданный для облака. Zimbra включает в себя полную электронную почту, контакты, календарь, файловый обмен, задачи и обмен сообщениями/видеоконференция, все это доступно через веб-клиент Zimbra с любого устройства.
 
-## **Прочитайте все сообщения из хранилища Zimbra TGZ**
+## **Чтение всех сообщений из хранения Zimbra TGZ**
 
-Aspose.Email предоставляет класс TGZReader для чтения файлов хранилища Zimbra TGZ. Следующий пример кода демонстрирует использование класса TGZReader для чтения всех сообщений из файла. 
+Aspose.Email предоставляет класс TgzReader для чтения файлов хранения Zimbra TGZ. Следующий пример кода демонстрирует использование класса TgzReader для чтения всех сообщений из файла. 
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-ReadAllMessagesFromZimbraTgzStorage-1.cs" >}}
 
-## **Получите общее количество элементов из файла Tgz**
+## **Получение общего количества элементов из Tgz-файла**
 
-The [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/gettotalitemscount/#tgzreadergettotalitemscount-method) метод [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/#tgzreader-class) класс вернет общее количество элементов сообщения, содержащихся в хранилище.
+Метод [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/gettotalitemscount/#tgzreadergettotalitemscount-method) класса [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/#tgzreader-class) вернет общее количество элементарных сообщений, содержащихся в хранилище.
 
-В следующем примере кода показано, как реализовать этот метод в своем проекте:
+Следующий пример кода покажет вам, как реализовать этот метод в вашем проекте:
 
 ```cs
 using (TgzReader reader = new TgzReader(fileName))
@@ -29,23 +29,23 @@ using (TgzReader reader = new TgzReader(fileName))
 }
 ```
 
-## **Сохранить сообщения и структуру каталогов**
+## **Сохранение сообщений и структуры каталогов**
 
-Вы также можете сохранить все сообщение со структурой каталогов из файла хранилища Zimbra TGZ. Для этого в классе TGZReader предусмотрен метод exportTo, который принимает выходной путь в качестве параметра.
+Вы также можете сохранить все сообщения со структурой каталогов из файла хранения Zimbra TGZ. Для этого класс TgzReader предоставляет метод ExportTo, который принимает путь для вывода в качестве параметра.
 
-Следующий фрагмент кода демонстрирует использование метода TGZReader.exportTo для сохранения всех сообщений из файла хранилища Zimbra TGZ.
+Следующий фрагмент кода демонстрирует использование метода TgzReader.ExportTo для сохранения всех сообщений из файла хранения Zimbra TGZ.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-SaveMessagesFromZimbraTgzStorage-1.cs" >}}
 
-## **Экспорт элементов календаря и контактов из файлов Zimbra Backup**
+## **Экспорт элементов календаря и контактов из резервных файлов Zimbra**
 
-Чтобы экспортировать календарь и контакты Zimbra и сохранить их в форматах iCalendar и vCard, вы можете использовать следующий фрагмент кода:
+Чтобы экспортировать календарь и контакты Zimbra и сохранить их в форматах iCalendar и VCard, вы можете использовать следующий фрагмент кода:
 
 ```cs
 using (var reader = new TgzReader(@"test2.tgz"))
 {
-    //contacts files can be found in Contacts and Emailed Contacts subfolders
-    //calendar files can be found in Calendar subfolder
+    //файлы контактов можно найти в подпапках Contacts и Emailed Contacts
+    //файлы календаря можно найти в подпапке Calendar
     reader.ExportTo(@"out");
 }
 ```

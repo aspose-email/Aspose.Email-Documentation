@@ -1,99 +1,99 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 6.2.0"
+title: "Изменения публичного API в Aspose.Email 6.2.0"
 url: /ru/java/public-api-changes-in-aspose-email-6-2-0/
 weight: 230
 type: docs
 ---
 
-Ниже приведен список всех изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание членов, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
+Следующий список включает все изменения, внесенные в публичный API, такие как добавленные, переименованные, удаленные или устаревшие элементы, а также любые изменения, не совместимые с предыдущими версиями, внесенные в Aspose.Email для Java. Если у вас есть вопросы по любому из перечисленных изменений, пожалуйста, поднимите их на форуме поддержки Aspose.Email.
 
-Добавлены API:
-- Class `AppointmentCollection`
+Добавленные API:
+- Класс `AppointmentCollection`
 
-- Method `AppointmentCollection.#ctor`
-- Method `AppointmentCollection.#ctor(IGenericEnumerable)`
+- Метод `AppointmentCollection.#ctor`
+- Метод `AppointmentCollection.#ctor(IGenericEnumerable)`
 
-- Method `ExchangeClient.moveItems(String, boolean, /**params**/ String...)`
-- Method `ExchangeClient.moveMessage(String, boolean, String)`
-- Method `ExchangeClient.moveMessage(String, String)`
-- Method `ExchangeMessageInfoCollection.#ctor(IGenericEnumerable)`
-- Method `IEWSClient.getContact(ObjectIdentifier)`
-- Method `IEWSClient.getContact(ObjectIdentifier, ExchangeListContactsOptions)`
-- Method `IEWSClient.getContact(String)`
-- Method `IEWSClient.getContact(String, ExchangeListContactsOptions)`
-- Method `IEWSClient.listAppointments(MailQuery, int)`
-- Method `IEWSClient.listAppointments(MailQuery, int, int)`
-- Method `IEWSClient.listAppointments(int)`
-- Method `IEWSClient.listAppointments(int, int)`
-- Method `IEWSClient.listAppointments(String, MailQuery, int)`
-- Method `IEWSClient.listAppointments(String, MailQuery, int, int)`
-- Method `IEWSClient.listAppointments(String, int)`
-- Method `IEWSClient.listAppointments(String, int, int)`
-- Method `IEWSClient.listMessages(String, ExchangeMessageInfoCollection, int, int, ExchangeListMessagesOptions)`
-- Method `IEWSClient.listMessages(String, int, int, ExchangeListMessagesOptions)`
+- Метод `ExchangeClient.moveItems(String, boolean, /**params**/ String...)`
+- Метод `ExchangeClient.moveMessage(String, boolean, String)`
+- Метод `ExchangeClient.moveMessage(String, String)`
+- Метод `ExchangeMessageInfoCollection.#ctor(IGenericEnumerable)`
+- Метод `IEWSClient.getContact(ObjectIdentifier)`
+- Метод `IEWSClient.getContact(ObjectIdentifier, ExchangeListContactsOptions)`
+- Метод `IEWSClient.getContact(String)`
+- Метод `IEWSClient.getContact(String, ExchangeListContactsOptions)`
+- Метод `IEWSClient.listAppointments(MailQuery, int)`
+- Метод `IEWSClient.listAppointments(MailQuery, int, int)`
+- Метод `IEWSClient.listAppointments(int)`
+- Метод `IEWSClient.listAppointments(int, int)`
+- Метод `IEWSClient.listAppointments(String, MailQuery, int)`
+- Метод `IEWSClient.listAppointments(String, MailQuery, int, int)`
+- Метод `IEWSClient.listAppointments(String, int)`
+- Метод `IEWSClient.listAppointments(String, int, int)`
+- Метод `IEWSClient.listMessages(String, ExchangeMessageInfoCollection, int, int, ExchangeListMessagesOptions)`
+- Метод `IEWSClient.listMessages(String, int, int, ExchangeListMessagesOptions)`
 
-- Method `ImapClient.beginListMessages(IConnection, int, int)`
-- Method `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback)`
-- Method `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback, Object)`
-- Method `ImapClient.beginListMessages(int, int)`
-- Method `ImapClient.beginListMessages(int, int, AsyncCallback)`
-- Method `ImapClient.beginListMessages(int, int, AsyncCallback, Object)`
-- Method `ImapClient.listMessages(IConnection, int, int)`
-- Method `ImapClient.listMessages(int, int)`
-- Method `ImapMessageInfoCollection.#ctor(IGenericEnumerable)`
-- Method `MapiAttachmentCollection.insert(int, String, MapiMessage)`
-- Method `MapiAttachmentCollection.replace(int, String, MapiMessage)`
-- Method `MapiContact.fromVCard(String, Encoding)`
-- Method `MapiObjectProperty.ToMapiMessage`
-- Property `AppointmentCollection.getLastItemOffset, setLastItemOffset`
-- Property `AppointmentCollection.getLastPage, setLastPage`
-- Property `AppointmentCollection.getTotalCount`
-- Property `ImapMessageInfoCollection.getLastItemOffset, setLastItemOffset`
-- Property `ImapMessageInfoCollection.getLastPage, setLastPage`
-- Property `ImapMessageInfoCollection.getTotalCount`
+- Метод `ImapClient.beginListMessages(IConnection, int, int)`
+- Метод `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback)`
+- Метод `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback, Object)`
+- Метод `ImapClient.beginListMessages(int, int)`
+- Метод `ImapClient.beginListMessages(int, int, AsyncCallback)`
+- Метод `ImapClient.beginListMessages(int, int, AsyncCallback, Object)`
+- Метод `ImapClient.listMessages(IConnection, int, int)`
+- Метод `ImapClient.listMessages(int, int)`
+- Метод `ImapMessageInfoCollection.#ctor(IGenericEnumerable)`
+- Метод `MapiAttachmentCollection.insert(int, String, MapiMessage)`
+- Метод `MapiAttachmentCollection.replace(int, String, MapiMessage)`
+- Метод `MapiContact.fromVCard(String, Encoding)`
+- Метод `MapiObjectProperty.ToMapiMessage`
+- Свойство `AppointmentCollection.getLastItemOffset, setLastItemOffset`
+- Свойство `AppointmentCollection.getLastPage, setLastPage`
+- Свойство `AppointmentCollection.getTotalCount`
+- Свойство `ImapMessageInfoCollection.getLastItemOffset, setLastItemOffset`
+- Свойство `ImapMessageInfoCollection.getLastPage, setLastPage`
+- Свойство `ImapMessageInfoCollection.getTotalCount`
 
 Удаленные API:
-- Class `MailMessageSaveOptions`
-- Event `SmtpClient.SendCompleted`
-- Enum `MailMessageSaveOptions.HideExtraPrintHeader`
-- Enum `MailMessageSaveOptions.NoEncodeCharactersToMht`
-- Enum `MailMessageSaveOptions.None`
-- Enum `MailMessageSaveOptions.WriteCompleteBccEmailAddressToMht`
-- Enum `MailMessageSaveOptions.WriteCompleteCcEmailAddressToMht`
-- Enum `MailMessageSaveOptions.WriteCompleteEmailAddressToMht`
-- Enum `MailMessageSaveOptions.WriteCompleteFromEmailAddressToMht`
-- Enum `MailMessageSaveOptions.WriteCompleteToEmailAddressToMht`
-- Enum `MailMessageSaveOptions.WriteHeaderToMht`
-- Enum `MailMessageSaveOptions.WriteOutlineAttachmentsToMht`
-- Enum `MhtFormatOptions.WriteCompleteEmailAddressToMht`
-- Method `ExchangeClient.moveItem(String, String)`
-- Method `IEWSClient.deleteContact(MapiContact, boolean)`
-- Method `IEWSClient.fetchMapiAttachments(IGenericEnumerable)`
-- Method `IEWSClient.listContacts(String, ExchangeListContactsOptions)`
-- Method `IEWSClient.loadContactPhoto(MapiContactPhoto)`
-- Method `IEWSClient.updateContact(MapiContact)`
-- Method `IMessage.save(Stream, MailMessageSaveType)`
-- Method `IMessage.save(String, MailMessageSaveType)`
-- Method `MailMessage.save(Stream, FileCompatibilityMode)`
-- Method `MailMessage.save(Stream, MailMessageSaveType)`
-- Method `MailMessage.save(Stream, MailMessageSaveType, MailMessageSaveOptions)`
-- Method `MailMessage.save(Stream, MessageFormat)`
-- Method `MailMessage.save(Stream, MessageFormat, MailMessageSaveOptions)`
-- Method `MailMessage.save(String, FileCompatibilityMode)`
-- Method `MailMessage.save(String, MailMessageSaveType)`
-- Method `MailMessage.save(String, MailMessageSaveType, MailMessageSaveOptions)`
-- Method `MailMessage.save(String, MessageFormat)`
-- Method `MailMessage.save(String, MessageFormat, MailMessageSaveOptions)`
-- Method `SmtpClient.sendAsyncCancel`
-- Method `HeaderCollection.add( imeHeader)`
-- Method `FollowUpManager.getFlag(MapiMessage)`
-- Method `FollowUpManager.setFlag(MapiMessage, FollowUpOptions)`
-- Method `MapiContactPhoto.#ctor(String, MapiContactPhotoImageFormat)`
-- Method `MapiContactPhoto.#ctor(String, byte[], MapiContactPhotoImageFormat)`
-- Method `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat)`
-- Method `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat, boolean)`
-- Method `PersonalStorage.changeDisplayName(String)`
-- Property `MailMessage.getPreserveOriginalBoundaries, setPreserveOriginalBoundaries`
-- Property `MailMessage.getPreserveOriginalDates, setPreserveOriginalDates`
-- Property `PersonalStorage.getDisplayName`
-- Property `PersonalStorage.MessageStoreProperties`
+- Класс `MailMessageSaveOptions`
+- Событие `SmtpClient.SendCompleted`
+- Перечисление `MailMessageSaveOptions.HideExtraPrintHeader`
+- Перечисление `MailMessageSaveOptions.NoEncodeCharactersToMht`
+- Перечисление `MailMessageSaveOptions.None`
+- Перечисление `MailMessageSaveOptions.WriteCompleteBccEmailAddressToMht`
+- Перечисление `MailMessageSaveOptions.WriteCompleteCcEmailAddressToMht`
+- Перечисление `MailMessageSaveOptions.WriteCompleteEmailAddressToMht`
+- Перечисление `MailMessageSaveOptions.WriteCompleteFromEmailAddressToMht`
+- Перечисление `MailMessageSaveOptions.WriteCompleteToEmailAddressToMht`
+- Перечисление `MailMessageSaveOptions.WriteHeaderToMht`
+- Перечисление `MailMessageSaveOptions.WriteOutlineAttachmentsToMht`
+- Перечисление `MhtFormatOptions.WriteCompleteEmailAddressToMht`
+- Метод `ExchangeClient.moveItem(String, String)`
+- Метод `IEWSClient.deleteContact(MapiContact, boolean)`
+- Метод `IEWSClient.fetchMapiAttachments(IGenericEnumerable)`
+- Метод `IEWSClient.listContacts(String, ExchangeListContactsOptions)`
+- Метод `IEWSClient.loadContactPhoto(MapiContactPhoto)`
+- Метод `IEWSClient.updateContact(MapiContact)`
+- Метод `IMessage.save(Stream, MailMessageSaveType)`
+- Метод `IMessage.save(String, MailMessageSaveType)`
+- Метод `MailMessage.save(Stream, FileCompatibilityMode)`
+- Метод `MailMessage.save(Stream, MailMessageSaveType)`
+- Метод `MailMessage.save(Stream, MailMessageSaveType, MailMessageSaveOptions)`
+- Метод `MailMessage.save(Stream, MessageFormat)`
+- Метод `MailMessage.save(Stream, MessageFormat, MailMessageSaveOptions)`
+- Метод `MailMessage.save(String, FileCompatibilityMode)`
+- Метод `MailMessage.save(String, MailMessageSaveType)`
+- Метод `MailMessage.save(String, MailMessageSaveType, MailMessageSaveOptions)`
+- Метод `MailMessage.save(String, MessageFormat)`
+- Метод `MailMessage.save(String, MessageFormat, MailMessageSaveOptions)`
+- Метод `SmtpClient.sendAsyncCancel`
+- Метод `HeaderCollection.add(imeHeader)`
+- Метод `FollowUpManager.getFlag(MapiMessage)`
+- Метод `FollowUpManager.setFlag(MapiMessage, FollowUpOptions)`
+- Метод `MapiContactPhoto.#ctor(String, MapiContactPhotoImageFormat)`
+- Метод `MapiContactPhoto.#ctor(String, byte[], MapiContactPhotoImageFormat)`
+- Метод `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat)`
+- Метод `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat, boolean)`
+- Метод `PersonalStorage.changeDisplayName(String)`
+- Свойство `MailMessage.getPreserveOriginalBoundaries, setPreserveOriginalBoundaries`
+- Свойство `MailMessage.getPreserveOriginalDates, setPreserveOriginalDates`
+- Свойство `PersonalStorage.getDisplayName`
+- Свойство `PersonalStorage.MessageStoreProperties`
