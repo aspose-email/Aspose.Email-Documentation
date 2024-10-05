@@ -1,45 +1,44 @@
 ---
-title: "Работа с сообщениями в файле PST"
+title: "Работа с сообщениями в PST-файле"
 url: /ru/net/working-with-messages-in-a-pst-file/
 weight: 30
 type: docs
 ---
 
+## **Добавление сообщений в PST файлы**
 
-## **Добавление сообщений в файлы PST**
+Статья [Создание нового PST файла и добавление подкаталогов](https://docs.aspose.com/email/ru/net/create-new-pst-add-sub-folders-and-messages/#creating-a-new-pst-file-and-add-subfolderss) показывает, как создать PST файл и добавить подкаталог в него. С помощью Aspose.Email вы можете добавлять сообщения в подкаталоги PST файла, который вы создали или загрузили. Эта статья добавляет два сообщения с диска в подкаталог "Входящие" PST. Используйте классы [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/) и [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) для добавления сообщений в PST файлы. Чтобы добавить сообщения в папку "Входящие" PST файла:
 
-The [Создайте новый файл PST и добавьте подпапки](https://docs.aspose.com/email/ru/net/create-new-pst-add-sub-folders-and-messages/#creating-a-new-pst-file-and-add-subfolderss) В статье показано, как создать файл PST и добавить к нему подпапку. С помощью Aspose.Email вы можете добавлять сообщения в подпапки созданного или загруженного файла PST. В этой статье два сообщения с диска добавляются во вложенную папку «Входящие» PST. Используйте [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/) and [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) классы для добавления сообщений в файлы PST. Чтобы добавить сообщения в папку «Входящие» PST-файла, выполните следующие действия:
+1. Создайте экземпляр класса FolderInfo и загрузите его с содержимым папки "Входящие".
+2. Добавьте сообщения с диска в папку "Входящие", вызвав метод [FolderInfo.AddMessage()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/#addmessage). Класс [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) предоставляет метод [AddMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessages/#addmessages), который позволяет добавить большое количество сообщений в папку, уменьшая операции ввода-вывода на диск и повышая производительность. Полный пример можно найти ниже в разделе [Добавление массовых сообщений](https://docs.aspose.com/email/ru/net/working-with-messages-in-a-pst-file/#adding-bulk-messages).
 
-1. Создайте экземпляр класса FolderInfo и загрузите в него содержимое папки «Входящие».
-2. Добавьте сообщения с диска в папку «Входящие», вызвав [FolderInfo.AddMessage()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/#addmessage) метод. [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) класс раскрывает [AddMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessages/#addmessages) метод, позволяющий добавлять большое количество сообщений в папку, сокращая количество операций ввода-вывода на диск и повышая производительность. Полный пример можно найти ниже, в [Добавление массовых сообщений](https://docs.aspose.com/email/ru/net/working-with-messages-in-a-pst-file/#adding-bulk-messages).
-
-В приведенном ниже фрагменте кода показано, как добавлять сообщения в подпапку PST под названием «Входящие».
+Ниже приведен код, показывающий, как добавить сообщения в подкаталог PST с именем "Входящие".
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// Create new PST           
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Создать новый PST            
 PersonalStorage personalStorage = PersonalStorage.Create(dataDir, FileFormatVersion.Unicode);
 
-// Add new folder "Inbox"
+// Добавьте новую папку "Входящие"
 personalStorage.RootFolder.AddSubFolder("Inbox");
 
-// Select the "Inbox" folder
+// Выберите папку "Входящие"
 FolderInfo inboxFolder = personalStorage.RootFolder.GetSubFolder("Inbox");
 
-// Add some messages to "Inbox" folder
+// Добавьте несколько сообщений в папку "Входящие"
 inboxFolder.AddMessage(MapiMessage.FromFile(RunExamples.GetDataDir_Outlook() + "MapiMsgWithPoll.msg"));
 ```
 
 ### **Добавление массовых сообщений**
 
-Добавление отдельных сообщений в PST подразумевает большее количество операций ввода-вывода на диск и, следовательно, может снизить производительность. Чтобы повысить производительность, используйте AddMessages (IEnumerable)<MapiMessage> messages) вместо метода addMessage (сообщение MapiMessage) для минимизации операций ввода-вывода. Кроме того, событие MessageAdded возникает при добавлении сообщения в папку.
+Добавление отдельных сообщений в PST предполагает больше операций ввода/вывода на диск и, следовательно, может замедлить производительность. Чтобы улучшить производительность, используйте метод AddMessages(IEnumerable<MapiMessage> messages) вместо метода AddMessage(MapiMessage message), чтобы минимизировать I/O операции. Кроме того, событие MessageAdded происходит, когда сообщение добавляется в папку.
 
 ### **Загрузка сообщений с диска**
 
-В следующем фрагменте кода показано, как загружать сообщения с диска.
+Следующий фрагмент кода показывает, как загружать сообщения с диска.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 private static void AddMessagesInBulkMode(string fileName, string msgFolderName)
 {
     using (PersonalStorage personalStorage = PersonalStorage.FromFile(fileName))
@@ -56,12 +55,12 @@ static void OnMessageAdded(object sender, MessageAddedEventArgs e)
 }
 ```
 
-### **Неисчислимая реализация**
+### **Реализация IEnumerable**
 
-В следующем фрагменте кода показано, как можно использовать реализацию IEnumerable.
+Следующий фрагмент кода показывает, как можно использовать реализацию IEnumerable.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 public class MapiMessageCollection : IEnumerable<MapiMessage>
 {
     private string path;
@@ -133,22 +132,22 @@ public class MapiMessageEnumerator : IEnumerator<MapiMessage>
 }
 ```
 
-### **Добавление сообщений из других PST**
+### **Добавление сообщений из другого PST**
 
-Чтобы добавить сообщения из другого PST, используйте [FolderInfo.EnumerateMapiMessages()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemapimessages/#enumeratemapimessages) метод, возвращающий IEnumerable<MapiMessage>. В следующем фрагменте кода показано, как добавлять сообщения из другого PST.
+Чтобы добавить сообщения из другого PST, используйте метод [FolderInfo.EnumerateMapiMessages()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemapimessages/#enumeratemapimessages), который возвращает IEnumerable<MapiMessage>. Следующий фрагмент кода показывает, как добавить сообщения из другого PST.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 private static void BulkAddFromAnotherPst(string source)
 {
     using (PersonalStorage pst = PersonalStorage.FromFile(source, false))
     using (PersonalStorage pstDest = PersonalStorage.FromFile(RunExamples.GetDataDir_Outlook() + "PersonalStorageFile1.pst"))
     {
-        // Get the folder by name
+        // Получите папку по имени
         FolderInfo folderInfo = pst.RootFolder.GetSubFolder("Contacts");
         MessageInfoCollection ms = folderInfo.GetContents();
 
-        // Get the folder by name
+        // Получите папку по имени
         FolderInfo f = pstDest.RootFolder.GetSubFolder("myInbox");
         f.MessageAdded += new MessageAddedEventHandler(OnMessageAdded);
         f.AddMessages(folderInfo.EnumerateMapiMessages());
@@ -156,11 +155,10 @@ private static void BulkAddFromAnotherPst(string source)
         MessageInfoCollection msgs = fi.GetContents();
 
     }
-
 }
 
 /// <summary>
-/// Handles the MessageAdded event.
+/// Обрабатывает событие MessageAdded.
 /// </summary>
 static void OnMessageAdded(object sender, MessageAddedEventArgs e)
 {
@@ -169,61 +167,61 @@ static void OnMessageAdded(object sender, MessageAddedEventArgs e)
 }
 ```
 
-## **Получение информации о сообщениях из файла Outlook PST**
+## **Получение информации о сообщениях из Outlook PST файла**
 
-In [Прочитайте файл Outlook PST и получите информацию о папках и подпапках](https://docs.aspose.com/email/ru/net/read-outlook-pst-file-and-get-folders-and-subfolders-information/) в статье мы обсуждали, как загрузить файл Outlook PST и просмотреть его папки, чтобы узнать имена папок и количество сообщений в них. В этой статье объясняется, как читать все папки и подпапки в файле PST и отображать информацию о сообщениях, например тему, отправителя и получателя. Файл Outlook PST может содержать вложенные папки. Чтобы получить информацию о сообщениях из этих папок, а также из папок верхнего уровня, используйте рекурсивный метод чтения всех папок. В следующем фрагменте кода показано, как читать PST-файл Outlook и рекурсивно отображать содержимое папки и сообщения.
+В статье [Чтение Outlook PST файла и получение информации о папках и подкаталогах](https://docs.aspose.com/email/ru/net/read-outlook-pst-file-and-get-folders-and-subfolders-information/) мы обсуждали, как загрузить PST файл Outlook и просматривать его папки для получения имен папок и количества сообщений в них. Эта статья объясняет, как прочитать все папки и подкаталоги в PST файле и отобразить информацию о сообщениях, например, тему, отправителя и получателей. PST файл Outlook может содержать вложенные папки. Чтобы получить информацию о сообщениях из них, а также из папок на верхнем уровне, используйте рекурсивный метод для чтения всех папок. Следующий фрагмент кода показывает, как прочитать PST файл Outlook и рекурсивно отобразить содержимое папок и сообщений.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 public static void Run()
-{           
+{            
     string dataDir = RunExamples.GetDataDir_Outlook();
 
-    // Load the Outlook file
+    // Загрузите файл Outlook
     string path = dataDir + "PersonalStorage.pst";
 
     try
     {
-      
-        // Load the Outlook PST file
+       
+        // Загрузите PST файл Outlook
         PersonalStorage personalStorage = PersonalStorage.FromFile(path);
 
-        // Get the Display Format of the PST file
-        Console.WriteLine("Display Format: " + personalStorage.Format);
+        // Получите формат отображения PST файла
+        Console.WriteLine("Формат отображения: " + personalStorage.Format);
 
-        // Get the folders and messages information
+        // Получите информацию о папках и сообщениях
         FolderInfo folderInfo = personalStorage.RootFolder;
 
-        // Call the recursive method to display the folder contents
+        // Вызовите рекурсивный метод для отображения содержимого папки
         DisplayFolderContents(folderInfo, personalStorage);
     }
     catch (Exception ex)
     {
-        Console.WriteLine(ex.Message);              
-    }           
+        Console.WriteLine(ex.Message);               
+    }            
 }
 
 /// <summary>
-/// This is a recursive method to display contents of a folder
+/// Это рекурсивный метод для отображения содержимого папки
 /// </summary>
 /// <param name="folderInfo"></param>
 /// <param name="pst"></param>
 private static void DisplayFolderContents(FolderInfo folderInfo, PersonalStorage pst)
 {
-    // Display the folder name
-    Console.WriteLine("Folder: " + folderInfo.DisplayName);
+    // Отобразите имя папки
+    Console.WriteLine("Папка: " + folderInfo.DisplayName);
     Console.WriteLine("==================================");
-    // Display information about messages inside this folder
+    // Отобразите информацию о сообщениях внутри этой папки
     MessageInfoCollection messageInfoCollection = folderInfo.GetContents();
     foreach (MessageInfo messageInfo in messageInfoCollection)
     {
-        Console.WriteLine("Subject: " + messageInfo.Subject);
-        Console.WriteLine("Sender: " + messageInfo.SenderRepresentativeName);
-        Console.WriteLine("Recipients: " + messageInfo.DisplayTo);
+        Console.WriteLine("Тема: " + messageInfo.Subject);
+        Console.WriteLine("Отправитель: " + messageInfo.SenderRepresentativeName);
+        Console.WriteLine("Получатели: " + messageInfo.DisplayTo);
         Console.WriteLine("------------------------------");
     }
 
-    // Call this method recursively for each subfolder
+    // Вызовите этот метод рекурсивно для каждой подкласса
     if (folderInfo.HasSubFolders == true)
     {
         foreach (FolderInfo subfolderInfo in folderInfo.GetSubFolders())
@@ -234,75 +232,75 @@ private static void DisplayFolderContents(FolderInfo folderInfo, PersonalStorage
 }
 ```
 
-## **Извлечение сообщений из файлов PST**
+## **Извлечение сообщений из PST файлов**
 
-В этой статье показано, как читать файлы Microsoft Outlook PST и извлекать сообщения. Затем сообщения сохраняются на диск в формате MSG.
+Эта статья показывает, как читать PST файлы Microsoft Outlook и извлекать сообщения. Сообщения затем сохраняются на диск в формате MSG.
 
 {{% alert %}}
 **Попробуйте!**
 
-Запустите [ConversationThread](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/ConversationThread) простой проект приложения и изучите интересное использование функций Aspose.Email для чтения писем из PST и поиска тем разговоров.
+Запустите простой проект приложения [ConversationThread](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/ConversationThread) и изучите интересное использование возможностей Aspose.Email для чтения электронной почты из PST и поиска разговорных потоков.
 {{% /alert %}}
 
-В следующем фрагменте кода показано, как извлекать сообщения из файла PST:
-- Используйте рекурсивный метод для просмотра всех папок (включая любые вложенные папки) и вызовите метод PersonalStorage.extractMessage (), чтобы поместить сообщения Outlook в экземпляр [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) class.
-- После этого вызовите метод MapiMessage.save (), чтобы сохранить сообщение на диске или в потоке в формате MSG.
+Следующий фрагмент кода показывает, как извлекать сообщения из PST файла: 
+- Используйте рекурсивный метод для просмотра всех папок (включая любые вложенные папки) и вызова метода PersonalStorage.ExtractMessage() для получения сообщений Outlook в экземпляр класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/). 
+- После этого вызовите метод MapiMessage.Save() для сохранения сообщения либо на диск, либо в поток в формате MSG.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 public static void Run()
-{           
-    // The path to the file directory.
+{            
+    // Путь к директории файлов.
     string dataDir = RunExamples.GetDataDir_Outlook();
 
-    // Load the Outlook file
+    // Загрузите файл Outlook
     string path = dataDir + "PersonalStorage.pst";
 
     try
     {
-        // load the Outlook PST file
+        // загрузите PST файл Outlook
         PersonalStorage pst = PersonalStorage.FromFile(path);
 
-        // get the Display Format of the PST file
-        Console.WriteLine("Display Format: " + pst.Format);
+        // получите формат отображения PST файла
+        Console.WriteLine("Формат отображения: " + pst.Format);
 
-        // get the folders and messages information
+        // получите информацию о папках и сообщениях
         FolderInfo folderInfo = pst.RootFolder;
 
-        // Call the recursive method to extract msg files from each folder
+        // Вызовите рекурсивный метод для извлечения msg файлов из каждой папки
         ExtractMsgFiles(folderInfo, pst);
     }
     catch (Exception ex)
     {
         Console.WriteLine(ex.Message);
-    }           
+    }            
 }
 
 /// <summary>
-/// This is a recursive method to display contents of a folder
+/// Это рекурсивный метод для отображения содержимого папки
 /// </summary>
 /// <param name="folderInfo"></param>
 /// <param name="pst"></param>
 private static void ExtractMsgFiles(FolderInfo folderInfo, PersonalStorage pst)
 {
-    // display the folder name
-    Console.WriteLine("Folder: " + folderInfo.DisplayName);
+    // отобразите имя папки
+    Console.WriteLine("Папка: " + folderInfo.DisplayName);
     Console.WriteLine("==================================");
-    // loop through all the messages in this folder
+    // пройдитесь по всем сообщениям в этой папке
     MessageInfoCollection messageInfoCollection = folderInfo.GetContents();
     foreach (MessageInfo messageInfo in messageInfoCollection)
     {
-        Console.WriteLine("Saving message {0} ....", messageInfo.Subject);
-        // get the message in MapiMessage instance
+        Console.WriteLine("Сохранение сообщения {0} ....", messageInfo.Subject);
+        // получите сообщение в экземпляре MapiMessage
         MapiMessage message = pst.ExtractMessage(messageInfo);
-        // save this message to disk in msg format
+        // сохраните это сообщение на диск в формате msg
         message.Save(message.Subject.Replace(":", " ") + ".msg");
-        // save this message to stream in msg format
+        // сохраните это сообщение в поток в формате msg
         MemoryStream messageStream = new MemoryStream();
         message.Save(messageStream);
     }
 
-    // Call this method recursively for each subfolder
+    // Вызовите этот метод рекурсивно для каждой подкаталог
     if (folderInfo.HasSubFolders == true)
     {
         foreach (FolderInfo subfolderInfo in folderInfo.GetSubFolders())
@@ -313,19 +311,19 @@ private static void ExtractMsgFiles(FolderInfo folderInfo, PersonalStorage pst)
 }
 ```
 
-### **Сохранение сообщений непосредственно из PST в потоковую передачу**
+### **Сохранение сообщений непосредственно из PST в поток**
 
-Чтобы сохранить сообщения из файла PST непосредственно в поток, не извлекая MsgInfo для сообщений, используйте метод SaveMessageToStream (). В следующем фрагменте кода показано, как сохранять сообщения непосредственно из PST в поток.
+Чтобы сохранить сообщения из PST файла непосредственно в поток, не извлекая MsgInfo для сообщений, используйте метод SaveMessageToStream(). Следующий фрагмент кода показывает, как сохранить сообщения непосредственно из PST в поток.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// The path to the file directory.
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Путь к директории файлов.
 string dataDir = RunExamples.GetDataDir_Outlook();
 
-// Load the Outlook file
+// Загрузите файл Outlook
 string path = dataDir + "PersonalStorage.pst";
 
-// Save message to MemoryStream
+// Сохранить сообщение в MemoryStream
 using (PersonalStorage personalStorage = PersonalStorage.FromFile(path))
 {
     FolderInfo inbox = personalStorage.RootFolder.GetSubFolder("Inbox");
@@ -338,7 +336,7 @@ using (PersonalStorage personalStorage = PersonalStorage.FromFile(path))
     }
 }
 
-// Save message to file
+// Сохранить сообщение в файл
 using (PersonalStorage pst = PersonalStorage.FromFile(path))
 {
     FolderInfo inbox = pst.RootFolder.GetSubFolder("Inbox");
@@ -354,8 +352,8 @@ using (PersonalStorage pst = PersonalStorage.FromFile(path))
 using (PersonalStorage pst = PersonalStorage.FromFile(path))
 {
     FolderInfo inbox = pst.RootFolder.GetSubFolder("Inbox");
-   
-    // To enumerate entryId of messages you may use FolderInfo.EnumerateMessagesEntryId() method:
+    
+    // Для перечисления entryId сообщений вы можете использовать метод FolderInfo.EnumerateMessagesEntryId():
     foreach (string entryId in inbox.EnumerateMessagesEntryId())
     {
         using (MemoryStream ms = new MemoryStream())
@@ -363,25 +361,25 @@ using (PersonalStorage pst = PersonalStorage.FromFile(path))
             pst.SaveMessageToStream(entryId, ms);
         }
     }
-}           
+}            
 ```
 
-### **Извлечение n количества сообщений из PST-файла**
+### **Извлечение n числа сообщений из PST файла**
 
-В следующем фрагменте кода показано, как извлечь заданное количество сообщений из PST. Просто укажите индекс первого сообщения и общее количество сообщений, которые нужно извлечь.
+Следующий фрагмент кода показывает, как извлечь определенное количество сообщений из PST. Просто укажите индекс для первого сообщения и общее количество сообщений для извлечения.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 FolderInfo inbox = personalStorage.RootFolder.GetSubFolder("Inbox");
 
-// Extracts messages starting from 10th index top and extract total 100 messages
+// Извлечение сообщений, начиная с 10 индекса сверху и извлечение в целом 100 сообщений
 MessageInfoCollection messages = inbox.GetContents(10, 100);
 ```
-### **Получение общего количества элементов из файла PST**
+### **Получение общего количества элементов из PST файла**
 
-Aspose.Email предоставляет [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/gettotalitemscount/) метод [PersonalStorage.Store](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/store/#personalstoragestore-property) имущество. Оно возвращает общее количество сообщений, содержащихся в PST.
+Aspose.Email предоставляет метод [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/gettotalitemscount/) свойства [PersonalStorage.Store](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/store/#personalstoragestore-property). Он возвращает общее количество элементов сообщения, содержащихся в PST.
 
-В следующем примере кода показано, как получить общее количество элементов (сообщений, встреч, контактов и т. д.), хранящихся в файле PST:
+Следующий код показывает, как получить общее количество элементов (сообщений, назначений, контактов и т.д.), хранящихся в PST файле:
 
 ```cs
 using (var pst = PersonalStorage.FromFile("my.pst", false))
@@ -390,80 +388,80 @@ using (var pst = PersonalStorage.FromFile("my.pst", false))
 }
 ```
 
-## **Удалить элементы из файлов PST**
+## **Удаление элементов из PST файлов**
 
-The [Добавление сообщений в файлы PST](https://docs.aspose.com/email/ru/net/working-with-messages-in-a-pst-file/#adding-messages-to-pst-files) в статье показано, как добавлять сообщения в файлы PST. Конечно, также можно удалять элементы (содержимое) из файла PST, и может быть желательно удалять сообщения массово. Элементы из файла PST можно удалить с помощью [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) метод. API также предоставляет [FolderInfo.DeleteChildItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) метод массового удаления элементов из файла PST.
+Статья [Добавление сообщений в PST файлы](https://docs.aspose.com/email/ru/net/working-with-messages-in-a-pst-file/#adding-messages-to-pst-files) показывает, как добавлять сообщения в PST файлы. Также, конечно, возможно удалить элементы (содержимое) из PST файла и может быть желаемо удалить сообщения в массовом порядке. Элементы из PST файла можно удалить, используя метод [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem). API также предоставляет метод [FolderInfo.DeleteChildItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) для массового удаления элементов из PST файла.
 
-### **Удаление сообщений из PST-файлов**
+### **Удаление сообщений из PST файлов**
 
-В этой статье показано, как использовать [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) класс для доступа к определенным папкам в файле PST. Чтобы удалить сообщения из подпапки «Отправленные» ранее загруженного или созданного файла PST, выполните следующие действия:
+Эта статья показывает, как использовать класс [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) для доступа к конкретным папкам в PST файле. Чтобы удалить сообщения из подкаталога "Отправленные" ранее загруженного или созданного PST файла:
 
-1. Создайте экземпляр [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) класс и загрузите его вместе с содержимым отправленной подпапки.
-1. Удалите сообщения из папки «Отправленные», вызвав [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) метод и передача [MessageInfo.EntryId](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/entryid/) в качестве параметра. В следующем фрагменте кода показано, как удалять сообщения из вложенной папки Sent PST-файла.
+1. Создайте экземпляр класса [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) и загрузите его с содержимым подкаталога "Отправленные".
+1. Удалите сообщения из папки "Отправленные", вызвав метод [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) и передав [MessageInfo.EntryId](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/entryid/) в качестве параметра. Следующий фрагмент кода показывает, как удалять сообщения из подкаталога "Отправленные" PST файла.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// The path to the File directory.
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Путь к директории файлов.
 string dataDir = RunExamples.GetDataDir_Outlook() + "Sub.pst";
 
-// Load the Outlook PST file
+// Загрузите PST файл Outlook
 PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir);
 
-// Get the Sent items folder
+// Получите папку отправленных элементов
 FolderInfo folderInfo = personalStorage.GetPredefinedFolder(StandardIpmFolder.SentItems);
 
 MessageInfoCollection msgInfoColl = folderInfo.GetContents();
 foreach (MessageInfo msgInfo in msgInfoColl)
 {
     Console.WriteLine(msgInfo.Subject + ": " + msgInfo.EntryIdString);
-    if (msgInfo.Subject.Equals("some delete condition") == true)
+    if (msgInfo.Subject.Equals("некоторое условие удаления") == true)
     {
-        // Delete this item
+        // Удалите этот элемент
         folderInfo.DeleteChildItem(msgInfo.EntryId);
-        Console.WriteLine("Deleted this message");
+        Console.WriteLine("Удалено это сообщение");
     }
 }
 ```
 
-### **Удаление папок из файлов PST**
+### **Удаление папок из PST файлов**
 
-Папку PST можно удалить, переместив ее в папку «Удаленные».
+Вы можете удалить папку PST, переместив ее в папку "Удаленные элементы".
 
 ```csharp
 using (PersonalStorage pst = PersonalStorage.FromFile(@"test.pst"))
 {
     FolderInfo deletedItemsFolder = pst.GetPredefinedFolder(StandardIpmFolder.DeletedItems);
-    FolderInfo emptyFolder = pst.RootFolder.GetSubFolder("Empty folder");
-	  FolderInfo someFolder = pst.RootFolder.GetSubFolder("Some folder");
+    FolderInfo emptyFolder = pst.RootFolder.GetSubFolder("Пустая папка");
+	  FolderInfo someFolder = pst.RootFolder.GetSubFolder("Некоторая папка");
     pst.MoveItem(emptyFolder, deletedItemsFolder);
 	  pst.MoveItem(someFolder, deletedItemsFolder);
 }
 ```
 
-Преимущество этого метода в том, что удаленную папку можно легко восстановить.
+Преимущество этого метода заключается в том, что удаленная папка может быть легко восстановлена.
 
 ```csharp
-FolderInfo someFolder = deletedItemsFolder.GetSubFolder("Some folder");
+FolderInfo someFolder = deletedItemsFolder.GetSubFolder("Некоторая папка");
 pst.MoveItem(someFolder, pst.RootFolder);
 ```
 
-При необходимости можно также навсегда удалить папку из папки «Удаленные».
+Вы также можете навсегда удалить папку из папки "Удаленные элементы", если это необходимо.
 
 ```csharp
 deletedItemsFolder.DeleteChildItem(emptyFolder.EntryId);
 ```
 
-The [DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) метод можно использовать для любых папок, если вы хотите немедленно и навсегда удалить подпапку, минуя папку «Удаленные элементы».
+Метод [DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) может использоваться для любых папок, если вы хотите немедленно и навсегда удалить подпапку, минуя папку "Удаленные элементы".
 
 ```csharp
-FolderInfo someFolder = pst.RootFolder.GetSubFolder("Some folder");
+FolderInfo someFolder = pst.RootFolder.GetSubFolder("Некоторая папка");
 pst.RootFolder.DeleteChildItem(someFolder.EntryId);
 ```
-### **Удалить элементы из PST**
+### **Удаление элементов из PST**
 
-Удалите элементы (папки или сообщения) из таблицы личного хранилища (PST), используя уникальный идентификатор записи, связанный с элементом, вызвав метод DeleteItem (строка entryID) [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class.
+Удалите элементы (папки или сообщения) из таблицы личного хранения (PST), используя уникальный entryId, связанный с элементом, вызвав метод DeleteItem(string entryId) класса [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class).
 
-Следующий фрагмент кода можно использовать для вызова метода DeleteItem и передачи EntryId в качестве параметра:
+Следующий фрагмент кода можно использовать для вызова метода DeleteItem и передачи entryId в качестве параметра:
 
 ```cs
 var pst = PersonalStorage.FromFile("sample.pst");
@@ -476,24 +474,24 @@ pst.DeleteItem(entryId);
 ```
 **Обратите внимание:**
 
-- Этот метод безвозвратно удалит элемент из PST и не может быть отменен. При использовании этого метода соблюдайте осторожность, чтобы избежать случайной потери данных.
-- В соответствии со стандартными соглашениями убедитесь, что EntryID действителен и соответствует существующему элементу в PST.
-- В противном случае будет создано исключение. Рекомендуется создать резервную копию файла PST или при необходимости принять соответствующие меры для восстановления удаленных элементов.
+- Этот метод навсегда удалит элемент из PST, и это действие не может быть отменено. Будьте осторожны при использовании этого метода, чтобы избежать случайной потери данных.
+- Согласно стандартным соглашениям, убедитесь, что entryId действителен и соответствует существующему элементу в PST. 
+- В противном случае будет выдано исключение. Рекомендуется иметь резервную копию PST или реализовать соответствующие меры для восстановления удаленных элементов при необходимости.
 
-### **Массовое удаление элементов из файла PST**
+### **Массовое удаление элементов из PST файла**
 
-Aspose.Email API можно использовать для массового удаления элементов из файла PST. Это достигается с помощью [DeleteChildItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditems/#deletechilditems) метод, который принимает список элементов Entry ID, относящихся к удаляемым элементам. В следующем фрагменте кода показано, как массово удалять элементы из файла PST.
+API Aspose.Email может использоваться для массового удаления элементов из PST файла. Это достигается с помощью метода [DeleteChildItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditems/#deletechilditems), который принимает список идентификаторов элементов, относящихся к элементам, которые нужно удалить. Следующий фрагмент кода показывает, как удалять элементы массово из PST файла.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// The path to the File directory.
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Путь к директории файлов.
 string dataDir = RunExamples.GetDataDir_Outlook() + @"Sub.pst";
 using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir))
 {
-    // Get Inbox SubFolder from Outlook file
+    // Получите подкаталог "Входящие" из файла Outlook
     FolderInfo inbox = personalStorage.RootFolder.GetSubFolder("Inbox");
 
-    // Create instance of PersonalStorageQueryBuilder
+    // Создайте экземпляр PersonalStorageQueryBuilder
     PersonalStorageQueryBuilder queryBuilder = new PersonalStorageQueryBuilder();
 
     queryBuilder.From.Contains("someuser@domain.com");
@@ -504,30 +502,30 @@ using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir))
         deleteList.Add(messageInfo.EntryIdString);
     }
 
-    // delete messages having From = "someuser@domain.com"
+    // удалите сообщения с From = "someuser@domain.com"
     inbox.DeleteChildItems(deleteList);
 }
 ```
 
-## **Поиск сообщений и папок в PST по критерию**
+## **Поиск сообщений и папок в PST по критериям**
 
-Файлы персонального хранилища (PST) могут содержать огромное количество данных. При поиске данных, отвечающих определенным критериям в таких больших файлах, необходимо включить в код несколько контрольных точек для фильтрации информации. С помощью [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder/) class, Aspose.Email позволяет искать определенные записи в PST на основе заданных критериев поиска. В PST можно искать сообщения на основе таких параметров поиска, как отправитель, получатель, тема, важность сообщения, наличие вложений, размер сообщения и даже идентификатор сообщения. [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder/) также можно использовать для поиска подпапок.
+Файлы личного хранения (PST) могут содержать огромное количество данных. Поиск данных, соответствующих определенному критерию в таких больших файлах, требует включения нескольких контрольных точек в код для фильтрации информации. С помощью класса [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder/) Aspose.Email позволяет искать конкретные записи в PST на основе заданного критерия поиска. PST может быть отсканирован на наличие сообщений на основе параметров поиска, таких как отправитель, получатель, тема, важность сообщения, наличие вложений, размер сообщения и даже идентификатор сообщения. Класс [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder/) также может использоваться для поиска подкаталогов.
 
 ### **Поиск сообщений и папок в PST**
 
-В следующем фрагменте кода показано, как использовать [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder/) класс для поиска содержимого в PST на основе различных критериев поиска. Например, он показывает поиск в PST на основе:
+Следующий фрагмент кода показывает, как использовать класс [PersonalStorageQueryBuilder](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstoragequerybuilder/) для поиска содержимого в PST на основе различных критериев поиска. Например, он показывает поиск PST на основе:
 
-- Важность сообщения.
-- Класс сообщений.
+- Важности сообщения.
+- Класса сообщения.
 - Наличие вложений.
 - Размер сообщения.
-- Непрочитанные сообщения.
-- Непрочитанные сообщения с вложениями и
-- папки с определенным именем подпапки.
+- Непрочитанных сообщений.
+- Непрочитанных сообщений с вложениями и
+- папок с конкретным именем подкаталога.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// The path to the File directory.
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Путь к директории файлов.
 string dataDir = RunExamples.GetDataDir_Outlook();
 
 using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir + "Outlook.pst"))
@@ -535,62 +533,62 @@ using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir + "Out
     FolderInfo folder = personalStorage.RootFolder.GetSubFolder("Inbox");
     PersonalStorageQueryBuilder builder = new PersonalStorageQueryBuilder();
 
-    // High importance messages
+    // Сообщения высокой важности
     builder.Importance.Equals((int)MapiImportance.High);
     MessageInfoCollection messages = folder.GetContents(builder.GetQuery());
-    Console.WriteLine("Messages with High Imp:" + messages.Count);
+    Console.WriteLine("Сообщения с высокой важностью:" + messages.Count);
 
     builder = new PersonalStorageQueryBuilder();
     builder.MessageClass.Equals("IPM.Note");
     messages = folder.GetContents(builder.GetQuery());
-    Console.WriteLine("Messages with IPM.Note:" + messages.Count);
+    Console.WriteLine("Сообщения с IPM.Note:" + messages.Count);
 
     builder = new PersonalStorageQueryBuilder();
-    // Messages with attachments AND high importance
+    // Сообщения с вложениями И высокой важностью
     builder.Importance.Equals((int)MapiImportance.High);
     builder.HasFlags(MapiMessageFlags.MSGFLAG_HASATTACH);
     messages = folder.GetContents(builder.GetQuery());
-    Console.WriteLine("Messages with atts: " + messages.Count);
+    Console.WriteLine("Сообщения с вложениями: " + messages.Count);
 
     builder = new PersonalStorageQueryBuilder();
-    // Messages with size > 15 KB
+    // Сообщения размером > 15 КБ
     builder.MessageSize.Greater(15000);
     messages = folder.GetContents(builder.GetQuery());
-    Console.WriteLine("messags size > 15Kb:" + messages.Count);
+    Console.WriteLine("сообщения размером > 15 Кб:" + messages.Count);
 
     builder = new PersonalStorageQueryBuilder();
-    // Unread messages
+    // Непрочитанные сообщения
     builder.HasNoFlags(MapiMessageFlags.MSGFLAG_READ);
     messages = folder.GetContents(builder.GetQuery());
-    Console.WriteLine("Unread:" + messages.Count);
+    Console.WriteLine("Непрочитанные:" + messages.Count);
 
     builder = new PersonalStorageQueryBuilder();
-    // Unread messages with attachments
+    // Непрочитанные сообщения с вложениями
     builder.HasNoFlags(MapiMessageFlags.MSGFLAG_READ);
     builder.HasFlags(MapiMessageFlags.MSGFLAG_HASATTACH);
     messages = folder.GetContents(builder.GetQuery());
-    Console.WriteLine("Unread msgs with atts: " + messages.Count);
+    Console.WriteLine("Непрочитанные сообщения с вложениями: " + messages.Count);
 
-    // Folder with name of 'SubInbox'
+    // Папка с именем 'SubInbox'
     builder = new PersonalStorageQueryBuilder();
     builder.FolderName.Equals("SubInbox");
     FolderInfoCollection folders = folder.GetSubFolders(builder.GetQuery());
-    Console.WriteLine("Folder having subfolder: " + folders.Count);
+    Console.WriteLine("Папка, имеющая подкаталог: " + folders.Count);
 
     builder = new PersonalStorageQueryBuilder();
-    // Folders with subfolders
+    // Папки с подкаталогами
     builder.HasSubfolders();
     folders = folder.GetSubFolders(builder.GetQuery());
     Console.WriteLine(folders.Count);
 }
 ```
 
-### **Поиск строки в PST с параметром Ignore Case**
+### **Поиск строки в PST с параметром игнорирования регистра**
 
-В следующем фрагменте кода показано, как искать строку в PST с помощью параметра ignore case.
+Следующий фрагмент кода показывает, как искать строку в PST с параметром игнорирования регистра.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 
 File.Delete("CaseSensitivity.pst");
 using (PersonalStorage personalStorage = PersonalStorage.Create("CaseSensitivity.pst", FileFormatVersion.Unicode))
@@ -598,7 +596,7 @@ using (PersonalStorage personalStorage = PersonalStorage.Create("CaseSensitivity
 	FolderInfo folderinfo = personalStorage.CreatePredefinedFolder("Inbox", StandardIpmFolder.Inbox);
 	folderinfo.AddMessage(MapiMessage.FromMailMessage(MailMessage.Load("Sample.eml")));
 	PersonalStorageQueryBuilder builder = new PersonalStorageQueryBuilder();
-	// IgnoreCase is True
+	// IgnoreCase равно True
 	builder.From.Contains("automated", true);
 	MailQuery query = builder.GetQuery();
 	MessageInfoCollection coll = folderinfo.GetContents(query);
@@ -606,21 +604,21 @@ using (PersonalStorage personalStorage = PersonalStorage.Create("CaseSensitivity
 }
 ```
 
-### **Поиск тем сообщений по нескольким ключевым словам в файле PST**
+### **Поиск тем сообщений по нескольким ключевым словам в PST файле**
 
-Вы можете использовать [MailQueryBuilder.Or](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/or/#or) метод поиска сообщений, тема которых содержит хотя бы одно из указанных слов, как показано ниже:
+Вы можете использовать метод [MailQueryBuilder.Or](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/or/#or) для поиска сообщений с темой, содержащей хотя бы одно из указанных слов, как показано ниже:
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 
 var builder1 = new PersonalStorageQueryBuilder();
-builder1.Subject.Contains("Review"); // 'Review' is key word for the search
+builder1.Subject.Contains("Review"); // 'Review' это ключевое слово для поиска
 
 var builder2 = new PersonalStorageQueryBuilder();
-builder2.Subject.Contains("Error"); // 'Error' is also key word for the search
+builder2.Subject.Contains("Error"); // 'Error' также ключевое слово для поиска
 
 var queryBuilder = new PersonalStorageQueryBuilder();
-queryBuilder.Or(builder1.GetQuery(), builder2.GetQuery()); // message subjects must contain 'Review' or 'Error' words
+queryBuilder.Or(builder1.GetQuery(), builder2.GetQuery()); // темы сообщений должны содержать слова 'Review' или 'Error'
 
 using (var storage = PersonalStorage.FromFile("example.pst"))
 {
@@ -634,19 +632,19 @@ using (var storage = PersonalStorage.FromFile("example.pst"))
 }
 ```
 
-## **Переместить элементы в другие папки файла PST**
+## **Перемещение элементов в другие папки PST файла**
 
-Aspose.Email позволяет перемещать элементы из исходной папки в другую папку в том же файле личного хранилища (PST). Сюда входят:
+Aspose.Email позволяет перемещать элементы из исходной папки в другую папку в одном и том же файле личного хранения (PST). Это включает в себя:
 
-- Перемещение указанной папки в новую родительскую папку.
-- Перемещение указанных сообщений в новую папку.
+- Перемещение определенной папки в новую родительскую папку.
+- Перемещение определенных сообщений в новую папку.
 - Перемещение содержимого в новую папку.
-- Перемещение подпапок в новую родительскую папку.
+- Перемещение подкаталогов в новую родительскую папку.
 
-В следующем фрагменте кода показано, как перемещать такие элементы, как сообщения и папки, из исходной папки в другую папку того же файла PST.
+Следующий фрагмент кода показывает, как перемещать элементы, такие как сообщения и папки, из исходной папки в другую папку в одном и том же PST файле.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 
 using(PersonalStorage personalStorage = PersonalStorage.FromFile("test.pst"))
 {
@@ -654,33 +652,33 @@ using(PersonalStorage personalStorage = PersonalStorage.FromFile("test.pst"))
     FolderInfo deleted = personalStorage.GetPredefinedFolder(StandardIpmFolder.DeletedItems);
     FolderInfo subfolder = inbox.GetSubFolder("Subfolder");
 
-    // Move folder and message to the Deleted Items
+    // Переместить папку и сообщение в папку "Удаленные элементы"
     personalStorage.MoveItem(subfolder, deleted);
     MessageInfoCollection contents = subfolder.GetContents();
     personalStorage.MoveItem(contents[0], deleted);
 
-    // Move all inbox subfolders and subfolder contents to the Deleted Items
+    // Переместить все подпапки "Входящие" и содержимое подкаталога в папку "Удаленные элементы"
     inbox.MoveSubfolders(deleted);
     subfolder.MoveContents(deleted);
 }
 ```
-## **Объединение и разделение файлов PST**
+## **Слияние и разделение PST файлов**
 
-В приведенном ниже примере кода описан процесс разделения файла:
+Пример кода ниже описывает процесс разделения файла:
 
-1. Он, во-первых, использует [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/fromfile/#fromfile) метод [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) класс для указания имени файла.
+1. Сначала он использует метод [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/fromfile/#fromfile) класса [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class), чтобы указать имя файла.
 
-2. Затем оно называет [StorageProcessedEventHandler](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessedeventhandler/#storageprocessedeventhandler-delegate) делегат для обработки события StorageProcessed.
+2. Затем он вызывает делегат [StorageProcessedEventHandler](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessedeventhandler/#storageprocessedeventhandler-delegate) для обработки события StorageProcessed.
 
-3. The [StorageProcessingEventArgs]() класс предоставляет данные для события PersonalStorage.StorageProcessing. Это [StorageProcessingEventArgs.FileName](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessedeventargs/filename/#storageprocessedeventargsfilename-property) свойство позволяет получить имя файла PST. Для [MergeWith](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/mergewith/#mergewith_1) метод это будет имя текущего поста, который нужно объединить с основным, а для [SplitInto](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/splitinto/#splitinto) метод это будет имя текущей детали.
+3. Класс [StorageProcessingEventArgs](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessingevenargs/) предоставляет данные для события PersonalStorage.StorageProcessing. Его свойство [StorageProcessingEventArgs.FileName](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessedeventargs/filename/#storageprocessedeventargsfilename-property) позволяет вам получить имя PST файла. Для метода [MergeWith](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/mergewith/#mergewith_1) это будет имя текущего PST, который будет объединен с основным, а для метода [SplitInto](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/splitinto/#splitinto) это будет имя текущей части.
 
-4. Finally, [Разделить на (размер длинного фрагмента, префикс имени файла строковой части, путь к строке)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/splitinto/#splitinto) метод перегрузки запустит разделение хранилища PST на части меньшего размера. Он принимает следующие параметры:
+4. Наконец, перегруженный метод [SplitInto(long chunkSize, string partFileNamePrefix, string path)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/splitinto/#splitinto) запустит процесс разделения PST хранилища на более мелкие части. Он принимает следующие параметры:
 
 - **chunkSize**: Приблизительный размер каждого фрагмента в байтах.
-- **partFileNamePrefix**: Префикс, добавляемый к имени файла каждой части PST. Если указано, префикс будет добавлен в начало имени каждого файла. Если не указано иное (пусто или пусто), части PST будут созданы без префикса.
-- **path**: Путь к папке, в которой будут созданы фрагменты.
+- **partFileNamePrefix**: Префикс, который будет добавлен к имени файла каждой части PST. Если предоставлен, префикс будет добавлен в начало каждого имени файла. Если не предоставлен (null или пустой), части PST будут созданы без префикса.
+- **path**: Путь к папке, где будут созданы куски.
 
-Имя файла каждой части соответствует шаблону: {prefix} part {number} .pst, где {prefix} представляет собой префикс имени файла (если указан), а {number} представляет номер фрагмента файла.
+Имя файла каждой части следует шаблону: {prefix}part{number}.pst, где {prefix} представляет префикс имени файла (если предоставлен), а {number} представляет номер фрагмента файла.
 
 ```cs
 var pst = PersonalStorage.FromFile("sample.pst");
@@ -689,7 +687,7 @@ var pst = PersonalStorage.FromFile("sample.pst");
 
 pst.StorageProcessing += (sender, args) =>
 {
-    Console.WriteLine("Storage processing event raised for file: " + args.FileName);
+    Console.WriteLine("Событие обработки хранилища было вызвано для файла: " + args.FileName);
 };
 
 // ...
@@ -697,68 +695,68 @@ pst.StorageProcessing += (sender, args) =>
 pst.SplitInto(5000000, "prefix_", outputFolderPath);
 ```
 
-## **Обновление свойств сообщения в файле PST**
+## **Обновление свойств сообщений в PST файле**
 
-Иногда требуется обновить некоторые свойства сообщений, такие как смена темы, маркировка важности сообщения и т. д. Обновление сообщения в PST-файле с такими изменениями в свойствах сообщения можно осуществить с помощью [FolderInfo.ChangeMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/changemessages/#changemessages/) метод. В этой статье показано, как массово обновлять сообщения в PST-файле для изменения свойств. В следующем фрагменте кода показано, как массово обновлять свойства сообщений для нескольких сообщений в PST-файле.
+Иногда требуется обновить определенные свойства сообщений, такие как изменение темы, пометка важности сообщения и аналогичные другие. Обновление сообщения в PST файле с такими изменениями в свойствах сообщения может быть достигнуто с помощью метода [FolderInfo.ChangeMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/changemessages/#changemessages/). Эта статья показывает, как обновить сообщения массово в PST файле для изменения свойств. Следующий фрагмент кода показывает, как обновить свойства сообщений в массовом режиме для нескольких сообщений в PST файле.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// The path to the File directory.
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Путь к директории файлов.
 string dataDir = RunExamples.GetDataDir_Outlook() + "Sub.pst";
 
-// Load the Outlook PST file
+// Загрузите PST файл Outlook
 PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir);
-           
-// Get Requierd Subfolder
+            
+// Получите необходимую подкатегорию 
 FolderInfo inbox = personalStorage.RootFolder.GetSubFolder("Inbox");
 
-// find messages having From = "someuser@domain.com"
+// найдите сообщения с From = "someuser@domain.com"
 PersonalStorageQueryBuilder queryBuilder = new PersonalStorageQueryBuilder();
 queryBuilder.From.Contains("someuser@domain.com");
 
-// Get Contents from Query
+// Получите содержимое из запроса
 MessageInfoCollection messages = inbox.GetContents(queryBuilder.GetQuery());
 
-// Save (MessageInfo,EntryIdString) in List
+// Сохраните (MessageInfo,EntryIdString) в списке
 IList<string> changeList = new List<string>();
 foreach (MessageInfo messageInfo in messages)
 {
     changeList.Add(messageInfo.EntryIdString);
 }
 
-// Compose the new properties
+// Составьте новые свойства
 MapiPropertyCollection updatedProperties = new MapiPropertyCollection();
-updatedProperties.Add(MapiPropertyTag.PR_SUBJECT_W, new MapiProperty(MapiPropertyTag.PR_SUBJECT_W, Encoding.Unicode.GetBytes("New Subject")));
+updatedProperties.Add(MapiPropertyTag.PR_SUBJECT_W, new MapiProperty(MapiPropertyTag.PR_SUBJECT_W, Encoding.Unicode.GetBytes("Новая тема")));
 updatedProperties.Add(MapiPropertyTag.PR_IMPORTANCE, new MapiProperty(MapiPropertyTag.PR_IMPORTANCE, BitConverter.GetBytes((long)2)));
 
-// update messages having From = "someuser@domain.com" with new properties
+// обновить сообщения с From = "someuser@domain.com" новыми свойствами
 inbox.ChangeMessages(changeList, updatedProperties);
 ```
 
-## **Обновление настраиваемых свойств в файле PST**
+## **Обновление пользовательских свойств в PST файле**
 
-Иногда требуется пометить элементы, обработанные в файле PST. API Aspose.Email позволяет сделать это с помощью свойств MapiProperty и MapInamedProperty. В этом помогают следующие методы.
+Иногда требуется пометить элементы, которые были обработаны в PST файле. API Aspose.Email позволяет достичь этого с помощью MapiProperty и MapiNamedProperty. Следующие методы полезны в достижении этого.
 
-- actor MapInamed Property (длинный тег свойства, идентификатор строкового имени, идентификатор свойства GUID, значение свойства byte [])
-- actor MapInamed Property (длинный тег свойства, идентификатор длинного имени, идентификатор свойства GUID, значение свойства byte [])
-- FolderInfo.changeMessages (обновленные свойства коллекции MAPIPropertyCollection) — изменяет все сообщения в папке
-- PersonalStorage.change Message (идентификатор строковой записи, обновленные свойства коллекции свойств MAPI) — изменяет свойства сообщения
+- ctor MapiNamedProperty(long propertyTag, string nameIdentifier, Guid propertyGuid, byte[] propertyValue)
+- ctor MapiNamedProperty(long propertyTag, long nameIdentifier, Guid propertyGuid, byte[] propertyValue)
+- FolderInfo.ChangeMessages(MapiPropertyCollection updatedProperties) - изменяет все сообщения в папке
+- PersonalStorage.ChangeMessage(string entryId, MapiPropertyCollection updatedProperties) - изменяет свойства сообщения
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 
 public static void Run()
 {
-	// Load the Outlook file
+	// Загрузите файл Outlook
 	string dataDir = RunExamples.GetDataDir_Outlook() + "Sub.pst";
 	using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir))
 	{
 		FolderInfo testFolder = personalStorage.RootFolder.GetSubFolder("Inbox");
 
-		// Create the collection of message properties for adding or updating
+		// Создайте коллекцию свойств сообщения для добавления или обновления
 		MapiPropertyCollection newProperties = new MapiPropertyCollection();
 
-		// Normal,  Custom and PidLidLogFlags named  property
+		// Обычное, Пользовательское и PidLidLogFlags именованное свойство
 		MapiProperty property = new MapiProperty(MapiPropertyTag.PR_ORG_EMAIL_ADDR_W,Encoding.Unicode.GetBytes("test_address@org.com"));
 		MapiProperty namedProperty1 = new MapiNamedProperty(GenerateNamedPropertyTag(0, MapiPropertyType.PT_LONG),"ITEM_ID",Guid.NewGuid(),BitConverter.GetBytes(123));
 		MapiProperty namedProperty2 = new MapiNamedProperty(GenerateNamedPropertyTag(1, MapiPropertyType.PT_LONG),0x0000870C,new Guid("0006200A-0000-0000-C000-000000000046"),BitConverter.GetBytes(0));
@@ -777,10 +775,10 @@ private static long GenerateNamedPropertyTag(long index, MapiPropertyType dataTy
 
 ## **Извлечение вложений без извлечения полного сообщения**
 
-Aspose.Email API можно использовать для извлечения вложений из сообщений PST без предварительного извлечения всего сообщения. Для этого можно использовать метод ExtractAttachments в IEWSClient. В следующем фрагменте кода показано, как извлекать вложения без извлечения целого сообщения.
+API Aspose.Email может использоваться для извлечения вложений из сообщений PST без предварительного извлечения полного сообщения. Метод ExtractAttachments класса IEWSClient может быть использован для этого. Следующий фрагмент кода показывает, как извлечь вложения без извлечения полного сообщения.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 string dataDir = RunExamples.GetDataDir_Outlook();
 
 using (PersonalStorage personalstorage = PersonalStorage.FromFile(dataDir + "Outlook.pst"))
@@ -814,15 +812,15 @@ using (PersonalStorage personalstorage = PersonalStorage.FromFile(dataDir + "Out
 
 ## **Добавление файлов в PST**
 
-Ключевые функции Microsoft Outlook — управление электронной почтой, календарями, задачами, контактами и записями в журнале. Кроме того, файлы также можно добавлять в папку PST, и полученный PST сохраняет записи добавленных документов. Aspose.Email предоставляет возможность добавлять файлы в папку таким же образом, как и добавлять сообщения, контакты, задачи и журнальные записи в PST. В следующем фрагменте кода показано, как добавлять документы в папку PST с помощью Aspose.Email.
+Ключевая функциональность Microsoft Outlook состоит в управлении электронной почтой, календарями, задачами, контактами и записями журнала. Кроме того, в папку PST можно также добавлять файлы, и полученный PST будет вести учет добавленных документов. Aspose.Email предоставляет возможность добавления файлов в папку так же, как и добавление сообщений, контактов, задач и записей журнала в PST. Следующий фрагмент кода показывает, как добавлять документы в папку PST с помощью Aspose.Email.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 using (PersonalStorage personalStorage = PersonalStorage.Create(dataDir + "Ps1_out.pst", FileFormatVersion.Unicode))
 {
     FolderInfo folder = personalStorage.RootFolder.AddSubFolder("Files");
 
-    // Add Document.doc file with the "IPM.Document" message class by default.
+    // Добавить файл Document.doc с классом сообщения "IPM.Document" по умолчанию.
     folder.AddFile(dataDir + "attachment_1.doc", null);
 }
 ```
