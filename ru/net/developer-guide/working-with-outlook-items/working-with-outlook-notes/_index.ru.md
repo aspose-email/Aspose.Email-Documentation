@@ -5,25 +5,25 @@ weight: 110
 type: docs
 ---
 
-
 ## **Создание, сохранение и чтение заметок**
 
-Aspose.Email предоставляет возможность создавать заметки Outlook и сохранять их на диск в формате MSG. [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) класс предоставляет свойства и методы для задания информации о задании. В этой статье показано, как создать, сохранить и прочитать [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) с диска.
+Aspose.Email предоставляет возможность создавать заметки Outlook и сохранять их на диск в формате MSG. Класс [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) предоставляет свойства и методы для установки информации о задаче. В этой статье показано, как создать, сохранить и прочитать [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) с диска.
 
 ### **Создание и сохранение заметки Outlook**
 
-Для создания и сохранения заметки на диск можно использовать следующие шаги:
+Следующие шаги можно использовать для создания и сохранения заметки на диск:
 
-1. Создайте экземпляр объекта из [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) class.
-1. Задайте различные свойства.
-1. Сохраните заметку на диске в виде файла MSG.
+1. Создать объект класса [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/).
+1. Установить различные свойства.
+1. Сохранить заметку на диск как файл MSG.
 
-В следующем фрагменте кода показано, как создать и сохранить заметку Outlook.
+Следующий фрагмент кода показывает, как создать и сохранить заметку Outlook.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreatAndSaveAnOutlookNote-CreatAndSaveAnOutlookNote.cs" >}}
 
-### **Чтение заметки MapiNote**
+### **Чтение MapiNote**
 
-The [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) объект класса используется для создания [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) объект, который загружает заметку с диска в формате MSG. В следующем фрагменте кода показано, как читать [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/).
+Объект класса [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) используется для приведения объекта [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/), который загружает заметку с диска в формате MSG. Следующий фрагмент кода показывает, как прочитать [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadMapiNote-ReadMapiNote.cs" >}}
+
