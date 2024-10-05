@@ -1,67 +1,67 @@
 ---
-title: "Функции утилиты График Майкрософт"
+title: "Утилиты Microsoft Graph"
 url: /ru/java/microsoft-graph-utility-features/
 weight: 10
 type: docs
 ---
 
 
-## **Создание проекта в Центре администрирования Активная директория Azure**
+## **Создание проекта в Центре администрирования Azure Active Directory**
 
-Проект должен быть создан в Центре администрирования Активная директория Azure для пользователя, имеющего учетную запись MS Office.
-### **Шаги по созданию проекта в Центре администрирования Активная директория Azure**
+Проект необходимо создать в Центре администрирования Azure Active Directory для пользователя с учетной записью MS Office.
+### **Шаги для создания проекта в Центре администрирования Azure Active Directory**
 
-Ниже приводится пошаговое руководство по созданию проекта в Центре администрирования Активная директория Azure.
+Ниже приведено пошаговое руководство по созданию проекта в Центре администрирования Azure Active Directory.
 
-#### 1. Перейдите в Активная директория Azure и войдите в систему, используя свои учетные данные MS Office.
+#### 1. Перейдите в Azure Active Directory и войдите, используя свои учетные данные MS Office.
 
-**Активная директория Azure** Ссылка - <https://aad.portal.azure.com/>
+**Ссылка на Azure Active Directory** - <https://aad.portal.azure.com/>
 
 #### 2. Создайте приложение Azure AD в своем арендаторе.
 
-На левой боковой панели нажмите на метку **Активная директория Azure**. Это откроет блейд для Активная директория Azure. На этом экране должна появиться надпись **Регистрация приложений**. Это отправная точка регистрации приложения Azure AD. Этот блейд позволит вам создать новое приложение для Azure AD.
+В левой панели нажмите на ярлык **Azure Active Directory**. Это откроет панель Azure Active Directory. На этом экране должно быть видно ярлык **Регистрация приложений**. Это начальная точка для регистрации приложения Azure AD. Эта панель позволит вам создать новое приложение для Azure AD.
 
-Нажмите на кнопку **Новая регистрация** для создания нового приложения.
+Нажмите на кнопку **Новая регистрация**, чтобы создать новое приложение.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_1.png)
 
-#### 3. Теперь вы увидите новое лезвие для регистрации приложений.
+#### 3. Теперь вы увидите панель новой регистрации приложения.
 
-- **Name** Это будет название вашего приложения.
-- **Поддерживаемые типы счетов** Этот раздел ограничит доступ.
+- **Имя** Это будет имя вашего приложения.
+- **Типы поддерживаемых аккаунтов** Этот раздел ограничит доступ.
 
-Click **Register** button.
+Нажмите кнопку **Зарегистрировать**.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_2.png)
 
-#### 4. Вы должны увидеть лезвие недавно зарегистрированных приложений.
+#### 4. Вы должны увидеть панель недавно зарегистрированных приложений.
 
 - **Идентификатор приложения (клиента)** Идентификатор вашего приложения.
-- **Идентификатор каталога (арендатора)** Идентификатор клиента Azure AD.
+- **Идентификатор каталога (арендатора)** Идентификатор арендатора Azure AD.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_6.png)
 
-#### 5. Предоставление разрешений для График Майкрософт API.
+#### 5. Разрешение доступа для Microsoft Graph API.
 
-Нажмите на **Разрешения API** label.
+Нажмите на ярлык **Разрешения API**.
 
-Azure уже предоставила вам **User.Read** делегированные разрешения для вашего приложения. Это разрешение позволит нам читать информацию о вошедшем в систему пользователе. Это разрешения График Майкрософт API, с другой стороны, мы можем назвать их так **Scopes**.
+Azure уже предоставил вам делегированные разрешения **User.Read** для вашего приложения. Это разрешение позволит нам читать информацию о пользователе для вошедшего пользователя. Это разрешения Microsoft Graph API, в свою очередь, мы можем называть их **Области**.
 
-Полный список областей применения График Майкрософт API - <https://docs.microsoft.com/en-us/graph/permissions-reference>.
+Полный список областей для Microsoft Graph API - <https://docs.microsoft.com/en-us/graph/permissions-reference>.
 
-Нажмите на **+ Добавить разрешение** кнопка и выберите **График Майкрософт**.
+Нажмите на кнопку **+ Добавить разрешение** и выберите **Microsoft Graph**.
 
-Нажмите на **Делегированные разрешения**. Теперь вы видите список разрешений, доступных для График Майкрософт API.
+Нажмите на **Делегированные разрешения**. Теперь вы увидите список разрешений, доступных для Microsoft Graph API.
 
-Выберите необходимые разрешения, нажмите **Добавить разрешения** button.
+Выберите необходимые разрешения и нажмите кнопку **Добавить разрешения**.
 
-Click **Предоставьте согласие администратора** button.
+Нажмите кнопку **Предоставить согласие администратора**.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_3.png)
 
-#### 6. Разрешите потоки государственных клиентов.
+#### 6. Разрешите публичные клиентские потоки.
 
-Указывает, является ли приложение публичным клиентом. Подходит для приложений, использующих потоки предоставления токенов и не использующих URI перенаправления.
+Указывает, является ли приложение публичным клиентом. Подходит для приложений, использующих потоки предоставления токенов, которые не используют перенаправление URI.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_4.png)
 
@@ -71,11 +71,11 @@ Click **Предоставьте согласие администратора**
 
 ## **Вспомогательные классы**
 
-Для запуска кодов, описанных в этом разделе, необходимы следующие вспомогательные классы. Эти классы предназначены только для упрощения демонстрации.
+Следующие вспомогательные классы необходимы для выполнения кода в этом разделе. Эти классы предназначены только для упрощения демонстрации.
 
-### **Класс поставщика токенов AzureROP**
+### **Класс AzureROPCTokenProvider**
 
-Пример [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) класс обрабатывает запросы на сборку, отправляет их в График Майкрософт API и обрабатывает ответы. Чтобы создать новый экземпляр этого класса, вам необходимо предоставить экземпляр [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), который может аутентифицировать запросы к График Майкрософт.
+Экземпляр класса [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) обрабатывает построение запросов, их отправку в Microsoft Graph API и обработку ответов. Чтобы создать новый экземпляр этого класса, вам необходимо предоставить экземпляр [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), который может аутентифицировать запросы к Microsoft Graph.
 
 ~~~Java
 import java.io.BufferedReader;
@@ -94,12 +94,12 @@ import java.util.Map;
 
 /**
  * <p>
- * Azure resource owner password credential (ROPC) token provider
+ * Провайдер токенов с использованием учетных данных владельца ресурса Azure (ROPC)
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc
  * https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth
  * https://portal.azure.com
  * https://developer.microsoft.com/en-us/graph/graph-explorer/#
- * token parser https://jwt.io
+ * парсер токенов https://jwt.io
  * </p>
  */
 class AzureROPCTokenProvider implements ITokenProvider {
@@ -182,8 +182,8 @@ class AzureROPCTokenProvider implements ITokenProvider {
             connection.connect();
 
             if (connection.getResponseCode() >= HttpURLConnection.HTTP_BAD_REQUEST) {
-                throw new IllegalAccessError("Operation failed: " + connection.getResponseCode() + "/" +
-                        connection.getResponseMessage() + "\r\nDetails:\r\n{2}"
+                throw new IllegalAccessError("Операция завершилась ошибкой: " + connection.getResponseCode() + "/" +
+                        connection.getResponseMessage() + "\r\nПодробности:\r\n{2}"
                         + readInputStream(connection.getErrorStream()));
             }
 
@@ -234,7 +234,7 @@ class AzureROPCTokenProvider implements ITokenProvider {
                 result.append(line);
             }
         } catch (IOException e) {
-            // ignore
+            // игнорировать
         }
         return result.toString();
     }

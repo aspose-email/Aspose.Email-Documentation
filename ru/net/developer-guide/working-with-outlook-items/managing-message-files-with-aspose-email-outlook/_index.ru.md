@@ -1,5 +1,5 @@
 ---
-title: "Управление файлами сообщений с помощью Aspose.Email.Outlook"
+title: "Управление файлами сообщений с Aspose.Email.Outlook"
 url: /ru/net/managing-message-files-with-aspose-email-outlook/
 weight: 30
 type: docs
@@ -7,9 +7,9 @@ type: docs
 
 ## **Получение типа элемента MAPI**
 
-The [MapiItemType](https://reference.aspose.com/email/net/aspose.email.mapi/mapiitemtype/) enum представляет собой тип элемента MAPI, который можно явно преобразовать в объект соответствующего класса, производный от [IMapiMessageItem](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/#imapimessageitem-interface)интерфейс. Таким образом, пользователи могут избежать проверки [MessageClass](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/messageclass/) значение свойства до преобразования сообщения.
+Перечисление [MapiItemType](https://reference.aspose.com/email/net/aspose.email.mapi/mapiitemtype/) представляет тип элемента MAPI, который может быть явно преобразован в объект соответствующего класса, производного от интерфейса [IMapiMessageItem](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/#imapimessageitem-interface). Таким образом, пользователи могут избежать проверки значения свойства [MessageClass](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/messageclass/) перед преобразованием сообщения.
 
-В следующем примере кода показано, как определить тип конвертируемого элемента:
+В следующем примере кода показано, как определить тип элемента для преобразования:
 
 ```cs
 foreach (var messageInfo in folder.EnumerateMessages())
@@ -18,34 +18,34 @@ foreach (var messageInfo in folder.EnumerateMessages())
 
     switch (msg.SupportedType)
     {
-        // Non-supported type. MapiMessage cannot be converted to an appropriate item type.
-        // Just use in MSG format.
+        // Несоответствующий тип. MapiMessage не может быть преобразован в соответствующий тип элемента.
+        // Просто используйте в формате MSG.
         case MapiItemType.None:
             break;
-        // An email message. Conversion isn't required.
+        // Электронное сообщение. Преобразование не требуется.
         case MapiItemType.Message:
             break;
-        // A contact item. Can be converted to MapiContact.
+        // Элемент контакта. Может быть преобразован в MapiContact.
         case MapiItemType.Contact:
             var contact = (MapiContact)msg.ToMapiMessageItem();
             break;
-        // A calendar item. Can be converted to MapiCalendar.
+        // Элемент календаря. Может быть преобразован в MapiCalendar.
         case MapiItemType.Calendar:
             var calendar = (MapiCalendar)msg.ToMapiMessageItem();
             break;
-        // A distribution list. Can be converted to MapiDistributionList.
+        // Распределительный список. Может быть преобразован в MapiDistributionList.
         case MapiItemType.DistList:
             var dl = (MapiDistributionList)msg.ToMapiMessageItem();
             break;
-        // A Journal entry. Can be converted to MapiJournal.
+        // Запись журнала. Может быть преобразована в MapiJournal.
         case MapiItemType.Journal:
             var journal = (MapiJournal)msg.ToMapiMessageItem();
             break;
-        // A StickyNote. Can be converted to MapiNote.
+        // Заметка. Может быть преобразована в MapiNote.
         case MapiItemType.Note:
             var note = (MapiNote)msg.ToMapiMessageItem();
             break;
-        // A Task item. Can be converted to MapiTask.
+        // Элемент задачи. Может быть преобразован в MapiTask.
         case MapiItemType.Task:
             var task = (MapiTask)msg.ToMapiMessageItem();
             break;
@@ -54,11 +54,11 @@ foreach (var messageInfo in folder.EnumerateMessages())
 ```
 ## **Сохранение электронной почты в формате HTML**
 
-Aspose.Email позволяет сохранять ресурсы электронной почты с относительными путями при экспорте сообщений в формат HTML. Эта функция обеспечивает большую гибкость при связывании ресурсов в выходном HTML-файле, упрощая обмен и отображение сохраненных писем в разных системах. Чтобы сохранить ресурсы с относительными путями, используйте [HtmlSaveOptions.UseRelativePathToResources](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/userelativepathtoresources/) имущество. Значение свойства по умолчанию равно false (ресурсы сохраняются с абсолютными путями). Если установлено значение true, ресурсы сохраняются по относительным путям.
+Aspose.Email позволяет сохранять ресурсы электронной почты с относительными путями при экспорте сообщений в формат HTML. Эта функция предоставляет большую гибкость в том, как ресурсы связаны в выходном HTML-файле, что упрощает обмен и отображение сохраненных электронных писем на различных системах. Чтобы сохранить ресурсы с относительными путями, используйте свойство [HtmlSaveOptions.UseRelativePathToResources](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/userelativepathtoresources/). Значение свойства по умолчанию - false (ресурсы сохраняются с абсолютными путями). При установке в true ресурсы сохраняются с относительными путями.
 
-HTML-файлы с относительными путями более портативны и могут корректно просматриваться независимо от файловой структуры среды хостинга. В зависимости от требований можно выбирать между абсолютными и относительными путями. Вы можете определить собственные пути к ресурсам, используя [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/) event.
+HTML-файлы с относительными путями более портативны и могут отображаться правильно независимо от структуры файловой системы хостинг-среды. Вы можете выбирать между абсолютными и относительными путями в зависимости от требований. Вы можете определить пользовательские пути для ресурсов, используя событие [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/).
 
-В следующем примере кода показано, как **сохранить электронное письмо с относительным путем к ресурсам по умолчанию**:
+Следующий пример кода демонстрирует, как **сохранить электронную почту с использованием относительного пути к ресурсам**:
 
 ```cs
 var msg = MapiMessage.Load(sourceFileName);
@@ -71,9 +71,9 @@ var htmlSaveOptions = new HtmlSaveOptions
 
 msg.Save(Path.Combine("target_files"), htmlSaveOptions);
 ```
-В этом случае ресурсы будут сохранены в папке [html file name] _files по тому же пути, что и файл HTML, а HTML-код будет ссылаться на ресурсы по относительным путям.
+В этом случае ресурсы будут сохранены в папке [html file name]_files, по тому же пути, что и .html файл, а HTML будет ссылаться на ресурсы через относительные пути.
 
-В приведенном ниже примере кода показано, как **сэкономьте с абсолютным путем к ресурсам**:
+Пример кода ниже демонстрирует, как **сохранить с абсолютным путем к ресурсам**:
 
 ```cs
 var msg = MapiMessage.Load(sourceFileName);
@@ -86,11 +86,11 @@ var htmlSaveOptions = new HtmlSaveOptions
 
 msg.Save(Path.Combine("target_files"), htmlSaveOptions);
 ```
-Как и в первом случае, ресурсы по умолчанию сохраняются в папке [html file name] _files, но HTML-код будет ссылаться на ресурсы с использованием абсолютных путей.
+Как и в первом случае, ресурсы будут сохранены в папке [html file name]_files по умолчанию, но HTML будет ссылаться на ресурсы, используя абсолютные пути.
 
-Используя [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/) событие, вы можете установить собственные относительные или абсолютные пути для ресурсов. При настройке путей с помощью [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/) обработчик событий, и так как [UseRelativePathToResources](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/userelativepathtoresources/) установлено значение true, вы должны назначить относительный путь к [PathToResourceFile](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/pathtoresourcefile/) свойство, обеспечивающее правильную ссылку.
+Используя событие [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/), вы можете устанавливать пользовательские относительные или абсолютные пути для ресурсов. При настройке путей с помощью обработчика события [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/), и поскольку [UseRelativePathToResources](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/userelativepathtoresources/) установлено в true, вы должны назначить относительный путь свойству [PathToResourceFile](https://reference.aspose.com/email/net/aspose.email/resourcehtmlrenderingeventargs/pathtoresourcefile/), чтобы обеспечить правильную ссылку.
 
-В следующем примере кода показано, как **настраиваемый относительный путь с использованием события ResourceHTMLRendering**
+Следующий пример кода демонстрирует, как **настроить относительный путь с использованием события ResourceHtmlRendering**:
 
 ```cs
 var msg = MapiMessage.Load(sourceFileName);
@@ -105,7 +105,7 @@ htmlSaveOptions.ResourceHtmlRendering += (o, args) =>
 {
     if (o is AttachmentBase attachment)
     {
-	    // Since UseRelativePathToResources = true, you should assign a relative path to the PathToResourceFile property.
+	    // Поскольку UseRelativePathToResources = true, вы должны назначить относительный путь свойству PathToResourceFile.
         args.PathToResourceFile = $@"images\{attachment.ContentType.Name}";
     }
 };
@@ -113,37 +113,35 @@ htmlSaveOptions.ResourceHtmlRendering += (o, args) =>
 msg.Save(Path.Combine(targetPath, "A Day in the Park.html"), htmlSaveOptions);
 ```
 
+## **Преобразование MSG в MIME сообщение**
 
-## **Преобразование MSG в сообщение MIME**
-
-Aspose.Email API предоставляет возможность преобразования файлов MSG в сообщения MIME с помощью [ToMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/tomailmessage/#tomailmessage) method.
+API Aspose.Email предоставляет возможность преобразования файлов MSG в MIME сообщения с помощью метода [ToMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/tomailmessage/#tomailmessage).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ConvertMSGToMIMEMessage-ConvertMSGToMIMEMessage.cs" >}}
 
+## **Установка времени ожидания для процесса преобразования и загрузки сообщений**
 
-## **Настройка тайм-аута для процесса преобразования и загрузки сообщений**
+Следующие функции позволят вам установить таймаут в миллисекундах для процесса преобразования и загрузки:
 
-Следующие функции позволят вам установить тайм-аут в миллисекундах для процесса преобразования и загрузки:
+- свойство [MailConversionOptions.Timeout](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeout/#mailconversionoptionstimeout-property) - ограничивает время в миллисекундах во время преобразования сообщения.
 
-- [MailConversionOptions.Timeout](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeout/#mailconversionoptionstimeout-property) свойство — ограничивает время преобразования сообщения в миллисекундах.
+- [MailConversionOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeoutreached/) - возникает, если время вышло во время преобразования в MailMessage.
 
-- [MailConversionOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeoutreached/) - Повышается, если время преобразования в MailMessage истекло.
+- [MsgLoadOptions.Timeout](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeout/) - ограничивает время в миллисекундах во время преобразования сообщения.
 
-- [MsgLoadOptions.Timeout](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeout/) - Ограничивает время преобразования сообщения в миллисекундах.
+- [MsgLoadOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeoutreached/) - возникает, если время вышло во время преобразования в MailMessage.
 
-- [MsgLoadOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeoutreached/) - Повышается, если время преобразования в MailMessage истекло.
-
-В приведенном ниже примере кода показано, как установить тайм-аут при преобразовании сообщения:
+Ниже приведен пример кода, который показывает, как установить таймаут во время преобразования сообщения:
 
 ```cs
 var options = new MailConversionOptions();
-// Set the timeout to 5 seconds
+// Установите таймаут на 5 секунд
 options.Timeout = 5000;
 
 options.TimeoutReached += (object sender, EventArgs args) =>
 {
     string subj = (sender as MailMessage).Subject;
-	 // Set a flag indicating the timeout was reached
+	 // Установите флаг, указывающий, что таймаут был достигнут
     isTimedOut = true;
 };
 
@@ -152,89 +150,88 @@ var mailMessage = mapiMessage.ToMailMessage(options);
 
 ## **Чтение и запись файла шаблона Outlook (.OFT)**
 
-Шаблоны Outlook очень полезны, если вы хотите снова и снова отправлять одно и то же сообщение электронной почты. Вместо того чтобы каждый раз готовить сообщение с нуля, сначала подготовьте сообщение в Outlook и сохраните его как шаблон Outlook (OFT). После этого каждый раз, когда вам нужно отправить сообщение, вы можете создать его на основе шаблона, сэкономив время на написании того же текста в тексте или теме письма, настройке форматирования и т. д. Адрес электронной почты Aspose.Email [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс можно использовать для загрузки и чтения файла шаблона Outlook (OFT). Как только шаблон Outlook будет загружен в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс, вы можете обновить отправителя, получателя, текст, тему и другие свойства. После обновления свойств:
+Шаблоны Outlook очень полезны, когда вы хотите отправлять аналогичное электронное сообщение снова и снова. Вместо того чтобы готовить сообщение с нуля каждый раз, сначала подготовьте сообщение в Outlook и сохраните его как шаблон Outlook (OFT). После этого, когда вам нужно будет отправить сообщение, вы можете создать его из шаблона, экономя время на написание одного и того же текста в теле или заголовке, настройке форматирования и т.д. Класс Aspose.Email [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) можно использовать для загрузки и чтения файла шаблона Outlook (OFT). После того как шаблон Outlook загружен в экземпляре класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/), вы можете обновить отправителя, получателя, тело, тему и другие свойства. После обновления свойств:
 
-- Отправьте электронное письмо, используя [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) класс или
-- Сохраните сообщение как MSG и выполните дальнейшие обновления/проверку с помощью Microsoft Outlook.
+- Отправьте электронное сообщение с помощью класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) или
+- Сохраните сообщение в формате MSG и выполните дальнейшие обновления/проверки с помощью Microsoft Outlook.
 
 В приведенных ниже примерах кода мы:
 
-1. Загрузите шаблон, используя [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Обновите некоторые свойства.
-1. Сохраните сообщение в формате MSG.
+1. Загружаем шаблон с помощью класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Обновляем некоторые свойства.
+1. Сохраняем сообщение в формате MSG.
 
-В следующем фрагменте кода показано, как загрузить файл OFT, обновить сообщение и сохранить его в формате MSG.
+Следующий фрагмент кода показывает, как загрузить файл OFT, обновить сообщение и сохранить его в формате MSG.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadAndWritingOutlookTemplateFile-ReadAndWritingOutlookTemplateFile.cs" >}}
 
-### **Сохранение MSG-файла Outlook в качестве шаблона**
+### **Сохранение файла MSG Outlook как шаблона**
 
-В следующем фрагменте кода показано, как сохранить файл Outlook MSG в качестве шаблона.
+Следующий фрагмент кода показывает, как сохранить файл MSG Outlook как шаблон.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-SaveMsgAsTemplate-SaveMsgAsTemplate.cs" >}}
 
-### **Определите, является ли сообщение MapiMessage OFT или MSG**
+### **Определение, является ли MapiMessage OFT или MSG**
 
-При загрузке объекта MapiMessage из файла вам может потребоваться определить, является ли загруженное сообщение файлом шаблона или обычным файлом электронной почты. Используя [IsTemplate](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/istemplate/) собственность [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/#mapimessage-class) класс, вы можете точно определить, является ли электронное письмо шаблоном или нет. Эта функциональность может быть полезна при обработке и обработке различных типов файлов электронной почты в приложениях и системах.
+При загрузке объекта MapiMessage из файла вам может понадобиться определить, является ли загруженное сообщение файлом шаблона или файлом обычной электронной почты. Используя свойство [IsTemplate](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/istemplate/) класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/#mapimessage-class), вы можете точно определить, является ли электронное сообщение шаблоном или нет. Эта функция может быть полезной при работе и обработке различных типов файлов электронной почты в приложениях и системах.
 
-В приведенном ниже примере кода показано, как определить, является ли сообщение MapiMessage OFT или MSG:
+Пример кода ниже демонстрирует, как определить, является ли MapiMessage OFT или MSG:
 
 ```cs
 var msg = MapiMessage.Load("message.msg");
-var isOft = msg.IsTemplate; // returns false
+var isOft = msg.IsTemplate; // возвращает false
 
 var msg = MapiMessage.Load("message.oft");
-var isOft = msg.IsTemplate; // returns true
+var isOft = msg.IsTemplate; // возвращает true
 ```
 
-### **Сохранение сообщения MapiMessage или MailMessage в формате OFT**
+### **Сохранение MapiMessage или MailMessage в формате OFT**
 
-The [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/#saveoptions-class) класс позволяет указать дополнительные параметры при сохранении MailMessage или MapiMessage в определенном формате.
+Класс [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/#saveoptions-class) позволяет задавать дополнительные параметры при сохранении MailMessage или MapiMessage в определенном формате.
 
-В следующем примере кода показано, как сохранить сообщение в формате OFT:
+Следующий пример кода демонстрирует, как сохранить сообщение в формате OFT:
 
 ```cs
-// Save the MailMessage to OFT format
+// Сохраните MailMessage в формате OFT
 using (var eml = MailMessage.Load("message.eml"))
 {
     eml.Save("message.oft", SaveOptions.DefaultOft);
 	
-	// or alternative way #2
+	// или альтернативный способ #2
 	var saveOptions = new MsgSaveOptions(MailMessageSaveType.OutlookTemplateFormat);
     eml.Save("message.oft", saveOptions);
 	
-	// or alternative  way #3
+	// или альтернативный способ #3
 	saveOptions = SaveOptions.CreateSaveOptions(MailMessageSaveType.OutlookTemplateFormat);
     eml.Save("message.oft", saveOptions);
-
 }
 
-// Save the MapiMessage to OFT format
+// Сохраните MapiMessage в формате OFT
 using (var msg = MapiMessage.Load("message.msg"))
 {
     msg.Save("message.oft", SaveOptions.DefaultOft);
 	
-	// or alternative way #2
+	// или альтернативный способ #2
 	var saveOptions = new MsgSaveOptions(MailMessageSaveType.OutlookTemplateFormat);
     msg.Save("message.oft", saveOptions);
 	
-	// or alternative  way #3
+	// или альтернативный способ #3
 	saveOptions = SaveOptions.CreateSaveOptions(MailMessageSaveType.OutlookTemplateFormat);
     msg.Save("message.oft", saveOptions);
 }
 ```
 
-## **Управление сообщениями с цифровой подписью**
+## **Управление цифровыми подписями сообщений**
 
-Aspose.Email реализует полный алгоритм объекта электронной почты S/MIME. Это дает API полную возможность сохранять цифровые подписи при преобразовании сообщений между форматами.
+Aspose.Email реализует полный алгоритм объекта электронной почты S/MIME. Это дает API полную мощность для сохранения цифровых подписей при преобразовании сообщений между форматами.
 
 ### **Сохранение подписи при преобразовании из EML в MSG**
 
-Aspose.Email сохраняет цифровую подпись при преобразовании из EML в MSG. В следующем фрагменте кода показано, как конвертировать из EML в MSG.
+Aspose.Email сохраняет цифровую подпись при преобразовании из EML в MSG. Следующий фрагмент кода показывает, как преобразовать из EML в MSG.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ConvertEMLToMSG-ConvertEMLToMSG.cs" >}}
 
-### **Преобразование сообщений S/MIME из MSG в EML**
+### **Преобразование S/MIME сообщений из MSG в EML**
 
 Aspose.Email сохраняет цифровую подпись при преобразовании из MSG в EML, как показано в следующем фрагменте кода.
 
@@ -242,15 +239,15 @@ Aspose.Email сохраняет цифровую подпись при прео�
 
 ### **Проверка подписи защищенных электронных писем**
 
-Доступны следующие функции для проверки подписи объектов MapiMessage.
+Для проверки подписи объектов MapiMessage доступны следующие функции:
 
-- [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) класс для проверки подписи защищенных писем.
-- [SmimeResult](https://reference.aspose.com/email/net/aspose.email/smimeresult/#smimeresult-class) класс для хранения результатов проверки.
-- [Защищенный менеджер электронной почты. Проверьте подпись (сообщение MAPI)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_3) method.
-- [Защищенный менеджер электронной почты. Проверьте подпись (сообщение MAPI, сертификат X509 Certificate 2 для расшифровки)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_4) method.
-- [Secure Email Manager. Проверьте подпись (сообщение MAPI, сертификат X509 Certificate2 для расшифровки, хранилище X509 Store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_5) method.
+- класс [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) для проверки подписи защищенных электронных писем.
+- класс [SmimeResult](https://reference.aspose.com/email/net/aspose.email/smimeresult/#smimeresult-class) для хранения результатов проверки.
+- метод [SecureEmailManager.CheckSignature(MapiMessage msg)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_3).
+- метод [SecureEmailManager.CheckSignature(MapiMessage msg, X509Certificate2 certificateForDecrypt)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_4).
+- метод [SecureEmailManager.CheckSignature(MapiMessage msg, X509Certificate2 certificateForDecrypt, X509Store store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_5).
 
-В приведенном ниже примере кода показано, как реализовать эти функции в вашем проекте:
+Ниже приведен пример кода, показывающий, как реализовать функции в вашем проекте:
 
 ```cs
 var msg = MapiMessage.Load(fileName, new EmlLoadOptions());
@@ -267,11 +264,11 @@ store.Close();
 var result = new SecureEmailManager().CheckSignature(eml, cert, store);
 ```
 
-### **Удаление подписи из сообщения MapiMessage**
+### **Удаление подписи из MapiMessage**
 
-Для лучшей совместимости [MapiMessage.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/removesignature/) метод и [MapiMessage.IsSigned](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/issigned/) свойство используется для удаления цифровой подписи из сообщения.
+Для лучшей совместимости используется метод [MapiMessage.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/removesignature/) и свойство [MapiMessage.IsSigned](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/issigned/) для удаления цифровой подписи из сообщения.
 
-В следующем фрагменте кода показано, как реализовать эти функции в своем проекте:
+Следующий фрагмент кода показывает, как реализовать эти функции в вашем проекте:
 
 ```cs
 var msg = MapiMessage.Load(fileName);
@@ -281,15 +278,15 @@ if (msg.IsSigned)
     var unsignedMsg = msg.RemoveSignature();
 }
 ```
-## **Расшифруйте сообщение MAPImessage с помощью сертификата**
+## **Расшифровка MapiMessage с помощью сертификата**
 
-Если у вас есть зашифрованные сообщения MAPI и вам нужно расшифровать их с помощью закрытого ключа, хранящегося в сертификате, вам могут пригодиться следующие функции Aspose.Email:
+Если у вас есть зашифрованные сообщения MAPI и вам необходимо расшифровать их с помощью закрытого ключа, хранящегося в сертификате, следующие функции Aspose.Email могут быть полезными:
 
 - [MapiMessage.IsEncrypted](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/isencrypted/#mapimessageisencrypted-property) - Получает значение, указывающее, зашифровано ли сообщение.
-- [MapiMessage.Decrypt()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt) - Расшифровывает это сообщение (метод ищет у текущего пользователя и компьютера My stores соответствующий сертификат и закрытый ключ).
-- [Сообщение MAPI. Расшифровка (сертификат X509 Certificate2)](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt_1) - Расшифровывает это сообщение с помощью сертификата.
+- [MapiMessage.Decrypt()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt) - Расшифровывает это сообщение (метод ищет текущего пользователя и сертификаты на компьютере для соответствующего сертификата и закрытого ключа).
+- [MapiMessage.Decrypt(X509Certificate2 certificate)](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt_1) - Расшифровывает это сообщение с сертификатом.
 
-В следующем фрагменте кода показано, как работать с зашифрованными сообщениями MAPI:
+Следующий фрагмент кода показывает, как работать с зашифрованными сообщениями MAPI:
 
 ```cs
 var privateCert = new X509Certificate2(privateCertFile, "password");
@@ -301,50 +298,50 @@ if (msg.IsEncrypted);
 }
 ```
 
-## **Настройка цветовой категории для файлов Outlook MSG**
+## **Установка цветовой категории для файлов MSG Outlook**
 
-Цветовая категория обозначает сообщение электронной почты, относящееся к какой-либо важности или категории. Microsoft Outlook позволяет пользователям назначать цветовые категории для различения писем. Для обработки цветовой категории используйте [FollowUpManager](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/). Он содержит такие функции, как [AddCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/addcategory/#addcategory), [RemoveCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/removecategory/#removecategory), [ClearCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/clearcategories/#clearcategories) and [GetCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/getcategories/#getcategories).
+Цветовая категория помечает электронное сообщение как важное или относящееся к какой-либо категории. Microsoft Outlook позволяет пользователям назначать цветовые категории для различения электронных писем. Для работы с цветовой категорией используйте [FollowUpManager](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/). Он содержит функции, такие как [AddCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/addcategory/#addcategory), [RemoveCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/removecategory/#removecategory), [ClearCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/clearcategories/#clearcategories) и [GetCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/getcategories/#getcategories).
 
-- [AddCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/addcategory/#addcategory) takes [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) и строку цветовой категории, например «Фиолетовая категория» или «Красная категория» в качестве аргументов.
-- [RemoveCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/removecategory/#removecategory) takes [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) и строку цветовой категории, которую нужно удалить из сообщения.
-- [ClearCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/clearcategories/#clearcategories) используется для удаления всех цветовых категорий из сообщения.
-- [GetCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/getcategories/#getcategories) используется для извлечения всех цветовых категорий из определенного сообщения.
+- [AddCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/addcategory/#addcategory) принимает [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) и строку цветовой категории, например, "Фиолетовая категория" или "Красная категория" в качестве аргументов.
+- [RemoveCategory](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/removecategory/#removecategory) принимает [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) и строку цветовой категории, которую необходимо удалить из сообщения.
+- [ClearCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/clearcategories/#clearcategories) используется для удаления всех цветовых категорий из сообщения.
+- [GetCategories](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/getcategories/#getcategories) используется для извлечения всех цветовых категорий из конкретного сообщения.
 
-В следующем примере выполняются задачи, указанные ниже:
+Следующий пример выполняет следующие задачи:
 
-1. Добавьте цветовую категорию.
-1. Добавьте еще одну цветовую категорию.
-1. Получите список всех категорий.
-1. Удалить все категории.
+1. Добавляет цветовую категорию.
+2. Добавляет ещё одну цветовую категорию.
+3. Извлекает список всех категорий.
+4. Удаляет все категории.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-SetColorCategories-SetColorCategories.cs" >}}
 
-## **Доступ к последующей информации из файла MSG**
+## **Доступ к информации о последующем обслуживании из файла MSG**
 
-Aspose.Email API предоставляет возможность доступа к последующей информации из отправленного или полученного сообщения. Он может извлекать информацию о прочтении, доставке, прочтении и результатах голосования из файла сообщения.
+API Aspose.Email предоставляет возможность доступа к информации о последующем обслуживании из отправленного или полученного сообщения. Он может извлекать информацию о прочтении, удостоверении доставки и результатах голосования из файла сообщения.
 
-### **Получение информации о прочтении и получении**
+### **Извлечение информации о прочтении и удостоверении доставки**
 
-В следующем фрагменте кода показано, как получить информацию о прочтении и получении.
+Следующий фрагмент кода показывает, как извлекать информацию о прочтении и удостоверении доставки.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-RetrieveReadAndDeliveryReceiptInformation-RetrieveReadAndDeliveryReceiptInformation.cs" >}}
 
-## **Создание сообщений для пересылки и ответа**
+## **Создание сообщений пересылки и ответа**
 
-Aspose.Email API предоставляет возможность создавать и форматировать сообщения для пересылки и ответа. [ReplyMessageBuilder](https://reference.aspose.com/email/net/aspose.email.tools/replymessagebuilder/) and [ForwardMessageBuilder](https://reference.aspose.com/email/net/aspose.email.tools/forwardmessagebuilder/) классы API используются для создания сообщений Reply и Forward соответственно. Можно указать, что сообщение «Ответить» или «Переслать» можно создать с помощью любого из режимов [OriginalMessageAdditionMode](https://reference.aspose.com/email/net/aspose.email.tools/originalmessageadditionmode/) перечисление. Это перечисление имеет следующие значения:
+API Aspose.Email предоставляет возможность создания и форматирования сообщений пересылки и ответа. Классы [ReplyMessageBuilder](https://reference.aspose.com/email/net/aspose.email.tools/replymessagebuilder/) и [ForwardMessageBuilder](https://reference.aspose.com/email/net/aspose.email.tools/forwardmessagebuilder/) API используются для создания сообщений Ответа и Пересылки соответственно. Сообщение Ответа или Пересылки может быть задано для создания с использованием любого из режимов перечисления [OriginalMessageAdditionMode](https://reference.aspose.com/email/net/aspose.email.tools/originalmessageadditionmode/). Это перечисление имеет следующие значения:
 
-- **OriginalMessageAdditionMode.None** - Исходное сообщение не включено в ответное сообщение.
-- **OriginalMessageAdditionMode.Attachment** - Исходное сообщение включено в ответное сообщение в виде вложения
-- **OriginalMessageAdditionMode.Textpart** - Исходное сообщение включено в виде текста в текст ответного сообщения
+- **OriginalMessageAdditionMode.None** - Исходное сообщение не включается в ответное сообщение.
+- **OriginalMessageAdditionMode.Attachment** - Исходное сообщение включается как вложение в ответное сообщение
+- **OriginalMessageAdditionMode.Textpart** - Исходное сообщение включается как текст в теле ответного сообщения
 
-### **Создание ответного сообщения**
+### **Создание сообщения ответа**
 
-В следующем фрагменте кода показано, как создать ответное сообщение.
+Следующий фрагмент кода демонстрирует, как создать сообщение ответа.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreatReplyMessage-CreatReplyMessage.cs" >}}
 
-### **Создание пересылающего сообщения**
+### **Создание сообщения пересылки**
 
-В следующем фрагменте кода показано, как создать сообщение для пересылки.
+Следующий фрагмент кода демонстрирует, как создать сообщение пересылки.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreateForwardMessage-CreatForwardMessage.cs" >}}

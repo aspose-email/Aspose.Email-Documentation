@@ -5,10 +5,10 @@ weight: 20
 type: docs
 ---
 
-## **Aspose.Email - создание и сохранение заметок Outlook**
-Для создания заметок Outlook с помощью **Aspose.Электронная почта Java для Mython**, просто вызовите **CreateOutlookNote** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Создание и сохранение заметок Outlook**
+Для создания заметок Outlook с помощью **Aspose.Email Java для Jython** просто вызовите модуль **CreateOutlookNote**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Jython код**
 
 ```python
 
@@ -32,9 +32,9 @@ class CreateOutlookNote:
 
         note = MapiNote()
 
-        note.setSubject("Blue color note")
+        note.setSubject("Записка синего цвета")
 
-        note.setBody("This is a blue color note")
+        note.setBody("Это записка синего цвета")
 
         noteColor = NoteColor
 
@@ -48,19 +48,19 @@ class CreateOutlookNote:
 
         note.save(dataDir + "MapiNote.msg", noteSaveFormat.Msg)
 
-        print "Created outlook note successfully."
+        print "Записка Outlook успешно создана."
 
 
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     CreateOutlookNote()
 
 ```
-## **Загрузить рабочий код**
-Download **Создание и сохранение заметок Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Создание и сохранение заметок Outlook (Aspose.Email)** с любого из упомянутых ниже сайтов для совместной разработки:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

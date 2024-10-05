@@ -1,91 +1,71 @@
 ---
-title: "Доступ к Gmail по протоколу SSL"
+title: "Доступ к Gmail через SSL"
 url: /ru/net/accessing-gmail-on-ssl/
 weight: 40
 type: docs
 ---
 
 ## **SMTP**
-В этой статье показано, как выполнить [подключиться к серверу Gmail](#connecting-to-gmail-smtp-server) and [отправить электронное письмо](#sending-an-email-message) используя протокол SMTP на SSL.
-### **Подключение к SMTP-серверу Gmail**
-В следующем фрагменте кода показано, как подключиться к SMTP-серверу с поддержкой SSL.
-
-
+Эта статья демонстрирует, как выполнить [подключение к серверу Gmail](#connecting-to-gmail-smtp-server) и [отправить электронное письмо](#sending-an-email-message) с использованием протокола SMTP через SSL.
+### **Подключение к серверу Gmail SMTP**
+Следующий фрагмент кода показывает, как подключиться к SMTP серверу с поддержкой SSL.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-ConnectingGmailSMTPServer-ConnectingGmailSMTPServer.cs" >}}
-### **Отправка сообщения по электронной почте**
-Приведенный выше код настраивает объект SMTPClient для подключения к серверу Gmail. Чтобы отправить сообщение с использованием того же клиентского объекта, создайте [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) объект класса и отправьте сообщение с помощью объекта SMTP-клиента. В следующем фрагменте кода показано, как задать свойства сообщения, например тему, текст и текст сообщения:
+### **Отправка электронного сообщения**
+Код выше настраивает объект SMTPClient для подключения к серверу Gmail. Чтобы отправить сообщение, используя тот же объект клиента, создайте объект класса [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) и отправьте сообщение с помощью объекта SMTP клиента. Следующий фрагмент кода показывает, как задать свойства сообщения, например, тему, кому и текст:
 
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-SendEmailMessage-SendEmailMessage.cs" >}}
 ## **IMAP**
-В этой статье показано, как выполнить ряд действий на почтовом сервере с поддержкой SSL с использованием протокола IMAP:
+Эта статья показывает, как выполнить ряд действий на почтовом сервере с поддержкой SSL, используя протокол IMAP:
 
-- Подключитесь к почтовому серверу.
-- Получите общее количество сообщений в папке «Входящие».
-- Сохраняйте сообщения локально.
-- Создайте сообщение и добавьте его в папку.
+- Подключиться к почтовому серверу.
+- Получить общее количество сообщений в почтовом ящике.
+- Сохранить сообщения локально.
+- Создать сообщение и добавить его в папку.
 ### **Подключение к почтовому серверу**
-Используйте электронную почту Aspos.Email [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) объект класса для подключения к почтовому серверу. Адрес сервера, порт, имя пользователя и пароль необходимы для установления соединения. Gmail использует порт 993 для протокола IMAP. В следующем фрагменте кода показано, как подключиться к Gmail с помощью этого порта.
-
-
+Используйте объект класса [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) от Aspose.Email для подключения к почтовому серверу. Для установления соединения требуются адрес сервера, порт, имя пользователя и пароль. Gmail использует порт 993 для IMAP протокола, следующий фрагмент кода показывает, как подключиться к Gmail с использованием этого порта.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-ConnectToGmailUsingIMAP-ConnectToGmailUsingIMAP.cs" >}}
-### **Выбор папки и получение общего количества сообщений**
-Проверка папки «Входящие» — самая частая задача при проверке электронной почты. Используя Aspose.Email, это можно сделать, используя всего две простые строки кода. В следующем фрагменте кода показано, как получить доступ к папке «Входящие» и узнать общее количество сообщений в этой папке.
-
-
+### **Выбор папки и получение общего числа сообщений**
+Проверка папки Входящие - это наиболее частая задача при проверке электронной почты. С помощью Aspose.Email это можно сделать всего двумя простыми строками кода. Следующий фрагмент кода показывает, как получить доступ к папке Входящие и получить общее количество сообщений в папке.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-GetGmailMessageCountUsingIMAP-GetGmailMessageCountUsingIMAP.cs" >}}
-### **Сохранение сообщений на локальном жестком диске**
-После выбора папки методом SelectFolder используйте функцию ListMessages, чтобы получить список всех сообщений в папке в объекте IMapMessagesInfoCollection. Просмотрите эту коллекцию и сохраните сообщения электронной почты на локальном диске компьютера следующим образом:
-
-
+### **Сохранение сообщений на локальный жесткий диск**
+После того, как папка была выбрана с помощью метода SelectFolder, используйте функцию ListMessages для получения списка всех сообщений в папке в объекте ImapMessagesInfoCollection. Пройдите через эту коллекцию и сохраните электронные сообщения на локальном диске компьютера следующим образом:
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-SaveGmailMessages-SaveGmailMessages.cs" >}}
 ### **Создание новой папки**
-Протокол IMAP также позволяет создать новую папку на почтовом сервере. Это можно сделать с помощью простого вызова функции.
-
-
+Протокол IMAP также позволяет создавать новую папку на почтовом сервере. Это можно сделать с помощью простого вызова функции.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-CreateNewGmailFolderUsingIMAP-CreateNewGmailFolderUsingIMAP.cs" >}}
 ### **Создание нового сообщения в папке**
-Добавьте новое сообщение в папку, используя [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) and [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient) классы. В приведенных ниже примерах сначала создается объект MailMessage путем указания темы, «куда» и «откуда». Затем пользователь подписывается на папку и добавляет в нее сообщение. В следующем фрагменте кода показано, как вы создаете новое сообщение в папке.
-
-
+Добавьте новое сообщение в папку, используя классы [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) и [ImapClient](https://apireference.aspose.com/email/net/aspose.email.clients.imap/imapclient). Примеры ниже показывают, как сначала создать объект MailMessage, указав тему, получателя и отправителя. Затем он подписывается на папку и добавляет сообщение в нее. Следующий фрагмент кода показывает, как создать новое сообщение в папке.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-AddingMessageToGmailFolderUsingIMAP-AddingMessageToGmailFolderUsingIMAP.cs" >}}
 ## **POP3**
-В этой статье приведены несколько примеров использования протокола POP3 в протоколе SSL. Чтобы подключиться к серверу, защищенному SSL, нам необходимо определить порт SSL и два дополнительных свойства. В остальном код такой же, как и при подключении к обычному серверу POP3.
+Эта статья показывает несколько примеров, использующих протокол POP3 через SSL. Для подключения к защищённому SSL серверу нужно определить SSL порт и два дополнительных свойства. Остальная часть кода такая же, как для подключения к обычному POP3 серверу.
 
-В приведенных ниже примерах кода показано, как:
+Примеры кода ниже показывают, как:
 
-- Подключитесь к серверу SSL.
-- Проверьте состояние почтового ящика
-- Получите информацию о сообщении
-- Получайте электронные письма.
+- Подключиться к SSL серверу.
+- Проверить состояние почтового ящика.
+- Получить информацию о сообщении.
+- Извлечь электронные письма.
 ### **Подключение к почтовому серверу**
-Подключитесь к почтовому серверу с поддержкой SSL, используя [Pop3client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client) класс, как описано ниже.
-
-
+Подключитесь к почтовому серверу с поддержкой SSL, используя класс [Pop3client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client), как описано ниже.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-ConnectToGmailUsingPOP3-ConnectToGmailUsingPOP3.cs" >}}
 ### **Проверка состояния почтового ящика**
-В следующем фрагменте кода показано, как проверяется количество сообщений, хранящихся в почтовом ящике, и размер почтового ящика. Используйте [Pop3MailboxInfo](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo) класс для этой цели.
-
-
+Следующий фрагмент кода показывает, как проверить количество сообщений, хранящихся в почтовом ящике, и размер почтового ящика. Используйте класс [Pop3MailboxInfo](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo) для этой цели.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-CheckGmailMailboxStatus-CheckGmailMailboxStatus.cs" >}}
-### **Проверка информации о сообщении**
-В этом примере проверяются все сообщения в почтовом ящике с помощью [Pop3MessageInfoCollection](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3messageinfocollection) класс. Используйте [Pop3Client.ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/methods/listmessages/index) функция для получения [Pop3MessageInfoCollection](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3messageinfocollection) коллекция. Затем просмотрите коллекцию, чтобы прочитать информацию о сообщении: идентификатор сообщения, индекс, тему и размер
-
-
+### **Проверка информации о сообщениях**
+Этот пример проверяет все сообщения в почтовом ящике, используя класс [Pop3MessageInfoCollection](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3messageinfocollection). Используйте функцию [Pop3Client.ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/methods/listmessages/index) для получения коллекции [Pop3MessageInfoCollection](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3messageinfocollection). Затем пройдите через коллекцию, чтобы прочитать информацию о сообщении: идентификатор сообщения, индекс, тему и размер.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-CheckGmailMessageInformation-CheckGmailMessageInformation.cs" >}}
-### **Получение сообщений**
-Чтобы получить сообщения из почтового ящика, используйте [Pop3Client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client) метод класса fetchMessage () для преобразования сообщения в [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) введите объект. В следующем фрагменте кода показано, как подсчитывать количество писем в почтовом ящике, а затем перебирать их, чтобы получить каждое из них.
-
-
+### **Извлечение сообщений**
+Чтобы получить сообщения из почтового ящика, используйте метод FetchMessage() класса [Pop3Client](https://apireference.aspose.com/email/net/aspose.email.clients.pop3/pop3client), чтобы получить сообщение в объект типа [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage). Следующий фрагмент кода показывает, как подсчитать количество электронных писем в почтовом ящике, а затем пройтись через них, чтобы извлечь каждое.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-RetrieveGmailMessages-RetrieveGmailMessages.cs" >}}

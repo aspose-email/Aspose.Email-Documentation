@@ -1,12 +1,12 @@
 ---
-title: "Создание и сохранение контактов Outlook в Ruby"
+title: "Создание и сохранение контактов Outlook на Ruby"
 url: /ru/java/creating-and-saving-outlook-contacts-in-ruby/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - создание и сохранение контактов Outlook**
-Для создания контактов Outlook с помощью **Aspose.Электронная почта Java для Ruby**, просто вызовите **CreateOutlookContact** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Создание и сохранение контактов Outlook**
+Чтобы создать контакты Outlook с использованием **Aspose.Email Java для Ruby**, просто вызовите модуль **CreateOutlookContact**. Здесь вы можете видеть пример кода.
 
 **Код Ruby**
 
@@ -16,23 +16,23 @@ type: docs
 
 contact = Rjb::import('com.aspose.email.MapiContact').new
 
-\# Set different properties of this Contact Item.
+\# Установите различные свойства этого элемента контакта.
 
-\# Set Name properties using MapiContactNamePropertySet
+\# Установите свойства имени, используя MapiContactNamePropertySet
 
 name_prop_set = Rjb::import('com.aspose.email.MapiContactNamePropertySet').new
 
-name_prop_set.setSurname("Mellissa")
+name_prop_set.setSurname("Мелисса")
 
-name_prop_set.setGivenName("MacBeth")
+name_prop_set.setGivenName("Макбет")
 
 contact.setNameInfo(name_prop_set)
 
-\# Set professional properties using MapiContactProfessionalPropertySet
+\# Установите профессиональные свойства, используя MapiContactProfessionalPropertySet
 
 prof_prop_set = Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new
 
-prof_prop_set.setTitle("Account Representative")
+prof_prop_set.setTitle("Представитель по работе с клиентами")
 
 prof_prop_set.setCompanyName("Contoso Ltd.")
 
@@ -40,7 +40,7 @@ prof_prop_set.setOfficeLocation("36/2529")
 
 contact.setProfessionalInfo(prof_prop_set)
 
-\# Telephones
+\# Телефоны
 
 telephone = Rjb::import('com.aspose.email.MapiContactTelephonePropertySet').new
 
@@ -50,7 +50,7 @@ telephone.setBusiness2TelephoneNumber("(831) 759-2518")
 
 telephone.setBusinessTelephoneNumber("(831) 758-7285")
 
-telephone.setCallbackTelephoneNumber("(831) 758-7321 (After hours")
+telephone.setCallbackTelephoneNumber("(831) 758-7321 (после работы)")
 
 telephone.setCarTelephoneNumber("(831) 758-7201")
 
@@ -78,7 +78,7 @@ telephone.setTtyTddPhoneNumber("(800) 806-4474")
 
 contact.setTelephones(telephone)
 
-\# Set Physical Address using MapiContactPhysicalAddress and MapiContactPhysicalAddressPropertySet
+\# Установите физический адрес с использованием MapiContactPhysicalAddress и MapiContactPhysicalAddressPropertySet
 
 phys_addrss = Rjb::import('com.aspose.email.MapiContactPhysicalAddress').new
 
@@ -90,13 +90,13 @@ phys_addr_prop_set.setWorkAddress(phys_addrss)
 
 contact.setPhysicalAddresses(phys_addr_prop_set)
 
-\# Set email information using MapiContactElectronicAddress and MapiContactElectronicAddressPropertySet
+\# Установите информацию об электронной почте, используя MapiContactElectronicAddress и MapiContactElectronicAddressPropertySet
 
 email = Rjb::import('com.aspose.email.MapiContactElectronicAddress').new
 
 email.setAddressType("SMTP")
 
-email.setDisplayName("Melissa MacBeth (mellissa@contoso.com)")
+email.setDisplayName("Мелисса Макбет (mellissa@contoso.com)")
 
 email.setEmailAddress("melissa@contoso.com")
 
@@ -108,10 +108,10 @@ contact.setElectronicAddresses(elec_addr_prop_set)
 
 contact.save(data_dir + "OutlookContact.vcf", Rjb::import('com.aspose.email.ContactSaveFormat').VCard)
 
-puts "Created outlook contact successfully."
+puts "Контакт Outlook успешно создан."
 
 ```
-## **Загрузить рабочий код**
-Download **Создание и сохранение контактов Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Создание и сохранение контактов Outlook (Aspose.Email)** с любого из указанных ниже социальных кодирующих сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/createoutlookcontact.rb)

@@ -1,27 +1,27 @@
 ---
-title: "Работа с контактами на сервере Exchange с помощью WebDAV"
+title: "Работа с контактами на Exchange Server с использованием WebDav"
 url: /ru/java/working-with-contacts-on-exchange-server-using-webdav/
 weight: 120
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-В этой статье описывается, как получить контактную информацию непосредственно с сервера Exchange. В этой статье также показано, как вывести список контактов из папки «Контакты».
+В этой статье объясняется, как получить информацию о контактах напрямую с Exchange Server. В статье также показано, как можно перечислить контакты из папки "Контакты".
 
-{{% /alert %}}
-## **Получение контактов с сервера Exchange**
-The [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient) class’ [listContacts()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) метод можно использовать для получения контактной информации с сервера Exchange. [listContacts()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) метод требует URI папки Contacts, который можно легко получить с помощью [ExchangeMailboxInfo.ContactsUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getContactsUri\(\)) property.
+{{% /alert %}} 
+## **Получение контактов с Exchange Server**
+Метод [listContacts()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) класса [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient) можно использовать для получения информации о контактах с Exchange Server. Метод [listContacts()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#listContacts\(java.lang.String\)) требует URI папки "Контакты", который можно легко получить с помощью свойства [ExchangeMailboxInfo.ContactsUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getContactsUri\(\)).
 
-Чтобы получить контакты с сервера Exchange, выполните следующие действия:
+Чтобы получить контакты с Exchange Server:
 
 1. Инициализируйте класс ExchangeClient с адресом и учетными данными.
-1. Получите URI папки «Контакты» с помощью свойства ExchangeClient.getMailboxInfo () .getContactSuri ().
-1. Вызовите метод listContacts (). Он возвращает массив mapiContact.
-1. Выполните цикл foreach в массиве MapiContact, чтобы прочитать контактную информацию.
+1. Получите URI папки "Контакты" с помощью свойства ExchangeClient.getMailboxInfo().getContactsUri().
+1. Вызовите метод listContacts(). Он возвращает массив MapiContact.
+1. Выполните цикл foreach по массиву MapiContact, чтобы прочитать информацию о контактах.
 
-В следующем фрагменте кода показано, как использовать [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient) класс для чтения всех контактов с сервера Exchange.
+Следующий фрагмент кода демонстрирует, как использовать класс [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient) для чтения всех контактов с Exchange Server.
 
 
 ~~~Java
@@ -30,15 +30,15 @@ String username = "administrator";
 String password = "pwd";
 String domain = "domain.local";
 
-// Credentials for connecting to Exchange Server
+// Учетные данные для подключения к Exchange Server
 NetworkCredential credential = new NetworkCredential(username, password, domain);
 ExchangeClient client = new ExchangeClient(mailboxURI, credential);
 
-// List all the contacts
+// Перечислить все контакты
 MapiContact[] contacts = client.listContacts(client.getMailboxInfo().getContactsUri());
 for (MapiContact contact : contacts)
 {
-    // Display name and email address
+    // Имя и адрес электронной почты
     System.out.println("Name: " + contact.getNameInfo().getDisplayName() + ", Email Address: " + contact.getElectronicAddresses().getEmail1());
 }
 ~~~

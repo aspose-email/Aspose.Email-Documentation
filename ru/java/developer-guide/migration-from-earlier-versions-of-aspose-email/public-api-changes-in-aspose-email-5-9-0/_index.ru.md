@@ -1,1020 +1,1018 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 5.9.0"
+title: "Изменения в общедоступном API в Aspose.Email 5.9.0"
 url: /ru/java/public-api-changes-in-aspose-email-5-9-0/
 weight: 200
 type: docs
 ---
 
-Ниже приведен список всех изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание членов, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
+Следующий список включает в себя все изменения, внесенные в общедоступный API, такие как добавленные, переименованные, удаленные или устаревшие члены, а также любые несовместимые изменения, сделанные в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо включенных изменений, пожалуйста, поднимите этот вопрос на форуме поддержки Aspose.Email.
 
-- Class `MapiCalendarRecurrencePatternFactory`
+- Класс `MapiCalendarRecurrencePatternFactory`
 
-- Method `MapiCalendarRecurrencePatternFactory.fromString(String)`
+- Метод `MapiCalendarRecurrencePatternFactory.fromString(String)`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_AUTORESPONSE_PROP_RESPONSE`
+- Поле `MapiPropertyTag.PR_RECIPIENT_AUTORESPONSE_PROP_RESPONSE`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME`
+- Поле `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY`
+- Поле `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_READ`
+- Поле `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_READ`
 
-- Method `IEWSClient.appendMessage(MailMessage)`
+- Метод `IEWSClient.appendMessage(MailMessage)`
 
-- Interface `IConnection`
+- Интерфейс `IConnection`
 
 **`EWSClient`:**
 
-- Method getEWSClient(ExchangeVersion, `boolean, String, String, ICredentials, WebProxy)`
+- Метод getEWSClient(ExchangeVersion, `boolean, String, String, ICredentials, WebProxy)`
 
-- Method `getEWSClient(ExchangeVersion, String, ICredentials, WebProxy)`
+- Метод `getEWSClient(ExchangeVersion, String, ICredentials, WebProxy)`
 
 **`ImapClient`:**
 
-- Method `addMessageFlags(IConnection, int, ImapMessageFlags)`
+- Метод `addMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `addMessageFlags(IConnection, String, ImapMessageFlags)`
+- Метод `addMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `appendMessage(IConnection, MailMessage)`
+- Метод `appendMessage(IConnection, MailMessage)`
 
-- Method `appendMessage(IConnection, String)`
+- Метод `appendMessage(IConnection, String)`
 
-- Method `appendMessage(IConnection, String, MailMessage)`
+- Метод `appendMessage(IConnection, String, MailMessage)`
 
-- Method `appendMessage(IConnection, String, String)`
+- Метод `appendMessage(IConnection, String, String)`
 
-- Method `appendMessage(String)`
+- Метод `appendMessage(String)`
 
-- Method `backup(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
+- Метод `backup(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
 
-- Method `backup(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
+- Метод `backup(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
 
-- Method `beginAddMessageFlags(IConnection, int, ImapMessageFlags)`
+- Метод `beginAddMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
+- Метод `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginAddMessageFlags(IConnection, String, ImapMessageFlags)`
+- Метод `beginAddMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
+- Метод `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginAddMessageFlags(int, ImapMessageFlags, AsyncCallback)`
+- Метод `beginAddMessageFlags(int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(String, ImapMessageFlags)`
+- Метод `beginAddMessageFlags(String, ImapMessageFlags)`
 
-- Method `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback)`
+- Метод `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(IConnection, MailMessage)`
+- Метод `beginAppendMessage(IConnection, MailMessage)`
 
-- Method `beginAppendMessage(IConnection, String)`
+- Метод `beginAppendMessage(IConnection, String)`
 
-- Method `beginAppendMessage(IConnection, String, MailMessage)`
+- Метод `beginAppendMessage(IConnection, String, MailMessage)`
 
-- Method `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback)`
+- Метод `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback)`
 
-- Method `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback, Object)`
+- Метод `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(IConnection, String, String)`
+- Метод `beginAppendMessage(IConnection, String, String)`
 
-- Method `beginAppendMessage(IConnection, String, String, AsyncCallback)`
+- Метод `beginAppendMessage(IConnection, String, String, AsyncCallback)`
 
-- Method `beginAppendMessage(IConnection, String, String, AsyncCallback, Object)`
+- Метод `beginAppendMessage(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(MailMessage)`
+- Метод `beginAppendMessage(MailMessage)`
 
-- Method `beginAppendMessage(String)`
+- Метод `beginAppendMessage(String)`
 
-- Method `beginAppendMessage(String, MailMessage)`
+- Метод `beginAppendMessage(String, MailMessage)`
 
-- Method `beginAppendMessage(String, MailMessage, AsyncCallback)`
+- Метод `beginAppendMessage(String, MailMessage, AsyncCallback)`
 
-- Method `beginAppendMessage(String, MailMessage, AsyncCallback, Object)`
+- Метод `beginAppendMessage(String, MailMessage, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(String, String)`
+- Метод `beginAppendMessage(String, String)`
 
-- Method `beginAppendMessage(String, String, AsyncCallback)`
+- Метод `beginAppendMessage(String, String, AsyncCallback)`
 
-- Method `beginAppendMessage(String, String, AsyncCallback, Object)`
+- Метод `beginAppendMessage(String, String, AsyncCallback, Object)`
 
-- Method `beginChangeMessageFlags(IConnection, int, ImapMessageFlags)`
+- Метод `beginChangeMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
+- Метод `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginChangeMessageFlags(IConnection, String, ImapMessageFlags)`
+- Метод `beginChangeMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
+- Метод `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginChangeMessageFlags(int, ImapMessageFlags, AsyncCallback)`
+- Метод `beginChangeMessageFlags(int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(String, ImapMessageFlags)`
+- Метод `beginChangeMessageFlags(String, ImapMessageFlags)`
 
-- Method `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback)`
+- Метод `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes`
+- Метод `beginCommitDeletes`
 
-- Method `beginCommitDeletes(IConnection)`
+- Метод `beginCommitDeletes(IConnection)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback)`
+- Метод `beginCommitDeletes(IConnection, AsyncCallback)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback, Object)`
+- Метод `beginCommitDeletes(IConnection, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(IConnection, int)`
+- Метод `beginCommitDeletes(IConnection, int)`
 
-- Method `beginCommitDeletes(IConnection, int, AsyncCallback, Object)`
+- Метод `beginCommitDeletes(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(AsyncCallback)`
+- Метод `beginCommitDeletes(AsyncCallback)`
 
-- Method `beginCommitDeletes(AsyncCallback, Object)`
+- Метод `beginCommitDeletes(AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(int)`
+- Метод `beginCommitDeletes(int)`
 
-- Method `beginCommitDeletes(int, AsyncCallback, Object)`
+- Метод `beginCommitDeletes(int, AsyncCallback, Object)`
 
-- Method `beginCopyMessage(IConnection, int, String)`
+- Метод `beginCopyMessage(IConnection, int, String)`
 
-- Method `beginCopyMessage(IConnection, int, String, AsyncCallback)`
+- Метод `beginCopyMessage(IConnection, int, String, AsyncCallback)`
 
-- Method `beginCopyMessage(IConnection, int, String, AsyncCallback, Object)`
+- Метод `beginCopyMessage(IConnection, int, String, AsyncCallback, Object)`
 
-- Method `beginCopyMessage(IConnection, String, String)`
+- Метод `beginCopyMessage(IConnection, String, String)`
 
-- Method `beginCopyMessage(IConnection, String, String, AsyncCallback)`
+- Метод `beginCopyMessage(IConnection, String, String, AsyncCallback)`
 
-- Method `beginCopyMessage(IConnection, String, String, AsyncCallback, Object)`
+- Метод `beginCopyMessage(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginCopyMessage(int, String, AsyncCallback)`
+- Метод `beginCopyMessage(int, String, AsyncCallback)`
 
-- Method `beginCopyMessage(String, String, AsyncCallback)`
+- Метод `beginCopyMessage(String, String, AsyncCallback)`
 
-- Method `beginCreateFolder(IConnection, String)`
+- Метод `beginCreateFolder(IConnection, String)`
 
-- Method `beginCreateFolder(IConnection, String, AsyncCallback)`
+- Метод `beginCreateFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginCreateFolder(IConnection, String, AsyncCallback, Object)`
+- Метод `beginCreateFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginCreateFolder(String, AsyncCallback)`
+- Метод `beginCreateFolder(String, AsyncCallback)`
 
-- Method `beginDeleteFolder(IConnection, String)`
+- Метод `beginDeleteFolder(IConnection, String)`
 
-- Method `beginDeleteFolder(IConnection, String, AsyncCallback)`
+- Метод `beginDeleteFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginDeleteFolder(IConnection, String, AsyncCallback, Object)`
+- Метод `beginDeleteFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginDeleteFolder(String, AsyncCallback)`
+- Метод `beginDeleteFolder(String, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, int)`
+- Метод `beginDeleteMessage(IConnection, int)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback)`
+- Метод `beginDeleteMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
+- Метод `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(IConnection, String)`
+- Метод `beginDeleteMessage(IConnection, String)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback)`
+- Метод `beginDeleteMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
+- Метод `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(int, AsyncCallback)`
+- Метод `beginDeleteMessage(int, AsyncCallback)`
 
-- Method `beginDeleteMessage(String, AsyncCallback)`
+- Метод `beginDeleteMessage(String, AsyncCallback)`
 
-- Method `beginFetchAttachment(IConnection, int, String)`
+- Метод `beginFetchAttachment(IConnection, int, String)`
 
-- Method `beginFetchAttachment(IConnection, int, String, AsyncCallback)`
+- Метод `beginFetchAttachment(IConnection, int, String, AsyncCallback)`
 
-- Method `beginFetchAttachment(IConnection, int, String, AsyncCallback, Object)`
+- Метод `beginFetchAttachment(IConnection, int, String, AsyncCallback, Object)`
 
-- Method `beginFetchAttachment(int, String, AsyncCallback)`
+- Метод `beginFetchAttachment(int, String, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int)`
+- Метод `beginFetchMessage(IConnection, int)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback)`
+- Метод `beginFetchMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
+- Метод `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, int, boolean)`
+- Метод `beginFetchMessage(IConnection, int, boolean)`
 
-- Method `beginFetchMessage(IConnection, int, boolean, AsyncCallback)`
+- Метод `beginFetchMessage(IConnection, int, boolean, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int, boolean, AsyncCallback, Object)`
+- Метод `beginFetchMessage(IConnection, int, boolean, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, String)`
+- Метод `beginFetchMessage(IConnection, String)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback)`
+- Метод `beginFetchMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
+- Метод `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(int, AsyncCallback)`
+- Метод `beginFetchMessage(int, AsyncCallback)`
 
-- Method `beginFetchMessage(int, boolean)`
+- Метод `beginFetchMessage(int, boolean)`
 
-- Method `beginFetchMessage(int, boolean, AsyncCallback)`
+- Метод `beginFetchMessage(int, boolean, AsyncCallback)`
 
-- Method `beginFetchMessage(int, boolean, AsyncCallback, Object)`
+- Метод `beginFetchMessage(int, boolean, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(String, AsyncCallback)`
+- Метод `beginFetchMessage(String, AsyncCallback)`
 
-- Method `beginGetFolderInfo(IConnection, String)`
+- Метод `beginGetFolderInfo(IConnection, String)`
 
-- Method `beginGetFolderInfo(IConnection, String, AsyncCallback)`
+- Метод `beginGetFolderInfo(IConnection, String, AsyncCallback)`
 
-- Method `beginGetFolderInfo(IConnection, String, AsyncCallback, Object)`
+- Метод `beginGetFolderInfo(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginGetFolderInfo(String)`
+- Метод `beginGetFolderInfo(String)`
 
-- Method `beginGetFolderInfo(String, AsyncCallback)`
+- Метод `beginGetFolderInfo(String, AsyncCallback)`
 
-- Method `beginGetFolderInfo(String, AsyncCallback, Object)`
+- Метод `beginGetFolderInfo(String, AsyncCallback, Object)`
 
-- Method `beginListFolders`
+- Метод `beginListFolders`
 
-- Method `beginListFolders(IConnection)`
+- Метод `beginListFolders(IConnection)`
 
-- Method `beginListFolders(IConnection, AsyncCallback)`
+- Метод `beginListFolders(IConnection, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, AsyncCallback, Object)`
+- Метод `beginListFolders(IConnection, AsyncCallback, Object)`
 
-- Method `beginListFolders(IConnection, boolean)`
+- Метод `beginListFolders(IConnection, boolean)`
 
-- Method `beginListFolders(IConnection, boolean, AsyncCallback)`
+- Метод `beginListFolders(IConnection, boolean, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, boolean, AsyncCallback, Object)`
+- Метод `beginListFolders(IConnection, boolean, AsyncCallback, Object)`
 
-- Method `beginListFolders(IConnection, String)`
+- Метод `beginListFolders(IConnection, String)`
 
-- Method `beginListFolders(IConnection, String, AsyncCallback)`
+- Метод `beginListFolders(IConnection, String, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, String, AsyncCallback, Object)`
+- Метод `beginListFolders(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginListFolders(IConnection, String, boolean)`
+- Метод `beginListFolders(IConnection, String, boolean)`
 
-- Method `beginListFolders(IConnection, String, boolean, AsyncCallback)`
+- Метод `beginListFolders(IConnection, String, boolean, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, String, boolean, AsyncCallback, Object)`
+- Метод `beginListFolders(IConnection, String, boolean, AsyncCallback, Object)`
 
-- Method `beginListFolders(AsyncCallback)`
+- Метод `beginListFolders(AsyncCallback)`
 
-- Method `beginListFolders(AsyncCallback, Object)`
+- Метод `beginListFolders(AsyncCallback, Object)`
 
-- Method `beginListFolders(boolean)`
+- Метод `beginListFolders(boolean)`
 
-- Method `beginListFolders(boolean, AsyncCallback)`
+- Метод `beginListFolders(boolean, AsyncCallback)`
 
-- Method `beginListFolders(boolean, AsyncCallback, Object)`
+- Метод `beginListFolders(boolean, AsyncCallback, Object)`
 
-- Method `beginListFolders(String)`
+- Метод `beginListFolders(String)`
 
-- Method `beginListFolders(String, AsyncCallback)`
+- Метод `beginListFolders(String, AsyncCallback)`
 
-- Method `beginListFolders(String, AsyncCallback, Object)`
+- Метод `beginListFolders(String, AsyncCallback, Object)`
 
-- Method `beginListFolders(String, boolean)`
+- Метод `beginListFolders(String, boolean)`
 
-- Method `beginListFolders(String, boolean, AsyncCallback)`
+- Метод `beginListFolders(String, boolean, AsyncCallback)`
 
-- Method `beginListFolders(String, boolean, AsyncCallback, Object)`
+- Метод `beginListFolders(String, boolean, AsyncCallback, Object)`
 
-- Method `beginListMessage(IConnection, int)`
+- Метод `beginListMessage(IConnection, int)`
 
-- Method `beginListMessage(IConnection, int, AsyncCallback)`
+- Метод `beginListMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginListMessage(IConnection, int, AsyncCallback, Object)`
+- Метод `beginListMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginListMessage(IConnection, String)`
+- Метод `beginListMessage(IConnection, String)`
 
-- Method `beginListMessage(IConnection, String, AsyncCallback)`
+- Метод `beginListMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginListMessage(IConnection, String, AsyncCallback, Object)`
+- Метод `beginListMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginListMessage(int, AsyncCallback)`
+- Метод `beginListMessage(int, AsyncCallback)`
 
-- Method `beginListMessage(String)`
+- Метод `beginListMessage(String)`
 
-- Method `beginListMessage(String, AsyncCallback)`
+- Метод `beginListMessage(String, AsyncCallback)`
 
-- Method `beginListMessage(String, AsyncCallback, Object)`
+- Метод `beginListMessage(String, AsyncCallback, Object)`
 
-- Method `beginListMessages(AsyncCallback)`
+- Метод `beginListMessages(AsyncCallback)`
 
-- Method `beginListMessages(String, MailQuery, int, AsyncCallback)`
+- Метод `beginListMessages(String, MailQuery, int, AsyncCallback)`
 
-- Method `beginListMessages(String, AsyncCallback)`
+- Метод `beginListMessages(String, AsyncCallback)`
 
-- Method `beginNoop`
+- Метод `beginNoop`
 
-- Method `beginNoop(IConnection)`
+- Метод `beginNoop(IConnection)`
 
-- Method `beginNoop(IConnection, AsyncCallback)`
+- Метод `beginNoop(IConnection, AsyncCallback)`
 
-- Method `beginNoop(IConnection, AsyncCallback, ystem.Object)`
+- Метод `beginNoop(IConnection, AsyncCallback, Object)`
 
-- Method `beginNoop(AsyncCallback)`
+- Метод `beginNoop(AsyncCallback)`
 
-- Method `beginNoop(AsyncCallback, Object)`
+- Метод `beginNoop(AsyncCallback, Object)`
 
-- Method `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags)`
+- Метод `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
+- Метод `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags)`
+- Метод `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
+- Метод `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginRemoveMessageFlags(int, ImapMessageFlags, AsyncCallback)`
+- Метод `beginRemoveMessageFlags(int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(String, ImapMessageFlags)`
+- Метод `beginRemoveMessageFlags(String, ImapMessageFlags)`
 
-- Method `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback)`
+- Метод `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
+- Метод `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginRenameFolder(IConnection, String, String)`
+- Метод `beginRenameFolder(IConnection, String, String)`
 
-- Method `beginRenameFolder(IConnection, String, String, AsyncCallback)`
+- Метод `beginRenameFolder(IConnection, String, String, AsyncCallback)`
 
-- Method `beginRenameFolder(IConnection, String, String, AsyncCallback, Object)`
+- Метод `beginRenameFolder(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginRenameFolder(String, String, AsyncCallback)`
+- Метод `beginRenameFolder(String, String, AsyncCallback)`
 
-- Method `beginRequestCheckpoint`
+- Метод `beginRequestCheckpoint`
 
-- Method `beginRequestCheckpoint(IConnection)`
+- Метод `beginRequestCheckpoint(IConnection)`
 
-- Method `beginRequestCheckpoint(IConnection, AsyncCallback)`
+- Метод `beginRequestCheckpoint(IConnection, AsyncCallback)`
 
-- Method `beginRequestCheckpoint(IConnection, AsyncCallback, Object)`
+- Метод `beginRequestCheckpoint(IConnection, AsyncCallback, Object)`
 
-- Method `beginRequestCheckpoint(AsyncCallback)`
+- Метод `beginRequestCheckpoint(AsyncCallback)`
 
-- Method `beginRequestCheckpoint(AsyncCallback, Object)`
+- Метод `beginRequestCheckpoint(AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
+- Метод `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
+- Метод `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, PersonalStorage, RestoreOptions)`
+- Метод `beginRestore(IConnection, PersonalStorage, RestoreOptions)`
 
-- Method `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, OutputStream, RestoreOptions)`
+- Метод `beginRestore(IConnection, OutputStream, RestoreOptions)`
 
-- Method `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions,
-  AsyncCallback)`
+- Метод `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, String, RestoreOptions)`
+- Метод `beginRestore(IConnection, String, RestoreOptions)`
 
-- Method `beginRestore(IConnection, String, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(IConnection, String, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, String, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(IConnection, String, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions)`
+- Метод `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions)`
 
-- Method `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
+- Метод `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback,
-  Object)`
+- Метод `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(ImapFolderInfoCollection, String, BackupOptions)`
+- Метод `beginRestore(ImapFolderInfoCollection, String, BackupOptions)`
 
-- Method `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
+- Метод `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
+- Метод `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(PersonalStorage, RestoreOptions)`
+- Метод `beginRestore(PersonalStorage, RestoreOptions)`
 
-- Method `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(OutputStream, RestoreOptions)`
+- Метод `beginRestore(OutputStream, RestoreOptions)`
 
-- Method `beginRestore(OutputStream, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(OutputStream, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(OutputStream, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(OutputStream, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(String, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `beginRestore(String, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(String, RestoreOptions)`
+- Метод `beginRestore(String, RestoreOptions)`
 
-- Method `beginRestore(String, RestoreOptions, AsyncCallback)`
+- Метод `beginRestore(String, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(String, RestoreOptions, AsyncCallback, Object)`
+- Метод `beginRestore(String, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream)`
+- Метод `beginSaveMessage(IConnection, int, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
+- Метод `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, int, String)`
+- Метод `beginSaveMessage(IConnection, int, String)`
 
-- Method `beginSaveMessage(IConnection, int, String, AsyncCallback)`
+- Метод `beginSaveMessage(IConnection, int, String, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, int, String, AsyncCallback, Object)`
+- Метод `beginSaveMessage(IConnection, int, String, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream)`
+- Метод `beginSaveMessage(IConnection, String, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
+- Метод `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, String, String)`
+- Метод `beginSaveMessage(IConnection, String, String)`
 
-- Method `beginSaveMessage(IConnection, String, String, AsyncCallback)`
+- Метод `beginSaveMessage(IConnection, String, String, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, String, String, AsyncCallback, Object)`
+- Метод `beginSaveMessage(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(int, OutputStream)`
+- Метод `beginSaveMessage(int, OutputStream)`
 
-- Method `beginSaveMessage(int, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(int, OutputStream, AsyncCallback, Object)`
+- Метод `beginSaveMessage(int, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(int, String)`
+- Метод `beginSaveMessage(int, String)`
 
-- Method `beginSaveMessage(int, String, AsyncCallback)`
+- Метод `beginSaveMessage(int, String, AsyncCallback)`
 
-- Method `beginSaveMessage(int, String, AsyncCallback, Object)`
+- Метод `beginSaveMessage(int, String, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(String, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(String, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(String, String)`
+- Метод `beginSaveMessage(String, String)`
 
-- Method `beginSaveMessage(String, String, AsyncCallback)`
+- Метод `beginSaveMessage(String, String, AsyncCallback)`
 
-- Method `beginSaveMessage(String, String, AsyncCallback, Object)`
+- Метод `beginSaveMessage(String, String, AsyncCallback, Object)`
 
-- Method `beginSelectFolder(IConnection, String)`
+- Метод `beginSelectFolder(IConnection, String)`
 
-- Method `beginSelectFolder(IConnection, String, AsyncCallback)`
+- Метод `beginSelectFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginSelectFolder(IConnection, String, AsyncCallback, Object)`
+- Метод `beginSelectFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginSelectFolder(IConnection, String, boolean, AsyncCallback, Object)`
+- Метод `beginSelectFolder(IConnection, String, boolean, AsyncCallback, Object)`
 
-- Method `beginSelectFolder(String, AsyncCallback)`
+- Метод `beginSelectFolder(String, AsyncCallback)`
 
-- Method `beginSelectFolder(String, boolean, AsyncCallback, Object)`
+- Метод `beginSelectFolder(String, boolean, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(IConnection, String)`
+- Метод `beginSendCustomCommand(IConnection, String)`
 
-- Method `beginSendCustomCommand(IConnection, String, AsyncCallback)`
+- Метод `beginSendCustomCommand(IConnection, String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(IConnection, String, AsyncCallback, Object)`
+- Метод `beginSendCustomCommand(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(IConnection, String, String)`
+- Метод `beginSendCustomCommand(IConnection, String, String)`
 
-- Method `beginSendCustomCommand(IConnection, String, String, AsyncCallback)`
+- Метод `beginSendCustomCommand(IConnection, String, String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(IConnection, String, String, AsyncCallback, Object)`
+- Метод `beginSendCustomCommand(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(String)`
+- Метод `beginSendCustomCommand(String)`
 
-- Method `beginSendCustomCommand(String, AsyncCallback)`
+- Метод `beginSendCustomCommand(String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(String, AsyncCallback, Object)`
+- Метод `beginSendCustomCommand(String, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(String, String)`
+- Метод `beginSendCustomCommand(String, String)`
 
-- Method `beginSendCustomCommand(String, String, AsyncCallback)`
+- Метод `beginSendCustomCommand(String, String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(String, String, AsyncCallback, Object)`
+- Метод `beginSendCustomCommand(String, String, AsyncCallback, Object)`
 
-- Method `beginSubscribeFolder(IConnection, String)`
+- Метод `beginSubscribeFolder(IConnection, String)`
 
-- Method `beginSubscribeFolder(IConnection, String, AsyncCallback)`
+- Метод `beginSubscribeFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginSubscribeFolder(IConnection, String, AsyncCallback, Object)`
+- Метод `beginSubscribeFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginSubscribeFolder(String)`
+- Метод `beginSubscribeFolder(String)`
 
-- Method `beginSubscribeFolder(String, AsyncCallback)`
+- Метод `beginSubscribeFolder(String, AsyncCallback)`
 
-- Method `beginSubscribeFolder(String, AsyncCallback, Object)`
+- Метод `beginSubscribeFolder(String, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessage(IConnection, int)`
+- Метод `beginUndeleteMessage(IConnection, int)`
 
-- Method `beginUndeleteMessage(IConnection, int, AsyncCallback)`
+- Метод `beginUndeleteMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginUndeleteMessage(IConnection, int, AsyncCallback, Object)`
+- Метод `beginUndeleteMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessage(IConnection, String)`
+- Метод `beginUndeleteMessage(IConnection, String)`
 
-- Method `beginUndeleteMessage(IConnection, String, AsyncCallback)`
+- Метод `beginUndeleteMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginUndeleteMessage(IConnection, String, AsyncCallback, Object)`
+- Метод `beginUndeleteMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessage(int, AsyncCallback)`
+- Метод `beginUndeleteMessage(int, AsyncCallback)`
 
-- Method `beginUndeleteMessage(String)`
+- Метод `beginUndeleteMessage(String)`
 
-- Method `beginUndeleteMessage(String, AsyncCallback)`
+- Метод `beginUndeleteMessage(String, AsyncCallback)`
 
-- Method `beginUndeleteMessage(String, AsyncCallback, Object)`
+- Метод `beginUndeleteMessage(String, AsyncCallback, Object)`
 
-- Method `beginUnselectFolder`
+- Метод `beginUnselectFolder`
 
-- Method `beginUnselectFolder(IConnection)`
+- Метод `beginUnselectFolder(IConnection)`
 
-- Method `beginUnselectFolder(IConnection, AsyncCallback)`
+- Метод `beginUnselectFolder(IConnection, AsyncCallback)`
 
-- Method `beginUnselectFolder(IConnection, AsyncCallback, Object)`
+- Метод `beginUnselectFolder(IConnection, AsyncCallback, Object)`
 
-- Method `beginUnselectFolder(AsyncCallback)`
+- Метод `beginUnselectFolder(AsyncCallback)`
 
-- Method `beginUnselectFolder(AsyncCallback, Object)`
+- Метод `beginUnselectFolder(AsyncCallback, Object)`
 
-- Method `beginUnsubscribeFolder(IConnection, String)`
+- Метод `beginUnsubscribeFolder(IConnection, String)`
 
-- Method `beginUnsubscribeFolder(IConnection, String, AsyncCallback)`
+- Метод `beginUnsubscribeFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginUnsubscribeFolder(IConnection, String, AsyncCallback, Object)`
+- Метод `beginUnsubscribeFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginUnsubscribeFolder(String)`
+- Метод `beginUnsubscribeFolder(String)`
 
-- Method `beginUnsubscribeFolder(String, AsyncCallback)`
+- Метод `beginUnsubscribeFolder(String, AsyncCallback)`
 
-- Method `beginUnsubscribeFolder(String, AsyncCallback, Object)`
+- Метод `beginUnsubscribeFolder(String, AsyncCallback, Object)`
 
-- Method `changeMessageFlags(IConnection, int, ImapMessageFlags)`
+- Метод `changeMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `changeMessageFlags(IConnection, String, ImapMessageFlags)`
+- Метод `changeMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `commitDeletes(IConnection)`
+- Метод `commitDeletes(IConnection)`
 
-- Method `commitDeletes(IConnection, int)`
+- Метод `commitDeletes(IConnection, int)`
 
-- Method `copyMessage(IConnection, int, String)`
+- Метод `copyMessage(IConnection, int, String)`
 
-- Method `copyMessage(IConnection, String, String)`
+- Метод `copyMessage(IConnection, String, String)`
 
-- Method `createFolder(IConnection, String)`
+- Метод `createFolder(IConnection, String)`
 
-- Method `deleteFolder(IConnection, String)`
+- Метод `deleteFolder(IConnection, String)`
 
-- Method `deleteMessage(IConnection, int)`
+- Метод `deleteMessage(IConnection, int)`
 
-- Method `deleteMessage(IConnection, String)`
+- Метод `deleteMessage(IConnection, String)`
 
-- Method `endAppendMessage(IAsyncResult)`
+- Метод `endAppendMessage(IAsyncResult)`
 
-- Method `endBackup(IAsyncResult)`
+- Метод `endBackup(IAsyncResult)`
 
-- Method `endCommitDeletes(IAsyncResult)`
+- Метод `endCommitDeletes(IAsyncResult)`
 
-- Method `endExistFolder(IAsyncResult)`
+- Метод `endExistFolder(IAsyncResult)`
 
-- Method `endExistFolder(IAsyncResult, ImapFolderInfo@)`
+- Метод `endExistFolder(IAsyncResult, ImapFolderInfo@)`
 
-- Method `endGetFolderInfo(IAsyncResult)`
+- Метод `endGetFolderInfo(IAsyncResult)`
 
-- Method `endListFolders(IAsyncResult)`
+- Метод `endListFolders(IAsyncResult)`
 
-- Method `endNoop(IAsyncResult)`
+- Метод `endNoop(IAsyncResult)`
 
-- Method `endRequestCheckpoint(IAsyncResult)`
+- Метод `endRequestCheckpoint(IAsyncResult)`
 
-- Method `endRestore(IAsyncResult)`
+- Метод `endRestore(IAsyncResult)`
 
-- Method `endSendCustomCommand(IAsyncResult)`
+- Метод `endSendCustomCommand(IAsyncResult)`
 
-- Method `endSubscribeFolder(IAsyncResult)`
+- Метод `endSubscribeFolder(IAsyncResult)`
 
-- Method `endUnselectFolder(IAsyncResult)`
+- Метод `endUnselectFolder(IAsyncResult)`
 
-- Method `endUnsubscribeFolder(IAsyncResult)`
+- Метод `endUnsubscribeFolder(IAsyncResult)`
 
-- Method `fetchAttachment(IConnection, int, String)`
+- Метод `fetchAttachment(IConnection, int, String)`
 
-- Method `fetchMessage(IConnection, int)`
+- Метод `fetchMessage(IConnection, int)`
 
-- Method `fetchMessage(IConnection, int, boolean)`
+- Метод `fetchMessage(IConnection, int, boolean)`
 
-- Method `fetchMessage(IConnection, String)`
+- Метод `fetchMessage(IConnection, String)`
 
-- Method `getFolderInfo(IConnection, String)`
+- Метод `getFolderInfo(IConnection, String)`
 
-- Method `listFolders(IConnection)`
+- Метод `listFolders(IConnection)`
 
-- Method `listFolders(IConnection, boolean)`
+- Метод `listFolders(IConnection, boolean)`
 
-- Method `listFolders(IConnection, String)`
+- Метод `listFolders(IConnection, String)`
 
-- Method `listFolders(IConnection, String, boolean)`
+- Метод `listFolders(IConnection, String, boolean)`
 
-- Method `listMessage(IConnection, int)`
+- Метод `listMessage(IConnection, int)`
 
-- Method `listMessage(IConnection, String)`
+- Метод `listMessage(IConnection, String)`
 
-- Method `listMessages(IConnection)`
+- Метод `listMessages(IConnection)`
 
-- Method `listMessages(IConnection, MailQuery)`
+- Метод `listMessages(IConnection, MailQuery)`
 
-- Method `listMessages(IConnection, MailQuery, int)`
+- Метод `listMessages(IConnection, MailQuery, int)`
 
-- Method `listMessages(IConnection, boolean)`
+- Метод `listMessages(IConnection, boolean)`
 
-- Method `listMessages(IConnection, int)`
+- Метод `listMessages(IConnection, int)`
 
-- Method `listMessages(IConnection, String)`
+- Метод `listMessages(IConnection, String)`
 
-- Method `listMessages(IConnection, String, MailQuery, int)`
+- Метод `listMessages(IConnection, String, MailQuery, int)`
 
-- Method `listMessages(IConnection, String, boolean)`
+- Метод `listMessages(IConnection, String, boolean)`
 
-- Method `listMessages(String, MailQuery, int)`
+- Метод `listMessages(String, MailQuery, int)`
 
-- Method `noop`
+- Метод `noop`
 
-- Method `noop(IConnection)`
+- Метод `noop(IConnection)`
 
-- Method `parseQuery(ImapMessageInfo, MailQuery)`
+- Метод `parseQuery(ImapMessageInfo, MailQuery)`
 
-- Method `removeMessageFlags(IConnection, int, ImapMessageFlags)`
+- Метод `removeMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `removeMessageFlags(IConnection, String, ImapMessageFlags)`
+- Метод `removeMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `renameFolder(IConnection, String, String)`
+- Метод `renameFolder(IConnection, String, String)`
 
-- Method `requestCheckpoint(IConnection)`
+- Метод `requestCheckpoint(IConnection)`
 
-- Method `restore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `restore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `restore(IConnection, PersonalStorage, RestoreOptions)`
+- Метод `restore(IConnection, PersonalStorage, RestoreOptions)`
 
-- Method `restore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `restore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `restore(IConnection, OutputStream, RestoreOptions)`
+- Метод `restore(IConnection, OutputStream, RestoreOptions)`
 
-- Method `restore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
+- Метод `restore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `restore(IConnection, String, RestoreOptions)`
+- Метод `restore(IConnection, String, RestoreOptions)`
 
-- Method `saveMessage(IConnection, int, OutputStream)`
+- Метод `saveMessage(IConnection, int, OutputStream)`
 
-- Method `saveMessage(IConnection, int, String)`
+- Метод `saveMessage(IConnection, int, String)`
 
-- Method `saveMessage(IConnection, String, OutputStream)`
+- Метод `saveMessage(IConnection, String, OutputStream)`
 
-- Method `saveMessage(IConnection, String, String)`
+- Метод `saveMessage(IConnection, String, String)`
 
-- Method `selectFolder(IConnection, String)`
+- Метод `selectFolder(IConnection, String)`
 
-- Method `selectFolder(IConnection, String, boolean)`
+- Метод `selectFolder(IConnection, String, boolean)`
 
-- Method `sendCustomCommand(IConnection, String)`
+- Метод `sendCustomCommand(IConnection, String)`
 
-- Method `sendCustomCommand(IConnection, String, String)`
+- Метод `sendCustomCommand(IConnection, String, String)`
 
-- Method `subscribeFolder(IConnection, String)`
+- Метод `subscribeFolder(IConnection, String)`
 
-- Method `undeleteMessage(IConnection, int)`
+- Метод `undeleteMessage(IConnection, int)`
 
-- Method `undeleteMessage(IConnection, String)`
+- Метод `undeleteMessage(IConnection, String)`
 
-- Method `unselectFolder(IConnection)`
+- Метод `unselectFolder(IConnection)`
 
-- Method `unsubscribeFolder(IConnection, String)`
+- Метод `unsubscribeFolder(IConnection, String)`
 
 **`SmtpClient`:**
 
-- Method `forward(String, MailAddressCollection, MailMessage)`
+- Метод `forward(String, MailAddressCollection, MailMessage)`
 
-- Method `forward(String, String, MailMessage)`
+- Метод `forward(String, String, MailMessage)`
 
 **`Pop3Client`:**
 
-- Method `beginCommitDeletes`
+- Метод `beginCommitDeletes`
 
-- Method `beginCommitDeletes(IConnection)`
+- Метод `beginCommitDeletes(IConnection)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback)`
+- Метод `beginCommitDeletes(IConnection, AsyncCallback)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback, Object)`
+- Метод `beginCommitDeletes(IConnection, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(AsyncCallback)`
+- Метод `beginCommitDeletes(AsyncCallback)`
 
-- Method `beginCommitDeletes(AsyncCallback, Object)`
+- Метод `beginCommitDeletes(AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(IConnection, int)`
+- Метод `beginDeleteMessage(IConnection, int)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback)`
+- Метод `beginDeleteMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
+- Метод `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(IConnection, String)`
+- Метод `beginDeleteMessage(IConnection, String)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback)`
+- Метод `beginDeleteMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
+- Метод `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(int, AsyncCallback)`
+- Метод `beginDeleteMessage(int, AsyncCallback)`
 
-- Method `beginDeleteMessage(String, AsyncCallback)`
+- Метод `beginDeleteMessage(String, AsyncCallback)`
 
-- Method `beginDeleteMessages`
+- Метод `beginDeleteMessages`
 
-- Method `beginDeleteMessages(IConnection)`
+- Метод `beginDeleteMessages(IConnection)`
 
-- Method `beginDeleteMessages(IConnection, AsyncCallback)`
+- Метод `beginDeleteMessages(IConnection, AsyncCallback)`
 
-- Method `beginDeleteMessages(IConnection, AsyncCallback, Object)`
+- Метод `beginDeleteMessages(IConnection, AsyncCallback, Object)`
 
-- Method `beginDeleteMessages(AsyncCallback)`
+- Метод `beginDeleteMessages(AsyncCallback)`
 
-- Method `beginDeleteMessages(AsyncCallback, Object)`
+- Метод `beginDeleteMessages(AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, int)`
+- Метод `beginFetchMessage(IConnection, int)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback)`
+- Метод `beginFetchMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
+- Метод `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, String)`
+- Метод `beginFetchMessage(IConnection, String)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback)`
+- Метод `beginFetchMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
+- Метод `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(int, AsyncCallback)`
+- Метод `beginFetchMessage(int, AsyncCallback)`
 
-- Method `beginFetchMessage(String, AsyncCallback)`
+- Метод `beginFetchMessage(String, AsyncCallback)`
 
-- Method `beginGetMailboxInfo`
+- Метод `beginGetMailboxInfo`
 
-- Method `beginGetMailboxInfo(IConnection)`
+- Метод `beginGetMailboxInfo(IConnection)`
 
-- Method `beginGetMailboxInfo(IConnection, AsyncCallback)`
+- Метод `beginGetMailboxInfo(IConnection, AsyncCallback)`
 
-- Method `beginGetMailboxInfo(IConnection, AsyncCallback, Object)`
+- Метод `beginGetMailboxInfo(IConnection, AsyncCallback, Object)`
 
-- Method `beginGetMailboxInfo(AsyncCallback)`
+- Метод `beginGetMailboxInfo(AsyncCallback)`
 
-- Method `beginGetMailboxInfo(AsyncCallback, Object)`
+- Метод `beginGetMailboxInfo(AsyncCallback, Object)`
 
-- Method `beginGetMailboxSize(IConnection)`
+- Метод `beginGetMailboxSize(IConnection)`
 
-- Method `beginGetMailboxSize(IConnection, AsyncCallback)`
+- Метод `beginGetMailboxSize(IConnection, AsyncCallback)`
 
-- Method `beginGetMailboxSize(IConnection, AsyncCallback, Object)`
+- Метод `beginGetMailboxSize(IConnection, AsyncCallback, Object)`
 
-- Method `beginGetMailboxSize(AsyncCallback)`
+- Метод `beginGetMailboxSize(AsyncCallback)`
 
-- Method `beginGetMessageCount(IConnection)`
+- Метод `beginGetMessageCount(IConnection)`
 
-- Method `beginGetMessageCount(IConnection, AsyncCallback)`
+- Метод `beginGetMessageCount(IConnection, AsyncCallback)`
 
-- Method `beginGetMessageCount(IConnection, AsyncCallback, Object)`
+- Метод `beginGetMessageCount(IConnection, AsyncCallback, Object)`
 
-- Method `beginGetMessageCount(IConnection, boolean)`
+- Метод `beginGetMessageCount(IConnection, boolean)`
 
-- Method `beginGetMessageCount(IConnection, boolean, AsyncCallback)`
+- Метод `beginGetMessageCount(IConnection, boolean, AsyncCallback)`
 
-- Method `beginGetMessageCount(IConnection, boolean, AsyncCallback, Object)`
+- Метод `beginGetMessageCount(IConnection, boolean, AsyncCallback, Object)`
 
-- Method `beginGetMessageCount(AsyncCallback)`
+- Метод `beginGetMessageCount(AsyncCallback)`
 
-- Method `beginGetMessageCount(boolean)`
+- Метод `beginGetMessageCount(boolean)`
 
-- Method `beginGetMessageCount(boolean, AsyncCallback)`
+- Метод `beginGetMessageCount(boolean, AsyncCallback)`
 
-- Method `beginGetMessageCount(boolean, AsyncCallback, Object)`
+- Метод `beginGetMessageCount(boolean, AsyncCallback, Object)`
 
-- Method `beginGetMessageHeaders(IConnection, int)`
+- Метод `beginGetMessageHeaders(IConnection, int)`
 
-- Method `beginGetMessageHeaders(IConnection, int, AsyncCallback)`
+- Метод `beginGetMessageHeaders(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageHeaders(IConnection, int, AsyncCallback, Object)`
+- Метод `beginGetMessageHeaders(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageHeaders(int, AsyncCallback)`
+- Метод `beginGetMessageHeaders(int, AsyncCallback)`
 
-- Method `beginGetMessageInfo(IConnection, int)`
+- Метод `beginGetMessageInfo(IConnection, int)`
 
-- Method `beginGetMessageInfo(IConnection, int, Pop3ListFields)`
+- Метод `beginGetMessageInfo(IConnection, int, Pop3ListFields)`
 
-- Method `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback)`
+- Метод `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback)`
 
-- Method `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback, Object)`
+- Метод `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback, Object)`
 
-- Method `beginGetMessageInfo(IConnection, int, AsyncCallback)`
+- Метод `beginGetMessageInfo(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageInfo(IConnection, int, AsyncCallback, Object)`
+- Метод `beginGetMessageInfo(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageInfo(int)`
+- Метод `beginGetMessageInfo(int)`
 
-- Method `beginGetMessageInfo(int, Pop3ListFields)`
+- Метод `beginGetMessageInfo(int, Pop3ListFields)`
 
-- Method `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback)`
+- Метод `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback)`
 
-- Method `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback, Object)`
+- Метод `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback, Object)`
 
-- Method `beginGetMessageInfo(int, AsyncCallback)`
+- Метод `beginGetMessageInfo(int, AsyncCallback)`
 
-- Method `beginGetMessageInfo(int, AsyncCallback, Object)`
+- Метод `beginGetMessageInfo(int, AsyncCallback, Object)`
 
-- Method `beginGetMessageSize(IConnection, int)`
+- Метод `beginGetMessageSize(IConnection, int)`
 
-- Method `beginGetMessageSize(IConnection, int, AsyncCallback)`
+- Метод `beginGetMessageSize(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageSize(IConnection, int, AsyncCallback, Object)`
+- Метод `beginGetMessageSize(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageSize(int)`
+- Метод `beginGetMessageSize(int)`
 
-- Method `beginGetMessageSize(int, AsyncCallback)`
+- Метод `beginGetMessageSize(int, AsyncCallback)`
 
-- Method `beginGetMessageSize(int, AsyncCallback, Object)`
+- Метод `beginGetMessageSize(int, AsyncCallback, Object)`
 
-- Method `beginGetMessageUniqueId(IConnection, int)`
+- Метод `beginGetMessageUniqueId(IConnection, int)`
 
-- Method `beginGetMessageUniqueId(IConnection, int, AsyncCallback)`
+- Метод `beginGetMessageUniqueId(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageUniqueId(IConnection, int, AsyncCallback, Object)`
+- Метод `beginGetMessageUniqueId(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageUniqueId(int)`
+- Метод `beginGetMessageUniqueId(int)`
 
-- Method `beginGetMessageUniqueId(int, AsyncCallback)`
+- Метод `beginGetMessageUniqueId(int, AsyncCallback)`
 
-- Method `beginGetMessageUniqueId(int, AsyncCallback, Object)`
+- Метод `beginGetMessageUniqueId(int, AsyncCallback, Object)`
 
-- Method `beginListMessages(IConnection)`
+- Метод `beginListMessages(IConnection)`
 
-- Method `beginListMessages(IConnection, MailQuery)`
+- Метод `beginListMessages(IConnection, MailQuery)`
 
-- Method `beginListMessages(IConnection, MailQuery, AsyncCallback)`
+- Метод `beginListMessages(IConnection, MailQuery, AsyncCallback)`
 
-- Method `beginListMessages(IConnection, MailQuery, AsyncCallback, Object)`
+- Метод `beginListMessages(IConnection, MailQuery, AsyncCallback, Object)`
 
-- Method `beginListMessages(IConnection, AsyncCallback)`
+- Метод `beginListMessages(IConnection, AsyncCallback)`
 
-- Method `beginListMessages(IConnection, AsyncCallback, Object)`
+- Метод `beginListMessages(IConnection, AsyncCallback, Object)`
 
-- Method `beginListMessages(MailQuery, AsyncCallback)`
+- Метод `beginListMessages(MailQuery, AsyncCallback)`
 
-- Method `beginListMessages(AsyncCallback)`
+- Метод `beginListMessages(AsyncCallback)`
 
-- Method `beginNoop`
+- Метод `beginNoop`
 
-- Method `beginNoop(IConnection)`
+- Метод `beginNoop(IConnection)`
 
-- Method `beginNoop(IConnection, AsyncCallback)`
+- Метод `beginNoop(IConnection, AsyncCallback)`
 
-- Method `beginNoop(IConnection, AsyncCallback, Object)`
+- Метод `beginNoop(IConnection, AsyncCallback, Object)`
 
-- Method `beginNoop(AsyncCallback)`
+- Метод `beginNoop(AsyncCallback)`
 
-- Method `beginNoop(AsyncCallback, Object)`
+- Метод `beginNoop(AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream)`
+- Метод `beginSaveMessage(IConnection, int, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
+- Метод `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream)`
+- Метод `beginSaveMessage(IConnection, String, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
+- Метод `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(int, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(String, OutputStream, AsyncCallback)`
+- Метод `beginSaveMessage(String, OutputStream, AsyncCallback)`
 
-- Method `beginUndeleteMessages(IConnection)`
+- Метод `beginUndeleteMessages(IConnection)`
 
-- Method `beginUndeleteMessages(IConnection, AsyncCallback)`
+- Метод `beginUndeleteMessages(IConnection, AsyncCallback)`
 
-- Method `beginUndeleteMessages(IConnection, AsyncCallback, Object)`
+- Метод `beginUndeleteMessages(IConnection, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessages(AsyncCallback)`
+- Метод `beginUndeleteMessages(AsyncCallback)`
 
-- Method `commitDeletes(IConnection)`
+- Метод `commitDeletes(IConnection)`
 
-- Method `deleteMessage(IConnection, int)`
+- Метод `deleteMessage(IConnection, int)`
 
-- Method `deleteMessage(IConnection, String)`
+- Метод `deleteMessage(IConnection, String)`
 
-- Method `deleteMessages`
+- Метод `deleteMessages`
 
-- Method `deleteMessages(IConnection)`
+- Метод `deleteMessages(IConnection)`
 
-- Method `endCommitDeletes(IAsyncResult)`
+- Метод `endCommitDeletes(IAsyncResult)`
 
-- Method `endDeleteMessages(IAsyncResult)`
+- Метод `endDeleteMessages(IAsyncResult)`
 
-- Method `endGetMailboxInfo(IAsyncResult)`
+- Метод `endGetMailboxInfo(IAsyncResult)`
 
-- Method `endGetMessageInfo(IAsyncResult)`
+- Метод `endGetMessageInfo(IAsyncResult)`
 
-- Method `endGetMessageSize(IAsyncResult)`
+- Метод `endGetMessageSize(IAsyncResult)`
 
-- Method `endGetMessageUniqueId(IAsyncResult)`
+- Метод `endGetMessageUniqueId(IAsyncResult)`
 
-- Method `endNoop(IAsyncResult)`
+- Метод `endNoop(IAsyncResult)`
 
-- Method `fetchMessage(IConnection, int)`
+- Метод `fetchMessage(IConnection, int)`
 
-- Method `fetchMessage(IConnection, String)`
+- Метод `fetchMessage(IConnection, String)`
 
-- Method `getMailboxInfo(IConnection)`
+- Метод `getMailboxInfo(IConnection)`
 
-- Method `getMailboxInfo(IConnection, boolean)`
+- Метод `getMailboxInfo(IConnection, boolean)`
 
-- Method `getMailboxInfo(boolean)`
+- Метод `getMailboxInfo(boolean)`
 
-- Method `getMailboxSize(IConnection)`
+- Метод `getMailboxSize(IConnection)`
 
-- Method `getMessageCount(IConnection)`
+- Метод `getMessageCount(IConnection)`
 
-- Method `getMessageCount(IConnection, boolean)`
+- Метод `getMessageCount(IConnection, boolean)`
 
-- Method `getMessageHeaders(IConnection, int)`
+- Метод `getMessageHeaders(IConnection, int)`
 
-- Method `getMessageInfo(IConnection, int)`
+- Метод `getMessageInfo(IConnection, int)`
 
-- Method `getMessageInfo(IConnection, int, Pop3ListFields)`
+- Метод `getMessageInfo(IConnection, int, Pop3ListFields)`
 
-- Method `getMessageInfo(int)`
+- Метод `getMessageInfo(int)`
 
-- Method `getMessageInfo(int, Pop3ListFields)`
+- Метод `getMessageInfo(int, Pop3ListFields)`
 
-- Method `getMessageSize(IConnection, int)`
+- Метод `getMessageSize(IConnection, int)`
 
-- Method `getMessageUniqueId(IConnection, int)`
+- Метод `getMessageUniqueId(IConnection, int)`
 
-- Method `noop`
+- Метод `noop`
 
-- Method `noop(IConnection)`
+- Метод `noop(IConnection)`
 
-- Method `saveMessage(IConnection, int, OutputStream)`
+- Метод `saveMessage(IConnection, int, OutputStream)`
 
-- Method `saveMessage(IConnection, int, String)`
+- Метод `saveMessage(IConnection, int, String)`
 
-- Method `saveMessage(IConnection, String, OutputStream)`
+- Метод `saveMessage(IConnection, String, OutputStream)`
 
-- Method `saveMessage(IConnection, String, String)`
+- Метод `saveMessage(IConnection, String, String)`
 
-- Method `saveMessage(String, String)`
+- Метод `saveMessage(String, String)`
 
-- Method `undeleteMessages(IConnection)`
+- Метод `undeleteMessages(IConnection)`

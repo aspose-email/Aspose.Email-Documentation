@@ -7,7 +7,7 @@ type: docs
 
 
 ## **VSTO**
-Ниже приведен код для программного доступа к контакту из Outlook:
+Ниже приведен код для программного доступа к контактам Outlook:
 
 ``` cs
 
@@ -35,12 +35,11 @@ type: docs
 
     }
 
-    MessageBox.Show("You have " + counter +  " contacts with last names that contain " + findLastName + ".");
-
+    MessageBox.Show("У вас " + counter + " контактов с фамилиями, которые содержат " + findLastName + ".");
 
 ```
 ## **Aspose.Email**
-Класс MapiContact можно использовать для загрузки контактов в формате Outlook MSG и vCard. В следующих примерах кода показано, как загрузить контакты Outlook, сохраненные в формате MSG и VCF, в MapiContact.
+Класс MapiContact можно использовать для загрузки контактов в формате Outlook MSG и VCard. Следующий пример кода показывает, как загрузить контакты Outlook, сохраненные в формате MSG и VCF, в MapiContact.
 
 ``` cs
 
@@ -50,13 +49,12 @@ type: docs
 
     Console.WriteLine(contact.NameInfo.DisplayName);
 
-
 ```
-## **Загрузить образец кода**
+## **Скачать образец кода**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Загрузить рабочий код**
+## **Скачать исполняемый код**
 - [Codeplex](https://asposevsto.codeplex.com/SourceControl/latest#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Programmatically%20Access%20Outlook%20Contacts)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

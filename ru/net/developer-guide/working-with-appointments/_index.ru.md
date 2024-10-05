@@ -1,79 +1,79 @@
 ---
-title: "Работа с назначениями"
+title: "Работа с встречами"
 url: /ru/net/working-with-appointments/
 weight: 20
 type: docs
 ---
-## **Назначьте встречу**
+## **Создание встречи**
 
-The [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) класс в Aspose.Email for .NET можно использовать для создания новой встречи. В этой статье мы сначала создадим встречу и сохраним ее на диске в формате ICS.
+Класс [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) в Aspose.Email для .NET можно использовать для создания новой встречи. В этой статье мы сначала создадим встречу и сохраним ее на диск в формате ICS.
 
-### **Назначьте встречу и сохраните ее на диске в формате MSG или ICS**
+### **Создание встречи и сохранение на диск в формате MSG или ICS**
 
-Чтобы создать встречу и сохранить ее на диске, необходимо выполнить следующие шаги.
+Необходимы следующие шаги для создания встречи и сохранения ее на диск.
 
-1. Создайте экземпляр [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) класс и инициализируйте его с помощью этого конструктора.
-1. Передайте следующие аргументы в приведенном выше конструкторе
-   1. Location
-   1. Summary
-   1. Description
+1. Создайте экземпляр класса [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) и инициализируйте его с помощью этого конструктора.
+1. Передайте следующие аргументы в вышеуказанный конструктор:
+   1. Место
+   1. Резюме
+   1. Описание
    1. Дата начала
    1. Дата окончания
-   1. Organizer
-   1. Attendees
-1. Позвоните [Save()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/save/#save/) метод и укажите имя и формат файла в аргументах.
+   1. Организатор
+   1. Участники
+1. Вызовите метод [Save()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/save/#save/) и укажите имя файла и формат в аргументах.
 
-Встречу можно открыть в Microsoft Outlook или любой программе, которая может загрузить файл ICS. Если файл открыт в Microsoft Outlook, встреча автоматически добавляется в календарь Outlook.
+Встречу можно открыть в Microsoft Outlook или любой программе, которая может загрузить файл ICS. Если файл открыт в Microsoft Outlook, он автоматически добавляет встречу в календарь Outlook.
 
-В следующем фрагменте кода показано, как создать и сохранить встречу на диске в формате ICS или MSG.
+Следующий код показывает, как создать и сохранить встречу на диск в формате ICS или MSG.
 
 ```cs
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
 
-// Create and initialize an instance of the Appointment class
+// Создайте и инициализируйте экземпляр класса Appointment
 Appointment appointment = new Appointment(
-    "Meeting Room 3 at Office Headquarters",// Location
-    "Monthly Meeting",                      // Summary
-    "Please confirm your availability.",    // Description
-    new DateTime(2015, 2, 8, 13, 0, 0),     // Start date
-    new DateTime(2015, 2, 8, 14, 0, 0),     // End date
-    "from@domain.com",                      // Organizer
-    "attendees@domain.com");                // Attendees
+    "Meeting Room 3 at Office Headquarters",// Место
+    "Monthly Meeting",                      // Резюме
+    "Please confirm your availability.",    // Описание
+    new DateTime(2015, 2, 8, 13, 0, 0),     // Дата начала
+    new DateTime(2015, 2, 8, 14, 0, 0),     // Дата окончания
+    "from@domain.com",                      // Организатор
+    "attendees@domain.com");                // Участники
 
-// Save the appointment to disk in ICS format           
+// Сохраните встречу на диск в формате ICS            
 appointment.Save(fileName + ".ics", new AppointmentIcsSaveOptions());
-Console.WriteLine("Appointment created and saved to disk successfully.");
+Console.WriteLine("Встреча успешно создана и сохранена на диск.");
 
-// Save the appointment to disk in MSG format
+// Сохраните встречу на диск в формате MSG
 appointment.Save(fileName + ".msg", new AppointmentMsgSaveOptions(););
-Console.WriteLine("Appointment created and saved to disk successfully.");
+Console.WriteLine("Встреча успешно создана и сохранена на диск.");
 ```
 
-### **Назначьте встречу с помощью HTML-контента**
+### **Создание встречи с HTML-содержимым**
 
-С помощью заголовка X-ALT-DESC можно указать альтернативные представления описания события в различных типах контента. Это позволяет получателям файла iCalendar выбрать представление, наиболее соответствующее их потребностям. Например, вы можете включить текстовое описание, используя тип содержимого «текст/обычный», и описание HTML с использованием типа содержимого «текст/html». Для каждого альтернативного представления добавляется заголовок X-ALT-DESC. Чтобы назначить встречу с HTML-содержимым, задайте поле [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) property.
+Вы можете указать альтернативные представления описания события в разных типах контента, используя заголовок X-ALT-DESC. Это позволяет получателям файла iCalendar выбрать представление, которое лучше всего соответствует их потребностям. Например, вы можете включить описание в простом текстовом формате, используя тип контента "text/plain", и HTML-описание, используя тип контента "text/html". Заголовок X-ALT-DESC добавляется для каждого альтернативного представления. Чтобы создать встречу с HTML-содержимым, установите свойство [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property).
 
-Попробуйте следующий пример кода, чтобы назначить встречу с альтернативным HTML-описанием:
+Попробуйте следующий код для создания встречи с альтернативным HTML-описанием:
 
 1. Создайте новый экземпляр класса Appointment.
-2. Укажите необходимые параметры конструктору Appointment:
+2. Укажите необходимые параметры для конструктора Appointment:
    - Укажите место встречи.
-   - Задайте дату и время начала.
-   - Задайте дату и время окончания.
+   - Установите дату и время начала.
+   - Установите дату и время окончания.
    - Укажите организатора.
    - Укажите участника.
-3. Установите [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) свойство объекта встречи, указывающее, что описание находится в формате HTML.
-4. Присвойте свойству Description объекта назначения строку в формате HTML, заключенную в многострочную строку:
-   - HTML-разметка включает `<style>` блок, определяющий класс CSS с именем «текст» со стилями шрифтов.
-   - Тело HTML содержит тег абзаца `<p>` с классом CSS «text» и фактическим пригласительным сообщением.
-5. Теперь объект встречи готов, и вы можете выполнить дополнительные операции или сохранить его в виде файла iCalendar.
+3. Установите свойство [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) объекта встречи, указывая, что описание в HTML-формате.
+4. Установите свойство Description объекта встречи на строку, отформатированную в HTML, заключенную в многострочную строку:
+   - HTML-разметка включает блок `<style>`, определяющий класс CSS с именем "text" с параметрами шрифта.
+   - HTML-тело содержит тег абзаца `<p>` с CSS-классом "text" и фактическим текстом приглашения.
+5. Объект встречи теперь готов, и вы можете выполнять дальнейшие операции или сохранить его как файл iCalendar.
 
 ```cs
 var appointment = new Appointment("Bygget 83",
-    DateTime.UtcNow, // start date
-    DateTime.UtcNow.AddHours(1), // end date
-    new MailAddress("TintinStrom@from.com", "Tintin Strom"), // organizer
-    new MailAddress("AinaMartensson@to.com", "Aina Martensson")) // attendee
+    DateTime.UtcNow, // дата начала
+    DateTime.UtcNow.AddHours(1), // дата окончания
+    new MailAddress("TintinStrom@from.com", "Tintin Strom"), // организатор
+    new MailAddress("AinaMartensson@to.com", "Aina Martensson")) // участник
 {
     HtmlDescription = @"
     <html>
@@ -84,14 +84,15 @@ var appointment = new Appointment("Bygget 83",
             }
      </style>
     <body>
-     <p class=""text"">Hi, I'm happy to invite you to our party.</p>
+     <p class=""text"">Привет, я рад пригласить вас на нашу вечеринку.</p>
     </body>
     </html>"
 };
 ```
-### **Создайте черновик запроса на встречу**
 
-В наших предыдущих статьях было показано, как создать и сохранить встречу в формате ICS. Часто требуется создать заявку на прием в черновом режиме, чтобы добавить основную информацию, а затем отправить тот же черновик встречи другим пользователям для внесения необходимых изменений в соответствии с индивидуальными потребностями. Чтобы сохранить встречу в черновом режиме, нажмите [MethodType](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/methodtype/) для свойства класса Appointment должно быть установлено значение [AppointmentMethodType.Publish](https://reference.aspose.com/email/net/aspose.email.calendar/appointmentmethodtype/). В следующем фрагменте кода показано, как создать черновик запроса на встречу.
+### **Создание черновика запроса на встречу**
+
+В ранее опубликованных статьях было показано, как создавать и сохранять встречу в формате ICS. Часто требуется создать запрос на встречу в черновом режиме, чтобы основная информация была добавлена, а затем тот же черновик встречи можно было переслать другим пользователям для необходимых изменений в соответствии с индивидуальным использованием. Для сохранения встречи в черновом режиме свойство [MethodType](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/methodtype/) класса Appointment должно быть установлено в [AppointmentMethodType.Publish](https://reference.aspose.com/email/net/aspose.email.calendar/appointmentmethodtype/). Следующий код показывает, как создать черновик запроса на встречу.
 
 ```cs
 string sender = "test@gmail.com";
@@ -108,15 +109,15 @@ message.AddAlternateView(app.RequestApointment());
 
 MapiMessage msg = MapiMessage.FromMailMessage(message);
 
-// Save the appointment as draft.
+// Сохраните встречу как черновик.
 msg.Save(dstDraft);
 
-Console.WriteLine(Environment.NewLine + "Draft saved at " + dstDraft);
+Console.WriteLine(Environment.NewLine + "Черновик сохранен по адресу " + dstDraft);
 ```
 
-### **Создание проекта встречи на основе текста**
+### **Создание черновика встречи из текста**
 
-В следующем фрагменте кода показано, как создать черновик встречи из текста. 
+Следующий код показывает, как создать черновик встречи из текста.
 
 ```cs
 string ical = @"BEGIN:VCALENDAR
@@ -140,17 +141,17 @@ MapiMessage msg = MapiMessage.FromMailMessage(message);
 msg.Save(dataDir + "draft_out.msg");
 ```
 
-### **Установите статус участников для участников встречи**
+### **Установка статуса участников встречи**
 
-Aspose.Email for .NET API позволяет задавать статус участников встречи при составлении ответного сообщения. Это добавляет свойство PARTSTAT в файл ICS.
+Aspose.Email для .NET API позволяет вам установить статус участников встречи при формировании сообщения-ответа. Это добавляет свойство PARTSTAT в файл ICS.
 
 ```cs
 DateTime startDate = new DateTime(2011, 12, 10, 10, 12, 11),
          endDate = new DateTime(2012, 11, 13, 13, 11, 12);
-MailAddress organizer = new MailAddress("aaa@amail.com", "Organizer");
+MailAddress organizer = new MailAddress("aaa@amail.com", "Организатор");
 MailAddressCollection attendees = new MailAddressCollection();
-MailAddress attendee1 = new MailAddress("bbb@bmail.com", "First attendee");
-MailAddress attendee2 = new MailAddress("ccc@cmail.com", "Second attendee");
+MailAddress attendee1 = new MailAddress("bbb@bmail.com", "Первый участник");
+MailAddress attendee2 = new MailAddress("ccc@cmail.com", "Второй участник");
 
 attendee1.ParticipationStatus = ParticipationStatus.Accepted;
 attendee2.ParticipationStatus = ParticipationStatus.Declined;
@@ -162,50 +163,50 @@ Appointment target = new Appointment(location, startDate, endDate, organizer, at
 
 ### **Настройка идентификатора продукта для iCalendar**
 
-Aspose.Email for .NET API позволяет получить или установить идентификатор продукта, создавшего объект iCalendar.
+Aspose.Email для .NET API позволяет получать или устанавливать идентификатор продукта, который создал объект iCalendar.
 
 ```cs
-string description = "Test Description";
-Appointment app = new Appointment("location", "test appointment", description, DateTime.Today,
+string description = "Тестовое описание";
+Appointment app = new Appointment("место", "тестовая встреча", description, DateTime.Today,
 DateTime.Today.AddDays(1), "first@test.com", "second@test.com");
 
 IcsSaveOptions saveOptions = IcsSaveOptions.Default;
-saveOptions.ProductId = "Test Corporation";
+saveOptions.ProductId = "Тестовая Корпорация";
 app.Save(dataDir + "ChangeProdIdOfICS.ics", saveOptions);
 ```
 
-## **Загрузите и сохраните встречу в формате ICS**
+## **Загрузка и сохранение встречи в формате ICS**
 
-Кроме того, [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) класс можно использовать для загрузки встречи из файла ICS.
+Кроме того, класс [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) может использоваться для загрузки встречи из файла ICS.
 
-### **Загрузить встречу в формате ICS**
+### **Загрузка встречи в формате ICS**
 
 Чтобы загрузить встречу в формате ICS, необходимо выполнить следующие шаги:
 
-1. Создайте экземпляр [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) class.
-1. Позвоните [Load()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/load/#load/) метод, указав путь к файлу ICS.
-1. Прочтите любой объект недвижимости, чтобы получить любую информацию о встрече (файл ICS).
+1. Создайте экземпляр класса [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/).
+1. Вызовите метод [Load()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/load/#load/) , предоставив путь к файлу ICS.
+1. Прочитайте любое свойство, чтобы получить любую информацию о встрече (файле ICS).
 
-В следующем фрагменте кода показано, как загрузить встречу в формате ICS.
+Следующий код показывает, как загрузить встречу в формате ICS.
 
 ```cs
-// Load an Appointment just created and saved to disk and display its details.
+// Загрузите только что созданную и сохраненную на диске встречу и отобразите ее детали.
 Appointment loadedAppointment = Appointment.Load(dstEmail);
-Console.WriteLine(Environment.NewLine + "Loaded Appointment details are as follows:");
-// Display the appointment information on screen
-Console.WriteLine("Summary: " + loadedAppointment.Summary);
-Console.WriteLine("Location: " + loadedAppointment.Location);
-Console.WriteLine("Description: " + loadedAppointment.Description);
-Console.WriteLine("Start date: " + loadedAppointment.StartDate);
-Console.WriteLine("End date: " + loadedAppointment.EndDate);
-Console.WriteLine("Organizer: " + appointment.Organizer);
-Console.WriteLine("Attendees: " + appointment.Attendees);
-Console.WriteLine(Environment.NewLine + "Appointment loaded successfully from " + dstEmail);
+Console.WriteLine(Environment.NewLine + "Детали загруженной встречи следующие:");
+// Отобразите информацию о встрече на экране
+Console.WriteLine("Резюме: " + loadedAppointment.Summary);
+Console.WriteLine("Место: " + loadedAppointment.Location);
+Console.WriteLine("Описание: " + loadedAppointment.Description);
+Console.WriteLine("Дата начала: " + loadedAppointment.StartDate);
+Console.WriteLine("Дата окончания: " + loadedAppointment.EndDate);
+Console.WriteLine("Организатор: " + appointment.Organizer);
+Console.WriteLine("Участники: " + appointment.Attendees);
+Console.WriteLine(Environment.NewLine + "Встреча успешно загружена из " + dstEmail);
 ```
 
-### **Загрузите и конвертируйте файл ICS в формат сообщения**
+### **Загрузка и конвертация файла ICS в формат сообщения**
 
-API позволяет легко преобразовать встречу в объект сообщения. В следующем примере кода показано, как преобразовать запрос на встречу в MailMessage или MapiMessage:
+API позволяет легко конвертировать встречу в объект сообщения. Следующий пример кода показывает, как преобразовать запрос на встречу в MailMessage или MapiMessage:
 
 ```cs
 var appointment = Appointment.Load("appRequest.ics");
@@ -224,7 +225,7 @@ while (reader.NextEvent())
 {
     appointments.Add(reader.Current);
 }
-//working with appointments...
+// работа с встречами...
 ```
 
 ## **Запись нескольких событий в файл ICS**
@@ -237,24 +238,24 @@ using (CalendarWriter writer = new CalendarWriter(dataDir + "WriteMultipleEvents
     for (int i = 0; i < 10; i++)
     {
         Appointment app = new Appointment(string.Empty, DateTime.Now, DateTime.Now, "sender@domain.com", "receiver@domain.com");
-        app.Description = "Test body " + i;
-        app.Summary = "Test summary:" + i;
+        app.Description = "Тестовое сообщение " + i;
+        app.Summary = "Тестовое резюме:" + i;
         writer.Write(app);
     }
 }
 ```
 
-## **Определите версию встречи**
+## **Определение версии встречи**
 
-Чтобы определить версию встречи, вы можете использовать [Appointment.Version](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/version/#appointmentversion-property) собственность [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) класс. Это свойство помогает определить, на какой версии основаны файлы, обеспечивая интеграцию с другими системами и приложениями.
+Чтобы определить версию встречи, вы можете использовать свойство [Appointment.Version](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/version/#appointmentversion-property) класса [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class). Это свойство помогает определить, на каких версиях основаны их файлы, обеспечивая интеграцию с другими системами и приложениями.
 
-В следующем примере кода показано, как реализовать это свойство в своем проекте:
+Следующий пример кода показывает, как использовать это свойство в вашем проекте:
 
 ```cs
 var app = Appointment.Load("meeting.ics");
 
 if (app.Version == 1.0)
 {
-    // do something
+    // выполните действия
 }
 ```

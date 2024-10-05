@@ -1,22 +1,22 @@
 ---
-title: "Чтение поврежденных файлов PST/OST"
+title: "Чтение поврежденных PST/OST файлов"
 url: /ru/java/read-corrupted-pst-ost-files/
 weight: 112
 type: docs
 ---
 
-## **Чтение поврежденных файлов PST/OST**
+## **Чтение поврежденных PST/OST файлов**
 
-Иногда из-за некоторых проблем чтение PST/OST может оказаться невозможным. Например, некоторые блоки данных могут быть повреждены. В таких случаях обычно возникают исключения при вызове [EnumerateFolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateFolders--), [EnumerateMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMessages--), [GetContents](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents--), [GetSubfolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getSubFolders--)и т. д. методы. Но отдельные сообщения или папки могут остаться неповрежденными в хранилище.
+Иногда чтение PST/OST может быть невозможно из-за некоторых проблем. Например, некоторые блоки данных могут быть повреждены. В таких случаях обычно возникают исключения при вызове методов [EnumerateFolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateFolders--), [EnumerateMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMessages--), [GetContents](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents--), [GetSubfolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getSubFolders--) и т.д. Однако отдельные сообщения или папки могут остаться неповрежденными в хранилище.
 
-Пользователи Aspose.Email могут найти идентификаторы товаров в иерархическом порядке. Кроме того, вы можете извлекать элементы по идентификаторам. Для этого библиотека предлагает следующие методы:
+Пользователи Aspose.Email могут находить идентификаторы элементов иерархическим образом. Далее вы можете извлекать элементы по идентификаторам. Для этой цели библиотека предлагает следующие методы:
 
-- [Персональное хранилище. Поиск сообщений (идентификатор родительской записи в строке)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#findMessages-java.lang.String-) - находит идентификаторы сообщений для папки.
-- [Персональное хранилище. Найдите подпапки (идентификатор родительской записи в строке)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#findSubfolders-java.lang.String-) - находит идентификаторы подпапок для папки.
+- [PersonalStorage.findMessages(String parentEntryId)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#findMessages-java.lang.String-) - находит идентификаторы сообщений для папки.
+- [PersonalStorage.findSubfolders(String parentEntryId)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#findSubfolders-java.lang.String-) - находит идентификаторы подпапок для папки.
 
-**Note**, что, несмотря на преимущества, существуют поврежденные хранилища, которые невозможно прочитать даже с помощью этих методов.
+**Примечание**, что несмотря на преимущества, существуют поврежденные хранилища, которые невозможно прочитать даже с использованием этих методов.
 
-Следующий фрагмент кода демонстрирует использование этих методов для чтения поврежденных файлов PST/OST:
+Следующий фрагмент кода демонстрирует использование этих методов для чтения поврежденных PST/OST файлов:
 
 ```java
 try (PersonalStorage pst = PersonalStorage.fromFile(fileName)) {
@@ -31,7 +31,7 @@ public static void exploreCorruptedPst(PersonalStorage pst, String rootFolderId)
             MapiMessage msg = pst.extractMessage(messageId);
             System.out.println("- " + msg.getSubject());
         } catch (Exception e) {
-            System.out.println("Message reading error. Entry id: " + messageId);
+            System.out.println("Ошибка чтения сообщения. Идентификатор записи: " + messageId);
         }
     }
 
@@ -43,7 +43,7 @@ public static void exploreCorruptedPst(PersonalStorage pst, String rootFolderId)
                 FolderInfo subfolder = pst.getFolderById(subFolderId);
                 System.out.println(subfolder.getDisplayName());
             } catch (Exception e) {
-                System.out.println("Message reading error. Entry id: " + subFolderId);
+                System.out.println("Ошибка чтения сообщения. Идентификатор записи: " + subFolderId);
             }
 
             exploreCorruptedPst(pst, subFolderId);
@@ -53,37 +53,37 @@ public static void exploreCorruptedPst(PersonalStorage pst, String rootFolderId)
 ```
 ## **Извлечение элементов PST из поврежденных файлов**
 
-API обхода позволяет извлекать все элементы PST, насколько это возможно, без исключений, даже если некоторые данные исходного файла повреждены.
+API обхода позволяет извлекать все элементы PST по возможности, без выброса исключений, даже если некоторые данные оригинального файла повреждены.
 
-Используйте [Персональное хранилище (обратный звонок по обходу исключений)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#PersonalStorage-com.aspose.email.TraversalExceptionsCallback-) конструктор и [load (строковое имя файла)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#load-java.lang.String-) метод вместо [fromFile](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#fromFile-java.lang.String-) method.
+Используйте конструктор [PersonalStorage(TraversalExceptionsCallback callback)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#PersonalStorage-com.aspose.email.TraversalExceptionsCallback-) и метод [load(String fileName)](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#load-java.lang.String-) вместо метода [fromFile](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#fromFile-java.lang.String-).
 
-Конструктор позволяет определить метод обратного вызова.
+Конструктор позволяет задавать метод обратного вызова.
 
 ```java
 TraversalExceptionsCallback exceptionsCallback = new TraversalExceptionsCallback() {
     @Override
     public void invoke(TraversalAsposeException exception, String itemId) {
-        /* Exception handling  code. */
+        /* Код обработки исключений. */
     }
 };
 
 try (PersonalStorage pst = new PersonalStorage(exceptionsCallback)) { }
 ```
-Исключения для загрузки и обхода будут доступны с помощью метода обратного вызова.
+Исключения при загрузке и обходе будут доступны через метод обратного вызова.
 
-Метод load возвращает значение true, если файл был успешно загружен и возможен дальнейший обход. Если файл поврежден и обход невозможен, возвращается значение false.
+Метод load возвращает 'true', если файл был успешно загружен и дальнейший обход возможен. Если файл поврежден и обход невозможен, возвращается 'false'.
 
 ```java
 if (currentPst.load(inputStream))
 ```
-В следующем примере кода показано, как внедрить API обхода файлов PST в проект:
+Следующий пример кода показывает, как интегрировать API обхода файла PST в проект:
 
 ```java
 public static void main(String[] args) {
     TraversalExceptionsCallback exceptionsCallback = new TraversalExceptionsCallback() {
         @Override
         public void invoke(TraversalAsposeException exception, String itemId) {
-            /* Exception handling  code. */
+            /* Код обработки исключений. */
         }
     };
 

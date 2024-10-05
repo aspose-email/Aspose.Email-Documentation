@@ -1,46 +1,43 @@
 ---
-title: "Работа с папками на сервере Exchange"
+title: "Работа с папками на Exchange Server"
 url: /ru/java/working-with-folders-on-exchange-server/
 weight: 80
 type: docs
 ---
 
+## **Список всех папок на сервере**
+API Aspose.Email предоставляет возможность подключаться к Exchange Server и перечислять все папки и подпапки. Вы также можете рекурсивно извлечь все подпапки из каждой папки. Он также предоставляет возможность перечисления папок с постраничной навигацией из клиента Exchange с использованием Exchange Web Service (EWS). Эта статья показывает, как получить все подпапки с сервера Exchange и извлечь папки с постраничной навигацией.
 
-## **Список всех папок с сервера**
-Aspose.Email API предоставляет возможность подключиться к серверу Exchange и вывести список всех папок и подпапок. Вы также можете рекурсивно извлекать все подпапки из каждой папки. Он также предоставляет возможность перечислять папки с разбиением на страницы из клиента Exchange с помощью веб-службы Exchange (EWS). В этой статье показано, как извлечь все подпапки с сервера Exchange и извлечь папки с разбиением на страницы.
-
-В следующем фрагменте кода показано, как вывести список папок с сервера Exchange.
-
-
+Следующий фрагмент кода показывает, как перечислить папки с сервера Exchange.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полноценных примеров и файлов данных, пожалуйста, перейдите по адресу https://github.com/aspose-email/Aspose.Email-for-Java
 public static void run() {
     try {
         IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
-        System.out.println("Downloading all messages from Inbox....");
+        System.out.println("Загрузка всех сообщений из Входящих....");
 
         ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
-        System.out.println("Mailbox URI: " + mailboxInfo.getMailboxUri());
+        System.out.println("URI почтового ящика: " + mailboxInfo.getMailboxUri());
         String rootUri = client.getMailboxInfo().getRootUri();
-        // List all the folders from Exchange server
+        // Перечислить все папки с сервера Exchange
         ExchangeFolderInfoCollection folderInfoCollection = client.listSubFolders(rootUri);
         for (ExchangeFolderInfo folderInfo : (Iterable<ExchangeFolderInfo>) folderInfoCollection) {
-            // Call the recursive method to read messages and get sub-folders
+            // Вызвать рекурсивный метод для чтения сообщений и получения подпапок
             listSubFolders(client, folderInfo);
         }
 
-        System.out.println("All messages downloaded.");
+        System.out.println("Все сообщения загружены.");
     } catch (java.lang.RuntimeException ex) {
         System.out.println(ex.getMessage());
     }
 }
 
 private static void listSubFolders(IEWSClient client, ExchangeFolderInfo folderInfo) {
-    // Create the folder in disk (same name as on IMAP server)
+    // Создать папку на диске (такое же имя, как на IMAP-сервере)
     System.out.println(folderInfo.getDisplayName());
     try {
-        // If this folder has sub-folders, call this method recursively to get messages
+        // Если эта папка имеет подпапки, вызвать этот метод рекурсивно для получения сообщений
         ExchangeFolderInfoCollection folderInfoCollection = client.listSubFolders(folderInfo.getUri());
         for (ExchangeFolderInfo subfolderInfo : (Iterable<ExchangeFolderInfo>) folderInfoCollection) {
             listSubFolders(client, subfolderInfo);
@@ -49,8 +46,8 @@ private static void listSubFolders(IEWSClient client, ExchangeFolderInfo folderI
     }
 }
 ~~~
-## **Получите информацию о типе папки с помощью EWS**
-The [FolderType](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderInfo#getFolderType\(\)) имущество, предоставленное [ExchangeFolderInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangefolderinfo) класс можно использовать для получения информации о типе папки. Это показано в примере кода ниже.
+## **Получение информации о типе папки с использованием EWS**
+Свойство [FolderType](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderInfo#getFolderType\(\)), предоставляемое классом [ExchangeFolderInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangefolderinfo), может быть использовано для получения информации о типе папки. Это показано в следующем примере кода.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
@@ -59,38 +56,36 @@ ExchangeFolderInfoCollection folderInfoCol = client.listSubFolders(client.getMai
 for (ExchangeFolderInfo folderInfo : (Iterable<ExchangeFolderInfo>) folderInfoCol) {
     switch (folderInfo.getFolderType()) {
     case ExchangeFolderType.Appointment:
-        // handle Appointment
+        // обрабатывать назначение
         break;
     case ExchangeFolderType.Contact:
-        // handle Contact
+        // обрабатывать контакт
         break;
     case ExchangeFolderType.Task:
-        // handle Task
+        // обрабатывать задачу
         break;
     case ExchangeFolderType.Note:
-        // handle email message
+        // обрабатывать сообщение электронной почты
         break;
     case ExchangeFolderType.StickyNote:
-        // handle StickyNote
+        // обрабатывать заметку
         break;
     case ExchangeFolderType.Journal:
-        // handle Journal
+        // обрабатывать журнал
         break;
     default:
         break;
     }
 }
 ~~~
-## **Перечисление папок с поддержкой пейджинга с помощью EWS**
-В следующем фрагменте кода показано, как использовать поддержку пейджинга в EWS.
-
-
+## **Перечисление папок с поддержкой постраничной навигации с использованием EWS**
+Следующий фрагмент кода показывает, как использовать поддержку постраничной навигации с использованием EWS.
 
 ~~~Java
-// Create instance of ExchangeWebServiceClient class by giving credentials
+// Создать экземпляр класса ExchangeWebServiceClient, предоставив учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "UserName", "Password");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для перечисления информации о сообщениях из Входящих
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 int itemsPerPage = 5;
 List<PageInfo> pages = new ArrayList<PageInfo>();
@@ -105,52 +100,48 @@ while (!pagedMessageInfoCol.getLastPage()) {
     client.listMessages(client.getMailboxInfo().getInboxUri());
 }
 ~~~
-## **Доступ к настраиваемым папкам или подпапкам почтового ящика**
-[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) позволяет разработчикам получить доступ к любой настраиваемой папке или подпапке из почтового ящика. [folderExists()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#folderExists\(java.lang.String,%20java.lang.String\)) функция [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) возвращает URI указанной настраиваемой папки/подпапки, который затем можно использовать для доступа к целевой папке. В следующем примере открывается настраиваемая папка «TestInbox», созданная в папке INBOX, и отображаются все сообщения из этой настраиваемой папки. Для выполнения этой задачи выполните следующие шаги:
+## **Доступ к пользовательским папкам или подпапкам почтового ящика**
+[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) позволяет разработчикам получать доступ к любой пользовательской папке или подпапке из почтового ящика. Функция [folderExists()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#folderExists\(java.lang.String,%20java.lang.String\)) класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) возвращает URI указанной пользовательской папки/подпапки, который затем можно использовать для доступа к целевой папке. В следующем примере пользовательская папка с именем "TestInbox", созданная в папке ВХОДЯЩИЕ, доступна, и все сообщения отображаются из этой пользовательской папки. Чтобы выполнить эту задачу, выполните следующие шаги:
 
-1. Инициализируйте объект IEWSClient, указав действительные учетные данные.
-1. Получите доступ к почтовому ящику по умолчанию.
-1. Откройте родительскую папку, которая в данном примере называется INBOX. Эта родительская папка также может быть пользовательской папкой.
-1. Используйте folderExists () для поиска в указанной настраиваемой подпапке, например «TestInbox». Он вернет URI «TestInbox».
-1. Используйте этот Uri для доступа ко всем сообщениям в этой настраиваемой папке.
+1. Инициализируйте объект IEWSClient, предоставив действительные учетные данные.
+1. Получите доступ к стандартному почтовому ящику.
+1. Получите доступ к родительской папке, которая в этом примере является ВХОДЯЩИЕ. Эта родительская папка также может быть пользовательской папкой.
+1. Используйте folderExists(), чтобы найти указанную пользовательскую подпапку, например "TestInbox". Это вернет URI "TestInbox".
+1. Используйте этот URI для доступа ко всем сообщениям в этой пользовательской папке.
 
-В следующем фрагменте кода показано, как получить доступ к настраиваемым папкам или подпапкам почтового ящика с помощью EWS.
-
-
+Следующий фрагмент кода показывает, как получить доступ к пользовательским папкам или подпапкам почтового ящика с помощью EWS.
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, предоставив учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Create ExchangeMailboxInfo, ExchangeMessageInfoCollection instance
+// Создать экземпляры ExchangeMailboxInfo и ExchangeMessageInfoCollection
 ExchangeMailboxInfo mailbox = client.getMailboxInfo();
 ExchangeMessageInfoCollection messages = null;
 ExchangeFolderInfo subfolderInfo = new ExchangeFolderInfo();
 
-// Check if specified custom folder exisits and Get all the messages info from the target Uri
+// Проверить, существует ли указанная пользовательская папка, и получить всю информацию о сообщениях из целевого URI
 ExchangeFolderInfo[] referenceToSubfolderInfo = { subfolderInfo };
 client.folderExists(mailbox.getInboxUri(), "TestInbox", /* out */ referenceToSubfolderInfo);
 subfolderInfo = referenceToSubfolderInfo[0];
 
-// if custom folder exists
+// если пользовательская папка существует
 if (subfolderInfo != null) {
     messages = client.listMessages(subfolderInfo.getUri());
 
-    // Parse all the messages info collection
+    // Обработать всю коллекцию информации о сообщениях
     for (ExchangeMessageInfo info : (Iterable<ExchangeMessageInfo>) messages) {
         String strMessageURI = info.getUniqueUri();
-        // now get the message details using FetchMessage()
+        // теперь получить детали сообщения, используя FetchMessage()
         MailMessage msg = client.fetchMessage(strMessageURI);
-        System.out.println("Subject: " + msg.getSubject());
+        System.out.println("Тема: " + msg.getSubject());
     }
 } else {
-    System.out.println("No folder with this name found.");
+    System.out.println("Папка с таким именем не найдена.");
 }
 ~~~
-## **Список общедоступных папок**
-Microsoft Exchange Server позволяет пользователям создавать общедоступные папки и публиковать в них сообщения. Чтобы сделать это через приложение, используйте Aspose.Email [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс для подключения к серверу Exchange и чтения и загрузки сообщений и сообщений из общедоступных папок. В следующем фрагменте кода показано, как читать все общедоступные папки и подпапки, а также перечислять и загружать все сообщения, обнаруженные в этих папках. Этот пример работает только с Microsoft Exchange Server 2007 или выше, поскольку только они поддерживают EWS.
-
-
+## **Список общих папок**
+Microsoft Exchange Server позволяет пользователям создавать общие папки и размещать сообщения в них. Чтобы сделать это через ваше приложение, используйте класс EWSClient от Aspose.Email, чтобы подключиться к Exchange Server и читать и загружать сообщения и публикации из общих папок. Следующий фрагмент кода показывает, как прочитать все общие папки и подпапки, а также перечислить и загрузить любые сообщения, найденные в этих папках. Этот пример работает только с Microsoft Exchange Server 2007 или выше, так как только они поддерживают EWS.
 
 ~~~Java
 public static void run() {
@@ -167,15 +158,14 @@ private static void readPublicFolders() {
 
     ExchangeFolderInfoCollection folders = client.listPublicFolders();
     for (ExchangeFolderInfo publicFolder : (Iterable<ExchangeFolderInfo>) folders) {
-        System.out.println("Name: " + publicFolder.getDisplayName());
-        System.out.println("Subfolders count: " + publicFolder.getChildFolderCount());
+        System.out.println("Имя: " + publicFolder.getDisplayName());
+        System.out.println("Количество подпапок: " + publicFolder.getChildFolderCount());
         listMessagesFromSubFolder(publicFolder, client);
-
     }
 }
 
 private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, IEWSClient client) {
-    System.out.println("Folder Name: " + publicFolder.getDisplayName());
+    System.out.println("Имя папки: " + publicFolder.getDisplayName());
     ExchangeMessageInfoCollection msgInfoCollection = client.listMessagesFromPublicFolder(publicFolder);
     for (ExchangeMessageInfo messageInfo : (Iterable<ExchangeMessageInfo>) msgInfoCollection) {
         MailMessage msg = client.fetchMessage(messageInfo.getUniqueUri());
@@ -183,7 +173,7 @@ private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, I
         msg.save(dataDir + msg.getSubject() + ".msg", SaveOptions.getDefaultMsgUnicode());
     }
 
-    // Call this method recursively for any subfolders
+    // Вызвать этот метод рекурсивно для любых подпапок
     if (publicFolder.getChildFolderCount() > 0) {
         ExchangeFolderInfoCollection subfolders = client.listSubFolders(publicFolder);
         for (ExchangeFolderInfo subfolder : (Iterable<ExchangeFolderInfo>) subfolders) {
@@ -192,17 +182,15 @@ private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, I
     }
 }
 ~~~
-## **Скопируйте сообщение в другую папку**
-Aspose.Email API позволяет копировать сообщение из одной папки в другую с помощью [copyItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#copyItem\(java.lang.String,%20java.lang.String\)) метод. Перегруженная версия этого метода возвращает уникальный URI скопированного сообщения, как показано в этой статье.
-
-
+## **Копирование сообщения в другую папку**
+API Aspose.Email позволяет копировать сообщение из одной папки в другую с помощью метода [copyItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#copyItem\(java.lang.String,%20java.lang.String\)). Перегруженная версия этого метода возвращает уникальный URI скопированного сообщения, как показано в этой статье.
 
 ~~~Java
 try {
-    // Create instance of EWSClient class by giving credentials
+    // Создать экземпляр класса EWSClient, предоставив учетные данные
     IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
     MailMessage message = new MailMessage("from@domain.com", "to@domain.com", "EMAILNET-34997 - " + UUID.randomUUID().toString(),
-            "EMAILNET-34997 Exchange: Copy a message and get reference to the new Copy item");
+            "EMAILNET-34997 Exchange: Копировать сообщение и получить ссылку на новый элемент копии");
     String messageUri = client.appendMessage(message);
     String newMessageUri = client.copyItem(messageUri, client.getMailboxInfo().getDeletedItemsUri());
 } catch (java.lang.RuntimeException ex) {
@@ -210,16 +198,14 @@ try {
 }
 ~~~
 ## **Синхронизация элементов папки**
-Aspose.Электронная почта для API Java [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) предоставляет возможность синхронизации содержимого папки Exchange. [syncFolder](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#syncFolder\(java.lang.String\)) метод, представленный [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) класс можно использовать для синхронизации информации о папках в указанной папке. В следующем фрагменте кода показано, как синхронизировать информацию о папках Exchange.
-
-
+API Aspose.Email for Java [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) предоставляет возможность синхронизации папки Exchange для ее содержания. Метод [syncFolder](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#syncFolder\(java.lang.String\)), предоставляемый классом [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient), может использоваться для выполнения синхронизации информации о папке в указанной папке. Следующий фрагмент кода показывает, как синхронизировать информацию о папке Exchange.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
-MailMessage message1 = new MailMessage("user@domain.com", "user@domain.com", "EMAILNET-34738 - " + UUID.randomUUID().toString(), "EMAILNET-34738 Sync Folder Items");
+MailMessage message1 = new MailMessage("user@domain.com", "user@domain.com", "EMAILNET-34738 - " + UUID.randomUUID().toString(), "EMAILNET-34738 Синхронизация элементов папки");
 client.send(message1);
 
-MailMessage message2 = new MailMessage("user@domain.com", "user@domain.com", "EMAILNET-34738 - " + UUID.randomUUID().toString(), "EMAILNET-34738 Sync Folder Items");
+MailMessage message2 = new MailMessage("user@domain.com", "user@domain.com", "EMAILNET-34738 - " + UUID.randomUUID().toString(), "EMAILNET-34738 Синхронизация элементов папки");
 client.send(message2);
 
 ExchangeMessageInfoCollection messageInfoCol = client.listMessages(client.getMailboxInfo().getInboxUri());
@@ -230,22 +216,20 @@ System.out.println(result.getReadFlagChanged().size());
 System.out.println(result.getDeletedItems().length);
 ~~~
 ## **Получение разрешений для папок Exchange**
-Пользователям назначаются разрешения на доступ к общедоступным папкам на сервере Exchange, что ограничивает или определяет уровень доступа пользователя к этим папкам. [ExchangeFolderPermission](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission) класс предоставляет набор свойств разрешений для папок Exchange, таких как [PermissionLevel](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission#getPermissionLevel\(\)), могут ли они [canCreateItems](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#canCreateItems\(\)), [deleteItems](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#setDeleteItems\(int\)), а также выполняйте другие задачи, указанные в свойствах разрешения. Разрешения можно получить с помощью [getFolderPermissions()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#getFolderPermissions\(java.lang.String\)) метод [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). В этой статье показано, как получить разрешения, примененные к общей папке, для всех пользователей, имеющих доступ к общим папкам.
+Пользователям назначаются разрешения на общие папки на Exchange Server, что ограничивает/определяет уровень доступа, который у них есть к этим папкам. Класс [ExchangeFolderPermission](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission) предоставляет набор свойств разрешений для папок Exchange, таких как [PermissionLevel](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeFolderPermission#getPermissionLevel\(\)), возможность [canCreateItems](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#canCreateItems\(\)), [deleteItems](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeBasePermission#setDeleteItems\(int\)), и выполнение других задач, как указано в свойствах разрешений. Разрешения могут быть извлечены с помощью метода [getFolderPermissions()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#getFolderPermissions\(java.lang.String\)) класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Эта статья показывает, как получить разрешения, примененные к общей папке для всех пользователей, имеющих доступ к общим папкам.
 
-Для выполнения этой задачи выполните следующие действия:
+Для выполнения этой задачи:
 
 1. Инициализируйте EWSClient.
-1. Используйте ListPublicFolders, чтобы получить список всех общедоступных папок
-1. Получите разрешения, связанные с папкой, с помощью метода getFolderPermissions ()
+1. Используйте listPublicFolders для получения списка всех общих папок.
+1. Извлеките разрешения, связанные с папкой, с помощью метода getFolderPermissions().
 
-В следующем фрагменте кода показано, как использовать [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс для получения разрешений, примененных к папке.
-
-
+Следующий фрагмент кода показывает, как использовать класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) для извлечения разрешений, примененных к папке.
 
 ~~~Java
 String folderName = "DesiredFolderName";
 
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, предоставив учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
 ExchangeFolderInfoCollection folders = client.listPublicFolders();
@@ -258,44 +242,42 @@ try {
             publicFolder = folderInfo;
 
     if (publicFolder == null)
-        System.out.println("public folder was not created in the root public folder");
+        System.out.println("общая папка не была создана в корневой общей папке");
 
     ExchangePermissionCollection folderPermissionCol = client.getFolderPermissions(publicFolder.getUri());
     for (ExchangeBasePermission perm : (Iterable<ExchangeBasePermission>) folderPermissionCol) {
         if (perm instanceof ExchangeFolderPermission)
-            System.out.println("Permission is null.");
+            System.out.println("Разрешение равно null.");
         else {
             ExchangeFolderPermission permission = (ExchangeFolderPermission) perm;
 
-            System.out.println("User's primary smtp address: " + permission.getUserInfo().getPrimarySmtpAddress());
-            System.out.println("User can create Items: " + permission.canCreateItems());
-            System.out.println("User can delete Items: " + permission.getDeleteItems());
-            System.out.println("Is Folder Visible: " + permission.isFolderVisible());
-            System.out.println("Is User owner of this folder: " + permission.isFolderOwner());
-            System.out.println("User can read items: " + permission.getReadItems());
+            System.out.println("Основной smtp-адрес пользователя: " + permission.getUserInfo().getPrimarySmtpAddress());
+            System.out.println("Пользователь может создавать элементы: " + permission.canCreateItems());
+            System.out.println("Пользователь может удалять элементы: " + permission.getDeleteItems());
+            System.out.println("Является ли папка видимой: " + permission.isFolderVisible());
+            System.out.println("Является ли пользователь владельцем этой папки: " + permission.isFolderOwner());
+            System.out.println("Пользователь может читать элементы: " + permission.getReadItems());
         }
     }
     ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
-    // Get the Permissions for the Contacts and Calendar Folder
+    // Получить разрешения для папок Контактов и Календаря
     ExchangePermissionCollection contactsPermissionCol = client.getFolderPermissions(mailboxInfo.getContactsUri());
     ExchangePermissionCollection calendarPermissionCol = client.getFolderPermissions(mailboxInfo.getCalendarUri());
 } finally {
-    // Do the needfull
+    // Выполнить необходимые действия
 }
 ~~~
 ## **Создание папок и подпапок**
-Aspose.Email API предоставляет возможность создавать папки в почтовом ящике Exchange. [CreateFolder](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createFolder\(java.lang.String\)) метод [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) можно использовать для этой цели. Чтобы создать папку в почтовом ящике сервера Exchange, можно выполнить следующие шаги.
+API Aspose.Email предоставляет возможность создавать папки в почтовом ящике Exchange. Метод [CreateFolder](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createFolder\(java.lang.String\)) класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) может быть использован для этой цели. Чтобы создать папку в почтовом ящике сервера Exchange, можно выполнить следующие шаги.
 
 1. Создайте экземпляр IEWSClient.
-1. Задайте свойство UseSlashasFolderSeparator необходимым образом. Если установлено значение **true**, приложение будет считать «косую черту» разделителем папок, а вложенная папка будет создана после косой черты.
-1. Используйте метод CreateFolder для создания папки.
+1. Установите свойство UseSlashAsFolderSeparator по мере необходимости. Если установить в **true**, приложение будет считать "Слеш" разделителем папок, и подпапка будет создана после слеша.
+1. Используйте метод createFolder для создания папки.
 
-В следующем фрагменте кода показано, как создавать папки и подпапки.
-
-
+Следующий фрагмент кода показывает, как создать папки и подпапки.
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, предоставив учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
 String inbox = client.getMailboxInfo().getInboxUri();
@@ -325,19 +307,17 @@ try {
 }
 ~~~
 ## **Резервное копирование папок Exchange в PST**
-Часто бывает так, что пользователи могут захотеть сделать резервную копию всех или некоторых папок почтового ящика. Aspose.Email предоставляет возможность сделать резервную копию всех или указанных папок почтовых ящиков Exchange в PST. В этой статье описывается резервное копирование папок Exchange в PST с образцом кода. Чтобы создать резервную копию папок сервера Exchange, можно выполнить следующие шаги.
+Часто пользователи могут захотеть сделать резервную копию всех или некоторых папок почтового ящика. Aspose.Email предоставляет возможность создать резервную копию всех или определенных папок почтового ящика Exchange в PST. Эта статья описывает, как сделать резервную копию папок Exchange в PST с примером кода. Чтобы сделать резервную копию папок сервера Exchange, можно выполнить следующие шаги.
 
-1. Запустите IEWSClient с учетными данными пользователя
-1. Добавьте информацию о нужной папке в коллекцию ExchangeFolderInfoCollection
-1. Для экспорта содержимого папки в PST используйте метод резервного копирования клиента
+1. Инициализируйте IEWSClient с учетными данными пользователя.
+1. Добавьте необходимую информацию о папке в ExchangeFolderInfoCollection.
+1. Используйте метод резервного копирования клиента для экспорта содержимого папки в PST.
 
-В следующем фрагменте кода показано, как создавать резервные копии папок Exchange в PST.
-
-
+Следующий фрагмент кода показывает, как сделать резервное копирование папок Exchange в PST.
 
 ~~~Java
 String dataDir = "data/";
-// Create instance of IEWSClient class by providing credentials
+// Создать экземпляр класса IEWSClient, предоставив учетные данные
 final String mailboxUri = "https://ews.domain.com/ews/Exchange.asmx";
 final String domain = "";
 final String username = "username";
@@ -345,7 +325,7 @@ final String password = "password";
 NetworkCredential credential = new NetworkCredential(username, password, domain);
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credential);
 
-// Get Exchange mailbox info of other email account
+// Получить информацию о почтовом ящике Exchange другого почтового аккаунта
 ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
 ExchangeFolderInfo info = client.getFolderInfo(mailboxInfo.getInboxUri());
 ExchangeFolderInfoCollection fc = new ExchangeFolderInfoCollection();

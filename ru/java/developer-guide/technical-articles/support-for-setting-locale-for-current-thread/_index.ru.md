@@ -1,13 +1,11 @@
 ---
-title: "Поддержка настройки локали для текущего потока"
+title: "Поддержка установки Locale для текущего потока"
 url: /ru/java/support-for-setting-locale-for-current-thread/
 weight: 50
 type: docs
 ---
 
-Aspose.Email предоставляет возможность установить локаль для текущего потока. Aspose.Email предоставляет класс [CurrentThreadSettings](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) который обеспечивает [setLocale](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.util.Locale\)) метод для этой цели. Следующий фрагмент кода демонстрирует использование [CurrentThreadSettings](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) класс для установки текущей локали. Во фрагменте кода сначала задается неверное значение Locale, а затем используется [CurrentThreadSettings.setLocale](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.lang.String\)) метод установки локали для текущего потока.
-
-
+Aspose.Email предоставляет возможность установить Locale для текущего потока. Aspose.Email предоставляет класс [CurrentThreadSettings](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings), который предоставляет метод [setLocale](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.util.Locale\)) для этой цели. Следующий фрагмент кода демонстрирует использование класса [CurrentThreadSettings](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings) для установки текущего Locale. Сначала фрагмент устанавливает Locale на недопустимое значение, а затем использует метод [CurrentThreadSettings.setLocale](https://apireference.aspose.com/java/email/com.aspose.email/CurrentThreadSettings#setLocale\(java.lang.String\)) для установки Locale для текущего потока.
 
 ~~~Java
 Locale defaultLocale = Locale.getDefault();

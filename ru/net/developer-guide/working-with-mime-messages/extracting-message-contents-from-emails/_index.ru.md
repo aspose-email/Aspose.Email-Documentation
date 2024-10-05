@@ -1,21 +1,21 @@
 ---
-title: "Извлечение содержимого сообщений из электронных писем"
+title: "Извлечение содержимого сообщений из электронной почты"
 url: /ru/net/extracting-message-contents-from-emails/
 weight: 30
 type: docs
 ---
 
-# Извлечение содержимого сообщений из электронных писем
+# Извлечение содержимого сообщений из электронной почты
 
-## **Отображение информации об электронной почте на экране**
+## **Отображение информации о электронной почте на экране**
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) представляет собой сообщение электронной почты и предоставляет разработчикам доступ к свойствам сообщения электронной почты. Информация в заголовке (обсуждается в [Извлечение заголовков электронной почты](https://docs.aspose.com/email/ru/net/extracting-message-contents-from-emails/#extracting-email-headers)) можно извлекать и манипулировать им по-разному. В этой статье объясняется, как отображать выбранную информацию в заголовке электронного письма и текст письма на экране. Чтобы отобразить информацию об электронной почте на экране, выполните следующие действия:
+[MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) представляет собой электронное сообщение и позволяет разработчикам получать доступ к свойствам электронных сообщений. Заголовочная информация (обсуждаемая в [Извлечение заголовков электронной почты](https://docs.aspose.com/email/ru/net/extracting-message-contents-from-emails/#extracting-email-headers)) может быть извлечена и обработана различными способами. В этой статье объясняется, как отобразить выбранную информацию о заголовках электронной почты и теле сообщения на экране. Чтобы отобразить информацию о электронной почте на экране, выполните следующие шаги:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Загрузите сообщение электронной почты в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Загрузите электронное сообщение в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 - Отобразите содержимое электронной почты на экране.
 
-В следующем фрагменте кода показано, как отображать информацию об электронной почте на экране.
+Следующий фрагмент кода показывает, как отобразить информацию о электронной почте на экране.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -40,19 +40,19 @@ Console.WriteLine(message.Body);
 
 ## **Извлечение заголовков электронной почты**
 
-Заголовок электронного письма представляет собой стандартный набор полей заголовков, определенных в Интернете и RFC, включенных в сообщения электронной почты Интернета. Заголовок электронного письма можно указать с помощью [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. Общие типы заголовков определены в поле [HeaderType](https://reference.aspose.com/email/net/aspose.email/headertype/) класс. Это закрытый класс, работающий как обычное перечисление. Чтобы извлечь заголовки из электронного письма, выполните следующие действия:
+Заголовок электронной почты представляет собой стандартный набор полей заголовков, определенный в Internet и RFC, который включается в сообщения электронной почты. Заголовок электронной почты можно указать с помощью класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Общие типы заголовков определены в классе [HeaderType](https://reference.aspose.com/email/net/aspose.email/headertype/). Это закрытый класс, который работает как обычная перечисляемая переменная. Чтобы извлечь заголовки из электронной почты, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Загрузите сообщение электронной почты в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. После загрузки сообщения электронной почты мы получим его необработанное содержимое.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Загрузите электронное сообщение в экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+3. После загрузки электронного сообщения мы получим его сырой контент.
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) Сам класс содержит такие свойства, как From, To, Cc, Subject и т. д. Эти свойства можно извлечь из заголовков.
+Сам класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) содержит такие свойства, как From, To, Cc, Subject и так далее. Эти свойства можно извлечь из заголовков.
 
-В следующем фрагменте кода показано, как извлекать заголовки электронных писем.
+Следующий фрагмент кода показывает, как извлечь заголовки электронной почты.
 
-## **Получите декодированные значения заголовков**
+## **Получение декодированных значений заголовка**
 
-В следующем фрагменте кода показано, как получить декодированные значения заголовков.
+Следующий фрагмент кода показывает, как получить декодированные значения заголовка.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -61,21 +61,21 @@ string decodedValue = mailMessage.Headers.GetDecodedValue("Thread-Topic");
 Console.WriteLine(decodedValue);
 ```
 
-## **Получите текст в виде обычного текста**
+## **Получение текста тела сообщения**
 
-The [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) свойство возвращает текстовое представление тела сообщения.
+Свойство [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) возвращает текстовое представление тела сообщения.
 
 ```csharp
 string plainTextBody = mailMessage.Body;
 ```
 
-Примечание. Если в сообщении присутствует текстовая/обычная часть MIME, свойство возвращает текстовые данные. В противном случае оно возвращает текстовое содержимое, отделенное от [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) свойство без html-разметки.
+Примечание: Если в сообщении присутствует часть текста/plain MIME, свойство возвращает его текстовые данные. В противном случае оно возвращает отделенный текстовый контент из свойства [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) без HTML-разметки.
 
-## **Получить текст HTML в виде обычного текста**
+## **Получение HTML-тела как простого текста**
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс предоставляет возможность извлечения HTML-тела сообщения в виде обычного текста. [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс предоставляет [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) метод, который возвращает тело HTML в виде обычного текста. Этот метод анализирует [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) свойство и возвращает разделенное текстовое содержимое, игнорируя разметку html. [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) метод принимает логический параметр, указывающий, должно ли тело содержать URL-адреса или нет. Передача параметру значения true означает, что тело HTML должно содержать URL-адреса.
+Класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) предоставляет возможность извлечь HTML-тело сообщения как простой текст. Класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) предоставляет метод [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext), который возвращает HTML-тело в виде простого текста. Этот метод разбирает свойство [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) и возвращает отделенный контент простого текста, игнорируя HTML-разметку. Метод [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) принимает логический параметр, который указывает, должно ли тело содержать URL или нет. Передача параметра как true указывает, что HTML-тело должно содержать URL.
 
-Следующий фрагмент кода демонстрирует использование [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) метод извлечения HTML-тела электронного письма в виде обычного текста.
+Следующий фрагмент кода демонстрирует использование метода [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) для извлечения HTML-тела электронной почты как простого текста.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

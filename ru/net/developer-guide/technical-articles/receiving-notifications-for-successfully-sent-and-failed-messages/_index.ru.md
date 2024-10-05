@@ -1,12 +1,12 @@
 ---
-title: "Получение уведомлений об успешно отправленных и неудачных сообщениях"
+title: "Получение уведомлений о успешно отправленных и неудачных сообщениях"
 url: /ru/net/receiving-notifications-for-successfully-sent-and-failed-messages/
 weight: 90
 type: docs
 ---
 
 
-Если вы хотите получить уведомление о доставке как успешно отправленных, так и ошибочных сообщений, вы можете использовать оператор pipe (|) для [DeliveryNotificationOptions](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/deliverynotificationoptions) собственность [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) класс. В следующем фрагменте кода показано, как получать уведомления об успешно отправленных и неудачных сообщениях.
+Когда вы хотите получить уведомление о доставке как для успешно отправленных, так и для неудачных сообщений, вы можете использовать оператор | для свойства [DeliveryNotificationOptions](https://apireference.aspose.com/email/net/aspose.email/mailmessage/properties/deliverynotificationoptions) класса [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage). Следующий фрагмент кода показывает, как получать уведомления о успешно отправленных и неудачных сообщениях.
 
 
 

@@ -1,13 +1,12 @@
 ---
-title: "Создайте повторяющуюся задачу"
+title: "Создание периодической задачи"
 url: /ru/net/create-a-recurring-task/
 weight: 30
 type: docs
 ---
 
-
 ## **VSTO**
-Ниже приведен фрагмент кода, показывающий повторение задачи в зависимости от даты:
+Ниже приведен фрагмент кода, показывающий создание периодической задачи на основе даты:
 
 ``` cs
 
@@ -15,7 +14,7 @@ type: docs
 
     Outlook.OlItemType.olTaskItem) as Outlook.TaskItem;
 
-    task.Subject = "Tax Preparation";
+    task.Subject = "Подготовка налогов";
 
     task.StartDate = DateTime.Parse("4/1/2007 8:00 AM");
 
@@ -38,13 +37,13 @@ type: docs
 
 ```
 ## **Aspose.Email**
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email для .NET позволяет создавать задачи Outlook и сохранять их в формате MSG. [MapiTask](https://apireference.aspose.com/email/net/aspose.email.mapi/mapitask) класс предоставляет ряд свойств, таких как Percentcomplete, Estimatedefort, ActualEffort, History, LastUpdate и другие, для размещения и настройки информации, необходимой для задачи Outlook. В этой статье показано, как создать, сохранить и прочитать MapiTask с диска.
+Aspose.Email для .NET позволяет создавать задачи Outlook и сохранять их в формате MSG. Класс [MapiTask](https://apireference.aspose.com/email/net/aspose.email.mapi/mapitask) предоставляет ряд свойств, таких как Percentcomplete, Estimatedeffort, ActualEffort, History, LastUpdate и других, для соответствия и установки информации, необходимой для задачи Outlook. Эта статья показывает, как создать, сохранить и прочитать MapiTask с диска.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Aspose.Email позволяет создавать повторяющиеся задачи, повторяющиеся ежедневно, еженедельно, ежемесячно или ежегодно. Следующий пример кода иллюстрирует создание задачи с еженедельным повторением.
+Aspose.Email позволяет создавать периодическую задачу, где повторение может быть ежедневным, еженедельным, ежемесячным или ежегодным. Следующий пример кода иллюстрирует создание задачи с еженедельным повторением.
 
 ``` cs
 
@@ -54,7 +53,7 @@ Aspose.Email позволяет создавать повторяющиеся з
 
   task.State = MapiTaskState.NotAssigned;
 
-  // Set the weekly recurrence
+  // Установить еженедельное повторение
 
   var rec = new MapiCalendarDailyRecurrencePattern
 
@@ -78,11 +77,11 @@ Aspose.Email позволяет создавать повторяющиеся з
 
 
 ```
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Загрузить рабочий код**
+## **Скачать рабочий код**
 - [Codeplex](https://archive.codeplex.com/?p=asposevsto#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20a%20Recurring%20Task)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

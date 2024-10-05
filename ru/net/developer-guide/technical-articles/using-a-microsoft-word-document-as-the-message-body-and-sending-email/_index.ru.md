@@ -1,34 +1,33 @@
 ---
-title: "Использование документа Microsoft Word в качестве текста сообщения и отправка электронной почты"
+title: "Использование документа Microsoft Word в качестве тела сообщения и отправка электронной почты"
 url: /ru/net/using-a-microsoft-word-document-as-the-message-body-and-sending-email/
 weight: 140
 type: docs
 ---
 
+Эта статья показывает, как использовать документ Microsoft Word в качестве тела электронной почты и отправить его получателям. Пример документа представляет собой счет-фактуру из базы данных Northwind, экспортированную в формат Microsoft Word. Aspose.Email для .NET обрабатывает сетевые протоколы и функции Microsoft Outlook, но не может работать с документами Microsoft Word. Чтобы обойти это, в примерах этой статьи используется [Aspose.Words для .NET](https://products.aspose.com/words/net/) для загрузки документа Word и конвертации его в формат MHTML. Aspose.Email для .NET использует документ MHTML в теле электронной почты.
+## **Использование документов Microsoft Word в качестве тела электронной почты**
+Программные примеры ниже иллюстрируют, как отправить документ Word в качестве тела электронной почты, используя Aspose.Words для .NET и Aspose.Email для .NET:
 
-В этой статье показано, как использовать документ Microsoft Word в качестве текста письма и отправлять его получателям. Образец документа представляет собой товарный счет из образца базы данных Northwind, экспортированный в формат Microsoft Word. Aspose.Email for .NET занимается сетевыми протоколами и функциями Microsoft Outlook и не может обрабатывать документы Microsoft Word. Чтобы преодолеть эту проблему, в примерах в этой статье используются [Aspose.Слова для .NET](https://products.aspose.com/words/net/) чтобы загрузить документ Word и преобразовать его в формат MHTML. Aspose.Email для .NET использует документ MHTML в теле письма.
-## **Использование документов Microsoft Word в качестве текста письма**
-В приведенных ниже примерах программирования показано, как отправить документ Word в виде тела электронного письма с помощью Aspose.Words для .NET и Aspose.Email для .NET:
-
-1. Загрузите документ Microsoft Word, используя Aspose.Word для файлов.NET [Document](https://apireference.aspose.com/words/net/aspose.words/document) class.
+1. Загрузите документ Microsoft Word с использованием класса [Document](https://apireference.aspose.com/words/net/aspose.words/document) из Aspose.Words для .NET.
 1. Сохраните его в формате MHTML.
-1. Загрузите документ MHTML с помощью Aspose.Email для файлов.NET [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) класс для установки тела письма.
-1. Задайте другие свойства сообщения, используя разные [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) свойства и методы класса.
-1. Отправьте электронное письмо с помощью Aspose.Email для .NET [SMTPClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) class.
+1. Загрузите документ MHTML с использованием класса [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage) из Aspose.Email для .NET, чтобы установить тело электронной почты.
+1. Установите другие свойства сообщения, используя различные свойства и методы класса [MailMessage](https://apireference.aspose.com/email/net/aspose.email/mailmessage).
+1. Отправьте электронное письмо, используя класс [SMTPClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) из Aspose.Email для .NET.
 
-Исходный документ, счет-фактура продажи, экспортированный в Microsoft Word из образца Microsoft Northwind, можно увидеть ниже.
+Исходный документ, счет-фактура, экспортированный в Microsoft Word из примера Microsoft Northwind, представлен ниже.
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_1.png)
 
-Когда сообщение отправлено и получено в Microsoft Outlook, оно выглядит так, как показано ниже.
+Когда сообщение было отправлено и получено в Microsoft Outlook, оно выглядит как сообщение ниже.
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_2.png)
 
-При просмотре в Outlook или веб-почтовом клиенте, таком как Gmail или Hotmail, форматирование и изображения в формате HTML сохраняются в том же виде, в каком они были в исходном документе. Ниже приведен скриншот сообщения, открываемого в Gmail в браузере Chrome.
+HTML-форматирование и изображения сохраняются, как в оригинальном исходном документе, при просмотре в Outlook или в веб-клиенте электронной почты, таком как Gmail или Hotmail. Ниже представлено скриншот сообщения при открытии с помощью Gmail в браузере Chrome.
 
 ![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_3.png)
 
-В следующем фрагменте кода показано, как использовать документ Microsoft Word в качестве текста сообщения и отправить электронное письмо с помощью [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient) экземпляр класса.
+Следующий фрагмент кода показывает, как использовать документ Microsoft Word в качестве тела сообщения и отправить электронное письмо, используя экземпляр класса [SmtpClient](https://apireference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient).
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -42,7 +41,7 @@ wordDocument.Save(mhtmlStream, SaveFormat.Mhtml);
 mhtmlStream.Position = 0;
 using (MailMessage message = MailMessage.Load(mhtmlStream, new MhtmlLoadOptions()))
 {
-    message.Subject = "Sending Invoice by Email";
+    message.Subject = "Отправка счета по электронной почте";
     message.From = "sender@gmail.com";
     message.To = "recipient@gmail.com";
 

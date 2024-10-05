@@ -5,22 +5,19 @@ weight: 100
 type: docs
 ---
 
-
 ## **Добавление сообщений в файлы PST**
-В статье «Создание нового файла PST и добавление подпапок» показано, как создать файл PST и добавить к нему подпапку. С помощью Aspose.Email вы можете добавлять сообщения в подпапки созданного или загруженного файла PST. В этой статье два сообщения с диска добавляются во вложенную папку «Входящие» PST. Используйте классы PersonalStorage и FolderInfo для добавления сообщений в файлы PST. Чтобы добавить сообщения в папку «Входящие» файла PST, выполните следующие действия:
+Создание нового файла PST и добавление подпапок показало, как создать файл PST и добавить подкаталог к нему. С помощью Aspose.Email вы можете добавлять сообщения в подпапки файла PST, который вы создали или загрузили. В этой статье добавляются два сообщения с диска в подпапку "Входящие" файла PST. Используйте классы PersonalStorage и FolderInfo, чтобы добавлять сообщения в файлы PST. Чтобы добавить сообщения в папку "Входящие" файла PST:
 
-1. Создайте экземпляр класса FolderInfo и загрузите в него содержимое папки «Входящие».
-1. Добавьте сообщения с диска в папку «Входящие», вызвав метод folderInfo.add_Message (). Класс FolderInfo предоставляет метод add_messages, который позволяет добавлять большое количество сообщений в папку, сокращая количество операций ввода-вывода на диск и повышая производительность. Полный пример можно найти ниже в разделе Добавление массовых сообщений.
+1. Создайте экземпляр класса FolderInfo и загрузите его содержимое из папки "Входящие".
+1. Добавьте сообщения с диска в папку "Входящие", вызвав метод FolderInfo.add_message(). Класс FolderInfo предоставляет метод add_messages, который позволяет добавлять большое количество сообщений в папку, уменьшая операции ввода-вывода на диск и улучшая производительность. Полный пример можно найти ниже, в разделе Добавление массовых сообщений.
 
-В приведенных ниже фрагментах кода показано, как добавлять сообщения в подпапку PST под названием «Входящие».
-
-
+Приведенные ниже фрагменты кода показывают, как добавить сообщения в подпапку PST с названием "Входящие".
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddMessagesToPSTFiles-AddMessagesToPSTFiles.py" >}}
 ### **Добавление массовых сообщений**
-Добавление отдельных сообщений в PST подразумевает большее количество операций ввода-вывода на диск и, следовательно, может снизить производительность. Для повышения производительности сообщения можно добавлять в PST в массовом режиме, чтобы минимизировать операции ввода-вывода. Метод add_messages позволяет определить диапазон сообщений, добавляемых в PST для повышения производительности, и может использоваться в следующих сценариях.
+Добавление отдельных сообщений в PST подразумевает больше операций ввода-вывода на диск и, следовательно, может замедлить производительность. Для повышения производительности сообщения могут добавляться в PST в пакетном режиме, чтобы минимизировать операции ввода-вывода. Метод add_messages позволяет определить диапазон сообщений, добавляемых в PST для улучшения производительности, и может использоваться в следующих сценариях.
 ### **Загрузка сообщений с диска**
-В следующем фрагменте кода показано, как загружать сообщения с диска.
+Следующий фрагмент кода показывает, как загружать сообщения с диска.
 
 ```py
 from aspose.email.storage.pst import PersonalStorage, StandardIpmFolder, FileFormatVersion
@@ -31,11 +28,11 @@ def add_messages_in_bulk_mode(file_name, msg_folder_name):
         folder = personal_storage.root_folder.get_sub_folder("myInbox")
         folder.add_messages(message_collection(msg_folder_name))
 
-# Usage
+# Использование
 add_messages_in_bulk_mode("file.pst", "folder_with_messages")
 ```
-### **Внедрение коллекции сообщений MAPI**
-В следующем фрагменте кода показано, как реализовать MAPImessageCollection.
+### **Реализация MapiMessageCollection**
+Следующий фрагмент кода показывает, как реализовать MapiMessageCollection.
 
 ```py
 import os
@@ -66,29 +63,25 @@ class MapiMessageCollection:
         return MapiMessageEnumerator(self.path)
 
 
-# Usage
+# Использование
 msg_folder_name = "\\Files\\msg"
 
 message_collection = MapiMessageCollection(msg_folder_name)
 for message in message_collection:
-    # Do something with each MapiMessage
+    # Сделать что-то с каждым MapiMessage
     pass
 ```
-### **Добавление сообщений из других PST**
-Для добавления сообщений из другого PST используйте метод folderInfo.enumerate_MAPI_Messages (). В следующем фрагменте кода показано, как добавлять сообщения из других PST.
-
-
+### **Добавление сообщений из другого PST**
+Для добавления сообщений из другого PST используйте метод FolderInfo.enumerate_mapi_messages(). Следующий фрагмент кода показывает, как добавить сообщения из других PST.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddMessagesFromOtherPST-AddMessagesFromOtherPST.py" >}}
 ## **Получение информации о сообщениях из файла Outlook PST**
-В разделах «Чтение PST-файла Outlook» и «Получение сведений о папках и подпапках» мы рассмотрели загрузку файла Outlook PST и просмотр его папок для получения имен папок и количества сообщений в них. В этой статье описывается, как читать все папки и подпапки в файле PST и отображать информацию о сообщениях, например тему, отправителя и получателя. Файл Outlook PST может содержать вложенные папки. Чтобы получить информацию о сообщениях из этих папок, а также из папок верхнего уровня, используйте рекурсивный метод чтения всех папок. В следующем фрагменте кода показано, как читать PST-файл Outlook и рекурсивно отображать содержимое папки и сообщения.
-
-
+В разделе Чтение файла PST Outlook и получение информации о папках и подпапках мы обсудили загрузку файла PST Outlook и просмотр его папок для получения имен папок и количества сообщений в них. Эта статья объясняет, как прочитать все папки и подпапки в файле PST и отобразить информацию о сообщениях, например, тему, отправителя и получателей. Файл PST Outlook может содержать вложенные папки. Чтобы получить информацию о сообщениях из них, а также из папок верхнего уровня, используйте рекурсивный метод для чтения всех папок. Следующий фрагмент кода показывает, как читать файл PST Outlook и рекурсивно отображать содержимое папки и сообщений.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-GetMessagesInformation-GetMessagesInformation.py" >}}
 ## **Извлечение сообщений из файлов PST**
 
-В этой статье показано, как читать файлы Microsoft Outlook PST и извлекать сообщения. Ниже приведен фрагмент кода, показывающий, как извлекать сообщения из файла PST.
+Эта статья показывает, как читать файлы PST Microsoft Outlook и извлекать сообщения. Ниже приведен фрагмент кода, показывающий, как извлечь сообщения из файла PST.
 
 ```python
 from aspose.email.storage.pst import *
@@ -103,23 +96,23 @@ messageInfoCollection = folderInfo.get_contents()
 for messageInfo in messageInfoCollection:
    mapi = pst.extract_message(messageInfo)
 
-   print("Subject: " + mapi.subject)
-   print("Sender name: " + mapi.sender_name)
-   print("Sender email address: " + mapi.sender_email_address)
-   print("To: ", mapi.display_to)
-   print("Cc: ", mapi.display_cc)
-   print("Bcc: ", mapi.display_bcc)
-   print("Delivery time: ", str(mapi.delivery_time))
-   print("Body: " + mapi.body)
+   print("Тема: " + mapi.subject)
+   print("Имя отправителя: " + mapi.sender_name)
+   print("Электронная почта отправителя: " + mapi.sender_email_address)
+   print("Кому: ", mapi.display_to)
+   print("Копия: ", mapi.display_cc)
+   print("Скрытая копия: ", mapi.display_bcc)
+   print("Время доставки: ", str(mapi.delivery_time))
+   print("Тело: " + mapi.body)
 ```
-### **Извлечение n количества сообщений из PST-файла**
+### **Извлечение n количества сообщений из файла PST**
 
-Чтобы извлечь определенное количество сообщений из файла PST, используйте *get_contents (начальный индекс, количество)* метод [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) класс. Он принимает два параметра:
+Чтобы извлечь определенное количество сообщений из файла PST, используйте метод *get_contents(start_index, count)* класса [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class). Он принимает два параметра:
 
-- **start_index** - номер начального сообщения, например 10-е;
-- **count** - общее количество сообщений, которые нужно получить.
+- **start_index** - номер стартового сообщения, например, 10-е;
+- **count** - общее количество сообщений для извлечения.
 
-Одновременное получение только необходимого подмножества сообщений может быть полезно для управления большими объемами данных электронной почты. Следующий пример кода демонстрирует реализацию этой функции:
+Извлечение только необходимого подмножества сообщений за один раз может быть полезным для управления большими объемами данных электронной почты. Следующий пример кода демонстрирует реализацию этой функции:
 
 ```python
 import aspose.email as ae
@@ -128,12 +121,12 @@ pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 
 folder = pst.root_folder.get_sub_folder("Inbox")
 
-# Extracts messages starting from 10th index top and extract total 100 messages
+# Извлекает сообщения, начиная с 10 индекса и извлекает всего 100 сообщений
 messages = folder.get_contents(10, 100)
 ```
 ### **Получение общего количества элементов из файла PST**
 
-Чтобы получить общее количество элементов (таких как электронные письма, встречи, задачи, контакты и т. д.), присутствующих в хранилище сообщений, используйте *get_total_items_count()* метод [MessageStore](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/messagestore/#messagestore-class) класс. Он предоставляет удобный способ быстрого сбора информации о размере и объеме данных в хранилище. В следующем фрагменте кода показано, как получить общее количество элементов из файла PST:
+Чтобы получить общее количество элементов (таких как электронные письма, встречи, задачи, контакты и т. д.), присутствующих в хранилище сообщений, используйте метод *get_total_items_count()* класса [MessageStore](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/messagestore/#messagestore-class). Он предоставляет удобный способ быстро собирать информацию о размере и объеме данных внутри хранилища. Следующий фрагмент кода показывает, как получить общее количество элементов из файла PST:
 
 ```python
 import aspose.email as ae
@@ -143,21 +136,19 @@ pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 count = pst.store.get_total_items_count()
 ```
 
-## **Удалить сообщения из файлов PST**
-В статье «Добавить сообщения в файлы PST» показано, как добавлять сообщения в файлы PST. Конечно, также можно удалять элементы (содержимое) из файла PST, и может быть желательно удалять сообщения массово. Элементы из файла PST можно удалить с помощью метода folderInfo.delete_child_Item (). API также предоставляет метод folderInfo.delete_child_items () для массового удаления элементов из файла PST.
-### **Удаление сообщений из PST-файлов**
-В этой статье показано, как использовать класс FolderInfo для доступа к определенным папкам в файле PST. Чтобы удалить сообщения из подпапки «Отправленные» ранее загруженного или созданного файла PST, выполните следующие действия:
+## **Удаление сообщений из файлов PST**
+Добавление сообщений в файлы PST показало, как добавлять сообщения в файлы PST. Конечно, также возможно удалить элементы (содержимое) из файла PST, и может быть желательно удалить сообщения оптом. Элементы из файла PST можно удалить с помощью метода FolderInfo.delete_child_item(). API также предоставляет метод FolderInfo.delete_child_items() для удаления элементов оптом из файла PST.
+### **Удаление сообщений из файлов PST**
+Эта статья показывает, как использовать класс FolderInfo для доступа к конкретным папкам в файле PST. Чтобы удалить сообщения из подпапки "Отправленные" ранее загруженного или созданного файла PST:
 
-1. Создайте экземпляр класса FolderInfo и загрузите в него содержимое отправленной вложенной папки.
-1. Удалите сообщения из папки «Отправленные», вызвав метод folderInfo.delete_child_Item () и передав в качестве параметра MessageInfo.entry_ID. В следующем фрагменте кода показано, как удалять сообщения из подпапки Sent файла PST.
-
-
+1. Создайте экземпляр класса FolderInfo и загрузите его содержимое из подпапки "Отправленные".
+1. Удалите сообщения из папки "Отправленные", вызвав метод FolderInfo.delete_child_item() и передав в качестве параметра MessageInfo.entry_id. Следующий фрагмент кода показывает, как удалить сообщения из подпапки "Отправленные" файла PST.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-DeleteMessagesFromPSTFile-DeleteMessagesFromPSTFile.py" >}}
 
 ### **Удаление папок из файлов PST**
 
-Папку PST можно удалить, переместив ее в папку «Удаленные».
+Вы можете удалить папку PST, переместив ее в папку "Удаленные элементы".
 
 ```python
 import aspose.email as ae
@@ -165,34 +156,31 @@ import aspose.email as ae
 pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 
 deleted_items_folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.DELETED_ITEMS)
-empty_folder = pst.root_folder.get_sub_folder("Empty folder")
-some_folder = pst.root_folder.get_sub_folder("Some folder")
+empty_folder = pst.root_folder.get_sub_folder("Пустая папка")
+some_folder = pst.root_folder.get_sub_folder("Некоторая папка")
 pst.move_item(empty_folder, deleted_items_folder)
 pst.move_item(some_folder, deleted_items_folder)
 ```
-Преимущество этого метода в том, что удаленную папку можно легко восстановить.
-
+Преимущество этого метода заключается в том, что удаленная папка может быть легко восстановлена.
 
 ```python
-some_folder = pst.root_folder.get_sub_folder("Some folder")
+some_folder = pst.root_folder.get_sub_folder("Некоторая папка")
 pst.move_item(some_folder, pst.root_folder)
 ```
-При необходимости можно также навсегда удалить папку из папки «Удаленные».
-
+Вы также можете навсегда удалить папку из папки "Удаленные элементы", если это необходимо.
 
 ```python
 deleted_items_folder.delete_child_item(empty_folder.entry_id)
 ```
-The *delete_child_item* метод можно использовать для любых папок, если вы хотите немедленно и навсегда удалить подпапку, минуя папку «Удаленные элементы».
-
+Метод *delete_child_item* можно использовать для любых папок, если вы хотите немедленно и навсегда удалить подпапку, обходя папку "Удаленные элементы".
 
 ```python
-some_folder = pst.root_folder.get_sub_folder("Some folder")
+some_folder = pst.root_folder.get_sub_folder("Некоторая папка")
 pst.root_folder.delete_child_item(some_folder.entry_id)
 ```
-### **Удалить элементы из PST**
+### **Удаление элементов из PST**
 
-Во многих системах обмена сообщениями или почтовых клиентах каждому элементу (например, электронному письму, встрече или заданию) присваивается уникальный идентификатор, называемый идентификатором записи. *delete_item(entry_id)* метод [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) класс принимает этот идентификатор записи в качестве параметра и удаляет соответствующий элемент из хранилища сообщений. Используйте следующий код для удаления элемента из хранилища сообщений:
+Во многих системах обмена сообщениями или почтовых клиентах каждому элементу (например, электронному письму, встрече или задаче) присваивается уникальный идентификатор, называемый идентификатором записи. Метод *delete_item(entry_id)* класса [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) принимает этот идентификатор записи в качестве параметра и удаляет соответствующий элемент из хранилища сообщений. Используйте следующий код для удаления элемента из хранилища сообщений:
 
 ```python
 import aspose.email as ae
@@ -206,24 +194,22 @@ pst.delete_item(entry_id)
 # ...
 ```
 
-### **Массовое удаление элементов из файла PST**
-Aspose.Email API можно использовать для массового удаления элементов из файла PST. Это достигается с помощью метода delete_child_items (), который принимает список элементов Entry ID, относящихся к удаляемым элементам. В следующем фрагменте кода показано, как массово удалять элементы из файла PST.
-
-
+### **Удаление элементов оптом из файла PST**
+API Aspose.Email может использоваться для удаления элементов оптом из файла PST. Это достигается с помощью метода delete_child_items(), который принимает список идентификаторов записи, относящихся к элементам, которые необходимо удалить. Следующий фрагмент кода показывает, как удалять элементы оптом из файла PST.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-DeleteBulkItemsFromPst-DeleteBulkItemsFromPst.py" >}}
-## **Поиск сообщений и папок в PST по критерию**
-Файлы персонального хранилища (PST) могут содержать огромное количество данных, и для поиска данных, соответствующих определенным критериям, в таких больших файлах необходимо включить в код несколько контрольных точек для фильтрации информации. Благодаря классу PersonalStorageQueryBuilder программа Aspose.Email позволяет искать определенные записи в PST на основе заданных критериев поиска. В PST можно искать сообщения на основе таких параметров поиска, как отправитель, получатель, тема, важность сообщения, наличие вложений, размер сообщения и даже идентификатор сообщения. PersonalStorageQueryBuilder также можно использовать для поиска подпапок.
+## **Поиск сообщений и папок в PST по критериям**
+Файлы личного хранилища (PST) могут содержать огромное количество данных, и поиск данных, которые соответствуют определенному критерию в таких крупных файлах, требует включения множества контрольных точек в код для фильтрации информации. С помощью класса PersonalStorageQueryBuilder Aspose.Email делает возможным поиск конкретных записей в PST на основе заданного критерия поиска. PST можно искать по сообщениям на основе такие параметры поиска, как отправитель, получатель, тема, важность сообщения, наличие вложений, размер сообщения и даже идентификатор сообщения. Класс PersonalStorageQueryBuilder также может использоваться для поиска подпапок.
 ### **Поиск сообщений и папок в PST**
-В следующем фрагменте кода показано, как использовать класс PersonalStorageQueryBuilder для поиска содержимого в PST на основе различных критериев поиска. Например, показан поиск в PST на основе:
+Следующий фрагмент кода показывает, как использовать класс PersonalStorageQueryBuilder для поиска содержимого в PST на основе различных критериев поиска. Например, он показывает поиск PST на основе:
 
-- Важность сообщения.
-- Класс сообщений.
-- Наличие вложений.
+- Важности сообщения.
+- Класса сообщения.
+- Наличия вложений.
 - Размер сообщения.
-- Непрочитанные сообщения.
-- Непрочитанные сообщения с вложениями и
-- папки с определенным именем подпапки.
+- Непрочитанных сообщений.
+- Непрочитанных сообщений с вложениями, и
+- папок с конкретным названием подпапки.
 
 ```py
 from aspose.email.mapi import MapiMessageFlags
@@ -233,76 +219,74 @@ with PersonalStorage.from_file(data_dir + "my.pst") as personal_storage:
     folder = personal_storage.root_folder.get_sub_folder("Inbox")
     builder = PersonalStorageQueryBuilder()
 
-    # High importance messages
+    # Сообщения с высокой важностью
     builder.importance.equals(2)
     messages = folder.get_contents(builder.get_query())
-    print("Messages with High Imp:", messages.count)
+    print("Сообщения с высокой важностью:", messages.count)
 
     builder = PersonalStorageQueryBuilder()
     builder.message_class.equals("IPM.Note")
     messages = folder.get_contents(builder.get_query())
-    print("Messages with IPM.Note:", messages.count)
+    print("Сообщения с IPM.Note:", messages.count)
 
     builder = PersonalStorageQueryBuilder()
-    # Messages with attachments AND high importance
+    # Сообщения с вложениями И с высокой важностью
     builder.importance.equals(2)
     builder.has_flags(MapiMessageFlags.HASATTACH)
     messages = folder.get_contents(builder.get_query())
-    print("Messages with atts:", messages.count)
+    print("Сообщения с вложениями:", messages.count)
 
     builder = PersonalStorageQueryBuilder()
-    # Messages with size > 15 KB
+    # Сообщения размером > 15 КБ
     builder.message_size.greater(15000)
     messages = folder.get_contents(builder.get_query())
-    print("Messages size > 15 KB:", messages.count)
+    print("Сообщения размером > 15 КБ:", messages.count)
 
     builder = PersonalStorageQueryBuilder()
-    # Unread messages
+    # Непрочитанные сообщения
     builder.has_no_flags(MapiMessageFlags.READ)
     messages = folder.get_contents(builder.get_query())
-    print("Unread:", messages.count)
+    print("Непрочитанные:", messages.count)
 
     builder = PersonalStorageQueryBuilder()
-    # Unread messages with attachments
+    # Непрочитанные сообщения с вложениями
     builder.has_no_flags(MapiMessageFlags.READ)
     builder.has_flags(MapiMessageFlags.HASATTACH)
     messages = folder.get_contents(builder.get_query())
-    print("Unread msgs with atts:", messages.count)
+    print("Непрочитанные сообщения с вложениями:", messages.count)
 
-    # Folder with name 'SubInbox'
+    # Папка с названием 'SubInbox'
     builder = PersonalStorageQueryBuilder()
     builder.folder_name.equals("SubInbox")
     folders = folder.get_sub_folders(builder.get_query())
-    print("Folder having subfolder:", folders.count)
+    print("Папка, имеющая подпапку:", folders.count)
 
     builder = PersonalStorageQueryBuilder()
-    # Folders with subfolders
+    # Папки с подпапками
     builder.has_subfolders()
     folders = folder.get_sub_folders(builder.get_query())
-    print("Folders with subfolders:", folders.count)
+    print("Папки с подпапками:", folders.count)
 ```
-### **Поиск строки в PST с параметром Ignore Case**
-В следующем фрагменте кода показано, как искать строку в PST с помощью параметра ignore case.
-
-
+### **Поиск строки в PST с параметром игнорирования регистра**
+Следующий фрагмент кода показывает, как искать строку в PST с параметром игнорирования регистра.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-SearchingStringInPSTWithIgnoreCaseParameter-SearchingStringInPSTWithIgnoreCaseParameter.py" >}}
 
 ### **Поиск тем сообщений по нескольким ключевым словам в файле PST**
 
-Извлеките определенные сообщения или элементы из файла персонального хранилища (PST) или хранилища сообщений, внедрив *либо (запрос 1, запрос 2)* метод [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/#personalstoragequerybuilder-class) класс в вашем проекте. Он принимает два параметра, позволяющих объединить два разных запроса, query1 и query2, и найти тему сообщения, соответствующую любому из двух указанных слов. См. пример кода ниже:
+Извлечение конкретных сообщений или элементов из файла личного хранения (PST) или хранилища сообщений путем реализации метода *either(query1, query2)* класса [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/#personalstoragequerybuilder-class) в вашем проекте. Он принимает два параметра, позволяющих объединить два разных запроса: query1 и query2 и найти тему сообщения, соответствующую любому из двух указанных слов. См. пример кода ниже:
 
 ```python
 import aspose.email as ae
 
 builder1 = ae.storage.pst.PersonalStorageQueryBuilder()
-builder1.subject.contains("Review") # 'Review' is key word for the search
+builder1.subject.contains("Review") # 'Review' - ключевое слово для поиска
 
 builder2 = ae.storage.pst.PersonalStorageQueryBuilder()
-builder2.subject.contains("Error") # 'Error' is also key word for the search
+builder2.subject.contains("Error") # 'Error' - также ключевое слово для поиска
 
 builder = ae.storage.pst.PersonalStorageQueryBuilder()
-# message subjects must contain 'Review' or 'Error' words
+# темы сообщений должны содержать слова 'Review' или 'Error'
 builder.either(builder1.get_query(), builder2.get_query())
 
 
@@ -312,24 +296,22 @@ folder = pst.root_folder.get_sub_folder("Inbox")
 messages = folder.get_contents(builder.get_query())
 
 for message in messages:
-    print(f"Message: {message.subject}")
+    print(f"Сообщение: {message.subject}")
 ```
 
-## **Переместить элементы в другие папки файла PST**
-Aspose.Email позволяет перемещать элементы из исходной папки в другую папку в том же файле личного хранилища (PST). Сюда входят:
+## **Перемещение элементов в другие папки файла PST**
+Aspose.Email делает возможным перемещение элементов из одной папки в другую в том же файле личного хранилища (PST). Это включает:
 
-- Перемещение указанной папки в новую родительскую папку.
+- Перемещение указанной папки в новый родительский каталог.
 - Перемещение указанных сообщений в новую папку.
 - Перемещение содержимого в новую папку.
-- Перемещение подпапок в новую родительскую папку.
+- Перемещение подпапок в новый родительский каталог.
 
-В следующем фрагменте кода показано, как перемещать такие элементы, как сообщения и папки, из исходной папки в другую папку того же файла PST.
-
-
+Следующий фрагмент кода показывает, как перемещать элементы, такие как сообщения и папки, из одной папки в другую в том же файле PST.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-MoveItemsToOtherFolders-MoveItemsToOtherFolders.py" >}}
-## **Обновление свойств сообщения в файле PST**
-Иногда требуется обновить некоторые свойства сообщений, такие как смена темы, маркировка важности сообщения и т. д. Обновление сообщения в PST-файле с такими изменениями в свойствах сообщения можно осуществить с помощью метода FolderInfo.change_Messages. В этой статье показано, как массово обновлять сообщения в PST-файле для внесения изменений в свойства. В следующем фрагменте кода показано, как массово обновлять свойства сообщений для нескольких сообщений в PST-файле.
+## **Обновление свойств сообщений в файле PST**
+Иногда требуется обновить определенные свойства сообщений, такие как изменение темы, маркировка важности сообщений и аналогичные другие. Обновление сообщения в файле PST с такими изменениями в свойствах сообщения можно достичь с помощью метода FolderInfo.change_messages. Эта статья показывает, как обновить сообщения оптом в файле PST для изменений в свойствах. Следующий фрагмент кода показывает, как обновить свойства сообщений в пакетном режиме для нескольких сообщений в файле PST.
 
 ```py
 from aspose.email.storage.pst import PersonalStorage, PersonalStorageQueryBuilder
@@ -337,42 +319,42 @@ from aspose.email.mapi import MapiPropertyTag, MapiProperty, MapiPropertyCollect
 
 pst_file_path = data_dir + "ya4demia04vb.pst"
 
-# Load the Outlook PST file
+# Загрузка файла PST Outlook
 with PersonalStorage.from_file(pst_file_path) as personal_storage:
-    # Get the required subfolder
+    # Получите необходимую подпапку
     inbox = personal_storage.root_folder.get_sub_folder("Inbox")
 
-    # Find messages having From = "someuser@domain.com"
+    # Найти сообщения, у которых From = "someuser@domain.com"
     query_builder = PersonalStorageQueryBuilder()
     query_builder.from_address.contains("someuser@domain.com")
 
-    # Get contents from query
+    # Получить содержимое из запроса
     messages = inbox.get_contents(query_builder.get_query())
 
-    # Save (MessageInfo, EntryIdString) in a list
+    # Сохраните (MessageInfo, EntryIdString) в список
     change_list = [message_info.entry_id_string for message_info in messages]
 
-    # Compose the new properties
+    # Составьте новые свойства
     updated_properties = MapiPropertyCollection()
     updated_properties.add(
         MapiPropertyTag.SUBJECT_W,
-        MapiProperty(MapiPropertyTag.SUBJECT_W, "New Subject".encode("utf-16le"))
+        MapiProperty(MapiPropertyTag.SUBJECT_W, "Новая тема".encode("utf-16le"))
     )
     updated_properties.add(
         MapiPropertyTag.IMPORTANCE,
         MapiProperty(MapiPropertyTag.IMPORTANCE, bytearray([0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]))
     )
 
-    # Update messages having From = "someuser@domain.com" with new properties
+    # Обновить сообщения с From = "someuser@domain.com" новыми свойствами
     inbox.change_messages(change_list, updated_properties)
 ```
-## **Обновление настраиваемых свойств в файле PST**
-Иногда требуется пометить элементы, обработанные в файле PST. API Aspose.Email позволяет сделать это с помощью свойств MapiProperty и MapInamedProperty. В этом помогают следующие методы.
+## **Обновление пользовательских свойств в файле PST**
+Иногда требуется отметить элементы, которые обработаны в файле PST. API Aspose.Email позволяет достичь этого с помощью MapiProperty и MapiNamedProperty. Следующие методы полезны для достижения этого.
 
-- ctor MapInamed Property (длинный тег свойства, идентификатор строкового имени, идентификатор свойства UUID, массив байтов [] Значение свойства)
-- ctor MapInamed Property (длинный тег свойств, идентификатор длинного имени, идентификатор свойства UUID, массив байтов [] Значение свойства)
-- FolderInfo.change_messages (обновленные свойства коллекции MAPIPropertyCollection) — изменяет все сообщения в папке
-- PersonalStorage.change_messages (идентификатор строковой записи, обновленные свойства коллекции свойств MAPI) — изменение свойств сообщения
+- ctor MapiNamedProperty(long propertyTag, string nameIdentifier, UUID propertyGuid, bytearray[] propertyValue)
+- ctor MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, bytearray[] propertyValue)
+- FolderInfo.change_messages(MapiPropertyCollection updatedProperties) - изменяет все сообщения в папке
+- PersonalStorage.change_messages(string entryId, MapiPropertyCollection updatedProperties) - изменяет свойства сообщения
 
 ```py
 from uuid import UUID
@@ -384,16 +366,16 @@ def generate_named_property_tag(index, data_type):
     return (((0x8000 | index) << 16) | data_type) & 0x00000000FFFFFFFF
 
 def run():
-    # Load the Outlook file
+    # Загрузка файла Outlook
     pst_file_path = data_dir + "my.pst"
 
     with PersonalStorage.from_file(pst_file_path) as personal_storage:
         test_folder = personal_storage.root_folder.get_sub_folder("Inbox")
 
-        # Create the collection of message properties for adding or updating
+        # Создание коллекции свойств сообщения для добавления или обновления
         new_properties = MapiPropertyCollection()
 
-        # Normal, Custom, and PidLidLogFlags named properties
+        # Обычные, пользовательские и именованные свойства PidLidLogFlags
         mapi_property = MapiProperty(
             MapiPropertyTag.ORG_EMAIL_ADDR_W,
             "test_address@org.com".encode("utf-16le")
@@ -415,11 +397,11 @@ def run():
         new_properties.add(mapi_property.tag, mapi_property)
         test_folder.change_messages(test_folder.enumerate_messages_entry_id(), new_properties)
 
-# Usage
+# Использование
 run()
 ```
 ## **Извлечение вложений без извлечения полного сообщения**
-Aspose.Email API можно использовать для извлечения вложений из сообщений PST без предварительного извлечения всего сообщения. Для этого можно использовать метод extract_attachments в IEWSClient. В следующем фрагменте кода показано, как извлекать вложения без извлечения всего сообщения.
+API Aspose.Email можно использовать для извлечения вложений из сообщений PST без предварительного извлечения полного сообщения. Метод extract_attachments класса IEWSClient можно использовать для этого. Следующий фрагмент кода показывает, как извлечь вложения без извлечения полного сообщения.
 
 ```py
 from aspose.email.storage.pst import PersonalStorage
@@ -439,8 +421,6 @@ with PersonalStorage.from_file(data_dir + "my.pst") as personal_storage:
                     attachment.save(data_dir + attachment.long_file_name)
 ```
 ## **Добавление файлов в PST**
-Ключевые функции Microsoft Outlook — управление электронной почтой, календарями, задачами, контактами и записями журнала. Кроме того, файлы также можно добавлять в папку PST, и полученный PST сохраняет добавленные документы. Aspose.Email предоставляет возможность добавлять файлы в папку таким же образом, а также добавлять сообщения, контакты, задачи и записи журнала в PST. В следующем фрагменте кода показано, как добавлять документы в папку PST с помощью Aspose.Email.
-
-
+Ключевая функция Microsoft Outlook заключается в управлении электронной почтой, календарями, задачами, контактами и записями журнала. Кроме того, файлы также могут быть добавлены в папку PST, и полученный PST сохраняет учетные данные добавленных документов. Aspose.Email предоставляет возможность добавлять файлы в папку аналогично добавлению сообщений, контактов, задач и записей журнала в PST. Следующий фрагмент кода показывает, как добавлять документы в папку PST с помощью Aspose.Email.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddFilesToPST-AddFilesToPST.py" >}}

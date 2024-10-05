@@ -1,24 +1,23 @@
 ---
-title: "Подключение к SMTP-серверу"
+title: "Подключение к SMTP серверу"
 url: /ru/java/connecting-to-smtp-server/
 weight: 10
 type: docs
 ---
 
-
-При подключении к SMTP-серверу с поддержкой SSL необходимо задать следующие свойства.
+При подключении к SMTP серверу с поддержкой SSL необходимо установить следующие параметры.
 
 - [SecurityOptions](https://reference.aspose.com/email/java/com.aspose.email/securityoptions/)
-- Port
+- Порт
 
-В приведенных ниже примерах мы покажем, как:
+В приведенных ниже примерах мы показываем, как:
 
-1. Задайте имя пользователя.
-1. Установите пароль.
-1. Настройте порт.
-1. Задайте параметр безопасности.
+1. Установить имя пользователя.
+2. Установить пароль.
+3. Установить порт.
+4. Установить параметр безопасности.
 
-В следующем фрагменте кода показано, как подключить SMTP-сервер с поддержкой SSL.
+Следующий фрагмент кода показывает, как подключиться к SMTP серверу с поддержкой SSL.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -32,15 +31,15 @@ client.setPort(587);
 client.setSecurityOptions(SecurityOptions.SSLExplicit);
 ~~~
 
-## **Подключение к серверу через прокси-сервер Socks**
+## **Подключение к серверу через SOCKS прокси-сервер**
 
-Иногда мы используем прокси-серверы для связи с внешним миром. В таких случаях почтовые клиенты не могут общаться через Интернет без указания адреса прокси-сервера. Aspose.Email обеспечивает поддержку версий 4, 4a и 5 прокси-протокола SOCKS. В этой статье представлен рабочий пример отправки электронной почты с помощью прокси-почтового сервера. Чтобы отправить электронное письмо через прокси-сервер, выполните следующие действия:
+Иногда мы используем прокси-серверы для связи с внешним миром. В таких случаях почтовые клиенты не могут осуществлять связь через Интернет без указания адреса прокси. Aspose.Email предоставляет поддержку версий 4, 4a и 5 протокола прокси SOCKS. В этой статье приведен работающий пример отправки электронной почты с помощью прокси почтового сервера. Для отправки электронной почты через прокси-сервер:
 
-1. Инициализируйте прокси-сервер, указав необходимую информацию, например адрес прокси-сервера, порт и версию SOCKS.
-1. Initialize [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) с адресом хоста, именем пользователя и паролем и любыми другими настройками.
-1. Присвойте свойству клиента Proxy значение [Proxy](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#getProxy--) объект, созданный ранее.
+1. Инициализируйте прокси с необходимой информацией, то есть адресом прокси, портом и версией SOCKS.
+2. Инициализируйте [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) с адресом хоста, именем пользователя и паролем, а также любыми другими настройками.
+3. Установите свойство Proxy клиента на объект [Proxy](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#getProxy--) , созданный ранее.
 
-В следующем фрагменте кода показано, как подключиться к серверу через прокси-сервер.
+Следующий фрагмент кода показывает, как подключиться к серверу через прокси-сервер.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -51,11 +50,11 @@ String proxyAddress = "192.168.203.142"; // proxy address
 int proxyPort = 1080; // proxy port
 SocksProxy proxy = new SocksProxy(proxyAddress, proxyPort, SocksVersion.SocksV5);
 client.setProxy(proxy);
-client.send(new MailMessage("sender@domain.com", "receiver@domain.com", "Sending Email via proxy",
-        "Implement socks proxy protocol for versions 4, 4a, 5 (only Username/Password authentication)"));
+client.send(new MailMessage("sender@domain.com", "receiver@domain.com", "Отправка электронной почты через прокси",
+        "Реализуйте протокол SOCKS proxy для версий 4, 4a, 5 (только аутентификация через имя пользователя/пароль)"));
 ~~~
 
-## **Подключение к серверу через прокси-сервер HTTP**
+## **Подключение к серверу через HTTP прокси-сервер**
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -63,32 +62,31 @@ client.send(new MailMessage("sender@domain.com", "receiver@domain.com", "Sending
 HttpProxy proxy = new HttpProxy("18.222.124.59", 8080);
 try (SmtpClient client = new SmtpClient("host", 587, "username", "password")) {
     client.setProxy(proxy);
-    client.send(new MailMessage("sender@domain.com", "receiver@domain.com", "Sending Email via proxy",
-            "Implement socks proxy protocol for versions 4, 4a, 5 (only Username/Password authentication)"));
+    client.send(new MailMessage("sender@domain.com", "receiver@domain.com", "Отправка электронной почты через прокси",
+            "Реализуйте протокол SOCKS proxy для версий 4, 4a, 5 (только аутентификация через имя пользователя/пароль)"));
 }
 ~~~
 
 ## **Настройка механизма аутентификации**
 
-Получите список механизмов аутентификации, поддерживаемых SMTP-сервером, используя [getSupportedAuthentication](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#getSupportedAuthentication--) метод [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) класс. Этот метод позволяет клиенту определить, какие методы аутентификации доступны для установления безопасного соединения с сервером. Затем, используя [setAllowedAuthentication](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#setAllowedAuthentication-long-) метод, который получает (или задает) перечисление типов аутентификации, разрешенных пользователем, выбирает наиболее подходящий механизм аутентификации для связи между клиентом и сервером. Это позволяет явно установить метод аутентификации для почтового клиента.
+Получите список механизмов аутентификации, поддерживаемых SMTP сервером, используя метод [getSupportedAuthentication](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#getSupportedAuthentication--) класса [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/). Этот метод позволяет клиенту определить, какие методы аутентификации доступны для установки безопасного соединения с сервером. Затем, используя метод [setAllowedAuthentication](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#setAllowedAuthentication-long-), который получает (или устанавливает) перечисление допустимых пользователем типов аутентификации, выберите наиболее подходящий механизм аутентификации для связи клиент-сервер. Это позволяет вам явно установить метод аутентификации для почтового клиента.
 
-В следующем примере кода показано, как настроить аутентификацию почтового клиента:
+Следующий пример кода показывает, как настроить аутентификацию почтового клиента:
 
 ```java
 smtpClient.setAllowedAuthentication(SmtpKnownAuthenticationType.Login);
 ```
 ## **Использование аутентификации CRAM-MD5 для подключения к серверу**
 
-Чтобы обеспечить безопасную аутентификацию и связь с SMTP-сервером, можно указать и принудительно использовать CRAM-MD5 в качестве разрешенного метода аутентификации для SMTP-клиента. В следующем фрагменте кода показано, как настроить разрешенный тип аутентификации для [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/):
+Для обеспечения безопасной аутентификации и связи с SMTP сервером вы можете указать и обеспечить использование CRAM-MD5 в качестве разрешенного метода аутентификации для почтового клиента SMTP. Следующий фрагмент кода показывает, как настроить разрешенный тип аутентификации для [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/):
 
 ```java
 smtpClient.setAllowedAuthentication(SmtpKnownAuthenticationType.CramMD5);
 ```
 
-## **Привязать SMTP-клиент к определенному IP-адресу на хосте**
+## **Привязка SMTP клиента к конкретному IP-адресу на хосте**
 
-Нельзя исключать возможность наличия на хосте нескольких портов для отправки электронной почты. В таких случаях может возникнуть необходимость привязать клиент, отправляющий электронную почту, к определенному порту на хосте для отправки электронных писем. Это может быть достигнуто также с помощью API Aspose.Email, а также с помощью [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) [bindIPEndPoint](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#bindIPEndPoint-com.aspose.email.BindIPEndPointHandler-) имущество. API [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) можно настроить использование определенного IP-адреса на хосте, указав конкретную конечную точку IP. В следующем фрагменте кода показано, как привязать SMTP-клиент к определенному IP-адресу на хосте.
-
+Невозможно исключить возможность наличия у хоста нескольких портов для отправки электронных писем. В таких случаях может возникнуть необходимость привязать клиента для отправки электронной почты к конкретному порту на хосте. Это также можно осуществить с помощью API Aspose.Email, используя свойство [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) [bindIPEndPoint](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#bindIPEndPoint-com.aspose.email.BindIPEndPointHandler-). API [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) может быть настроен для использования конкретного IP-адреса на хосте, указав конкретную конечную точку IP. Следующий фрагмент кода показывает, как привязать SMTP клиент к конкретному IP-адресу на хосте.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -109,11 +107,11 @@ try {
 } finally {
     client.dispose();
 }
-~~~
+~~~ 
 
-## **Подтвердите учетные данные почтового сервера без отправки электронной почты**
+## **Проверка учетных данных почтового сервера без отправки электронной почты**
 
-Иногда необходимо подтвердить учетные данные без отправки электронного письма. Aspose.Email предоставляет [validateCredentials()](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#validateCredentials--) метод выполнения этой операции. Если проверка прошла успешно, выполняется код, содержащийся в инструкции if, который обычно используется для выполнения дальнейших действий или получения данных с сервера IMAP. Следующий фрагмент кода демонстрирует проверку учетных данных без отправки электронного письма:
+Иногда необходимо проверить учетные данные без отправки электронной почты. Aspose.Email предоставляет метод [validateCredentials()](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#validateCredentials--) для выполнения этой операции. Если проверка прошла успешно, код внутри инструкции if выполняется, обычно используется для выполнения дальнейших действий или получения данных с IMAP сервера. Следующий фрагмент кода демонстрирует проверку учетных данных без отправки электронной почты:
 
 ```java
 try (SmtpClient smtpClient = new SmtpClient(
@@ -126,9 +124,9 @@ try (SmtpClient smtpClient = new SmtpClient(
 }
 ```
 
-## **Как установить тайм-аут для почтовых операций**
+## **Как установить тайм-аут для операций с электронной почтой**
 
-Каждая почтовая операция занимает некоторое время в зависимости от многих факторов (сетевых задержек, размера данных, производительности сервера и т. д.). Можно установить тайм-аут для всех почтовых операций. В приведенном ниже примере кода показано, как это сделать с помощью [Timeout](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#getTimeout--) имущество. Примечание: не следует устанавливать большие значения, чтобы избежать длительного ожидания в приложении.
+Каждая операция с электронной почтой занимает определенное время в зависимости от многих факторов (сетевая задержка, размер данных, производительность сервера и т.д.). Вы можете установить тайм-аут для всех операций с электронной почтой. Пример кода ниже показывает, как это сделать, используя свойство [Timeout](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#getTimeout--). Примечание: не следует устанавливать большие значения, чтобы избежать длительных ожиданий в вашем приложении.
 
 ~~~Java
 try (SmtpClient smtpClient = new SmtpClient("host", 587, "username", "password", SecurityOptions.SSLExplicit))

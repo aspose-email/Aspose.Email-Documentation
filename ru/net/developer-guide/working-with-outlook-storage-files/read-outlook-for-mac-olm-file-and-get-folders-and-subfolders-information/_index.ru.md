@@ -1,33 +1,33 @@
 ---
-title: "Прочитайте файл Outlook для Mac OLM и получите информацию о папках и подпапках"
+title: "Чтение файла OLM Outlook для Mac и получение информации о папках и подпапках"
 url: /ru/net/read-outlook-for-mac-olm-file-and-get-folders-and-subfolders-information/
 weight: 120
 type: docs
 ---
 
-OLM — это особый формат файлов, используемый Microsoft Outlook для хранения локальных данных, таких как электронные письма, вложения, заметки, данные календаря, контакты, задачи, история и многое другое. Файлы OLM совместимы только с Outlook для Mac, и их нельзя открыть или получить к ним доступ в Outlook для Windows, который вместо этого использует формат файлов PST.
+OLM - это специфический формат файла, используемый Microsoft Outlook для хранения локальных данных, таких как электронные письма, вложения, заметки, данные календаря, контакты, задачи, история и многое другое. Файлы OLM совместимы только с Outlook для Mac и не могут быть открыты или доступны с помощью Outlook для Windows, который вместо этого использует формат файла PST.
 
 ## **Открытие файлов формата OLM**
 
 Файлы формата OLM можно открыть двумя способами:
 
-- с помощью конструктора
-- используя статический метод fromFile
+- с использованием конструктора
+- с использованием статического метода FromFile
 
-Между этими методами существуют различия в поведении. См. раздел ниже.
+Существуют различия в поведении между этими методами. См. раздел ниже.
 
-### **Открытие файлов конструктором**
+### **Открытие файлов с помощью конструктора**
 
-Чтобы открыть файл, вызовите конструктор [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) класс и передайте ему полное имя файла или поток в качестве аргумента:
+Чтобы открыть файл, вызовите конструктор класса [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) и передайте полное имя файла или поток в качестве аргумента:
 
 ```cs
 var fileName = "MyStorage.olm";
 var olm = new OlmStorage(fileName);
 ```
 
-### **Открытие файлов статическим методом FromFile**
+### **Открытие файлов с использованием статического метода FromFile**
 
-Чтобы открыть файл, используйте статический метод [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/fromfile/) и передайте ему полное имя файла или поток в качестве аргумента:
+Чтобы открыть файл, используйте статический метод [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/fromfile/) и передайте полное имя файла или поток в качестве аргумента:
 
 ```cs
 var fileName = "MyStorage.olm";
@@ -36,11 +36,11 @@ var olm = OlmStorage.FromFile(fileName);
 
 ## **Получение папок**
 
-Чтобы получить доступ к структуре каталогов файла OLM, создайте экземпляр [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) класс, используя свой конструктор, и укажите путь к файлу.
-Как только файл будет открыт, откройте его структуру каталогов, используя [FolderHierarchy](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/folderhierarchy/) имущество. Это свойство возвращает список [OlmFolder](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/) объекты, каждый из которых представляет собой каталог в файле OLM.
-Для дальнейшего изучения структуры каталогов перейдите к [SubFolders](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/subfolders/) свойство каждого объекта, возвращающее список его подкаталогов. Используя эти свойства, вы можете перемещаться по всей иерархии каталогов файла OLM и получать доступ ко всем содержащимся в нем каталогам и подкаталогам.
+Чтобы получить доступ к структуре директорий файла OLM, создайте экземпляр класса [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) с использованием его конструктора и передайте путь к файлу.
+После открытия файла получите доступ к его структуре директорий, используя свойство [FolderHierarchy](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/folderhierarchy/). Это свойство возвращает список объектов [OlmFolder](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/), каждый из которых представляет директорию в файле OLM.
+Чтобы дальше исследовать структуру каталогов, получите доступ к свойству [SubFolders](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/subfolders/) каждого объекта, которое возвращает список его подпапок. Используя эти свойства, вы можете перемещаться по всей иерархии каталогов файла OLM и получать доступ ко всем директориям и подпапкам, которые он содержит.
 
-В приведенном ниже примере показан список всех папок в иерархическом порядке:
+Пример ниже отображает список всех папок в иерархическом порядке:
 
 ```cs
 using (var olm = new OlmStorage(fileName))
@@ -58,7 +58,7 @@ private void PrintAllFolders(List<OlmFolder> folderHierarchy, string indent)
 }
 ```
 
-При использовании [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/fromfile/) метод открытия файла OLM, [FolderHierarchy](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/folderhierarchy/) свойство не будет инициализировано по умолчанию и вернет значение null. В этом случае явным образом вызовите метод getFolders для инициализации [FolderHierarchy](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/folderhierarchy/) свойство и извлеките список каталогов в файле OLM:
+При использовании метода [FromFile](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/fromfile/) для открытия файла OLM свойство [FolderHierarchy](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/folderhierarchy/) по умолчанию не будет инициализировано и вернет null. В этом случае вызовите метод GetFolders явно, чтобы инициализировать свойство [FolderHierarchy](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/folderhierarchy/) и получить список директорий в файле OLM:
 
 ```cs
 using (var olm = OlmStorage.FromFile(fileName))
@@ -67,25 +67,25 @@ using (var olm = OlmStorage.FromFile(fileName))
 }
 ```
 
-Кроме того, можно получить любую папку по имени:
+Также можно получить любую папку по имени:
 
-1. Call [GetFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/getfolder/) method.
-2. Передайте имя папки в качестве первого аргумента и значение, указывающее, следует ли игнорировать учет регистра при поиске папки, в качестве второго параметра.
+1. Вызовите метод [GetFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/getfolder/).
+2. Передайте имя папки в качестве первого аргумента и значение, показывающее, следует ли игнорировать чувствительность к регистру при поиске папки, в качестве второго параметра.
 
 ```cs
 using (var olm = OlmStorage.FromFile(fileName))
 {
-    // get inbox folder by name
+    // получить папку «Входящие» по имени
     OlmFolder folder = olm.GetFolder("Inbox", true);
 }
 ```
 
-## **Список электронных писем**
+## **Список писем**
 
-[OlmFolder](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/) класс, представляющий собой папку, имеет следующие методы получения списка писем:
+Класс [OlmFolder](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/), представляющий папку, имеет следующие методы для получения списка писем:
 
-- [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/enumeratemessages/) реализует итерацию писем в папке. В этом случае каждая итерация возвращается [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/) объект, который предоставляет краткую информацию об электронной почте.
-- [EnumerateMapiMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/enumeratemapimessages/), также реализует итерацию писем в папке, но в этом случае каждая итерация возвращается [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) объект, представляющий собой само электронное письмо со всеми свойствами.
+- [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/enumeratemessages/) реализует итерацию по письмам в папке. В этом случае каждая итерация возвращает объект [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/), который предоставляет краткую информацию о письме.
+- [EnumerateMapiMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/enumeratemapimessages/), также реализует итерацию по письмам в папке, но в этом случае каждая итерация возвращает объект [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/), представляющий само письмо, со всеми его свойствами.
 
 ### **Использование метода EnumerateMessages**
 
@@ -109,7 +109,7 @@ using (var olm = OlmStorage.FromFile(fileName))
 
     foreach (var msg in folder.EnumerateMapiMessages())
     {
-        // save message in MSG format
+        // сохранить сообщение в формате MSG
         msg.Save($"{msg.Subject}.msg");
     }
 }
@@ -117,7 +117,7 @@ using (var olm = OlmStorage.FromFile(fileName))
 
 ### **Другие полезные свойства**
 
-Другие полезные свойства класса OlmFolder: [HasMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/hasmessages/) and [MessageCount](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/messagecount/) свойства, которые возвращают наличие сообщений в папке и их количество.
+Другие полезные свойства класса OlmFolder включают: [HasMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/hasmessages/) и [MessageCount](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/messagecount/) свойства, которые возвращают наличие сообщений в папке и их количество.
 
 ```cs
 using (var olm = OlmStorage.FromFile(fileName))
@@ -126,15 +126,15 @@ using (var olm = OlmStorage.FromFile(fileName))
 
     if (folder.HasMessages)
     {
-        Console.WriteLine($"Message count: {folder.MessageCount}");
+        Console.WriteLine($"Количество сообщений: {folder.MessageCount}");
     }
 }
 ```
-### **Получите или установите дату изменения сообщения**
+### **Получение или установка даты изменения сообщения**
 
-Дата изменения представляет собой дату и время последнего изменения сообщения OLM. Вы можете использовать [OlmMessageInfo.ModifiedDate](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/modifieddate/) свойство для получения или обновления измененного значения даты сообщения OLM.
+Дата изменения представляет собой дату и время последнего изменения сообщения OLM. Вы можете использовать свойство [OlmMessageInfo.ModifiedDate](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/modifieddate/) для получения или обновления значения даты изменения сообщения OLM.
 
-Вот пример, демонстрирующий использование свойства:
+Вот пример, который демонстрирует использование этого свойства:
 
 ```cs
 foreach (OlmMessageInfo messageInfo in inboxFolder.EnumerateMessages())
@@ -142,9 +142,9 @@ foreach (OlmMessageInfo messageInfo in inboxFolder.EnumerateMessages())
    DateTime modifiedDate = messageInfo.ModifiedDate;
 }
 ```
-## **Извлечение электронных писем**
+## **Извлечение писем**
 
-[OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) класс имеет [ExtractMapiMessage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/) метод, позволяющий извлекать электронные письма. Этот метод получает [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/) object.
+Класс [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) имеет метод [ExtractMapiMessage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/), который позволяет извлекать письма. Этот метод принимает объект [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/).
 
 ```cs
 using (var olm = OlmStorage.FromFile(fileName))
@@ -155,41 +155,41 @@ using (var olm = OlmStorage.FromFile(fileName))
     {
         if (messageInfo.Date == DateTime.Today)
         {
-            // Extracts today's messages form Inbox
+            // Извлеките сегодняшние сообщения из «Входящих»
             var msg = olm.ExtractMapiMessage(messageInfo);
         }
     }
 }
 ```
-## **Извлечение всех элементов из электронного письма с помощью Traversal API**
+## **Извлечение всех элементов из письма с использованием Traversal API**
 
-Вы можете извлечь все элементы из файла Outlook OLM, насколько это возможно, без исключения, даже если некоторые данные исходного файла повреждены. Для этого используйте [Хранилище OLM (обратный вызов по обходу исключений)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#constructors) конструктор и [Загрузить (строковое имя файла)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) метод вместо метода FromFile. Конструктор позволяет определить метод обратного вызова.
+Вы можете извлечь все элементы из файла OLM Outlook, насколько это возможно, не вызывая исключений, даже если некоторые данные оригинального файла повреждены. Для этого используйте конструктор [OlmStorage(TraversalExceptionsCallback callback)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#constructors) и метод [Load(string fileName)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) вместо метода FromFile. Конструктор позволяет определить метод обратного вызова.
 
 ```cs
-using (var olm = new OlmStorage((exception, id) => { /* Exception handling  code. */ }))
+using (var olm = new OlmStorage((exception, id) => { /* Код обработки исключений. */ }))
 ```
-Метод обратного вызова делает доступными исключения для загрузки и обхода.
+Метод обратного вызова делает доступными исключения загрузки и обхода.
 
-The [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) метод возвращает значение true, если файл был успешно загружен и возможен дальнейший обход. Если файл поврежден и обход невозможен, возвращается значение false.
+Метод [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) возвращает 'true', если файл был успешно загружен и дальнейший обход возможен. Если файл поврежден и обход невозможен, возвращается 'false'.
 
 ```cs
 if (olm.Load(fileName))
 ```
 
-Следующий фрагмент кода и инструкции показывают, как использовать этот API:
+Следующий код-фрагмент и шаги показывают, как использовать этот API:
 
-1. Создайте новый экземпляр [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) класс, передающий обратный вызов по обработке исключений для обработки любых исключений, обнаруженных в процессе.
-2. Загрузите файл OLM, вызвав [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) метод экземпляра OLMStorage.
-3. Если файл OLM успешно загружен, получите иерархию папок, вызвав [GetFolders](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getfolders/) метод на экземпляре OLMStorage. Это возвращает список объектов OLMFolder.
-4. Вызовите метод ExtractItems, передав экземпляр OLMStorage и список объектов OlmFolder.
+1. Создайте новый экземпляр класса [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/), передав метод обратного вызова для обработки исключений, возникающих в процессе.
+2. Загрузите файл OLM, вызвав метод [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) экземпляра OlmStorage. 
+3. Если файл OLM успешно загружен, получите иерархию папок, вызвав метод [GetFolders](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getfolders/) на экземпляре OlmStorage. Это возвращает список объектов OlmFolder.
+4. Вызовите метод ExtractItems, передав экземпляр OlmStorage и список объектов OlmFolder.
 5. В методе ExtractItems выполните итерацию по каждой папке в списке папок.
-6. Если папка содержит сообщения (электронные письма), напечатайте имя папки на консоли с помощью Console.WriteLine (папка).
-7. Просмотрите сообщения в текущей папке, вызвав метод EnumerateMessages на экземпляре OlmStorage и передав текущую папку в качестве аргумента.
-8. Напечатайте тему каждого сообщения на консоль с помощью Console.WriteLine (msg.Subject).
-9. Если в папке есть подпапки, снова рекурсивно вызовите метод ExtractItems, передав экземпляр OlmStorage и подпапки текущей папки.
+6. Если папка содержит сообщения (письма), выведите имя папки в консоль с помощью Console.WriteLine(folder).
+7. Выполните итерацию по сообщениям текущей папки, вызвав метод EnumerateMessages на экземпляре OlmStorage, передав текущую папку в качестве аргумента.
+8. Выведите тему каждого сообщения в консоль с помощью Console.WriteLine(msg.Subject).
+9. Если папка имеет подпапки, рекурсивно снова вызовите метод ExtractItems, передав экземпляр OlmStorage и подпапки текущей папки.
 
 ```cs
-using (var olm = new OlmStorage((exception, id) => { /* Exception handling  code. */ }))
+using (var olm = new OlmStorage((exception, id) => { /* Код обработки исключений. */ }))
 {
     if (olm.Load(fileName))
     {
@@ -221,7 +221,7 @@ private static void ExtractItems(OlmStorage olm, List<OlmFolder> folders)
 ```
 ## **Извлечение сообщений из OLM по идентификаторам**
 
-Процесс извлечения электронной почты стал проще благодаря возможности извлекать выбранные сообщения OLM по идентификаторам. Это актуально для приложений, хранящих идентификаторы в базе данных. Извлечение сообщений по запросу — это эффективный способ избежать необходимости каждый раз искать нужное сообщение по всему хранилищу. [EntryId](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/entryid/) собственность [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) класс получает идентификатор записи сообщения. Перегруженный [Извлечь сообщение MAPI (идентификатор строки)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/#extractmapimessage_1) метод [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#olmstorage-class) класс получает сообщение от OLM. Следующий фрагмент кода демонстрирует использование этих функций:
+Процесс извлечения писем стал проще благодаря возможности извлекать выбранные сообщения OLM по идентификаторам. Это срочно необходимо для приложений, хранящих идентификаторы в базе данных. Извлечение сообщений по требованию - эффективный способ избежать обхода всего хранилища каждый раз, чтобы найти конкретное сообщение для извлечения. Свойство [EntryId](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/entryid/) класса [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) получает идентификатор записи сообщения. Переопределенный метод [ExtractMapiMessage(string id)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/#extractmapimessage_1) класса [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#olmstorage-class) получает сообщение из OLM. Следующий код-фрагмент демонстрирует использование этих функций:
 
 ```cs
 foreach (OlmMessageInfo msgInfo in olmFolder.EnumerateMessages())
@@ -230,9 +230,9 @@ foreach (OlmMessageInfo msgInfo in olmFolder.EnumerateMessages())
 }
 ```
 
-## **Получить путь к папке**
+## **Получение пути к папке**
 
-Вы также можете получить путь к папкам в файле OML. Aspose.Email предоставляет [OlmFolder.Path](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/path/) свойство, возвращающее путь к папке. Следующий фрагмент кода демонстрирует использование [OlmFolder.Path](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/path/) свойство для получения путей к папкам в файле OML.
+Вы также можете получить путь к папке папок в файле OLM. Aspose.Email предоставляет свойство [OlmFolder.Path](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/path/), которое возвращает путь к папке. Следующий код-фрагмент демонстрирует использование свойства [OlmFolder.Path](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/path/) для получения путей к папкам в файле OLM.
 
 ```cs
 var storage = new OlmStorage("SampleOLM.olm");
@@ -242,7 +242,7 @@ public static void PrintPath(OlmStorage storage, List<OlmFolder> folders)
 {
     foreach (OlmFolder folder in folders)
     {
-        // print the current folder path
+        // вывести текущий путь к папке
         Console.WriteLine(folder.Path);
 
         if (folder.SubFolders.Count > 0)
@@ -253,9 +253,9 @@ public static void PrintPath(OlmStorage storage, List<OlmFolder> folders)
 }
 ```
 
-## **Подсчитайте количество элементов в папке**
+## **Подсчет количества элементов в папке**
 
-Можно также подсчитать количество элементов в папке. Aspose.Email предоставляет [OlmFolder.MessageCount](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/messagecount/) свойство, возвращающее количество элементов в папке. Следующий фрагмент кода демонстрирует использование [OlmFolder.MessageCount](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/messagecount/) свойство для получения количества элементов в папках файла OML.
+Вы также можете подсчитать количество элементов в папке. Aspose.Email предоставляет свойство [OlmFolder.MessageCount](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/messagecount/), которое возвращает количество элементов в папке. Следующий код-фрагмент демонстрирует использование свойства [OlmFolder.MessageCount](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/messagecount/) для получения количества элементов в папках файла OLM.
 
 ```cs
 var storage = new OlmStorage("SampleOLM.olm");
@@ -265,65 +265,65 @@ public static void PrintMessageCount(List<OlmFolder> folders)
 {
     foreach (OlmFolder folder in folders)
     {
-        Console.WriteLine("Message Count [" + folder.Name + "]: " + folder.MessageCount);
+        Console.WriteLine("Количество сообщений [" + folder.Name + "]: " + folder.MessageCount);
     }
 }
 ```
 
-### **Узнайте общее количество товаров в OlmStorage**
+### **Получение общего количества элементов OlmStorage**
 
-[OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) класс также имеет [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/gettotalitemscount/) метод, который возвращает общее количество сообщений, содержащихся в хранилище OLM.
- 
+Класс [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) также имеет метод [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/gettotalitemscount/), который возвращает общее количество элементов сообщений, содержащихся в хранилище OLM.
+  
 ```cs
-  using (var olm = new OlmStorage("storage.olm"))
-  {
-     var count = olm.GetTotalItemsCount();
-  }
+using (var olm = new OlmStorage("storage.olm"))
+{
+    var count = olm.GetTotalItemsCount();
+}
 ```
 
 ### **Извлечение сообщений из OLM по идентификаторам**
- 
-Иногда требуется извлечь выбранные сообщения по идентификаторам. Например, ваше приложение хранит идентификаторы в базе данных и извлекает сообщение по запросу. Это эффективный способ избежать необходимости каждый раз просматривать все хранилище в поисках нужного сообщения для извлечения. Эта функция доступна для хранилищ OLM.
+  
+Иногда необходимо извлекать выбранные сообщения по идентификаторам. Например, ваше приложение хранит идентификаторы в базе данных и извлекает сообщение по требованию. Это эффективный способ избежать обхода всего хранилища каждый раз, чтобы найти конкретное сообщение для извлечения. Эта функция доступна для хранилищ OLM.
 
-В приведенном ниже коде показано, как извлекать сообщения из OLM по идентификаторам.
+Код ниже показывает, как извлекать сообщения из OLM по идентификаторам.
 
 Код выполняет следующие шаги:
 
-1. Инициирует цикл foreach для итерации по списку [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/) объекты. В цикле используется [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/) метод объекта OlmFolder для получения списка всех сообщений в текущей итерируемой папке.
-2. Цикл извлекает соответствующий объект MapiMessage из хранилища, вызывая [Извлечь сообщение MAPI (идентификатор строки)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/#extractmapimessage_1) метод [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) класс, проходящий через [EntryId](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/entryid/) текущего сообщения в качестве параметра.
+1. Инициирует цикл foreach для итерации по списку объектов [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/). Цикл использует метод [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/) объекта olmFolder для получения списка всех сообщений в текущей папке, по которой выполняется итерация.
+2. Цикл извлекает соответствующий объект MapiMessage из хранилища, вызывая метод [ExtractMapiMessage(string id)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/#extractmapimessage_1) класса [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/), передавая идентификатор записи текущего сообщения в качестве параметра.
 
-Полученный объект MapiMessage можно использовать для доступа к содержимому сообщения и управления им. Цикл продолжается до тех пор, пока все сообщения в папке не будут обработаны.
+Полученный объект MapiMessage может быть использован для доступа и манипуляции содержимым сообщения. Цикл продолжается до обработки всех сообщений в папке.
 
 ```cs
-  foreach (OlmMessageInfo msgInfo in olmFolder.EnumerateMessages())
-  {
-      MapiMessage msg = storage.ExtractMapiMessage(msgInfo.EntryId);
-  }
+foreach (OlmMessageInfo msgInfo in olmFolder.EnumerateMessages())
+{
+    MapiMessage msg = storage.ExtractMapiMessage(msgInfo.EntryId);
+}
 ```
-## **Извлечение цветов категорий Outlook**
+## **Получение цветов категорий Outlook**
 
 Для работы с цветами категорий или категориями элементов Outlook, хранящимися в файлах OLM, Aspose.Email предлагает следующие решения:
 
-- [OlmItemCategory](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmitemcategory/#olmitemcategory-class) class — представляет категории элементов Outlook, доступные по названию и соответствующим цветам в шестнадцатеричном формате.
-- [GetCategories()](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getcategories/) метод [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#olmstorage-class) class - возвращает список категорий.
+- Класс [OlmItemCategory](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmitemcategory/#olmitemcategory-class) - представляет категории элементов Outlook, которые доступны по их имени и ассоциированным цветам, представленным в шестнадцатеричном формате.
+- Метод [GetCategories()](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getcategories/) класса [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#olmstorage-class) - извлекает список категорий.
 
-В следующем примере кода показано, как получить все используемые категории из хранилища OML:
+Следующий пример кода демонстрирует, как получить все используемые категории из хранилища OLM:
 
 ```cs
 using (var olm = OlmStorage.FromFile("storage.olm"))
 {
     var categories = olm.GetCategories();
-   
+    
     foreach (var category in categories)
     {
-        Console.WriteLine($"Category name: {category.Name}");
-       
-		//Color is represented as a hexadecimal value: #rrggbb
-        Console.WriteLine($"Category color: {category.Color}");
+        Console.WriteLine($"Имя категории: {category.Name}");
+        
+        // Цвет представлен в виде шестнадцатеричного значения: #rrggbb
+        Console.WriteLine($"Цвет категории: {category.Color}");
     }
 }
 ```
-В приведенном ниже примере кода показано, как получить цвет категории сообщения:
+Пример кода ниже показывает, как получить цвет категории сообщения:
 
 ```cs
 foreach (var msg in olm.EnumerateMessages(folder))
@@ -332,9 +332,9 @@ foreach (var msg in olm.EnumerateMessages(folder))
     {
         foreach (var msgCategory in msg.Categories)
         {
-            Console.WriteLine($"Category name: {msgCategory}");
+            Console.WriteLine($"Имя категории: {msgCategory}");
             var categoryColor = cat.First(c => c.Name.Equals(msgCategory, StringComparison.OrdinalIgnoreCase)).Color;
-            Console.WriteLine($"Category color: {categoryColor}");
+            Console.WriteLine($"Цвет категории: {categoryColor}");
         }
     }
 }

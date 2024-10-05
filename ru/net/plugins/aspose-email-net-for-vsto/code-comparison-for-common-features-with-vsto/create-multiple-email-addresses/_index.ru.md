@@ -1,5 +1,5 @@
 ---
-title: "Создайте несколько адресов электронной почты"
+title: "Создание нескольких адресов электронной почты"
 url: /ru/net/create-multiple-email-addresses/
 weight: 70
 type: docs
@@ -7,7 +7,7 @@ type: docs
 
 
 ## **VSTO**
-Ниже приведен код для создания нескольких адресов с помощью VSTO Outlook.
+Ниже приведен код для создания нескольких адресов с использованием VSTO Outlook.
 
 ``` cs
 
@@ -15,11 +15,11 @@ type: docs
 
  Outlook.MailItem mailItem = (Outlook.MailItem)this.Application.CreateItem(Outlook.OlItemType.olMailItem);
 
- mailItem.Subject = "This is the subject";
+ mailItem.Subject = "Это тема письма";
 
  mailItem.To = "receiver1@receiver.com;receiver2@receiver.com";
 
- mailItem.Body = "This is the message.";
+ mailItem.Body = "Это сообщение.";
 
  mailItem.BodyFormat = Microsoft.Office.Interop.Outlook.OlBodyFormat.olFormatRichText;
 
@@ -30,19 +30,19 @@ type: docs
 
 ```
 ## **Aspose.Email**
-Ниже приведен код для создания нескольких адресов с помощью aspose.email для .NET.
+Ниже приведен код для создания нескольких адресов с использованием aspose.email для .NET.
 
 ``` cs
 
-  //Create an Instance of MailMessage class
+  //Создание экземпляра класса MailMessage
 
  MailMessage message = new MailMessage();
 
- //From field
+ //Поле отправителя
 
  message.From = "sender@sender.com";
 
- //Specify the recipients' mail addresses
+ //Укажите адреса электронной почты получателей
 
  message.To.Add("receiver1@receiver.com");
 
@@ -58,23 +58,23 @@ type: docs
 
  message.Bcc.Add("Bcc2@receiver.com");
 
- //Create an instance of SmtpClient Class
+ //Создание экземпляра класса SmtpClient
 
  SmtpClient client = new SmtpClient();
 
- //Specify your mailing host server
+ //Укажите ваш почтовый сервер
 
  client.Host = "smtp.server.com";
 
- //Specify your mail user name
+ //Укажите ваше имя пользователя
 
  client.Username = "Username";
 
- //Specify your mail password
+ //Укажите ваш пароль
 
  client.Password = "Password";
 
- //Specify your Port #
+ //Укажите номер порта
 
  client.Port = 25;
 
@@ -82,13 +82,13 @@ type: docs
 
  {
 
-   //Client.Send will send this message
+   //Client.Send отправит это сообщение
 
    client.Send(message);
 
-   //Display 'Message Sent', only if message sent successfully
+   //Отобразить 'Сообщение отправлено', только если сообщение было отправлено успешно
 
-   Console.WriteLine("Message sent");
+   Console.WriteLine("Сообщение отправлено");
 
  }
 
@@ -100,16 +100,16 @@ type: docs
 
  }
 
- Console.WriteLine("Press enter to quit");
+ Console.WriteLine("Нажмите Enter для выхода");
 
- Console.Read();      
+ Console.Read();       
 
 ```
-## **Загрузить исходный код**
+## **Скачать исходный код**
 - [url:CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
 - [url:GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20Multiple%20Email%20Addresses)
 - [url:Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Загрузить пример запуска**
+## **Скачать работающий пример**
 - [url:CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [url:GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [url:Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)

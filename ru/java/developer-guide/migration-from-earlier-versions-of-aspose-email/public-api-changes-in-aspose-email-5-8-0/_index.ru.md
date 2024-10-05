@@ -5,22 +5,22 @@ weight: 190
 type: docs
 ---
 
-Ниже приведен список любых изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание участников, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email for .NET. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
-## **Добавлены API**
-- Class `TnefLoadOptions`
-- Method `IEWSClient.listMessages(String, ExchangeMessageInfoCollection, Integer, Integer)`
-- Method `IEWSClient.listMessages(String, Integer)`
-- Method `IEWSClient.listMessages(String, Integer, Integer)`
-- Method `IEWSClient.listSubFolders(String, ExchangeFolderInfoCollection, Integer, Integer)`
-- Method `IEWSClient.listSubFolders(String, Integer)`
-- Method `IEWSClient.listSubFolders(String, Integer, Integer)`
-- Property `ExchangeFolderInfoCollection.getLastItemOffset, setLastItemOffset`
-- Property `ExchangeFolderInfoCollection.getLastPage, setLastPage`
-- Property `ExchangeFolderInfoCollection.getTotalCount, setTotalCount`
-- Property `ExchangeMessageInfoCollection.getLastItemOffset, setLastItemOffset`
-- Property `ExchangeMessageInfoCollection.getLastPage, setLastPage`
-- Property `ExchangeMessageInfoCollection.getTotalCount, setTotalCount`
-- Property `IEWSClient.getEnableDecompression, setEnableDecompression(boolean)`
-- Property `MessageFormat.getTnef`
+Следующий список содержит изменения, внесенные в публичный API, такие как добавление, переименование, удаление или устаревание членов, а также любые изменения, несовместимые с ранее существовавшими версиями Aspose.Email для .NET. Если у вас есть сомнения относительно какого-либо изменения в списке, пожалуйста, поднимите этот вопрос на форуме поддержки Aspose.Email.
+## **Добавленные API**
+- Класс `TnefLoadOptions`
+- Метод `IEWSClient.listMessages(String, ExchangeMessageInfoCollection, Integer, Integer)`
+- Метод `IEWSClient.listMessages(String, Integer)`
+- Метод `IEWSClient.listMessages(String, Integer, Integer)`
+- Метод `IEWSClient.listSubFolders(String, ExchangeFolderInfoCollection, Integer, Integer)`
+- Метод `IEWSClient.listSubFolders(String, Integer)`
+- Метод `IEWSClient.listSubFolders(String, Integer, Integer)`
+- Свойство `ExchangeFolderInfoCollection.getLastItemOffset, setLastItemOffset`
+- Свойство `ExchangeFolderInfoCollection.getLastPage, setLastPage`
+- Свойство `ExchangeFolderInfoCollection.getTotalCount, setTotalCount`
+- Свойство `ExchangeMessageInfoCollection.getLastItemOffset, setLastItemOffset`
+- Свойство `ExchangeMessageInfoCollection.getLastPage, setLastPage`
+- Свойство `ExchangeMessageInfoCollection.getTotalCount, setTotalCount`
+- Свойство `IEWSClient.getEnableDecompression, setEnableDecompression(boolean)`
+- Свойство `MessageFormat.getTnef`
 ## **Удаленные API**
-- Method `LoadOptions.#ctor(MessageFormat)`
+- Метод `LoadOptions.#ctor(MessageFormat)`

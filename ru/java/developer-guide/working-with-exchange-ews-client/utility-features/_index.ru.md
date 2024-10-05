@@ -1,17 +1,14 @@
 ---
-title: "Функции утилиты"
+title: "Утилитарные функции"
 url: /ru/java/utility-features/
 weight: 120
 type: docs
 ---
 
-
-## **Отправка сообщения с опцией голосования**
-Microsoft Outlook позволяет пользователям создавать опрос при создании нового сообщения. Для этого можно включить такие варианты голосования, как «Да», «Нет», «Возможно» и т. д. Класс FollowupOptions, предлагаемый Aspose.Email, предоставляет свойство VotingButtons, которое можно использовать для установки или получения значений параметров голосования. В этой статье приведен подробный пример создания MapiMessage с опциями голосования для создания опроса и последующей отправки сообщения с помощью клиента Exchange Web Service (EWS).
-### **Создание и отправка сообщения с опциями голосования**
-В следующем фрагменте кода показано, как создать новое сообщение, а затем отправить его с опциями голосования.
-
-
+## **Отправка сообщения с вариантами голосования**
+Microsoft Outlook позволяет пользователям создавать опрос при составлении нового сообщения. Это делается путем включения вариантов голосования, таких как Да, Нет, Может быть и т.д. Класс FollowUpOptions, предлагаемый Aspose.Email, предоставляет свойство VotingButtons, которое можно использовать для установки или получения значений вариантов голосования. Эта статья предоставляет детальный пример создания MapiMessage с вариантами голосования для создания опроса, а затем отправки сообщения с помощью клиента Exchange Web Service (EWS).
+### **Создание и отправка сообщения с вариантами голосования**
+Следующий фрагмент кода показывает, как создать новое сообщение и затем отправить его с вариантами голосования.
 
 ~~~Java
 String address = "firstname.lastname@aspose.com";
@@ -19,79 +16,74 @@ String address = "firstname.lastname@aspose.com";
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 MailMessage message = createTestMessage(address);
 
-// Set FollowUpOptions Buttons
+// Установите кнопки вариантов голосования
 FollowUpOptions options = new FollowUpOptions();
-options.setVotingButtons("Yes;No;Maybe;Exactly!");
+options.setVotingButtons("Да;Нет;Может быть;Совершенно верно!");
 
 client.send(message, options);
 ~~~
-### **Примерные методы, используемые в примерах**
-В следующем фрагменте кода показано, как использовать методы, использованные в приведенном выше примере.
-
-
+### **Образцы методов, использованных в примерах**
+Следующий фрагмент кода показывает, как использовать методы, использованные в приведенном выше примере.
 
 ~~~Java
 private static MailMessage createTestMessage(String address) {
-    MailMessage eml = new MailMessage(address, address, "Flagged message",
-            "Make it nice and short, but descriptive. The description may appear in search engines' search results pages...");
+    MailMessage eml = new MailMessage(address, address, "Помеченное сообщение",
+            "Сделайте его приятным и коротким, но описательным. Описание может появиться на страницах результатов поиска...");
 
     return eml;
 }
 ~~~
-## **Создание сообщений RE и FW из файлов MSG**
-[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) позволяет разработчикам создавать сообщения RE (ответить/ответить всем) и FW (переслать) из исходного сообщения. Исходное сообщение идентифицируется путем выбора определенного [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) from [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection) получено с помощью IEWSclient.listMessages (). Другой аргумент является фактическим [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) для отправки в виде сообщения RE или FW. В следующем фрагменте кода показано, как создать образец учетной записи, который используется для отправки сообщения, а затем на примере этого примера сообщения демонстрируются функции «Ответить» и «Переслать». Для выполнения этой задачи выполните следующие действия:
+## **Создание RE и FW сообщений из MSG файлов**
+[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) позволяет разработчикам создавать RE (Ответ/Ответить всем) и FW (Переслать) сообщения из исходного сообщения. Исходное сообщение определяется выбором конкретного [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) из [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection), полученной с помощью IEWSClient.listMessages(). Другим аргументом является фактическое [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage), которое должно быть отправлено как сообщение RE или FW. Следующий фрагмент кода показывает, как создать образец учетной записи, который используется для отправки сообщения, а затем демонстрируются функции Ответа и Пересылки по отношению к этому образцу сообщения. Для выполнения этой задачи:
 
-1. Инициализируйте объект IEWSClient, указав действительные учетные данные.
-1. Отправьте несколько образцов сообщений.
-1. Вызовите функции IEWSclient.reply (), IEWSclient.replyAll () и IEWSclient.forward () для отправки сообщений.
-
-
+1. Инициализируйте объект IEWSClient, предоставив действительные учетные данные.
+1. Отправьте несколько образцовых сообщений.
+1. Вызовите функции IEWSClient.reply(), IEWSClient.replyAll() и IEWSClient.forward(), чтобы отправить сообщения.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credential);
 
 try {
     MailMessage message = new MailMessage("user@domain.com", "user@domain.com", "TestMailRefw - " + UUID.randomUUID().toString(),
-            "TestMailRefw Implement ability to create RE and FW messages from source MSG file");
+            "TestMailRefw Реализовать возможность создания RE и FW сообщений из исходного MSG файла");
 
     client.send(message);
 
     ExchangeMessageInfoCollection messageInfoCol = client.listMessages(client.getMailboxInfo().getInboxUri());
     if (messageInfoCol.size() == 1)
-        System.out.println("1 message in Inbox");
+        System.out.println("1 сообщение в Входящих");
     else
-        System.out.println("Error! No message in Inbox");
+        System.out.println("Ошибка! Нет сообщения в Входящих");
 
     MailMessage message1 = new MailMessage("user@domain.com", "user@domain.com", "TestMailRefw - " + UUID.randomUUID().toString(),
-            "TestMailRefw Implement ability to create RE and FW messages from source MSG file");
+            "TestMailRefw Реализовать возможность создания RE и FW сообщений из исходного MSG файла");
 
     client.send(message1);
     messageInfoCol = client.listMessages(client.getMailboxInfo().getInboxUri());
 
     if (messageInfoCol.size() == 2)
-        System.out.println("2 messages in Inbox");
+        System.out.println("2 сообщения в Входящих");
     else
-        System.out.println("Error! No new message in Inbox");
+        System.out.println("Ошибка! Нет новых сообщений в Входящих");
 
     MailMessage message2 = new MailMessage("user@domain.com", "user@domain.com", "TestMailRefw - " + UUID.randomUUID().toString(),
-            "TestMailRefw Implement ability to create RE and FW messages from source MSG file");
-    message2.getAttachments().addItem(Attachment.createAttachmentFromString("Test attachment 1", "Attachment Name 1"));
-    message2.getAttachments().addItem(Attachment.createAttachmentFromString("Test attachment 2", "Attachment Name 2"));
+            "TestMailRefw Реализовать возможность создания RE и FW сообщений из исходного MSG файла");
+    message2.getAttachments().addItem(Attachment.createAttachmentFromString("Тестовое вложение 1", "Имя вложения 1"));
+    message2.getAttachments().addItem(Attachment.createAttachmentFromString("Тестовое вложение 2", "Имя вложения 2"));
 
-    // Reply, Replay All and forward Message
+    // Ответ, Ответить всем и переслать сообщение
     client.reply(message2, messageInfoCol.get_Item(0));
     client.replyAll(message2, messageInfoCol.get_Item(0));
     client.forward(message2, messageInfoCol.get_Item(0));
 } catch (java.lang.RuntimeException ex) {
-    System.out.println("Error in program" + ex.getMessage());
+    System.out.println("Ошибка в программе" + ex.getMessage());
 }
 ~~~
-## **Поддержка OAuth для EWS в Office 365**
-API Aspose.Email обеспечивает поддержку веб-службы Exchange (EWS) в Office 365. Эти API [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) интерфейс предоставляет метод перегрузки, обеспечивающий [OAuthNetworkCredential](https://apireference.aspose.com/email/java/com.aspose.email/OAuthNetworkCredential) в качестве входных данных для доступа к учетной записи Exchange через OAuth. Чтобы это работало, пользователю необходимо указать авторитет, идентификатор клиента, идентификатор клиентского приложения и параметры ресурса. В следующем фрагменте кода показана поддержка OAuth для EWS в Office 365.
-
+## **Поддержка OAuth для EWS с Office 365**
+Aspose.Email API предоставляет поддержку для Exchange Web Service (EWS) с Office 365. Интерфейс API [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) предоставляет перегруженный метод, который принимает [OAuthNetworkCredential](https://apireference.aspose.com/email/java/com.aspose.email/OAuthNetworkCredential) в качестве входных данных для доступа к учетной записи Exchange через OAuth. Пользователь должен предоставить параметры Authority, Client Id, Client App Uri и Resource, чтобы это работало. Следующий фрагмент кода показывает поддержку OAuth для EWS с Office 365.
 
 ~~~Java
-// token provider
+// токен провайдер
 /*ITokenProvider provider = new ITokenProvider() {
 
     @Override
@@ -117,20 +109,17 @@ NetworkCredential credentials = new OAuthNetworkCredential("accessToken");
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", credentials);
 client.listMessages();
 ~~~
-## **Поддержка входа в систему клиентов Exchange**
-API Aspose.Email предоставляет возможность предоставлять возможность ведения журнала клиента веб-службы Exchange.
+## **Поддержка ведения журналов в клиентах Exchange**
+Aspose.Email API предоставляет возможность вести журнал для клиента Exchange Web Service.
 ### **Ведение журнала для клиента EWS**
-
 
 ~~~Java
 client.setLogFileName("logs/ews");
-// OR
+// ИЛИ
 EWSClient.setCommonLogFileName("logs/ews");
 ~~~
 ## **Добавление заголовков в запросы EWS**
-API Aspose.Email позволяет добавлять заголовки в запросы Exchange. Это можно использовать для добавления заголовков в запросы EWS для разных заголовков, которые можно использовать для разных целей. Одним из таких примеров может служить добавление заголовка X-AnchorMailbox, который используется для решения проблем регулирования на сервере Exchange. Метод addHeader в IEWSClient используется для добавления заголовков к запросам EWS, как показано в следующем фрагменте кода.
-
-
+Aspose.Email API позволяет добавлять заголовки к запросам Exchange. Это можно использовать для добавления заголовков к запросам EWS для различных целей. Одним из таких примеров может быть добавление заголовка X-AnchorMailbox, который используется для управления проблемами ограничения на сервере Exchange. Метод addHeader интерфейса IEWSClient используется для добавления заголовков к запросам EWS, как показано в следующем фрагменте кода.
 
 ~~~Java
 final IEWSClient client = EWSClient.getEWSClient("exchange.domain.com/ews/Exchange.asmx", "username", "password", "");
@@ -142,95 +131,89 @@ try {
 }
 ~~~
 
-## **Верните идентификатор запроса клиента в заголовке**
+## **Возврат ID запроса клиента в заголовке**
 
-The ```return-client-request-id``` заголовок отправляется в запросе и используется сервером для определения того, ```client-request-id``` заголовок, указанный клиентом, должен быть возвращен в ответе сервера. В этой операции используются следующие методы:
+Заголовок ```return-client-request-id``` отправляется в запросе и используется сервером для определения, следует ли вернуть заголовок ```client-request-id```, указанный клиентом, в ответе сервера. В этой операции используются следующие методы:
 
-- [getReturnClientRequestId()](https://reference.aspose.com/email/java/com.aspose.email/iewsclient/#getReturnClientRequestId--)
-- [Задать идентификатор запроса клиента (логическое значение)](https://reference.aspose.com/email/java/com.aspose.email/iewsclient/#setReturnClientRequestId-boolean-) - Получите или установите флаг, указывающий, требует ли клиент от сервера возврата идентификатора запроса.
+- [getReturnClientRequestId()](https://reference.aspose.com/email/java/com.aspose.email/iewsclient/#getReturnClientRequestId--) 
+- [setReturnClientRequestId(boolean value)](https://reference.aspose.com/email/java/com.aspose.email/iewsclient/#setReturnClientRequestId-boolean-) - Получить или установить флаг, указывающий, требуется ли клиенту, чтобы сервер вернул ID запроса.
 
 ```java
 try (IEWSClient client = createEWSClient())
 {
-    // Client will create random id and pass it to the server.
-    // The server should include this id in request-id header of all responses.
+    // Клиент создаст случайный ID и передаст его на сервер.
+    // Сервер должен включить этот ID в заголовок request-id всех ответов.
     client.setReturnClientRequestId(true);
-   
+    
     client.setLogFileName("ews.log");
     client.getMailboxInfo();
 }
 ```
 
-## **Работа с единой системой обмена сообщениями**
-Aspose.Email может получать информацию единой системы обмена сообщениями из Exchange Server 2010. В настоящее время поддерживается единая система обмена сообщениями, такая как получение сведений о конфигурации, инициирование исходящего вызова, получение информации о телефонном звонке по идентификатору вызова и отключение телефонного звонка по идентификатору. В следующем примере кода показано, как получить сведения о конфигурации единой системы обмена сообщениями из Microsoft Exchange Server 2010.
-
-
+## **Работа с унифицированными сообщениями**
+Aspose.Email может извлекать информацию о унифицированных сообщениях из Exchange Server 2010. В настоящее время поддерживается унифицированная связь, такая как получение конфигурационной информации, инициирование исходящего звонка, извлечение информации о звонках по ID и отключение телефонного звонка по ID. Следующий пример кода показывает, как извлечь информацию о конфигурации унифицированной связи с Microsoft Exchange Server 2010.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credential);
 UnifiedMessagingConfiguration umConf = client.getUMConfiguration();
 ~~~
-## **Советы по получению почты**
-Сервер Microsoft Exchange добавил несколько новых функций в Exchange Server 2010 и 2013. Одна из них позволяет пользователям получать советы по электронной почте при составлении сообщения электронной почты. Эти советы очень полезны, поскольку они предоставляют информацию до отправки электронного письма. Например, если адрес электронной почты указан неправильно в списке получателей, отображается подсказка, сообщающая вам, что адрес электронной почты недействителен. С помощью подсказок по почте вы также можете просмотреть ответы, которые вы не получили от офиса, перед отправкой электронного письма: Exchange Server (2010 и 2013) отправляет подсказку по почте при составлении письма, если один или несколько получателей ответили, отсутствующие на рабочем месте. Для всех функций, описанных в этой статье, требуется пакет обновления 1 (SP1) для Microsoft Exchange Server 2010. В следующем фрагменте кода показано, как использовать [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс, использующий веб-службы Exchange, доступные в Microsoft Exchange Server 2007 и более поздних версиях.
-
-
+## **Получение почтовых подсказок**
+Microsoft Exchange Server добавил несколько новых функций в Exchange Server 2010 и 2013. Одна из них позволяет пользователям получать почтовые подсказки при составлении электронного сообщения. Эти подсказки очень полезны, так как предоставляют информацию перед отправкой электронной почты. Например, если адрес электронной почты неверен в списке получателей, отображается подсказка, которая информирует вас о недопустимости адреса электронной почты. Почтовые подсказки также позволяют вам видеть ответы "вне офиса" до отправки электронной почты: сервер Exchange (2010 и 2013) отправляет почтовую подсказку, когда электронная почта составляется, если один или несколько получателей установили ответы "вне офиса". Для всех функций, показанных в этой статье, требуется Microsoft Exchange Server 2010 Service Pack 1. Следующий фрагмент кода показывает, как использовать класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient), который использует Exchange Web Services, доступные в Microsoft Exchange Server 2007 и более поздних версиях.
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создайте экземпляр класса EWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
-System.out.println("Connected to Exchange server...");
-// Provide mail tips options
+System.out.println("Подключено к серверу Exchange...");
+// Укажите параметры почтовых подсказок
 MailAddressCollection addrColl = new MailAddressCollection();
 addrColl.addMailAddress(new MailAddress("test.exchange@ex2010.local", true));
 addrColl.addMailAddress(new MailAddress("invalid.recipient@ex2010.local", true));
 GetMailTipsOptions options = new GetMailTipsOptions(MailAddress.to_MailAddress("administrator@ex2010.local"), addrColl, MailTipsType.All);
 
-// Get Mail Tips
+// Получить почтовые подсказки
 MailTips[] tips = client.getMailTips(options);
 
-// Display information about each Mail Tip
+// Отобразить информацию о каждой почтовой подсказке
 for (MailTips tip : tips) {
-    // Display Out of office message, if present
+    // Отобразить сообщение "вне офиса", если оно присутствует
     if (tip.getOutOfOffice() != null) {
-        System.out.println("Out of office: " + tip.getOutOfOffice().getReplyBody().getMessage());
+        System.out.println("Вне офиса: " + tip.getOutOfOffice().getReplyBody().getMessage());
     }
 
-    // Display the invalid email address in recipient, if present
+    // Отобразить недопустимый адрес электронной почты среди получателей, если он присутствует
     if (tip.getInvalidRecipient() == true) {
-        System.out.println("The recipient address is invalid: " + tip.getRecipientAddress());
+        System.out.println("Адрес получателя недействителен: " + tip.getRecipientAddress());
     }
 }
 ~~~
-## **Выдача себя за биржу**
-Выдача себя за другое лицо Exchange позволяет пользователю выдавать себя за другую учетную запись и выполнять задачи и операции, используя разрешения этой учетной записи вместо своих собственных. Если делегирование позволяет пользователям действовать от имени других пользователей, то выдача себя за другое лицо позволяет им действовать как другие пользователи. Aspose.Email поддерживает выдачу себя за другое лицо в Exchange. [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс предоставляет методы ImpersonateUser и resetImpersonation для облегчения этой функции.
+## **Имитация в Exchange**
+Имитация в Exchange позволяет кому-то имитировать другую учетную запись и выполнять задачи и операции, используя разрешения имитируемой учетной записи вместо собственных. Тогда как делегирование позволяет пользователям действовать от имени других пользователей, Имитация позволяет им действовать как другие пользователи. Aspose.Email поддерживает имитацию Exchange. Класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) предоставляет методы ImpersonateUser и ResetImpersonation для упрощения этой функции.
 
-Для выполнения этой задачи выполните следующие действия:
+Для выполнения этой задачи:
 
-1. Инициализируйте клиент ExchangeWebServiceClient для пользователя 1.
-1. Инициализируйте клиент ExchangeWebServiceClient для пользователя 2.
-1. Добавляйте тестовые сообщения к учетным записям.
-1. Включите выдачу себя за другое лицо.
-1. Сбросить олицетворение.
+1. Инициализируйте ExchangeWebServiceClient для пользователя 1.
+1. Инициализируйте ExchangeWebServiceClient для пользователя 2.
+1. Добавьте тестовые сообщения в учетные записи.
+1. Включите имитацию.
+1. Сбросьте имитацию.
 
-В следующем фрагменте кода показано, как использовать [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс для реализации функции Impersonation.
-
-
+Следующий фрагмент кода показывает, как использовать класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) для реализации функции имитации.
 
 ~~~Java
-// Create instance's of EWSClient class by giving credentials
+// Создайте экземпляры класса EWSClient, указав учетные данные
 IEWSClient client1 = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser1", "pwd", "domain");
 IEWSClient client2 = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser2", "pwd", "domain");
 {
-    String folder = "Drafts";
+    String folder = "Черновики";
     try {
         for (ExchangeMessageInfo messageInfo : (Iterable<ExchangeMessageInfo>) client1.listMessages(folder))
             client1.deleteItem(messageInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
-        String subj1 = "NETWORKNET_33354 User User1";
+        String subj1 = "NETWORKNET_33354 Пользователь User1";
         client1.appendMessage(folder, new MailMessage("User1@exchange.conholdate.local", "To@aspsoe.com", subj1, ""));
 
         for (ExchangeMessageInfo messageInfo : (Iterable<ExchangeMessageInfo>) client2.listMessages(folder))
             client2.deleteItem(messageInfo.getUniqueUri(), DeletionOptions.getDeletePermanently());
-        String subj2 = "NETWORKNET_33354 User User2";
+        String subj2 = "NETWORKNET_33354 Пользователь User2";
         client2.appendMessage(folder, new MailMessage("User2@exchange.conholdate.local", "To@aspose.com", subj2, ""));
 
         ExchangeMessageInfoCollection messInfoColl = client1.listMessages(folder);
@@ -257,9 +240,8 @@ IEWSClient client2 = EWSClient.getEWSClient("https://outlook.office365.com/ews/e
     }
 }
 ~~~
-## **Функция автоматического обнаружения с помощью EWS**
-API Aspose.Email позволяет узнать о настройках сервера Exchange с помощью клиента EWS. 
-
+## **Функция автоматического обнаружения с использованием EWS**
+Aspose.Email API позволяет обнаруживать настройки сервера Exchange с помощью клиента EWS. 
 
 ~~~Java
 AutodiscoverService svc = new AutodiscoverService();
@@ -267,11 +249,10 @@ svc.setCredentials(new NetworkCredential(email, password));
 
 IGenericDictionary</* UserSettingName */Integer, Object> userSettings = svc.getUserSettings(email, UserSettingName.ExternalEwsUrl).getSettings();
 String ewsUrl = (String) userSettings.get_Item(UserSettingName.ExternalEwsUrl);
-System.out.println("Auto discovered EWS Url: " + ewsUrl);
+System.out.println("Автоматически обнаруженный EWS Url: " + ewsUrl);
 ~~~
-## **Прервать операцию восстановления PST на сервере Exchange**
-API Aspose.Email позволяет восстановить файл PST на сервере Exchange. Однако если операция занимает много времени из-за большого размера файла PST, возможно, потребуется указать критерий для прерывания операции. Это можно сделать с помощью API, как показано в следующем примере кода.
-
+## **Прерывание операции восстановления PST на сервер Exchange**
+Aspose.Email API позволяет восстанавливать файл PST на сервер Exchange. Однако, если операция занимает много времени из-за большого размера файла PST, может потребоваться указать критерий для прерывания операции. Это можно сделать, используя API, как показано в следующем образце кода.
 
 ~~~Java
 final IEWSClient client = EWSClient.getEWSClient("https://exchange.office365.com/ews/exchange.asmx", "username", "password");
@@ -291,9 +272,9 @@ try {
     };
 
     try {
-        // create a test pst and add some test messages to it
+        // создайте тестовый pst и добавьте в него несколько тестовых сообщений
         PersonalStorage pst = PersonalStorage.create(new ByteArrayOutputStream(), FileFormatVersion.Unicode);
-        FolderInfo folder = pst.getRootFolder().addSubFolder("My test folder");
+        FolderInfo folder = pst.getRootFolder().addSubFolder("Моя тестовая папка");
         for (int i = 0; i < 20; i++) {
             MapiMessage message = new MapiMessage("from@gmail.com", "to@gmail.com", "subj", "body");
             folder.addMessage(message);
@@ -301,11 +282,11 @@ try {
         RestoreSettings rs = new RestoreSettings();
         rs.setBeforeItemCallback(callback);
 
-        // now restore the PST with callback
+        // теперь восстановите PST с помощью обратного вызова
         client.restore(pst, rs);
-        System.out.println("Success!");
+        System.out.println("Успешно!");
     } catch (AbortRestoreException e) {
-        System.out.println("Timeout! " + processedItems.get());
+        System.out.println("Тайм-аут! " + processedItems.get());
     }
 } finally {
     client.dispose();

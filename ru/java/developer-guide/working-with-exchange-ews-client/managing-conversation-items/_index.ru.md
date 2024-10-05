@@ -6,105 +6,105 @@ type: docs
 ---
 
 
-Aspose.Email для Java можно использовать для управления элементами беседы на сервере Exchange с помощью [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс. В этом классе используются веб-службы Exchange, доступные только в Exchange Server 2007 и более поздних версиях. В этой статье показано, как [find](#finding-conversations), [copy](#copying-conversations), [move](#moving-conversations) and [delete](#deleting-conversations) элементы беседы на сервере Exchange 2010. Для всех функций, описанных в этом разделе, требуется пакет обновления 1 для Microsoft Exchange Server 2010.
-## **Поиск разговоров**
-Чтобы получить информацию о разговоре из определенной папки на сервере Exchange, выполните следующие действия:
+Aspose.Email для Java может использоваться для управления элементами беседы на Exchange Server с помощью класса [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient). Этот класс использует Exchange Web Services, которые доступны только в Exchange Server 2007 и более поздних версиях. Эта статья показывает, как [найти](#finding-conversations), [скопировать](#copying-conversations), [переместить](#moving-conversations) и [удалить](#deleting-conversations) элементы беседы на Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 требуется для всех функций, включенных в этот раздел.
+## **Поиск бесед**
+Чтобы получить информацию о беседе из определенной папки на Exchange Server:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Вызовите метод IEWSclient.findConversations (), чтобы найти все элементы беседы в папке.
-1. Отобразите свойства элемента беседы, такие как идентификатор, тема разговора и статус флага.
+1. Подключитесь к Exchange Server с использованием класса IEWSClient.
+1. Вызовите метод IEWSClient.findConversations(), чтобы найти все элементы беседы из папки.
+1. Отобразите свойства элемента беседы, такие как ID, тема беседы и статус флага.
 
-В следующем фрагменте кода показано, как найти разговоры.
+Следующий фрагмент кода показывает, как найти беседы.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
-System.out.println("Connected to Exchange 2010");
+System.out.println("Подключено к Exchange 2010");
 
-// Find Conversation Items in the Inbox folder
+// Найдите элементы беседы в папке Входящие
 ExchangeConversation[] conversations = client.findConversations(client.getMailboxInfo().getInboxUri());
-// Show all conversations
+// Покажите все беседы
 for (ExchangeConversation conversation : conversations) {
-    // Display conversation properties like Id and Topic
-    System.out.println("Topic: " + conversation.getConversationTopic());
-    System.out.println("Flag Status: " + conversation.getFlagStatus());
+    // Отобразите свойства беседы, такие как Id и Тема
+    System.out.println("Тема: " + conversation.getConversationTopic());
+    System.out.println("Статус флага: " + conversation.getFlagStatus());
     System.out.println();
 }
 ~~~
-## **Копирование разговоров**
-Чтобы скопировать разговоры из одной папки в другую, выполните следующие действия:
+## **Копирование бесед**
+Чтобы скопировать беседы из одной папки в другую:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Вызовите метод IEWSClient.copyConversationItems (), чтобы скопировать элемент беседы из исходной папки в папку назначения.
+1. Подключитесь к Exchange Server с использованием класса IEWSClient.
+1. Вызовите метод IEWSClient.copyConversationItems(), чтобы скопировать элемент беседы из исходной папки в целевую папку.
 
-В следующем фрагменте кода показано, как копировать разговоры.
+Следующий фрагмент кода показывает, как копировать беседы.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
-System.out.println("Connected to Exchange 2010");
+System.out.println("Подключено к Exchange 2010");
 
-// Find those Conversation Items in the Inbox folder which we want to copy
+// Найдите элементы беседы в папке Входящие, которые мы хотим скопировать
 ExchangeConversation[] conversations = client.findConversations(client.getMailboxInfo().getInboxUri());
 for (ExchangeConversation conversation : conversations) {
-    System.out.println("Topic: " + conversation.getConversationTopic());
-    // Copy the conversation item based on some condition
+    System.out.println("Тема: " + conversation.getConversationTopic());
+    // Скопируйте элемент беседы на основе некоторого условия
     if (conversation.getConversationTopic().contains("test email")) {
         client.copyConversationItems(conversation.getConversationId(), client.getMailboxInfo().getDeletedItemsUri());
-        System.out.println("Copied the conversation item to another folder");
+        System.out.println("Скопирован элемент беседы в другую папку");
     }
 }
 ~~~
-## **Трогательные разговоры**
-Чтобы перенести беседы из одной папки в другую, выполните следующие действия:
+## **Перемещение бесед**
+Чтобы переместить беседы из одной папки в другую:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Вызовите метод IEWSClient.moveConversationItems (), чтобы переместить беседу из исходной папки в папку назначения.
+1. Подключитесь к Exchange Server с использованием класса IEWSClient.
+1. Вызовите метод IEWSClient.moveConversationItems(), чтобы переместить беседу из исходной папки в целевую папку.
 
-В следующем фрагменте кода показано, как перемещать разговоры.
+Следующий фрагмент кода показывает, как перемещать беседы.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
-System.out.println("Connected to Exchange 2010");
+System.out.println("Подключено к Exchange 2010");
 
-// Find those Conversation Items in the Inbox folder which we want to move
+// Найдите элементы беседы в папке Входящие, которые мы хотим переместить
 ExchangeConversation[] conversations = client.findConversations(client.getMailboxInfo().getInboxUri());
 
 for (ExchangeConversation conversation : conversations) {
-    System.out.println("Topic: " + conversation.getConversationTopic());
-    // Move the conversation item based on some condition
+    System.out.println("Тема: " + conversation.getConversationTopic());
+    // Переместите элемент беседы на основе некоторого условия
     if (conversation.getConversationTopic().contains("test email") == true) {
         client.moveConversationItems(conversation.getConversationId(), client.getMailboxInfo().getDeletedItemsUri());
-        System.out.println("Moved the conversation item to another folder");
+        System.out.println("Перемещен элемент беседы в другую папку");
     }
 }
 ~~~
-## **Удаление разговоров**
-Чтобы удалить разговоры из папки, выполните следующие действия:
+## **Удаление бесед**
+Чтобы удалить беседы из папки:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Вызовите метод IEWSClient.deleteConversationItems (), чтобы удалить элемент беседы из исходной папки.
+1. Подключитесь к Exchange Server с использованием класса IEWSClient.
+1. Вызовите метод IEWSClient.deleteConversationItems(), чтобы удалить элемент беседы из исходной папки.
 
-В следующем фрагменте кода показано, как удалять разговоры.
+Следующий фрагмент кода показывает, как удалить беседы.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
-System.out.println("Connected to Exchange 2010");
+System.out.println("Подключено к Exchange 2010");
 
-// Find those Conversation Items in the Inbox folder which we want to delete
+// Найдите элементы беседы в папке Входящие, которые мы хотим удалить
 ExchangeConversation[] conversations = client.findConversations(client.getMailboxInfo().getInboxUri());
 for (ExchangeConversation conversation : conversations) {
-    System.out.println("Topic: " + conversation.getConversationTopic());
-    // Delete the conversation item based on some condition
+    System.out.println("Тема: " + conversation.getConversationTopic());
+    // Удалите элемент беседы на основе некоторого условия
     if (conversation.getConversationTopic().contains("test email") == true) {
         client.deleteConversationItems(conversation.getConversationId());
-        System.out.println("Deleted the conversation item");
+        System.out.println("Элемент беседы удален");
     }
 }
 ~~~

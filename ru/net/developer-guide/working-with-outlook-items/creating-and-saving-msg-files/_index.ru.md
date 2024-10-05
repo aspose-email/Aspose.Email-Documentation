@@ -1,87 +1,87 @@
 ---
-title: "Создание и сохранение файлов MSG"
+title: "Создание и Сохранение MSG Файлов"
 url: /ru/net/creating-and-saving-msg-files/
 weight: 10
 type: docs
 ---
 
 
-Aspose.Email поддерживает создание файлов сообщений Outlook (MSG). В этой статье объясняется, как:
+Aspose.Email поддерживает создание файлов сообщений Outlook (MSG). Эта статья объясняет, как:
 
-- Создавайте сообщения MSG.
-- Создавайте сообщения MSG с вложениями.
-- Создайте сообщение MSG с телом RTF.
-- Сохраните сообщение как черновик.
-- Работа со сжатием тела.
- 
-## **Создание и сохранение сообщений Outlook**
+- Создать сообщения MSG.
+- Создать сообщения MSG с вложениями.
+- Создать сообщение MSG с телом в формате RTF.
+- Сохранить сообщение как черновик.
+- Работать с сжатием тела.
+  
+## **Создание и Сохранение Сообщений Outlook**
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс имеет [Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save/) метод, позволяющий сохранять файлы Outlook MSG на диск или в потоковом режиме. Приведенные ниже фрагменты кода создают экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс, задайте такие свойства, как from, to, subject и body. [Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save/) метод принимает имя файла в качестве аргумента. Кроме того, сообщения Outlook можно создавать с помощью [сжатый корпус RTF]([/email/net/managing-message-files-with-aspose-email-outlook/#managingmessagefileswithaspose-email-outlook-creatingmsgfileswithrtfbody](https://docs.aspose.com/email/net/managing-message-files-with-aspose-email-outlook/#managingmessagefileswithaspose-email-outlook-creatingmsgfileswithrtfbody)) используя [MapiConversionOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/). Для настройки создайте новое приложение Windows и добавьте ссылку на dll Aspose.Email в проект.
+Класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) имеет метод [Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save/), который может сохранять файлы Outlook MSG на диск или в поток. Приведенные ниже фрагменты кода создают экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/), устанавливают такие свойства, как от кого, кому, тема и текст. Метод [Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save/) принимает имя файла в качестве аргумента. Кроме того, сообщения Outlook могут быть созданы с [сжатыми RTF телами]([/email/net/managing-message-files-with-aspose-email-outlook/#managingmessagefileswithaspose-email-outlook-creatingmsgfileswithrtfbody](https://docs.aspose.com/email/net/managing-message-files-with-aspose-email-outlook/#managingmessagefileswithaspose-email-outlook-creatingmsgfileswithrtfbody)) с использованием [MapiConversionOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/). Чтобы настроить, создайте новое Windows-приложение и добавьте ссылку на библиотеку Aspose.Email в проект.
 
-1. Создайте новый экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс и задайте свойства From, To, Subject и Body.
-2. Позвоните [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) class [FromMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/frommailmessage/#frommailmessage/) метод, который принимает объект [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) тип. The [FromMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/frommailmessage/#frommailmessage/) метод преобразует [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) (MSG).
-3. Позвоните [MapiMessage.Save()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/save/#save/) метод сохранения файла MSG.
+1. Создайте новый экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и установите свойства From, To, Subject и Body.
+2. Вызовите метод [FromMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/frommailmessage/#frommailmessage/) класса [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/), который принимает объект типа [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Метод [FromMailMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/frommailmessage/#frommailmessage/) преобразует [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) (MSG).
+3. Вызовите метод [MapiMessage.Save()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/save/#save/) для сохранения файла MSG.
 
-Напишите следующий код в событии нажатия кнопки управления приложением Windows.
+Напишите следующий код в событии нажатия кнопки управления Windows-приложения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreatingAndSavingOutlookMessages-CreatingAndSavingOutlookMessages.cs" >}}
 
-## **Создание файлов MSG с вложениями**
+## **Создание MSG Файлов С Вложениями**
 
-[В приведенном выше примере](https://docs.aspose.com/email/ru/net/managing-message-files-with-aspose-email-outlook/#managingmessagefileswithaspose-email-outlook-creatingandsavingoutlookmessages), мы создали простой файл MSG. Aspose.Email также поддерживает сохранение файлов сообщений с вложениями. Все, что вам нужно сделать, это добавить вложения в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр. Добавьте вложения, вызвав *Add()* метод на [MailMessage.Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/) коллекция. Добавьте список в форму, созданную выше, и добавьте две кнопки, по одной для добавления и удаления вложений. Приложение, добавляющее приложения, работает следующим образом:
+[В примере выше](https://docs.aspose.com/email/ru/net/managing-message-files-with-aspose-email-outlook/#managingmessagefileswithaspose-email-outlook-creatingandsavingoutlookmessages) мы создали простой MSG файл. Aspose.Email также поддерживает сохранение файлов сообщений с вложениями. Все, что вам нужно сделать, это добавить вложения в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Добавьте вложения, вызвав метод *Add()* на коллекции [MailMessage.Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/). Добавьте список на форму, созданную выше, и добавьте две кнопки, по одной для добавления и удаления вложений. Приложение, которое добавляет вложения, работает так:
 
-1. Когда **Добавить вложение** кнопка нажата, **Диалог «Открыть файл»** отображается, чтобы помочь пользователям найти и выбрать вложение.
-2. После выбора файла полный путь добавляется в список.
-3. При создании файла MSG пути к вложениям извлекаются из списка и добавляются в [MailMessage.Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/) collection.
+1. Когда кнопка **Добавить вложение** нажата, отображается **Диалог открытия файла**, чтобы помочь пользователям просмотреть и выбрать вложение.
+2. Когда файл выбран, полный путь добавляется в список.
+3. Когда файл MSG создан, пути вложений берутся из списка и добавляются в коллекцию [MailMessage.Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/).
 
-Напишите следующий код в поле **Добавить вложение** событие нажатия кнопки.
+Напишите следующий код в событии нажатия кнопки **Добавить вложение**.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-WorkingWithMSGAttachments-CreateMessagesWithAttachments.cs" >}}
 
-Когда **Удалить вложение** кнопка нажата, удалите выбранные элементы из списка. Напишите следующий код в событие нажатия кнопки «Удалить вложение».
+Когда кнопка **Удалить вложение** нажата, удалите выбранные элементы из списка. Напишите следующий код в событии нажатия кнопки Удалить вложение.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-WorkingWithMSGAttachments-RemoveAttachment.cs" >}}
 
-Добавьте код для добавления вложений в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр. Окончательный код функции Write Msg написан следующим образом.
+Добавьте код для добавления вложений в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Окончательный код для функции Write Msg записан ниже.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-WorkingWithMSGAttachments-AddingMSGAttachments.cs" >}}
 
-## **Создание файлов MSG с помощью тела RTF**
+## **Создание MSG Файлов С Телом В Формате RTF**
 
-С помощью Aspose.Email можно также создавать файлы сообщений Outlook (MSG) с телами RTF. Тело RTF поддерживает форматирование текста. Создайте его, установив [MailMessage.HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) имущество. Когда вы конвертируете [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) Например, тело HTML преобразуется в RTF. Таким образом, форматирование тела письма сохраняется.
+Вы также можете создавать файлы сообщений Outlook (MSG) с телами в формате Rich Text (RTF) с Aspose.Email. Тело в формате RTF поддерживает форматирование текста. Создайте его, установив свойство [MailMessage.HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/). Когда вы преобразуете экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) в экземпляр [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/), HTML-тело преобразуется в RTF. Таким образом, форматирование тела электронного письма сохраняется.
 
-В следующем примере создается файл MSG с телом RTF. В тексте HTML используется один заголовок, полужирный шрифт и подчеркивание. Это форматирование сохраняется при преобразовании HTML в RTF.
+Следующий пример создает файл MSG с телом в формате RTF. В нем есть один заголовок, а также жирный и подчеркнутый текст, примененные в HTML-теле. Это форматирование сохраняется при преобразовании HTML в RTF.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreatingMSGFilesWithRTFBody-CreatingMSGFilesWithRTFBody.cs" >}}
 
-## **Сохранение сообщения в статусе черновика**
+## **Сохранение Сообщения в Статусе Черновика**
 
-Письма сохраняются как черновики, когда кто-то начал их редактировать, но хочет вернуться к ним, чтобы завершить их позже. Aspose.Email поддерживает сохранение сообщений электронной почты в черновом статусе, установив флаг сообщения. Ниже приведен пример кода для сохранения сообщения электронной почты Outlook (MSG) в виде черновика.
+Электронные письма сохраняются как черновики, когда кто-то начинает их редактировать, но хочет вернуться к ним, чтобы закончить позже. Aspose.Email поддерживает сохранение электронных сообщений в статусе черновика путем установки флага сообщения. Ниже приведен пример кода для сохранения электронного сообщения Outlook (MSG) как черновика.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-SavingMessageInDraftStatus-SavingMessageInDraftStatus.cs" >}}
 
-## **Сжатие RTF при настройке тела сообщения MAPI**
+## **Сжатие RTF при установке тела MAPI сообщения**
 
-> **_NOTE:_** Процесс сжатия может снизить производительность при создании сообщений. Понимая этот факт и настроив флаг сжатия в соответствии с конкретными требованиями и компромиссом между размером файла и производительностью, разработчики могут эффективно управлять созданием файлов MSG и PST при работе с сообщениями электронной почты.
+> **_ПРИМЕЧАНИЕ:_** Процесс сжатия может замедлить производительность при создании сообщений. Поняв этот факт и настроив флаг сжатия в зависимости от конкретных требований и компромисса между размером файла и производительностью, разработчики могут эффективно управлять созданием файлов MSG и PST при работе с электронными сообщениями.
 
-В этом разделе вы узнаете, как использовать сжатие RTF при настройке тела сообщения MAPI. Сжатие RTF предназначено для уменьшения размера сообщения, а также получаемых файлов PST (Personal Storage Table), которые Microsoft Outlook использует для хранения сообщений электронной почты и других данных. Используя сжатие RTF при настройке тела сообщения, разработчики могут уменьшить объем памяти, необходимый для хранения сообщений электронной почты, или оптимизировать пропускную способность сети при передаче сообщений.
+В этом разделе вы узнаете, как использовать сжатие RTF при установке тела сообщения MAPI. Сжатие RTF предназначено для уменьшения размера сообщения, а также полученных файлов PST (Personal Storage Table), которые Microsoft Outlook использует для хранения электронных писем и других данных. Используя сжатие RTF при настройке тела сообщения, разработчики могут уменьшить количество памяти, необходимой для хранения электронных сообщений, или оптимизировать пропускную способность сети при передаче сообщений.
 
-Для этого были разработаны два перегруженных метода:
+Для этой цели были разработаны два перегруженных метода:
 
-- [MapiMessageItemBase.SetBodyContent](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/setbodycontent/)(строковое содержимое, bodyContentType ContentType, сжатие bool): этот метод позволяет задать содержимое текста сообщения, используя указанное строковое содержимое и указав основной текст ContentType (например, обычный текст, HTML и т. д.). Необязательный параметр сжатия — это значение, указывающее, следует ли сжимать содержимое с помощью сжатия RTF. Если параметр сжатия имеет значение true, содержимое будет сжато, в результате чего размер сообщения уменьшится.
+- [MapiMessageItemBase.SetBodyContent](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/setbodycontent/)(string content, BodyContentType contentType, bool compression): Этот метод позволяет установить содержимое тела сообщения, используя указанное строковое содержимое и указав тип содержимого тела (например, обычный текст, HTML и т.д.). Необязательный параметр сжатия — это значение, которое указывает, должно ли содержимое быть сжато с помощью сжатия RTF. Если параметр сжатия равен true, содержимое будет сжато, что приведет к уменьшению размера сообщения.
 
-- [MapiMessageItemBase.SetBodyRtf](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/setbodyrtf/)(строковое содержимое, сжатие bool): этот метод специально задает содержимое тела сообщения в формате RTF. Параметр content представляет собой строку, представляющую содержимое RTF, которое будет задано в качестве тела сообщения. Как и в предыдущем методе, параметр сжатия определяет, следует ли применять сжатие RTF к содержимому. Если сжатие верно, содержимое RTF будет сжато для уменьшения размера.
+- [MapiMessageItemBase.SetBodyRtf](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessageitembase/setbodyrtf/)(string content, bool compression): Этот метод специально устанавливает содержимое тела сообщения в формате RTF. Параметр content — это строка, представляющая RTF-содержимое, которое будет установлено в качестве тела сообщения. Как и в предыдущем методе, параметр сжатия определяет, должно ли применяться сжатие RTF к содержимому. Если сжатие равно true, RTF-содержимое будет сжато, чтобы уменьшить размер.
 
-В следующем примере кода показано, как задать html-тело и сохранить его сжатым:
+Следующий пример кода показывает, как установить HTML-тело и сохранить его в сжатом виде:
 
 ```cs
 var msg = new MapiMessage("from@doamin.com", "to@domain.com", "subject", "body");
-// set the html body and keep it compressed
-// this will reduce the message size
+// установить HTML-тело и сохранить его в сжатом виде
+// это уменьшит размер сообщения
 msg.SetBodyContent(htmlBody, BodyContentType.Html, true);
 ```
 
-Существует также [MapiConversionOptions.UseBodyCompression](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/usebodycompression/) имущество. Если это свойство включено, во время преобразования MailMessage в MapiMessage применяется сжатие текста RTF, что приводит к уменьшению размера файла MSG. Это показано в примере кода ниже:
+Также есть свойство [MapiConversionOptions.UseBodyCompression](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/usebodycompression/). Когда это свойство включено, сжатие тела RTF применяется при преобразовании MailMessage в MapiMessage, в результате чего размер файла MSG становится меньше. Это показано в следующем примере кода:
 
 ```cs
 var message = MailMessage.Load(fileName);

@@ -1,32 +1,32 @@
 ---
-title: "Сохранение сообщений из почтового ящика сервера Exchange с помощью WebDAV"
+title: "Сохранение сообщений из почтового ящика Exchange Server с использованием WebDav"
 url: /ru/java/save-messages-from-exchange-server-mailbox-using-webdav/
 weight: 90
 type: docs
 ---
 
-В этой статье показано, как получать сообщения из почтового ящика Exchange Server и сохранять их на диск в форматах EML и MSG.
-## **Сохранение сообщений из почтового ящика сервера Exchange в EML**
-Чтобы получать сообщения и сохранять их в формате EML, выполните следующие действия:
+В этой статье показано, как получить сообщения из почтового ящика Exchange Server и сохранить их на диск в форматах EML и MSG.
 
-1. Создайте экземпляр [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient) class.
+## **Сохранение сообщений из почтового ящика Exchange Server в формат EML**
+Чтобы получить сообщения и сохранить в формате EML:
+
+1. Создайте экземпляр класса [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient).
 1. Укажите имя сервера, имя пользователя, пароль и домен.
-1. Позвоните [ExchangeClient.listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#listMessages\(java.lang.String\)) метод получения экземпляра [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection) collection.
-1. Пройдите через [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection) коллекция для получения уникального URI для каждого сообщения.
-1. Позвоните [ExchangeClient.saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#saveMessage\(java.lang.String,%20java.io.OutputStream\)) метод и передайте уникальный URI в качестве параметра.
-1. Предоставьте [saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#saveMessage\(java.lang.String,%20java.io.OutputStream\)) метод с указанием пути к месту сохранения файла.
- 
+1. Вызовите метод [ExchangeClient.listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#listMessages\(java.lang.String\)), чтобы получить экземпляр коллекции [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection).
+1. Пройдите по коллекции [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection), чтобы получить уникальный URI для каждого сообщения.
+1. Вызовите метод [ExchangeClient.saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#saveMessage\(java.lang.String,%20java.io.OutputStream\)) и передайте уникальный URI в качестве параметра.
+1. Укажите метод [saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#saveMessage\(java.lang.String,%20java.io.OutputStream\)) с путем, где вы хотите сохранить файл.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-exchange-SaveMessagesFromExchangeServerMailbox-SaveMessagesAsEML.java" >}}
 ## **Сохранение сообщений в OutputStream**
-Вместо сохранения файлов EML на диск их можно сохранить в OutputStream. Это удобно, если вы хотите сохранить поток в каком-либо месте хранения, например в базе данных. Как только поток будет сохранен в базе данных, вы можете перезагрузить файл EML в [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) class.
+Вместо сохранения EML файлов на диск можно сохранить их в OutputStream. Это полезно, когда вы хотите сохранить поток в какое-либо место хранения, например, в базу данных. Как только поток будет сохранен в базу данных, вы можете загрузить файл EML в класс [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage).
 
-Приведенные ниже фрагменты кода сохраняют сообщения из почтового ящика Exchange Server в поток памяти.
+Приведенные ниже фрагменты кода сохраняют сообщения из почтового ящика Exchange Server в память.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-exchange-SaveMessagesFromExchangeServerMailbox-SaveMessagesToOutputStream.java" >}}
 ## **Сохранение сообщений в формате MSG**
-The [ExchangeClient.saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#saveMessage\(java.lang.String,%20java.io.OutputStream\)) метод может напрямую сохранить сообщение в формате EML. Чтобы сохранить сообщения в формате MSG, сначала вызовите [ExchangeClient.fetchMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#fetchMessage\(java.lang.String\)) метод, который возвращает экземпляр [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) класс. Затем позвоните [MailMessage.save()](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#save\(java.io.OutputStream\)) метод сохранения сообщения в MSG.
+Метод [ExchangeClient.saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#saveMessage\(java.lang.String,%20java.io.OutputStream\)) может напрямую сохранять сообщение в формате EML. Чтобы сохранить сообщения в формате MSG, сначала вызовите метод [ExchangeClient.fetchMessage()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#fetchMessage\(java.lang.String\)), который возвращает экземпляр класса [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). Затем вызовите метод [MailMessage.save()](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#save\(java.io.OutputStream\)), чтобы сохранить сообщение в формате MSG.
 
-Приведенный ниже фрагмент кода позволяет получать сообщения из почтового ящика Exchange Server и сохранять их в формате MSG.
+Приведенный ниже фрагмент кода получает сообщения из почтового ящика Exchange Server и сохраняет их в формате MSG.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-exchange-SaveMessagesFromExchangeServerMailbox-SaveMessagesInMSGFormat.java" >}}

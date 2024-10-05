@@ -1,5 +1,5 @@
 ---
-title: "Работа с папками на сервере IMAP"
+title: "Работа с папками на IMAP сервере"
 url: /ru/net/working-with-folders-on-imap-server/
 weight: 60
 type: docs
@@ -8,53 +8,53 @@ type: docs
 
 ## **Получение информации о папках**
 
-С Aspose.Email очень просто получать информацию о папках с сервера IMAP. Позвоните в [ListFolders()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listfolders/#listfolders/) метод [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) класс. Он возвращает объект [ImapFolderInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapfolderinfocollection/) тип. Изучите эту коллекцию и получайте информацию об отдельных папках в цикле. Метод перегружен. Вы можете передать имя папки в качестве параметра, чтобы получить список подпапок. В следующем фрагменте кода показано, как получить информацию о папке с сервера IMAP с помощью Aspose.Email, используя метод, описанный в информации.
+Получение информации о папках с IMAP сервера очень просто с помощью Aspose.Email. Вызовите метод [ListFolders()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listfolders/#listfolders/) класса [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). Он возвращает объект типа [ImapFolderInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapfolderinfocollection/). Переберите эту коллекцию и получите информацию о отдельных папках в цикле. Метод перегружен. Вы можете передать имя папки в качестве параметра, чтобы получить список подпапок. Следующий фрагмент кода показывает, как получить информацию о папке с IMAP сервера, используя Aspose.Email и описанный метод.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-GettingFoldersInformation-GettingFoldersInformation.cs" >}}
 
 ## **Удаление и переименование папок**
 
-Папку на сервере IMAP можно удалить или переименовать в одну строку с помощью Aspose.Email:
+Папку на IMAP сервере можно удалить или переименовать в одну строчку с помощью Aspose.Email:
 
-- The [`DeleteFolder()`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletefolder/#deletefolder/) метод принимает имя папки в качестве параметра.
-- Для [`RenameFolder()`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/renamefolder/#renamefolder/) метод, вам нужно передать текущее имя папки и новое имя папки.
+- Метод [`DeleteFolder()`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletefolder/#deletefolder/) принимает имя папки в качестве параметра.
+- Для метода [`RenameFolder()`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/renamefolder/#renamefolder/) вам нужно передать текущее имя папки и новое имя папки.
 
-В следующем фрагменте кода показано, как удалить папку с сервера IMAP и переименовать папку. Каждая операция выполняется с помощью одной строки кода.
+Следующий фрагмент кода показывает, как удалить папку с IMAP сервера и как переименовать папку. Каждая операция выполняется одной строкой кода.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-DeletingAndRenamingFolders-DeletingAndRenamingFolders.cs" >}}
 
 ## **Добавление нового сообщения в папку**
 
-Вы можете добавить новое сообщение в папку, используя [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) and [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) классы. Сначала создайте [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) возражать, предоставляя субъекту ценности и исходя из них. Затем подпишитесь на папку и добавьте в нее сообщение. В следующем фрагменте кода показано, как добавить новое сообщение в папку.
+Вы можете добавить новое сообщение в папку, используя классы [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). Сначала создайте объект [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) с указанием темы, а также адресов "Кому" и "От". Затем подпишитесь на папку и добавьте сообщение в неё. Следующий фрагмент кода показывает, как добавить новое сообщение в папку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-AddingNewMessage-AddingNewMessageToFolder.cs" >}}
 
-## **Добавьте несколько сообщений с поддержкой нескольких подключений**
+## **Добавление нескольких сообщений с поддержкой многоподключения**
 
-Вы можете добавить несколько сообщений, используя [AppendMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessages/#appendmessages/) метод, предоставленный [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) классы. [AppendMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessages/#appendmessages/) метод принимает список [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и добавляет его в текущую папку, если папка не указана в качестве параметра. IMapClient также поддерживает режим MultiConnection для высоконагруженных операций. В следующем фрагменте кода показано, как добавить несколько сообщений в режиме MultiConnection.
+Вы можете добавить несколько сообщений, используя метод [AppendMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessages/#appendmessages/) класса [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). Метод [AppendMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessages/#appendmessages/) принимает список [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и добавляет его в текущую папку, если папка не была предоставлена как параметр. ImapClient также поддерживает режим многоподключения для высоконагруженных операций. Следующий фрагмент кода показывает, как добавить несколько сообщений, используя режим многоподключения.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapGroupAppendWithMultiConnection-1.cs" >}}
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Обратите внимание, что использование режима нескольких подключений не гарантирует повышения производительности.
+Обратите внимание, что использование режима многоподключения не гарантирует увеличение производительности.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-## **Переместить сообщения в другую папку почтового ящика**
+## **Перемещение сообщений в другую папку почтового ящика**
 
-Aspose.Email for .NET позволяет перемещать сообщения из одной папки почтового ящика в другую с помощью [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) API. [MoveMessage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/movemessage/#movemessage/) метод использует уникальный идентификатор сообщения и имя целевой папки для перемещения сообщения в папку назначения. В следующем фрагменте кода показано, как перемещать сообщения в другую папку почтового ящика.
+Aspose.Email для .NET позволяет перемещать сообщения из одной папки почтового ящика в другую с помощью API [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). Метод [MoveMessage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/movemessage/#movemessage/) использует уникальный идентификатор сообщения и имя папки назначения для перемещения сообщения в папку назначения. Следующий фрагмент кода показывает, как перемещать сообщения в другую папку почтового ящика.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-MoveMessage-MoveMessage.cs" >}}
 
 ## **Копирование сообщений в другую папку почтового ящика**
 
-Aspose.Email API предоставляет возможность копировать сообщения из одной папки почтового ящика в другую. Это позволяет копировать как одно, так и несколько сообщений с помощью [CopyMessage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/copymessage/#copymessage/) and [CopyMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/copymessages/#copymessages/) методы. [CopyMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/copymessages/#copymessages/) Метод предоставляет возможность копировать несколько сообщений из исходной папки почтового ящика в папку почтового ящика назначения. В следующем фрагменте кода показано, как копировать сообщения в другую папку почтового ящика.
+API Aspose.Email предоставляет возможность копировать сообщения из одной папки почтового ящика в другую. Он позволяет копировать как одно, так и несколько сообщений, используя методы [CopyMessage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/copymessage/#copymessage/) и [CopyMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/copymessages/#copymessages/). Метод [CopyMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/copymessages/#copymessages/) предоставляет возможность копировать несколько сообщений из папки источника почтового ящика в папку назначения. Следующий фрагмент кода показывает, как копировать сообщения в другую папку почтового ящика.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-CopyMultipleMessagesFromOneFoldertoAnother-CopyMultipleMessagesFromOneFoldertoAnother.cs" >}}
 
-## **Работа с папками почтовых ящиков специального назначения**
+## **Работа со специальными папками почтового ящика**
 
-В некоторых хранилищах сообщений IMAP есть специальные почтовые ящики, например, для хранения черновиков или отправленных сообщений. Многие почтовые клиенты позволяют пользователям указывать, куда следует помещать черновики или отправленные сообщения, но для их настройки пользователь должен знать, какие почтовые ящики сервер выделил для этих целей. Aspose.Email может идентифицировать эти специальные почтовые ящики с помощью [ImapMailboxInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmailboxinfo/) класс, чтобы с ними было удобнее работать. В следующем примере кода показано, как получить доступ к этим специальным почтовым ящикам с помощью [ImapMailboxInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmailboxinfo/) class.
+Некоторые хранилища IMAP-сообщений включают специальные почтовые ящики, такие как те, которые используются для хранения черновиков или отправленных сообщений. Многие почтовые клиенты позволяют пользователям указывать, куда должны помещаться черновики или отправленные сообщения, но для их настройки требуется, чтобы пользователь знал, какие почтовые ящики сервер зарезервировал для этих целей. Aspose.Email может идентифицировать эти специальные почтовые ящики, используя класс [ImapMailboxInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmailboxinfo/), чтобы упростить работу с ними. Следующий пример кода демонстрирует, как получить доступ к этим специальным почтовым ящикам, используя класс [ImapMailboxInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmailboxinfo/).
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapSpecialUseMailboxes-1.cs" >}}

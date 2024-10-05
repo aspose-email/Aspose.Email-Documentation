@@ -6,11 +6,11 @@ type: docs
 ---
 
 
-Aspose.Email поддерживает работу с контактами Gmail. Использование [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) интерфейс, пользователи могут извлекать контакты из учетной записи Gmail, создавать новые контакты, обновлять и удалять существующие контакты. Gmail позволяет разработчикам выполнять все это с помощью общедоступного API для разработчиков. Для работы с контактами Gmail необходима следующая пользовательская информация:
-Имя пользователя, адрес электронной почты, пароль, идентификатор клиента, токен обновления секретного ключа клиента.
+Aspose.Email поддерживает работу с контактами Gmail. Используя интерфейс [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient), пользователи могут извлекать контакты из учетной записи Gmail, создавать новые контакты, а также обновлять и удалять существующие контакты. Gmail позволяет разработчикам выполнять все эти действия с помощью своего публичного API для разработчиков. Следующая информация пользователя необходима для работы с контактами Gmail:
+Имя пользователя, адрес электронной почты, пароль, идентификатор клиента, секрет клиента, токен обновления.
 
 ## **Доступ к контактам Gmail**
-Ниже приведен пример приложения, которое можно использовать для доступа к подробной информации о контактах во всех группах.
+Ниже приведено примерное приложение, которое можно использовать для доступа к деталям контактов во всех группах.
 
 
 
@@ -20,7 +20,7 @@ Aspose.Email поддерживает работу с контактами Gmail
             for (Contact contact : contacts)
                 System.out.println(contact.getDisplayName() + ", " + contact.getEmailAddresses().get_Item(0));
 
-            // Fetch contacts from a specific group
+            // Извлечение контактов из конкретной группы
             ContactGroupCollection groups = client.getAllGroups();
             GoogleContactGroup group = null;
             for (GoogleContactGroup g : groups) {
@@ -29,7 +29,7 @@ Aspose.Email поддерживает работу с контактами Gmail
                 }
             }
 
-            // Retrieve contacts from the Group
+            // Извлечение контактов из группы
             if (group != null) {
                 Contact[] contacts2 = client.getContactsFromGroup(group.getId());
                 for (Contact con : contacts2)
@@ -39,12 +39,12 @@ Aspose.Email поддерживает работу с контактами Gmail
 
 ~~~
 ## **Создание контакта**
-В следующем фрагменте кода показано, как создать контакт.
+Следующий фрагмент кода показывает, как создать контакт.
 
 
 
 ~~~Java
-// Create a Contact
+// Создать контакт
 Contact contact = new Contact();
 contact.setPrefix("Prefix");
 contact.setGivenName("GivenName");
@@ -110,14 +110,14 @@ contact.getAssociatedPersons().setParent("Parent");
 contact.getAssociatedPersons().setMother("Mother");
 contact.getAssociatedPersons().setManager("Manager");
 
-// Email Address
+// Адрес электронной почты
 EmailAddress eAddress = new EmailAddress();
 eAddress.setAddress("email@gmail.com");
 contact.getEmailAddresses().add(eAddress);
 String contactUri = client.createContact(contact);
 ~~~
 ## **Обновление контакта**
-После получения контакта его атрибуты можно обновить и сохранить контакт обратно в учетную запись Gmail. В следующем фрагменте кода показано, как извлекать контакты из учетной записи Gmail, а затем изменять один из них, который затем сохраняется.
+После извлечения контакта его атрибуты могут быть обновлены, и контакт может быть сохранен обратно в учетную запись Gmail. Следующий фрагмент кода показывает, как извлечь контакты из учетной записи Gmail, а затем изменить один из них, который затем сохраняется обратно.
 
 
 
@@ -134,7 +134,7 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 }
 ~~~
 ## **Удаление контакта**
-Чтобы удалить контакт Gmail, используется метод DeleteContact клиента Gmail, как показано в следующем примере.
+Для удаления контакта Gmail используется метод DeleteContact клиента Gmail, как показано в следующем примерном фрагменте кода.
 
 
 
@@ -142,7 +142,7 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
 client.deleteContact(contact.getId().getGoogleId());
 ~~~
 ## **Сохранение контакта**
-Aspose.Email позволяет сохранять контакты в различных выходных форматах, таких как MSG и VCF. Метод Save позволяет добиться этого. В следующем фрагменте кода показано, как сохранить контакт.
+Aspose.Email позволяет сохранять контакт в различных выходных форматах, таких как MSG и VCF. Метод Save предоставляет возможность достичь этого. Следующий фрагмент кода показывает, как сохранить контакт.
 
 
 

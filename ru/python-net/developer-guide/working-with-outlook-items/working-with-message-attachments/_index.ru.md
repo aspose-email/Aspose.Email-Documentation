@@ -7,11 +7,11 @@ type: docs
 
 
 ## **Управление вложениями с помощью Aspose Outlook**
-В разделе Создание и сохранение файлов сообщений Outlook (MSG) объясняется, как создавать и сохранять сообщения, а также файлы MSG с вложениями. В этой статье объясняется, как управлять вложениями Microsoft Outlook с помощью Aspose.Email. Доступ к вложениям из файла сообщений и их сохранение на диск осуществляется с помощью свойства «Вложения класса MapiMessage». Свойство «Вложения» представляет собой набор типов класса MapiAttachmentCollection.
+Создание и сохранение файлов сообщений Outlook (MSG) объясняет, как создавать и сохранять сообщения, а также как создавать MSG файлы с вложениями. В этой статье объясняется, как управлять вложениями Microsoft Outlook с помощью Aspose.Email. Вложения из файла сообщения доступны и сохраняются на диск с помощью свойства Attachments класса MapiMessage. Свойство Attachments представляет собой коллекцию типа MapiAttachmentCollection.
 
-### **Проверьте, является ли вложение встроенным или обычным**
+### **Проверка, является ли вложение встроенным или обычным**
 
-Под «встроенными» и «обычными» вложениями понимается способ их включения в сообщение электронной почты. **Regular** вложения — это файлы, прикрепленные традиционным способом. Обычно они отображаются в виде списка в почтовом клиенте и могут быть загружены получателем и сохранены в локальном хранилище. **Inline** вложения, также известные как встроенные или встроенные изображения, обычно используются для включения изображений или других медиафайлов в текст электронного письма. Они не отображаются в отдельном списке, а отображаются непосредственно в содержимом письма, например в тексте письма. Это позволяет добавлять изображения или другие медиафайлы, которые являются частью содержимого сообщения. В приведенном ниже примере кода показано, как определить, является ли вложение встроенным или обычным:
+"Встроенные" и "Обычные" вложения относятся к способу их включения в электронное сообщение. **Обычные** вложения — это файлы, прикрепленные традиционным способом. Обычно они отображаются в списке в почтовом клиенте и могут быть загружены получателем и сохранены на локальное хранилище. **Встроенные** вложения, также известные как встраиваемые или встроенные изображения, обычно используются для включения изображений или других медиа в текст сообщения. Они не отображаются в отдельном списке, но отображаются непосредственно в содержании электронной почты, например, в теле письма. Это позволяет включать изображения или другие медиа, которые являются частью содержимого сообщения. Пример кода ниже демонстрирует, как определить, является ли вложение встроенным или обычным:
 
 ```python
 import aspose.email as ae
@@ -22,14 +22,14 @@ for attachment in msg.attachments:
     print(f"{attachment.display_name}:{attachment.is_inline}")
 ```
 
-### **Сохранить вложения из файла сообщений Outlook (MSG)**
+### **Сохранение вложений из файла сообщения Outlook (MSG)**
 
-Чтобы сохранить вложения из файла MSG, выполните следующие действия:
+Чтобы сохранить вложения из файла MSG:
 
-1. Просмотрите коллекцию MapiAttachmentCollection и получите отдельные вложения.
-1. Чтобы сохранить вложения, вызовите метод Save () класса MapiAttachment.
+1. Переберите коллекцию MapiAttachmentCollection и получите отдельные вложения.
+1. Чтобы сохранить вложения, вызовите метод Save() класса MapiAttachment.
 
-В следующем фрагменте кода показано, как сохранять вложения на локальный диск.
+Следующий фрагмент кода показывает, как сохранить вложения на локальный диск.
 
 ```py
 import aspose.email as ae
@@ -37,40 +37,39 @@ import aspose.email as ae
 data_dir = "C://dataDir/"
 file_name = "message.msg"
 
-# Create an instance of MapiMessage from file
+# Создайте экземпляр MapiMessage из файла
 message = ae.mapi.MapiMessage.from_file(data_dir + file_name)
 
-# Iterate through the attachments collection
+# Переберите коллекцию вложений
 for attachment in message.attachments:
-    # Save the individual attachment
+    # Сохраните отдельное вложение
     attachment.save(data_dir + attachment.file_name)
 ```
 
 ### **Получение вложений вложенных почтовых сообщений**
 
-Встроенные вложения OLE также отображаются в коллекции вложений класса MapiMessage. В следующем примере кода файл сообщений анализируется на наличие вложенных сообщений и сохраняется на диске. Статический метод класса MapiMessage FromProperties () позволяет создать новое сообщение из встроенного вложения. В следующем фрагменте кода показано, как получать вложенные вложения в почтовые сообщения.
+Встраиваемые OLE-вложения также появляются в коллекции Attachment класса MapiMessage. В следующем примере кода анализируется файл сообщения для встроенных вложений сообщений и сохраняется на диск. Статический метод FromProperties() класса MapiMessage может создать новое сообщение из встроенного вложения. Следующий фрагмент кода показывает, как получить вложенные почтовые сообщения.
 
 ```py
 import aspose.email as ae
 
 eml = ae.mapi.MapiMessage.load("my.msg")
 
-# Create a MapiMessage object from the individual attachment
+# Создайте объект MapiMessage из отдельного вложения
 get_attachment = ae.mapi.MapiMessage.from_properties(eml.attachments[0].object_data.properties)
 
-# Create an object of type MailMessageInterpreter from the above message and save the embedded message to a file on disk
+# Создайте объект типа MailMessageInterpreter из вышеуказанного сообщения и сохраните встроенное сообщение в файл на диске
 mail_message = get_attachment.to_mail_message(ae.mapi.MailConversionOptions())
 mail_message.save("NestedMailMessageAttachments_out.eml", ae.SaveOptions.default_eml)
 ```
 
 ### **Удаление вложений**
 
-Библиотека Aspose Outlook предоставляет возможность удаления вложений из файлов сообщений Microsoft Outlook (.msg):
+Библиотека Aspose Outlook предоставляет функциональность для удаления вложений из файлов Microsoft Outlook Message (.msg):
 
-- Вызовите метод removeAttachments (). В качестве параметра он принимает путь к файлу сообщения. Он реализован как публичный статический метод, поэтому вам не нужно создавать экземпляр объекта.
+- Вызовите метод RemoveAttachments(). Он принимает путь к файлу сообщения в качестве параметра. Реализован как публичный статический метод, поэтому вам не нужно создавать экземпляр объекта.
 
-В следующем фрагменте кода показано, как удалить вложения.
-
+Следующий фрагмент кода показывает, как удалить вложения.
 
 ```py
 import aspose.email as ae
@@ -78,91 +77,91 @@ import aspose.email as ae
 ae.mapi.MapiMessage.remove_attachments("AttachmentsToRemove_out.msg")
 ```
 
-Можно также вызвать статический метод класса MapiMessage DestoryAttachment (). Он работает быстрее, чем removeAttachment (), поскольку метод removeAttachment () анализирует файл сообщения.
+Вы также можете вызвать статический метод класса MapiMessage DestroyAttachment(). Он работает быстрее, чем RemoveAttachment(), потому что метод RemoveAttachment() анализирует файл сообщения.
 
 ```py
 import aspose.email as ae
 
-# Destroy attachments in the MapiMessage
+# Удалите вложения в MapiMessage
 ae.mapi.MapiMessage.destroy_attachments(data_dir + "AttachmentsToDestroy_out.msg")
 ```
 
 ### **Добавление вложений MSG**
 
-Сообщение Outlook может содержать другие сообщения Microsoft Outlook во вложениях в виде обычных или встроенных сообщений. MapiAttachmentCollection предоставляет перегруженным участникам метода Add возможность создавать сообщения Outlook с обоими типами вложений.
+Сообщение Outlook может содержать другие сообщения Microsoft Outlook во вложениях как обычные или встроенные сообщения. Коллекция MapiAttachmentCollection предоставляет перегруженные методы метода Add для создания сообщений Outlook с обоими типами вложений.
 {{% alert %}}
 **Попробуйте!**
 
-Добавляйте или удаляйте вложения электронной почты онлайн бесплатно [**Приложение для редактирования электронной почты Aspose.Email**](https://products.aspose.app/email/ru/editor).
+Добавляйте или удаляйте вложения электронной почты онлайн с бесплатным [**Aspose.Email Editor App**](https://products.aspose.app/email/ru/editor).
 {{% /alert %}}
 
-### **Добавить справочное вложение в MAPImessage**
+### **Добавление ссылочного вложения в MapiMessage**
 
-«Справочное вложение» обычно означает вложение, содержащее ссылку или ссылку на внешний ресурс, а не сам файл. Эти ссылки часто используются в электронных письмах в формате HTML для ссылок на внешние изображения или ресурсы, размещенные на удаленном сервере. Вместо встраивания всего файла во вложении ссылки содержится URL-адрес или ссылка на внешнее содержимое.
+"Ссылочное вложение" обычно относится к вложению, которое содержит ссылку или ссылку на внешний ресурс, а не на сам файл. Эти ссылки часто используются в HTML-эмейлах для ссылок на внешние изображения или ресурсы, размещенные на удаленном сервере. Вместо встраивания полного файла ссылочное вложение включает URL или ссылку на внешний контент.
 
-Aspose.Email предоставляет набор инструментов для корректного отображения справочных вложений, представленный в следующем примере кода:
+Aspose.Email предоставляет набор инструментов для корректного отображения ссылочных вложений, представленное в следующем примере кода:
 
 ```python
 import aspose.email as ae
 
 msg = ae.mapi.MapiMessage.load("message.msg")
 
-# Add reference attachment
+# Добавьте ссылочное вложение
 msg.attachments.add("Document.pdf",
     "https://drive.google.com/file/d/1HJ-M3F2qq1oRrTZ2GZhUdErJNy2CT3DF/",
     "https://drive.google.com/drive/my-drive",
     "GoogleDrive")
 
-# Also, you can set additional attachment properties
+# Вы также можете установить дополнительные свойства вложения
 msg.attachments[0].set_property(ae.mapi.KnownPropertyList.ATTACHMENT_PERMISSION_TYPE, int(ae.AttachmentPermissionType.ANYONE_CAN_EDIT))
 msg.attachments[0].set_property(ae.mapi.KnownPropertyList.ATTACHMENT_ORIGINAL_PERMISSION_TYPE, 0)
 msg.attachments[0].set_property(ae.mapi.KnownPropertyList.ATTACHMENT_IS_FOLDER, False)
 msg.attachments[0].set_property(ae.mapi.KnownPropertyList.ATTACHMENT_PROVIDER_ENDPOINT_URL, "")
 msg.attachments[0].set_property(ae.mapi.KnownPropertyList.ATTACHMENT_PREVIEW_URL, "")
 msg.attachments[0].set_property(ae.mapi.KnownPropertyList.ATTACHMENT_THUMBNAIL_URL, "")
-# Finally save the message
+# Наконец, сохраните сообщение
 msg.save("msg_with_ref_attach.msg")
 ```
-### **Вставить сообщение в виде вложения**
-В следующем фрагменте кода показано, как файлы Outlook MSG, встроенные в файл MSG, содержат метод PR_ATTACH_METHOD, значение которого равно 5.
+### **Встраивание сообщения как вложения**
+Следующий фрагмент кода показывает, как встроить файлы MSG в файл MSG, который содержит PR_ATTACH_METHOD со значением 5.
 
 ```py
 import aspose.email as ae
 
-# Create a new MapiMessage
-message = ae.mapi.MapiMessage("from@test.com", "to@test.com", "Subj", "This is a message body")
+# Создайте новый MapiMessage
+message = ae.mapi.MapiMessage("from@test.com", "to@test.com", "Subj", "Это тело сообщения")
 
-# Load the attachment message
+# Загрузите сообщение-вложение
 attach_msg = ae.mapi.MapiMessage.load("Message.msg")
 
-# Add the attachment to the message
+# Добавьте вложение к сообщению
 message.attachments.add("Weekly report.msg", attach_msg)
 
-# Save the message with the embedded message attachment
+# Сохраните сообщение с вложенным сообщением
 message.save("WithEmbeddedMsg_out.msg")
 ```
 ### **Чтение встроенных сообщений из вложений**
-В следующем фрагменте кода показано, как прочитать встроенное сообщение из вложения.
+Следующий фрагмент кода показывает, как читать встроенное сообщение из вложения.
 
 ```py
 import aspose.email as ae
 
 file_name = "path/to/file.msg"
 
-# Load the MapiMessage from file
+# Загрузите MapiMessage из файла
 message = ae.mapi.MapiMessage.from_file(file_name)
 
-# Check if the first attachment is an Outlook message
+# Проверьте, является ли первое вложение сообщением Outlook
 if message.attachments[0].object_data.is_outlook_message:
-    # Get the embedded message as MapiMessage
+    # Получите встроенное сообщение как MapiMessage
     embedded_message = message.attachments[0].object_data.to_mapi_message()
-    # Perform further operations with the embedded message
+    # Выполните дальнейшие действия с встроенным сообщением
     # ...
 ```
-## **Установка и замена навесного оборудования**
-Aspose.Email API предоставляет возможность вставлять вложения в определенном индексе в родительское сообщение. Он также предоставляет возможность заменять содержимое вложения другим вложением сообщения. В следующем фрагменте кода показано, как вставлять и заменять вложения.
-### **Вставить в определенном месте**
-API Aspose.Email предоставляет возможность вставлять вложение MSG в родительское сообщение с помощью метода вставки MapiAttachmentCollection Insert (индекс int, строковое имя, сообщение MapiMessage). В следующем фрагменте кода показано, как выполнить вставку в определенном месте.
+## **Вставка и замена вложений**
+API Aspose.Email предоставляет возможность вставлять вложения в определенный индекс в родительском сообщении. Он также предоставляет возможность заменять содержимое вложения другим вложением сообщения. Следующий фрагмент кода показывает, как выполнять вставку и замену вложений.
+### **Вставка в конкретное место**
+API Aspose.Email предоставляет возможность вставки вложения MSG в родительский MSG с использованием метода Insert коллекции MapiAttachmentCollection MapiAttachmentCollection Insert(int index, string name, MapiMessage msg). Следующий фрагмент кода показывает, как выполнить вставку в определенном месте.
 
 ```py
 import aspose.email as ae
@@ -170,49 +169,49 @@ from io import BytesIO
 
 file_name = "path/to/file.msg"
 
-# Load the MapiMessage from file
+# Загрузите MapiMessage из файла
 message = ae.mapi.MapiMessage.load(file_name)
 
-# Save the attachment to a memory stream
+# Сохраните вложение в поток памяти
 memory_stream = BytesIO()
 message.attachments[2].save(memory_stream)
 
-# Load the attachment from the memory stream
+# Загрузите вложение из потока памяти
 get_data = ae.mapi.MapiMessage.load(memory_stream)
 
-# Insert the loaded attachment at index 1
+# Вставьте загруженное вложение по индексу 1
 message.attachments.insert(1, "new 11", get_data)
 ```
-### **Заменить содержимое вложения**
-Это можно использовать для замены содержимого встроенного вложения новым с помощью метода Replace. Однако его нельзя использовать для вставки вложений с PR_ATTACH_NUM = 4 (например) в коллекцию с Collection.count = 2. В следующем фрагменте кода показано, как заменить содержимое вложения.
+### **Замена содержимого вложения**
+Это можно использовать для замены содержимого встроенного вложения на новые с помощью метода Replace. Однако его нельзя использовать для вставки вложения с PR_ATTACH_NUM = 4 (например) в коллекцию с collection.Count = 2. Следующий фрагмент кода показывает, как заменить содержимое вложения.
 
 ```py
 import aspose.email as ae
 from io import BytesIO
 file_name = "path/to/file.msg"
 
-# Load the MapiMessage from file
+# Загрузите MapiMessage из файла
 message = ae.mapi.MapiMessage.load(file_name)
 
-# Save the attachment to a memory stream
+# Сохраните вложение в поток памяти
 memory_stream = BytesIO()
 message.attachments[2].save(memory_stream)
 
-# Load the attachment from the memory stream
+# Загрузите вложение из потока памяти
 get_data = ae.mapi.MapiMessage.load(memory_stream)
 
-# Replace the attachment at index 1 with the loaded attachment
+# Замените вложение по индексу 1 на загруженное вложение
 message.attachments.replace(1, "new 1", get_data)
 ```
-### **Переименовать вложение в MAPIMessage**
+### **Переименование вложения в MapiMessage**
 
-Можно изменить отображаемые имена вложений в сообщениях электронной почты, загруженных из файла. В приведенном ниже примере кода показано, как это сделать:
+Можно изменить отображаемые имена вложений в электронных сообщениях, загруженных из файла. Пример кода ниже показывает, как это сделать:
 
 ```python
 import aspose.email as ae
 
 msg = ae.mapi.MapiMessage.load("message.msg")
 
-msg.attachments[0].display_name = "New display name 1"
-msg.attachments[1].display_name = "New display name 2"
+msg.attachments[0].display_name = "Новое отображаемое имя 1"
+msg.attachments[1].display_name = "Новое отображаемое имя 2"
 ```
