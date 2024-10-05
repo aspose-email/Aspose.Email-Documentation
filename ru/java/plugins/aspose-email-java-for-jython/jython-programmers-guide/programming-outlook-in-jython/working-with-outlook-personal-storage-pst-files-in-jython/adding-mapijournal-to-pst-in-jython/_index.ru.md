@@ -1,14 +1,14 @@
 ---
-title: "Добавление журнала MapiJournal в PST в Jython"
+title: "Добавление MapiJournal в PST в Jython"
 url: /ru/java/adding-mapijournal-to-pst-in-jython/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - Добавление журнала MapiJournal в PST**
-Чтобы добавить MapiJournal в PST, используя **Aspose.Электронная почта Java для PHP**, просто вызовите **AddMapiJournalToPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Добавление MapiJournal в PST**
+Чтобы добавить MapiJournal в PST с использованием **Aspose.Email Java для PHP**, просто вызовите модуль **AddMapiJournalToPST**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ```python
 
@@ -48,7 +48,7 @@ class AddMapiJournalToPST:
 
         d2 = cl.getTime()
 
-        journal = MapiJournal("daily record", "called out in the dark", "Phone call", "Phone call")
+        journal = MapiJournal("ежедневная запись", "позвонил в темноте", "Телефонный звонок", "Телефонный звонок")
 
         journal.setStartTime(d1)
 
@@ -62,23 +62,23 @@ class AddMapiJournalToPST:
 
         standardIpmFolder=StandardIpmFolder
 
-        journal_folder = pst.createPredefinedFolder("Journal", standardIpmFolder.Journal)
+        journal_folder = pst.createPredefinedFolder("Журнал", standardIpmFolder.Journal)
 
         journal_folder.addMapiMessageItem(journal)
 
-        print "Added MapiJournal Successfully."
+        print "MapiJournal успешно добавлен."
 
 
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddMapiJournalToPST()
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление журнала MAPIjournal в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Добавление MapiJournal в PST (Aspose.Email)** с любого из нижеупомянутых сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

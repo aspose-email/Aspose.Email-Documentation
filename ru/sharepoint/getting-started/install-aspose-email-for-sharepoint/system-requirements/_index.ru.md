@@ -6,9 +6,9 @@ type: docs
 ---
 
 
-- Сервер Microsoft SharePoint 2010
+- Microsoft SharePoint Server 2010
 ## **Требования к веб-клиенту**
 - Microsoft Internet Explorer 6, 7, 8
 - Mozilla FireFox 3.5
-- Гугл Хром 3
-- Сафари 4
+- Google Chrome 3
+- Safari 4

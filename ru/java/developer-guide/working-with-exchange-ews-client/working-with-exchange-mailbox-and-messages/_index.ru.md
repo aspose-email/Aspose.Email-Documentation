@@ -1,57 +1,57 @@
 ---
-title: "Работа с почтовым ящиком и сообщениями Exchange — чтение электронной почты с сервера Exchange на Java"
+title: "Работа с почтовыми ящиками Exchange и сообщениями - Чтение электронной почты с сервера Exchange на Java"
 url: /ru/java/working-with-exchange-mailbox-and-messages/
 weight: 20
 type: docs
-linktitle: "Работа с почтовым ящиком и сообщениями Exchange"
-keywords: "java читает электронную почту с сервера Exchange"
+linktitle: "Работа с почтовыми ящиками Exchange и сообщениями"
+keywords: "java чтение электронной почты с сервера exchange"
 ---
 
 
-## **Получение данных почтового ящика с помощью EWS**
-The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс содержит элементы, которые можно использовать для получения информации о почтовом ящике с сервера Exchange путем вызова [IEWSClient.getMailboxInfo()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#getMailboxInfo\(\)) метод. Он возвращает экземпляр типа [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo). Получайте информацию о почтовом ящике из таких объектов, как [MailboxUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getMailboxUri\(\)), [InboxUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getInboxUri\(\)) and [DraftsUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#setDraftsUri\(java.lang.String\)). В этой статье показано, как получить доступ к данным почтового ящика с помощью веб-служб Exchange.
+## **Получение информации о почтовом ящике с помощью EWS**
+Класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) имеет члены, которые могут быть использованы для получения информации о почтовом ящике с сервера Exchange, вызывая метод [IEWSClient.getMailboxInfo()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#getMailboxInfo\(\)). Он возвращает экземпляр типа [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo). Получите информацию о почтовом ящике из таких свойств, как [MailboxUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getMailboxUri\(\)), [InboxUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#getInboxUri\(\)) и [DraftsUri](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMailboxInfo#setDraftsUri\(java.lang.String\)). Эта статья показывает, как получить доступ к информации о почтовом ящике с помощью веб-служб Exchange.
 
-Если вы хотите подключиться к серверу Exchange с помощью веб-служб Exchange (EWS), используйте [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) класс. В этом классе используется EWS для подключения к элементам на сервере Exchange и управления ими. В следующем фрагменте кода Java показано, как получать информацию о почтовом ящике с помощью веб-служб Exchange.
+Если вы хотите подключиться к серверу Exchange, используя веб-службы Exchange (EWS), используйте класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient). Этот класс использует EWS для подключения и управления элементами на сервере Exchange. Следующий фрагмент кода на Java показывает, как получить информацию о почтовом ящике с помощью веб-служб обмена.
 
 
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Get mailbox size, exchange mailbox info, Mailbox and Inbox folder URI
-System.out.println("Mailbox size: " + client.getMailboxSize() + " bytes");
+// Получить размер почтового ящика, информацию о почтовом ящике Exchange, URI почтового ящика и URI папки "Входящие"
+System.out.println("Размер почтового ящика: " + client.getMailboxSize() + " байт");
 ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
-System.out.println("Mailbox URI: " + mailboxInfo.getMailboxUri());
-System.out.println("Inbox folder URI: " + mailboxInfo.getInboxUri());
-System.out.println("Sent Items URI: " + mailboxInfo.getSentItemsUri());
-System.out.println("Drafts folder URI: " + mailboxInfo.getDraftsUri());
+System.out.println("URI почтового ящика: " + mailboxInfo.getMailboxUri());
+System.out.println("URI папки 'Входящие': " + mailboxInfo.getInboxUri());
+System.out.println("URI отправленных элементов: " + mailboxInfo.getSentItemsUri());
+System.out.println("URI папки 'Черновики': " + mailboxInfo.getDraftsUri());
 ~~~
-## **Отправка сообщений электронной почты**
-Вы можете отправлять сообщения электронной почты с помощью Exchange Server с помощью инструментов в [Aspose.Email.Exchange](#working-with-exchange-mailbox-and-messages). Метод IewSclient.send () принимает [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) экземпляр в качестве параметра и отправляет электронное письмо. В этой статье объясняется, как отправлять сообщения электронной почты с помощью веб-служб Exchange.
+## **Отправка электронных сообщений**
+Вы можете отправлять электронные сообщения с помощью сервера Exchange с помощью инструментов из [Aspose.Email.Exchange](#working-with-exchange-mailbox-and-messages). Метод IEWSClient.Send() принимает экземпляр [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) в качестве параметра и отправляет электронное сообщение. Эта статья объясняет, как отправлять электронные сообщения с помощью веб-служб Exchange.
 
-Aspose.Email предоставляет класс IEWSClient для подключения к серверу Microsoft Exchange с помощью веб-служб Exchange. В следующем фрагменте кода показано, как использовать EWS для отправки электронных писем с помощью Microsoft Exchange Server. В следующем фрагменте кода Java показано, как отправлять сообщения электронной почты с помощью EWS.
+Aspose.Email предоставляет класс IEWSClient для подключения к Microsoft Exchange Server с использованием веб-служб Exchange. Следующий фрагмент кода показывает, как использовать EWS для отправки электронных писем с помощью сервера Microsoft Exchange. Следующий фрагмент кода на Java показывает, как отправлять электронные сообщения с использованием EWS.
 
 
 
 ~~~Java
-// Create instance of IEWSClient class by giving credentials
+// Создать экземпляр класса IEWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Create instance of type MailMessage
+// Создать экземпляр типа MailMessage
 MailMessage msg = new MailMessage();
 msg.setFrom(MailAddress.to_MailAddress("sender@domain.com"));
 msg.setTo(MailAddressCollection.to_MailAddressCollection("recipient@ domain.com "));
-msg.setSubject("Sending message from exchange server");
-msg.setHtmlBody("<h3>sending message from exchange server</h3>");
+msg.setSubject("Отправка сообщения с сервера Exchange");
+msg.setHtmlBody("<h3>отправка сообщения с сервера Exchange</h3>");
 
-// Send the message
+// Отправить сообщение
 client.send(msg);
 ~~~
 
-## **Получение класса сообщений**
+## **Получение класса сообщения**
 
-The [getMessageClass()](https://reference.aspose.com/email/java/com.aspose.email/exchangemessageinfo/#getMessageClass--) метод [ExchangeMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/exchangemessageinfo/) class получает строку, представляющую класс сообщения. В приведенном ниже примере кода показано, как получить класс сообщения:
+Метод [getMessageClass()](https://reference.aspose.com/email/java/com.aspose.email/exchangemessageinfo/#getMessageClass--) класса [ExchangeMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/exchangemessageinfo/) получает строку, представляющую класс для сообщения. Пример кода ниже показывает, как получить класс сообщения:
 
 ```java
 try (IEWSClient client = EWSClient.getEWSClient(uri, credentials))
@@ -60,97 +60,97 @@ try (IEWSClient client = EWSClient.getEWSClient(uri, credentials))
 
     for (ExchangeMessageInfo messageInfo : messageInfoCollection)
     {
-        System.out.println("Message Class: " + messageInfo.getMessageClass());
+        System.out.println("Класс сообщения: " + messageInfo.getMessageClass());
     }
 }
 ```
-## **Чтение писем из почтового ящика другого пользователя**
-Некоторые учетные записи на серверах Exchange имеют право доступа к нескольким почтовым ящикам, а некоторые пользователи имеют несколько учетных записей электронной почты на одном сервере Exchange. В обоих случаях пользователи могут получить доступ к почтовым ящикам других пользователей с помощью Aspose.Email для Java. Этот API предоставляет механизм доступа к папкам и электронным письмам из других почтовых ящиков с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) класс. Эта функциональность может быть достигнута с помощью перегруженных [getMailboxInfo()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#getMailboxInfo\(\)) метод и указание адреса электронной почты пользователя в качестве параметра.
+## **Чтение электронных писем из почтового ящика другого пользователя**
+Некоторые учетные записи на серверах Exchange имеют право доступа к нескольким почтовым ящикам, и у некоторых пользователей есть несколько электронных почтовых учетных записей на одном и том же сервере Exchange. В обоих случаях пользователи могут получить доступ к почтовым ящикам других пользователей, используя Aspose.Email для Java. Этот API предоставляет механизм для доступа к папкам и электронным письмам из других почтовых ящиков с помощью класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Эта функция может быть достигнута с помощью перегруженного метода [getMailboxInfo()](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeClient#getMailboxInfo\(\)), предоставляя адрес электронной почты пользователя в качестве параметра.
 
-В следующем фрагменте кода показано, как читать электронные письма с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) class.
+Следующий фрагмент кода показывает, как читать электронные письма с помощью класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
 
 
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Get Exchange mailbox info of other email account
+// Получить информацию о почтовом ящике Exchange другой учетной записи
 ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo("otherUser@domain.com");
 ~~~
 ## **Список сообщений**
-Список сообщений электронной почты в почтовом ящике Exchange можно получить, позвонив в [IEWSClient.listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) метод. Получите базовую информацию о сообщениях, такую как тема, от кого и идентификатор сообщения, используя [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) method.
+Список электронных сообщений в почтовом ящике Exchange можно получить, вызвав метод [IEWSClient.listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)). Получите основную информацию о сообщениях, такую как тема, от, к и идентификатор сообщения, используя метод [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)).
 ### **Простой список сообщений**
-Чтобы вывести список сообщений в почтовом ящике Exchange, выполните следующие действия:
+Чтобы перечислить сообщения в почтовом ящике Exchange:
 
-1. Создайте экземпляр [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) class.
+1. Создайте экземпляр класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
 1. Вызовите метод listMessages и создайте коллекцию сообщений.
-1. Просмотрите коллекцию и отобразите информацию о сообщениях.
+1. Пройдите по коллекции и отобразите информацию о сообщении.
 
-В следующем фрагменте кода Java показано, как подключиться к серверу Exchange с помощью EWS, и перечислены сообщения из папки «Входящие».
+Следующий фрагмент кода на Java показывает, как подключиться к серверу обмена, используя EWS, и перечислить сообщения из папки "Входящие".
 
 
 
 ~~~Java
-// Create instance of ExchangeWebServiceClient class by giving credentials
+// Создать экземпляр класса ExchangeWebServiceClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "UserName", "Password");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-// Loop through the collection to display the basic information
+// Пройтись по коллекции, чтобы отобразить основную информацию
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgCollection) {
-    System.out.println("Subject: " + msgInfo.getSubject());
-    System.out.println("From: " + msgInfo.getFrom().toString());
-    System.out.println("To: " + msgInfo.getTo().toString());
-    System.out.println("Message ID: " + msgInfo.getMessageId());
-    System.out.println("Unique URI: " + msgInfo.getUniqueUri());
+    System.out.println("Тема: " + msgInfo.getSubject());
+    System.out.println("От: " + msgInfo.getFrom().toString());
+    System.out.println("К: " + msgInfo.getTo().toString());
+    System.out.println("Идентификатор сообщения: " + msgInfo.getMessageId());
+    System.out.println("Уникальный URI: " + msgInfo.getUniqueUri());
 }
 ~~~
-### **Список сообщений из разных папок**
-[Вышеуказанные фрагменты кода](#simple-messages-listing), перечислите все сообщения в папке «Входящие». Также можно получить список сообщений из других папок. [IEWSClient.listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) метод принимает URI папки в качестве параметра. Если URI папки действителен, вы можете получить список сообщений из этой папки. Используйте свойство iewSclient.getMailboxInfo () .getXXXFolderUri, чтобы получить URI различных папок. В остальном код аналогичен получению списка сообщений. В следующем фрагменте кода показано, как размещать сообщения из разных папок с помощью EWS.
+### **Список сообщений из различных папок**
+[В приведенных выше фрагментах кода](#simple-messages-listing) перечислены все сообщения в папке "Входящие". Также возможен список сообщений из других папок. Метод [IEWSClient.listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) принимает URI папки в качестве параметра. При условии, что URI папки действителен, вы можете получить список сообщений из этой папки. Используйте свойство IEWSClient.getMailboxInfo().getXXXFolderUri, чтобы получить URI различных папок. Остальная часть кода такая же, как при получении списка сообщений. Следующий фрагмент кода показывает, как перечислить сообщения из различных папок с помощью EWS.
 
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Get folder URI
+// Получить URI папки
 String strFolderURI = "";
 strFolderURI = client.getMailboxInfo().getInboxUri();
 strFolderURI = client.getMailboxInfo().getDeletedItemsUri();
 strFolderURI = client.getMailboxInfo().getDraftsUri();
 strFolderURI = client.getMailboxInfo().getSentItemsUri();
 
-// Get list of messages from the specified folder
+// Получить список сообщений из указанной папки
 ExchangeMessageInfoCollection msgCollection = client.listMessages(strFolderURI);
 ~~~
-### **Список сообщений с поддержкой пейджинга**
-В следующем фрагменте кода Java показано, как получить список сообщений с поддержкой разбиения на страницы.
+### **Список сообщений с поддержкой постраничной навигации**
+Следующий фрагмент кода на Java показывает, как получить список сообщений с поддержкой постраничной навигации.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для получения полных примеров и файлов данных, пожалуйста, перейдите по адресу https://github.com/aspose-email/Aspose.Email-for-Java
 final IEWSClient client = EWSClient.getEWSClient("exchange.domain.com", "username", "password");
 try {
     try {
-        // Create some test messages to be added to server for retrieval later
+        // Создать несколько тестовых сообщений, которые будут добавлены на сервер для последующего извлечения
         int messagesNum = 12;
         int itemsPerPage = 5;
         MailMessage message = null;
         for (int i = 0; i < messagesNum; i++) {
             message = new MailMessage("from@domain.com", "to@domain.com", "EMAILNET-35157_1 - " + UUID.randomUUID().toString(),
-                    "EMAILNET-35157 Move paging parameters to separate class");
+                    "EMAILNET-35157 Переместить параметры постраничной навигации в отдельный класс");
             client.appendMessage(client.getMailboxInfo().getInboxUri(), message);
         }
-        // Verfiy that the messages have been added to the server
+        // Убедитесь, что сообщения были добавлены на сервер
         ExchangeMessageInfoCollection totalMessageInfoCol = client.listMessages(client.getMailboxInfo().getInboxUri());
         System.out.println(totalMessageInfoCol.size());
 
-        ////////////////// RETREIVING THE MESSAGES USING PAGING SUPPORT ////////////////////////////////////
+        ////////////////// ПОЛУЧЕНИЕ СООБЩЕНИЙ С ИСПОЛЬЗОВАНИЕМ ПОДДЕРЖКИ ПОСТРИЧНОЙ НАВИГАЦИИ ////////////////////////////////////
 
         List<ExchangeMessagePageInfo> pages = new ArrayList<ExchangeMessagePageInfo>();
         ExchangeMessagePageInfo pageInfo = client.listMessagesByPage(client.getMailboxInfo().getInboxUri(), itemsPerPage);
-        // Total Pages Count
+        // Общее количество страниц
         System.out.println(pageInfo.getTotalCount());
 
         pages.add(pageInfo);
@@ -159,11 +159,11 @@ try {
             pages.add(pageInfo);
         }
         int retrievedItems = 0;
-        // foreach to while statements conversion
+        // преобразование цикла foreach в while
         for (ExchangeMessagePageInfo pageCol : pages) {
             retrievedItems += pageCol.getItems().size();
         }
-        // Verify total message count using paging
+        // Проверьте общее количество сообщений с использованием постраничной навигации
         System.out.println(retrievedItems);
     } finally {
     }
@@ -181,85 +181,85 @@ ExchangeMessageInfoCollection list = client.listMessages(client.getMailboxInfo()
 System.out.println(list.get_Item(0).getMessageInfoType()); // MessageInfoType
 ~~~
 ## **Сохранение сообщений**
-В этой статье показано, как получать сообщения из почтового ящика Exchange Server и сохранять их на диск в форматах EML и MSG:
+Эта статья показывает, как получить сообщения из почтового ящика сервера Exchange и сохранить их на диск в форматах EML и MSG:
 
-- Сохранить как EML на диске.
-- Сохранить в потоке памяти.
+- Сохранить как EML на диск.
+- Сохранить в поток памяти.
 - Сохранить как MSG.
 ### **Сохранение сообщений в EML**
-Чтобы получать сообщения и сохранять их в формате EML, выполните следующие действия:
+Чтобы получить сообщения и сохранить их в формате EML:
 
-1. Создайте экземпляр класса IewsClient.
-1. Укажите URI почтового ящика, имя пользователя, пароль и домен.
-1. Вызовите метод IEWSClient.listMessages (), чтобы получить экземпляр коллекции ExchangeMessagesInfoCollection.
-1. Просмотрите коллекцию ExchangeMessagesInfoCollection, чтобы получить уникальный URI для каждого сообщения.
-1. Вызовите метод IEWSClient.saveMessage () и передайте уникальный URI в качестве параметра.
-1. Укажите в методе saveMessage () путь к тому месту, куда вы хотите сохранить файл.
+1. Создайте экземпляр класса IEWSClient.
+2. Укажите mailboxUri, имя пользователя, пароль и домен.
+3. Вызовите метод IEWSClient.listMessages() для получения экземпляра коллекции ExchangeMessagesInfoCollection.
+4. Пройдите через коллекцию ExchangeMessagesInfoCollection, чтобы получить уникальный URI для каждого сообщения.
+5. Вызовите метод IEWSClient.saveMessage() и передайте уникальный URI в качестве параметра.
+6. Укажите методу saveMessage() путь, по которому вы хотите сохранить файл.
 
-В следующем фрагменте кода показано, как использовать EWS для подключения к серверу Exchange и сохранения сообщений в виде файлов EML.
+Следующий фрагмент кода показывает, как использовать EWS для подключения к серверу Exchange и сохранения сообщений в виде файлов EML.
 
 
 
 ~~~Java
-// Create instance of IEWSClient class by giving credentials
+// Создать экземпляр класса IEWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-// Loop through the collection to get Message URI
+// Пройтись по коллекции, чтобы получить URI сообщения
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgCollection) {
     String strMessageURI = msgInfo.getUniqueUri();
 
-    // Now save the message in disk
+    // Теперь сохраните сообщение на диск
     client.saveMessage(strMessageURI, dataDir + msgInfo.getMessageId() + "out.eml");
 }
 ~~~
-### **Сохранение сообщений в потоке памяти**
-Вместо сохранения файлов EML на диск можно сохранить их в потоке памяти. Это удобно, если вы хотите сохранить поток в каком-либо месте хранения, например в базе данных. Как только поток будет сохранен в базе данных, вы можете перезагрузить файл EML в [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) класс. В следующем фрагменте кода показано, как сохранять сообщения из почтового ящика Exchange Server в поток памяти с помощью EWS.
+### **Сохранение сообщений в поток памяти**
+Вместо сохранения файлов EML на диск можно сохранить их в поток памяти. Это полезно, когда вы хотите сохранить поток в каком-то месте хранения, например, в базе данных. После того, как поток был сохранен в базе данных, вы можете загрузить файл EML обратно в класс [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). Следующий фрагмент кода показывает, как сохранить сообщения из почтового ящика сервера Exchange в поток памяти, используя EWS.
 
 
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-// Loop through the collection to get Message URI
+// Пройтись по коллекции, чтобы получить URI сообщения
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgCollection) {
     String strMessageURI = msgInfo.getUniqueUri();
 
-    // Now save the message in memory stream
+    // Теперь сохраните сообщение в поток памяти
     ByteArrayOutputStream stream = new ByteArrayOutputStream();
     client.saveMessage(strMessageURI, stream);
 }
 ~~~
 ### **Сохранение сообщений в формате MSG**
-The [IEWSClient.saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#saveMessage\(java.lang.String,%20java.lang.String\)) метод может напрямую сохранить сообщение в формате EML. Чтобы сохранить сообщения в формате MSG, сначала вызовите [IEWSClient.fetchMessage()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchMessage\(java.lang.String\)) метод, который возвращает экземпляр [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) класс. Затем позвоните [MailMessage.save()](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#save\(java.lang.String\)) метод сохранения сообщения в MSG. В следующем фрагменте кода показано, как получать сообщения из почтового ящика Exchange Server и сохранять их в формате MSG с помощью EWS.
+Метод [IEWSClient.saveMessage()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#saveMessage\(java.lang.String,%20java.lang.String\)) может напрямую сохранить сообщение в формате EML. Чтобы сохранить сообщения в формате MSG, сначала вызовите метод [IEWSClient.fetchMessage()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchMessage\(java.lang.String\)), который возвращает экземпляр класса [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). Затем вызовите метод [MailMessage.save()](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#save\(java.lang.String\)), чтобы сохранить сообщение в MSG. Следующий фрагмент кода показывает, как получить сообщения из почтового ящика сервера Exchange и сохранить их в формате MSG, используя EWS.
 
 
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Создать экземпляр класса EWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
 int count = 0;
-// Loop through the collection to get Message URI
+// Пройтись по коллекции, чтобы получить URI сообщения
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgCollection) {
     String strMessageURI = msgInfo.getUniqueUri();
 
-    // Now get the message details using FetchMessage() and Save message as Msg
+    // Теперь получите детали сообщения с помощью FetchMessage() и сохраните сообщение как Msg
     MailMessage message = client.fetchMessage(strMessageURI);
     message.save(dataDir + (count++) + "_out.msg", SaveOptions.getDefaultMsgUnicode());
 }
 ~~~
-## **Получение сведений о сообщениях Exchange из URI сообщения**
-Сообщение электронной почты представлено уникальным идентификатором, URI, и является неотъемлемой частью [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) объект. В случае, если доступен только URI сообщения, тогда [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) объект также можно получить, используя эту доступную информацию. Версия, предназначенная для перегрузки [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.Iterable\)) принимает список идентификаторов для использования [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection). В следующем фрагменте кода показано, как получить [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) из URI сообщения.
+## **Получение ExchangeMessageInfo из URI сообщения**
+Электронное сообщение представляется своим уникальным идентификатором, URI, и является неотъемлемой частью объекта [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo). В случае, если доступен только URI сообщения, объект [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) также может быть получен с использованием этой доступной информации. Перегруженная версия метода [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.Iterable\)) принимает список идентификаторов для использования с [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfoCollection). Следующий фрагмент кода показывает, как получить [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) из URI сообщения.
 
 
 
@@ -271,7 +271,7 @@ List<MailMessage> messages = new ArrayList<MailMessage>();
 
 for (int i = 0; i < 5; i++) {
     MailMessage message = new MailMessage("user@domain.com", "receiver@domain.com", "EMAILNET-35033 - " + UUID.randomUUID().toString(),
-            "EMAILNET-35033 Messages saved from Sent Items folder doesn't contain 'To' field");
+            "EMAILNET-35033 Сообщения, сохраненные из папки 'Отправленные', не содержат поле 'Кому'");
     messages.add(message);
     String uri = client.appendMessage(message);
     ids.add(uri);
@@ -280,94 +280,94 @@ for (int i = 0; i < 5; i++) {
 ExchangeMessageInfoCollection messageInfoCol = client.listMessages(ids);
 
 for (ExchangeMessageInfo messageInfo : (Iterable<ExchangeMessageInfo>) messageInfoCol) {
-    // Do something ...
+    // Сделать что-то ...
     System.out.println(messageInfo.getUniqueUri());
 }
 ~~~
 ## **Получение сообщений из почтового ящика сервера Exchange**
-При перечислении сообщений на сервере Exchange использовалось [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) метод получения списка сообщений из почтового ящика Exchange Server. [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) метод получает основную информацию о сообщениях, например тему, идентификатор сообщения, от и до. Чтобы получить полную информацию о сообщении, Aspose.Email.Exchange предоставляет метод IEWSclient.fetchMessage (). Этот метод принимает URI сообщения в качестве параметра и возвращает экземпляр [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) класс. [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) Затем класс предоставляет сведения о сообщении, такие как текст, заголовки и вложения. Узнайте больше о [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) API или узнайте, как управлять электронной почтой с помощью [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) класс. Чтобы получить сообщения из почтового ящика сервера Exchange, выполните следующие действия:
+Метод [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) используется для получения списка сообщений из почтового ящика сервера Exchange. Метод [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String\)) получает основную информацию о сообщениях, например, тему, идентификатор сообщения, от и до. Чтобы получить полные детали сообщения, Aspose.Email.Exchange предоставляет метод IEWSClient.fetchMessage(). Этот метод принимает URI сообщения в качестве параметра и возвращает экземпляр класса [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). Класс [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) затем предоставляет детали сообщения, такие как тело, заголовки и вложения. Узнайте больше о API [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) или узнайте, как управлять электронной почтой с помощью класса [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). Чтобы получить сообщения из почтового ящика сервера Exchange:
 
 1. Создайте экземпляр типа IEWSClient.
-1. Укажите имя сервера, имя пользователя, пароль и домен.
-1. Позвоните в ListMessages, чтобы получить коллекцию сведений о сообщениях Exchange.
-1. Просмотрите коллекцию ExchangeMessageInfoCollection, чтобы получить значения ExchangeMessageInfo.uniqueURI.
-1. Вызовите IEWSClient.fetchMessage () и передайте в качестве параметра URL-адрес ExchangeMessageInfo.uniqueURI.
+2. Укажите имя сервера, имя пользователя, пароль и домен.
+3. Вызовите listMessages, чтобы получить ExchangeMessageInfoCollection.
+4. Пройдите по коллекции ExchangeMessageInfoCollection, чтобы получить значения ExchangeMessageInfo.UniqueURI.
+5. Вызовите метод IEWSClient.fetchMessage() и передайте ExchangeMessageInfo.UniqueURI в качестве параметра.
 
-В следующем фрагменте кода показано, как вы подключаетесь к почтовому ящику Exchange Server и получаете все сообщения с помощью EWS.
+Следующий фрагмент кода показывает, как подключиться к почтовому ящику сервера Exchange и получить все сообщения, используя EWS.
 
 
 
 ~~~Java
-// Create instance of ExchangeWebServiceClient class by giving credentials
+// Создать экземпляр класса ExchangeWebServiceClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-// Loop through the collection to get Message URI
+// Пройтись по коллекции, чтобы получить URI сообщения
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgCollection) {
     String strMessageURI = msgInfo.getUniqueUri();
 
-    // Now get the message details using FetchMessage()
+    // Теперь получите детали сообщения с помощью FetchMessage()
     MailMessage msg = client.fetchMessage(strMessageURI);
 
     for (Attachment att : (Iterable<Attachment>) msg.getAttachments()) {
-        System.out.println("Attachment Name: " + att.getName());
+        System.out.println("Имя вложения: " + att.getName());
     }
 }
 ~~~
 
-### **Использование метода fetchItem для получения сообщения**
+### **Использование метода FetchItem для получения сообщения**
 
 {{% alert color="primary" %}}
 
-Обратите внимание, [FetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String\)) метод возвращает сообщение без вложений. Для получения сообщений с вложениями используйте [FetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String,%20java.lang.Iterable\)) метод, описанный в разделе ниже.
+Обратите внимание, что метод [FetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String\)) возвращает сообщение без вложений. Чтобы извлечь сообщения с вложениями, используйте метод [FetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String,%20java.lang.Iterable\)), описанный в разделе ниже. 
 
 {{% /alert %}}
 
-The [FetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String\))  метод более предпочтителен, если вы хотите получить [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/MapiMessage) и работайте со свойствами MAPI. Вы также можете использовать этот метод для загрузки любого элемента Outlook, например контакта, встречи, задачи и т. д.
+Метод [FetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String\)) более предпочтителен, если вы хотите извлечь [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/MapiMessage) и работать с MAPI-свойствами. Вы также можете использовать этот метод для извлечения любого элемента Outlook, например, контакта, встречи, задачи и т.д.
 
 ```java
-// Create instance of ExchangeWebServiceClient class by giving credentials
+// Создать экземпляр класса ExchangeWebServiceClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-// Loop through the collection to get Message URI
+// Пройтись по коллекции, чтобы получить URI сообщения
 for (ExchangeMessageInfo msgInfo : msgCollection)
 {
-    // Now get the message using FetchItem()
+    // Теперь получите сообщение с помощью FetchItem()
     MapiMessage msg = client.fetchItem(msgInfo.getUniqueUri());
 
-    // If necessary, you can cast the MapiMessage to the proper item type to simplify working with its properties.
+    // Если необходимо, вы можете привести MapiMessage к правильному типу элемента, чтобы упростить работу с его свойствами.
     MapiContact contact = (MapiContact) msg.toMapiMessageItem();
 }
 ```
 
-## **Размер сообщения перед выборкой**
-Microsoft Outlook InterOp предоставляет возможность получения размера сообщения до фактической загрузки всего сообщения с сервера. В случае Aspose.Email API сводная информация, полученная с сервера Exchange, представлена в виде [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) класс. Он предоставляет ту же функцию, что и получение размера сообщения с помощью свойства Size. Чтобы получить размер сообщения, используется стандартный вызов ListMessages IEWSClient, который извлекает коллекцию [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo). В следующем фрагменте кода показано, как отображать размер сообщения с помощью [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo) class.
+## **Предварительное получение размера сообщения**
+Microsoft Outlook InterOp предоставляет функцию извлечения размера сообщения перед фактическим получением полного сообщения с сервера. В случае с API Aspose.Email сводная информация, извлеченная с сервера Exchange, представлена классом [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo). Он предоставляет ту же функцию извлечения размера сообщения с помощью свойства Size. Для извлечения размера сообщения используется стандартный вызов метода IEWSClient's listMessages, который извлекает коллекцию [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo). Следующий фрагмент кода показывает, как отобразить размер сообщения с использованием класса [ExchangeMessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeMessageInfo).
 
 
 
 ~~~Java
-// Create instance of ExchangeWebServiceClient class by giving credentials
+// Создать экземпляр класса ExchangeWebServiceClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызвать метод ListMessages для списка информации о сообщениях из папки "Входящие"
 ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-// Loop through the collection to display the basic information
+// Пройтись по коллекции, чтобы отобразить основную информацию
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgCollection) {
-    System.out.println("Subject: " + msgInfo.getSubject());
-    System.out.println("From: " + msgInfo.getFrom().toString());
-    System.out.println("To: " + msgInfo.getTo().toString());
-    System.out.println("Message Size: " + msgInfo.getSize());
+    System.out.println("Тема: " + msgInfo.getSubject());
+    System.out.println("От: " + msgInfo.getFrom().toString());
+    System.out.println("К: " + msgInfo.getTo().toString());
+    System.out.println("Размер сообщения: " + msgInfo.getSize());
     System.out.println("==================================");
 }
 ~~~
-## **Рекурсивная загрузка сообщений**
-The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient)’s [listSubFolders()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listSubFolders\(com.aspose.email.ExchangeFolderInfo\)) метод можно использовать для рекурсивного получения сообщений из папок и подпапок из почтового ящика Exchange Server. Для этого требуется Exchange Server 2007 или более поздними версиями, поскольку в нем используется EWS. В следующем фрагменте кода показано, как загрузить весь почтовый ящик (папки и подпапки) сервера Exchange. Структура папок создается локально, и все сообщения загружаются.
+## **Рекурсивное извлечение сообщений**
+Метод [listSubFolders()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listSubFolders\(com.aspose.email.ExchangeFolderInfo\)) класса [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) может быть использован для получения сообщений из папок и подпапок из почтового ящика сервера Exchange рекурсивно. Это требует сервера Exchange 2007 или выше, поскольку он использует EWS. Следующий фрагмент кода показывает, как загрузить всю почту (папки и подпапки) с сервера Exchange. Структура папок создается локально, и все сообщения загружаются.
 
 
 
@@ -387,41 +387,41 @@ private static void downloadAllMessages() {
         String inboxFolder = rootFolder + "\\Inbox";
         new File(inboxFolder).mkdirs();
 
-        System.out.println("Downloading all messages from Inbox....");
-        // Create instance of IEWSClient class by giving credentials
+        System.out.println("Загрузка всех сообщений из папки 'Входящие'....");
+        // Создать экземпляр класса IEWSClient, указав учетные данные
         IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", username, password, domain);
 
         ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
-        System.out.println("Mailbox URI: " + mailboxInfo.getMailboxUri());
+        System.out.println("URI почтового ящика: " + mailboxInfo.getMailboxUri());
         String rootUri = client.getMailboxInfo().getRootUri();
-        // List all the folders from Exchange server
+        // Перечислить все папки с сервера Exchange
         ExchangeFolderInfoCollection folderInfoCollection = client.listSubFolders(rootUri);
         for (ExchangeFolderInfo folderInfo : (Iterable<ExchangeFolderInfo>) folderInfoCollection) {
-            // Call the recursive method to read messages and get sub-folders
+            // Вызвать рекурсивный метод для чтения сообщений и получения подпапок
             listMessagesInFolder(client, folderInfo, rootFolder);
         }
 
-        System.out.println("All messages downloaded.");
+        System.out.println("Все сообщения загружены.");
     } catch (java.lang.RuntimeException ex) {
         System.out.println(ex.getMessage());
     }
 }
 
-// Recursive method to get messages from folders and sub-folders
+// Рекурсивный метод для получения сообщений из папок и подпапок
 private static void listMessagesInFolder(IEWSClient client, ExchangeFolderInfo folderInfo, String rootFolder) {
-    // Create the folder in disk (same name as on IMAP server)
+    // Создать папку на диске (с тем же именем, что и на IMAP-сервере)
     String currentFolder = rootFolder + "\\" + folderInfo.getDisplayName();
     new File(currentFolder).mkdirs();
 
-    // List messages
+    // Перечислить сообщения
     ExchangeMessageInfoCollection msgInfoColl = client.listMessages(folderInfo.getUri());
-    System.out.println("Listing messages....");
+    System.out.println("Перечисление сообщений....");
     int i = 0;
     for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgInfoColl) {
-        // Get subject and other properties of the message
-        System.out.println("Subject: " + msgInfo.getSubject());
+        // Получить тему и другие свойства сообщения
+        System.out.println("Тема: " + msgInfo.getSubject());
 
-        // Get rid of characters like ? and :, which should not be included in a file name
+        // Избавиться от символов, таких как ? и :, которые не должны быть включены в имя файла
         String fileName = msgInfo.getSubject().replace("?", " ").replace(":", " ");
 
         MailMessage msg = client.fetchMessage(msgInfo.getUniqueUri());
@@ -431,7 +431,7 @@ private static void listMessagesInFolder(IEWSClient client, ExchangeFolderInfo f
     }
     System.out.println("============================\n");
     try {
-        // If this folder has sub-folders, call this method recursively to get messages
+        // Если у этой папки есть подпапки, вызовите этот метод рекурсивно, чтобы получить сообщения
         ExchangeFolderInfoCollection folderInfoCollection = client.listSubFolders(folderInfo.getUri());
         for (ExchangeFolderInfo subfolderInfo : (Iterable<ExchangeFolderInfo>) folderInfoCollection) {
             listMessagesInFolder(client, subfolderInfo, currentFolder);
@@ -440,8 +440,8 @@ private static void listMessagesInFolder(IEWSClient client, ExchangeFolderInfo f
     }
 }
 ~~~
-## **Загрузка сообщений из общедоступных папок**
-Microsoft Exchange Server позволяет пользователям создавать общедоступные папки и публиковать в них сообщения. Чтобы сделать это через приложение, используйте Aspose.Email [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс для подключения к серверу Exchange и чтения и загрузки сообщений и сообщений из общедоступных папок. В следующем фрагменте кода показано, как читать все общедоступные папки и подпапки, а также перечислять и загружать все сообщения, обнаруженные в этих папках. Этот пример работает только с Microsoft Exchange Server 2007 или выше, поскольку только они поддерживают EWS.
+## **Загрузка сообщений из общих папок**
+Microsoft Exchange Server позволяет пользователям создавать общие папки и размещать в них сообщения. Чтобы сделать это через ваше приложение, используйте класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) Aspose.Email для подключения к серверу Exchange и чтения и загрузки сообщений и постов из общих папок. Следующий фрагмент кода показывает, как прочитать все общие папки и подпапки и перечислить и загрузить любые сообщения, найденные в этих папках. Этот пример работает только с Microsoft Exchange Server 2007 или выше, так как только они поддерживают EWS.
 
 
 
@@ -460,15 +460,15 @@ private static void readPublicFolders() {
 
     ExchangeFolderInfoCollection folders = client.listPublicFolders();
     for (ExchangeFolderInfo publicFolder : (Iterable<ExchangeFolderInfo>) folders) {
-        System.out.println("Name: " + publicFolder.getDisplayName());
-        System.out.println("Subfolders count: " + publicFolder.getChildFolderCount());
+        System.out.println("Имя: " + publicFolder.getDisplayName());
+        System.out.println("Количество подпапок: " + publicFolder.getChildFolderCount());
         listMessagesFromSubFolder(publicFolder, client);
 
     }
 }
 
 private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, IEWSClient client) {
-    System.out.println("Folder Name: " + publicFolder.getDisplayName());
+    System.out.println("Имя папки: " + publicFolder.getDisplayName());
     ExchangeMessageInfoCollection msgInfoCollection = client.listMessagesFromPublicFolder(publicFolder);
     for (ExchangeMessageInfo messageInfo : (Iterable<ExchangeMessageInfo>) msgInfoCollection) {
         MailMessage msg = client.fetchMessage(messageInfo.getUniqueUri());
@@ -476,7 +476,7 @@ private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, I
         msg.save(dataDir + msg.getSubject() + ".msg", SaveOptions.getDefaultMsgUnicode());
     }
 
-    // Call this method recursively for any subfolders
+    // Вызовите этот метод рекурсивно для любых подпапок
     if (publicFolder.getChildFolderCount() > 0) {
         ExchangeFolderInfoCollection subfolders = client.listSubFolders(publicFolder);
         for (ExchangeFolderInfo subfolder : (Iterable<ExchangeFolderInfo>) subfolders) {
@@ -486,76 +486,76 @@ private static void listMessagesFromSubFolder(ExchangeFolderInfo publicFolder, I
 }
 ~~~
 ## **Перемещение сообщений**
-Вы можете перемещать сообщения электронной почты из одной папки в другую с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) class [move](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#moveItem\(java.lang.String,%20java.lang.String\)) метод. Он принимает следующие параметры:
+Вы можете перемещать электронные сообщения из одной папки в другую с помощью класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) и метода [move](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#moveItem\(java.lang.String,%20java.lang.String\)). Он принимает параметры:
 
-- Уникальный URI сообщения, которое нужно переместить.
-- Уникальный URI целевой папки.
+- Уникальный URI сообщения, которое необходимо переместить.
+- Уникальный URI папки назначения.
 ### **Перемещение сообщений между папками**
-В следующем фрагменте кода показано, как переместить сообщение в почтовом ящике из папки «Входящие» в папку «Обработано». В этом примере приложение:
+Следующий фрагмент кода показывает, как переместить сообщение в почтовом ящике из папки "Входящие" в папку под названием "Обработано". В этом примере приложение:
 
-1. Читает сообщения из папки «Входящие».
-1. Обрабатывает некоторые сообщения на основе некоторых критериев (в этом примере мы находим ключевое слово в теме сообщения).
-1. Перемещает сообщения, удовлетворяющие заданному условию, в обработанную папку.
+1. Читает сообщения из папки "Входящие".
+2. Обрабатывает некоторые сообщения на основе некоторых критериев (в этом примере мы ищем ключевое слово в теме сообщения).
+3. Перемещает сообщения, которые соответствуют заданному условию, в папку "Обработано".
 
 ~~~Java
-// Create instance of IEWSClient class by giving credentials
+// Создать экземпляр класса IEWSClient, указав учетные данные
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
 ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
 
-// List all messages from Inbox folder
-System.out.println("Listing all messages from Inbox....");
+// Перечислить все сообщения из папки "Входящие"
+System.out.println("Перечисление всех сообщений из папки 'Входящие'....");
 ExchangeMessageInfoCollection msgInfoColl = client.listMessages(mailboxInfo.getInboxUri());
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgInfoColl) {
-    // Move message to "Processed" folder, after processing certain messages based on some criteria
-    if (msgInfo.getSubject() != null && msgInfo.getSubject().toLowerCase().contains("process this message")) {
+    // Переместить сообщение в папку "Обработано" после обработки определенных сообщений на основе некоторых критериев
+    if (msgInfo.getSubject() != null && msgInfo.getSubject().toLowerCase().contains("обработать это сообщение")) {
         client.moveItem(mailboxInfo.getDeletedItemsUri(), msgInfo.getUniqueUri()); // EWS
-        System.out.println("Message moved...." + msgInfo.getSubject());
+        System.out.println("Сообщение перемещено...." + msgInfo.getSubject());
     } else {
-        // Do something else
+        // Сделать что-то другое
     }
 }
 ~~~
 ## **Удаление сообщений**
-Вы можете удалить сообщения электронной почты из папки с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) class [deleteItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteItem\(java.lang.String,%20com.aspose.email.DeletionOptions\)) метод. В качестве параметра он принимает уникальный URI сообщения.
+Вы можете удалять электронные сообщения из папки с помощью метода [deleteItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteItem\(java.lang.String,%20com.aspose.email.DeletionOptions\)) класса [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Он принимает уникальный URI сообщения в качестве параметра.
 
-В следующем фрагменте кода показано, как удалить сообщение из папки «Входящие». Для целей данного примера используется следующий код:
+Следующий фрагмент кода показывает, как удалить сообщение из папки "Входящие". Для этой примера код:
 
-1. Читает сообщения из папки «Входящие».
-1. Обрабатывайте сообщения на основе некоторых критериев (в этом примере мы находим ключевое слово в теме сообщения).
-1. Удаляет сообщение.
+1. Читает сообщения из папки "Входящие".
+2. Обрабатывает сообщения на основе некоторых критериев (в этом примере мы ищем ключевое слово в теме сообщения).
+3. Удаляет сообщение.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
 ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
 
-// List all messages from Inbox folder
-System.out.println("Listing all messages from Inbox....");
+// Перечислить все сообщения из папки "Входящие"
+System.out.println("Перечисление всех сообщений из папки 'Входящие'....");
 ExchangeMessageInfoCollection msgInfoColl = client.listMessages(mailboxInfo.getInboxUri());
 for (ExchangeMessageInfo msgInfo : (Iterable<ExchangeMessageInfo>) msgInfoColl) {
-    // Delete message based on some criteria
-    if (msgInfo.getSubject() != null && msgInfo.getSubject().toLowerCase().contains("delete") == true) {
+    // Удалить сообщение на основе некоторых критериев
+    if (msgInfo.getSubject() != null && msgInfo.getSubject().toLowerCase().contains("удалить") == true) {
         client.deleteItem(msgInfo.getUniqueUri(), DeletionOptions.getDeletePermanently()); // EWS
-        System.out.println("Message deleted...." + msgInfo.getSubject());
+        System.out.println("Сообщение удалено...." + msgInfo.getSubject());
     } else {
-        // Do something else
+        // Сделать что-то другое
     }
 }
 ~~~
 ## **Копирование сообщений**
-Aspose.Email API позволяет копировать сообщение из одной папки в другую, используя [copyItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#copyItem\(java.lang.String,%20java.lang.String\)) метод. Перегруженная версия этого метода возвращает уникальный URI скопированного сообщения, как показано в этой статье.
+API Aspose.Email позволяет копировать сообщение из одной папки в другую с помощью метода [copyItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#copyItem\(java.lang.String,%20java.lang.String\)). Перегруженная версия этого метода возвращает уникальный URI скопированного сообщения, как показано в этой статье.
 ### **Копирование сообщения в другую папку**
-В следующем фрагменте кода показано, как скопировать сообщение в другую папку.
+Следующий фрагмент кода показывает, как скопировать сообщение в другую папку.
 
 
 
 ~~~Java
 try {
-    // Create instance of EWSClient class by giving credentials
+    // Создать экземпляр класса EWSClient, указав учетные данные
     IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
     MailMessage message = new MailMessage("from@domain.com", "to@domain.com", "EMAILNET-34997 - " + UUID.randomUUID().toString(),
-            "EMAILNET-34997 Exchange: Copy a message and get reference to the new Copy item");
+            "EMAILNET-34997 Exchange: Копирование сообщения и получение ссылки на новый скопированный элемент");
     String messageUri = client.appendMessage(message);
     String newMessageUri = client.copyItem(messageUri, client.getMailboxInfo().getDeletedItemsUri());
 } catch (java.lang.RuntimeException ex) {

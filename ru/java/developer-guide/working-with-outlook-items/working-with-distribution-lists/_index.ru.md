@@ -1,16 +1,16 @@
 ---
-title: "Работа со списками рассылки"
+title: "Работа с Распространительными Списками"
 url: /ru/java/working-with-distribution-lists/
 weight: 130
 type: docs
 ---
 
 
-С помощью Aspose.Email API можно создать список рассылки, который представляет собой набор из нескольких контактов. Список рассылки можно сохранить на диск в формате Outlook MSG и просматривать и изменять его, открывая его в MS Outlook.
+Можно создать Распространительный список с использованием Aspose.Email API, который является коллекцией нескольких контактов. Распространительный список можно сохранить на диск в формате Outlook MSG и его можно просматривать/изменять, открыв в MS Outlook.
 
-## **Создание и сохранение списков рассылки**
+## **Создание и Сохранение Распространительных Списков**
 
-В следующем фрагменте кода показано, как создать и сохранить список рассылки.
+Следующий фрагмент кода показывает, как создать и сохранить распространительный список.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -70,11 +70,12 @@ try (PersonalStorage personalStorage = PersonalStorage.create(dataDir + "CreateD
 }
 ~~~
 
-## **Сохранить список рассылки Mapi в один многоконтактный файл VCF**
+## **Сохранение Mapi Распространительного Списка в Один Много контактный VCF Файл**
 
-The [void save (строковое имя файла, параметры сохранения списка рассылки MAPI)](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/#save-java.lang.String-com.aspose.email.MapiDistributionListSaveOptions-) Метод позволяет сохранить список рассылки Mapi под указанным именем файла, используя предоставленные опции сохранения. Вы можете указать имя файла и экземпляр [MapiDistributionListSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlistsaveoptions/) класс в качестве параметров. [MapiDistributionListSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlistsaveoptions/) класс содержит опции для сохранения списка рассылки Mapi. В этом случае вы можете указать формат сохранения как vCard (ContactSaveFormat.vCard), чтобы сохранить список рассылки в виде многоконтактного файла VCF.
+Метод [void save(String fileName, MapiDistributionListSaveOptions options)](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/#save-java.lang.String-com.aspose.email.MapiDistributionListSaveOptions-) позволяет сохранить Mapi Распространительный Список в указанное имя файла с использованием предоставленных параметров сохранения. Вы можете указать имя файла и экземпляр класса [MapiDistributionListSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlistsaveoptions/) в качестве параметров.
+Класс [MapiDistributionListSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlistsaveoptions/) содержит параметры для сохранения Mapi Распространительного Списка. В этом случае вы можете указать формат сохранения как VCard (ContactSaveFormat.VCard), чтобы сохранить распространительный список в качестве много контактного VCF файла.
 
-В следующем фрагменте кода показано, как сохранить список рассылки в многоконтактный файл VCF:
+Следующий фрагмент кода демонстрирует, как сохранить распространительный список в много контактный VCF файл:
 
 ```java
 MapiDistributionList dlist = (MapiDistributionList)msg.toMapiMessageItem();
@@ -82,9 +83,9 @@ MapiDistributionListSaveOptions options = new MapiDistributionListSaveOptions(Co
 dlist.save("distribution_list.vcf", options);
 ```
 
-## **Чтение списка рассылки из PST**
+## **Чтение Распространительного Списка из PST**
 
-В следующем фрагменте кода показано, как читать список рассылки из файла PST.
+Следующий фрагмент кода показывает, как прочитать распространительный список из PST файла.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

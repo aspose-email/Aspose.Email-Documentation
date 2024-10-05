@@ -8,51 +8,51 @@ type: docs
 
 ## **Удаление сообщений**
 
-The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) класс может удалять сообщения с сервера IMAP. [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) class [DeleteMessage()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessage/#deletemessage/) функция используется для удаления сообщений. В качестве параметра она принимает порядковый номер сообщения или уникальный идентификатор. [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) provides [DeleteMessage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessage/#deletemessage/) and [DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessages/#deletemessages/) методы удаления сообщений по одному или по нескольким. В следующем фрагменте кода показано, как удалить сообщение электронной почты с идентификатором сообщения 1 с сервера IMAP.
+Класс [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) может удалять сообщения с IMAP-сервера. Функция [DeleteMessage()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessage/#deletemessage/) класса [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) используется для удаления сообщений. Она принимает номер последовательности сообщения или уникальный ID в качестве параметра. Класс [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) предоставляет методы [DeleteMessage](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessage/#deletemessage/) и [DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessages/#deletemessages/) для удаления сообщений по одному или несколько одновременно. Следующий код показывает, как удалить электронное сообщение с ID сообщения 1 с IMAP-сервера.
 
 ```csharp
 using var client = new ImapClient("host", "username", "password");
 client.SecurityOptions = SecurityOptions.SSLImplicit;
 
-// Append test message
+// Добавление тестового сообщения
 client.SelectFolder(ImapFolderInfo.InBox);
 
 var eml = new MailMessage("from@from.com", "to@to.com")
 {
-  Subject = "Message to delete",
-  Body = "Hey! This Message will be deleted!"
+  Subject = "Сообщение для удаления",
+  Body = "Привет! Это сообщение будет удалено!"
 };
 var emlId = client.AppendMessage(eml);
 
-// Delete appended message
+// Удаление добавленного сообщения
 client.DeleteMessage(emlId);
 client.CommitDeletes();
 ```
 
 ## **Удаление нескольких сообщений**
 
-Несколько писем можно удалить из почтового ящика с помощью [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) API Aspose.Email. [DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessages/#deletemessages/) метод предоставляет ряд опций для удаления нескольких сообщений с сервера с использованием уникальных идентификаторов, порядковых номеров или [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/) элементы. В следующем фрагменте кода показано, как удалить несколько сообщений.
+Несколько электронных писем можно удалить из почтового ящика с помощью [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) API Aspose.Email. Метод [DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessages/#deletemessages/) предлагает ряд вариантов для удаления нескольких сообщений с сервера, используя уникальные идентификаторы, номера последовательностей или элементы [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/). Следующий код показывает, как удалить несколько сообщений.
 
 
 ```csharp
 using var client = new ImapClient("host", "username", "password");
 client.SelectFolder(ImapFolderInfo.InBox);
-           
-// Append test messages
+            
+// Добавление тестовых сообщений
 var emlList = new List<MailMessage>();
 {
   var eml = new MailMessage("from@from.com", "to@to.com")
   {
-    Subject = $"Message to delete {i}",
-    Body = "Hey! This Message will be deleted!"
+    Subject = $"Сообщение для удаления {i}",
+    Body = "Привет! Это сообщение будет удалено!"
   };
-               
+                
   emlList.Add(eml);
 }
 
 var appendMessagesResult = client.AppendMessages(emlList);
-           
-// Bulk Delete appended Messages
+            
+// Массовое удаление добавленных сообщений
 client.DeleteMessages(appendMessagesResult.Succeeded.Values, true);
 client.CommitDeletes();
 ```

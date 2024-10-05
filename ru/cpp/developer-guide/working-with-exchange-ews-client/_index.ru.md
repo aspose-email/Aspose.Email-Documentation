@@ -4,5 +4,3 @@ url: /ru/cpp/working-with-exchange-ews-client/
 weight: 40
 type: docs
 ---
-
-

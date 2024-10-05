@@ -1,5 +1,5 @@
 ---
-title: "Создание и сохранение файлов MSG"
+title: "Создание и Сохранение MSG Файлов"
 url: /ru/java/creating-and-saving-msg-files/
 weight: 10
 type: docs
@@ -8,19 +8,19 @@ type: docs
 
 Aspose.Email поддерживает создание файлов сообщений Outlook (MSG). В этой статье объясняется, как:
 
-- Создавайте сообщения MSG.
-- Создавайте сообщения MSG с вложениями.
-- Создайте сообщение MSG с телом RTF.
-- Сохраните сообщение как черновик.
-- Работа со сжатием тела.
- 
-## **Создание и сохранение сообщений Outlook**
+- Создавать сообщения MSG.
+- Создавать сообщения MSG с вложениями.
+- Создавать сообщение MSG с телом RTF.
+- Сохранять сообщение как черновик.
+- Работать с компрессией тела.
+  
+## **Создание и Сохранение Сообщений Outlook**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс имеет [save](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.lang.String-) метод, позволяющий сохранять файлы Outlook MSG на диск или в потоковом режиме. Приведенные ниже фрагменты кода создают экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс, задайте такие свойства, как from, to, subject и body. [save](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.lang.String-) метод принимает имя файла в качестве аргумента. Кроме того, сообщения Outlook можно создавать с помощью [сжатый корпус RTF](#creating-msg-files-with-rtf-body) используя [MapiConversionOptions](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/).
+Класс [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) имеет метод [save](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.lang.String-), который может сохранять файлы Outlook MSG на диск или в поток. Приведенные ниже кодовые фрагменты создают экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/), устанавливают свойства, такие как от, до, тема и тело. Метод [save](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.lang.String-) принимает имя файла в качестве аргумента. Кроме того, сообщения Outlook могут быть созданы с [сжатоe телом RTF](#creating-msg-files-with-rtf-body) с использованием [MapiConversionOptions](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/).
 
-1. Создайте новый экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс и задайте свойства From, To, Subject и Body.
-1. Позвоните [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) class [fromMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#fromMailMessage-com.aspose.email.MailMessage-) метод, который принимает объект [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) тип. The [fromMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#fromMailMessage-com.aspose.email.MailMessage-) метод преобразует [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) в [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) (MSG).
-1. Позвоните [MapiMessage.save](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#save-java.lang.String-) метод сохранения файла MSG.
+1. Создайте новый экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) и установите свойства From, To, Subject и Body.
+1. Вызовите метод [fromMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#fromMailMessage-com.aspose.email.MailMessage-) класса [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/), который принимает объект типа [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Метод [fromMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#fromMailMessage-com.aspose.email.MailMessage-) преобразует [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) в [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) (MSG).
+1. Вызовите метод [MapiMessage.save](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#save-java.lang.String-), чтобы сохранить файл MSG.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -44,9 +44,9 @@ String strMsgFile = "CreatingAndSavingOutlookMessages_out.msg";
 outlookMsg.save(dataDir + strMsgFile);
 ~~~
 
-## **Создание файлов MSG с вложениями**
+## **Создание MSG Файлов С Вложениями**
 
-[В приведенном выше примере](#creating-and-saving-outlook-messages), мы создали простой файл MSG. Aspose.Email также поддерживает сохранение файлов сообщений с вложениями. Все, что вам нужно сделать, это добавить вложения в [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) экземпляр. Добавьте вложения, вызвав *addItem* метод на [MailMessage.Attachments](https://reference.aspose.com/email/java/com.aspose.email/attachmentcollection/) collection.
+[В приведенном выше примере](#creating-and-saving-outlook-messages) мы создали простой файл MSG. Aspose.Email также поддерживает сохранение файлов сообщений с вложениями. Все, что вам нужно сделать, это добавить вложения в экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Добавьте вложения, вызвав метод *addItem* на коллекции [MailMessage.Attachments](https://reference.aspose.com/email/java/com.aspose.email/attachmentcollection/).
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -78,11 +78,11 @@ String strMsgFile = "CreateMessagesWithAttachments.msg";
 outlookMsg.save(dataDir + strMsgFile);
 ~~~
 
-## **Создание файлов MSG с помощью тела RTF**
+## **Создание MSG Файлов С Телом RTF**
 
-С помощью Aspose.Email можно также создавать файлы сообщений Outlook (MSG) с телами RTF. Тело RTF поддерживает форматирование текста. Создайте его, установив [MailMessage.HtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setHtmlBody-java.lang.String-) имущество. Когда вы конвертируете [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) экземпляр в [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) Например, тело HTML преобразуется в RTF. Таким образом, форматирование тела письма сохраняется.
+Вы также можете создавать файлы сообщений Outlook (MSG) с телом с богатым текстом (RTF) с помощью Aspose.Email. Тело RTF поддерживает форматирование текста. Создайте его, установив свойство [MailMessage.HtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setHtmlBody-java.lang.String-). Когда вы преобразуете экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) в экземпляр [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/), HTML тело преобразуется в RTF. Таким образом, форматирование тела электронной почты сохраняется.
 
-В следующем примере создается файл MSG с телом RTF. В тексте HTML используется один заголовок, полужирный шрифт и подчеркивание. Это форматирование сохраняется при преобразовании HTML в RTF.
+Следующий пример создает файл MSG с телом RTF. В нем есть один заголовок, примененное жирное и подчеркивающее форматирование в HTML теле. Это форматирование сохраняется при преобразовании HTML в RTF.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -96,19 +96,19 @@ MailMessage mailMsg = new MailMessage();
 mailMsg.setFrom(MailAddress.to_MailAddress("sender@domain.com"));
 mailMsg.setTo(MailAddressCollection.to_MailAddressCollection("receiver@domain.com"));
 mailMsg.setSubject("This is test message");
-mailMsg.setHtmlBody("<h3>rtf example</h3><p>creating an <b><u>outlook message (msg)</u></b> file using Aspose.Email.</p>");
+mailMsg.setHtmlBody("<h3>rtf example</h3><p>создание <b><u>файла сообщения outlook (msg)</u></b> с использованием Aspose.Email.</p>");
 
 MapiMessage outlookMsg = MapiMessage.fromMailMessage(mailMsg);
 outlookMsg.save(dataDir + "CreatingMSGFilesWithRTFBody_out.msg");
 ~~~
 
-## **Сохранение сообщения в статусе черновика**
+## **Сохранение Сообщения в Статусе Черновика**
 
-Письма сохраняются как черновики, когда кто-то начал их редактировать, но хочет вернуться к ним, чтобы завершить их позже. Aspose.Email поддерживает сохранение сообщений электронной почты в черновом статусе, установив флаг сообщения. Ниже приведен пример кода для сохранения сообщения электронной почты Outlook (MSG) в виде черновика.
+Электронные письма сохраняются как черновики, когда кто-то начал их редактировать, но хочет вернуться к ним позже, чтобы завершить. Aspose.Email поддерживает сохранение электронных сообщений в статусе черновика, устанавливая флаг сообщения. Ниже приведен пример кода для сохранения электронной почты Outlook (MSG) как черновика.
 
 {{% alert %}}
-Обратите внимание, что в статусе черновика Outlook не отображает информацию об отправителе, назначенную MapiMessage.
-Если нам нужно отобразить информацию об отправителе, мы должны установить флаг MSGFLAG_READ.
+Обратите внимание, что в статусе черновика Outlook не отображает никакой информации о отправителе, назначенной MapiMessage.
+Если нам нужно отобразить информацию отправителя, мы должны установить флаг MSGFLAG_READ.
 {{% /alert %}}
 
 
@@ -122,8 +122,8 @@ String strExistingMsg = "message.msg";
 
 // Load the existing file in MailMessage and Change the properties
 MailMessage msg = MailMessage.load(dataDir + strExistingMsg, new MsgLoadOptions());
-msg.setSubject(msg.getSubject() + " NEW SUBJECT (updated by Aspose.Email)");
-msg.setHtmlBody(msg.getHtmlBody() + " NEW BODY (udpated by Aspose.Email)");
+msg.setSubject(msg.getSubject() + " НОВАЯ ТЕМА (обновлено Aspose.Email)");
+msg.setHtmlBody(msg.getHtmlBody() + " НОВОЕ ТЕЛО (обновлено Aspose.Email)");
 
 // Create an instance of type MapiMessage from MailMessage, Set message flag to un-sent (draft status) and Save it
 MapiMessage mapiMsg = MapiMessage.fromMailMessage(msg);
@@ -131,9 +131,9 @@ mapiMsg.setMessageFlags(MapiMessageFlags.MSGFLAG_UNSENT);
 mapiMsg.save(dataDir + "SavingMessageInDraftStatus_out.msg");
 ~~~
 
-## **Последствия компрессии тела**
+## **Последствия Компрессии Тела**
 
-Метод сжатия тела RTF можно использовать для получения глутамата натрия меньшего размера. Однако это приводит к снижению скорости создания. Чтобы создавать сообщения с повышенной скоростью, установите флаг на **false**. Этот флаг, в свою очередь, влияет на созданные файлы PST: файлы MSG меньшего размера приводят к уменьшению размера PST, а большие файлы MSG замедляют создание PST.
+Метод компрессии тела RTF может использоваться для создания файла MSG меньшего размера. Однако это приводит к снижению скорости создания. Чтобы создавать сообщения с улучшенной скоростью, установите флаг в **false**. Этот флаг, в свою очередь, влияет на созданные PST: меньшие файлы MSG приводят к меньшим PST, а большие файлы MSG приводят к медленному созданию PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

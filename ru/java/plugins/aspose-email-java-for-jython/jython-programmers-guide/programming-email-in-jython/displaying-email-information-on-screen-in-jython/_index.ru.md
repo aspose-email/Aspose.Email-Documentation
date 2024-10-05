@@ -5,10 +5,10 @@ weight: 30
 type: docs
 ---
 
-## **Aspose.Email - отображение информации об электронной почте**
-Для отображения информации об электронной почте с помощью **Aspose.Электронная почта Java для Mython**, просто вызовите **GetEmailInfo** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Отображение информации об электронной почте**
+Для отображения информации об электронной почте с использованием **Aspose.Email Java for Jython** просто вызовите модуль **GetEmailInfo**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ``` python
 
@@ -28,7 +28,7 @@ class GetEmailInfo:
 
 
 
-        # Create MailMessage instance by loading an Eml file
+        # Создание экземпляра MailMessage путем загрузки файла Eml
 
         message_format = MessageFormat
 
@@ -36,23 +36,23 @@ class GetEmailInfo:
 
         message = mailMessage.load(dataDir + "Message.eml")
 
-        print "From: "
+        print "От: " 
 
         print message.getFrom()
 
-        print "To: "
+        print "Кому: " 
 
         print message.getTo()
 
-        print "Subject: "
+        print "Тема: " 
 
         print message.getSubject()
 
-        print "HtmlBody: "
+        print "HtmlТело: " 
 
         print message.getHtmlBody()
 
-        print "TextBody: "
+        print "ТекстТело: " 
 
         print message.getTextBody()
 
@@ -60,13 +60,13 @@ class GetEmailInfo:
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     GetEmailInfo()
 
 ```
-## **Загрузить рабочий код**
-Download **Отображение информации об электронной почте (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Отображение информации об электронной почте (Aspose.Email)** с любого из нижеупомянутых социальных кодов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

@@ -1,5 +1,5 @@
 ---
-title: "Aspose.Электронная почта для SharePoint"
+title: "Aspose.Email для SharePoint"
 url: /ru/sharepoint/
 weight: 60
 is_root: true
@@ -8,28 +8,28 @@ type: docs
 
 {{% alert color="primary" %}}
 
-![Aspose.Email для логотипа продукта SharePoint](home_1.png)
+![Логотип продукта Aspose.Email для SharePoint](home_1.png)
 
-**Добро пожаловать в Aspose.Электронная почта для SharePoint**
+**Добро пожаловать в Aspose.Email для SharePoint**
 
-Aspose.Email для SharePoint — это набор библиотек классов, предназначенных для создания уникального и мощного компонента программирования электронной почты.
-Aspose.Email позволяет быстро и легко создавать сложные программы для работы с почтовыми приложениями.
+Aspose.Email для SharePoint - это набор библиотек классов, предназначенных для создания уникального и мощного компонента программирования электронной почты.
+Aspose.Email позволяет быстро и легко создавать сложные программы для обработки приложений электронной почты.
 
 Aspose.Email поддерживает большое количество:
-- сетевые протоколы, такие как: SMTP, MIME, POP3, IMAP;
-- форматы файлов сообщений, такие как: EML, MSG, MHT;
-- форматы хранения почты, такие как: PST и MBOX.
+- сетевых протоколов, таких как: SMTP, MIME, POP3, IMAP;
+- форматов файлов сообщений, таких как: EML, MSG, MHT;
+- форматов хранения почты, таких как: PST и MBOX.
 
-Aspose.Email позволяет создавать широкий спектр приложений для обработки электронной почты, не теряясь при этом в сложностях детализации формата сообщений.
+Aspose.Email позволяет создавать широкий спектр приложений для обработки электронной почты, не теряясь в сложностях деталей формата сообщений.
 
 {{% /alert %}}
 
-## **Aspose.Электронная почта для ресурсов SharePoint**
+## **Ресурсы Aspose.Email для SharePoint**
 
-Ниже приведены ссылки на некоторые полезные ресурсы, которые могут понадобиться для выполнения ваших задач.
+Ниже приведены ссылки на некоторые полезные ресурсы, которые могут понадобиться вам для выполнения ваших задач.
 
 - [Обзор функций Aspose.Email для SharePoint](/email/sharepoint/features/)
 - [Страница продукта Aspose.Email для SharePoint](https://products.aspose.com/email/ru/sharepoint)
-- [Новые версии Aspose.Email для SharePoint](https://releases.aspose.com/email/sharepoint/)
+- [Новые релизы Aspose.Email для SharePoint](https://releases.aspose.com/email/sharepoint/)
 - [Форум бесплатной поддержки Aspose.Email для SharePoint](https://forum.aspose.com/)
-- [Aspose.Email для службы платной поддержки SharePoint](https://helpdesk.aspose.com/)
+- [Служба платной поддержки Aspose.Email для SharePoint](https://helpdesk.aspose.com/)

@@ -1,14 +1,14 @@
 ---
-title: "Разбор файлов сообщений Outlook в Ruby"
+title: "Парсинг файлов сообщений Outlook на Ruby"
 url: /ru/java/parsing-outlook-message-files-in-ruby/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - парсинг файлов сообщений Outlook**
-Для анализа файла сообщений Outlook с помощью **Aspose.Электронная почта Java для Ruby**, просто вызовите **ParseOutlookMessageFile** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Парсинг файлов сообщений Outlook**
+Чтобы парсить файл сообщения Outlook с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **ParseOutlookMessageFile**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ``` ruby
 
@@ -16,20 +16,20 @@ type: docs
 
 outlook_message_file = Rjb::import('com.aspose.email.MapiMessage').fromFile(data_dir + "Message.msg")
 
-\# Display sender's name
+\# Показать имя отправителя
 
-puts "Sender Name : " + outlook_message_file.getSenderName().to_s
+puts "Имя отправителя : " + outlook_message_file.getSenderName().to_s
 
-#Display Subject
+# Показать тему
 
-puts "Subject : " + outlook_message_file.getSubject().to_s
+puts "Тема : " + outlook_message_file.getSubject().to_s
 
-\# Display Body
+\# Показать тело
 
-puts "Body : " + outlook_message_file.getBody().to_s
+puts "Тело : " + outlook_message_file.getBody().to_s
 
 ```
-## **Загрузить рабочий код**
-Download **Разбор файлов сообщений Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Парсинг файлов сообщений Outlook (Aspose.Email)** с любого из упомянутых ниже социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/parseoutlookmessagefile.rb)

@@ -7,13 +7,13 @@ type: docs
 
 Ведение журнала активности используется для отладки, а также для сбора и анализа рабочей информации о клиенте POP3.
 
-## **Включите ведение журнала активности с помощью файла appsettings.json**
+## **Включение ведения журнала активности с помощью файла appsettings.json**
 
-> **_NOTE:_** Этот вариант предпочтителен для приложений.NET Core.
+> **_ПРИМЕЧАНИЕ:_** Этот вариант предпочтителен для приложений .NET Core.
 
-Вход в систему [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) можно включить с помощью следующих шагов и примеров кода:
+Ведение журнала в [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) можно включить с помощью следующих шагов и образцов кода:
 
-1. Добавьте файл конфигурации appsettings.json в проект C#, если он не был добавлен ранее.
+1. Добавьте конфигурационный файл appsettings.json в проект C#, если он не был добавлен ранее.
 2. Убедитесь, что файл проекта содержит следующие строки в разделе ItemGroup.
 
    ```xml
@@ -31,70 +31,70 @@ type: docs
       }
    ```
 
-Вышеупомянутые два свойства:
+Два вышеупомянутых свойства:
 
 - **Pop3DiagnosticLog** - указывает относительный или абсолютный путь к файлу журнала.
 
-- **Pop3DiagnosticLog_UseDate** - указывает, следует ли добавить строковое представление текущей даты к имени файла журнала.
+- **Pop3DiagnosticLog_UseDate** - указывает, добавлять ли строковое представление текущей даты к имени файла журнала.
 
-## **Включить ведение журнала активности в программном коде**
+## **Включение ведения журнала активности в коде программы**
 
-Вы также можете сразу включить логирование в коде.
+Вы также можете включить ведение журнала сразу в коде.
 
-> **_NOTE:_** даже если вы уже включили ведение журнала с помощью файлов конфигурации, эта опция будет применена.
+> **_ПРИМЕЧАНИЕ:_** даже если вы уже включили ведение журнала с помощью конфигурационных файлов, этот вариант будет применен.
 
-Вход в систему [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) можно включить с помощью следующих шагов и примеров кода:
+Ведение журнала в [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) можно включить с помощью следующих шагов и образцов кода:
 
 1. Создайте [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
-2. Задайте путь к файлу журнала, используя [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/logfilename/) property.
-3. Установите [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usedateinlogfilename/) имущество, если это необходимо.
+2. Установите путь к файлу журнала с помощью свойства [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/logfilename/).
+3. Установите свойство [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usedateinlogfilename/) при необходимости.
 
 ```cs
    using (var client = new Pop3Client("your pop3 server", 995, "your username", "your password"))
 {
-    // Set security mode
+    // Установите режим безопасности
     client.SecurityOptions = SecurityOptions.Auto;
 
-    // Задайте путь к файлу журнала, используя LogFileName property.
+    // Установите путь к файлу журнала с помощью свойства LogFileName.
     client.LogFileName = @"C:\Aspose.Email.Pop3.log";
 
-    // Установите UseDateInLogFileName имущество, если это необходимо.
+    // Установите свойство UseDateInLogFileName при необходимости.
     client.UseDateInLogFileName = false;
 }
 ```
 
-## **Включите ведение журнала активности с помощью файла App.config**
+## **Включение ведения журнала активности с помощью файла App.config**
 
-[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) активность можно зарегистрировать, изменив ConfigSections в файле конфигурации. Ниже приведены шаги по ведению журнала диагностики:
+Активность [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) может быть зарегистрирована путем изменения секций config в конфигурационном файле. Следующие шаги необходимо выполнить для ведения диагностического журнала:
 
-1. Добавьте **sectionGroup** называется «Настройки приложения».
-1. Добавьте **section** называется «Aspose.Email.Properties.Settings».
-1. Включите настройку IMAPDiagonosticLog, где имя файла определено в поле **applicationSettings/Aspose.Email.Properties.Settings**.
+1. Добавьте **sectionGroup** под названием "applicationSettings".
+1. Добавьте **section** под названием "Aspose.Email.Properties.Settings".
+1. Включите настройку ImapDiagonosticLog, где имя файла определяется в **applicationSettings/Aspose.Email.Properties.Settings**.
 
-Вот образец заявки, в котором используется [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) для обработки почты. Вся эта операция регистрируется путем изменения файла App.config.
+Вот пример формы приложения, которая использует [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) для обработки почты. Вся эта активность записывается путем изменения файла App.config.
 
-- Создайте приложение на основе формы, нажав на него всего одну кнопку. Добавьте следующий пример кода для нажатия кнопки:
+- Создайте приложение на основе формы с одной кнопкой. Добавьте следующий пример кода для обработки нажатия кнопки:
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-Pop3ClientActivityLogging-Pop3ClientActivityLogging.cs" >}}
 
 - Добавьте ссылку на Aspose.Email.
-- Теперь добавьте файл App.Config и измените его так, чтобы содержимое файла выглядело следующим образом:
+- Теперь добавьте файл App.Config и измените его так, чтобы содержимое файла было следующим:
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-App-Pop3ClientActivityLogging.config" >}}
 
-Для C#.NET используйте следующую опцию
+Для C# .NET используйте следующий вариант
 
 |![todo:image_alt_text](pop3client-activity-logging_1.png)|
-|: - |
-Для VB.NET используйте следующую опцию
+| :- |
+Для VB .NET используйте следующий вариант
 
-|![todo:image_alt_text](pop3client-activity-logging_1.png)| |![todo:image_alt_text](pop3client-activity-logging_3.png)| |
-|: - |: - |: - |: - |
+|![todo:image_alt_text](pop3client-activity-logging_1.png)| |![todo:image_alt_text](pop3client-activity-logging_3.png)| |
+| :- | :- | :- | :- |
 
-|![todo:image_alt_text](pop3client-activity-logging_4.png)| |
-|: - |: - |
+|![todo:image_alt_text](pop3client-activity-logging_4.png)| |
+| :- | :- |
 
-- Запустите код и просмотрите папку Log. Будет создан следующий файл.
+- Запустите код и затем проверьте папку Log. Будет создан следующий файл.
 
-|![todo:image_alt_text](pop3client-activity-logging_5.png)| |
-|: - |: - |
+|![todo:image_alt_text](pop3client-activity-logging_5.png)| |
+| :- | :- |

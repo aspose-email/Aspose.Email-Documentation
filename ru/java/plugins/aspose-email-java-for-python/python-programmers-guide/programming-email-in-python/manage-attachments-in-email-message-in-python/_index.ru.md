@@ -1,12 +1,12 @@
 ---
-title: "Управление вложениями в сообщении электронной почты на Python"
+title: "Управление Вложениями в Email Сообщении на Python"
 url: /ru/java/manage-attachments-in-email-message-in-python/
 weight: 60
 type: docs
 ---
 
-## **Aspose.Email - Управление вложениями в электронной почте**
-Для управления вложениями в электронной почте с помощью **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Управление Вложениями в Email**
+Чтобы управлять вложениями в Email с использованием **Aspose.Email Java для Python**, используйте следующий код.
 
 **Код Python**
 
@@ -14,53 +14,53 @@ type: docs
 
 
 
-\# Create a instance of MailMessage class
+\# Создайте экземпляр класса MailMessage
 
 message = self.MailMessage()
 
-\# Set subject of the message
+\# Установите тему сообщения
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Новое сообщение, созданное с помощью Aspose.Email для Java")
 
 mail_address = self.MailAddress
 
-\# Set Html body
+\# Установите Html тело
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Эта строка выделена жирным шрифтом.</b> <br/> <br/>" +
 
-    "<font color=blue>This line is in blue color</font>")
+    "<font color=blue>Эта строка синего цвета</font>")
 
-\# Set sender information
+\# Установите информацию об отправителе
 
-message.setFrom(self.MailAddress("from@domain.com", "Sender Name", False))
+message.setFrom(self.MailAddress("from@domain.com", "Имя отправителя", False))
 
-\# Add TO recipients
+\# Добавьте адреса получателей TO
 
-message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Recipient 1", False))
+message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Получатель 1", False))
 
-\# Adding attachment
+\# Добавление вложения
 
-\# Load an attachment
+\# Загрузите вложение
 
 attachment = self.Attachment(self.dataDir + "1.txt")
 
-\# Add attachment in instance of MailMessage class
+\# Добавьте вложение в экземпляр класса MailMessage
 
 message.addAttachment(attachment)
 
-\# Save message to disc
+\# Сохраните сообщение на диск
 
 messageFormat = self.MessageFormat
 
 message.save(self.dataDir + "Add-Attachment.msg", messageFormat.getMsg())
 
-\# Display Status
+\# Отобразите статус
 
-print "Added attachment successfully."
+print "Вложение успешно добавлено."
 
 ```
-## **Загрузить рабочий код**
-Download **Управление вложениями в сообщении электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать Рабочий Код**
+Скачайте **Управление Вложениями в Email Сообщении (Aspose.Email)** с любого из указанных ниже сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

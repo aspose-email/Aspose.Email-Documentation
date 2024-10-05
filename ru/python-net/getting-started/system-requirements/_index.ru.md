@@ -6,17 +6,15 @@ type: docs
 ---
 
 
-## **Версия для Python**
+## **Версия Python**
 - Python 3.5 или выше
 ## **Поддерживаемые операционные системы**
 ### **Windows**
-- Сервер Майкрософт Виндовс 2003 (x64, x86)
-- Сервер Майкрософт Виндовс 2008 (x64, x86)
-- Сервер Майкрософт Виндовс 2012 (x64, x86)
-- Майкрософт Виндовс XP (x64, x86)
-- Микрософт Виндовс Виста (x64, x86)
-- Майкрософт Виндовс 7 (x64, x86)
-- Микрософт Виндовс 8, 8.1 (x64, x86)
-- Микрософт Виндовс 10 (x64, x86)
-
-
+- Microsoft Windows 2003 Server (x64, x86)
+- Microsoft Windows 2008 Server (x64, x86)
+- Microsoft Windows 2012 Server (x64, x86)
+- Microsoft Windows XP (x64, x86)
+- Microsoft Windows Vista (x64, x86)
+- Microsoft Windows 7 (x64, x86)
+- Microsoft Windows 8, 8.1 (x64, x86)
+- Microsoft Windows 10 (x64, x86)

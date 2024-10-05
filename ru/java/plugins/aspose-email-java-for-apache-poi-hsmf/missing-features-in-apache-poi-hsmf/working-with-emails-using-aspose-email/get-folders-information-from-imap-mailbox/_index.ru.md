@@ -5,8 +5,8 @@ weight: 10
 type: docs
 ---
 
-## **Aspose.Email - получение информации о папках из почтового ящика IMAP**
-С Aspose.Email очень просто получать информацию о папках с сервера IMAP. Метод listFolders () в IMapClient возвращает объект коллекции IMapFolderInfoCollection, содержащий информацию обо всех папках сервера. Просмотрите эту коллекцию и получайте информацию об отдельных папках в цикле. Метод перегружен. Вы можете передать имя папки в качестве параметра, чтобы получить список подпапок.
+## **Aspose.Email - Получение информации о папках из почтового ящика IMAP**
+Получить информацию о папках с IMAP-сервера очень легко с помощью Aspose.Email. Метод listFolders() класса ImapClient возвращает объект ImapFolderInfoCollection, который содержит информацию обо всех папках сервера. Перебирайте эту коллекцию и получайте информацию о отдельных папках в цикле. Метод перегружен. Вы можете передать имя папки в качестве параметра, чтобы получить список подпапок.
 
 **Java**
 
@@ -26,35 +26,35 @@ client.setSecurityOptions(SecurityOptions.Auto);
 
 ImapFolderInfoCollection folderInfoColl = client.listFolders();
 
-// Iterate through the collection to get folder info one by one
+// Перебираем коллекцию, чтобы получить информацию о папках одну за другой
 
 for (ImapFolderInfo folderInfo:folderInfoColl)
 
 {
 
-	// Folder name
+	// Имя папки
 
-	System.out.println("Folder name is: " + folderInfo.getName());
+	System.out.println("Имя папки: " + folderInfo.getName());
 
 	ImapFolderInfo folderExtInfo = client.listFolder(folderInfo.getName());
 
-	// New messages in the folder
+	// Новые сообщения в папке
 
-	System.out.println("New message count: " + folderExtInfo.getNewMessageCount());
+	System.out.println("Количество новых сообщений: " + folderExtInfo.getNewMessageCount());
 
-	// Check whether its read only
+	// Проверяем, является ли она только для чтения
 
-	System.out.println("Is it readonly? " + folderExtInfo.getReadOnly());
+	System.out.println("Это только для чтения? " + folderExtInfo.getReadOnly());
 
-	// Total number of messages
+	// Общее количество сообщений
 
-	System.out.println("Total number of messages: " + folderExtInfo.getTotalMessageCount());
+	System.out.println("Общее количество сообщений: " + folderExtInfo.getTotalMessageCount());
 
 }
 
 ```
-## **Загрузить рабочий код**
-Download **Получение информации о папках из почтового ящика IMAP** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать исполняющий код**
+Скачайте **Получение информации о папках из почтового ящика IMAP** с любого из нижеупомянутых сайтов социального программирования:
 
 - [CodePlex](https://archive.codeplex.com/?p=asposeapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases)

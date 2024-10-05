@@ -1,94 +1,92 @@
 ---
-title: "Обновите и сохраните электронное письмо в Python"
+title: "Обновление и сохранение электронной почты в Python"
 url: /ru/java/update-and-save-an-email-in-python/
 weight: 80
 type: docs
 ---
 
-## **Aspose.Email - Обновите и сохраните электронное письмо**
-Чтобы обновить и сохранить электронное письмо, используя **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Обновление и сохранение электронной почты**
+Для обновления и сохранения электронной почты с использованием **Aspose.Email Java для Python** используйте следующий код.
 
-**Код Python**
+**Python код**
 
 ``` python
 
-
-
-\# Initialize and Load an existing MSG file by specifying the MessageFormat
+\# Инициализировать и загрузить существующий MSG файл, указав формат сообщения
 
 mailMessage = self.MailMessage
 
 email = mailMessage.load(self.dataDir + "Message.msg")
 
-\# Initialize a String variable to get the Email Subject
+\# Инициализировать строковую переменную для получения темы электронной почты
 
 subject = email.getSubject()
 
-\# Append some more information to Subject
+\# Добавить дополнительную информацию к теме
 
-subject = subject + " This text is added to the existing subject"
+subject = subject + " Этот текст добавлен к существующей теме"
 
-\# Set the Email Subject
+\# Установить тему электронной почты
 
-email.setSubject('This text is added to the existing subject')
+email.setSubject('Этот текст добавлен к существующей теме')
 
-\# Initialize a String variable to get the Email's HTML Body
+\# Инициализировать строковую переменную для получения HTML тела электронной почты
 
 body = email.getHtmlBody()
 
-\# Apppend some more information to the Body variable
+\# Добавить дополнительную информацию к переменной Body
 
-body = body + "<br> This text is added to the existing body"
+body = body + "<br> Этот текст добавлен к существующему телу"
 
-\# Set the Email Body
+\# Установить тело электронной почты
 
 email.setHtmlBody(body)
 
-\# Initialize MailAddressCollection object
+\# Инициализировать объект MailAddressCollection
 
 contacts = self.MailAddressCollection()
 
-\# Retrieve Email's TO list
+\# Получить список получателей электронной почты
 
 contacts = email.getTo()
 
-\# Add another email address to collection
+\# Добавить другой адрес электронной почты в коллекцию
 
 contacts.add("to1@domain.com")
 
-\# Set the collection as Email's TO list
+\# Установить коллекцию в качестве списка получателей электронной почты
 
 email.setTo(contacts)
 
-\# Initialize MailAddressCollection
+\# Инициализировать MailAddressCollection
 
 contacts = self.MailAddressCollection()
 
-\# Retrieve Email's CC list
+\# Получить список копий получателей электронной почты
 
 contacts = email.getCC()
 
-\# Add another email address to collection
+\# Добавить другой адрес электронной почты в коллекцию
 
 contacts.add("cc2@domain.com")
 
-\# Set the collection as Email's CC list
+\# Установить коллекцию в качестве списка копий получателей электронной почты
 
 email.setCC(contacts)
 
-\# Save the Email message to disk by specifying the MessageFormat
+\# Сохранить сообщение электронной почты на диске, указав формат сообщения
 
 mailMessageSaveType = self.MailMessageSaveType
 
 email.save(self.dataDir + "UpdateMessage.msg", mailMessageSaveType.getOutlookMessageFormat())
 
-\# Display Status
+\# Показать статус
 
-print "Updated email message Successfully."
+print "Электронное сообщение успешно обновлено."
 
 ```
-## **Загрузить рабочий код**
-Download **Обновить и сохранить электронное письмо (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Загрузить работающий код**
+Скачайте **Обновление и сохранение электронной почты (Aspose.Email)** с любого из нижеуказанных сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

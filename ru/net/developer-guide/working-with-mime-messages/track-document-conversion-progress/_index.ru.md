@@ -1,21 +1,21 @@
 ---
-title: "Отслеживайте прогресс преобразования документов"
+title: "Отслеживание Прогресса Конвертации Документов"
 url: /ru/net/track-document-conversion-progress/
 weight: 60
 type: docs
 ---
 
 
-Aspose.Email предоставляет возможность отслеживать процесс преобразования документов. Для этого API предоставляет [SaveOptions.CustomProgressHandler](https://reference.aspose.com/email/net/aspose.email/saveoptions/customprogresshandler/). который представляет собой метод обработки событий прогресса. Типы событий прогресса представлены в виде [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype/) перечисление. [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype/) перечисление состоит из следующих членов.
+Aspose.Email предоставляет возможность отслеживать прогресс конвертации документов. Для этого API предоставляет [SaveOptions.CustomProgressHandler](https://reference.aspose.com/email/net/aspose.email/saveoptions/customprogresshandler/), который представляет метод, обрабатывающий события прогресса. Типы событий прогресса представлены перечислением [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype/). Перечисление [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype/) имеет следующие члены.
 
-- MIMEStructureCreated: это событие сообщает о создании структуры MIME.
-- MimePartSaved: это событие сообщает, что сохранение одной части MIME завершено.
-- SavedToStream: это событие сообщает, что все части мима сохранены в потоковом режиме.
+- MimeStructureCreated: Это событие информирует о том, что MIME-структура создана.
+- MimePartSaved: Это событие информирует о том, что сохранение одной части MIME завершено.
+- SavedToStream: Это событие информирует о том, что все части MIME сохранены в поток.
 
-Следующий пример кода демонстрирует использование [SaveOptions.CustomProgressHandler](https://reference.aspose.com/email/net/aspose.email/saveoptions/customprogresshandler/) and [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype/) перечисление отслеживайте прогресс преобразования документов.
+Следующий пример кода демонстрирует использование [SaveOptions.CustomProgressHandler](https://reference.aspose.com/email/net/aspose.email/saveoptions/customprogresshandler/) и перечисления [ProgressEventType](https://reference.aspose.com/email/net/aspose.email/progresseventtype/) для отслеживания прогресса конвертации документов.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-TrackDocumentConversionProgress-1.cs" >}}
 
-Ниже приведен код пользовательского класса, использованный в приведенном выше примере кода.
+Следующий код предназначен для пользовательского класса, используемого в приведенном выше примере кода.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-TrackDocumentConversionProgress-2.cs" >}}

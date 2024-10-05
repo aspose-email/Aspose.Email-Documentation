@@ -5,22 +5,22 @@ weight: 40
 type: docs
 ---
 
-## **Aspose.Email - Извлечение заголовков писем**
-Извлечение заголовков электронных писем с помощью **Aspose.Электронная почта Java для PHP**, просто вызовите **ExtractEmailHeaders** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Извлечение заголовков электронной почты**
+Чтобы извлечь заголовки электронной почты с помощью **Aspose.Email Java for PHP**, просто вызовите модуль **ExtractEmailHeaders**. Здесь вы можете увидеть пример кода.
 
-**Код PHP**
+**PHP Код**
 
 ``` php
 
- # Initialize and Load an existing EML file by specifying the MessageFormat
+ # Инициализируйте и загрузите существующий EML файл, указав формат сообщения
 
 $mailMessage=new MailMessage();
 
 $message = $mailMessage->load($dataDir . "Message.eml");
 
-print "Printing all Headers:".PHP_EOL;
+print "Печатаем все заголовки:".PHP_EOL;
 
-\# Print out all the headers
+\# Выведите все заголовки
 
 $i=0;
 
@@ -33,8 +33,8 @@ $i += 1;
 }
 
 ```
-## **Загрузить рабочий код**
-Download **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Извлечение заголовков электронной почты (Aspose.Email)** с любого из указанных ниже сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/ExtractEmailHeaders.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingEmail/ExtractEmailHeaders.php)

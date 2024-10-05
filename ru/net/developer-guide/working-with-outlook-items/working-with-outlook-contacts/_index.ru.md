@@ -8,68 +8,68 @@ type: docs
 
 ## **Создание, сохранение и чтение контактов**
 
-Как и MAPIMessage, Aspose.Email позволяет создавать контакты Outlook. [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) класс предоставляет все свойства, связанные с контактами, необходимые для создания контакта Outlook. В этой статье показано, как создать, сохранить и прочитать контакт Outlook с помощью [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) class.
+Как и MapiMessage, Aspose.Email позволяет создавать контакты Outlook. Класс [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) предоставляет все необходимые свойства, связанные с контактами, для создания контакта Outlook. В данной статье показано, как создать, сохранить и прочитать контакт Outlook с помощью класса [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/).
 
 ### **Создание и сохранение контакта Outlook**
 
-Чтобы создать контакт и сохранить его на диске, выполните следующие действия:
+Чтобы создать контакт и сохранить его на диск:
 
-1. Создайте новый объект из [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) class.
-1. Введите контактную информацию об объекте.
-1. Добавьте данные фотографии (если есть).
-1. Сохраните контакт в формате MSG или vCard.
+1. Создайте новый объект класса [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/).
+1. Введите информацию о свойствах контакта.
+1. Добавьте данные о фотографии (если есть).
+1. Сохраните контакт в формате MSG или VCard.
 
-В следующем фрагменте кода показано, как создать и сохранить контакт Outlook.
+Следующий код показывает, как создать и сохранить контакт Outlook.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreateAndSaveOutlookContact-CreateAndSaveOutlookContact.cs" >}}
 
-### **Сохранить список рассылки Mapi в один многоконтактный файл VCF**
+### **Сохранение списка рассылки Mapi в один мульти-контактный файл VCF**
 
-В приведенном ниже примере кода показано, как сохранить список рассылки в многоконтактный файл VCF:
+Пример кода ниже демонстрирует, как сохранить список рассылки в мульти-контактный файл VCF:
 
 ```cs
-// convert the `msg` object to a `MapiMessage` object
+// конвертировать объект `msg` в объект `MapiMessage`
 var dlist = (MapiDistributionList)msg.ToMapiMessageItem();
 
-//save the distribution list
+// сохранить список рассылки
 var options = new MapiDistributionListSaveOptions(ContactSaveFormat.VCard);
 dlist.Save("distribution_list.vcf", options);
 ```
 
 
-### **Сохранить контакт в формате VCF версии 3**
+### **Сохранение контакта в формате VCF версии 3**
 
-Чтобы сохранить контакт в формате VCF версии 3, используйте [VCardVersion](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardversion/) перечислимый для установки [VCardSaveOptions.Version](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/version/) имущество. Следующий пример кода демонстрирует использование [VCardVersion](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardversion/) перечислим для сохранения контактного формата VCF версии 3:
+Чтобы сохранить контакт в формате VCF версии 3, используйте перечисление [VCardVersion](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardversion/), чтобы установить [VCardSaveOptions.Version](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/version/) свойство. Следующий пример кода демонстрирует использование [VCardVersion](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardversion/) перечисления для сохранения контакта в формате VCF версии 3:
 
 ```cs
 
 ```
 
-### **Чтение контакта MAPI**
+### **Чтение MapiContact**
 
-The [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) класс можно использовать для загрузки контактов в формате Outlook MSG и vCard. В следующем фрагменте кода показано, как загрузить контакты Outlook, сохраненные в формате MSG и VCF, в [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/).
+Класс [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) может использоваться для загрузки контактов как в формате MSG, так и в формате VCard. Следующий код показывает, как загрузить контакты Outlook, сохраненные как MSG и VCF, в [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/).
 
 #### **Загрузка контакта из MSG**
 
-В следующем фрагменте кода показано, как загружать контакты из MSG.
+Следующий код показывает, как загрузить контакты из MSG.
 
-#### **Загрузка контакта из vCard**
+#### **Загрузка контакта из VCard**
 
-В следующем фрагменте кода показано, как загрузить контакты из vCard.
+Следующий код показывает, как загрузить контакты из VCard.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-LoadingContactFromVCard-LoadingContactFromVCard.cs" >}}
 
-#### **Загрузка контакта из vCard с указанной кодировкой**
+#### **Загрузка контакта из VCard с заданной кодировкой**
 
-В следующем фрагменте кода показано, как загрузить контакты из vCard с указанной кодировкой.
+Следующий код показывает, как загрузить контакты из VCard с заданной кодировкой.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-LoadingContactFromVCardWithSpecifiedEncoding-LoadingContactFromVCardWithSpecifiedEncoding.cs" >}}
 
-#### **Сохранение контактных элементов vCard в указанной кодировке**
+#### **Сохранение элементов VCard контактов с заданной кодировкой**
 
-Настройте режим сохранения при работе с файлами vCard с помощью [VCardSaveOptions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/#vcardsaveoptions-class) класс. [PreferredTextEncoding](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/preferredtextencoding/) свойство класса будет указывать кодировку, которая будет использоваться при сохранении контактных элементов vCard.
+Настройте поведение сохранения при работе с VCard файлами, используя класс [VCardSaveOptions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/#vcardsaveoptions-class). Свойство [PreferredTextEncoding](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/preferredtextencoding/) класса определяет кодировку, которая будет использоваться при сохранении элементов VCard контактов.
 
-В следующем примере кода показано, как реализовать это свойство в своем проекте:
+Следующий пример кода показывает, как реализовать это свойство в вашем проекте:
 
 ```cs
 var cont = VCardContact.Load(fileName, Encoding.UTF8);
@@ -78,25 +78,25 @@ opt.PreferredTextEncoding = Encoding.UTF8;
 cont.Save("my.vcard", opt);
 ```
 
-#### **Сохранение файлов vCard с расширенными полями**
+#### **Сохранение VCard файлов с расширенными полями**
 
-The [UseExtensions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/useextensions/#vcardsaveoptionsuseextensions-property) свойство позволяет вам контролировать, можно ли использовать расширенные поля при сохранении файлов vCard. Если установлено значение true (по умолчанию), расширения разрешены, что обеспечивает совместимость с настраиваемыми полями и дополнительной контактной информацией.
+Свойство [UseExtensions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/useextensions/#vcardsaveoptionsuseextensions-property) позволяет управлять тем, могут ли быть использованы расширенные поля при сохранении файлов vCard. При установке в значение true (по умолчанию) расширения разрешены, что обеспечивает совместимость с пользовательскими полями и дополнительной информацией о контактах.
 
-### **Чтение нескольких контактов в формате vCard**
+### **Чтение нескольких контактов в формате VCard**
 
-Наша библиотека позволяет получить список всех контактов с vCard. Это можно сделать следующими способами и шагами:
+Наша библиотека позволяет получить список всех контактов из VCard. Это можно сделать с помощью следующих методов и шагов:
 
 ```cs
-// Checks whether VCard source stream contains multiple contacts.
+// Проверяет, содержит ли источник потока VCard несколько контактов.
 VCardContact.IsMultiContacts(Stream stream)
 
-// Loads list of all contacts from VCard file.
+// Загружает список всех контактов из файла VCard.
 VCardContact.LoadAsMultiple(string filePath, Encoding encoding)
 
-// Loads list of all contacts from VCard stream.
+// Загружает список всех контактов из потока VCard.
 VCardContact.LoadAsMultiple(Stream stream, Encoding encoding)
 ```
-В следующем фрагменте кода показано, как работать с файлами vCard, содержащими несколько контактов:
+Следующий код демонстрирует, как обрабатывать VCard файлы, содержащие несколько контактов:
 
 ```cs
 using (FileStream stream = new FileStream("test.vcf", FileMode.Open, FileAccess.Read))
@@ -108,8 +108,8 @@ using (FileStream stream = new FileStream("test.vcf", FileMode.Open, FileAccess.
 }
 ```
 
-## **Отображение контактной информации в MHTML**
+## **Отображение информации о контакте в MHTML**
 
-Контакт Outlook можно преобразовать в MHTML с помощью API Aspose.Email. В этом примере показано, как vCard загружается в [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) а затем преобразован в MHTML с помощью [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) API.
+Контакт Outlook может быть преобразован в MHTML с помощью API Aspose.Email. Этот пример показывает, как VCard загружается в [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) и затем преобразуется в MHTML с помощью API [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-RenderingContactInformationToMhtml-RenderingContactInformationToMhtml.cs" >}}

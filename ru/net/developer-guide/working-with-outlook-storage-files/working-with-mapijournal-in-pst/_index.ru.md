@@ -1,26 +1,26 @@
 ---
-title: "Работа с журналом MAPIjournal в формате PST"
+title: "Работа с MapiJournal в PST"
 url: /ru/net/working-with-mapijournal-in-pst/
 weight: 70
 type: docs
 ---
 
 
-## **Добавление журнала MAPIjournal в PST**
+## **Добавление MapiJournal в PST**
 
-The [Создайте новый файл PST и добавьте подпапки](https://docs.aspose.com/email/ru/net/create-new-pst-add-sub-folders-and-messages/#creating-a-new-pst-file-and-add-subfolders) В статье показано, как создать файл PST и добавить к нему подпапку. С помощью Aspose.Email вы можете добавить [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) в подпапку Journal созданного или загруженного файла PST. Ниже приведены шаги по добавлению [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) в PST:
+Статья [Создание нового PST-файла и добавление подпапок](https://docs.aspose.com/email/ru/net/create-new-pst-add-sub-folders-and-messages/#creating-a-new-pst-file-and-add-subfolders) демонстрирует, как создать PST-файл и добавить в него подпапку. С помощью Aspose.Email вы можете добавить [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) в подпапку Журнал PST-файла, который вы создали или загрузили. Ниже приведены шаги по добавлению [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) в PST:
 
-1. Создайте [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) object
-2. Установите [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) свойства с использованием конструктора и методов.
-3. Создайте PST, используя [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create/) method.
-4. Создайте предварительно определенную папку (Журналы) в корне файла PST, открыв корневую папку и вызвав [AddMapiMessageItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmapimessageitem/#addmapimessageitem) method.
+1. Создайте объект [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/)
+2. Установите свойства [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) с помощью конструктора и методов.
+3. Создайте PST с помощью метода [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create/).
+4. Создайте заранее определённую папку (Журналы) в корне PST-файла, получив доступ к корневой папке и затем вызвав метод [AddMapiMessageItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmapimessageitem/#addmapimessageitem).
 
-В следующем фрагменте кода показано, как создать [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) а затем добавьте его в папку журнала вновь созданного файла PST.
+Следующий код показывает, как создать [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/) и затем добавить его в папку журнала вновь созданного PST-файла.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreateNewMapiJournalAndAddToSubfolder-CreateNewMapiJournalAndAddToSubfolder.cs" >}}
 
 ## **Добавление вложений в MapiJournal**
 
-В следующем фрагменте кода показано, как добавлять вложения в [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/).
+Следующий код показывает, как добавлять вложения в [MapiJournal](https://reference.aspose.com/email/net/aspose.email.mapi/mapijournal/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddAttachmentsToMapiJournal-AddAttachmentsToMapiJournal.cs" >}}

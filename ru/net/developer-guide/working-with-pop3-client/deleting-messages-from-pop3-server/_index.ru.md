@@ -6,37 +6,37 @@ type: docs
 ---
 
 
-Aspose.Email — это надежный компонент, который позволяет выполнять настраиваемые операции после определенных действий. Aspose.Email поддерживает множество событий, с которыми пользователи могут выполнять операции. Эта функция предоставляет пользователям больший контроль над своим приложением. Например, пользователи могут выполнять желаемые действия в следующих случаях:
+Aspose.Email является мощным компонентом, который позволяет выполнять пользовательские операции после определенных действий. Aspose.Email поддерживает множество событий, при которых пользователи могут выполнять операции. Эта функция предоставляет пользователям больший контроль над их приложением. Например, пользователи могут выполнять желаемые действия, когда:
 
-- Все массовые электронные письма отправлены.
-- Сообщение скоро будет отправлено.
+- Все массовые письма отправлены.
+- Сообщение собирается отправить.
 - Электронное письмо полностью отправлено.
-- Когда SMTP-сервер отклоняет получателя.
+- Когда получатель был отклонен SMTP сервером.
 
-Почтовые ящики POP3 находятся на сервере POP3. Электронную почту из этих почтовых ящиков можно загрузить на компьютер с помощью [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/). [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) класс использует протокол POP3 для копирования почтовых сообщений из почтового ящика POP3 на компьютер. После получения почты вам не нужно подключаться к Интернету во время ее чтения, так как вы можете прочитать полученную почту на своем ПК. Если вам не нужна или вы не хотите хранить копию некоторых почтовых сообщений на сервере POP3, удалите ее. В этом разделе показано, как удалять электронные письма с помощью [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class.
+POP3 почтовые ящики находятся на POP3 сервере. Письма в этих ящиках можно получить на ваш ПК с помощью [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/). Класс [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) использует протокол POP3 для копирования почтовых сообщений из вашего POP3 почтового ящика на ваш ПК. Как только почта была получена, вам не нужно быть подключенным к интернету во время ее чтения, так как вы можете читать полученные письма на вашем ПК. Если вам не нужна или не хотите копию некоторых почтовых сообщений, остающихся на POP3 сервере, вы можете их удалить. Этот раздел показывает, как удалить электронные письма, используя класс [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 
 ## **Удалить электронное письмо по индексу**
 
-Следующий фрагмент кода удаляет все почтовые сообщения почтового ящика одно за другим на основе его индекса. Индекс ни в коем случае не должен быть меньше 0 дюймов [Pop3Client.DeleteMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/deletemessage/#deletemessage/).
+Следующий код удаляет все почтовые сообщения почтового ящика по одному, основываясь на его индексе. Индекс никогда не должен быть <=0 в [Pop3Client.DeleteMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/deletemessage/#deletemessage/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-DeleteEmailByIndex-DeleteEmailByIndex.cs" >}}
 
 ## **Удалить все электронные письма**
 
-Мы также можем позвонить [Pop3Client.DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/deletemessage/#deletemessage/) чтобы удалить все сообщения. В следующем фрагменте кода показано, как удалить все электронные письма.
+Мы также можем вызвать [Pop3Client.DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/deletemessage/#deletemessage/), чтобы удалить все сообщения. Следующий код показывает, как удалить все электронные письма.
 
 ```cs
-// Delete all the messages
+// Удалить все сообщения
 client.DeleteMessages();
 ```
 
-Если соединение с сервером POP3 разорвано сразу после операций удаления, вы больше не сможете вызывать функцию Отменить удаление для выполнения необходимых действий.
+Если связь с сервером POP3 прервалась сразу после удаления, вы больше не сможете вызвать Cancel Deletes для выполнения желаемых действий.
 
-## **Отменить удаление**
+## **Отменить удаления**
 
-[Pop3Client.UndeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/undeletemessages/#undeletemessages/) может использоваться для отмены удаления сообщений электронной почты. В следующем фрагменте кода показано, как отменить удаления.
+[Pop3Client.UndeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/undeletemessages/#undeletemessages/) может быть использован для отмены удаления электронных сообщений. Следующий код показывает, как отменить удаления.
 
 ```cs
-// Cancel deletes
+// Отменить удаления
 client.UndeleteMessages();
 ```

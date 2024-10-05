@@ -1,30 +1,30 @@
 ---
-title: "Работа со списками рассылки на сервере Exchange"
+title: "Работа с рассылками на Exchange Server"
 url: /ru/java/working-with-distribution-lists-on-exchange-server/
 weight: 70
 type: docs
 ---
 
 
-## **Работа со списками рассылки**
-Aspose.Email API предоставляет возможность создавать и читать списки рассылки с сервера Exchange. Списки рассылки можно создавать на сервере, а также добавлять в него участников с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). В этой статье показано, как работать со списками рассылки на сервере Exchange.
+## **Работа с рассылками**
+Aspose.Email API предоставляет возможность создавать и читать списки рассылки с сервера Exchange. Списки рассылки могут быть созданы на сервере, а также члены могут быть добавлены в них с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Эта статья описывает, как работать с рассылками на сервере Exchange.
 ### **Создание списка рассылки**
-В следующем фрагменте кода показано, как создать список рассылки.
+Следующий фрагмент кода показывает, как создать список рассылки.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 ExchangeDistributionList distributionList = new ExchangeDistributionList();
-distributionList.setDisplayName("test private list");
+distributionList.setDisplayName("тестовый частный список");
 MailAddressCollection members = new MailAddressCollection();
 members.add("address1@host.com");
 members.add("address2@host.com");
 members.add("address3@host.com");
 client.createDistributionList(distributionList, members);
 ~~~
-#### **Получите список частных рассылок**
-В следующем фрагменте кода показано, как получить частный список рассылки.
+#### **Получение частного списка рассылки**
+Следующий фрагмент кода показывает, как получить частный список рассылки.
 
 
 
@@ -40,8 +40,8 @@ for (ExchangeDistributionList distributionList : distributionLists) {
 ~~~
 
 
-#### **Расширить публичный список рассылки**
-В следующем фрагменте кода показано, как расширить список общедоступной рассылки.
+#### **Расширение публичного списка рассылки**
+Следующий фрагмент кода показывает, как расширить публичный список рассылки.
 
 
 
@@ -51,9 +51,9 @@ for (MailAddress member : (Iterable<MailAddress>) members) {
     System.out.println(member.getAddress());
 }
 ~~~
-### **Добавление участников**
-#### **Добавление участников в частный список рассылки**
-В следующем фрагменте кода показано, как добавить участников в частный список рассылки.
+### **Добавление членов**
+#### **Добавление членов в частный список рассылки**
+Следующий фрагмент кода показывает, как добавить членов в частный список рассылки.
 
 
 
@@ -65,22 +65,22 @@ newMembers.add("address4@host.com");
 newMembers.add("address5@host.com");
 client.addToDistributionList(distributionLists[0], newMembers);
 ~~~
-#### **Добавить участников без объявления**
-В следующем фрагменте кода показано, как добавлять участников без объявления.
+#### **Добавление членов без списка**
+Следующий фрагмент кода показывает, как добавить членов без списка.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 ExchangeDistributionList distributionList = new ExchangeDistributionList();
-distributionList.setId("list's id");
-distributionList.setChangeKey("list's change key");
+distributionList.setId("идентификатор списка");
+distributionList.setChangeKey("ключ изменения списка");
 MailAddressCollection newMembers = new MailAddressCollection();
 newMembers.add("address6@host.com");
 client.addToDistributionList(distributionList, newMembers);
 ~~~
 #### **Отправить в частный список рассылки**
-В следующем фрагменте кода показано, как отправить сообщение в частный список рассылки.
+Следующий фрагмент кода показывает, как отправить сообщение в частный список рассылки.
 
 
 
@@ -91,9 +91,9 @@ MailMessage message = new MailMessage(new MailAddress("from@host.com"), distribu
 message.setSubject("sendToPrivateDistributionList");
 client.send(message);
 ~~~
-### **Удаление участников**
-#### **Удаление участников из частного списка рассылки**
-В следующем фрагменте кода показано, как удалить участников из частного списка рассылки.
+### **Удаление членов**
+#### **Удаление членов из частного списка рассылки**
+Следующий фрагмент кода показывает, как удалить членов из частного списка рассылки.
 
 
 
@@ -106,26 +106,26 @@ membersToDelete.addMailAddress(members.get_Item(0));
 membersToDelete.addMailAddress(members.get_Item(1));
 client.deleteFromDistributionList(distributionLists[0], membersToDelete);
 ~~~
-#### **Удалить участников без объявления**
-В следующем фрагменте кода показано, как удалять участников без объявления.
+#### **Удаление членов без списка**
+Следующий фрагмент кода показывает, как удалить членов без списка.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 ExchangeDistributionList distributionList = new ExchangeDistributionList();
-distributionList.setId("list's id");
-distributionList.setChangeKey("list's change key");
+distributionList.setId("идентификатор списка");
+distributionList.setChangeKey("ключ изменения списка");
 MailAddressCollection membersToDelete = new MailAddressCollection();
 MailAddress addressToDelete = new MailAddress("address", true);
-// addressToDelete.Id.EWSId = "member's id";
+// addressToDelete.Id.EWSId = "идентификатор члена";
 membersToDelete.addMailAddress(addressToDelete);
 client.addToDistributionList(distributionList, membersToDelete);
 ~~~
 
 
-#### **Удалить частный список рассылки**
-В следующем фрагменте кода показано, как удалить частный список рассылки.
+#### **Удаление частного списка рассылки**
+Следующий фрагмент кода показывает, как удалить частный список рассылки.
 
 
 
@@ -134,14 +134,14 @@ IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/ex
 ExchangeDistributionList[] distributionLists = client.listDistributionLists();
 client.deleteDistributionList(distributionLists[0], true);
 ~~~
-#### **Удалить без объявления**
-В следующем фрагменте кода показано, как удалить файл без добавления в список.
+#### **Удаление без списка**
+Следующий фрагмент кода показывает, как удалить без списка.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 ExchangeDistributionList distributionList = new ExchangeDistributionList();
-distributionList.setId("list's id");
+distributionList.setId("идентификатор списка");
 client.deleteDistributionList(distributionList, true);
 ~~~

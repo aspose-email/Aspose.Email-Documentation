@@ -5,88 +5,88 @@ weight: 30
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email предоставляет возможность фильтровать сообщения из почтового ящика Exchange с помощью [EWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.e_w_s_client/) и конструктор запросов Exchange. Сообщения можно фильтровать по различным критериям, например по дате, домену, идентификатору сообщения и уведомлениям о доставке почты. В этой статье показано, как фильтровать сообщения с сервера Exchange по различным критериям.
+Aspose.Email предоставляет возможность фильтровать сообщения из почтового ящика Exchange с помощью [EWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.e_w_s_client/) и ExchangeQueryBuilder. Сообщения можно фильтровать по различным критериям, таким как дата, домен, messageId и уведомления о доставке почты. В этой статье показано, как фильтровать сообщения с сервера Exchange, используя различные критерии.
 
-{{% /alert %}}
-The [IEWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/) класс предоставляет [ListMessages()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#aad8420247acd17cb1d73303ed1982d1e) метод, который получает все сообщения из почтового ящика. Чтобы получать только сообщения, соответствующие определенному условию, используйте перегруженный [ListMessages()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#ac7bbdcc7ccacd4e8288ae6c7d929ea52) метод, который принимает *MailQuery* класс в качестве аргумента. *MailQuery* класс предоставляет различные свойства для указания условий, например даты, темы, отправителя и получателя.
+{{% /alert %}} 
+Класс [IEWSClient](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/) предоставляет метод [ListMessages()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#aad8420247acd17cb1d73303ed1982d1e), который получает все сообщения из почтового ящика. Чтобы получить только те сообщения, которые соответствуют некоторому условию, используйте перегруженный метод [ListMessages()](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#ac7bbdcc7ccacd4e8288ae6c7d929ea52), который принимает класс *MailQuery* в качестве аргумента. Класс *MailQuery* предоставляет различные свойства для указания условий, например, дата, тема, отправитель и получатель.
 ##  **Фильтрация сообщений**
-Чтобы получить отфильтрованные сообщения из почтового ящика, выполните следующие действия:
+Чтобы получить отфильтрованные сообщения из почтового ящика:
 
 1. Подключитесь к серверу Exchange.
-1. Создайте экземпляр *MailQuery* и задайте нужные свойства.
-1. Позвоните [IEWSClient->ListMessages](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#ac7bbdcc7ccacd4e8288ae6c7d929ea52) метод и передайте *MailQuery* в параметрах, чтобы получать только отфильтрованные сообщения.
+1. Создайте экземпляр *MailQuery* и установите желаемые свойства.
+1. Вызовите метод [IEWSClient->ListMessages](https://apireference.aspose.com/cpp/email/class/aspose.email.clients.exchange.web_service.i_e_w_s_client/#ac7bbdcc7ccacd4e8288ae6c7d929ea52) и передайте *MailQuery* в параметры, чтобы получить только отфильтрованные сообщения.
 
-В следующем фрагменте кода показано, как получать сообщения со строкой «Newsletter» в теме и отправленные сегодня.
+Следующий кодовый фрагмент показывает, как получить сообщения, у которых в теме есть строка "Newsletter" и которые были отправлены сегодня.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesUsingEWS-FilterMessagesUsingEWS.cpp" >}}
 ##  **Фильтрация сообщений по критериям**
-Приведенные выше примеры кода фильтруют сообщения по теме и дате письма. Мы также можем фильтровать другие свойства. Ниже приведены несколько примеров настройки условий с помощью *MailQuery*.
-###  **Критерии фильтрации: сегодняшняя дата**
-В следующем фрагменте кода показано, как фильтровать электронные письма на основе сегодняшней даты.
+В приведенных выше примерах кода сообщения фильтруются на основе темы электронной почты и даты. Мы также можем фильтровать и по другим свойствам. Ниже приведены некоторые примеры установки условий с использованием *MailQuery*.
+###  **Критерии фильтрации по сегодняшней дате**
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе сегодняшней даты.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetEmailsWithTodayDate.cpp" >}}
-###  **Диапазон дат критериев фильтрации**
-В следующем фрагменте кода показано, как фильтровать электронные письма по диапазону дат.
+###  **Критерии фильтрации диапазона дат**
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе диапазона дат.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetEmailsOverDateRange.cpp" >}}
-###  **Критерии фильтрации: конкретный отправитель**
-В следующем фрагменте кода показано, как фильтровать электронные письма по определенному отправителю.
+###  **Критерии фильтрации по конкретному отправителю**
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе конкретного отправителя.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificSenderEmails.cpp" >}}
-###  **Критерии фильтрации: конкретный домен**
-В следующем фрагменте кода показано, как фильтровать электронные письма на основе определенного домена.
+###  **Критерии фильтрации по конкретному домену**
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе конкретного домена.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificDomainEmails.cpp" >}}
-###  **Критерии фильтрации: конкретный получатель**
-В следующем фрагменте кода показано, как фильтровать электронные письма на основе конкретного получателя.
+###  **Критерии фильтрации по конкретному получателю**
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе конкретного получателя.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificRecipientEmails.cpp" >}}
 ###  **Критерии фильтрации по MessageID**
-В следующем фрагменте кода показано, как фильтровать электронные письма на основе MessageID.
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе MessageID.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificMessageIdEmail.cpp" >}}
-###  **Критерии фильтрации Все уведомления о доставке почты**
-В следующем фрагменте кода показано, как фильтровать электронные письма на основе всех уведомлений о доставке почты.
+###  **Критерии фильтрации всех уведомлений о доставке почты**
+Следующий кодовый фрагмент показывает, как фильтровать электронные письма на основе всех уведомлений о доставке почты.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetMailDeliveryNotifications.cpp" >}}
-###  **Фильтровать по размеру сообщения**
+###  **Фильтрация по размеру сообщения**
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-FilterMessagesByMessageSize.cpp" >}}
-##  **Создание сложных запросов**
-Если отличается [MailQueryBuilder](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/) свойства задаются в отдельном выражении, все условия соблюдены. Например, чтобы получить сообщение в определенном диапазоне дат и от определенного хоста, напишите три выражения:
-###  **Объединение запросов с AND**
-В следующем фрагменте кода показано, как комбинировать запросы с AND.
+##  **Построение сложных запросов**
+Если разные свойства [MailQueryBuilder](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/) установлены в отдельном выражении, все условия будут выполнены. Например, чтобы получить сообщение в определенном диапазоне дат и от конкретного хоста, напишите три выражения:
+###  **Комбинирование запросов с AND**
+Следующий кодовый фрагмент показывает, как комбинировать запросы с AND.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterWithComplexQueriesUsingEWS-CombineQueriesWithAND.cpp" >}}
-###  **Объединение запросов с OR**
+###  **Комбинирование запросов с OR**
 
-[MailQueryBuilder](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/) обеспечивает [Or()](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/#afc735b8cd80758418502678ac69eecd4) метод, который требует двух *MailQuery* экземпляры в качестве параметров. Он получает сообщения, соответствующие любому из двух указанных условий. В приведенном ниже примере отфильтровываются сообщения, в теме которых указано слово «test» или «noreply@host.com» в качестве отправителя. В следующем фрагменте кода показано, как комбинировать запросы с OR.
+[MailQueryBuilder](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/) предоставляет метод [Or()](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/#afc735b8cd80758418502678ac69eecd4), который принимает два экземпляра *MailQuery* в качестве параметров. Он получает сообщения, которые соответствуют любому из двух указанных условий. В следующем примере фильтруются сообщения, которые имеют слово “test” в теме или “noreply@host.com” в качестве отправителя. Следующий кодовый фрагмент показывает, как комбинировать запросы с OR.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterWithComplexQueriesUsingEWS-CombiningQueriesWithOR.cpp" >}}
 ##  **Фильтрация электронной почты с учетом регистра**
-Электронные письма можно отфильтровать на основе чувствительности к регистру, указав флаг IgnoreCase в критериях фильтрации, как показано в следующем фрагменте кода.
+Электронные письма можно фильтровать с учетом регистра, указав флаг IgnoreCase в условиях фильтрации, как показано в следующем кодовом фрагменте.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-CaseSensitiveEmailsFilteringUsingEWS-CaseSensitiveEmailsFiltering.cpp" >}}
-#  **Фильтрация сообщений с поддержкой пейджинга**
+#  **Фильтрация сообщений с поддержкой разделения на страницы**
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-FilterMessagesWithPagingSupport.cpp" >}}

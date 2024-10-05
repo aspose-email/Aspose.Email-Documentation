@@ -1,122 +1,115 @@
 ---
-title: "Работа с правилами на сервере Exchange"
+title: "Работа с правилами на Exchange Server"
 url: /ru/java/working-with-rules-on-exchange-server/
 weight: 90
 type: docs
 ---
 
-
 ## **Управление правилами**
-Aspose.Email для Java можно использовать для управления правилами на сервере Exchange с помощью [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс. В этом классе используются веб-службы Exchange (EWS), доступные в Exchange Server 2007 и более поздних версиях. Чтобы показать, как управлять правилами, в этой статье объясняется, как:
+Aspose.Email для Java можно использовать для управления правилами на Exchange Server с помощью класса [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient). Этот класс использует Exchange Web Services (EWS), которые доступны в Exchange Server 2007 и более поздних версиях. Чтобы показать, как управлять правилами, в этой статье объясняется, как:
 
-- Ознакомьтесь с правилами, уже имеющимися на сервере.
-- Создайте новое правило.
-- Обновите существующее правило.
+- Получить правила, уже существующие на сервере.
+- Создать новое правило.
+- Обновить существующее правило.
 
-Для всех функций, описанных в этой статье, требуется пакет обновления 1 для Microsoft Exchange Server 2010.
-### **Ознакомьтесь с правилами**
-Чтобы получить все правила с сервера Exchange, выполните следующие действия:
+Требуется Microsoft Exchange Server 2010 Service Pack 1 для всех функций, описанных в этой статье.
+### **Чтение правил**
+Чтобы получить все правила с Exchange Server:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Вызовите метод IEWSClient.getInboxRules (), чтобы получить все правила.
+1. Подключитесь к Exchange Server, используя класс IEWSClient.
+1. Вызовите метод IEWSClient.getInboxRules(), чтобы получить все правила.
 1. В цикле foreach просмотрите все правила и отобразите свойства правила, такие как условия, действия и имя.
 
-В следующем фрагменте кода показано, как читать правила.
-
-
+Следующий фрагмент кода показывает, как читать правила.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxURI, credential);
 
-System.out.println("Connected to Exchange server");
+System.out.println("Подключено к серверу Exchange");
 
-// Get all Inbox Rules
+// Получите все правила для папки «Входящие»
 InboxRule[] inboxRules = client.getInboxRules();
 
-// Display information about each rule
+// Отобразите информацию о каждом правиле
 for (InboxRule inboxRule : inboxRules) {
-    System.out.println("Display Name: " + inboxRule.getDisplayName());
+    System.out.println("Отображаемое имя: " + inboxRule.getDisplayName());
 
-    // Check if there is a "From Address" condition
+    // Проверьте, есть ли условие "От кого"
     if (inboxRule.getConditions().getFromAddresses().size() > 0) {
         for (MailAddress fromAddress : (Iterable<MailAddress>) inboxRule.getConditions().getFromAddresses()) {
-            System.out.println("From: " + fromAddress.getDisplayName() + " - " + fromAddress.getAddress());
+            System.out.println("От: " + fromAddress.getDisplayName() + " - " + fromAddress.getAddress());
         }
     }
-    // Check if there is a "Subject Contains" condition
+    // Проверьте, есть ли условие "Тема содержит"
     if (inboxRule.getConditions().containsSubjectStrings().size() > 0) {
-        // foreach to while statements conversion
+        // преобразование из foreach в while
         for (String subject : inboxRule.getConditions().containsSubjectStrings()) {
-            System.out.println("Subject contains: " + subject);
+            System.out.println("Тема содержит: " + subject);
         }
     }
-    // Check if there is a "Move to Folder" action
+    // Проверьте, есть ли действие "Переместить в папку"
     if (inboxRule.getActions().getMoveToFolder().length() > 0) {
-        System.out.println("Move message to folder: " + inboxRule.getActions().getMoveToFolder());
+        System.out.println("Переместить сообщение в папку: " + inboxRule.getActions().getMoveToFolder());
     }
 }
 ~~~
 ### **Создание нового правила**
-Чтобы создать новое правило на сервере Exchange, выполните следующие шаги:
+Чтобы создать новое правило на Exchange Server, выполните следующие шаги:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Создайте новый экземпляр класса InboxRule и задайте следующие обязательные свойства:
+1. Подключитесь к Exchange Server, используя класс IEWSClient.
+1. Создайте новый экземпляр класса InboxRule и установите следующие обязательные свойства:
    1. DisplayName
-   1. Conditions
-   1. Actions
-1. Для создания правила вызовите метод IEWSclient.createInboxRule ().
+   1. Условия
+   1. Действия
+1. Вызовите метод IEWSClient.createInboxRule(), чтобы создать правило.
 
-В следующем фрагменте кода показано, как создать новое правило.
-
-
+Следующий фрагмент кода показывает, как создать новое правило.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxURI, credential);
 
-System.out.println("Connected to Exchange server");
+System.out.println("Подключено к серверу Exchange");
 
 InboxRule rule = new InboxRule();
-rule.setDisplayName("Message from client ABC");
+rule.setDisplayName("Сообщение от клиента ABC");
 
-// Add conditions
+// Добавьте условия
 RulePredicates newRules = new RulePredicates();
-// Set Subject contains string "ABC" and Add the conditions
+// Установите строку, содержащую тему "ABC", и добавьте условия
 newRules.containsSubjectStrings().addItem("ABC");
 newRules.getFromAddresses().addMailAddress(new MailAddress("administrator@ex2010.local", true));
 rule.setConditions(newRules);
 
-// Add Actions and Move the message to a folder
+// Добавьте действия и переместите сообщение в папку
 RuleActions newActions = new RuleActions();
 newActions.setMoveToFolder("120:AAMkADFjMjNjMmNjLWE3NzgtNGIzNC05OGIyLTAwNTgzNjRhN2EzNgAuAAAAAABbwP+Tkhs0TKx1GMf0D/cPAQD2lptUqri0QqRtJVHwOKJDAAACL5KNAAA=AQAAAA==");
 rule.setActions(newActions);
 client.createInboxRule(rule);
 ~~~
 ### **Обновление правила**
-Чтобы обновить правило на сервере Exchange, выполните следующие действия:
+Чтобы обновить правило на Exchange Server:
 
-1. Подключитесь к серверу Exchange с помощью класса IEWSClient.
-1. Вызовите метод IEWSClient.getInboxRules (), чтобы получить все правила.
-1. В цикле foreach просмотрите все правила и выберите правило, которое вы хотите изменить, сопоставив DisplayName в условии.
+1. Подключитесь к Exchange Server, используя класс IEWSClient.
+1. Вызовите метод IEWSClient.getInboxRules(), чтобы получить все правила.
+1. В цикле foreach просмотрите все правила и получите правило, которое вы хотите изменить, сопоставив DisplayName в условии.
 1. Обновите свойства правила
-1. Вызовите метод IEWSclient.updateInboxRule (), чтобы обновить правило.
+1. Вызовите метод IEWSClient.updateInboxRule(), чтобы обновить правило.
 
-В следующем фрагменте кода показано, как обновить правило.
-
-
+Следующий фрагмент кода показывает, как обновить правило.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxURI, credential);
 
-System.out.println("Connected to Exchange server");
+System.out.println("Подключено к серверу Exchange");
 
-// Get all Inbox Rules
+// Получите все правила для папки «Входящие»
 InboxRule[] inboxRules = client.getInboxRules();
 
-// Loop through each rule
+// Перебор каждого правила
 for (InboxRule inboxRule : inboxRules) {
-    System.out.println("Display Name: " + inboxRule.getDisplayName());
-    if ("Message from client ABC".equals(inboxRule.getDisplayName())) {
-        System.out.println("Updating the rule....");
+    System.out.println("Отображаемое имя: " + inboxRule.getDisplayName());
+    if ("Сообщение от клиента ABC".equals(inboxRule.getDisplayName())) {
+        System.out.println("Обновление правила....");
         inboxRule.getConditions().getFromAddresses().set_Item(0, new MailAddress("administrator@ex2010.local", true));
         client.updateInboxRule(inboxRule);
     }

@@ -1,5 +1,5 @@
 ---
-title: "Фильтрация встреч с сервера Exchange"
+title: "Фильтрация встреч с Exchange Server"
 url: /ru/java/filter-appointments-from-exchange-server/
 weight: 130
 type: docs
@@ -7,10 +7,10 @@ type: docs
 
 
 ## **Фильтрация встреч с помощью EWS**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) предоставляет возможность фильтровать встречи с сервера Exchange с помощью [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Встречи можно отфильтровать по следующим критериям:
+[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) предоставляет возможность фильтровать встречи с Exchange сервера с использованием [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Встречи могут быть отфильтрованы по следующим критериям:
 
-- Dates
-- Recurrences
+- Даты
+- Повторяющиеся события
 ### **Фильтрация встреч по датам**
 
 

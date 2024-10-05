@@ -1,5 +1,5 @@
 ---
-title: "Поддержка команд и расширений IMAP IDLE"
+title: "Поддержка команды IMAP IDLE и дополнительных функций"
 url: /ru/java/support-for-imap-idle-command-and-extensions/
 weight: 110
 type: docs
@@ -8,7 +8,7 @@ type: docs
 
 ## **Поддержка команды IMAP Idle**
 
-API Aspose.Email [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) предоставляет возможность открыть соединение с сервером и дождаться получения сообщения электронной почты. Это позволяет избежать повторного опроса сервера на предмет получения входящей электронной почты. В следующем фрагменте кода показано, как поддерживать команду IMAP Idle.
+Aspose.Email API [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) предоставляет возможность установить соединение с сервером и ожидать поступления сообщения электронной почты. Это позволяет избежать постоянного опроса сервера для получения входящей почты. Следующий фрагмент кода показывает, как поддерживать команду IMAP Idle.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -24,9 +24,9 @@ client.startMonitoring(new ImapMonitoringEventHandler() {
 client.stopMonitoring("Inbox");
 ~~~
 
-## **Поддержка расширений IMAP**
+## **Поддержка IMAP расширений**
 
-API Aspose.Email обеспечивает поддержку расширений IMAP. В настоящее время API поддерживает следующие расширения IMAP. Эти расширения IMAP поддерживаются не всеми серверами.
+Aspose.Email API предоставляет поддержку IMAP расширений. В настоящее время API поддерживает следующие IMAP расширения. Эти IMAP расширения не поддерживаются всеми серверами.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -51,31 +51,31 @@ try {
 }
 ~~~
 
-### **Команда расширенного списка IMAP4**
+### **Команда IMAP4 Extended List**
 
-В следующем фрагменте кода показано, как использовать команду IMAP4 extended list.
+Следующий фрагмент кода показывает, как использовать команду IMAP4 extended list.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
 final ImapClient client = new ImapClient("imap.gmail.com", 993, "username", "password");
 try {
     ImapFolderInfoCollection folderInfoCol = client.listFolders("*");
-    System.out.println("Extended List Supported: " + client.getExtendedListSupported());
+    System.out.println("Расширенный список поддерживается: " + client.getExtendedListSupported());
     for (ImapFolderInfo folderInfo : (Iterable<ImapFolderInfo>) folderInfoCol) {
-        if (folderInfo.getName().equals("[Gmail]/All Mail"))
-            System.out.println("Has Children: " + folderInfo.hasChildren());
-        if (folderInfo.getName().equals("[Gmail]/Bin"))
-            System.out.println("Bin has children? " + folderInfo.hasChildren());
-        if (folderInfo.getName().equals("[Gmail]/Drafts"))
-            System.out.println("Drafts has children? " + folderInfo.hasChildren());
-        if (folderInfo.getName().equals("[Gmail]/Important"))
-            System.out.println("Important has Children? " + folderInfo.hasChildren());
-        if (folderInfo.getName().equals("[Gmail]/Sent Mail"))
-            System.out.println("Sent Mail has Children? " + folderInfo.hasChildren());
-        if (folderInfo.getName().equals("[Gmail]/Spam"))
-            System.out.println("Spam has Children? " + folderInfo.hasChildren());
-        if (folderInfo.getName().equals("[Gmail]/Starred"))
-            System.out.println("Starred has Children? " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Все письма"))
+            System.out.println("Есть дочерние элементы: " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Корзина"))
+            System.out.println("Корзина имеет дочерние элементы? " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Черновики"))
+            System.out.println("Черновики имеют дочерние элементы? " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Важные"))
+            System.out.println("Важные имеют дочерние элементы? " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Отправленные"))
+            System.out.println("Отправленные имеют дочерние элементы? " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Спам"))
+            System.out.println("Спам имеет дочерние элементы? " + folderInfo.hasChildren());
+        if (folderInfo.getName().equals("[Gmail]/Звёздные"))
+            System.out.println("Звёздные имеют дочерние элементы? " + folderInfo.hasChildren());
     }
 } finally {
     if (client != null)

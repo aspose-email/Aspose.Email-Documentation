@@ -1,14 +1,14 @@
 ---
-title: "Сохранить сообщение как черновик в Jython"
+title: "Сохранение сообщения как черновика в Jython"
 url: /ru/java/save-message-as-draft-in-jython/
 weight: 60
 type: docs
 ---
 
-## **Aspose.Email - Сохранить сообщение как черновик**
-Чтобы сохранить сообщение как черновик, используя **Aspose.Электронная почта Java для Mython**, просто вызовите **SaveMessageAsDraft** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Сохранение сообщения как черновика**
+Чтобы сохранить сообщение как черновик с использованием **Aspose.Email Java для Jython**, просто вызовите модуль **SaveMessageAsDraft**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ``` python
 
@@ -32,63 +32,63 @@ class SaveMessageAsDraft:
 
 
 
-        # Create a instance of MailMessage class
+        # Создайте экземпляр класса MailMessage
 
         message = MailMessage()
 
-            # Set subject of the message
+            # Установите тему сообщения
 
-        message.setSubject("New message created by Aspose.Email for Java")
+        message.setSubject("Новое сообщение, созданное Aspose.Email для Java")
 
         mail_address = MailAddress
 
-        # Set Html body
+        # Установите Html тело
 
-        message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+        message.setHtmlBody("<b>Эта строка жирным шрифтом.</b> <br/> <br/>" +
 
-            "<font color=blue>This line is in blue color</font>")
+            "<font color=blue>Эта строка синего цвета</font>")
 
-        # Set sender information
+        # Установите информацию о отправителе
 
-        message.setFrom(MailAddress("from@domain.com", "Sender Name", False))
+        message.setFrom(MailAddress("from@domain.com", "Имя отправителя", False))
 
-        # Add TO recipients
+        # Добавьте получателей в список TO
 
-        message.getTo().add(MailAddress("to1@domain.com", "Recipient 1", False))
+        message.getTo().add(MailAddress("to1@domain.com", "Получатель 1", False))
 
-        message.getTo().add(MailAddress("to2@domain.com", "Recipient 2", False))
+        message.getTo().add(MailAddress("to2@domain.com", "Получатель 2", False))
 
-        # Create an instance of MapiMessage and load the MailMessag instance into it
+        # Создайте экземпляр MapiMessage и загрузите в него экземпляр MailMessage
 
         mapiMessage=MapiMessage()
 
         mapi_msg = mapiMessage.fromMailMessage(message)
 
-        # Set the MapiMessageFlags as UNSENT and FROMME
+        # Установите флаги MapiMessageFlags как UNSENT и FROMME
 
         mapi_message_flags = MapiMessageFlags()
 
 
 
-        # Save the MapiMessage to disk
+        # Сохраните MapiMessage на диск
 
         mapi_msg.save(dataDir + "New-Draft.msg")
 
-        # Display Status
+        # Вывод статуса
 
-        print "Draft saved Successfully."
-
-
+        print "Черновик успешно сохранен."
 
 
 
-if __name__ == '__main__':       
+
+
+if __name__ == '__main__':        
 
     SaveMessageAsDraft()
 
 ```
-## **Загрузить рабочий код**
-Download **Сохранить сообщение как черновик (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Сохранение сообщения как черновика (Aspose.Email)** с любого из упомянутых ниже сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

@@ -6,94 +6,94 @@ type: docs
 ---
 
 
-Используя этот метод, Microsoft Outlook должен быть установлен на компьютере, на котором выполняется код. Приведенный ниже фрагмент кода создает MSG-файл Outlook с вложениями и телом HTML.
+При использовании этого метода Microsoft Outlook должен быть установлен на машине, где выполняется код. Приведенный ниже код создает файл Outlook MSG с вложениями и HTML-содержимым.
 ## **VSTO**
 ``` cs
 
- // Create an object of type Outlook.Application
+ // Создание объекта типа Outlook.Application
 
 Outlook.Application objOutlook = new Outlook.Application();
 
-//Create an object of type olMailItem
+//Создание объекта типа olMailItem
 
 Outlook.MailItem oIMailItem = objOutlook.CreateItem(Outlook.OlItemType.olMailItem);
 
-//Set properties of the message file e.g. subject, body and to address
+//Установка свойств файла сообщения, например, темы, содержимого и адреса получателя
 
-//Set subject
+//Установка темы
 
-oIMailItem.Subject = "This MSG file is created using Office Automation.";
+oIMailItem.Subject = "Этот MSG файл создан с использованием автоматизации Office.";
 
-//Set to (recipient) address
+//Установка адреса получателя
 
 oIMailItem.To = "to@domain.com";
 
-//Set body of the email message
+//Установка содержимого электронного письма
 
-oIMailItem.HTMLBody = "<html><p>This MSG file is created using VBA code.</p>";
+oIMailItem.HTMLBody = "<html><p>Этот MSG файл создан с использованием кода VBA.</p>";
 
-//Add attachments to the message
+//Добавление вложений к сообщению
 
 oIMailItem.Attachments.Add("image.bmp");
 
 oIMailItem.Attachments.Add("pic.jpeg");
 
-//Save as Outlook MSG file
+//Сохранение как файл Outlook MSG
 
 oIMailItem.SaveAs("testvba.msg");
 
-//Open the MSG file
+//Открытие файла MSG
 
 oIMailItem.Display();
 
 ```
 ## **Aspose.Email**
-В приведенном ниже фрагменте кода используется библиотека Aspose.Email for .NET для создания файла MSG, аналогичного созданному выше, с несколькими вложениями и телом HTML. Поскольку Aspose.Email для .NET написан исключительно на языке.NET, взаимодействие COM не требуется. Кроме того, на компьютере не нужно устанавливать Microsoft Outlook 2003/2007. Описанный ниже метод подходит, когда Microsoft Outlook не установлен или когда вы хотите создать файлы MSG на сервере.
+Приведенный ниже код использует библиотеку Aspose.Email для .NET для создания файла MSG, аналогичного ранее созданному, с несколькими вложениями и HTML-содержимым. Так как Aspose.Email для .NET полностью написан на .NET, COM-интероп не требуется. Также Microsoft Outlook 2003/2007 не обязательно должен быть установлен на машине. Описанный ниже метод подходит, когда Microsoft Outlook не установлен или когда вы хотите генерировать файлы MSG на сервере.
 
-Приведенные ниже фрагменты кода показывают, как выполнить ту же задачу на C# с помощью Aspose.Email для .NET.
+Приведенные ниже фрагменты кода показывают, как выполнить ту же задачу на C# с использованием Aspose.Email для .NET.
 
 ``` cs
 
- // Create an instance of type MailMessage
+ // Создание экземпляра типа MailMessage
 
 MailMessage msg = new MailMessage();
 
-// Set properties of message like subject, to and HTML body
+// Установка свойств сообщения, таких как тема, адрес получателя и HTML-содержимое
 
-// Set subject
+// Установка темы
 
-msg.Subject = "This MSG file is created using Aspose.Email for .NET";
+msg.Subject = "Этот MSG файл создан с использованием Aspose.Email для .NET";
 
-// Set from (sender) address
+// Установка адреса отправителя
 
-msg.Sender = new MailAddress("from@domain.com", "From Name");
+msg.Sender = new MailAddress("from@domain.com", "Имя отправителя");
 
-// Set to (recipient) address and name
+// Установка адреса и имени получателя
 
-msg.To.Add(new MailAddress("to@domain.com", "To Name"));
+msg.To.Add(new MailAddress("to@domain.com", "Имя получателя"));
 
-// Set HTML body of the email message
+// Установка HTML-содержимого электронного письма
 
-msg.HtmlBody = @"<html><p>This MSG file is created using C# code.</p>" +
+msg.HtmlBody = @"<html><p>Этот MSG файл создан с использованием кода C#.</p>" +
 
-	"<p>Microsoft Outlook does not need to be installed on the machine running this code.</p>" +
+	"<p>Microsoft Outlook не нужно устанавливать на машине, на которой выполняется этот код.</p>" +
 
-	"<p>This method is suitable for creating MSG files on the server side.</html>";
+	"<p>Этот метод подходит для создания файлов MSG на стороне сервера.</html>";
 
-// Add attachments to the message file
+// Добавление вложений к файлу сообщения
 
 msg.Attachments.Add(new Attachment("image.bmp"));
 
 msg.Attachments.Add(new Attachment("pic.jpeg"));
 
-// Save as Outlook MSG file
+// Сохранение как файл Outlook MSG
 
 string strSaveFile ="TestAspose.msg";
 
 msg.Save(strSaveFile, MessageFormat.Msg);
 
 ```
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [Codeplex](https://asposevsto.codeplex.com/downloads/get/772938)
 - [Github](https://github.com/Aspose/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook)
 - [Sourceforge](https://sourceforge.net/projects/asposevsto/files/Aspose.Email%20Vs%20VSTO%20Outlook/Adding%20Attachments%20and%20HTML%20Text%20to%20Outlook%20Msg%20File%20\(Aspose.Email\).zip/download)

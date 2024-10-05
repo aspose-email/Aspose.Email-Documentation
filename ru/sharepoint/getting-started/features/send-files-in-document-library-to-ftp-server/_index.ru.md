@@ -6,15 +6,15 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-С помощью Aspose. Электронная почта для SharePoint установлена и активирована, и лента «Aspose Tools» становится доступной в библиотеке документов. Она включает функции для передачи файлов на FTP-сервер. Вы можете выбрать любой файл (ы) и отправить его на FTP-сервер.
+После установки и активации Aspose. Email для SharePoint в библиотеке документов становится доступна лента "Aspose Tools". Она включает функции для передачи файлов на FTP-сервер. Вы можете выбрать любые файлы и отправить их на FTP-сервер. 
 
-{{% /alert %}}
+{{% /alert %}} 
 
-**Отправка файлов на FTP.**
+**Отправка файлов на FTP.** 
 
 ![todo:image_alt_text](send-files-in-document-library-to-ftp-server_1.png)
 
 
-[Узнайте больше о том, как отправлять файлы на FTP](/email/sharepoint/send-selected-files-to-ftp-server/).
+[Узнайте больше о том, как отправить файлы на FTP](/email/sharepoint/send-selected-files-to-ftp-server/).

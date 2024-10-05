@@ -5,24 +5,24 @@ weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Извлечение заголовков писем**
-Извлечение заголовков электронных писем с помощью **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Извлечение заголовков электронной почты**
+Чтобы извлечь заголовки электронной почты, используя **Aspose.Email Java для Python**, используйте следующий код.
 
-**Код Python**
+**Python код**
 
 ``` python
 
 
 
-\# Initialize and Load an existing EML file by specifying the MessageFormat
+\# Инициализировать и загрузить существующий EML файл, указав формат сообщения
 
 mailMessage = self.MailMessage
 
 message = mailMessage.load(self.dataDir + "Message.eml")
 
-print "Printing all Headers:"
+print "Печать всех заголовков:"
 
-\# Print out all the headers
+\# Вывести все заголовки
 
 i=0
 
@@ -33,8 +33,8 @@ while (i < message.getHeaders().getCount()):
     i += 1
 
 ```
-## **Загрузить рабочий код**
-Download **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачать **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеупомянутых сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

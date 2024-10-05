@@ -1,16 +1,16 @@
 ---
-title: "Список серверных расширений с помощью Pop3Client"
+title: "Список серверных расширений с использованием Pop3Client"
 url: /ru/java/listing-server-extensions-using-pop3client/
 weight: 30
 type: docs
 ---
 
 
-Aspose.Email [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/) позволяет получить серверные расширения, поддерживаемые сервером, такие как IDLE, UNSELECT, QUOTA и т. д. Это помогает определить доступность расширения перед использованием клиента для выполнения этой конкретной функции. [getCapabilities()](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#getCapabilities--) метод возвращает поддерживаемые типы расширений в виде строкового массива.
+Aspose.Email [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/) позволяет получить расширения сервера, которые поддерживает сервер, такие как IDLE, UNSELECT, QUOTA и т. д. Это помогает определить доступность расширения перед использованием клиента для данной конкретной функции. Метод [getCapabilities()](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#getCapabilities--) возвращает поддерживаемые типы расширений в виде массива строк.
 
 ## **Получение серверных расширений**
 
-Следующий пример кода демонстрирует получение серверных расширений с помощью Pop3Client для сервера Gmail.
+Следующий пример кода демонстрирует получение серверных расширений с использованием Pop3Client для сервера Gmail.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

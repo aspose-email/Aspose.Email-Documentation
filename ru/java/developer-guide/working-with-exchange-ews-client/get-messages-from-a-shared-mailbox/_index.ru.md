@@ -1,14 +1,14 @@
 ---
-title: "Получайте сообщения из общего почтового ящика"
+title: "Получение сообщений из общей почтового ящика"
 url: /ru/java/get-messages-from-a-shared-mailbox/
 weight: 160
 type: docs
 ---
 
 
-Aspose.Email поддерживает доступ к сообщениям из общего почтового ящика. Для этого вы подключаетесь к своему основному почтовому ящику с помощью [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс. Чтобы получить доступ к сообщениям из общего почтового ящика, вы передаете общий почтовый ящик в виде строкового параметра [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20java.lang.String,%20boolean\)) or [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)) method.
+Aspose.Email поддерживает доступ к сообщениям из общей почтового ящика. Для этого вы подключаетесь к своему основному почтовому ящику, используя класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient). Чтобы получить доступ к сообщениям из общей почтового ящика, передайте общий почтовый ящик в качестве строкового параметра в метод [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20java.lang.String,%20boolean\)) или [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)).
 
-В следующем примере кода показано, как получить доступ к сообщениям из общего почтового ящика с помощью [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)) method.
+Следующий пример кода показывает, как получить доступ к сообщениям из общей почтового ящика, используя метод [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)).
 
 ~~~Java
 final String mailboxUri = "<HOST>";
@@ -23,7 +23,7 @@ String[] items = client.listItems(sharedEmail, "Inbox");
 
 for (String item : items) {
     MapiMessage msg = client.fetchItem(item);
-    System.out.println("Subject:" + msg.getSubject());
+    System.out.println("Тема:" + msg.getSubject());
 }
 client.dispose();
 ~~~

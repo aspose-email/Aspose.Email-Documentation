@@ -1,14 +1,14 @@
 ---
-title: "Работа с письмами AMP HTML"
+title: "Работа с AMP HTML электронными письмами"
 url: /ru/java/working-with-amp-html-emails/
 weight: 140
 type: docs
 ---
 
-## **О компании AMP**
-AMP (Accelerated Mobile Pages) — это платформа Google с открытым исходным кодом, созданная на основе HTML, CSS и JavaScript. Он позволяет создавать легкие электронные письма с более быстрой загрузкой. AMP предоставляет множество компонентов, таких как карусели, формы, изображения и т. д. AMP Emails не только обеспечивает быструю обработку электронных писем в почтовом клиенте, но и позволяет клиентам работать с письмами напрямую, например заполнять форму или отвечать на опрос, не выходя из почтового клиента.
-## **Работа с письмами AMP HTML**
-Aspose.Email предоставляет [AmpMessage](https://apireference.aspose.com/email/java/com.aspose.email/AmpMessage) которое представляет собой электронное письмо AMP. Aspose.Email предоставляет множество классов для добавления компонентов в электронные письма AMP, например [AmpImage](https://apireference.aspose.com/email/java/com.aspose.email/AmpImage), [AmpCarousel](https://apireference.aspose.com/email/java/com.aspose.email/AmpCarousel), [AmpAccordion](https://apireference.aspose.com/email/java/com.aspose.email/AmpAccordion), [AmpForm](https://apireference.aspose.com/email/java/com.aspose.email/AmpForm)и т. д. Следующий фрагмент кода демонстрирует создание, сохранение и обновление AMP-писем с помощью Aspose.Email API.
+## **О AMP**
+AMP (Ускоренные Мобильные Страницы) - это фреймворк с открытым исходным кодом от Google, созданный на основе HTML, CSS и JavaScript. Он позволяет создавать легкие электронные письма с более быстрым временем загрузки. AMP предоставляет множество компонентов, таких как карусели, формы, изображения и др. Наряду с высокой скоростью, AMP письма отображают полностью интерактивные электронные письма внутри почтового клиента, и клиенты могут взаимодействовать с письмами напрямую, например, заполняя форму или отвечая на опрос, не покидая почтовый клиент.
+## **Работа с AMP HTML электронными письмами**
+Aspose.Email предоставляет [AmpMessage](https://apireference.aspose.com/email/java/com.aspose.email/AmpMessage), который представляет AMP Email. Aspose.Email предлагает множество классов для добавления компонентов в AMP Emails, таких как [AmpImage](https://apireference.aspose.com/email/java/com.aspose.email/AmpImage), [AmpCarousel](https://apireference.aspose.com/email/java/com.aspose.email/AmpCarousel), [AmpAccordion](https://apireference.aspose.com/email/java/com.aspose.email/AmpAccordion), [AmpForm](https://apireference.aspose.com/email/java/com.aspose.email/AmpForm) и др. Следующий фрагмент кода демонстрирует создание, сохранение и обновление AMP Emails с использованием API Aspose.Email.
 
 
 

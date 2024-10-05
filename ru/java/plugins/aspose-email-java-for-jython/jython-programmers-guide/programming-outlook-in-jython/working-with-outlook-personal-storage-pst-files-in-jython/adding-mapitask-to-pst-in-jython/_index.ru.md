@@ -1,14 +1,14 @@
 ---
-title: "Добавление MapiTask в PST в Jython"
+title: "Добавление MapiTask в PST с помощью Jython"
 url: /ru/java/adding-mapitask-to-pst-in-jython/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - добавление MapiTask в PST**
-Чтобы добавить MapiTask в PST, используя **Aspose.Электронная почта Java для Mython**, просто вызовите **AddMapiTaskToPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Добавление MapiTask в PST**
+Чтобы добавить MapiTask в PST с помощью **Aspose.Email Java для Jython**, просто вызовите модуль **AddMapiTaskToPST**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Jython Код**
 
 ```python
 
@@ -76,19 +76,19 @@ class AddMapiTaskToPST:
 
         task_folder.addMapiMessageItem(task)
 
-        print "Added MapiTask Successfully."
+        print "Добавлено MapiTask успешно."
 
 
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddMapiTaskToPST()
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление MapiTask в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Добавление MapiTask в PST (Aspose.Email)** с любого из нижеупомянутых сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

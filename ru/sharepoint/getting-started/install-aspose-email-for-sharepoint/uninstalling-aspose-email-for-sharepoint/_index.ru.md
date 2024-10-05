@@ -6,12 +6,12 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Чтобы удалить Aspose.Email для SharePoint, просто запустите программу установки и следуйте инструкциям на экране.
+Чтобы удалить Aspose.Email для SharePoint, просто запустите установочный файл и следуйте инструкциям на экране.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-**Повторный запуск установки удаляет Aspose.Email для SharePoint из фермы серверов.**
+**Повторный запуск установки удаляет Aspose.Email для SharePoint из серверной фермы.** 
 
 ![todo:image_alt_text](uninstalling-aspose-email-for-sharepoint_1.png)

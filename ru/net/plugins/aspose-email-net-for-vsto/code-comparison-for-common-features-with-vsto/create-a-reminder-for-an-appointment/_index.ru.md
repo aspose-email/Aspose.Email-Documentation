@@ -1,5 +1,5 @@
 ---
-title: "Создайте напоминание о встрече"
+title: "Создание напоминания о встрече"
 url: /ru/net/create-a-reminder-for-an-appointment/
 weight: 40
 type: docs
@@ -15,15 +15,15 @@ type: docs
 
    Outlook.OlItemType.olAppointmentItem) as Outlook.AppointmentItem;
 
-   appt.Subject = "Wine Tasting";
+   appt.Subject = "Дегустация вина";
 
-   appt.Location = "Napa CA";
+   appt.Location = "Напа, Калифорния";
 
    appt.Sensitivity = Outlook.OlSensitivity.olPrivate;
 
-   appt.Start = DateTime.Parse("10/21/2006 10:00 AM");
+   appt.Start = DateTime.Parse("21/10/2006 10:00 AM");
 
-   appt.End = DateTime.Parse("10/21/2006 3:00 PM");
+   appt.End = DateTime.Parse("21/10/2006 3:00 PM");
 
    appt.ReminderSet = true;
 
@@ -34,33 +34,33 @@ type: docs
 
 ```
 ## **Aspose.Email**
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Напоминание можно добавить при создании встречи. Эти сигналы могут срабатывать по разным критериям, например, за n минут до начала расписания и повторяться n раз с интервалом n раз. Для создания этих триггеров можно использовать разные теги в скрипте, прилагаемом к командам BEGIN:VALARM и END:VALARM во время встречи.
+Напоминание может быть добавлено при создании встречи. Эти сигналы могут срабатывать по различным критериям, например, за n минут до начала, повторяться n раз через n интервалов. Для создания этих триггеров в скрипте, заключенном в BEGIN:VALARM и END:VALARM, можно использовать различные теги.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Существует несколько вариантов, в которых напоминание можно установить во время встречи. Ниже приведен фрагмент кода:
+Существует несколько вариантов, при которых напоминание может быть установлено для встречи. Ниже приведен фрагмент кода:
 
 ``` cs
 
-   string location = "Meeting Location: Room 5";
+   string location = "Место встречи: Комната 5";
 
   DateTime startDate = new DateTime(1997, 3, 18, 18, 30, 00),
 
   endDate = new DateTime(1997, 3, 18, 19, 30, 00);
 
-  MailAddress organizer = new MailAddress("aaa@amail.com", "Organizer");
+  MailAddress organizer = new MailAddress("aaa@amail.com", "Организатор");
 
   MailAddressCollection attendees = new MailAddressCollection();
 
-  attendees.Add(new MailAddress("bbb@bmail.com", "First attendee"));
+  attendees.Add(new MailAddress("bbb@bmail.com", "Первый участник"));
 
   Appointment target = new Appointment(location, startDate, endDate, organizer, attendees);
 
-  //Audio alarm that will sound at a precise time and
+  //Звуковое напоминание, которое прозвучит в точное время и
 
-  //repeat 4 more times at 15 minute intervals:
+  //повторится еще 4 раза через 15 минут:
 
   AppointmentReminder audioReminder = new AppointmentReminder();
 
@@ -92,11 +92,11 @@ type: docs
 
                 END:VALARM";
 
-   //Display alarm that will trigger 30 minutes before the
+   //Напоминание для отображения, которое сработает за 30 минут до
 
-   //scheduled start of the event it is
+   //запланированного начала события, к которому оно
 
-   //associated with and will repeat 2 more times at 15 minute intervals:
+   //связано, и повторится еще 2 раза через 15 минут:
 
    AppointmentReminder displayReminder = new AppointmentReminder();
 
@@ -110,7 +110,7 @@ type: docs
 
    displayReminder.Action = ReminderAction.Display;
 
-   displayReminder.Description = "Breakfast meeting with executive team at 8:30 AM EST";
+   displayReminder.Description = "Завтрак с исполнительной командой в 8:30 AM EST";
 
    target.Reminders.Add(displayReminder);
 
@@ -124,17 +124,17 @@ type: docs
 
                 DURATION:PT15M
 
-                DESCRIPTION:Breakfast meeting with executive team at 8:30 AM EST
+                DESCRIPTION:Завтрак с исполнительной командой в 8:30 AM EST
 
                 TRIGGER;RELATED=START:-PT30M
 
                 END:VALARM";
 
-    //Email alarm that will trigger 2 days before the
+    //Email-уведомление, которое сработает за 2 дня до
 
-    //scheduled due date/time. It does not
+    //запланированной даты/времени. Оно не 
 
-    //repeat. The email has a subject, body and attachment link.
+    //повторяется. Электронное письмо имеет тему, текст и ссылку на вложение.
 
     AppointmentReminder emailReminder = new AppointmentReminder();
 
@@ -148,11 +148,11 @@ type: docs
 
     emailReminder.Action = ReminderAction.Email;
 
-    emailReminder.Summary = "REMINDER: SEND AGENDA FOR WEEKLY STAFF MEETING";
+    emailReminder.Summary = "НАПОМНЕНИЕ: ОТПРАВИТЬ ПОВЕСТЬ ДНЯ ДЛЯ НЕДЕЛЬНОЙ ВСТРЕЧИ С ПЕРСОНАЛОМ";
 
-    emailReminder.Description = @"A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the
+    emailReminder.Description = @"Черновик повестки дня должен быть отправлен участникам на еженедельную встречу менеджеров (MGR-LIST). В приложении ссылка на шаблон
 
-                                  document template for the agenda file.";
+                                  документа для файла повестки дня.";
 
     ReminderAttachment attach1 = new ReminderAttachment(new Uri("http://host.com/templates/agenda.doc"));
 
@@ -166,11 +166,11 @@ type: docs
 
                 ACTION:EMAIL
 
-                DESCRIPTION:A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the document
+                DESCRIPTION:Черновик повестки дня должен быть отправлен участникам на еженедельную встречу менеджеров (MGR-LIST). В приложении ссылка на шаблон
 
-                template for the agenda file.
+                документа для файла повестки дня.
 
-                SUMMARY:REMINDER: SEND AGENDA FOR WEEKLY STAFF MEETING
+                SUMMARY:НАПОМНЕНИЕ: ОТПРАВИТЬ ПОВЕСТЬ ДНЯ ДЛЯ НЕДЕЛЬНОЙ ВСТРЕЧИ С ПЕРСОНАЛОМ
 
                 TRIGGER;RELATED=START:-P2D
 
@@ -180,11 +180,11 @@ type: docs
 
                 END:VALARM";
 
-    //Procedural alarm that will trigger at a precise date/time
+    //Процедурное напоминание, которое сработает в точную дату/время
 
-    //and will repeat 23 more times at one hour intervals. The alarm will
+    //и повторится еще 23 раза с интервалом в один час. Напоминание будет
 
-    //invoke a procedure file.
+    //вызывать файл процедуры.
 
     AppointmentReminder procReminder = new AppointmentReminder();
 
@@ -222,11 +222,11 @@ type: docs
 
 
 ```
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Загрузить рабочий код**
+## **Скачать работающий код**
 - [Codeplex](https://asposevsto.codeplex.com/SourceControl/latest#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20a%20Reminder%20for%20an%20Appointment)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

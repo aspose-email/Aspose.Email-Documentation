@@ -1,5 +1,5 @@
 ---
-title: "Извлечение вложения"
+title: "Извлечение Вложений"
 url: /ru/net/extracting-attachment/
 weight: 120
 type: docs
@@ -7,13 +7,13 @@ type: docs
 
 
 ## **VSTO**
-Ниже приведен код для извлечения вложения с помощью VSTO Outlook.
+Ниже приведен код для извлечения вложений с использованием VSTO Outlook.
 
 ``` cs
 
   string AttachmentFilePath = @"E:\Aspose\Aspose VS VSTO\Sample Files\";
 
- // Create Application class and get namespace
+ // Создайте класс Application и получите пространство имен
 
  Outlook.Application outlook = new Outlook.Application();
 
@@ -23,7 +23,7 @@ type: docs
 
  ns.Logon(_missing, _missing, false, true);
 
- // Get Inbox information in objec of type MAPIFolder
+ // Получите информацию о папке Входящие в объекте типа MAPIFolder
 
  Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
@@ -39,7 +39,7 @@ type: docs
 
 ```
 ## **Aspose.Email**
-Ниже приведен код для извлечения вложения с помощью aspose.email для .NET.
+Ниже приведен код для извлечения вложений с использованием aspose.email для .NET.
 
 ``` cs
 
@@ -47,7 +47,7 @@ type: docs
 
  string AttachmentFilePath = @"E:\Aspose\Aspose VS VSTO\Sample Files\";
 
- //Create an instance of MailMessage and load an email file
+ //Создайте экземпляр MailMessage и загрузите файл электронной почты
 
  MailMessage mailMsg = MailMessage.Load(FilePath, MailMessageLoadOptions.DefaultEml);
 
@@ -55,7 +55,7 @@ type: docs
 
  {
 
-   //To display the the attachment file name
+   //Чтобы отобразить имя файла вложения
 
    attachment.Save(AttachmentFilePath+attachment.Name);
 
@@ -82,11 +82,11 @@ type: docs
  }
 
 ```
-## **Загрузить исходный код**
+## **Скачать Исходный Код**
 - [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Extracting%20Attachment)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Загрузить пример запуска**
+## **Скачать Рабочий Пример**
 - [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)
