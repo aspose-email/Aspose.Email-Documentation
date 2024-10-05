@@ -1,21 +1,19 @@
 ---
-title: "Работа с элементами календаря на сервере Exchange"
+title: "Работа с календарными элементами на Exchange Server"
 url: /ru/java/working-with-calendar-items-on-exchange-server/
 weight: 50
 type: docs
 ---
 
 
-## **Отправка приглашений на собрание**
-В этой статье показано, как отправить приглашение на собрание нескольким получателям с помощью веб-служб Exchange и Aspose.Email.
+## **Отправка запросов на встречу**
+Эта статья показывает, как отправить запрос на встречу нескольким получателям, используя Exchange Web Services и Aspose.Email.
 
-1. Создайте приглашение на собрание с помощью класса «Встреча» и задайте место, время и участников.
-1. Создайте экземпляр класса MailMessage и назначьте встречу с помощью метода MailMessage.addAlternateView ().
-1. Подключитесь к серверу Exchange и отправьте приглашение на собрание с помощью метода send (MailMessage).
+1. Создайте запрос на встречу, используя класс Appointment, и укажите местоположение, время и участников.
+1. Создайте экземпляр класса MailMessage и установите встречу с помощью метода MailMessage.addAlternateView().
+1. Подключитесь к Exchange Server и отправьте запрос на встречу, используя метод send(MailMessage).
 
-The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс можно использовать для подключения к серверам Exchange с поддержкой веб-служб Exchange (EWS). Чтобы это работало, необходимо использовать сервер Exchange Server 2007 или более поздней версии. В следующем фрагменте кода показано, как использовать EWS для отправки приглашений на собрания.
-
-
+Класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) может использоваться для подключения к Exchange Server с поддержкой Exchange Web Services (EWS). Для этого сервер должен быть Exchange Server 2007 или новее. В следующем кодовом фрагменте показано, как использовать EWS для отправки запросов на встречу.
 
 ~~~Java
 try {
@@ -55,14 +53,12 @@ try {
     System.out.println(ex.getMessage());
 }
 ~~~
-## **Работа с элементами календаря с помощью EWS**
-Aspose.Email предоставляет возможность добавлять, обновлять и отменять встречи с помощью клиента Exchange Web Service (EWS). Клиенты IEWS [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)), и [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) методы позволяют манипулировать элементами календаря с помощью EWS. В этой статье представлен подробный пример кода работы с элементами календаря. В следующем примере кода показано, как:
+## **Работа с календарными элементами с использованием EWS**
+Aspose.Email предоставляет возможность добавлять, обновлять и отменять встречи с помощью клиента Exchange Web Service (EWS). Методы IEWSClients [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)), и [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) позволяют управлять календарными элементами с использованием EWS. Эта статья предоставляет подробный пример кода для работы с календарными элементами. В следующем кодовом примере показано, как:
 
-1. Назначьте встречу.
-1. Обновите встречу.
-1. Удалить/отменить встречу.
-
-
+1. Создать встречу.
+1. Обновить встречу.
+1. Удалить/Отменить встречу.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "your.username", "your.Password");
@@ -99,9 +95,9 @@ Appointment[] appointments2 = client.listAppointments();
 System.out.println("Total Appointments: " + appointments2.length);
 ~~~
 
-### **Возвращайте повторяющиеся элементы календаря в указанный диапазон дат**
+### **Возврат повторяющихся календарных элементов в заданном диапазоне дат**
 
-Aspose.Email Ewsclient поддерживает возврат повторяющихся элементов календаря в диапазоне, указанном в параметрах StartDate и EndDate. [AppointmentQueryBuilder.setCalendarView (дата начала, дата, дата окончания, максимальное количество возвращенных записей)](https://reference.aspose.com/email/java/com.aspose.email/appointmentquerybuilder/#setCalendarView-java.util.Date-java.util.Date-int-) метод, если указан CalendarView, возвращает список отдельных элементов календаря и повторяющихся календарных элементов в диапазоне, указанном в параметрах StartDate и EndDate. *maxEntriesReturned* параметр описывает максимальное количество результатов. (Значение <= 0 для всех результатов).
+Aspose.Email EWSClient поддерживает возврат повторяющихся календарных элементов в диапазоне, заданном StartDate и EndDate. Метод [AppointmentQueryBuilder.setCalendarView(Date startDate, Date endDate, int maxEntriesReturned)](https://reference.aspose.com/email/java/com.aspose.email/appointmentquerybuilder/#setCalendarView-java.util.Date-java.util.Date-int-) возвращает список одиночных календарных элементов и появлений повторяющихся календарных элементов в диапазоне, заданном StartDate и EndDate, если CalendarView указан. Параметр *maxEntriesReturned* описывает максимальное количество результатов. (Значение <= 0 для всех результатов).
 
 ```java
 ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
@@ -109,8 +105,8 @@ builder.getAppointment().setCalendarView(startDate, endDate, -1);
 
 Appointment[] appointments = client.listAppointments(builder.getQuery());
 ```
-## **Составление списков встреч с помощью пейджинговой поддержки**
-Метод listAppointments, представленный [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) API получает полный список встреч с сервера Exchange. Если на сервере Exchange много встреч, это может занять некоторое время. API предоставляет перегруженные методы [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listAppointments\(\)) метод, обеспечивающий пейджинговую поддержку операции. Его также можно использовать в различных комбинациях с функцией запросов. Доступны следующие перегруженные методы для списка встреч с Exchange Server с поддержкой пейджинга.
+## **Список встреч с поддержкой пагинации**
+Метод ListAppointments, предоставленный API [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient), извлекает полный список встреч с сервера Exchange. Это может занять время, если на сервере Exchange имеется большое количество встреч. API предоставляет перегруженные методы [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listAppointments\(\)) метода, который предоставляет поддержку пагинации для операции. Это может быть использовано в различных комбинациях с функцией агрегации. Следующие перегруженные методы доступны для перечисления встреч с сервера Exchange с поддержкой пагинации.
 
 - `AppointmentCollection IEWSClient.listAppointments(int itemsPerPage)`.
 - `AppointmentCollection IEWSClient.listAppointments(String folderUri, int itemsPerPage)`.
@@ -121,9 +117,7 @@ Appointment[] appointments = client.listAppointments(builder.getQuery());
 - `AppointmentCollection IEWSClient.listAppointments(MailQuery query, int itemsPerPage, int itemOffset)`.
 - `AppointmentCollection IEWSClient.listAppointments(String folderUri, MailQuery query, int itemsPerPage, int itemOffset)`.
 
-В следующем фрагменте кода показано, как составить список встреч с поддержкой пейджинга.
-
-
+Следующий кодовый фрагмент показывает, как перечислить встречи с поддержкой пагинации.
 
 ~~~Java
         IEWSClient client = EWSClient.getEWSClient("exchange.domain.com", "username", "password");
@@ -177,20 +171,18 @@ Appointment[] appointments = client.listAppointments(builder.getQuery());
             client.dispose();
         }
 ~~~
-## **Добавление события в папку дополнительного календаря на сервере Exchange**
-API Aspose.Email позволяет создать дополнительную папку календаря на сервере Exchange с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Затем встречи можно добавлять, обновлять или отменять из дополнительного календаря, используя [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)) and [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) методы. Следующие методы и свойства API используются в приведенных ниже примерах кода для демонстрации функциональности этой функции. Обратите внимание, что эта функция поддерживается Aspose.Email для Java 6.5.0 и выше.
+## **Добавление события во вторичную календарную папку на Exchange Server**
+API Aspose.Email позволяет создать вторичную календарную папку на Exchange Server с помощью [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Встречи могут быть добавлены, обновлены или отменены из вторичного календаря с использованием методов [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)) и [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)). В следующем кодовом примере показаны методы и свойства API, используемые для демонстрации функциональности этой функции. Обратите внимание, что эта функция поддерживается Aspose.Email для Java начиная с версии 6.5.0.
 
-- Method `IEWSClient.cancelAppointment(Appointment, String)`.
-- Method `IEWSClient.cancelAppointment(String, String)`.
-- Method `IEWSClient.createAppointment(Appointment, String)`.
-- Method `IEWSClient.createFolder(String, String, ExchangeFolderPermissionCollection, String)`.
-- Method `IEWSClient.fetchAppointment(String, String)`.
-- Method `IEWSClient.updateAppointment(Appointment, String)`.
-- Property `IEWSClient.CurrentCalendarFolderUri`.
+- Метод `IEWSClient.cancelAppointment(Appointment, String)`.
+- Метод `IEWSClient.cancelAppointment(String, String)`.
+- Метод `IEWSClient.createAppointment(Appointment, String)`.
+- Метод `IEWSClient.createFolder(String, String, ExchangeFolderPermissionCollection, String)`.
+- Метод `IEWSClient.fetchAppointment(String, String)`.
+- Метод `IEWSClient.updateAppointment(Appointment, String)`.
+- Свойство `IEWSClient.CurrentCalendarFolderUri`.
 
-В следующем фрагменте кода показано, как добавить событие во дополнительную папку календаря на сервере Exchange.
-
-
+Следующий кодовый фрагмент показывает, как добавить событие во вторичную календарную папку на сервере Exchange.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "your.username", "your.Password");
@@ -283,10 +275,8 @@ try {
     client.dispose();
 }
 ~~~
-## **Приглашение поделиться календарем**
-Сервер Microsoft Exchange предоставляет возможность совместного использования календарей, отправляя приглашения в календарь другим пользователям, зарегистрированным на том же сервере Exchange. API Aspose.Email предоставляет ту же возможность, позволяя делиться календарем с помощью API EWS.
-
-
+## **Обмен приглашением на календарь**
+Сервер Microsoft Exchange предоставляет возможность обмениваться календарями, отправляя приглашения на календарь другим пользователям, зарегистрированным на том же сервере Exchange. API Aspose.Email предоставляет такую же возможность, позволяя делиться календарем с использованием API EWS.
 
 ~~~Java
 final IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
@@ -306,7 +296,7 @@ try {
     client.dispose();
 }
 ~~~
-## **Получение информации о дополнительных атрибутах из элементов календаря**
+## **Получение информации о расширенных атрибутах из элементов календаря**
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://exchange.office365.com/Exchange.asmx", "username", "password");
 

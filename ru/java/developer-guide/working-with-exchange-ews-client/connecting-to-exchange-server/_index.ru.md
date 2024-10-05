@@ -1,14 +1,14 @@
 ---
-title: "Подключение к серверу Exchange"
+title: "Подключение к Exchange Server"
 url: /ru/java/connecting-to-exchange-server/
 weight: 10
 type: docs
 ---
 
 
-Чтобы подключиться к серверам Exchange 2007, 2010 и 2013 с помощью веб-службы Exchange, Aspose.Email предоставляет [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) интерфейс, реализующий [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) класс. [EWSClient.getEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#getEWSClient\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String\)) метод создает экземпляр и возвращает [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) объект, который в дальнейшем используется для выполнения операций, связанных с почтовым ящиком Exchange и другими папками. В этой статье показано, как создавать экземпляры объектов [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
-## **Подключение к серверу Exchange с помощью EWS**
-В следующем фрагменте кода показано, как подключиться с помощью веб-службы Exchange (EWS).
+Для подключения к Exchange Server 2007, 2010 и 2013 с использованием Exchange Web Service, Aspose.Email предоставляет интерфейс [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient), который реализует класс [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient). Метод [EWSClient.getEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#getEWSClient\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String\)) создает и возвращает объект [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient), который далее используется для выполнения операций, связанных с почтовым ящиком Exchange и другими папками. Эта статья показывает, как создавать объекты [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
+## **Подключение к Exchange Server через EWS**
+Следующий фрагмент кода демонстрирует, как подключиться, используя Exchange Web Service (EWS).
 
 
 
@@ -23,76 +23,76 @@ private static IEWSClient getExchangeEWSClient() {
     return client;
 }
 ~~~
-## **Подключение к серверу Exchange с помощью протокола IMAP**
-Microsoft Exchange Server поддерживает протокол IMAP для доступа к элементам в почтовом ящике. Используйте электронную почту Aspose.Email [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) класс для подключения к серверу Exchange по протоколу IMAP. Для получения дополнительной информации о [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) класс. Во-первых, убедитесь, что службы IMAP включены на вашем сервере Exchange:
+## **Подключение к Exchange Server через IMAP**
+Microsoft Exchange Server поддерживает протокол IMAP для доступа к элементам в почтовом ящике. Используйте класс Aspose.Email [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) для подключения к Exchange Server с использованием протокола IMAP. Для получения дополнительной информации о классе [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) сначала убедитесь, что службы IMAP включены на вашем Exchange Server:
 
-1. Откройте панель управления.
-1. Перейдите в раздел «Инструменты администратора», затем «Службы».
-1. Проверьте состояние службы Microsoft Exchange IMAP4.
-1. Если он еще не запущен, включите/запустите его.
+1. Откройте Панель управления.
+1. Перейдите в Администраторские инструменты, затем в Службы.
+1. Проверьте статус службы Microsoft Exchange IMAP4.
+1. Если она еще не работает, включите/запустите ее.
 
-В следующем фрагменте кода показано, как подключать и отображать сообщения из папки «Входящие» на сервере Microsoft Exchange с использованием протокола IMAP.
+Следующий фрагмент кода демонстрирует, как подключиться и перечислить сообщения из папки «Входящие» на сервере Microsoft Exchange с использованием протокола IMAP.
 
 
 
 ~~~Java
-// Connect to Exchange Server using ImapClient class
+// Подключение к Exchange Server с использованием класса ImapClient
 ImapClient imapClient = new ImapClient("ex07sp1", "Administrator", "Evaluation1");
 imapClient.setSecurityOptions(SecurityOptions.Auto);
 
-// Select the Inbox folder
+// Выбор папки "Входящие"
 imapClient.selectFolder(ImapFolderInfo.IN_BOX);
 
-// Get the list of messages
+// Получение списка сообщений
 ImapMessageInfoCollection msgCollection = imapClient.listMessages();
 for (ImapMessageInfo msgInfo : (Iterable<ImapMessageInfo>) msgCollection) {
     System.out.println(msgInfo.getSubject());
 }
-// Disconnect from the server
+// Отключение от сервера
 imapClient.dispose();
 ~~~
 
 
 
-В следующем фрагменте кода показано, как использовать SSL.
+Следующий фрагмент кода демонстрирует, как использовать SSL.
 
 
 
 ~~~Java
 public static void run() {
-    // Connect to Exchange Server using ImapClient class
+    // Подключение к Exchange Server с использованием класса ImapClient
     ImapClient imapClient = new ImapClient("ex07sp1", 993, "Administrator", "Evaluation1");
     imapClient.setSecurityOptions(SecurityOptions.SSLExplicit);
 
-    // Select the Inbox folder
+    // Выбор папки "Входящие"
     imapClient.selectFolder(ImapFolderInfo.IN_BOX);
 
-    // Get the list of messages
+    // Получение списка сообщений
     ImapMessageInfoCollection msgCollection = imapClient.listMessages();
     for (ImapMessageInfo msgInfo : (Iterable<ImapMessageInfo>) msgCollection) {
         System.out.println(msgInfo.getSubject());
     }
-    // Disconnect from the server
+    // Отключение от сервера
     imapClient.dispose();
 }
 ~~~
 
 
 
-После подключения к серверу Exchange по протоколу IMAP и получения [IMapMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ImapMessageInfoCollection), В следующем фрагменте кода показано, как использовать [MessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/MessageInfo) порядковый номер объекта для сохранения определенного сообщения.
+После подключения к Exchange Server с использованием IMAP и получения [IMapMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ImapMessageInfoCollection), следующий фрагмент кода демонстрирует, как использовать номер последовательности объекта [MessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/MessageInfo) для сохранения конкретного сообщения.
 
 
 
 ~~~Java
-// Select the Inbox folder
+// Выбор папки "Входящие"
 imapClient.selectFolder(ImapFolderInfo.IN_BOX);
-// Get the list of messages
+// Получение списка сообщений
 ImapMessageInfoCollection msgCollection = imapClient.listMessages();
 for (ImapMessageInfo msgInfo : (Iterable<ImapMessageInfo>) msgCollection) {
-    // Fetch the message from inbox using its SequenceNumber from msgInfo
+    // Получение сообщения из папки "Входящие" по номеру последовательности из msgInfo
     MailMessage message = imapClient.fetchMessage(msgInfo.getSequenceNumber());
 
-    // Save the message to disc now
+    // Сохранение сообщения на диск сейчас
     message.save(dataDir + msgInfo.getSequenceNumber() + "_out.msg", SaveOptions.getDefaultMsgUnicode());
 }
 ~~~

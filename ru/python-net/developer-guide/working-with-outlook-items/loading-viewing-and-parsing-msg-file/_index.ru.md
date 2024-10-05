@@ -1,75 +1,75 @@
 ---
-title: "Загрузка, просмотр и анализ файла MSG"
+title: "Загрузка, просмотр и парсинг MSG файла"
 url: /ru/python-net/loading-viewing-and-parsing-msg-file/
 weight: 20
 type: docs
 ---
 
 
-В этом разделе описывается, как загрузить файл сообщений Microsoft Outlook (*.msg). [MapiMessage](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/) класс используется для загрузки файлов MSG и предоставляет несколько функций статической загрузки для различных сценариев. В следующем фрагменте кода показано, как загружать файлы MSG из файла или из потока.
+Эта тема объясняет, как загрузить файл сообщения Microsoft Outlook (*.msg). Класс [MapiMessage](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/) используется для загрузки MSG файлов и предоставляет несколько статических функций загрузки для различных сценариев. Следующий код демонстрирует, как загрузить MSG файлы из файла или из потока.
 {{% alert %}}
 **Попробуйте!**
 
-Анализируйте файлы электронной почты онлайн бесплатно [**Приложение для парсера электронной почты Aspose.Email**](https://products.aspose.app/email/ru/parser).
+Парсите файлы электронной почты онлайн с бесплатным приложением [**Aspose.Email Parser App**](https://products.aspose.app/email/ru/parser).
 {{% /alert %}}
-## **Загрузка файлов MSG**
-В следующем фрагменте кода показано, как загружать файлы MSG.
+## **Загрузка MSG файлов**
+Следующий код демонстрирует, как загрузить MSG файлы.
 
 ```py
 from aspose.email.mapi import MapiMessage
 
-# Create an instance of MapiMessage from file
+# Создайте экземпляр MapiMessage из файла
 msg = MapiMessage.from_file("message.msg")
 
-# Get subject
+# Получить тему
 print("Subject: " + msg.subject)
 
-# Get from address
+# Получить адрес отправителя
 print("From: " + msg.sender_email_address)
 
-# Get body
+# Получить тело сообщения
 print("Body: " + msg.body)
 
-# Get recipients information
+# Получить информацию о получателях
 recipients = ", ".join([r.email_address for r in msg.recipients])
 print("Recipients: " + recipients)
 
-# Get attachments
+# Получить вложения
 for att in msg.attachments:
     print(att.file_name)
     print(att.display_name)
 ```
-## **Загрузка из стрима**
-В следующем фрагменте кода показано, как загрузить файл из потока.
+## **Загрузка из потока**
+Следующий код демонстрирует, как загрузить файл из потока.
 
 ```py
 from aspose.email.mapi import MapiMessage
 import io
 
-# Read the file into a byte array
+# Прочитать файл в массив байтов
 file_path = dir_path + "message.msg"
 with open(file_path, "rb") as file:
     bytes_data = file.read()
 
-# Create a memory stream from the byte array
+# Создать поток памяти из массива байтов
 stream = io.BytesIO(bytes_data)
 stream.seek(0)
 
-# Create an instance of MapiMessage from the stream
+# Создать экземпляр MapiMessage из потока
 msg = MapiMessage.from_stream(stream)
 
-# Get subject
+# Получить тему
 print("Subject: " + msg.subject)
 
-# Get from address
+# Получить адрес отправителя
 print("From: " + msg.sender_email_address)
 
-# Get body
+# Получить тело сообщения
 print("Body: " + msg.body)
 ```
 
-## **Преобразование EML в MSG с сохранением встроенного формата EML**
-Файлы EML можно загружать в [MapiMessage](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/) класс путем создания экземпляра [MailMessage](https://reference.aspose.com/email/python-net/aspose.email/mailmessage/) объект и передача его методу MAPImessage.from_mail_message. Если файл EML содержит встроенные файлы EML, используйте MapiConversionOptions.PreserveEmbeddedMessageFormat, чтобы сохранить формат встроенных файлов EML. В приведенном ниже фрагменте кода показано, как загружать файлы EML в MapiMessage с сохранением формата встроенных файлов EML.
+## **Конвертация EML в MSG с сохранением встроенного формата EML**
+EML файлы могут быть загружены в класс [MapiMessage](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/) путем создания объекта [MailMessage](https://reference.aspose.com/email/python-net/aspose.email/mailmessage/) и передачи его в метод MapiMessage.from_mail_message. Если файл EML содержит встроенные EML файлы, используйте MapiConversionOptions.PreserveEmbeddedMessageFormat для сохранения формата встроенных EML файлов. Приведенный ниже код демонстрирует, как загрузить EML файлы в MapiMessage, сохраняя формат встроенных EML файлов.
 
 ```py
 from aspose.email import MailMessage, EmlLoadOptions
@@ -77,17 +77,17 @@ from aspose.email.mapi import MapiMessage, MapiConversionOptions, OutlookMessage
 
 eml_file = dir_path + "message.eml"
 
-# Load the EML file
+# Загрузить EML файл
 eml_options = EmlLoadOptions()
 eml = MailMessage.load(eml_file, eml_options)
 
-# Create MapiConversionOptions
+# Создать MapiConversionOptions
 conversion_options = MapiConversionOptions()
 conversion_options.format = OutlookMessageFormat.UNICODE
 
-# Preserve Embedded Message Format
+# Сохранить встроенный формат сообщения
 conversion_options.preserve_embedded_message_format = True
 
-# Convert EML to MSG with options
+# Конвертировать EML в MSG с опциями
 msg = MapiMessage.from_mail_message(eml, conversion_options)
 ```

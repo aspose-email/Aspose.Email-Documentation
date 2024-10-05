@@ -1,48 +1,48 @@
 ---
-title: "Чтение файла сообщений Outlook (MSG) в Aspose.Email"
+title: "Чтение сообщения Outlook (файл MSG) в Aspose.Email"
 url: /ru/net/reading-an-outlook-message-msg-file-in-aspose-email/
 weight: 190
 type: docs
 ---
 
 
-Чтобы использовать объекты автоматизации делопроизводства для Microsoft Outlook, необходимо добавить в проект ссылки на библиотеки Microsoft Office и Microsoft Office Interop для Outlook.
+Чтобы использовать объекты автоматизации Office для Microsoft Outlook, необходимо добавить ссылки на библиотеки Microsoft Office и Microsoft Office Interop для Outlook в ваш проект.
 ### **VSTO**
 ``` cs
 
- // Create a new Application Class
+ // Создать новый класс приложения
 
 _Application outlook = new Outlook.Application();
 
-// Create a MailItem object
+// Создать объект MailItem
 
 MailItem item = (MailItem)outlook.CreateItemFromTemplate("test.msg", Type.Missing);
 
-// Access different fields of the message
+// Получить доступ к различным полям сообщения
 
-System.Console.WriteLine(string.Format("Subject:{0}", item.Subject));
+System.Console.WriteLine(string.Format("Тема:{0}", item.Subject));
 
-System.Console.WriteLine(string.Format("Sender Email Address:{0}", item.SenderEmailAddress));
+System.Console.WriteLine(string.Format("Адрес электронной почты отправителя:{0}", item.SenderEmailAddress));
 
-System.Console.WriteLine(string.Format("SenderName:{0}", item.SenderName));
+System.Console.WriteLine(string.Format("Имя отправителя:{0}", item.SenderName));
 
-System.Console.WriteLine(string.Format("TO:{0}", item.To));
+System.Console.WriteLine(string.Format("Кому:{0}", item.To));
 
-System.Console.WriteLine(string.Format("CC:{0}", item.CC));
+System.Console.WriteLine(string.Format("Копия:{0}", item.CC));
 
-System.Console.WriteLine(string.Format("BCC:{0}", item.BCC));
+System.Console.WriteLine(string.Format("Скрытая копия:{0}", item.BCC));
 
-System.Console.WriteLine(string.Format("Html Body:{0}", item.HTMLBody));
+System.Console.WriteLine(string.Format("HTML тело:{0}", item.HTMLBody));
 
-System.Console.WriteLine(string.Format("Text Body:{0}", item.Body));
+System.Console.WriteLine(string.Format("Текстовое тело:{0}", item.Body));
 
 ```
 ### **Aspose.Email**
-Чтобы получить доступ к объектам Aspose.Email.Outlook, вам необходимо добавить ссылку на Aspose.Email в свой проект.
+Чтобы получить доступ к объектам Aspose.Email.Outlook, необходимо добавить ссылку на Aspose.Email в ваш проект.
 
 ``` cs
 
-  // Create attendees of the meeting
+  // Создать участников встречи
 
 MailAddressCollection attendees = new MailAddressCollection();
 
@@ -50,21 +50,21 @@ attendees.Add("recipient1@domain.com");
 
 attendees.Add("recipient2@domain.com");
 
-// Set up appointment
+// Настроить встречу
 
 Appointment app = new Appointment(
 
-    "Location", // location of meeting
+    "Место встречи", // место встречи
 
-    DateTime.Now, // start date
+    DateTime.Now, // дата начала
 
-    DateTime.Now.AddHours(1), // end date
+    DateTime.Now.AddHours(1), // дата окончания
 
-    new MailAddress("organizer@domain.com"), // organizer
+    new MailAddress("organizer@domain.com"), // организатор
 
-    attendees); // attendees
+    attendees); // участники
 
-// Set up message that needs to be sent
+// Настроить сообщение, которое необходимо отправить
 
 MailMessage msg = new MailMessage();
 
@@ -72,22 +72,22 @@ msg.From = "from@domain.com";
 
 msg.To = "to@domain.com";
 
-msg.Subject = "appointment request";
+msg.Subject = "запрос на встречу";
 
-msg.Body = "you are invited";
+msg.Body = "вы приглашены";
 
-// Add meeting request to the message
+// Добавить запрос на встречу в сообщение
 
 msg.AddAlternateView(app.RequestApointment());
 
-// Set up the SMTP client to send email with meeting request
+// Настроить SMTP-клиент для отправки электронной почты с запросом на встречу
 
 SmtpClient client = new SmtpClient("host", 25 ,"user", "password");
 
 client.Send(msg);
 
 ```
-## **Загрузить образец кода**
+## **Скачать образец кода**
 - [Codeplex](https://asposevsto.codeplex.com/downloads/get/772943)
 - [Github](https://github.com/asposemarketplace/Aspose_for_VSTO/releases/download/5/Reading.an.Outlook.Message.MSG.File.Aspose.Email.zip)
 - [Sourceforge](http://goo.gl/TpCQPp)

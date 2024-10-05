@@ -1,21 +1,21 @@
 ---
-title: "Функции утилиты — SMTP-клиент"
+title: "Утилитарные функции - SMTP клиент"
 url: /ru/java/utility-features-smtp-client/
 weight: 30
 type: docs
 ---
 
 
-## **Список серверов расширений с использованием клиента Smtp**
+## **Получение расширений сервера с использованием SmtpClient**
 
-Aspose.Email [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) позволяет получить серверные расширения, поддерживаемые сервером, такие как IDLE, UNSELECT, QUOTA и т. д. Это помогает определить доступность расширения перед использованием клиента для выполнения этой конкретной функции. [getCapabilities()](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#getCapabilities--) метод возвращает поддерживаемые типы расширений в виде строкового массива.
+Aspose.Email [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) позволяет извлечь поддерживаемые сервером расширения, такие как IDLE, UNSELECT, QUOTA и т.д. Это помогает определить доступность расширения перед использованием клиента для этой конкретной функции. Метод [getCapabilities()](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/#getCapabilities--) возвращает поддерживаемые типы расширений в виде массива строк.
 
-### **Получение серверных расширений**
+### **Извлечение расширений сервера**
 
-В следующем фрагменте кода показано, как извлекать серверные расширения.
+Следующий фрагмент кода показывает, как извлечь расширения сервера.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных, пожалуйста, перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 
 SmtpClient client = new SmtpClient("smtp.gmail.com",587,"username","password");
 client.setSecurityOptions(SecurityOptions.Auto);
@@ -26,15 +26,15 @@ for (String str:caps)
 
 ## **Работа с подписанным сообщением**
 
-Aspose.Email API предоставляет возможность создавать подписанные сообщения с использованием сертификатов. [attachSignature](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#attachSignature-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-) метод [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс можно использовать для подписи сообщения для сохранения или даже отправки его с помощью [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/).
+API Aspose.Email предоставляет возможность создания подписанных сообщений с использованием сертификатов. Метод [attachSignature](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#attachSignature-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-) класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) может быть использован для подписи сообщения для сохранения или даже отправки его с использованием [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/).
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Обратите внимание, что API Aspose.Email для Java зависит от Bouncy Castle в том, что касается функций криптографии.
+Пожалуйста, обратите внимание, что API Aspose.Email для Java зависит от Bouncy Castle для криптографических функций.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-### **Зависимости Баунси Касл Мейвен**
+### **Зависимости Maven для Bouncy Castle**
 
 ~~~
 <dependency>
@@ -50,7 +50,7 @@ Aspose.Email API предоставляет возможность создав�
 </dependency>
 ~~~
 
-### **Включить поставщика услуг безопасности Bouncy Castle**
+### **Включение провайдера безопасности Bouncy Castle**
 
 ~~~java
 import java.security.Security;
@@ -60,34 +60,34 @@ if (Security.getProvider("BC") == null)
     Security.addProvider(new BouncyCastleProvider());
 ~~~
 
-### **Подпишите сообщение**
+### **Подпись сообщения**
 
-В следующем фрагменте кода показано, как подписать сообщение.
+Следующий фрагмент кода показывает, как подписать сообщение.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных, пожалуйста, перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 
 byte[] privateCert = Files.readAllBytes(new File("sample.pfx").toPath());
 byte[] publicCert = Files.readAllBytes(new File("sample.cer").toPath());
 
-MailMessage msg = new MailMessage("userfrom@gmail.com", "userto@gmail.com", "Signed message only", "Test Body of signed message");
+MailMessage msg = new MailMessage("userfrom@gmail.com", "userto@gmail.com", "Подписанное сообщение", "Тестовое тело подписанного сообщения");
 MailMessage signed = msg.attachSignature(privateCert, "password");
 MailMessage encrypted = signed.encrypt(publicCert, "password");
 MailMessage decrypted = encrypted.decrypt(privateCert, "password");
-MailMessage unsigned = decrypted.removeSignature();// The original message with proper body
+MailMessage unsigned = decrypted.removeSignature();// Исходное сообщение с правильным телом
 MapiMessage mapi = MapiMessage.fromMailMessage(unsigned);
 ~~~
 
-### **Использование опции «Отдельный сертификат»**
+### **Использование опции отдельного сертификата**
 
-Веб-клиенты электронной почты могут не отображать основное содержимое подписанного сообщения. Эту проблему можно решить, отсоединив сертификат перед отправкой почтовым веб-клиентам. Отключенный флаг в перегруженном методе [attachSignature](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#attachSignature-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-) могут быть использованы для достижения этой цели. Если установлено значение **true**, сертификат отделяется от электронного письма и наоборот. Чтобы увидеть текст подписанного сообщения в веб-клиентах, вам необходимо создать [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) с отдельной подписью. В следующем фрагменте кода показано, как использовать опцию отдельного сертификата.
+Веб-клиенты электронной почты могут не отображать содержимое тела подписанного сообщения. Это можно исправить, отделив сертификат перед отправкой его в веб-клиенты электронной почты. Флаг отсоединения в перегруженном методе [attachSignature](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#attachSignature-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-) может быть использован для достижения этой цели. Если установить в **true**, сертификат будет отделен от электронной почты и наоборот. Чтобы видеть тело подписанного сообщения в веб-клиентах, необходимо создать [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) с отсоединенной подписью. Следующий фрагмент кода показывает, как использовать опцию отдельного сертификата.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных, пожалуйста, перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 
-MailMessage msg = new MailMessage("dr38445@gmail.com", "dr38445@gmail.com", "subject:Signed message only by AE", "body:Test Body of signed message by AE");
+MailMessage msg = new MailMessage("dr38445@gmail.com", "dr38445@gmail.com", "subject:Подписанное сообщение только от AE", "body:Тестовое тело подписанного сообщения от AE");
 MailMessage signed = msg.attachSignature(privateCert, "password", true);
-SmtpClient smtp = getSmtpClient(); //some test smtp client
+SmtpClient smtp = getSmtpClient(); //некоторый тестовый smtp клиент
 
 smtp.send(signed);
 ~~~

@@ -1,5 +1,5 @@
 ---
-title: "Работа с папками на сервере IMAP"
+title: "Работа с папками на IMAP-сервере"
 url: /ru/java/working-with-folders-on-imap-server/
 weight: 60
 type: docs
@@ -8,58 +8,58 @@ type: docs
 
 ## **Получение информации о папках**
 
-С Aspose.Email очень просто получать информацию о папках с сервера IMAP. Позвоните в [listFolders()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listFolders--) метод [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) класс. Он возвращает объект [ImapFolderInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapfolderinfocollection/) тип. Изучите эту коллекцию и получайте информацию об отдельных папках в цикле. Метод перегружен. Вы можете передать имя папки в качестве параметра, чтобы получить список подпапок. В следующем фрагменте кода показано, как получить информацию о папке с сервера IMAP с помощью описанного метода Aspose.Email.
+Получить информацию о папках с IMAP-сервера очень просто с Aspose.Email. Вызовите метод [listFolders()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listFolders--) класса [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Он возвращает объект типа [ImapFolderInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapfolderinfocollection/). Итерация по этой коллекции позволяет получить информацию о каждом отдельном папке в цикле. Метод перегружен. Вы можете передать имя папки в качестве параметра, чтобы получить список подкаталогов. Следующий фрагмент кода показывает, как получить информацию о папках с IMAP-сервера, используя описанный метод Aspose.Email.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Get all folders in the currently subscribed folder
+// Получить все папки в текущей подписанной папке
 ImapFolderInfoCollection folderInfoColl = client.listFolders();
 
-// Iterate through the collection to get folder info one by one
+// Итерация по коллекции для получения информации о папках
 for (ImapFolderInfo folderInfo : (Iterable<ImapFolderInfo>) folderInfoColl) {
-    // Folder name and get New messages in the folder
-    System.out.println("Folder name is " + folderInfo.getName());
+    // Имя папки и получить новые сообщения в папке
+    System.out.println("Имя папки: " + folderInfo.getName());
     ImapFolderInfo folderExtInfo = client.getFolderInfo(folderInfo.getName());
-    System.out.println("New message count: " + folderExtInfo.getNewMessageCount());
-    System.out.println("Is it readonly? " + folderExtInfo.getReadOnly());
-    System.out.println("Total number of messages " + folderExtInfo.getTotalMessageCount());
+    System.out.println("Количество новых сообщений: " + folderExtInfo.getNewMessageCount());
+    System.out.println("Только для чтения? " + folderExtInfo.getReadOnly());
+    System.out.println("Общее количество сообщений: " + folderExtInfo.getTotalMessageCount());
 }
 ~~~
 
 ## **Удаление и переименование папок**
 
-Папку на сервере IMAP можно удалить или переименовать в одну строку с помощью Aspose.Email:
+Папку на IMAP-сервере можно удалить или переименовать в одной строке с Aspose.Email:
 
-- The [deleteFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#deleteFolder-java.lang.String-) метод принимает имя папки в качестве параметра.
-- Для [renameFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#renameFolder-java.lang.String-java.lang.String-) метод, вам нужно передать текущее имя папки и новое имя папки.
+- Метод [deleteFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#deleteFolder-java.lang.String-) принимает имя папки в качестве параметра.
+- Для метода [renameFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#renameFolder-java.lang.String-java.lang.String-) необходимо передать текущее имя папки и новое имя папки.
 
-В следующем фрагменте кода показано, как удалить папку с сервера IMAP и переименовать папку. Каждая операция выполняется с помощью одной строки кода.
+Следующий фрагмент кода показывает, как удалить папку с IMAP-сервера и как переименовать папку. Каждая операция выполняется одной строкой кода.
 
 ```java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Delete a folder and Rename a folder
+// Удалить папку и переименовать папку
 client.deleteFolder("foldername");
 client.renameFolder("foldername", "newfoldername");
 ```
 
 ## **Добавление нового сообщения в папку**
 
-Вы можете добавить новое сообщение в папку, используя [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) and [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) классы. Сначала создайте [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) возражать, предоставляя субъекту ценности и исходя из них. Затем подпишитесь на папку и добавьте в нее сообщение. В следующем фрагменте кода показано, как добавить новое сообщение в папку.
+Вы можете добавить новое сообщение в папку, используя классы [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) и [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Сначала создайте объект [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) , указав тему, а также адреса отправителя и получателя. Затем подпишитесь на папку и добавьте в нее сообщение. Следующий фрагмент кода показывает, как добавить новое сообщение в папку.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Create a message
-MailMessage msg = new MailMessage("user@domain1.com", "user@domain2.com", "subject", "message");
+// Создать сообщение
+MailMessage msg = new MailMessage("user@domain1.com", "user@domain2.com", "тема", "сообщение");
 
-// Subscribe to the Inbox folder and Append the newly created message
+// Подпишитесь на папку "Входящие" и добавьте только что созданное сообщение
 client.selectFolder(ImapFolderInfo.IN_BOX);
 client.subscribeFolder(client.getCurrentFolder().getName());
 client.appendMessage(client.getCurrentFolder().getName(), msg);
 ~~~
 
-## **Добавьте несколько сообщений с поддержкой нескольких подключений**
+## **Добавление нескольких сообщений с поддержкой многосоединений**
 
-Вы можете добавить несколько сообщений, используя [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) метод, предоставленный [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) класс. [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) метод принимает список [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) и добавляет его в текущую папку, если папка не указана в качестве параметра. IMapClient также поддерживает режим MultiConnection для высоконагруженных операций. В следующем фрагменте кода показано, как добавить несколько сообщений в режиме MultiConnection.
+Вы можете добавить несколько сообщений, используя метод [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) предоставленный классом [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Метод [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) принимает список [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) и добавляет его в текущую папку, если папка не предоставлена в качестве параметра. ImapClient также поддерживает режим MultiConnection для операций с высокой нагрузкой. Следующий фрагмент кода показывает, как добавить несколько сообщений, используя режим MultiConnection.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -73,7 +73,7 @@ imapClient.setSecurityOptions(SecurityOptions.SSLImplicit);
 
 List<MailMessage> messages = new ArrayList<MailMessage>();
 for (int i = 0; i < 20; i++) {
-    MailMessage message = new MailMessage("<EMAIL ADDRESS>", "<EMAIL ADDRESS>", "Test Message - " + UUID.randomUUID().toString(), "IMAP Group Append with MultiConnection");
+    MailMessage message = new MailMessage("<EMAIL ADDRESS>", "<EMAIL ADDRESS>", "Тестовое сообщение - " + UUID.randomUUID().toString(), "IMAP Групповое добавление с MultiConnection");
     messages.add(message);
 }
 
@@ -82,21 +82,21 @@ imapClient.setUseMultiConnection(MultiConnectionMode.Enable);
 imapClient.appendMessages(messages);
 ~~~
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Обратите внимание, что использование режима нескольких подключений не гарантирует повышения производительности.
+Обратите внимание, что использование режима многосоединений не гарантирует улучшения производительности.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-## **Переместить сообщения в другую папку почтового ящика**
+## **Перемещение сообщений в другую папку почтового ящика**
 
-Aspose.Email для Java позволяет перемещать сообщение из одной папки почтового ящика в другую с помощью [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) API. [moveMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#moveMessage-int-java.lang.String-) метод использует уникальный идентификатор сообщения и имя целевой папки для перемещения сообщения в папку назначения. В следующем фрагменте кода показано, как перемещать сообщения в другую папку почтового ящика.
+Aspose.Email для Java позволяет перемещать сообщение из одной папки почтового ящика в другую с помощью API [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Метод [moveMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#moveMessage-int-java.lang.String-) использует уникальный идентификатор сообщения и имя целевой папки для перемещения сообщения в целевую папку. Следующий фрагмент кода показывает, как перемещать сообщения в другую папку почтового ящика.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// This example shows how to move a message from one folder of a mailbox to another one using the ImapClient API of Aspose.Email for Java
-// Available from Aspose.Email for Java onwards
-// -------------- Available API Overload Members --------------
+// Этот пример показывает, как переместить сообщение из одной папки почтового ящика в другую, используя API ImapClient от Aspose.Email для Java
+// Доступно начиная с Aspose.Email для Java
+// -------------- Доступные члены перегрузки API --------------
 // void ImapClient.moveMessage(IConnection iConnection, int sequenceNumber, String folderName, boolean commitDeletions)
 // void ImapClient.moveMessage(IConnection iConnection, String uniqueId, String folderName, boolean commitDeletions)
 // void ImapClient.moveMessage(int sequenceNumber, String folderName, boolean commitDeletions)
@@ -113,20 +113,20 @@ try {
         client.createFolder(folderName);
     try {
         MailMessage message = new MailMessage("from@domain.com", "to@domain.com", "EMAILNET-35151 - " + UUID.randomUUID(),
-                "EMAILNET-35151 ImapClient: Provide option to Move Message");
+                "EMAILNET-35151 ImapClient: Предоставить возможность перемещения сообщений");
         client.selectFolder(ImapFolderInfo.IN_BOX);
-        // Append the new message to Inbox folder
+        // Добавить новое сообщение в папку "Входящие"
         String uniqueId = client.appendMessage(ImapFolderInfo.IN_BOX, message);
         ImapMessageInfoCollection messageInfoCol1 = client.listMessages();
         System.out.println(messageInfoCol1.size());
-        // Now move the message to the folder EMAILNET-35151
+        // Теперь переместите сообщение в папку EMAILNET-35151
         client.moveMessage(uniqueId, folderName);
         client.commitDeletes();
-        // Verify that the message was moved to the new folder
+        // Проверьте, что сообщение было перемещено в новую папку
         client.selectFolder(folderName);
         messageInfoCol1 = client.listMessages();
         System.out.println(messageInfoCol1.size());
-        // Verify that the message was moved from the Inbox
+        // Проверьте, что сообщение было перемещено из "Входящих"
         client.selectFolder(ImapFolderInfo.IN_BOX);
         messageInfoCol1 = client.listMessages();
         System.out.println(messageInfoCol1.size());
@@ -144,33 +144,33 @@ try {
 
 ## **Копирование сообщений в другую папку почтового ящика**
 
-Aspose.Email API предоставляет возможность копировать сообщение из одной папки почтового ящика в другую. Это позволяет копировать как одно, так и несколько сообщений с помощью [copyMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessage-com.aspose.email.IConnection-int-java.lang.String-) and [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-) методы. [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-) Метод предоставляет возможность копировать несколько сообщений из исходной папки почтового ящика в папку почтового ящика назначения. В следующем фрагменте кода показано, как копировать сообщения в другую папку почтового ящика.
+API Aspose.Email предоставляет возможность копировать сообщение из одной папки почтового ящика в другую. Он позволяет копировать как одно сообщение, так и несколько сообщений, используя методы [copyMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessage-com.aspose.email.IConnection-int-java.lang.String-) и [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-). Метод [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-) предоставляет возможность копировать несколько сообщений из исходной папки почтового ящика в целевую папку почтового ящика. Следующий фрагмент кода показывает, как копировать сообщения в другую папку почтового ящика.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
 final ImapClient client = new ImapClient("exchange.aspose.com", "username", "password");
 try {
-    // Create the destination folder
+    // Создать целевую папку
     String folderName = "EMAILNET-35242";
     if (!client.existFolder(folderName))
         client.createFolder(folderName);
     try {
-        // Append a couple of messages to the server
+        // Добавить пару сообщений на сервер
         MailMessage message1 = new MailMessage("asposeemail.test3@aspose.com", "asposeemail.test3@aspose.com", "EMAILNET-35242 - " + UUID.randomUUID(),
-                "EMAILNET-35242 Improvement of copy method.Add ability to 'copy' multiple messages per invocation.");
+                "EMAILNET-35242 Улучшение метода копирования. Добавить возможность 'копирования' нескольких сообщений за один вызов.");
         String uniqueId1 = client.appendMessage(message1);
 
         MailMessage message2 = new MailMessage("asposeemail.test3@aspose.com", "asposeemail.test3@aspose.com", "EMAILNET-35242 - " + UUID.randomUUID(),
-                "EMAILNET-35242 Improvement of copy method.Add ability to 'copy' multiple messages per invocation.");
+                "EMAILNET-35242 Улучшение метода копирования. Добавить возможность 'копирования' нескольких сообщений за один вызов.");
         String uniqueId2 = client.appendMessage(message2);
 
-        // Verify that the messages have been added to the mailbox
+        // Проверьте, что сообщения были добавлены в почтовый ящик
         client.selectFolder(ImapFolderInfo.IN_BOX);
         ImapMessageInfoCollection msgsColl = client.listMessages();
         for (ImapMessageInfo msgInfo : msgsColl)
             System.out.println(msgInfo.getSubject());
 
-        // Copy multiple messages using the CopyMessages command and Verify that messages are copied to the destination folder
+        // Скопируйте несколько сообщений, используя команду CopyMessages, и проверьте, что сообщения скопированы в целевую папку
         client.copyMessagesByUids(Arrays.asList(uniqueId1, uniqueId2), folderName);
 
         client.selectFolder(folderName);
@@ -189,9 +189,9 @@ try {
 }
 ~~~
 
-## **Работа с папками почтовых ящиков специального назначения**
+## **Работа со специальными почтовыми ящиками**
 
-В некоторых хранилищах сообщений IMAP есть специальные почтовые ящики, например, для хранения черновиков или отправленных сообщений. Многие почтовые клиенты позволяют пользователям указывать, куда следует помещать черновики или отправленные сообщения, но для их настройки пользователь должен знать, какие почтовые ящики сервер выделил для этих целей. Aspose.Email может идентифицировать эти специальные почтовые ящики с помощью [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/) класс, чтобы с ними было удобнее работать. В следующем примере кода показано, как получить доступ к этим специальным почтовым ящикам с помощью [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/) class.
+Некоторые хранилища IMAP сообщений включают специальные почтовые ящики, такие как те, которые используются для хранения черновиков или отправленных сообщений. Многие почтовые клиенты позволяют пользователям указывать, куда должны быть помещены черновики или отправленные сообщения, но их настройка требует от пользователя знания о том, какие почтовые ящики сервер отводит для этих целей. Aspose.Email может идентифицировать эти специальные почтовые ящики, используя класс [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/) , чтобы упростить работу с ними. Следующий пример кода демонстрирует, как получить доступ к этим специальным почтовым ящикам с помощью класса [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/).
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

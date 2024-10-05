@@ -5,9 +5,9 @@ weight: 80
 type: docs
 ---
 
-## **Создать контакт Outlook**
+## **Создание контакта Outlook**
 
-Aspose.Email для Java поддерживает создание контактов Outlook (vCards) с помощью [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) class. [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) содержит множество методов, некоторые из которых приведены ниже.
+Aspose.Email для Java поддерживает создание контактов Outlook (VCards) с использованием класса [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/). [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) содержит множество методов, некоторые из которых приведены ниже.
 
 - [MapiContactElectronicAddressPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontactelectronicaddresspropertyset/#MapiContactElectronicAddressPropertySet--) содержит набор [MapiContactElectronicAddress](https://reference.aspose.com/email/java/com.aspose.email/mapicontactelectronicaddress/).
 - [MapiContactEventPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--)
@@ -16,61 +16,61 @@ Aspose.Email для Java поддерживает создание контак�
 - [MapiContactPhysicalAddressPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontactphysicaladdresspropertyset/#MapiContactPhysicalAddressPropertySet--) содержит набор [MapiContactPhysicalAddress](https://reference.aspose.com/email/java/com.aspose.email/mapicontactphysicaladdress/#MapiContactPhysicalAddress--).
 - [MapiContactProfessionalPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontactprofessionalpropertyset/#MapiContactProfessionalPropertySet--)
 - [MapiContactTelephonePropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontacttelephonepropertyset/#MapiContactTelephonePropertySet--)
- 
-### **Структура контактов в Aspose.Email для Java**
 
-Ниже представлена иерархия, реализованная для контактов в Aspose.Email для Java. Каждому свойству указано соответствующее имя класса. Для получения дополнительной информации приведены гиперссылки на онлайн-документацию.
+### **Структура контакта в Aspose.Email для Java**
+
+Ниже представлена иерархия, реализованная для контактов в Aspose.Email для Java. Соответствующее имя класса указано напротив каждого свойства. Гиперссылки предоставлены для онлайн-документации для дальнейшего изучения.
 
 1. [Contact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) (MapiContact)
    1. [Электронные адреса](https://reference.aspose.com/email/java/com.aspose.email/mapicontactelectronicaddresspropertyset/#MapiContactElectronicAddressPropertySet--) (MapiContactElectronicAddressPropertySet)
       1. [Email1](https://reference.aspose.com/email/java/com.aspose.email/mapicontactelectronicaddress/) (MapiContactElectronicAddress)
          1. Тип адреса
-         1. Отображаемое имя
-         1. Адрес электронной почты
+         1. Имя для отображения
+         1. Электронный адрес
          1. Номер факса
       1. Email2
       1. Email3
       1. Домашний факс
       1. Основной факс
-      1. Деловой факс
-   1. [Events](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--) (`MapiContactEventPropertySet`). Ниже приведен пример настройки событий.
-      1. Birthday
-      1. Годовщина свадьбы
-   1. [Информация об имени](https://reference.aspose.com/email/java/com.aspose.email/mapicontactnamepropertyset/#MapiContactNamePropertySet--) (`MapiContactNamePropertySet`)
-      1. Отображаемое имя
-      1. Префикс отображаемого имени
-      1. Файл в разделе
-      1. Файл под идентификатором
-      1. Generation
-      1. Заданное имя
-      1. Initials
+      1. Факс для бизнеса
+   1. [События](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--) (`MapiContactEventPropertySet`). Ниже приведен пример того, как установить события.
+      1. День рождения
+      1. Юбилей свадьбы
+   1. [Информация о имени](https://reference.aspose.com/email/java/com.aspose.email/mapicontactnamepropertyset/#MapiContactNamePropertySet--) (`MapiContactNamePropertySet`)
+      1. Имя для отображения
+      1. Префикс имени для отображения
+      1. Файл под
+      1. ID файла
+      1. Поколение
+      1. Имя
+      1. Инициал(ы)
       1. Отчество
-      1. Ник
-      1. Surname
-   1. [Персональная информация](https://reference.aspose.com/email/java/com.aspose.email/mapicontactpersonalinfopropertyset/#MapiContactPersonalInfoPropertySet--) (MapiContactPersonalInfoPropertySet)
-      1. Account
-      1. Домашняя страница компании
+      1. Псевдоним
+      1. Фамилия
+   1. [Личная информация](https://reference.aspose.com/email/java/com.aspose.email/mapicontactpersonalinfopropertyset/#MapiContactPersonalInfoPropertySet--) (MapiContactPersonalInfoPropertySet)
+      1. Учетная запись
+      1. Веб-страница бизнеса
       1. Имя компьютерной сети
-      1. Идентификатор клиента
-      1. Бесплатное размещение бизнеса
-      1. FTP-сайт
-      1. Gender
-      1. Правительственный идентификационный номер
-      1. Hobbies
+      1. ID клиента
+      1. Свободное местоположение бизнеса
+      1. FTP сайт
+      1. Пол
+      1. Номер удостоверения личности
+      1. Хобби
       1. HTML
-      1. Адрес для обмена мгновенными сообщениями
-      1. Language
-      1. Location
-      1. Notes
-      1. Идентификационный номер организации
-      1. Персональная домашняя страница
-      1. Рекомендовано по имени
+      1. Адрес мгновенных сообщений
+      1. Язык
+      1. Местоположение
+      1. Заметки
+      1. Номер организационного удостоверения
+      1. Личная веб-страница
+      1. Рекомендованное имя
       1. Имя супруга
    1. [Физический адрес](https://reference.aspose.com/email/java/com.aspose.email/mapicontactphysicaladdresspropertyset/#MapiContactPhysicalAddressPropertySet--) (MapiContactPhysicalAddressPropertySet)
       1. [Домашний адрес](https://reference.aspose.com/email/java/com.aspose.email/mapicontactphysicaladdress/#MapiContactPhysicalAddress--) (MapiContactPhysicalAddress)
-         1. Address
-         1. City
-         1. Country
+         1. Адрес
+         1. Город
+         1. Страна
          1. Код страны
          1. Почтовый индекс
          1. Почтовый ящик
@@ -78,86 +78,85 @@ Aspose.Email для Java поддерживает создание контак�
       1. Другой адрес
       1. Рабочий адрес
    2. [Профессиональная информация](https://reference.aspose.com/email/java/com.aspose.email/mapicontactprofessionalpropertyset/#MapiContactProfessionalPropertySet--)
-      1. Assistant
+      1. Ассистент
       2. Название компании
-      3. Название отъезда
-      4. Имя руководителя
-      5. Местонахождение офиса
-      6. Profession
-      7. Title
-   3. [Telephones](https://reference.aspose.com/email/java/com.aspose.email/mapicontacttelephonepropertyset/#MapiContactTelephonePropertySet--) (MapiContactTelephonePropertySet)
-      1. Номер телефона помощника
-      2. Номер телефона Business2
-      3. Рабочий телефонный номер
+      3. Название отдела
+      4. Имя менеджера
+      5. Местоположение офиса
+      6. Профессия
+      7. Должность
+   3. [Телефоны](https://reference.aspose.com/email/java/com.aspose.email/mapicontacttelephonepropertyset/#MapiContactTelephonePropertySet--) (MapiContactTelephonePropertySet)
+      1. Номер телефона ассистента
+      2. Номер телефона для бизнеса2
+      3. Номер телефона для бизнеса
       4. Номер телефона для обратного вызова
       5. Номер телефона автомобиля
-      6. Основной телефонный номер компании
-      7. Номер телефона Home2
-      8. Домашний телефонный номер
+      6. Основной номер телефона компании
+      7. Номер телефона для дома2
+      8. Номер телефона для дома
       9. Номер ISDN
       10. Номер мобильного телефона
-      11. Другой телефонный номер
-      12. Номер телефона пейджера
-      13. Основной телефонный номер
+      11. Другой номер телефона
+      12. Номер пейджера
+      13. Основной номер телефона
       14. Номер радиотелефона
       15. Номер телекса
       16. Номер телефона TTY/TDD
 
-Следующий код использует Aspose.Email для создания контакта Outlook и заполняет его именем, профессиональными свойствами, физическим адресом и адресом электронной почты. Он также показывает добавление [MapiContactEventPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--) к контакту.
+Следующий код использует Aspose.Email для создания контакта Outlook и заполняет его именем, профессиональными свойствами, физическим адресом и электронной почтой. Также показано как добавить [MapiContactEventPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--) к контакту.
 
 |![todo:image_alt_text](https://i.imgur.com/D4jXgXo.png)|
-|: - |
-|**Рис.: Контакт Microsoft Outlook, закодированный с помощью Aspose.Email**|
+| :- |
+|**Рисунок: Контакт Microsoft Outlook, закодированный с помощью Aspose.Email**|
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateOutlookContact-CreateOutlookContact.java" >}}
 
-### **Добавление информации о контактном событии в MapiContact**
+### **Добавление информации о событиях контакта в MapiContact**
 
-Microsoft Outlook позволяет пользователям добавлять в контакт информацию о событии. Мероприятие приурочено к дню рождения и годовщине свадьбы. Aspose.Email предоставляет [MapiContactEventPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/) класс для добавления этой информации в контакт. Это подробно описано в следующем примере.
+Microsoft Outlook позволяет пользователям добавлять информацию о событиях к контакту. Событие содержит день рождения и юбилей свадьбы. Aspose.Email предоставляет класс [MapiContactEventPropertySet](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/) для добавления этой информации к контакту. Это подробно описано в следующем примере.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateOutlookContact-AddingContactEventInformationToAMapiContact.java" >}}
 
 ## **Создание, сохранение и чтение контактов Outlook**
 
-Aspose.Email позволяет разработчикам создавать контакты Microsoft Outlook, а также сообщения электронной почты. [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) класс предоставляет все свойства контакта, необходимые для создания контакта Outlook. В этой статье показано, как создать, сохранить и прочитать контакт Outlook с помощью [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) class.
+Aspose.Email позволяет разработчикам создавать контакты Microsoft Outlook, а также электронные сообщения. Класс [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) предоставляет все свойства контакта, необходимые для создания контакта Outlook. В этой статье показано, как создать, сохранить и прочитать контакт Outlook с помощью класса [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/).
 
-### **Создание и сохранение контакта MapiContact**
+### **Создайте и сохраните MapiContact**
 
-Для создания и сохранения контакта на диске можно использовать следующие шаги:
+Следующие шаги можно использовать для создания и сохранения контакта на диске:
 
-1. Создайте новый объект из [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) class.
+1. Создайте новый объект класса [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/).
 1. Введите информацию, связанную с различными свойствами контакта.
-1. Добавьте данные фотографии к контакту, если таковые имеются.
-1. Сохраните контакт в формате MSG или vCard.
- 
+1. Добавьте фотоданные к контакту, если есть.
+1. Сохраните контакт в формате MSG или VCard.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateSaveAndReadOutlookContact-CreatingAndSavingAMapiContact.java" >}}
 
-### **Сохранить контакт в формате VCF версии 3**
+### **Сохранение контакта в формате VCF версии 3**
 
-Чтобы сохранить контакт в формате VCF версии 3, используйте [VCardVersion](https://reference.aspose.com/email/java/com.aspose.email/vcardversion/) перечислимый для установки [VCardSaveOptions.Version](https://reference.aspose.com/email/java/com.aspose.email/vcardsaveoptions/#getVersion--) имущество. Следующий пример кода демонстрирует использование [VCardVersion](https://reference.aspose.com/email/java/com.aspose.email/vcardversion/) перечислим для сохранения контактного формата VCF версии 3.
+Чтобы сохранить контакт в формате VCF версии 3, используйте перечисление [VCardVersion](https://reference.aspose.com/email/java/com.aspose.email/vcardversion/) для установки свойства [VCardSaveOptions.Version](https://reference.aspose.com/email/java/com.aspose.email/vcardsaveoptions/#getVersion--). Следующий пример кода демонстрирует использование перечисления [VCardVersion](https://reference.aspose.com/email/java/com.aspose.email/vcardversion/) для сохранения контакта в формате VCF версии 3.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateV30Contact-1.java" >}}
 
-### **Прочтите контакт MAPIcontact**
+### **Чтение MapiContact**
 
-The [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) класс можно использовать для загрузки как файлов Microsoft Outlook MSG, так и контактов формата vCard. В следующих примерах кода показано, как загрузить контакты Outlook, сохраненные в форматах MSG и VCF, в [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/).
+Класс [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) может использоваться для загрузки как файлов MSG Microsoft Outlook, так и контактов формата VCard. Следующие примеры кода показывают, как загрузить контакты Outlook, сохраненные в формате MSG и VCF, в [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/).
 
-#### **Загрузить контакт из MSG**
+#### **Загрузка контакта из MSG**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateSaveAndReadOutlookContact-LoadingAContactFromMSG.java" >}}
 
-#### **Загрузите контакт из vCard**
+#### **Загрузка контакта из VCard**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateSaveAndReadOutlookContact-LoadingAContactFromVCard.java" >}}
 
-#### **Загрузить контакт vCard с указанной кодировкой**
+#### **Загрузка VCard контакта с заданной кодировкой**
 
-Поддерживаемый метод: [Mapicontact.from vCard (строка, кодировка)](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/#fromVCard-java.lang.String-java.nio.charset.Charset-)
+Поддерживаемый метод: [MapiContact.fromVCard(String, Encoding)](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/#fromVCard-java.lang.String-java.nio.charset.Charset-)
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateSaveAndReadOutlookContact-LoadingVCardContactWithSpecifiedEncoding.java" >}}
 
-## **Отображение контактной информации в MHTML**
+## **Отображение информации о контакте в MHTML**
 
-Контакт Outlook можно преобразовать в MHTML с помощью API Aspose.Email. В этом примере показано, как vCard загружается в [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) а затем преобразован в MHTML с помощью [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) API.
+Контакт Outlook можно преобразовать в MHTML с помощью API Aspose.Email. Этот пример показывает, как VCard загружается в [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) и затем преобразуется в MHTML с помощью API [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-RenderingContactInformationToMhtml-RenderingContactInformationToMhtml.java" >}}

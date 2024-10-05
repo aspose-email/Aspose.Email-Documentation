@@ -1,26 +1,26 @@
 ---
-title: "Работа с журналом MAPIjournal в формате PST"
+title: "Работа с MapiJournal в PST"
 url: /ru/python-net/working-with-mapijournal-in-pst/
 weight: 70
 type: docs
 ---
 
 
-## **Добавление журнала MAPIjournal в PST**
-В статье «Создание нового файла PST и добавление подпапок» показано, как создать файл PST и добавить к нему подпапку. С помощью Aspose.Email вы можете добавить MapiJournal в подпапку Journal созданного или загруженного вами PST-файла. Ниже приведены шаги по добавлению MapiJournal в PST:
+## **Добавление MapiJournal в PST**
+Создание нового PST файла и добавление подпапок показало, как создать PST файл и добавить подпапку к нему. С помощью Aspose.Email вы можете добавить MapiJournal в подпапку Journal PST файла, который вы создали или загрузили. Ниже приведены шаги для добавления MapiJournal в PST:
 
 1. Создайте объект MapiJournal
-1. Задайте свойства MapiJournal с помощью конструктора и методов.
-1. Создайте PST с помощью метода PersonalStorage.create ().
-1. Создайте предварительно определенную папку (Journals) в корне файла PST, открыв корневую папку и вызвав метод add_mapi_message_item ().
+1. Установите свойства MapiJournal, используя конструктор и методы.
+1. Создайте PST, используя метод PersonalStorage.create().
+1. Создайте предопределенную папку (Journals) в корне PST файла, получив доступ к корневой папке и затем вызвав метод add_mapi_message_item().
 
-В следующем фрагменте кода показано, как создать MapiJournal, а затем добавить его в папку журнала вновь созданного файла PST.
+Следующий фрагмент кода показывает, как создать MapiJournal и затем добавить его в папку журналов вновь созданного PST файла.
 
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-CreateNewMapiJournalAndAddToPST-CreateNewMapiJournalAndAddToPST.py" >}}
 ## **Добавление вложений в MapiJournal**
-В следующем фрагменте кода показано, как добавлять вложения в MapiJournal.
+Следующий фрагмент кода показывает, как добавить вложения в MapiJournal.
 
 ```py
 import os

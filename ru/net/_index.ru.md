@@ -1,5 +1,5 @@
 ---
-title: "Электронная почта Aspose.NET"
+title: "Aspose.Email для .NET"
 url: /ru/net/
 weight: 10
 is_root: true
@@ -8,26 +8,26 @@ type: docs
 
 {{% alert color="primary" %}}
 
-![Aspose.Email для логотипа продукта.NET](home_1.png)
+![Aspose.Email для .NET Логотип Продукта](home_1.png)
 
 **Добро пожаловать в Aspose.Email для .NET**
 
-Электронная почта Aspose.NET — это набор гибких и простых в использовании библиотек классов .NET, объединенных для создания уникального и мощного компонента программирования электронной почты. Aspose.Email экономит ваше время и усилия, позволяя быстро и легко кодировать сложные файлы сообщений в ваших приложениях.
+Aspose.Email для .NET — это набор гибких и простых в использовании библиотек классов .NET, объединенных для создания уникального и мощного компонента программирования электронной почты. Aspose.Email экономит ваше время и усилия, позволяя вам быстро и легко реализовывать обработку сложных файлов сообщений в ваших приложениях.
 
-Aspose.Email реализует ряд сетевых протоколов, например SMTP, MIME, POP3, IMAP; форматы файлов сообщений, например EML, MSG, MHT; форматы хранения почты, такие как PST и MBOX; а также серверы Exchange, позволяющие разработчикам создавать широкий спектр приложений для обработки электронной почты. Aspose.Email помогает разработчикам программировать, не теряясь при этом в сложностях детализации формата сообщений.
+Aspose.Email реализует ряд сетевых протоколов, например SMTP, MIME, POP3, IMAP; форматы файлов сообщений, например EML, MSG, MHT; форматы хранения почты, такие как PST и MBOX; и серверы Exchange, чтобы позволить разработчикам создавать широкий спектр приложений для обработки электронной почты. Aspose.Email помогает разработчикам программировать, не теряясь в сложностях деталей формата сообщений.
 
 {{% /alert %}}
 
-## **Aspose.Email для ресурсов.NET**
+## **Ресурсы Aspose.Email для .NET**
 
-Ниже приведены ссылки на некоторые полезные ресурсы, которые могут понадобиться для выполнения ваших задач.
+Следующие ссылки помогут вам найти полезные ресурсы, которые могут понадобиться для выполнения ваших задач.
 
-- [Онлайн-документация Aspose.Email для платформы.NET](/email/net/)
-- [Aspose.Email для функциональных возможностей.NET](/email/net/features-overview/)
-- [Примечания к выпуску Aspose.Email для получения информации о выпуске](https://releases.aspose.com/email/net/release-notes/)
-- [Страница продукта Aspose.Email для платформы.NET](https://products.aspose.com/email/ru/net)
-- [Aspose.Email для новых релизов.NET](https://releases.aspose.com/email/net/)
-- [Установите пакет Aspose.Email для файла.NET NuGet](https://www.nuget.org/packages/Aspose.Email/)
-- [Справочное руководство по Aspose.Email для API-интерфейса.NET](https://apireference.aspose.com/email/net)
-- [Форум бесплатной поддержки Aspose.Email для платформы.NET](https://forum.aspose.com/c/email/12)
-- [Aspose.Email для службы поддержки платной поддержки.NET](https://helpdesk.aspose.com/)
+- [Онлайн документация Aspose.Email для .NET](/email/net/)
+- [Возможности Aspose.Email для .NET](/email/net/features-overview/)
+- [Примечания к релизам Aspose.Email для .NET](https://releases.aspose.com/email/net/release-notes/)
+- [Страница продукта Aspose.Email для .NET](https://products.aspose.com/email/ru/net)
+- [Новые релизы Aspose.Email для .NET](https://releases.aspose.com/email/net/)
+- [Установить пакет NuGet Aspose.Email для .NET](https://www.nuget.org/packages/Aspose.Email/)
+- [Руководство по API Aspose.Email для .NET](https://apireference.aspose.com/email/net)
+- [Форум бесплатной поддержки Aspose.Email для .NET](https://forum.aspose.com/c/email/12)
+- [Платный служебный Helpdesk Aspose.Email для .NET](https://helpdesk.aspose.com/)

@@ -6,9 +6,9 @@ type: docs
 ---
 
 ## **Aspose.Email - Сохранить сообщение как черновик**
-Чтобы сохранить сообщение как черновик, используя **Aspose.Электронная почта Java для Ruby**, просто вызовите **SaveMessageAsDraft** модуль. Здесь вы можете увидеть пример кода.
+Чтобы сохранить сообщение как черновик с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **SaveMessageAsDraft**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ``` ruby
 
@@ -16,52 +16,52 @@ type: docs
 
 
 
-\# Create a new instance of MailMessage class
+\# Создайте новый экземпляр класса MailMessage
 
 message = Rjb::import('com.aspose.email.MailMessage').new
 
-\# Set subject of the message
+\# Установите тему сообщения
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Новое сообщение, созданное Aspose.Email для Java")
 
 mail_address = Rjb::import('com.aspose.email.MailAddress')
 
-\# Set Html body
+\# Установите HTML-содержимое
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Эта строка выделена жирным шрифтом.</b> <br/> <br/>" +
 
-        "<font color=blue>This line is in blue color</font>")
+        "<font color=blue>Эта строка синего цвета</font>")
 
-\# Set sender information
+\# Установите информацию об отправителе
 
-message.setFrom(mail_address.new("from@domain.com", "Sender Name", false))
+message.setFrom(mail_address.new("from@domain.com", "Имя отправителя", false))
 
-\# Add TO recipients
+\# Добавьте получателей в поле TO
 
-message.getTo().add(mail_address.new("to1@domain.com", "Recipient 1", false))
+message.getTo().add(mail_address.new("to1@domain.com", "Получатель 1", false))
 
-message.getTo().add(mail_address.new("to2@domain.com", "Recipient 2", false))
+message.getTo().add(mail_address.new("to2@domain.com", "Получатель 2", false))
 
-\# Create an instance of MapiMessage and load the MailMessag instance into it
+\# Создайте экземпляр MapiMessage и загрузите в него экземпляр MailMessage
 
 mapi_msg = Rjb::import('com.aspose.email.MapiMessage').fromMailMessage(message)
 
-\# Set the MapiMessageFlags as UNSENT and FROMME
+\# Установите флаги MapiMessage как UNSENT и FROMME
 
 mapi_message_flags = Rjb::import('com.aspose.email.MapiMessageFlags')
 
 mapi_msg.setMessageFlags(mapi_message_flags.MSGFLAG_UNSENT || mapi_message_flags.MSGFLAG_FROMME)
 
-\# Save the MapiMessage to disk
+\# Сохраните MapiMessage на диск
 
 mapi_msg.save(data_dir + "New-Draft.msg")
 
-\# Display Status
+\# Отобразите статус
 
-puts "Draft saved Successfully."
+puts "Черновик успешно сохранён."
 
 ```
-## **Загрузить рабочий код**
-Download **Сохранить сообщение как черновик (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Сохранить сообщение как черновик (Aspose.Email)** с любого из нижеперечисленных сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/savemessageasdraft.rb)

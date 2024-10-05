@@ -6,42 +6,42 @@ type: docs
 ---
 
 
-Aspose.Email поддерживает работу с контактами Gmail. Использование [IGmailClient](https://reference.aspose.com/email/net/aspose.email.clients.google/igmailclient/) интерфейс, пользователи могут извлекать контакты из учетной записи Gmail, создавать новые контакты, обновлять и удалять существующие контакты. Gmail позволяет разработчикам выполнять все это с помощью общедоступного API для разработчиков. Для работы с контактами Gmail необходима следующая пользовательская информация:
-Имя пользователя, адрес электронной почты, пароль, идентификатор клиента, токен обновления секретного ключа клиента.
+Aspose.Email поддерживает работу с контактами Gmail. Используя интерфейс [IGmailClient](https://reference.aspose.com/email/net/aspose.email.clients.google/igmailclient/), пользователи могут извлекать контакты из учетной записи Gmail, создавать новые контакты, а также обновлять и удалять существующие контакты. Gmail позволяет разработчикам выполнять все это с помощью своего публичного API для разработчиков. Для работы с контактами Gmail необходима следующая информация о пользователе: 
+Имя пользователя, адрес электронной почты, пароль, ID клиента, секрет клиента, токен обновления.
 В этой статье показано, как:
 
-- [Доступ к контактам Gmail](/email/net/working-with-gmail-contacts/).
-- [Создайте новые контакты Gmail](/email/net/working-with-gmail-contacts/).
+- [Получить доступ к контактам Gmail](/email/net/working-with-gmail-contacts/).
+- [Создать новые контакты Gmail](/email/net/working-with-gmail-contacts/).
 - [Обновить существующие контакты](/email/net/working-with-gmail-contacts/).
 - [Удалить контакт](/email/net/working-with-gmail-contacts/).
 - [Сохранить контакт](/email/net/working-with-gmail-contacts/).
- 
+  
 ## **Доступ к контактам Gmail**
 
-Ниже приведен пример приложения, которое можно использовать для доступа к подробной информации о контактах во всех группах.
+Следующее является примером приложения, которое может быть использовано для доступа к деталям контактов во всех группах.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-AccessGmailContacts-AccessGmailContacts.cs" >}}
 
 ## **Создание контакта**
 
-В следующем фрагменте кода показано, как создать контакт.
+Следующий фрагмент кода показывает, как создать контакт.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-CreateGmailContact-CreateGmailContact.cs" >}}
 
 ## **Обновление контакта**
 
-После получения контакта его атрибуты можно обновить и сохранить контакт обратно в учетную запись Gmail. В следующем фрагменте кода показано, как извлечь контакты из учетной записи Gmail, а затем изменить один из них, который затем будет сохранен обратно.
+После того, как контакт будет извлечен, его атрибуты могут быть обновлены, и контакт может быть сохранен обратно в учетную запись Gmail. Следующий фрагмент кода показывает, как извлекать контакты из учетной записи Gmail и затем модифицировать один из них, после чего он сохраняется обратно.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-UpdateGmailContact-UpdateGmailContact.cs" >}}
 
 ## **Удаление контакта**
 
-Чтобы удалить контакт Gmail, клиент Gmail [DeleteContact](https://reference.aspose.com/email/net/aspose.email.clients.google/igmailclient/deletecontact/#igmailclientdeletecontact-method) метод используется, как показано в следующем примере фрагмента.
+Для удаления контакта Gmail используется метод клиента Gmail [DeleteContact](https://reference.aspose.com/email/net/aspose.email.clients.google/igmailclient/deletecontact/#igmailclientdeletecontact-method), как показано в следующем образце кода.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-DeleteGmailContact-DeleteGmailContact.cs" >}}
 
 ## **Сохранение контакта**
 
-Aspose.Email позволяет сохранять контакты в различных выходных форматах, таких как MSG и VCF. [Save](https://reference.aspose.com/email/net/aspose.email.personalinfo/contact/save/) метод обеспечивает возможность достижения этой цели. В следующем фрагменте кода показано, как сохранить контакт.
+Aspose.Email позволяет сохранять контакты в различные форматы вывода, такие как MSG и VCF. Метод [Save](https://reference.aspose.com/email/net/aspose.email.personalinfo/contact/save/) предоставляет возможность достичь этого. Следующий фрагмент кода показывает, как сохранить контакт.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-SavingContact-SavingContact.cs" >}}

@@ -1,56 +1,56 @@
 ---
-title: "Загрузка и сохранение сообщения"
+title: "Загрузка и Сохранение Сообщений"
 url: /ru/net/loading-and-saving-message/
 weight: 40
 type: docs
 ---
 
-# Загрузка и сохранение сообщений
+# Загрузка и Сохранение Сообщений
 
-## **Определение форматов файлов**
+## **Определение Форматов Файлов**
 
-Aspose.Email API предоставляет возможность определять формат предоставленного файла сообщения. [DetectFileFormat](https://reference.aspose.com/email/net/aspose.email/fileformattype/) метод [FileFormatUtil](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/) класс можно использовать для достижения этой цели. Для определения формата загруженного файла можно использовать следующие классы и методы.
+API Aspose.Email предоставляет возможность определять формат файла данного сообщения. Метод [DetectFileFormat](https://reference.aspose.com/email/net/aspose.email/fileformattype/) класса [FileFormatUtil](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/) можно использовать для этой цели. Для определения загруженного формата файла можно использовать следующие классы и методы.
 
-- [FileFormatType](https://reference.aspose.com/email/net/aspose.email/fileformattype/) Class
-- [FileFormatInfo](https://reference.aspose.com/email/net/aspose.email/fileformatinfo/) Class
-- [FileFormatUtil](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/) Class
-- [FileFormatUtil.DetectFileFormat(Stream)](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/detectfileformat/#detectfileformat) Method
-- [FileFormatUtil.DetectFileFormat(String)](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/detectfileformat/#detectfileformat_1) Method
+- [FileFormatType](https://reference.aspose.com/email/net/aspose.email/fileformattype/) Класс
+- [FileFormatInfo](https://reference.aspose.com/email/net/aspose.email/fileformatinfo/) Класс
+- [FileFormatUtil](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/) Класс
+- [FileFormatUtil.DetectFileFormat(Stream)](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/detectfileformat/#detectfileformat) Метод
+- [FileFormatUtil.DetectFileFormat(String)](https://reference.aspose.com/email/net/aspose.email.tools/fileformatutil/detectfileformat/#detectfileformat_1) Метод
 
-В следующем фрагменте кода показано, как определять форматы файлов.
+Следующий фрагмент кода показывает, как определить форматы файлов.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-DetectDifferentFileFormats-DetectDifferentFileFormats.cs" >}}
 
-## **Загрузка сообщения с опциями загрузки**
+## **Загрузка Сообщения с Опциями Загрузки**
 
-В следующем фрагменте кода показано, как загрузить сообщение с опциями загрузки.
+Следующий фрагмент кода показывает, как загрузить сообщение с опциями загрузки.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-LoadMessageWithLoadOptions-LoadMessageWithLoadOptions.cs" >}}
 
-### **Сохранение формата встроенного сообщения во время загрузки**
+### **Сохранение Встраиваемого Формата Сообщения во Время Загрузки**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-PreserveEmbeddedMSGFormatDuringLoad-PreserveEmbeddedMSGFormatDuringLoad.cs" >}}
 
-### **Загрузка сообщения Сохранение или удаление подписи**
+### **Загрузка Сообщения с Сохранением или Удалением Подписи**
 
-Сохранение подписи поддерживается по умолчанию при загрузке файлов EML. Чтобы удалить подпись, вы можете установить [LoadOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email/loadoptions/removesignature/#loadoptionsremovesignature-property) недвижимость для *true*.
+Поддерживается сохранение подписи по умолчанию при загрузке файлов EML. Чтобы удалить подпись, вы можете установить свойство [LoadOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email/loadoptions/removesignature/#loadoptionsremovesignature-property) в *true*.
 
-В приведенном ниже примере кода показано, как удалить подпись при загрузке сообщения:
+Ниже приведен пример кода, который показывает, как удалить подпись при загрузке сообщения:
 
 ```cs
 var msg = MapiMessage.Load(fileName, new EmlLoadOptions() { RemoveSignature = true});
 ```
-### **Проверка подписи защищенных электронных писем**
+### **Проверка Подписи Безопасных Электронных Писем**
 
-The [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) класс позволяет проверять подпись защищенных объектов MailMessage.
+Класс [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) позволяет проверять подпись объектов MailMessage с безопасной электронной почтой.
 
-The [SmimeResult](https://reference.aspose.com/email/net/aspose.email/smimeresult/#smimeresult-class) класс хранит результаты проверки.
+Класс [SmimeResult](https://reference.aspose.com/email/net/aspose.email/smimeresult/#smimeresult-class) хранит результаты проверки.
 
-Следующие методы [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) класс и фрагмент кода позволят вам обработать подпись:
+Следующие методы класса [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) и фрагмент кода позволят вам обработать подпись:
 
-- [Защищенный менеджер электронной почты. Проверьте подпись (сообщение с почтовым сообщением)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature) method.
-- [Secure Email Manager. Проверьте подпись (сообщение электронной почты, сертификат X509 Certificate 2 для расшифровки)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_1) method.
-- [Secure Email Manager. Проверьте подпись (сообщение электронной почты, сертификат X509 Certificate2 для расшифровки, хранилище X509 Store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_2) method.
+- [SecureEmailManager.CheckSignature(MailMessage msg)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature) метод.
+- [SecureEmailManager.CheckSignature(MailMessage msg, X509Certificate2 certificateForDecrypt)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_1) метод.
+- [SecureEmailManager.CheckSignature(MailMessage msg, X509Certificate2 certificateForDecrypt, X509Store store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_2) метод.
 
 ```cs
 var eml = MailMessage.Load(fileName);
@@ -68,118 +68,118 @@ var result = new SecureEmailManager().CheckSignature(eml, cert, store);
 ```
 
 
-## **Сохранение и преобразование сообщений**
+## **Сохранение и Конвертирование Сообщений**
 
-Aspose.Email позволяет легко конвертировать сообщения любого типа в другой формат. Чтобы продемонстрировать эту функцию, приведенный в этой статье код загружает три типа сообщений с диска и сохраняет их в других форматах. Базовый класс [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/) и классы [EmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/emlsaveoptions/), [MsgSaveOptions](https://reference.aspose.com/email/net/aspose.email/msgsaveoptions/), [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/), [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/) для дополнительных настроек при сохранении [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) может использоваться для сохранения сообщений в других форматах. В статье показано, как использовать эти классы для сохранения образца электронного письма в виде:
+Aspose.Email облегчает конвертацию любого типа сообщения в другой формат. Для демонстрации этой функции код в этой статье загружает три типа сообщений с диска и сохраняет их обратно в других форматах. Базовый класс [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/) и классы [EmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/emlsaveoptions/), [MsgSaveOptions](https://reference.aspose.com/email/net/aspose.email/msgsaveoptions/), [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/), [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/) для дополнительных настроек при сохранении [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) могут быть использованы для сохранения сообщений в другие форматы. В статье показано, как использовать эти классы для сохранения примера email в:
 
 - Формат EML.
-- MSG для Outlook.
+- Outlook MSG.
 - Формат MHTML.
 - Формат HTML.
- 
-### **Загрузка и сохранение сообщения EML**
+  
+### **Загрузка и Сохранение сообщения EML**
 
-В следующем фрагменте кода показано, как загрузить сообщение EML и сохранить его на диск в том же формате.
+Следующий фрагмент кода показывает, как загрузить сообщение EML и сохранить его на диск в том же формате.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-LoadAndSaveFileAsEML-LoadAndSaveFileAsEML.cs" >}}
 
-### **Загрузите и сохраните сообщение EML с сохранением исходных границ**
+### **Загрузка и Сохранение сообщения EML с Сохранением Оригинальных Границ**
 
-В следующем фрагменте кода показано, как загрузить EML и сохранить его как EML с сохранением исходных границ.
+Следующий фрагмент кода показывает, как загрузить EML и сохранить как EML, сохраняя оригинальные границы.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-PreserveOriginalBoundaries-PreservOriginalBoundaries.cs" >}}
 
-### **Сохранение в формате EML Сохранение вложений TNEF**
+### **Сохранение как EML с Сохранением TNEF Вложений**
 
-В следующем фрагменте кода показано, как сохранить вложения в формате EML с сохранением вложений TNEF.
+Следующий фрагмент кода показывает, как сохранить как EML с сохранением TNEF вложений.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-PreserveTNEFAttachment-PreserveTNEFAttachment.cs" >}}
 
-### **Сохранить EML как MSG**
+### **Сохранение EML как MSG**
 
-В следующем фрагменте кода показано, как загрузить сообщение EML и преобразовать его в MSG, используя соответствующую опцию из [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/).
+Следующий фрагмент кода показывает, как загрузить сообщение EML и конвертировать его в MSG, используя соответствующую опцию из [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-LoadingEMLAndSavingToMSG-LoadingEMLAndSavingToMSG.cs" >}}
 
-### **Сохранение в формате MSG с сохраненными датами**
+### **Сохранение как MSG с Сохранением Дат**
 
-The [MsgSaveOptions](https://reference.aspose.com/email/net/aspose.email/msgsaveoptions/) класс позволяет сохранить исходное сообщение в виде файла сообщений Outlook (MSG) с сохранением дат. В следующем фрагменте кода показано, как сохранить файл в формате MSG с сохраненными датами.
+Класс [MsgSaveOptions](https://reference.aspose.com/email/net/aspose.email/msgsaveoptions/) позволяет сохранять исходное сообщение как файл Outlook Message (MSG) с сохранением дат. Следующий фрагмент кода показывает, как сохранить как MSG с сохранением дат.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-SavingMSGWithPreservedDates-SavingMSGWithPreservedDates.cs" >}}
 
-### **Сохранение почтового сообщения в формате MHTML**
+### **Сохранение MailMessage как MHTML**
 
-Для получения желаемых результатов можно использовать различные варианты MHTML. В следующем фрагменте кода показано, как загрузить сообщение EML в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и преобразуйте его в MHTML с датой сообщения в системе UTC.
+Разные опции MHTML могут быть использованы для получения желаемых результатов. Следующий фрагмент кода показывает, как загрузить сообщение EML в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) и конвертировать его в MHTML с датой сообщения в системе UTC.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полного примера и файлов данных, пожалуйста, зайдите на https://github.com/aspose-email/Aspose.Email-for-.NET
 
-// Set options for MHTML output
+// Установка опций для вывода MHTML
 MhtSaveOptions saveOptions = SaveOptions.DefaultMhtml;
-saveOptions.PreserveOriginalDate = false; // save a message date as UTC date
+saveOptions.PreserveOriginalDate = false; // сохранить дату сообщения как дату UTC
 
-// Initialize and load an existing EML file
+// Инициализация и загрузка существующего файла EML
 using (MailMessage mailMessage = MailMessage.Load(folderPath + "Message.eml"))
 {
     mailMessage.Save(folderPath + "Message_out.mhtml", saveOptions);
 }
 ```
 
-#### **Преобразование в MHTML с дополнительными настройками**
+#### **Конвертация в MHTML с Дополнительными Настройками**
 
-The [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/) класс предоставляет дополнительные возможности для сохранения сообщений электронной почты в формате MHTML. Счетчик [MhtFormatOptions](https://reference.aspose.com/email/net/aspose.email/mhtformatoptions/) позволяет записывать дополнительную информацию по электронной почте в выходной файл MHTML. Можно записать следующие дополнительные поля:
+Класс [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/) предоставляет дополнительные опции для сохранения электронных сообщений в формате MHTML. Перечислитель [MhtFormatOptions](https://reference.aspose.com/email/net/aspose.email/mhtformatoptions/) позволяет записывать дополнительную информацию об электронной почте в выходной MHTML. Следующие дополнительные поля могут быть записаны:
 
-- WriteHeader — запишите заголовок письма в выходной файл.
-- WriteOutlineAttachments — запись контурных вложений в выходной файл.
-- WriteCompleteEmailAddress — запишите полный адрес электронной почты в выходной файл.
-- NoEncodeCharacters — не следует использовать передаточную кодировку символов.
-- HideExtraPrintHeader — скрыть дополнительный заголовок печати в верхней части выходного файла.
-- WriteCompleteToEmailAddress — запишите полный адрес электронной почты получателя в выходной файл.
-- WriteCompleteFromEmailAddress — запишите полный адрес электронной почты отправителя в выходной файл.
-- WriteCompleteCceMailAddress — запишите в выходной файл полные адреса электронной почты всех получателей, скопированных на бумаге.
-- WriteCompleteBCCEmailAddress — запишите в выходной файл полный адрес электронной почты всех получателей, скопированных вслепую.
-- renderCalendarEvent — запись текста из календарного события в выходной файл.
-- SkipByteOrderMarkInBody — запись байтов метки порядка байтов (BOM) в выходной файл.
-- RenderVCardInfo — запись текста из vCard AlternativeView в выходной файл.
-- DisplayAsOutlook — отображение заголовка «Из».
-- RenderTaskFields — записывает определенные поля Задачи в выходной файл.
-- Нет — настройка не указана.
+- WriteHeader – записывать заголовок электронной почты в выходной файл.
+- WriteOutlineAttachments – записывать вложения в выходной файл.
+- WriteCompleteEmailAddress – записывать полный адрес электронной почты в выходной файл.
+- NoEncodeCharacters – никакая кодировка символов не должна использоваться.
+- HideExtraPrintHeader – скрыть дополнительный заголовок печати в верхней части выходного файла.
+- WriteCompleteToEmailAddress – записывать полный адрес электронной почты получателя в выходной файл.
+- WriteCompleteFromEmailAddress – записывать полный адрес электронной почты отправителя в выходной файл.
+- WriteCompleteCcEmailAddress – записывать полные адреса электронной почты любых получателей с копией в выходной файл.
+- WriteCompleteBccEmailAddress – записывать полный адрес электронной почты любых получателей с сокрытой копией в выходной файл.
+- RenderCalendarEvent – записывать текст из события календаря в выходной файл.
+- SkipByteOrderMarkInBody – записывать байты отметки порядка байтов (BOM) в выходной файл.
+- RenderVCardInfo – записывать текст из альтернативного представления VCard в выходной файл.
+- DisplayAsOutlook – отображать заголовок From.
+- RenderTaskFields – записывает конкретные поля задачи в выходной файл.
+- None – Нет заданных настроек.
 
-В следующем фрагменте кода показано, как конвертировать файлы EML в MHTML с дополнительными настройками.
+Следующий фрагмент кода показывает, как конвертировать файлы EML в MHTML с дополнительными настройками.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-ConvertMHTMLWithOptionalSettings-ConvertMHTMLWithOptionalSettings.cs" >}}
 
-#### **Отображение событий календаря при конвертации в MHTML**
+#### **Отображение Календарных Событий при Конвертации в MHTML**
 
-The [MhtFormatOptions.RenderCalendarEvent](https://reference.aspose.com/email/net/aspose.email/mhtformatoptions/) отображает события календаря в выходной файл MTHML. В следующем фрагменте кода показано, как отображать события календаря при преобразовании в формат MHTML.
+Опция [MhtFormatOptions.RenderCalendarEvent](https://reference.aspose.com/email/net/aspose.email/mhtformatoptions/) отображает события календаря в выходном MTHML. Следующий фрагмент кода показывает, как отобразить календарные события при конвертации в MHTML.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-RenderingCalendarEvents-RenderingCalendarEvents.cs" >}}
 
-#### **Экспорт электронной почты в MHT без встроенных изображений**
+#### **Экспорт Электронной Почты в MHT без Встраиваемых Изображений**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-ConvertMHTMLWithOptionalSettings-ConvertToMHTMLWithoutInlineImages.cs" >}}
 
-#### **Экспорт электронной почты в MHT с настраиваемым часовым поясом**
+#### **Экспорт Электронной Почты в MHT с Настроенной Часовой Зоной**
 
-[MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс предоставляет [TimeZoneOffset](https://reference.aspose.com/email/net/aspose.email/mailmessage/timezoneoffset/) свойство для установки настраиваемого часового пояса при экспорте в MHT. В следующем фрагменте кода показано, как экспортировать электронную почту в MHT с помощью настраиваемого TimeZone.
+Класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) предоставляет свойство [TimeZoneOffset](https://reference.aspose.com/email/net/aspose.email/mailmessage/timezoneoffset/) для установки настраиваемого времени при экспорте в MHT. Следующий фрагмент кода показывает, как экспортировать электронное письмо в MHT с настраиваемой часовой зоной.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-ExportEmailToMHTWithCustomTimezone-ExportEmailToMHTWithCustomTimezone.cs" >}}
 
-#### **Изменение шрифта при преобразовании в MHT**
+#### **Изменение Шрифта при Конвертации в MHT**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-ChangeFontWhileConvertingToMHT-ChangeFontWhileConvertingToMHT.cs" >}}
 
-#### **Сохранение тела RTF при преобразовании MSG в EML**
+#### **Сохранение RTF тела при конвертации MSG в EML** 
 
-Преобразование файла MSG в тело RTF с сохранением EML может быть выполнено двумя способами:
+Конвертация MSG файла в EML с сохранением RTF тела может быть выполнена двумя способами:
 
-- using [MsgLoadOptions.PreserveRtfContent](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/preservertfcontent/) собственность [MsgLoadOptions](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/) class;
+- используя свойство [MsgLoadOptions.PreserveRtfContent](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/preservertfcontent/) класса [MsgLoadOptions](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/);
 
-- using [MailConversionOptions.PreserveRtfContent](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/preservertfcontent/) собственность [MailConversionOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/) class;
+- используя свойство [MailConversionOptions.PreserveRtfContent](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/preservertfcontent/) класса [MailConversionOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/);
 
-Оба свойства получают или задают значение, указывающее, следует ли сохранить тело rtf в MailMessage.
+Оба свойства получают или устанавливают значение, указывающее, сохранять ли rtf тело в MailMessage.
 
-Следующие фрагменты кода показывают, как преобразовать файл MSG в EML и сохранить тело RTF:
+Следующие фрагменты кода показывают, как конвертировать MSG файл в EML и сохранить RTF тело:
 
 ```cs
 var loadOptions = new MsgLoadOptions
@@ -201,25 +201,25 @@ var msg = MapiMessage.Load("my.msg");
 var eml = msg.ToMailMessage(conversionOptions);
 ```
 
-### **Экспорт электронной почты в EML**
+### **Экспорт Электронной Почты в EML**
 
-В следующем фрагменте кода показано, как экспортировать электронные письма в EML.
+Следующий фрагмент кода показывает, как экспортировать электронные письма в EML.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-ExportEmailToEML-ExportEmailToEML.cs" >}}
 
-### **Сохранение сообщения в формате HTML**
+### **Сохранение Сообщения как HTML**
 
-The [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/) класс позволяет экспортировать тело сообщения в HTML. В следующем фрагменте кода показано, как сохранить сообщение в формате HTML.
+Класс [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/) позволяет экспортировать текст сообщения в HTML. Следующий фрагмент кода показывает, как сохранить сообщение как HTML.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-SaveMessageAsHTML-SaveMessageAsHTML.cs" >}}
 
 
-#### **Сохранение в формате HTML без встраивания ресурсов**
+#### **Сохранение как HTML без Встраивания Ресурсов**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-SaveMessageAsHTML-SaveAsHtmlWithoutEmbeddingResources.cs" >}}
 
-### **Сохранение сообщения в виде файла шаблона Outlook (.oft)**
+### **Сохранение Сообщения как Шаблон Outlook (.oft)**
 
-В следующем фрагменте кода показано, как сохранить сообщение в виде файла шаблона Outlook (.oft).
+Следующий фрагмент кода показывает, как сохранить сообщение как шаблон Outlook (.oft).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Email-SaveMessageAsOFT-SaveMessageAsOFT.cs" >}}

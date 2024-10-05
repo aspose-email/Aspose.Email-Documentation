@@ -1,14 +1,14 @@
 ---
-title: "Installation"
+title: "Установка"
 url: /ru/java/installation/
 weight: 50
 type: docs
 ---
 
 ## **Установка Aspose.Email для Java из репозитория Maven**
-Aspose размещает все API Java на [Представьте себе артефактуру](https://releases.aspose.com/). Вы можете легко использовать [Aspose.Электронная почта для Java](https://releases.aspose.com/java/repo/com/aspose/aspose-email/) API прямо в ваших проектах Maven с простыми конфигурациями.
+Aspose размещает все Java API в [Aspose Artifactory](https://releases.aspose.com/). Вы можете легко использовать [Aspose.Email для Java](https://releases.aspose.com/java/repo/com/aspose/aspose-email/) API непосредственно в ваших проектах Maven с простыми конфигурациями.
 ### **Укажите конфигурацию репозитория Maven**
-Во-первых, вам нужно указать конфигурацию/местоположение репозитория Aspose Maven в вашем Maven pom.xml следующим образом:
+Сначала вам нужно указать конфигурацию/расположение репозитория Aspose Maven в вашем файле pom.xml следующим образом:
 
 ``` java
 
@@ -27,8 +27,8 @@ Aspose размещает все API Java на [Представьте себе
 </repositories>
 
 ```
-### **Определение зависимости Aspose.Email от API Java**
-Затем определите зависимость Aspose.Email для Java API в файле pom.xml следующим образом:
+### **Определите зависимость Aspose.Email для Java API**
+Затем определите зависимость Aspose.Email для Java API в вашем pom.xml следующим образом:
 
 ``` java
 
@@ -50,4 +50,4 @@ Aspose размещает все API Java на [Представьте себе
 
 ```
 
-После выполнения вышеуказанных шагов зависимость Aspose.Email для Java наконец будет определена в вашем проекте Maven.
+После выполнения вышеуказанных шагов зависимость Aspose.Email для Java будет окончательно определена в вашем проекте Maven.

@@ -6,16 +6,16 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Компонент синхронизации электронной почты Aspose.email позволяет синхронизировать электронную почту с серверами POP3, IMAP или Exchange.
+Компонент синхронизации электронной почты ASpose.EMail позволяет синхронизировать электронные письма с серверами POP3, IMAP или Exchange. 
 
-{{% /alert %}}
+{{% /alert %}} 
 
-After [installing](/email/sharepoint/installing-aspose-email-for-sharepoint/) and [activating](/email/sharepoint/activation-and-de-activation-after-installation/) компонент синхронизации электронной почты, **Инструменты Aspose** лента доступна в настраиваемом списке писем SharePoint.
+После [установки](/email/sharepoint/installing-aspose-email-for-sharepoint/) и [активации](/email/sharepoint/activation-and-de-activation-after-installation/) компонента синхронизации электронной почты в SharePoint доступна лента **Aspose Tools** в пользовательском списке электронных писем. 
 
-**Лента Инструменты Aspose с опциями синхронизации электронной почты.**
+**Лента Aspose Tools, показывающая параметры синхронизации электронной почты.** 
 
 ![todo:image_alt_text](about-email-synchronization_1.png)
 
-Узнайте, как [синхронизация электронной почты с POP3](/email/sharepoint/synchronize-emails-using-pop3/).
+Узнайте, как [синхронизировать электронные письма с помощью POP3](/email/sharepoint/synchronize-emails-using-pop3/).

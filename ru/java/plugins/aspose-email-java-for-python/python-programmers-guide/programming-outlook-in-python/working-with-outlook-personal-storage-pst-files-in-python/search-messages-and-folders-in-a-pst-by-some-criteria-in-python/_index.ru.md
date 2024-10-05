@@ -5,16 +5,16 @@ weight: 60
 type: docs
 ---
 
-## **Aspose.Email - поиск сообщений и папок в PST по некоторым критериям**
-Для поиска сообщений и папок в PST по некоторым критериям с помощью **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Поиск сообщений и папок в PST по некоторым критериям**
+Чтобы искать сообщения и папки в PST по некоторым критериям с использованием **Aspose.Email Java для Python**, используйте следующий код.
 
-**Код Python**
+**Код на Python**
 
 ```python
 
 
 
-\# Load the Outlook PST file
+\# Загрузите файл PST Outlook
 
 personalStorage = self.PersonalStorage
 
@@ -24,7 +24,7 @@ folder = pst.getRootFolder().getSubFolder("myInbox")
 
 builder = self.PersonalStorageQueryBuilder()
 
-    # High importance messages
+    # Сообщения высокой важности
 
 mapiImportance = self.MapiImportance
 
@@ -32,7 +32,7 @@ builder.getImportance().equals(mapiImportance.High)
 
 messages = folder.getContents(builder.getQuery())
 
-print "Messages with High Imp:"
+print "Сообщения с высокой важностью:" 
 
 print messages.size()
 
@@ -42,11 +42,11 @@ builder.getMessageClass().equals("IPM.Note")
 
 messages = folder.getContents(builder.getQuery())
 
-print "Messages with IPM.Note:"
+print "Сообщения с IPM.Note:" 
 
 print messages.size()
 
-\# Messages with attachments AND high importance
+\# Сообщения с вложениями И высокой важностью
 
 builder.getImportance().equals(mapiImportance.High)
 
@@ -56,31 +56,31 @@ builder.hasFlags(mapiMessageFlags.MSGFLAG_HASATTACH)
 
 messages = folder.getContents(builder.getQuery())
 
-print "Messages with atts: "
+print "Сообщения с вложениями: " 
 
 print messages.size()
 
-\# Messages with size > 15 KB
+\# Сообщения размером > 15 КБ
 
 builder.getMessageSize().greater(15000)
 
 messages = folder.getContents(builder.getQuery())
 
-print "messags size > 15Kb:"
+print "сообщения размером > 15 Кб:" 
 
 print messages.size()
 
-\# Unread messages
+\# Непрочитанные сообщения
 
 builder.hasNoFlags(mapiMessageFlags.MSGFLAG_READ)
 
 messages = folder.getContents(builder.getQuery())
 
-print "Unread:"
+print "Непрочитанные:" 
 
 print messages.size()
 
-\# Unread messages with attachments
+\# Непрочитанные сообщения с вложениями
 
 builder.hasNoFlags(mapiMessageFlags.MSGFLAG_READ)
 
@@ -88,13 +88,13 @@ builder.hasFlags(mapiMessageFlags.MSGFLAG_HASATTACH)
 
 messages = folder.getContents(builder.getQuery())
 
-print "Unread msgs with atts: "
+print "Непрочитанные сообщения с вложениями: " 
 
 print messages.size()
 
 ```
-## **Загрузить рабочий код**
-Download **Поиск сообщений и папок в PST по некоторым критериям (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Поиск сообщений и папок в PST по некоторым критериям (Aspose.Email)** с любого из нижеуказанных сайтов социальных кодов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavapython)

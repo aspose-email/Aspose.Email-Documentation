@@ -1,14 +1,14 @@
 ---
-title: "Разбор файлов сообщений Outlook в PHP"
+title: "Парсинг файлов сообщений Outlook на PHP"
 url: /ru/java/parsing-outlook-message-files-in-php/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - парсинг файлов сообщений Outlook**
-Для анализа файла сообщений Outlook с помощью **Aspose.Электронная почта Java для PHP**, просто вызовите **ParseOutlookMessageFile** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Парсинг файлов сообщений Outlook**
+Чтобы парсить файл сообщений Outlook с использованием **Aspose.Email Java для PHP**, просто вызовите модуль **ParseOutlookMessageFile**. Здесь вы можете увидеть пример кода.
 
-**Код PHP**
+**PHP Код**
 
 ``` php
 
@@ -16,21 +16,21 @@ type: docs
 
 $outlook_message_file = $mapiMessage->fromFile($dataDir . "Message.msg");
 
-\# Display sender's name
+\# Отобразить имя отправителя
 
-print "Sender Name : " . $outlook_message_file->getSenderName();
+print "Имя отправителя : " . $outlook_message_file->getSenderName();
 
-#Display Subject
+#Отобразить тему
 
-print "Subject : " . $outlook_message_file->getSubject();
+print "Тема : " . $outlook_message_file->getSubject();
 
-\# Display Body
+\# Отобразить тело
 
-print "Body : " . $outlook_message_file->getBody();
+print "Тело : " . $outlook_message_file->getBody();
 
 ```
-## **Загрузить рабочий код**
-Download **Разбор файлов сообщений Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Парсинг файлов сообщений Outlook (Aspose.Email)** с любого из нижеупомянутых сайтов социального кода:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookMessageFiles/ParseOutlookMessageFile.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookMessageFiles/ParseOutlookMessageFile.php)

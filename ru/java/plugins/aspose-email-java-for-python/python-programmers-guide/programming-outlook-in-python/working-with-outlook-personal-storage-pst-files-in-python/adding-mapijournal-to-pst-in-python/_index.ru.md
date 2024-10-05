@@ -1,14 +1,14 @@
 ---
-title: "Добавление журнала MapiJournal в PST на языке Python"
+title: "Добавление MapiJournal в PST на Python"
 url: /ru/java/adding-mapijournal-to-pst-in-python/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Добавление журнала MapiJournal в PST**
-Чтобы добавить MapiJournal в PST, используя **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Добавление MapiJournal в PST**
+Чтобы добавить MapiJournal в PST с помощью **Aspose.Email Java для Python**, используйте следующий код.
 
-**Код Python**
+**Код на Python**
 
 ```python
 
@@ -26,7 +26,7 @@ cl.add(calendar.HOUR, 1)
 
 d2 = cl.getTime()
 
-journal = self.MapiJournal("daily record", "called out in the dark", "Phone call", "Phone call")
+journal = self.MapiJournal("ежедневная запись", "звонок в темноте", "Телефонный звонок", "Телефонный звонок")
 
 journal.setStartTime(d1)
 
@@ -40,15 +40,15 @@ pst = personalStorage.create(self.dataDir + "JournalPST.pst", fileFormatVersion.
 
 standardIpmFolder = self.StandardIpmFolder
 
-journal_folder = pst.createPredefinedFolder("Journal", standardIpmFolder.Journal)
+journal_folder = pst.createPredefinedFolder("Журнал", standardIpmFolder.Journal)
 
 journal_folder.addMapiMessageItem(journal)
 
-print "Added MapiJournal Successfully."
+print "Добавлено MapiJournal успешно."
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление журнала MAPIjournal в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Добавление MapiJournal в PST (Aspose.Email)** с любого из нижеупомянутых сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

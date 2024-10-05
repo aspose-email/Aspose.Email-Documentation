@@ -1,24 +1,24 @@
 ---
-title: "Сравнение кода общих функций в Aspose.Email и Apache POI HSMF"
+title: "Сравнение кода для общих функций Aspose.Email и Apache POI HSMF"
 url: /ru/java/code-comparison-for-common-features-in-aspose-email-and-apache-poi-hsmf/
 weight: 10
 type: docs
 ---
 
-Разработчикам, которые ищут библиотеки для обработки сообщений электронной почты, возможно, потребуется ознакомиться с функциями, предоставляемыми библиотеками, доступными на рынке. В основном при выборе варианта учитывается несколько факторов:
+Разработчики, ищущие библиотеки для обработки электронных сообщений, могут захотеть ознакомиться с функциями, предлагаемых библиотеками, доступными на рынке. В основном, при выборе варианта учитываются несколько факторов:
 
-- Features
+- Функции
 - Усилия, необходимые для использования библиотеки
-- Performance
+- Производительность
 
-Если вы разработчик Java и хотите выбрать библиотеку обработки электронной почты для обработки сообщений электронной почты, вы можете сравнить Apache POI — HSMF SDK с Aspose.Email. В данном случае именно этот проект поможет вам сравнить функции и код, использующие обе библиотеки.
+Если вы разработчик на Java и ищете библиотеку для обработки электронных сообщений, чтобы обрабатывать электронные письма, вам может понадобиться сравнить Apache POI - HSMF SDK с Aspose.Email. В этом случае данный проект поможет вам сравнить функции и код, используя обе библиотеки.
 
-В этом разделе приведены следующие примеры сравнения кода:
+В этом разделе представлены следующие примеры сравнения кода:
 
-- [Извлекайте вложения сообщений с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-attachments-using-aspose-email-and-apache-poi-hsmf/)
-- [Извлеките текст сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-body-using-aspose-email-and-apache-poi-hsmf/)
-- [Извлеките заголовки сообщений с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-headers-using-aspose-email-and-apache-poi-hsmf/)
-- [Загрузите сообщение электронной почты с помощью Aspose.Email и Apache POI HSMF](/email/java/load-email-message-using-aspose-email-and-apache-poi-hsmf/)
-- [Сохраните сообщение электронной почты с помощью Aspose.Email и Apache POI HSMF](/email/java/save-email-message-using-aspose-email-and-apache-poi-hsmf/)
+- [Извлечение вложений сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-attachments-using-aspose-email-and-apache-poi-hsmf/)
+- [Извлечение тела сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-body-using-aspose-email-and-apache-poi-hsmf/)
+- [Извлечение заголовков сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/extract-message-headers-using-aspose-email-and-apache-poi-hsmf/)
+- [Загрузка электронного сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/load-email-message-using-aspose-email-and-apache-poi-hsmf/)
+- [Сохранение электронного сообщения с помощью Aspose.Email и Apache POI HSMF](/email/java/save-email-message-using-aspose-email-and-apache-poi-hsmf/)
 
-**Note:** В ближайшее время будет доступно еще много сравнений кода. 
+**Примечание:** Скоро будут доступны еще много сравнений кода.

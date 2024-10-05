@@ -1,38 +1,38 @@
 ---
-title: "Создание файла сообщений Outlook (MSG) в Aspose.Email"
+title: "Создание файла сообщения Outlook (MSG) в Aspose.Email"
 url: /ru/net/creating-an-outlook-message-msg-file-in-aspose-email/
 weight: 90
 type: docs
 ---
 
 
-Чтобы использовать Office Automation, Microsoft Outlook должен быть установлен на компьютере, на котором работает код. Также требуется ссылка на Outlook.Interop.dll.
+Для использования Office Automation на машине, где выполняется код, должен быть установлен Microsoft Outlook. Также требуется ссылка на Outlook.interop.dll.
 ### **VSTO**
 ``` cs
 
- // Creates a new Outlook Application instance
+ // Создание нового экземпляра Outlook Application
 
 Outlook.Application objOutlook = new Outlook.Application();
 
-// Creating a new Outlook message from the Outlook Application instance
+// Создание нового сообщения Outlook из экземпляра Outlook Application
 
 Outlook.MailItem msgInterop = (Outlook.MailItem)(objOutlook.CreateItem(Outlook.OlItemType.olMailItem));
 
-// Set recipient information
+// Установка информации о получателе
 
 msgInterop.To = "to@domain.com";
 
 msgInterop.CC = "cc@domain.com";
 
-// Set the message subject
+// Установка темы сообщения
 
-msgInterop.Subject = "Subject";
+msgInterop.Subject = "Тема";
 
-// Set some HTML text in the HTML body
+// Установка некоторого HTML текста в HTML тело
 
-msgInterop.HTMLBody = "<h3>HTML Heading 3</h3> <u>This is underlined text</u>";
+msgInterop.HTMLBody = "<h3>HTML Заголовок 3</h3> <u>Этот текст с подчеркиванием</u>";
 
-// Save the MSG file in local disk
+// Сохранение файла MSG на локальном диске
 
 string strMsg = "TestInterop.msg";
 
@@ -41,40 +41,40 @@ msgInterop.SaveAs(strMsg, Outlook.OlSaveAsType.olMSG);
 
 ```
 ### **Aspose.Email**
-В приведенных ниже примерах используется Aspose.Email для создания файла Outlook MSG. Он написан на чистом языке.NET и не использует COM Interop. Для создания msg-файла таким образом установка Outlook не требуется.
+Примеры ниже используют Aspose.Email для создания файла MSG Outlook. Он написан на чистом .NET и не использует COM Interop. Установка Outlook не требуется для создания файла msg таким образом.
 
 ``` cs
 
- // Create an instance of the Aspose.Email.MailMessage class
+ // Создание экземпляра класса Aspose.Email.MailMessage
 
 MailMessage msg = new MailMessage();
 
-// Set recipients information
+// Установка информации о получателях
 
 msg.To = "to@domain.com";
 
 msg.CC = "cc@domain.com";
 
-// Set the subject
+// Установка темы
 
-msg.Subject = "Subject";
+msg.Subject = "Тема";
 
-// Set HTML body
+// Установка HTML тела
 
-msg.HtmlBody = "<h3>HTML Heading 3</h3> <u>This is underlined text</u>";
+msg.HtmlBody = "<h3>HTML Заголовок 3</h3> <u>Этот текст с подчеркиванием</u>";
 
-// Add an attachment
+// Добавление вложения
 
 msg.Attachments.Add(new Attachment("image.bmp"));
 
-// Save it in local disk
+// Сохранение на локальном диске
 
 string strMsg = "TestAspose.msg";
 
 msg.Save(strMsg, MessageFormat.Msg);
 
 ```
-## **Загрузить образец кода**
+## **Скачать образец кода**
 - [Codeplex](https://asposevsto.codeplex.com/downloads/get/772940)
 - [Github](https://github.com/asposemarketplace/Aspose_for_VSTO/releases/download/5/Creating.an.Outlook.Message.MSG.File.Aspose.Email.zip)
 - [Sourceforge](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/download/AsposeEmailVsVSTOv1.1/Creating.an.Outlook.Message.MSG.File.Aspose.Email.zip)

@@ -1,27 +1,26 @@
 ---
-title: "Работа с контактами на сервере Exchange с помощью WebDAV"
-url: /ru/net/working-with-contacts-on-exchange-server-using-webdav/
+title: "Работа с контактами на Exchange Server с использованием WebDav"
+url: /ru/net/работа-с-контактами-на-exchange-server-с-использованием-webdav/
 weight: 50
 type: docs
 ---
 
+{{% alert color="primary" %}} 
 
-{{% alert color="primary" %}}
+Учетные записи Exchange Server содержат не только электронные сообщения. Вместе с [получением](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#fetch-messages-from-an-exchange-server-mailbox), [перемещением](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#moving-messages), [отправкой](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#sending-email-messages) и [удалением электронных сообщений](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#deleting-messages) с Exchange Servers, Aspose.Email позволяет работать с контактами. Эта статья объясняет, как получить информацию о контактах напрямую с Exchange Server. В этой статье также показано, как перечислить контакты из папки Контакты.
 
-Учетные записи Exchange Server содержат больше, чем просто сообщения электронной почты. А также [fetching](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#fetch-messages-from-an-exchange-server-mailbox), [moving](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#moving-messages), [sending](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#sending-email-messages) and [удаление сообщений электронной почты](/email/net/working-with-exchange-mailbox-and-messages-using-webdav/#deleting-messages) с серверов Exchange Aspose.Email позволяет работать с контактами. В этой статье объясняется, как получить контактную информацию непосредственно с сервера Exchange. В этой статье также показано, как вывести список контактов из папки «Контакты».
+{{% /alert %}} 
+## **Получение контактов с Exchange Server**
+Метод [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) класса [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) может быть использован для получения информации о контактах с Exchange Server. Метод [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) требует URI папки Контакты, который можно легко получить с помощью свойства [ExchangeMailboxInfo.ContactsUri](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri).
 
-{{% /alert %}}
-## **Получение контактов с сервера Exchange**
-The [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) class’ [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) метод можно использовать для получения контактной информации с сервера Exchange. [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) метод требует URI папки Contacts, который можно легко получить с помощью [ExchangeMailboxInfo.ContactsUri](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri) property.
+Чтобы получить контакты с Exchange Server:
 
-Чтобы получить контакты с сервера Exchange, выполните следующие действия:
+1. Инициализируйте класс [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) с адресом и учетными данными.
+1. Получите URI папки Контакты с помощью свойства [ExchangeClient.MailboxInfo.ContactsUri](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri).
+1. Вызовите метод [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts). Он возвращает массив [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/mapicontact).
+1. Используйте цикл foreach для массива [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/mapicontact), чтобы прочитать информацию о контактах.
 
-1. Инициализируйте [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) класс с адресом и учетными данными.
-1. Получите URI папки «Контакты» с помощью [ExchangeClient.MailboxInfo.ContactsUri](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/properties/contactsuri) property.
-1. Позвоните [ListContacts()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listcontacts) метод. Он возвращает массив [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/mapicontact).
-1. Проделайте петлю foreach на [MapiContact](https://apireference.aspose.com/email/net/aspose.email.mapi/mapicontact) массив для чтения контактной информации.
-
-В следующем фрагменте кода показано, как использовать [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) класс для чтения всех контактов с сервера Exchange.
+Следующий фрагмент кода показывает, как использовать класс [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) для чтения всех контактов с Exchange Server.
 
 
 

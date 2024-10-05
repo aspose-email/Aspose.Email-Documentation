@@ -6,14 +6,14 @@ type: docs
 ---
 
 
-## **Изменение флагов сообщений**
+## **Изменение флагов сообщения**
 
-Вы можете изменить флаги сообщений, используя [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/) метод. Этот метод принимает два параметра.
+Вы можете изменить флаги сообщения, используя метод [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/). Этот метод принимает два параметра.
 
 1. Порядковый номер сообщения или его уникальный идентификатор.
 2. [MessageFlag](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/).
 
-Можно установить следующие флаги:
+Следующие флаги могут быть установлены:
 
 - [Answered](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/answered/)
 - [Deleted](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/deleted/)
@@ -23,20 +23,20 @@ type: docs
 - [IsRead](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/isread/)
 - [Recent](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/recent/)
 
-### **Настройка флагов сообщений**
+### **Установка флагов сообщения**
 
-В следующем фрагменте кода показано, как изменить флаги сообщений на сервере IMAP с помощью Aspose.Email.
+Следующий фрагмент кода показывает, как изменить флаги сообщения на IMAP-сервере с помощью Aspose.Email.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SettingMessageFlags-SettingMessageFlags.cs" >}}
 
-### **Удаление флагов сообщений**
+### **Удаление флагов сообщения**
 
-Флаги сообщений также можно удалить с помощью [RemoveMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/removemessageflags/#removemessageflags/) метод. Использование аналогично использованию [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/) метод. Он принимает порядковый номер или уникальный идентификатор сообщения и [MessageFlag](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/). В следующем фрагменте кода показано, как удалить флаги сообщений.
+Флаги сообщения также могут быть удалены с помощью метода [RemoveMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/removemessageflags/#removemessageflags/). Использование этого метода аналогично методу [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/). Он принимает порядковый номер или уникальный идентификатор сообщения и [MessageFlag](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/). Следующий фрагмент кода показывает, как удалить флаги сообщения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-RemovingMessageFlags-RemovingMessageFlags.cs" >}}
 
-## **Настройка собственных флагов**
+## **Установка пользовательских флагов**
 
-Вы также можете установить собственные флаги для сообщения, используя [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) API. IMapClient AddMessageFlags предоставляет возможность устанавливать собственные флаги для сообщений.
+Вы также можете установить пользовательские флаги для сообщения, используя [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) API. Метод ImapClient AddMessageFlags предоставляет возможность устанавливать пользовательские флаги на сообщения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SetCustomFlag-SetCustomFlag.cs" >}}

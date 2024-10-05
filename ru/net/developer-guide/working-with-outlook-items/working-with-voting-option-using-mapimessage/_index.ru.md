@@ -1,53 +1,53 @@
 ---
-title: "Работа с опцией голосования с помощью MapiMessage"
+title: "Работа с вариантами голосования с помощью MapiMessage"
 url: /ru/net/working-with-voting-option-using-mapimessage/
 weight: 50
 type: docs
 ---
 
 
-## **Создание опции голосования с помощью MapiMessage**
+## **Создание варианта голосования с помощью MapiMessage**
 
-Microsoft Outlook позволяет пользователям создавать опрос при создании нового сообщения. Это позволяет им включать такие варианты голосования, как «Да», «Нет», «Возможно» и т. д. Aspose.Email позволяет использовать то же самое при создании нового сообщения Outlook. [FollowUpOptions](https://reference.aspose.com/email/net/aspose.email.mapi/followupoptions/) класс предоставляет [VotingButtons](https://reference.aspose.com/email/net/aspose.email.mapi/followupoptions/votingbuttons/) свойство, которое можно использовать для установки или получения значения опций голосования. В этой статье представлен подробный пример создания [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) с вариантами голосования для создания опроса.
+Microsoft Outlook позволяет пользователям создавать опрос при составлении нового сообщения. Он позволяет им включать варианты голосования, такие как Да, Нет, Может быть и т.д. Aspose.Email предлагает аналогичные возможности при создании нового сообщения Outlook. Класс [FollowUpOptions](https://reference.aspose.com/email/net/aspose.email.mapi/followupoptions/) предоставляет свойство [VotingButtons](https://reference.aspose.com/email/net/aspose.email.mapi/followupoptions/votingbuttons/), которое можно использовать для установки или получения значения вариантов голосования. Эта статья представляет собой подробный пример создания [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) с вариантами голосования для создания опроса.
 
 ### **Создание опроса с помощью MapiMessage**
 
-В следующем фрагменте кода показано, как создать опрос, [FollowUpManager](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/) класс можно использовать, как показано в следующем фрагменте кода.
+Следующий код показывает, как создать опрос, класс [FollowUpManager](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/) можно использовать, как показано в следующем коде.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange-CreateAndSendingMessageWithVotingOptions-CreateAndSendingMessageWithVotingOptions.cs" >}}
 
 ### **Чтение вариантов голосования из MapiMessage**
 
-В следующем фрагменте кода показано, как читать варианты голосования из [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/).
+Следующий код показывает, как читать варианты голосования из [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadingVotingOptions-ReadingVotingOptions.cs" >}}
 
-### **Кнопки голосования только для чтения**
+### **Чтение только кнопок голосования**
 
-В следующем фрагменте кода показано, как читать только кнопки голосования.
+Следующий код показывает, как читать только кнопки голосования.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadingOnlyVotingButtons-ReadingOnlyVotingButtons.cs" >}}
 
-### **Добавление кнопки голосования к существующему сообщению**
+### **Добавление кнопки голосования в существующее сообщение**
 
-В следующем фрагменте кода показано, как добавить кнопку голосования к существующему сообщению.
+Следующий код показывает, как добавить кнопку голосования к существующему сообщению.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddVotingButtonToExistingMessage-AddVotingButtonToExistingMessage.cs" >}}
 
 ### **Удаление кнопки голосования из сообщения**
 
-В следующем фрагменте кода показано, как удалить кнопку голосования из сообщения.
+Следующий код показывает, как удалить кнопку голосования из сообщения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-DeleteVotingButtonFromMessage-DeletVotingButtonFromMessage.cs" >}}
 
-### **Ознакомьтесь с информацией о результатах голосования**
+### **Чтение информации о результатах голосования**
 
-В следующем фрагменте кода показано, как читать информацию о результатах голосования.
+Следующий код показывает, как читать информацию о результатах голосования.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadVoteResultsInformation-ReadVoteResultsInformation.cs" >}}
 
-### **Примерные методы, используемые в примерах**
+### **Методы примерa, используемые в примерах**
 
-В следующем фрагменте кода показано, как создать образец сообщения, используемый в примерах.
+Следующий код показывает, как создать тестовое сообщение, использованное в примерах.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange-CreateAndSendingMessageWithVotingOptions-CreateTestMessage.cs" >}}

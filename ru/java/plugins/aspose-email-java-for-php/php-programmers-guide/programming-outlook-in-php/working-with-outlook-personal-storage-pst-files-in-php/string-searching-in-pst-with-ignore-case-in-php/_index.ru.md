@@ -1,14 +1,14 @@
 ---
-title: "Поиск строк в PST с игнорированием регистра в PHP"
+title: "Поиск строк в PST с учетом регистра в PHP"
 url: /ru/java/string-searching-in-pst-with-ignore-case-in-php/
 weight: 80
 type: docs
 ---
 
-## **Aspose.Email - поиск строк в PST с регистром игнорирования**
-Для поиска строк в PST с помощью Ignore Case используйте **Aspose.Электронная почта Java для PHP**, просто вызовите **StringSearchInPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Поиск строк в PST с учетом регистра**
+Для поиска строк в PST с учетом регистра, используя **Aspose.Email Java для PHP**, просто вызовите модуль **StringSearchInPST**. Здесь вы можете увидеть пример кода.
 
-**Код PHP**
+**PHP код**
 
 ```php
 
@@ -36,11 +36,11 @@ $query = $builder->getQuery();
 
 $coll = $fi->getContents($query);
 
-print "Total Results:" . (string)$coll->size();
+print "Всего результатов:" . (string)$coll->size();
 
 ```
-## **Загрузить рабочий код**
-Download **Поиск строк в PST с использованием регистра игнорирования (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Поиск строк в PST с учетом регистра (Aspose.Email)** с любого из нижеупомянутых социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/StringSearchInPST.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/StringSearchInPST.php)

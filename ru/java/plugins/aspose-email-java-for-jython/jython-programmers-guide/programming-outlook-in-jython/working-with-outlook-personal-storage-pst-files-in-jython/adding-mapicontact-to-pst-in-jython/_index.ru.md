@@ -5,10 +5,10 @@ weight: 30
 type: docs
 ---
 
-## **Aspose.Email - добавление MapiContact в PST**
-Чтобы добавить MapiContact в PST, используя **Aspose.Электронная почта Java для Mython**, просто вызовите **AddMapiContactToPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Добавление MapiContact в PST**
+Для добавления MapiContact в PST с использованием **Aspose.Email Java для Jython** просто вызовите модуль **AddMapiContactToPST**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ```python
 
@@ -42,33 +42,34 @@ class AddMapiContactToPST:
 
 
 
-        # Create an instance of MapiContact
+        # Создание экземпляра MapiContact
 
         mapi_contact = MapiContact()
 
-        # Contact #1
+        # Контакт #1
 
-        contact1 = MapiContact("Sebastian Wright", "SebastianWright@dayrep.com")
+        contact1 = MapiContact("Себастьян Райт", "SebastianWright@dayrep.com")
 
-        # Contact #2
+        # Контакт #2
 
-        contact2 = MapiContact("Wichert Kroos", "WichertKroos@teleworm.us", "Grade A Investment")
+        contact2 = MapiContact("Вихерт Кроос", "WichertKroos@teleworm.us", "Инвестиции класса A")
 
-        # Contact #3
+        # Контакт #3
 
-        contact3 = MapiContact("Christoffer van de Meeberg", "ChristoffervandeMeeberg@teleworm.us", "Krauses Sofa Factory", "046-630-4614")
+        contact3 = MapiContact("Кристофер ван де Мееберг", "ChristoffervandeMeeberg@teleworm.us", "Фабрика диванов Краус")
+        # "046-630-4614"
 
-        # Contact #4
+        # Контакт #4
 
         contact4 = MapiContact()
 
-        contact4.setNameInfo(MapiContactNamePropertySet("Margaret", "J.", "Tolle"))
+        contact4.setNameInfo(MapiContactNamePropertySet("Маргарет", "Д.", "Толле"))
 
         mapiContactGender=MapiContactGender
 
         contact4.getPersonalInfo().setGender(mapiContactGender.Female)
 
-        contact4.setProfessionalInfo(MapiContactProfessionalPropertySet("Adaptaz", "Recording engineer"))
+        contact4.setProfessionalInfo(MapiContactProfessionalPropertySet("Адаптаз", "Звукорежиссер"))
 
         contact4.getPhysicalAddresses().getWorkAddress().setAddress("4 Darwinia Loop EIGHTY MILE BEACH WA 6725")
 
@@ -78,15 +79,15 @@ class AddMapiContactToPST:
 
         contact4.getTelephones().setMobileTelephoneNumber("(925)599-3355")
 
-        # Contact #5
+        # Контакт #5
 
         contact5 = MapiContact()
 
-        contact5.setNameInfo(MapiContactNamePropertySet("Matthew", "R.", "Wilcox"))
+        contact5.setNameInfo(MapiContactNamePropertySet("Мэттью", "Р.", "Уилкокс"))
 
         contact5.getPersonalInfo().setGender(mapiContactGender.Male)
 
-        contact5.setProfessionalInfo(MapiContactProfessionalPropertySet("Briazz", "Psychiatric aide"))
+        contact5.setProfessionalInfo(MapiContactProfessionalPropertySet("Бриазз", "Помощник психиатра"))
 
         contact5.getPhysicalAddresses().getWorkAddress().setAddress("Horner Strasse 12 4421 SAASS")
 
@@ -94,13 +95,13 @@ class AddMapiContactToPST:
 
         contact5.getTelephones().setHomeTelephoneNumber("(661)387-5382")
 
-        # Contact #6
+        # Контакт #6
 
         contact6 = MapiContact()
 
-        contact6.setNameInfo(MapiContactNamePropertySet("Bertha", "A.", "Buell"))
+        contact6.setNameInfo(MapiContactNamePropertySet("Берта", "А.", "Бьюэлл"))
 
-        contact6.setProfessionalInfo(MapiContactProfessionalPropertySet("Awthentikz", "Social work assistant"))
+        contact6.setProfessionalInfo(MapiContactProfessionalPropertySet("Awthentikz", "Помощник социального работника"))
 
         contact6.getPersonalInfo().setPersonalHomePage("B2BTies.com")
 
@@ -118,7 +119,7 @@ class AddMapiContactToPST:
 
         pst = personalStorage.create(dataDir + "MapiContactToPST1.pst", fileFormatVersion.Unicode)
 
-        contactFolder = pst.createPredefinedFolder("Contacts", standardIpmFolder.Contacts)
+        contactFolder = pst.createPredefinedFolder("Контакты", standardIpmFolder.Contacts)
 
         contactFolder.addMapiMessageItem(contact1)
 
@@ -132,19 +133,19 @@ class AddMapiContactToPST:
 
         contactFolder.addMapiMessageItem(contact6)
 
-        print "Added MapiContacts Successfully."
+        print "МapiКонтакты успешно добавлены."
 
 
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddMapiContactToPST()
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление MapiContact в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачать **Добавление MapiContact в PST (Aspose.Email)** из любого из нижеупомянутых сайтов социальных кодов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

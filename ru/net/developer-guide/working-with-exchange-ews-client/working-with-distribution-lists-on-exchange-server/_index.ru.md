@@ -1,81 +1,81 @@
 ---
-title: "Работа со списками рассылки на сервере Exchange"
+title: "Работа с рассылками на сервере Exchange"
 url: /ru/net/working-with-distribution-lists-on-exchange-server/
 weight: 70
 type: docs
 ---
 
 
-## **Работа со списками рассылки**
+## **Работа с рассылками**
 
-Aspose.Email API предоставляет возможность создавать и читать списки рассылки с сервера Exchange. Списки рассылки можно создавать на сервере, а также добавлять в него участников с помощью [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). В этой статье показано, как работать со списками рассылки на сервере Exchange.
+API Aspose.Email предоставляет возможность создавать и читать рассылки с сервера Exchange. Рассылки могут быть созданы на сервере, а также к ним могут быть добавлены участники с использованием [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). В этой статье показано, как работать с рассылками на сервере Exchange.
 
-### **Создание списка рассылки**
+### **Создание рассылки**
 
-В следующем фрагменте кода показано, как создать список рассылки.
+Следующий фрагмент кода показывает, как создать рассылку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CreatePrivateDistributionList-CreatePrivateDistributionList.cs" >}}
 
-#### **Получите список частных рассылок**
+#### **Получение приватной рассылки**
 
-В следующем фрагменте кода показано, как получить частный список рассылки.
+Следующий фрагмент кода показывает, как получить приватную рассылку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FetchPrivateDistributionList-FetchPrivateDistributionList.cs" >}}
 
-#### **Создать почтовый адрес из идентификатора списка рассылки**
+#### **Создание MailAddress из Id рассылки**
 
-В следующем фрагменте кода показано, как создать MailAddress из идентификатора списка рассылки.
+Следующий фрагмент кода показывает, как создать MailAddress из Id рассылки.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange-CreateMailAddressFromDistributionListId-CreateMailAddressFromDistributionListId.cs" >}}
 
-#### **Расширить публичный список рассылки**
+#### **Расширение публичной рассылки**
 
-В следующем фрагменте кода показано, как расширить список общедоступной рассылки.
+Следующий фрагмент кода показывает, как расширить публичную рассылку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ExpandPublicDistributionList-ExpandPublicDistributionList.cs" >}}
 
 ### **Добавление участников**
 
-#### **Добавление участников в частный список рассылки**
+#### **Добавление участников в приватную рассылку**
 
-В следующем фрагменте кода показано, как добавить участников в частный список рассылки.
+Следующий фрагмент кода показывает, как добавить участников в приватную рассылку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-AddMembersToPrivateDistributionList-AddMembersToPrivateDistributionList.cs" >}}
 
-#### **Добавить участников без объявления**
+#### **Добавление участников без списка**
 
-В следующем фрагменте кода показано, как добавлять участников без объявления.
+Следующий фрагмент кода показывает, как добавить участников без списка.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-AddMembersWithoutListing-AddMembersWithoutListing.cs" >}}
 
-#### **Отправить в частный список рассылки**
+#### **Отправка на приватную рассылку**
 
-В следующем фрагменте кода показано, как отправить сообщение в частный список рассылки.
+Следующий фрагмент кода показывает, как отправить сообщение на приватную рассылку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SendEmailToPrivateDistributionList-SendEmailToPrivateDistributionList.cs" >}}
 
 ### **Удаление участников**
 
-#### **Удаление участников из частного списка рассылки**
+#### **Удаление участников из приватной рассылки**
 
-В следующем фрагменте кода показано, как удалить участников из частного списка рассылки.
+Следующий фрагмент кода показывает, как удалить участников из приватной рассылки.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-DeleteMembersFromPrivateDistributionList-DeleteMembersFromPrivateDistributionList.cs" >}}
 
-#### **Удалить участников без объявления**
+#### **Удаление участников без списка**
 
-В следующем фрагменте кода показано, как удалять участников без объявления.
+Следующий фрагмент кода показывает, как удалить участников без списка.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-DeleteMembersWithoutListing-DeleteMembersWithoutListing.cs" >}}
 
-#### **Удалить частный список рассылки**
+#### **Удаление приватной рассылки**
 
-В следующем фрагменте кода показано, как удалить частный список рассылки.
+Следующий фрагмент кода показывает, как удалить приватную рассылку.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-DeletePrivateDistributionList-DeletePrivateDistributionList.cs" >}}
 
-#### **Удалить без объявления**
+#### **Удаление без списка**
 
-В следующем фрагменте кода показано, как удалить файл без добавления в список.
+Следующий фрагмент кода показывает, как удалить без списка.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-DeleteWithoutListing-DeleteWithoutListing.cs" >}}

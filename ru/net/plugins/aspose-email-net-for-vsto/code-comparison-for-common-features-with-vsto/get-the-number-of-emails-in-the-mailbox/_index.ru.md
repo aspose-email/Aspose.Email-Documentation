@@ -1,5 +1,5 @@
 ---
-title: "Получите количество писем в почтовом ящике"
+title: "Получить количество электронных писем в почтовом ящике"
 url: /ru/net/get-the-number-of-emails-in-the-mailbox/
 weight: 140
 type: docs
@@ -7,11 +7,11 @@ type: docs
 
 
 ## **VSTO**
-Ниже приведен код для получения писем в почтовый ящик с помощью VSTO Outlook.
+Ниже приведен код для получения электронных писем в почтовом ящике с использованием VSTO Outlook.
 
 ``` cs
 
-  // Create Application class and get namespace
+  // Создание класса Application и получение пространства имен
 
  Outlook.Application outlook = new Outlook.Application();
 
@@ -21,17 +21,17 @@ type: docs
 
  ns.Logon(_missing, _missing, false, true);
 
- // Get Inbox information in objec of type MAPIFolder
+ // Получение информации о папке Входящие в объекте типа MAPIFolder
 
  Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
  int i = inbox.Items.Count;
 
- MessageBox.Show("Message count: " + i);
+ MessageBox.Show("Количество сообщений: " + i);
 
 ```
 ## **Aspose.Email**
-Ниже приведен код для получения писем в почтовый ящик с помощью aspose.email для .NET.
+Ниже приведен код для получения электронных писем в почтовом ящике с использованием aspose.email для .NET.
 
 ``` cs
 
@@ -43,24 +43,24 @@ type: docs
 
  string Domain = "domain";
 
- // Create instance of ExchangeClient class by giving credentials
+ // Создание экземпляра класса ExchangeClient с указанием учетных данных
 
  ExchangeClient client = new ExchangeClient(MailBoxURI,UserName, Password, Domain);
 
- // Call ListMessages method to list messages info from Inbox
+ // Вызов метода ListMessages для получения информации о сообщениях из папки Входящие
 
  ExchangeMessageInfoCollection msgCollection = client.ListMessages(client.MailboxInfo.InboxUri);
 
  int i = msgCollection.Count;
 
- Console.WriteLine("Message count: " + i);
+ Console.WriteLine("Количество сообщений: " + i);
 
 ```
-## **Загрузить исходный код**
+## **Скачать исходный код**
 - [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Get%20the%20number%20of%20emails%20in%20the%20mailbox)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Загрузить пример запуска**
+## **Скачать работающий пример**
 - [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)

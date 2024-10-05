@@ -1,70 +1,70 @@
 ---
-title: "Работа со списками рассылки на сервере Exchange"
+title: "Работа с рассылочными списками на Exchange Server"
 url: /ru/cpp/working-with-distribution-lists-on-exchange-server/
 weight: 70
 type: docs
 ---
 
-## **Работа со списками рассылки**
-Aspose.Email API предоставляет возможность создавать и читать списки рассылки с сервера Exchange. Списки рассылки можно создавать на сервере, а также добавлять в него участников с помощью [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client). В этой статье показано, как работать со списками рассылки на сервере Exchange.
-### **Создание списка рассылки**
-В следующем фрагменте кода показано, как создать список рассылки.
+## **Работа с рассылочными списками**
+Aspose.Email API предоставляет возможность создания и чтения рассылочных списков с сервера Exchange. Рассылочные списки можно создать на сервере, а также к ним можно добавлять участников с помощью [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client). В этой статье показано, как работать с рассылочными списками на сервере Exchange.
+### **Создание рассылочного списка**
+Следующий фрагмент кода демонстрирует, как создать рассылочный список.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-CreatePrivateDistributionList-CreatePrivateDistributionList.cpp" >}}
-#### **Получите список частных рассылок**
-В следующем фрагменте кода показано, как получить частный список рассылки.
+#### **Получение частного рассылочного списка**
+Следующий фрагмент кода демонстрирует, как получить частный рассылочный список.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FetchPrivateDistributionList-FetchPrivateDistributionList.cpp" >}}
-#### **Расширить публичный список рассылки**
-В следующем фрагменте кода показано, как расширить список общедоступной рассылки.
+#### **Расширение публичного рассылочного списка**
+Следующий фрагмент кода демонстрирует, как расширить публичный рассылочный список.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-ExpandPublicDistributionList-ExpandPublicDistributionList.cpp" >}}
 ### **Добавление участников**
-#### **Добавление участников в частный список рассылки**
-В следующем фрагменте кода показано, как добавить участников в частный список рассылки.
+#### **Добавление участников в частный рассылочный список**
+Следующий фрагмент кода показывает, как добавить участников в частный рассылочный список.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-AddMembersToPrivateDistributionList-AddMembersToPrivateDistributionList.cpp" >}}
-#### **Добавить участников без объявления**
-В следующем фрагменте кода показано, как добавлять участников без объявления.
+#### **Добавление участников без перечисления**
+Следующий фрагмент кода показывает, как добавить участников без перечисления.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-AddMembersWithoutListing-AddMembersWithoutListing.cpp" >}}
-#### **Отправить электронное письмо в частный список рассылки**
-В следующем фрагменте кода показано, как отправлять электронные письма в частный список рассылки.
+#### **Отправка электронной почты на частный рассылочный список**
+Следующий фрагмент кода демонстрирует, как отправить электронные письма на частный рассылочный список.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SendEmailToPrivateDistributionList-SendEmailToPrivateDistributionList.cpp" >}}
 ### **Удаление участников**
-#### **Удаление участников из частного списка рассылки**
-В следующем фрагменте кода показано, как удалить участников из частного списка рассылки.
+#### **Удаление участников из частного рассылочного списка**
+Следующий фрагмент кода демонстрирует, как удалить участников из частного рассылочного списка.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-DeleteMembersFromPrivateDistributionList-DeleteMembersFromPrivateDistributionList.cpp" >}}
-#### **Удалить участников без объявления**
-В следующем фрагменте кода показано, как удалять участников без объявления.
+#### **Удаление участников без перечисления**
+Следующий фрагмент кода показывает, как удалить участников без перечисления.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-DeleteMembersWithoutListing-DeleteMembersWithoutListing.cpp" >}}
-#### **Удалить частный список рассылки**
-В следующем фрагменте кода показано, как удалить частный список рассылки.
+#### **Удаление частного рассылочного списка**
+Следующий фрагмент кода демонстрирует, как удалить частный рассылочный список.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-DeletePrivateDistributionList-DeletePrivateDistributionList.cpp" >}}
-#### **Удалить без объявления**
-В следующем фрагменте кода показано, как удалить файл без добавления в список.
+#### **Удаление без перечисления**
+Следующий фрагмент кода показывает, как удалить без перечисления.
 
 
 

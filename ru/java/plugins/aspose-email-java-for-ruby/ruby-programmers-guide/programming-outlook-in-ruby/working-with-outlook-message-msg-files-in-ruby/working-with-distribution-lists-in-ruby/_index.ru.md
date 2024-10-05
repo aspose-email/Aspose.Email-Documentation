@@ -1,14 +1,14 @@
 ---
-title: "Работа со списками рассылки в Ruby"
+title: "Работа с рассылками в Ruby"
 url: /ru/java/working-with-distribution-lists-in-ruby/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Работа со списками рассылки**
-Для создания списка рассылки с помощью **Aspose.Электронная почта Java для Ruby**, просто вызовите **DistributionList** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Работа с рассылками**
+Чтобы создать рассылку с использованием **Aspose.Email Java для Ruby**, просто вызовите модуль **DistributionList**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ``` ruby
 
@@ -20,22 +20,22 @@ oneOffmembers.addItem(Rjb::import('com.aspose.email.MapiDistributionListMember')
 
 oneOffmembers.addItem(Rjb::import('com.aspose.email.MapiDistributionListMember').new("Tilly Bates", "TillyBates@armyspy.com"))
 
-dlist = Rjb::import('com.aspose.email.MapiDistributionList').new("Simple list", oneOffmembers)
+dlist = Rjb::import('com.aspose.email.MapiDistributionList').new("Простая рассылка", oneOffmembers)
 
-dlist.setBody("Test body")
+dlist.setBody("Тестовое тело")
 
-dlist.setSubject("Test subject")
+dlist.setSubject("Тестовая тема")
 
-dlist.setMileage("Test mileage")
+dlist.setMileage("Тестовый пробег")
 
-dlist.setBilling("Test billing")
+dlist.setBilling("Тестовая биллинг")
 
 dlist.save(data_dir + "distlist.msg")
 
-puts "Saved distribution list successfully."
+puts "Рассылка успешно сохранена."
 
 ```
-## **Загрузить рабочий код**
-Download **Работа со списками рассылки (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Работа с рассылками (Aspose.Email)** с любого из нижеупомянутых социальный coding сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/distributionlist.rb)

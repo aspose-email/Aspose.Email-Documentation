@@ -5,8 +5,8 @@ weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Настройка заголовков писем**
-Для настройки заголовков электронной почты с помощью **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Настройка заголовков электронной почты**
+Для настройки заголовков электронной почты с использованием **Aspose.Email Java for Python** используйте следующий код.
 
 **Код Python**
 
@@ -14,33 +14,33 @@ type: docs
 
 
 
-\# Create a instance of MailMessage class
+\# Создать экземпляр класса MailMessage
 
 message = self.MailMessage()
 
-    # Set subject of the message
+    # Установить тему сообщения
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Новое сообщение, созданное Aspose.Email для Java")
 
-\# Set Html body
+\# Установить Html тело
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Эта строка выделена жирным.</b> <br/> <br/>" +
 
-    "<font color=blue>This line is in blue color</font>")
+    "<font color=blue>Эта строка синего цвета</font>")
 
-\# Set sender information
+\# Установить информацию об отправителе
 
-message.setFrom(self.MailAddress("from@domain.com", "Sender Name", False))
+message.setFrom(self.MailAddress("from@domain.com", "Имя отправителя", False))
 
-\# Add TO recipients
+\# Добавить получателей в TO
 
-message.getTo().addMailAddress(self.MailAddress("to@domain.com", "Recipient 1", False))
+message.getTo().addMailAddress(self.MailAddress("to@domain.com", "Получатель 1", False))
 
-\# Message subject
+\# Тема сообщения
 
-message.setSubject("Customizing Email Headers")
+message.setSubject("Настройка заголовков электронной почты")
 
-\# Specify Date
+\# Указать дату
 
 timeZone = self.TimeZone
 
@@ -52,27 +52,27 @@ date = calendar.getTime()
 
 message.setDate(date)
 
-\# Specify XMailer
+\# Указать XMailer
 
 message.setXMailer("Aspose.Email")
 
-\# Specify Secret Header
+\# Указать секретный заголовок
 
 message.getHeaders().add("secret-header", "mystery")
 
-\# Save message to disc
+\# Сохранить сообщение на диск
 
 messageFormat= self.MessageFormat
 
 message.save(self.dataDir + "MsgHeaders.msg", messageFormat.getMsg())
 
-\# Display Status
+\# Показать статус
 
-print "Customized message headers Successfully."
+print "Заголовки сообщения успешно настроены."
 
 ```
-## **Загрузить рабочий код**
-Download **Настройка заголовков электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Настройка заголовков электронной почты (Aspose.Email)** с любого из нижеуказанных сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

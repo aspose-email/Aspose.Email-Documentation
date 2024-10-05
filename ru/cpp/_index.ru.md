@@ -1,36 +1,36 @@
 ---
-title: "Aspose.Электронная почта для C++"
-description: "Библиотека Email C++ позволяет разработчикам создавать, обрабатывать и конвертировать Outlook и другие популярные форматы файлов электронной почты. API не зависит от Office Automation или MS Outlook."
+title: "Aspose.Email для C++"
+description: "Библиотека Email C++ позволяет разработчикам создавать, манипулировать и конвертировать файлы формата Outlook и других популярных форматов электронной почты, API независим от автоматизации Office или MS Outlook."
 url: /ru/cpp/
 weight: 30
 is_root: true
 type: docs
-keywords: "Электронная библиотека C++"
+keywords: "библиотека Email C++"
 ---
 
 {{% alert color="primary" %}}
 
-![Aspose.Email для логотипа продукта на языке C++](home_1.png)
+![Логотип продукта Aspose.Email для C++](home_1.png)
 
 **Добро пожаловать в Aspose.Email для C++**
 
-Aspose.Eamil для C++ — это собственная библиотека на языке C++, которая позволяет разработчикам C++ создавать, обрабатывать и конвертировать Outlook и другие популярные форматы файлов электронной почты. API не зависит от Office Automation или MS Outlook и не требует их установки на сервер.
+Aspose.Eamil для C++ — это родная библиотека C++, которая позволяет разработчикам на C++ создавать, манипулировать и конвертировать файлы формата Outlook и других популярных форматов электронной почты. API независим от автоматизации Office или MS Outlook и не требует их установки на сервере.
 
-API можно использовать в ОС Windows для работы с форматами файлов электронной почты.
+API можно использовать на операционной системе Windows для работы с файлами формата электронной почты.
 
 {{% /alert %}}
 
-## **Aspose.Email для ресурсов на языке C++**
+## **Ресурсы Aspose.Email для C++**
 
 Ниже приведены ссылки на некоторые полезные ресурсы, которые могут понадобиться для выполнения ваших задач.
 
-- [Онлайн-документация Aspose.Email для C++](/email/cpp/)
-- [Aspose.Email для функций C++](/email/cpp/features-overview/)
-- [Примечания к выпуску Aspose.Email для языка C++](https://releases.aspose.com/email/cpp/release-notes/)
-- [Страница продукта Aspose.Email для языка C++](https://products.aspose.com/email/ru/cpp/)
-- [Aspose.Email для новых версий C++](https://releases.aspose.com/email/cpp/)
-- [Установите пакет Aspose.Email для C++ NuGet](https://www.nuget.org/packages/aspose.email.cpp.vc140/)
-- [Справочное руководство по API Aspose.Email для языка C++](https://reference.aspose.com/email/cpp)
-- [Загрузите примеры в репозитории GitHub](https://github.com/aspose-email/Aspose.Email-for-C)
+- [Онлайн документация Aspose.Email для C++](/email/cpp/)
+- [Особенности Aspose.Email для C++](/email/cpp/features-overview/)
+- [Примечания к релизу Aspose.Email для C++](https://releases.aspose.com/email/cpp/release-notes/)
+- [Страница продукта Aspose.Email для C++](https://products.aspose.com/email/ru/cpp/)
+- [Новые релизы Aspose.Email для C++](https://releases.aspose.com/email/cpp/)
+- [Установить пакет NuGet Aspose.Email для C++](https://www.nuget.org/packages/aspose.email.cpp.vc140/)
+- [Справочник по API Aspose.Email для C++](https://reference.aspose.com/email/cpp)
+- [Скачать примеры в репозитории GitHub](https://github.com/aspose-email/Aspose.Email-for-C)
 - [Форум бесплатной поддержки Aspose.Email для C++](https://forum.aspose.com/categories)
-- [Aspose.Email для службы поддержки платной поддержки C++](https://helpdesk.aspose.com/)
+- [Платная поддержка Aspose.Email для C++](https://helpdesk.aspose.com/)

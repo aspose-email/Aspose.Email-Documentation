@@ -1,91 +1,91 @@
 ---
-title: "Aspose.Электронная почта Java для ИДЕЯ INTELLIJ - Maven"
+title: "Aspose.Email Java для IntelliJ IDEA - Maven"
 url: /ru/java/aspose-email-java-for-intellij-idea-maven/
 weight: 30
 type: docs
 ---
 
-## **Introduction**
-### **ИДЕЯ INTELLIJ**
-**ИДЕЯ INTELLIJ** это интегрированная среда разработки Java (IDE) для разработчиков программного обеспечения. Она разработана компанией JetBrains. Первоначально созданная для Java, в настоящее время она поддерживает множество языков, включая JavaScript, Groovy, HTML, CSS, RSS, R, Haskell, PHP, Ruby, Python, Scala, Clojure и Kotlin.
+## **Введение**
+### **IntelliJ IDEA**
+**IntelliJ IDEA** — это интегрированная среда разработки (IDE) для Java, предназначенная для разработчиков программного обеспечения. Она разработана компанией JetBrains. Изначально созданная для Java, она в настоящее время поддерживает широкий спектр языков, включая JavaScript, Groovy, HTML, CSS, RSS, R, Haskell, PHP, Ruby, Python, Scala, Clojure и Kotlin.
 
-В 2010 году **Infoworld** Согласно отчету, IntelliJ получил самую высокую оценку центра тестирования среди четырех лучших инструментов программирования на Java: Eclipse, ИДЕЯ INTELLIJ, NetBeans и Oracle JDeveloper.
-### **Aspose.Электронная почта для Java**
-[Aspose.Электронная почта для Java](http://www.aspose.com/java/email-component.aspx) это библиотека классов Java, которая позволяет Java-приложениям читать и записывать файлы сообщений электронной почты в различных форматах без Microsoft Outlook. Она предоставляет классы для чтения и обновления файлов MSG, EML, EMLX, OFT, добавления/удаления вложений и получателей, обновления темы, текста и других свойств файлов MSG.
-### **Aspose.Электронная почта Java для ИДЕЯ INTELLIJ - Maven**
-- Java Aspose.Электронная почта для ИДЕЯ INTELLIJ (Maven) является **Плагин ИДЕЯ INTELLIJ** который позволяет создавать проекты maven (т.е. созданный проект содержит зависимость Aspose.Email для Java API от maven) и загружать примеры исходного кода API для использования [Aspose.Электронная почта для Java API](http://www.aspose.com/java/email-component.aspx).
-- Этот плагин поможет вам работать с [Aspose.Электронная почта для Java API](http://www.aspose.com/java/email-component.aspx) внутри вашей любимой идеи IntelliJ.
+В отчете **Infoworld** за 2010 год IntelliJ получила наивысший балл тестового центра среди четырех лучших инструментов программирования на Java: Eclipse, IntelliJ IDEA, NetBeans и Oracle JDeveloper.
+### **Aspose.Email для Java**
+[Aspose.Email для Java](http://www.aspose.com/java/email-component.aspx) — это библиотека классов Java, которая позволяет приложениям Java читать и записывать файлы электронных писем в различных форматах без Microsoft Outlook. Она предоставляет классы для чтения и обновления файлов MSG, EML, EMLX, OFT, добавления/удаления вложений и получателей, обновления темы, тела и других свойств файла MSG.
+### **Aspose.Email Java для IntelliJ IDEA - Maven**
+- Aspose.Email Java для IntelliJ IDEA (Maven) — это **плагин IntelliJ IDEA**, который позволяет вам создавать Maven проекты (т.е. созданный проект содержит зависимость Maven Aspose.Email для Java API) и загружать примеры исходного кода API для использования [Aspose.Email для Java API](http://www.aspose.com/java/email-component.aspx).
+- Этот плагин помогает вам работать с [Aspose.Email для Java API](http://www.aspose.com/java/email-component.aspx) внутри вашей любимой IntelliJ IDEA.
 
 ![todo:image_alt_text](https://i.imgur.com/KWKGljg.png)
 
 
-**WIZARDS**:
-Плагин содержит двух мастеров -----
+**МАСТЕРСКИЕ**:
+Плагин содержит два мастера -----
 
-`       `**Волшебник 1:** Проект Aspose.Email Maven
+`       `**Мастер 1:** Aspose.Email Maven Project
 
-- Plugin's **Мастер проектов Aspose Maven** позволяет разработчикам создавать [Aspose.Электронная почта для Java API](http://www.aspose.com/java/email-component.aspx) Проект Maven.
-- Ссылка на [Aspose.Электронная почта для Java API](http://www.aspose.com/java/email-component.aspx) Зависимость maven автоматически загружается из [Облачный репозиторий Maven Aspose](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo) и добавляется в файл pom.xml.
-- Созданный проект всегда будет содержать самую последнюю доступную версию Maven Dependency для [Aspose.Электронная почта для Java API](http://www.aspose.com/java/email-component.aspx).
-- Шаги мастера также представлены с возможностью загрузки [Примеры исходного кода для использования Aspose.Email для Java API](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples)
+- Мастер **Aspose Maven Project** позволяет разработчикам создавать Maven проект [Aspose.Email для Java API](http://www.aspose.com/java/email-component.aspx).
+- Ссылка на зависимость Maven [Aspose.Email для Java API](http://www.aspose.com/java/email-component.aspx) автоматически извлекается из [Aspose Cloud Maven Repository](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo) и добавляется в pom.xml.
+- Созданный проект всегда будет содержать самую последнюю доступную версию зависимости Maven для [Aspose.Email для Java API](http://www.aspose.com/java/email-component.aspx).
+- Шаги мастера также содержат опцию для загрузки [Примеров исходного кода для использования Aspose.Email для Java API](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples).
 
-`       `**Волшебник 2:** Примеры  Aspose.Email
+`       `**Мастер 2:** Примеры Aspose.Email
 
-- **Мастер примеров электронной почты Aspose.Email** позволяет создавать/копировать загруженное [Примеры исходного кода Aspose.Email для Java API](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples) в свой проект. Все примеры из выбранной категории будут скопированы в папку пакета проекта «com.aspose.email.examples» вместе с необходимыми ресурсами в папке «src/main/resources», необходимыми для запуска примеров.
-- [Примеры исходного кода Aspose.Email для Java API](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples) предназначены для демонстрации различных вариантов использования API.
+- Мастер **Aspose.Email Examples** позволяет вам создать/скопировать загруженные [Примеры исходного кода Aspose.Email для Java API](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples) в ваш проект. Все примеры для выбранной категории будут скопированы в папку пакета проекта "com.aspose.email.examples" вместе с необходимыми ресурсами в папке "src/main/resources", необходимыми для выполнения примеров.
+- [Примеры исходного кода Aspose.Email для Java API](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples) предназначены для демонстрации различных способов использования API.
 ## **Системные требования и поддерживаемые платформы**
 ### **Системные требования**
-- Microsoft Windows 10/8/7/Vista/2003/XP (включая 64-разрядную версию) /Linux GNOME или рабочий стол KDE/Mac OS X 10.5 или выше
-- Минимум 1 ГБ ОЗУ, рекомендуется 2 ГБ
-- 300 МБ свободного места на жестком диска+не менее 1 ГБ для кэшей
+- Microsoft Windows 10/8/7/Vista/2003/XP (включая 64-битные) / Linux GNOME или KDE desktop / Mac OS X 10.5 или выше
+- Минимум 1 ГБ ОЗУ, рекомендуется 2 ГБ ОЗУ
+- 300 МБ свободного места на жестком диске + как минимум 1 ГБ для кэширования
 - Минимальное разрешение экрана 1024x768
 - Рекомендуется JDK 1.8 или выше
-- Подключение к Интернету (рекомендуется 2 МБ или больше)
+- Подключение к Интернету (рекомендуется 2 МБ или быстрее)
 ### **Поддерживаемые платформы**
-Плагин поддерживает следующие версии ИДЕЯ INTELLIJ:
+Плагин поддерживает следующие версии IntelliJ IDEA:
 
-- 13.0.1 (версия для сообщества/окончательная версия)
-- 13.1.2 (ЛЕД/ИСПОЛЬЗОВАНИЕ)
-- 14.0.2 (ПО ФАКТУ ИСПОЛЬЗОВАНИЯ)
-- 14.1.5 (ПО ФАКТУ ИСПОЛЬЗОВАНИЯ)
-## **Downloading**
-### **Загрузка идеи IntelliJ**
-Вам необходимо сначала установить ИДЕЯ INTELLIJ CE/UE перед загрузкой **Aspose.Электронная почта Java для ИДЕЯ INTELLIJ (Maven)** plugin.
+- 13.0.1 (Community / Ultimate Edition)
+- 13.1.2  (CE / UE)
+- 14.0.2 (CE/ UE)
+- 14.1.5 (CE/ UE)
+## **Загрузка**
+### **Скачивание IntelliJ IDEA**
+Сначала вам нужно установить IntelliJ IDEA CE / UE перед загрузкой плагина **Aspose.Email Java для IntelliJ IDEA (Maven)**.
 
-Чтобы загрузить ИДЕЯ INTELLIJ
+Чтобы скачать IntelliJ IDEA
 
-1. Goto <https://www.jetbrains.com/idea/download/>
-1. Выберите запущенную ОС
-1. Нажмите «Загрузить в ЕС» или «CE».
-### **Загрузка Java Aspose.Email для плагина ИДЕЯ INTELLIJ (Maven)**
-- Плагин можно загрузить непосредственно из [URL-адрес хостинга плагина JetBrains](https://plugins.jetbrains.com/plugin/7982-aspose-email-java-for-intellij-idea-maven/) - в репозитории плагинов ИДЕЯ INTELLIJ и более поздних версиях можно установить с помощью опции IDE:
-  - Goto **File** > **Settings**...>**Plugins**
-  - Выберите»**Установить плагин с диска»**
-- Или его можно установить напрямую (без ручной загрузки с URL-адреса хостинга плагинов JetBrains) с помощью опций IDE:
-  - Goto **File** > **Settings**...>**Plugins**
-  - Select **«Просмотр репозиториев»**
-  - В поле поиска введите: «Aspose»
-  - Выберите»**Aspose.Электронная почта Java для ИДЕЯ INTELLIJ Maven**«плагин для установки.
-## **Installing**
-[Установка электронной почты Aspose.Email для ИДЕЯ INTELLIJ - Maven](/email/java/installing-and-using-aspose-email-for-intellij-idea-maven/#installing)
-## **Using**
-[Использование Aspose.Email для ИДЕЯ INTELLIJ - Maven](/email/java/installing-and-using-aspose-email-for-intellij-idea-maven/#using)
-## **Демонстрационное видео**
-Пожалуйста, проверьте [видео](https://www.youtube.com/watch?v=LXvXi19njJI&ab_channel=AsposeMarketplace) ниже вы увидите мастер проектов Aspose.Email Maven и мастер примеров Aspose.Email в действии.
-## **Поддерживайте, расширяйте и вносите свой вклад**
-### **Support**
-- Если вы хотите увидеть в плагине известные/о которых сообщается (пользователями или командой Q.A).
-- Или вы хотите сообщить о любой проблеме, обнаруженной в плагине
-- У вас есть предложения по улучшению или вы хотите сделать запрос на любую функцию
+1. Перейдите на <https://www.jetbrains.com/idea/download/>
+1. Выберите вашу операционную систему
+1. Нажмите на загрузку UE или CE.
+### **Скачивание плагина Aspose.Email Java для IntelliJ IDEA (Maven)**
+- Плагин можно скачать напрямую по [ссылке на хостинг плагинов JetBrains](https://plugins.jetbrains.com/plugin/7982-aspose-email-java-for-intellij-idea-maven/) - на репозитории плагинов IntelliJ IDEA и затем можно установить, используя вариант IDE: 
+  - Перейдите в **File** > **Settings**...>**Plugins**
+  - Выберите "**Установить плагин с диска"**
+- Либо его можно установить напрямую (без ручной загрузки с хостинга плагинов JetBrains) с помощью вариантов IDE: 
+  - Перейдите в **File** > **Settings**...>**Plugins**
+  - Выберите **"Просмотреть репозитории"**
+  - В строке поиска введите: "Aspose"
+  - Выберите для установки плагин "**Aspose.Email Java для IntelliJ IDEA Maven**".
+## **Установка**
+[Установка Aspose.Email для IntelliJ IDEA - Maven](/email/java/installing-and-using-aspose-email-for-intellij-idea-maven/#installing)
+## **Использование**
+[Использование Aspose.Email для IntelliJ IDEA - Maven](/email/java/installing-and-using-aspose-email-for-intellij-idea-maven/#using)
+## **Видеодемо**
+Пожалуйста, посмотрите [видео](https://www.youtube.com/watch?v=LXvXi19njJI&ab_channel=AsposeMarketplace) ниже, чтобы увидеть Мастер проекта Aspose.Email Maven и Мастер примеров Aspose.Email в действии.
+## **Поддержка, расширение и вклад**
+### **Поддержка**
+- Если вы хотите узнать о известных/зарегистрированных проблемах (пользователями или командой Q.A.) в этом плагине.
+- Или вы хотите сообщить о любой проблеме, которую вы нашли в плагине
+- У вас есть предложения по улучшению или вы хотите сделать запрос на добавление функции
 
-**Пожалуйста, используйте любой из следующих трекеров проблем проекта:**
+**Пожалуйста, используйте любое из следующих средств отслеживания проблем проекта:**
 
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaintellij)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-Java/issues)
-### **Расширяйте и вносите**
-**Aspose.Электронная почта Java для ИДЕЯ INTELLIJ (Maven)** Плагин имеет открытый исходный код, и его исходный код доступен на основных сайтах социального программирования, перечисленных ниже. Разработчикам рекомендуется загрузить исходный код и внести свой вклад, предложив или добавив новые функции или улучшив существующие, чтобы другие также могли воспользоваться этим.
+### **Расширение и вклад**
+**Aspose.Email Java для IntelliJ IDEA (Maven)** плагин с открытым исходным кодом, и его исходный код доступен на основных сайтах социального программирования, указанных ниже. Разработчики поощряются загружать исходный код и вносить свой вклад, предлагая или добавляя новые функции или улучшая существующие, чтобы другие тоже могли извлечь из этого выгоду.
 ### **Исходный код**
-Вы можете получить последний исходный код в одном из следующих мест
+Вы можете получить последний исходный код с одного из следующих мест
 
 - [CodePlex](https://asposeemailjavaintellij.codeplex.com)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Plugins/Aspose.Email-for-Java_for_IntelliJ%28Maven%29)

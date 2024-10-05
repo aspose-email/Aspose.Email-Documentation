@@ -1,5 +1,5 @@
 ---
-title: "Aspose.Email.NET для DNN"
+title: "Aspose.Email .NET для DNN"
 url: /ru/net/aspose-email-net-for-dnn/
 weight: 10
 type: docs

@@ -5,10 +5,10 @@ weight: 70
 type: docs
 ---
 
-## **Aspose.Email - поиск строк в PST с регистром игнорирования**
-Поиск строк в PST с использованием регистра игнорирования **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Поиск строк в PST с игнорированием регистра**
+Поиск строк в PST с игнорированием регистра с использованием **Aspose.Email Java для Python**. Используйте следующий код.
 
-**Код Python**
+**Код на Python**
 
 ```python
 
@@ -43,8 +43,8 @@ print "Total Results:"
 print coll.size()
 
 ```
-## **Загрузить рабочий код**
-Download **Поиск строк в PST с использованием регистра игнорирования (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Поиск строк в PST с игнорированием регистра (Aspose.Email)** с любого из нижеуказанных сайтов для социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

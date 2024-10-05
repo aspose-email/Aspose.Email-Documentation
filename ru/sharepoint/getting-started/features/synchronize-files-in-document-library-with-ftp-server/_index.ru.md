@@ -6,22 +6,22 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email для SharePoint включает функции синхронизации файлов в библиотеке документов с FTP-сервером. Для синхронизации можно определить следующие параметры:
+Aspose.Email для SharePoint включает функции для синхронизации файлов в библиотеке документов с FTP-сервером. Вы можете определить следующие настройки для синхронизации:
 
-- Сведения о FTP-сервере (хост, порт, имя пользователя и пароль).
+- Детали FTP-сервера (хост, порт, имя пользователя и пароль).
 - Папка на FTP-сервере для синхронизации файлов.
-- Направление передачи файлов:
-  - С SharePoint на FTP.
-  - От FTP к SharePoint.
+- Направление передачи файлов: 
+  - SharePoint на FTP.
+  - FTP на SharePoint.
 - Расписание (количество минут).
 
-{{% /alert %}}
+{{% /alert %}} 
 
-**Синхронизация файлов с помощью FTP.**
+**Синхронизировать файлы с FTP.** 
 
 ![todo:image_alt_text](synchronize-files-in-document-library-with-ftp-server_1.png)
 
 
-[Узнайте больше о синхронизации файлов с FTP-серверами](/email/sharepoint/synchronize-files-with-ftp-server/).
+[Узнать больше о синхронизации файлов с FTP-серверами](/email/sharepoint/synchronize-files-with-ftp-server/).

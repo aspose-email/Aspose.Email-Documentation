@@ -1,14 +1,14 @@
 ---
-title: "Добавление MapiCalendar в PST в Jython"
+title: "Добавление MapiCalendar в PST на Jython"
 url: /ru/java/adding-mapicalendar-to-pst-in-jython/
 weight: 20
 type: docs
 ---
 
 ## **Aspose.Email - Добавление MapiCalendar в PST**
-Чтобы добавить MapicaLendar в PST, используя **Aspose.Электронная почта Java для Mython**, просто вызовите **AddMapiCalendarToPST** модуль. Здесь вы можете увидеть пример кода.
+Чтобы добавить MapiCalendar в PST с использованием **Aspose.Email Java для Jython**, просто вызовите модуль **AddMapiCalendarToPST**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ```python
 
@@ -50,19 +50,20 @@ class AddFileToPST:
 
         pst.dispose()
 
-        print "Added file to PST"
+        print "Добавлен файл в PST"
 
 
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddFileToPST()
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление MapicaLendar в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+
+## **Скачать исполняемый код**
+Скачайте **Добавление MapiCalendar в PST (Aspose.Email)** с любого из указанных ниже сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

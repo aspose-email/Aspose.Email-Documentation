@@ -1,14 +1,14 @@
 ---
-title: "Преобразование сообщений электронной почты в Jython"
+title: "Конвертация электронных сообщений в Jython"
 url: /ru/java/converting-email-messages-in-jython/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - конвертация сообщений электронной почты**
-Для преобразования сообщений электронной почты с помощью **Aspose.Электронная почта Java для Mython**, позвоните **convert_eml_to_msg** метод **Converter** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Конвертация электронных сообщений**
+Чтобы конвертировать электронные сообщения с использованием **Aspose.Email Java для Jython**, вызовите метод **convert_eml_to_msg** модуля **Converter**. Вот пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ``` python
 
@@ -24,7 +24,7 @@ class Converter:
 
 
 
-        # Loading EML, Saving to MSG
+        # Загрузка EML, сохранение в MSG
 
         self.convert_eml_to_msg()
 
@@ -38,31 +38,31 @@ class Converter:
 
 
 
-        # Initialize and Load an existing EML file by specifying the MessageFormat
+        # Инициализация и загрузка существующего EML файла, указав формат сообщения
 
         mailMessage = MailMessage()
 
         eml = mailMessage.load(dataDir + "Message.eml")
 
-        # Save the Email message to disk in Unicode format
+        # Сохранение электронного сообщения на диск в формате Unicode
 
         saveOptions= SaveOptions
 
         eml.save(dataDir + "AnEmail.msg", saveOptions.getDefaultMsgUnicode())
 
-        # Display Status
+        # Отображение статуса
 
-        print "Converted email to msg successfully."
+        print "Электронное сообщение успешно преобразовано в msg."
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     Converter()
 
 ```
-## **Загрузить рабочий код**
-Download **Преобразование сообщений электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Конвертацию электронных сообщений (Aspose.Email)** из любого из нижеупомянутых социальных сайтов кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)
