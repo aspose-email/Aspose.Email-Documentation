@@ -1,69 +1,77 @@
----  
-title: Удалить электронные сообщения  
-type: docs  
-weight: 100  
-url: /net/delete-email-messages/  
----  
+---
+title: Удалить электронные сообщения
+type: docs
+weight: 100
+url: /net/delete-email-messages/
+---
 
-## **VSTO**  
-Ниже приведен код для удаления сообщений с использованием VSTO Outlook.  
+## **VSTO**
 
-``` cs  
+Ниже приведен код для удаления сообщений с использованием VSTO Outlook.
 
-  // Создайте класс Application и получите пространство имен  
+```cs
 
- Outlook.Application outlook = new Outlook.Application();  
+  // Создайте класс Application и получите пространство имен
 
- Outlook.NameSpace ns = outlook.GetNamespace("Mapi");  
+ Outlook.Application outlook = new Outlook.Application();
 
- object _missing = Type.Missing;  
+ Outlook.NameSpace ns = outlook.GetNamespace("Mapi");
 
- ns.Logon(_missing, _missing, false, true);  
+ object _missing = Type.Missing;
 
- // Получите информацию о папке "Входящие" в объекте типа MAPIFolder  
+ ns.Logon(_missing, _missing, false, true);
 
- Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);  
+ // Получите информацию о папке "Входящие" в объекте типа MAPIFolder
 
- Outlook.MailItem item = inbox.Items[0];  
+ Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
- item.Delete();      
+ Outlook.MailItem item = inbox.Items[0];
 
-```  
-## **Aspose.Email**  
-Ниже приведен код для удаления сообщений с использованием aspose.email для .NET.  
+ item.Delete();
 
-``` cs  
+```
 
-  string MailBoxURI = "http://MachineName/exchange/Username";  
+## **Aspose.Email**
 
- string UserName = "username";  
+Ниже приведен код для удаления сообщений с использованием aspose.email для .NET.
 
- string Password = "password";  
+```cs
 
- string Domain = "domain";  
+  string MailBoxURI = "http://MachineName/exchange/Username";
 
- // Создайте экземпляр класса ExchangeClient, указав учетные данные  
+ string UserName = "username";
 
- ExchangeClient client = new ExchangeClient(MailBoxURI, UserName, Password, Domain);  
+ string Password = "password";
 
- // Вызовите метод ListMessages, чтобы получить информацию о сообщениях из папки "Входящие"  
+ string Domain = "domain";
 
- ExchangeMessageInfoCollection msgCollection = client.ListMessages(client.MailboxInfo.InboxUri);  
+ // Создайте экземпляр класса ExchangeClient, указав учетные данные
 
- // Получите URI сообщения для удаления  
+ ExchangeClient client = new ExchangeClient(MailBoxURI, UserName, Password, Domain);
 
- string MessageURI= msgCollection[0].UniqueUri;  
+ // Вызовите метод ListMessages, чтобы получить информацию о сообщениях из папки "Входящие"
 
- // Удалите сообщение  
+ ExchangeMessageInfoCollection msgCollection = client.ListMessages(client.MailboxInfo.InboxUri);
 
- client.DeleteMessage(MessageURI);  
+ // Получите URI сообщения для удаления
 
-```  
-## **Скачать исходный код**  
-- [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)  
-- [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Delete%20Messages)  
-- [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)  
-## **Скачать работающий пример**  
-- [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)  
-- [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)  
-- [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)  
+ string MessageURI= msgCollection[0].UniqueUri;
+
+ // Удалите сообщение
+
+ client.DeleteMessage(MessageURI);
+
+```
+
+## **Скачать исходный код**
+
+- [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
+- [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Delete%20Messages)
+- [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
+
+## **Скачать работающий пример**
+
+- [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
+- [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
+- [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)
+
