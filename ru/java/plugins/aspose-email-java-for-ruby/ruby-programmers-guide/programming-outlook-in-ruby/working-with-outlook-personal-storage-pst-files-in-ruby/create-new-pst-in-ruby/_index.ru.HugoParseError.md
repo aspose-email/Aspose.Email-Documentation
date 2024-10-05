@@ -1,37 +1,41 @@
----  
-title: Создание нового PST в Ruby  
-type: docs  
-weight: 70  
-url: /java/create-new-pst-in-ruby/  
----  
+---
+title: Создание нового PST в Ruby
+type: docs
+weight: 70
+url: /java/create-new-pst-in-ruby/
+---
 
-## **Aspose.Email - Создание нового PST**  
-Чтобы создать новый PST с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **CreatePST**. Здесь вы можете увидеть пример кода.  
+## **Aspose.Email - Создание нового PST**
 
-**Код на Ruby**  
+Чтобы создать новый PST с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **CreatePST**. Здесь вы можете увидеть пример кода.
 
-``` ruby  
+**Код на Ruby**
 
- data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'  
+```ruby
 
-\# Создайте экземпляр PersonalStorage  
+ data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
-pst = Rjb::import('com.aspose.email.PersonalStorage').create(data_dir + "sample1.pst", 0)  
+\# Создайте экземпляр PersonalStorage
 
-\# Создайте папку в корне pst  
+pst = Rjb::import('com.aspose.email.PersonalStorage').create(data_dir + "sample1.pst", 0)
 
-pst.getRootFolder().addSubFolder("myInbox")  
+\# Создайте папку в корне pst
 
-\# Добавьте сообщение в новосозданную папку  
+pst.getRootFolder().addSubFolder("myInbox")
 
-mapi_message = Rjb::import('com.aspose.email.MapiMessage')  
+\# Добавьте сообщение в новосозданную папку
 
-pst.getRootFolder().getSubFolder("myInbox").addMessage(mapi_message.fromFile(data_dir + "Message.msg"))  
+mapi_message = Rjb::import('com.aspose.email.MapiMessage')
 
-puts "PST успешно создан."  
+pst.getRootFolder().getSubFolder("myInbox").addMessage(mapi_message.fromFile(data_dir + "Message.msg"))
 
-```  
-## **Скачать работающий код**  
-Скачайте **Создание нового PST (Aspose.Email)** с любого из нижеупомянутых сайтов социального программирования:  
+puts "PST успешно создан."
 
-- [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/createpst.rb)  
+```
+
+## **Скачать работающий код**
+
+Скачайте **Создание нового PST (Aspose.Email)** с любого из нижеупомянутых сайтов социального программирования:
+
+- [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/createpst.rb)
+
