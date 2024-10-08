@@ -18,6 +18,6 @@ variables:
 clone_repo:
   stage: test-translation
   script:
-    - git clone https://oauth2:$GITLAB_ACCESS_TOKEN@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
+    - git clone https://marat.gumerof:$GITLAB_ACCESS_TOKEN@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
     - ls -la
   when: manual
