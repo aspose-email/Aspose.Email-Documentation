@@ -14,11 +14,10 @@ variables:
   NUKE_TELEMETRY_OPTOUT: 1
   DOTNET_NOLOGO: 1
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
-  GITLAB_ACCESS_TOKEN: $GITLAB_ACCESS_TOKEN
 
 clone_repo:
   stage: test-translation
   script:
-    - git clone https://gitlab-ci-token:$CI_JOB_TOKEN@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
+    - git clone https://oauth2:$GITLAB_ACCESS_TOKEN@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
     - ls -la
   when: manual
