@@ -6,8 +6,6 @@ default:
     entrypoint: ["/bin/sh", "-c"]
   before_script:
     - apk update && apk upgrade && apk add --no-cache nodejs npm bash curl perl git
-    - echo "echo \$GITLAB_ACCESS_TOKEN" > /tmp/git-askpass.sh
-    - chmod +x /tmp/git-askpass.sh
 
 stages:
   - test-translation
@@ -16,12 +14,11 @@ variables:
   NUKE_TELEMETRY_OPTOUT: 1
   DOTNET_NOLOGO: 1
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
-  GIT_ASKPASS: /tmp/git-askpass.sh
   GITLAB_ACCESS_TOKEN: $GITLAB_ACCESS_TOKEN
 
 clone_repo:
   stage: test-translation
   script:
-    - git clone https://git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
+    - git clone https://oauth2:$GITLAB_ACCESS_TOKEN@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
     - ls -la
   when: manual
