@@ -1,24 +1,27 @@
 ---
-title: "Получение списка сообщений из папки "Входящие" почтового ящика Microsoft Exchange Server"
+title: 'Получение списка сообщений из папки "Входящие" почтового ящика Microsoft Exchange Server'
 url: /ru/java/getting-list-of-messages-from-inbox-folder-of-microsoft-exchange-server-mailbox/
 weight: 50
 type: docs
 ---
 
-
-{{% alert color="primary" %}} 
+{{% alert color="primary" %}}
 
 Наши советы по миграции показывают, как продукты Aspose могут быть использованы для улучшения ваших приложений и освобождения от зависимости от традиционной автоматизации.
 
 Этот совет по миграции подключается к почтовому ящику Microsoft Exchange Server и получает список сообщений из папки "Входящие". Примеры кода ниже демонстрируют, как использовать [Microsoft Office Interop](#using-microsoft-office-interop) для получения списка сообщений, прежде чем сделать то же самое, используя классы из [Aspose.Email Exchange](#using-asposeemail), на Java.
 
-{{% /alert %}} 
+{{% /alert %}}
+
 ## **Использование Microsoft Office Interop**
+
 Для использования объектов автоматизации Office для Microsoft Outlook добавьте ссылки на библиотеки Microsoft Office и Microsoft Office Interop для Outlook в проект. Microsoft Office Outlook также должен быть установлен на машине, на которой выполняется код.
+
 ### **Примеры программирования**
+
 **C#**
 
-~~~cs
+```cs
 
  // Создаем класс Application и получаем пространство имен
 
@@ -49,14 +52,17 @@ foreach (Outlook.MailItem mail in inbox.Items)
 }
 
 
-~~~
+```
+
 ## **Использование Aspose.Email**
+
 Следующие фрагменты кода выполняют ту же задачу, что и [фрагменты выше](#using-microsoft-office-interop), но используют Aspose.Email.
 
 Однако Microsoft Outlook не нужно устанавливать на машине, где выполняется код. Ссылаясь на Aspose.Email, чтобы успешно собрать и запустить проект.
+
 ### **Примеры программирования**
 
-~~~java
+```java
 
 // Создание экземпляра класса IEWSClient с указанием учетных данных
 try (IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/EWS/Exchange.asmx", "username", "password", "domain")) {
@@ -75,4 +81,5 @@ try (IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/E
     }
 }
 
-~~~
+```
+
