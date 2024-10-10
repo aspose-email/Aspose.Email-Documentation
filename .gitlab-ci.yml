@@ -17,8 +17,9 @@ variables:
 
 test:
   stage: test-translation
+  rules:
+    - if: '$CI_MERGE_REQUEST_TITLE =~ /^Gai18n:.*\/Ready for testing$/'
   script:
     - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
     - chmod u+x docs-content-tester/build.sh
     - cd docs-content-tester && ./build.sh Build
-  when: manual
