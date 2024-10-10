@@ -15,9 +15,10 @@ variables:
   DOTNET_NOLOGO: 1
   DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
-clone_repo:
+test:
   stage: test-translation
   script:
     - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
-    - ls -la
+    - chmod u+x docs-content-tester/build.sh
+    - cd docs-content-tester && ./build.sh Build
   when: manual
