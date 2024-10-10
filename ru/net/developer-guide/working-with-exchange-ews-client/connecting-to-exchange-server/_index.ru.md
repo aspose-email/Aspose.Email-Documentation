@@ -1,19 +1,19 @@
 ---
-title: "Подключение к серверу Exchange"
-url: /ru/net/connecting-to-exchange-server/
+title: "Подключение к Exchange Server"
+url: /ru/net/подключение-к-exchange-server/
 weight: 10
 type: docs
 ---
 
 
-Чтобы подключиться к серверам Exchange 2007, 2010 и 2013 с помощью веб-службы Exchange, Aspose.Email предоставляет [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) интерфейс, реализующий [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) класс. [EWSClient.GetEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclient/) метод создает экземпляр и возвращает [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) объект, который в дальнейшем используется для выполнения операций, связанных с почтовым ящиком Exchange и другими папками. В этой статье показано, как создавать экземпляры объектов [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
+Для подключения к Exchange Server 2007, 2010 и 2013 с использованием Exchange Web Service Aspose.Email предоставляет интерфейс [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/), который реализует класс [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/). Метод [EWSClient.GetEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclient/) создает и возвращает объект [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/), который далее используется для выполнения операций, связанных с почтовым ящиком Exchange и другими папками. В этой статье показано, как создавать объекты [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
 
-## **Подключение к серверу Exchange с помощью EWS**
+## **Подключение к Exchange Server с использованием EWS**
 
-В следующем фрагменте кода показано, как подключиться с помощью веб-службы Exchange (EWS).
+Следующий фрагмент кода показывает, как подключиться с использованием Exchange Web Service (EWS).
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных, пожалуйста, посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 private static IEWSClient GetExchangeEWSClient()
 {
     const string mailboxUri = "https://outlook.office365.com/ews/exchange.asmx";
@@ -26,95 +26,95 @@ private static IEWSClient GetExchangeEWSClient()
 }
 ```
 
-## **Подключение к серверу Exchange с помощью протокола IMAP**
+## **Подключение к Exchange Server с использованием IMAP**
 
-Microsoft Exchange Server поддерживает протокол IMAP для доступа к элементам в почтовом ящике. Используйте Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) класс для подключения к серверу Exchange по протоколу IMAP. Для получения дополнительной информации о [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) класс. Во-первых, убедитесь, что службы IMAP включены на вашем сервере Exchange:
+Microsoft Exchange Server поддерживает протокол IMAP для доступа к элементам в почтовом ящике. Используйте класс Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) для подключения к Exchange Server с использованием протокола IMAP. Для получения дополнительной информации о классе [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) сначала убедитесь, что службы IMAP включены для вашего Exchange Server:
 
-1. Откройте панель управления.
-1. Перейдите в раздел «Инструменты администратора», затем «Службы».
-1. Проверьте состояние службы Microsoft Exchange IMAP4.
-1. Если он еще не запущен, включите/запустите его.
+1. Откройте Панель управления.
+1. Перейдите в Административные инструменты, затем в Службы.
+1. Проверьте статус службы Microsoft Exchange IMAP4.
+1. Если она еще не запущена, включите/запустите ее.
 
-В следующем фрагменте кода показано, как подключать и отображать сообщения из папки «Входящие» на сервере Microsoft Exchange с использованием протокола IMAP.
+Следующий фрагмент кода показывает, как подключиться и получить список сообщений из папки "Входящие" Microsoft Exchange Server, используя протокол IMAP.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// Connect to Exchange Server using ImapClient class
+// Для полных примеров и файлов данных, пожалуйста, посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Подключение к Exchange Server с использованием класса ImapClient
 ImapClient imapClient = new ImapClient("ex07sp1", "Administrator", "Evaluation1");
 imapClient.SecurityOptions = SecurityOptions.Auto;
 
-// Select the Inbox folder
+// Выбор папки "Входящие"
 imapClient.SelectFolder(ImapFolderInfo.InBox);
 
-// Get the list of messages
+// Получение списка сообщений
 ImapMessageInfoCollection msgCollection = imapClient.ListMessages();
 foreach (ImapMessageInfo msgInfo in msgCollection)
 {
     Console.WriteLine(msgInfo.Subject);
 }
-// Disconnect from the server
+// Отключение от сервера
 imapClient.Dispose();
 ```
 
-В следующем фрагменте кода показано, как использовать SSL.
+Следующий фрагмент кода показывает, как использовать SSL.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных, пожалуйста, посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 public static void Run()
-{           
-    // Connect to Exchange Server using ImapClient class
+{            
+    // Подключение к Exchange Server с использованием класса ImapClient
     ImapClient imapClient = new ImapClient("ex07sp1", 993, "Administrator", "Evaluation1", new RemoteCertificateValidationCallback(RemoteCertificateValidationHandler));
     imapClient.SecurityOptions = SecurityOptions.SSLExplicit;
 
-    // Select the Inbox folder
+    // Выбор папки "Входящие"
     imapClient.SelectFolder(ImapFolderInfo.InBox);
 
-    // Get the list of messages
+    // Получение списка сообщений
     ImapMessageInfoCollection msgCollection = imapClient.ListMessages();
     foreach (ImapMessageInfo msgInfo in msgCollection)
     {
         Console.WriteLine(msgInfo.Subject);
     }
-    // Disconnect from the server
-    imapClient.Dispose();  
+    // Отключение от сервера
+    imapClient.Dispose();   
 }
 
-// Certificate verification handler
+// Обработчик проверки сертификата
 private static bool RemoteCertificateValidationHandler(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
 {
-    return true; // ignore the checks and go ahead
+    return true; // игнорировать проверки и продолжить
 }
 ```
 
-После подключения к серверу Exchange по протоколу IMAP и получения [IMapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/), вы можете получить [MessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/messageinfo/) объект. В следующем фрагменте кода показано, как использовать порядковый номер [MessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/messageinfo/) объект для сохранения определенного сообщения.
+После подключения к Exchange Server с использованием IMAP и получения [IMapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/) вы можете получить объект [MessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/messageinfo/). Следующий фрагмент кода показывает, как использовать номер последовательности объекта [MessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/messageinfo/) для сохранения конкретного сообщения.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-// Select the Inbox folder
+// Для полных примеров и файлов данных, пожалуйста, посетите https://github.com/aspose-email/Aspose.Email-for-.NET
+// Выбор папки "Входящие"
 imapClient.SelectFolder(ImapFolderInfo.InBox);
-// Get the list of messages
+// Получение списка сообщений
 ImapMessageInfoCollection msgCollection = imapClient.ListMessages();
 foreach (ImapMessageInfo msgInfo in msgCollection)
 {
-    // Fetch the message from inbox using its SequenceNumber from msgInfo
+    // Получение сообщения из входящих по его SequenceNumber из msgInfo
     MailMessage message = imapClient.FetchMessage(msgInfo.SequenceNumber);
 
-    // Save the message to disc now
+    // Сохранение сообщения на диск
     message.Save(dataDir + msgInfo.SequenceNumber + "_out.msg", SaveOptions.DefaultMsgUnicode);
 }
 ```
 
-### Настройка предпочтительной версии протокола шифрования
+### Установка предпочтительной версии протокола шифрования
 
-Для поддерживаемых операций EWS использует транспортный протокол HTTPS. Шифрование обеспечивается **SSL/TLS** протоколы. Эти протоколы реализованы фреймворком.NET и могут отличаться в зависимости от текущей версии платформы.NET.
+EWS использует протокол передачи HTTPS для поддерживаемых операций. Шифрование обеспечивается протоколами **SSL/TLS**. Эти протоколы реализованы в .NET Framework и могут различаться в зависимости от текущей версии .NET Framework.
 
-Установить **SSL/TLS** версия использует следующий код:
+Чтобы установить версию **SSL/TLS**, используйте следующий код:
 
             var client = new ImapClient("some.host");
             client.SupportedEncryption = EncryptionProtocols.Tls13;
-or
+или
 
             var client = new ImapClient("some.host");
             client.SetSupportedEncryptionUnsafe(EncryptionProtocols.Tls13);
 
-Обратите внимание: если указанный EncryptionProtocol не поддерживается текущей версией платформы.NET, [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) свойство понижает протокол шифрования до поддерживаемого уровня, а [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) метод генерирует исключение.
+Обратите внимание, если указанный протокол шифрования не поддерживается текущей версией .NET Framework, свойство [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) понижает протокол шифрования до поддерживаемого уровня, а метод [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) вызывает исключение.

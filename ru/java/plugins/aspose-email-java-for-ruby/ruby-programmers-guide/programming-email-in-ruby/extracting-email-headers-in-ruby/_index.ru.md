@@ -1,14 +1,14 @@
 ---
-title: "Извлечение заголовков писем в Ruby"
+title: "Извлечение заголовков электронной почты в Ruby"
 url: /ru/java/extracting-email-headers-in-ruby/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Извлечение заголовков писем**
-Извлечение заголовков электронных писем с помощью **Aspose.Электронная почта Java для Ruby**, просто вызовите **ExtractEmailHeaders** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Извлечение заголовков электронной почты**
+Чтобы извлечь заголовки электронной почты с помощью **Aspose.Email Java for Ruby**, просто вызовите модуль **ExtractEmailHeaders**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Ruby Код**
 
 ``` ruby
 
@@ -16,13 +16,13 @@ type: docs
 
 
 
-\# Initialize and Load an existing EML file by specifying the MessageFormat
+\# Инициализация и загрузка существующего EML файла, указав формат сообщения
 
 message = Rjb::import('com.aspose.email.MailMessage').load(data_dir + "Message.eml")
 
-puts "Printing all Headers:"
+puts "Вывод всех заголовков:"
 
-\# Print out all the headers
+\# Вывод всех заголовков
 
 i=0
 
@@ -32,10 +32,10 @@ while i < message.getHeaders().getCount()
 
     i +=1
 
-end
+end 
 
 ```
-## **Загрузить рабочий код**
-Download **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеупомянутых социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/extractemailheaders.rb)

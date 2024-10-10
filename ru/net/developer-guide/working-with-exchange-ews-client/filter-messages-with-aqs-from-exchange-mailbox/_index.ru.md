@@ -1,30 +1,30 @@
 ---
-title: "Фильтрация сообщений из почтового ящика Exchange с помощью AQS"
+title: "Фильтрация сообщений с помощью AQS из почтового ящика Exchange"
 url: /ru/net/filter-messages-with-aqs-from-exchange-mailbox/
 weight: 35
 type: docs
 ---
 
-[Расширенный синтаксис запросов (AQS)](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-perform-an-aqs-search-by-using-ews-in-exchange) это синтаксис запроса, используемый Exchange в качестве альтернативы фильтрам поиска для выражения критериев поиска. AQS — это более гибкий способ поиска и выдачи результатов поиска по всем часто используемым полям элементов. AQS также удобен в использовании, прост в понимании и быстро осваивается. Использование AQS подходит для поиска сообщений по вложениям и получателям.
+[Расширенный синтаксис запросов (AQS)](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-perform-an-aqs-search-by-using-ews-in-exchange) — это синтаксис запросов, используемый Exchange в качестве альтернативы поисковым фильтрам для выражения критериев поиска. AQS является более гибким способом выполнения поисков и предоставления результатов поиска для всех общепринятых полей элементов. AQS также удобен для пользователя, легко воспринимается и быстро осваивается. Использование AQS подходит для поиска сообщений по вложениям и получателям.
 
-## Создание поискового запроса с помощью AQS
+## Создание запроса поиска с помощью AQS
 
-Вы можете создать поисковый запрос с помощью AQS следующим образом:
+Вы можете создать запрос поиска с помощью AQS следующим образом:
 
-- [`ExchangeAdvancedSyntaxQueryBuilder`](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), который представляет собой конструктор поисковых выражений на основе расширенного синтаксиса запросов (AQS). Или
+- [`ExchangeAdvancedSyntaxQueryBuilder`](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), который представляет собой строитель поискового выражения, основанный на Расширенном синтаксисе запросов (AQS). Или
 - [`ExchangeAdvancedSyntaxMailQuery`](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/), который создает строку AQS непосредственно на основе поддерживаемых ключевых слов.
 
-## Создайте поисковый запрос с помощью конструктора запросов
+## Создание запроса поиска с использованием конструктора запросов
 
-Чтобы создать поисковый запрос с помощью [ExchangeAdvancedSyntaxQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/) вам необходимо:
+Чтобы создать запрос поиска с помощью [ExchangeAdvancedSyntaxQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/) вам необходимо:
 
-- создайте экземпляр [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) using [GetEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclient/) method
+- создать экземпляр [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) с использованием метода [GetEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclient/)
 
-- создайте экземпляр [ExchangeAdvancedSyntaxQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/exchangeadvancedsyntaxquerybuilder/) и задайте необходимые свойства для построения запроса.
+- создать экземпляр [ExchangeAdvancedSyntaxQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/exchangeadvancedsyntaxquerybuilder/) и установить необходимые свойства для построения запроса.
 
-- call [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) or [ListItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listitems/) метод и пропуск [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) экземпляр, возвращенный [GetQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/getquery/) метод, как один из его параметров.
+- вызвать метод [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) или [ListItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listitems/) и передать экземпляр [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/), возвращаемый методом [GetQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/getquery/), в качестве одного из его параметров.
 
-В приведенном ниже примере кода показано, как можно выполнить указанные выше шаги:
+Пример кода ниже показывает, как можно осуществить вышеперечисленные шаги:
 
 ```csharp
 using (var client = EWSClient.GetEWSClient(...))
@@ -38,17 +38,17 @@ using (var client = EWSClient.GetEWSClient(...))
 }
 ```
 
-## Создайте поисковый запрос напрямую с помощью AQS:
+## Создание запроса поиска непосредственно с использованием AQS:
 
-Чтобы создать поисковый запрос с помощью [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/) вам необходимо:
+Чтобы создать запрос поиска с помощью [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxmailquery/#constructors) вам необходимо:
 
-- создайте экземпляр [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) using [GetEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclient/) method
+- создать экземпляр [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) с использованием метода [GetEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclient/)
 
-- создайте экземпляр [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxmailquery/#constructors) и передайте строку AQS. См. [описание синтаксиса](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-perform-an-aqs-search-by-using-ews-in-exchange).
+- создать экземпляр [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxmailquery/#constructors) и передать строку AQS. См. [описание синтаксиса](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-perform-an-aqs-search-by-using-ews-in-exchange).
 
-- call [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) or [ListItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listitems/) метод и пропуск [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/) экземпляр в качестве одного из его параметров.
+- вызвать метод [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) или [ListItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listitems/) и передать экземпляр [ExchangeAdvancedSyntaxMailQuery](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeadvancedsyntaxquerybuilder/) в качестве одного из его параметров.
 
-В приведенном ниже примере кода показано, как можно выполнить указанные выше шаги:
+Пример кода ниже показывает, как можно осуществить вышеперечисленные шаги:
 
 ```csharp
 using (var client = EWSClient.GetEWSClient(...))

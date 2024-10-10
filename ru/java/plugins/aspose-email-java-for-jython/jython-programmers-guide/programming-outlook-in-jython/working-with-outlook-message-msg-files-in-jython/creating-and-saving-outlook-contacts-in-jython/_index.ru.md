@@ -5,10 +5,10 @@ weight: 10
 type: docs
 ---
 
-## **Aspose.Email - создание и сохранение контактов Outlook**
-Для создания контактов Outlook с помощью **Aspose.Электронная почта Java для Mython**, просто вызовите **CreateOutlookContact** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Создание и сохранение контактов Outlook**
+Чтобы создать контакты Outlook с использованием **Aspose.Email Java для Jython**, просто вызовите модуль **CreateOutlookContact**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ```python
 
@@ -36,17 +36,13 @@ class CreateOutlookContact:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingOutlook/WorkingWithOutlookMessageFiles/CreateOutlookContact/'
-
-
 
         contact = MapiContact()
 
-        # Set different properties of this Contact Item.
+        # Устанавливаем различные свойства этого элемента контакта.
 
-        # Set Name properties using MapiContactNamePropertySet
+        # Устанавливаем свойства имени, используя MapiContactNamePropertySet
 
         name_prop_set = MapiContactNamePropertySet()
 
@@ -56,11 +52,11 @@ class CreateOutlookContact:
 
         contact.setNameInfo(name_prop_set)
 
-        # Set professional properties using MapiContactProfessionalPropertySet
+        # Устанавливаем профессиональные свойства, используя MapiContactProfessionalPropertySet
 
         prof_prop_set = MapiContactProfessionalPropertySet()
 
-        prof_prop_set.setTitle("Account Representative")
+        prof_prop_set.setTitle("Представитель по работе с клиентами")
 
         prof_prop_set.setCompanyName("Contoso Ltd.")
 
@@ -68,7 +64,7 @@ class CreateOutlookContact:
 
         contact.setProfessionalInfo(prof_prop_set)
 
-        # Telephones
+        # Телефоны
 
         telephone = MapiContactTelephonePropertySet()
 
@@ -78,7 +74,7 @@ class CreateOutlookContact:
 
         telephone.setBusinessTelephoneNumber("(831) 758-7285")
 
-        telephone.setCallbackTelephoneNumber("(831) 758-7321 (After hours")
+        telephone.setCallbackTelephoneNumber("(831) 758-7321 (После рабочего времени")
 
         telephone.setCarTelephoneNumber("(831) 758-7201")
 
@@ -106,7 +102,7 @@ class CreateOutlookContact:
 
         contact.setTelephones(telephone)
 
-        # Set Physical Address using MapiContactPhysicalAddress and MapiContactPhysicalAddressPropertySet
+        # Устанавливаем физический адрес, используя MapiContactPhysicalAddress и MapiContactPhysicalAddressPropertySet
 
         phys_addrss = MapiContactPhysicalAddress()
 
@@ -118,7 +114,7 @@ class CreateOutlookContact:
 
         contact.setPhysicalAddresses(phys_addr_prop_set)
 
-        # Set email information using MapiContactElectronicAddress and MapiContactElectronicAddressPropertySet
+        # Устанавливаем информацию об электронной почте, используя MapiContactElectronicAddress и MapiContactElectronicAddressPropertySet
 
         email = MapiContactElectronicAddress()
 
@@ -138,19 +134,15 @@ class CreateOutlookContact:
 
         contact.save(dataDir + "OutlookContact.vcf", contactSaveFormat.VCard)
 
-        print "Created outlook contact successfully."
+        print "Контакт Outlook успешно создан."
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     CreateOutlookContact()
 
 ```
-## **Загрузить рабочий код**
-Download **Создание и сохранение контактов Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать код для запуска**
+Скачать **Создание и сохранение контактов Outlook (Aspose.Email)** с любого из следующих сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

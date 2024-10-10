@@ -8,37 +8,37 @@ type: docs
 
 ## **Работа с MapiCalendar**
 
-Класс MapicaLendar в Aspose.Email предоставляет методы и атрибуты для установки различных свойств элемента календаря. В этой статье представлены примеры кода для:
+Класс MapiCalendar библиотеки Aspose.Email предоставляет методы и атрибуты для установки различных свойств элемента календаря. В этой статье приведены примеры кода для:
 
 - [**Работа с MapiCalendar**](#working-with-mapicalendar)
   - [**Создание и сохранение элементов календаря**](#creating-and-saving-calendar-items)
   - [**Сохранение элемента календаря в формате MSG**](#saving-the-calendar-item-as-msg)
-  - [**Добавление экранного напоминания в календарь**](#adding-display-reminder-to-a-calendar)
-  - [**Добавление звукового напоминания в календарь**](#adding-audio-reminder-to-a-calendar)
-  - [**Добавление/извлечение вложений из файлов календаря**](#addretrieve-attachments-from-calendar-files)
-  - [**Статус получателей приглашения на собрание**](#status-of-recipients-from-a-meeting-request)
-  - [**Создание часового пояса Mapicalend из стандартного часового пояса**](#create-mapicalendartimezone-from-standard-timezone)
-- [**Настройка напоминания с созданной встречей**](#setting-reminder-with-the-created-appointment)
-  - [**Настройка напоминания путем добавления тегов**](#setting-a-reminder-by-adding-tags)
-- [**Преобразуйте EML встречи в MSG с помощью HTML-текста**](#convert-appointment-eml-to-msg-with-html-body)
- 
+  - [**Добавление визуального напоминания в календарь**](#adding-display-reminder-to-a-calendar)
+  - [**Добавление аудионапоминания в календарь**](#adding-audio-reminder-to-a-calendar)
+  - [**Добавление/получение вложений из файлов календаря**](#addretrieve-attachments-from-calendar-files)
+  - [**Статус получателей из запроса на встречу**](#status-of-recipients-from-a-meeting-request)
+  - [**Создание MapiCalendarTimeZone из стандартного часового пояса**](#create-mapicalendartimezone-from-standard-timezone)
+- [**Настройка напоминания с созданным событием**](#setting-reminder-with-the-created-appointment)
+  - [**Настройка напоминания с помощью добавления тегов**](#setting-a-reminder-by-adding-tags)
+- [**Преобразование EML события в MSG с HTML телом**](#convert-appointment-eml-to-msg-with-html-body)
+  
 ### **Создание и сохранение элементов календаря**
 
-В следующем фрагменте кода показано, как создать и сохранить элемент календаря в формате ICS.
+Следующий фрагмент кода показывает, как создать и сохранить элемент календаря в формате ICS.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreateAndSaveCalendaritems-CreateAndSaveCalendaritems.cs" >}}
 
 ### **Сохранение элемента календаря в формате MSG**
 
-В следующем фрагменте кода показано, как сохранить элемент календаря в формате MSG.
+Следующий фрагмент кода показывает, как сохранить элемент календаря в формате MSG.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-SavingTheCalendarItemAsMSG-SavingTheCalendarItemAsMSG.cs" >}}
 
-### **Настройка идентификатора продукта при сохранении MapicaLendar в ICS**
+### **Настройка идентификатора продукта при сохранении MapiCalendar в ICS**
 
-The [ProductIdentifier](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/productidentifier/) собственность [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/#mapicalendaricssaveoptions-class) класс используется для сохранения элемента календаря MAPI в файл iCalendar (ICS) с сохранением исходной информации о дате и времени, а также пользовательского идентификатора продукта. Свойство указывает идентификатор продукта, создавшего объект iCalendar.
+Свойство [ProductIdentifier](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/productidentifier/) класса [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/#mapicalendaricssaveoptions-class) используется для сохранения элемента MAPI календаря в файле iCalendar (ICS), сохраняя оригинальную информацию о дате и времени, а также пользовательский идентификатор продукта. Свойство указывает идентификатор продукта, который создал объект iCalendar.
 
-В следующем примере кода показано, как работать с данными iCalendar (ICS) в объекте календаря MAPI:
+Следующий пример кода показывает, как работать с данными iCalendar (ICS) в объекте MAPI календаря:
 
 ```cs
 var icsSaveOptions = new MapiCalendarIcsSaveOptions
@@ -53,67 +53,67 @@ mapiCalendar.Save("my.ics", icsSaveOptions);
 
 Класс CalendarReader позволяет легко обрабатывать события календаря. Следующие свойства и метод позволяют работать с несколькими событиями:
 
-- **CalendarReader.Count** - Свойство Count класса CalendarReader позволяет получить количество компонентов (событий) Vevent, присутствующих в календаре, что упрощает отслеживание общего количества событий.
-- **CalendarReader.IsMultiEvents** - Это свойство определяет, содержит ли календарь несколько событий. Оно предоставляет логическое значение, указывающее, содержит ли календарь более одного события, что помогает идентифицировать календари с одним или несколькими событиями.
-- **CalendarReader.Method** - Свойство Method получает тип метода iCalendar, связанный с объектом календаря. Оно возвращает тип метода, например «REQUEST», «PUBLISH» или «CANCEL», что позволяет получить ценную информацию о назначении календаря.
+- **CalendarReader.Count** - Свойство Count класса CalendarReader позволяет получить количество компонентов Vevent (событий), присутствующих в календаре, что упрощает отслеживание общего числа событий.
+- **CalendarReader.IsMultiEvents** - Это свойство определяет, содержит ли календарь несколько событий. Оно возвращает булево значение, указывающее, содержит ли календарь более одного события, что помогает выявить календари с одиночными или множественными событиями.
+- **CalendarReader.Method** - Свойство Method получает тип метода iCalendar, связанный с объектом календаря. Оно возвращает тип метода, такой как “REQUEST,” “PUBLISH,” или “CANCEL,” предоставляя ценную информацию о назначении календаря.
 - **CalendarReader.Version** - Получает версию iCalendar.
-- **CalendarReader.LoadAsMultiple()** Этот метод позволяет загружать список событий из календаря, содержащего несколько событий. Он возвращает список объектов Appointment, что обеспечивает легкий доступ к каждому событию и его обработку по отдельности.
+- **CalendarReader.LoadAsMultiple()** Этот метод позволяет загрузить список событий из календаря, содержащего несколько событий. Он возвращает список объектов Appointment, что позволяет легко получать доступ и обрабатывать каждое событие индивидуально.
 
-В следующем примере кода показано, как можно реализовать эти возможности в своем проекте:
+Следующий пример кода демонстрирует, как вы можете реализовать эти возможности в вашем проекте:
 
 ```cs
 var reader = new CalendarReader(fileName);
-Console.WriteLine("Calendar contains " + reader.Count + " events");
-Console.WriteLine("The Version of the calendar is " + reader.Version);
-Console.WriteLine("The Method of the calendar is " + reader.Method);
-Console.WriteLine("Is calendar contains contains multiple events? - " + reader.IsMultiEvents);
+Console.WriteLine("Календарь содержит " + reader.Count + " событий");
+Console.WriteLine("Версия календаря " + reader.Version);
+Console.WriteLine("Метод календаря " + reader.Method);
+Console.WriteLine("Содержит ли календарь несколько событий? - " + reader.IsMultiEvents);
 List<Appointment> appointments = reader.LoadAsMultiple();
 ```
 
-### **Добавление экранного напоминания в календарь**
+### **Добавление визуального напоминания в календарь**
 
-В следующем фрагменте кода показано, как добавить экранное напоминание в календарь.
+Следующий фрагмент кода показывает, как добавить визуальное напоминание в календарь.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddDisplayReminderToACalendar-AddDisplayReminderToACalendar.cs" >}}
 
-### **Добавление звукового напоминания в календарь**
+### **Добавление аудионапоминания в календарь**
 
-В следующем фрагменте кода показано, как добавить звуковое напоминание в календарь.
+Следующий фрагмент кода показывает, как добавить аудионапоминание в календарь.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddAudioReminderToCalendar-AddAudioReminderToCalendar.cs" >}}
 
-### **Добавление/извлечение вложений из файлов календаря**
+### **Добавление/получение вложений из файлов календаря**
 
-В следующем фрагменте кода показано, как добавлять/извлекать вложения из файлов календаря.
+Следующий фрагмент кода показывает, как добавить/получить вложения из файлов календаря.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ManageAttachmentsFromCalendarFiles-GetAttachmentsFromCalendar.cs" >}}
 
-### **Статус получателей приглашения на собрание**
+### **Статус получателей из запроса на встречу**
 
-В следующем фрагменте кода показано, как показать статус получателей приглашения на собрание.
+Следующий фрагмент кода показывает, как отобразить статус получателей из запроса на встречу.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-DisplayRecipientsStatusFromMeetingRequest-DisplayRecipientsStatusFromMeetingRequest.cs" >}}
 
-### **Создание часового пояса Mapicalend из стандартного часового пояса**
+### **Создание MapiCalendarTimeZone из стандартного часового пояса**
 
-В следующем фрагменте кода показано, как создать MapicaLendaTimeZone из стандартного часового пояса.
+Следующий фрагмент кода показывает, как создать MapiCalendarTimeZone из стандартного часового пояса.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreateMapiCalendarTimeZoneFromStandardTimezone-CreateMapiCalendarTimeZoneFromStandardTimezone.cs" >}}
 
-## **Настройка напоминания с созданной встречей**
+## **Настройка напоминания с созданным событием**
 
-Напоминание можно добавить при создании встречи. Эти сигналы могут срабатывать по разным критериям, например, за n минут до начала расписания и повторяться n раз с интервалом n раз. Для создания этих триггеров можно использовать разные теги в скрипте, прилагаемом к командам BEGIN:VALARM и END:VALARM во время встречи. Существует несколько вариантов, в которых напоминание можно установить во время встречи.
+Напоминание может быть добавлено при создании события. Эти будильники могут срабатывать по разным критериям, например за n минут до начала расписания, повторять n раз с интервалами в n. Различные теги могут использоваться для создания этих триггеров в скрипте, заключенном между BEGIN:VALARM и END:VALARM внутри события. Существует множество вариантов настройки напоминания на событие.
 
-### **Настройка напоминания путем добавления тегов**
+### **Настройка напоминания с помощью добавления тегов**
 
-В следующем фрагменте кода показано, как настроить напоминание, добавляя теги.
+Следующий фрагмент кода показывает, как установить напоминание, добавив теги.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-SetReminderByAddingTags-SetReminderByAddingTags.cs" >}}
 
-## **Преобразуйте EML встречи в MSG с помощью HTML-текста**
+## **Преобразование EML события в MSG с HTML телом**
 
-Начиная с версии 19.3, Aspose.Email предоставляет возможность конвертировать EML встречи в MSG, сохраняя при этом текст встречи в формате HTML. Aspose.Email предоставляет [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) свойство, значение которого по умолчанию равно **true.** Когда значение [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) настроен на **true**, текст записи преобразуется в формат RTF. Чтобы сохранить формат текста встречи в формате HTML, задайте значение [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) to **false.**
+Начиная с версии 19.3, Aspose.Email предоставляет возможность преобразовать EML события в MSG, сохраняя HTML тело события. Aspose.Email предоставляет свойство [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/), которое имеет значение по умолчанию **true.** Когда значение [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) установлено в **true**, тело события преобразуется в формат RTF. Чтобы сохранить формат тела события в формате HTML, установите значение [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) в **false.**
 
-В следующем примере показано использование [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) свойство сохранять формат тела встречи в формате HTML.
+Следующий пример демонстрирует использование [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) для сохранения формата тела события в формате HTML.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Outlook-ConvertAppointmentEMLToMSGWithHTMLBody-1.cs" >}}

@@ -1,22 +1,22 @@
 ---
-title: "Прочитайте файл шаблона Outlook OFT"
+title: "Чтение файла шаблона Outlook OFT"
 url: /ru/java/read-outlook-template-file-oft/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - чтение шаблона Outlook OFT**
-Aspose.Email's [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) класс можно использовать для загрузки файла шаблона Microsoft Outlook (OFT). После загрузки шаблона Outlook в экземпляр класса MailMessage вы можете обновить свойства отправителя, получателя, текст, тему и другие свойства.
+## **Aspose.Email - Чтение шаблона Outlook OFT**
+Класс Aspose.Email's [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) может быть использован для загрузки файла шаблона Microsoft Outlook (OFT). Как только шаблон Outlook загружен в экземпляр класса MailMessage, вы можете обновить информацию о отправителе, получателе, теле письма, теме и других свойствах.
 
 **Java**
 
 ``` java
 
- // Load the Outlook template (OFT) file in MailMessage's instance
+ // Загрузить файл шаблона Outlook (OFT) в экземпляр MailMessage
 
 MailMessage message = MailMessage.load(dataDir + "sample.oft");
 
-// Set the sender and recipients information
+// Установить информацию об отправителе и получателях
 
 String senderDisplayName = "John";
 
@@ -32,17 +32,17 @@ message.getTo().addMailAddress(new MailAddress(recipientEmailAddress, recipientD
 
 message.setHtmlBody(message.getHtmlBody().replace("DisplayName", "<b>" + recipientDisplayName + "</b>"));
 
-// Set the name, location and time in email body
+// Установить название, место и время в теле письма
 
 String meetingLocation = "<u>" + "Hall 1, Convention Center, New York, USA" + "</u>";
 
-String meetingTime = "<u>" + "Monday, June 28, 2010" + "</u>";
+String meetingTime = "<u>" + "Понедельник, 28 июня 2010" + "</u>";
 
 message.setHtmlBody(message.getHtmlBody().replace("MeetingPlace", meetingLocation));
 
 message.setHtmlBody(message.getHtmlBody().replace("MeetingTime", meetingTime));
 
-// Save the message in MSG format and open in Office Outlook
+// Сохранить сообщение в формате MSG и открыть в Office Outlook
 
 MapiMessage mapimessage = new MapiMessage().fromMailMessage(message);
 
@@ -51,15 +51,15 @@ mapimessage.setMessageFlags(MapiMessageFlags.MSGFLAG_UNSENT);
 mapimessage.save(dataDir + "AsposeInvitation.msg");
 
 ```
-## **Загрузить рабочий код**
+## **Скачать рабочий код**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/readoft/AsposeReadOFT.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/readoft/AsposeReadOFT.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Для получения дополнительной информации посетите [Прочитайте файл шаблона Outlook (OFT)](/email/java/managing-message-files-with-aspose-email-outlook/).
+Для получения дополнительной информации посетите [Чтение файла шаблона Outlook (OFT)](/email/java/managing-message-files-with-aspose-email-outlook/).
 
 {{% /alert %}}

@@ -1,12 +1,12 @@
 ---
-title: "Проверьте защиту паролем PST"
+title: "Проверка защиты паролем PST"
 url: /ru/java/check-pst-password-protection/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Проверьте защиту паролем PST**
-Microsoft Outlook позволяет пользователям защищать файлы PST паролем для ограничения доступа к ним. Aspose.Email может обнаруживать защиту паролем в PST-файле. На этой странице показано, как проверить пароль в PST, а также как проверить правильность примененного к нему пароля.
+## **Aspose.Email - Проверка защиты паролем PST**
+Microsoft Outlook позволяет пользователям защищать файлы PST паролем для ограничения доступа к ним. Aspose.Email может обнаружить защиту паролем на файле PST. Эта страница показывает, как проверить файл PST на наличие пароля, а также как определить, правильный ли применённый пароль.
 
 **Java**
 
@@ -23,15 +23,15 @@ Microsoft Outlook позволяет пользователям защищать
 }
 
 ```
-## **Загрузить рабочий код**
+## **Скачать работающий код**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/checkprotection/AsposeCheckProtection.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/checkprotection/AsposeCheckProtection.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Для получения дополнительной информации посетите [Работа со свойствами защиты паролем PST](/email/java/working-with-calendar-items-in-pst-file/).
+Для получения дополнительной информации посетите страницу [Работа с свойствами защиты паролем PST](/email/java/working-with-calendar-items-in-pst-file/).
 
 {{% /alert %}}

@@ -8,15 +8,15 @@ type: docs
 
 ## **Добавление MapiNote в PST**
 
-The [Создайте новый файл PST и добавьте подпапки](https://docs.aspose.com/email/ru/net/create-new-pst-add-sub-folders-and-messages/#creating-a-new-pst-file-and-add-subfolders) В статье показано, как создать файл PST и добавить к нему подпапку. С помощью Aspose.Email вы можете добавить [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) в подпапку Notes созданного или загруженного файла PST. Чтобы добавить [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) в PST:
+Статья [Создание нового PST-файла и добавление подкаталогов](https://docs.aspose.com/email/ru/net/create-new-pst-add-sub-folders-and-messages/#creating-a-new-pst-file-and-add-subfolders) показывает, как создать PST-файл и добавить подкаталог к нему. С помощью Aspose.Email вы можете добавить [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) в подкаталог Заметки PST-файла, который вы создали или загрузили. Чтобы добавить [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) в PST:
 
-1. Создайте шаблон [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) используя Microsoft Outlook и сохраните его как файл MSG.
-2. Загрузите сохраненную заметку MSG в [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) object.
-3. Создайте [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) создайте объект и загрузите шаблон MSG-заметки.
-4. Установите [Свойства MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/).
-5. Создайте PST, используя [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create/) method.
-6. Создайте предварительно определенную папку (Notes) в корне файла PST, открыв корневую папку и вызвав [AddMapiMessageItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmapimessageitem/#addmapimessageitem) method.
+1. Создайте шаблон [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) с помощью Microsoft Outlook и сохраните его как MSG-файл.
+2. Загрузите сохраненную MSG-запись в объект [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/).
+3. Создайте объект [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) и загрузите шаблон MSG-заметки.
+4. Установите [свойства MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/).
+5. Создайте PST с помощью метода [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create/).
+6. Создайте предопределенную папку (Заметки) в корне PST-файла, получив доступ к корневой папке и затем вызвав метод [AddMapiMessageItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmapimessageitem/#addmapimessageitem).
 
-В следующем фрагменте кода показано, как создать [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) а затем добавьте его в папку заметок вновь созданного файла PST.
+Следующий фрагмент кода показывает, как создать [MapiNote](https://reference.aspose.com/email/net/aspose.email.mapi/mapinote/) и затем добавить его в папку заметок только что созданного PST-файла.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddMapiNoteToPST-AddMapiNoteToPST.cs" >}}

@@ -1,14 +1,14 @@
 ---
-title: "Создайте новую электронную почту в Ruby"
+title: "Создание нового электронного письма в Ruby"
 url: /ru/java/create-new-email-in-ruby/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email - Создайте новое письмо**
-Чтобы создать новое электронное письмо, используя **Aspose.Электронная почта Java для Ruby**, просто вызовите **CreateNewEmail** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Создание нового электронного письма**
+Чтобы создать новое электронное письмо с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **CreateNewEmail**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ``` ruby
 
@@ -16,39 +16,39 @@ type: docs
 
 
 
-\# Create a new instance of MailMessage class
+\# Создайте новый экземпляр класса MailMessage
 
 message = Rjb::import('com.aspose.email.MailMessage').new
 
-\# Set subject of the message
+\# Установите тему сообщения
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Новое сообщение, созданное с помощью Aspose.Email для Java")
 
 mail_address = Rjb::import('com.aspose.email.MailAddress')
 
-\# Set Html body
+\# Установите Html тело
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Эта строка выделена жирным шрифтом.</b> <br/> <br/>" +
 
-        "<font color=blue>This line is in blue color</font>")
+        "<font color=blue>Эта строка синего цвета</font>")
 
-\# Set sender information
+\# Установите информацию об отправителе
 
-message.setFrom(mail_address.new("from@domain.com", "Sender Name", false))
+message.setFrom(mail_address.new("from@domain.com", "Имя отправителя", false))
 
-\# Add TO recipients
+\# Добавьте получателей TO
 
-message.getTo().add(mail_address.new("to1@domain.com", "Recipient 1", false))
+message.getTo().add(mail_address.new("to1@domain.com", "Получатель 1", false))
 
-message.getTo().add(mail_address.new("to2@domain.com", "Recipient 2", false))
+message.getTo().add(mail_address.new("to2@domain.com", "Получатель 2", false))
 
-\# Add CC recipients
+\# Добавьте получателей CC
 
-message.getCC().add(mail_address.new("cc1@domain.com", "Recipient 3", false))
+message.getCC().add(mail_address.new("cc1@domain.com", "Получатель 3", false))
 
-message.getCC().add(mail_address.new("cc2@domain.com", "Recipient 4", false))
+message.getCC().add(mail_address.new("cc2@domain.com", "Получатель 4", false))
 
-\# Save message in EML and MSG formats
+\# Сохраните сообщение в форматах EML и MSG
 
 mail_message_save_type = Rjb::import('com.aspose.email.MailMessageSaveType')
 
@@ -56,12 +56,12 @@ message.save(data_dir + "Message.eml", mail_message_save_type.getEmlFormat())
 
 message.save(data_dir + "Message.msg", mail_message_save_type.getOutlookMessageFormat())
 
-\# Display Status
+\# Отобразите статус
 
-puts "Created email messages Successfully."
+puts "Сообщения электронной почты успешно созданы."
 
 ```
-## **Загрузить рабочий код**
-Download **Создать новое электронное письмо (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Создание нового электронного письма (Aspose.Email)** с любого из нижеупомянутых сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/createnewemail.rb)

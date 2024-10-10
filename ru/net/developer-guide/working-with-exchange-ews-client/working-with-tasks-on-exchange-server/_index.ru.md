@@ -1,5 +1,5 @@
 ---
-title: "Работа с задачами на сервере Exchange"
+title: "Работа с задачами на Exchange Server"
 url: /ru/net/working-with-tasks-on-exchange-server/
 weight: 100
 type: docs
@@ -8,57 +8,57 @@ type: docs
 
 ## **Работа с задачами**
 
-Aspose.Email поддерживает обработку задач на Exchange с помощью [ExchangeTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/) класс. Различные свойства, проявляемые [ExchangeTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/), как [Subject](https://reference.aspose.com/email/net/aspose.email.calendar/task/subject/), [Status](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/status/), [DueDate](https://reference.aspose.com/email/net/aspose.email.calendar/task/duedate/), и [Priority](https://reference.aspose.com/email/net/aspose.email.calendar/task/priority/), можно использовать для настройки задачи в Exchange. [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) класс предоставляет такие функции, как [CreateTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createtask/#createtask/), [UpdateTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updatetask/#updatetask/), and [DeleteTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/deleteitem/) которые используются для обработки задач в Exchange. В этой статье показано, как:
+Aspose.Email поддерживает обработку задач на Exchange с использованием класса [ExchangeTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/). Различные свойства, предоставляемые [ExchangeTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/), такие как [Subject](https://reference.aspose.com/email/net/aspose.email.calendar/task/subject/), [Status](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/status/), [DueDate](https://reference.aspose.com/email/net/aspose.email.calendar/task/duedate/) и [Priority](https://reference.aspose.com/email/net/aspose.email.calendar/task/priority/), могут использоваться для настройки задачи на Exchange. Класс [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) предоставляет функции, такие как [CreateTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createtask/#createtask/), [UpdateTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updatetask/#updatetask/) и [DeleteTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/deleteitem/), которые используются для обработки задач на Exchange. В этой статье показано, как:
 
-- Создайте новую задачу.
-- Задайте часовой пояс задачи.
-- Обновите задачу.
+- Создать новую задачу.
+- Установить временную зону задачи.
+- Обновить задачу.
 - Удалить задачу.
-- Отправить запрос на задание
-- Сохранить задачу на диске
- 
-### **Создать новую задачу**
+- Отправить запрос на задачу.
+- Сохранить задачу на диск.
+  
+### **Создание новой задачи**
 
-В следующем фрагменте кода показано, как создать новую задачу.
+Следующий кодовый фрагмент показывает, как создать новую задачу.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ProcessExchangeTasksUsingIEWSClient-ProcessExchangeTasksUsingIEWSClient.cs" >}}
 
-### **Указание часового пояса**
+### **Указание временной зоны**
 
-The [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) интерфейс и [ExchangeTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/) предоставьте [TimeZoneId](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/timezoneid/) свойство для установки информации о часовом поясе при создании задачи. В следующем фрагменте кода показано, как указать часовой пояс.
+Интерфейс [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) и [ExchangeTask](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/exchangetask/) предоставляют свойство [TimeZoneId](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/timezoneid/) для установки информации о временной зоне при создании задачи. Следующий кодовый фрагмент показывает, как указать временную зону.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SpecifyTimeZoneForExchange-SpecifyTimeZoneForExchange.cs" >}}
 
-### **Обновить задачу**
+### **Обновление задачи**
 
-В следующих фрагментах кода показано, как обновить задачу на сервере Exchange.
+Следующие кодовые фрагменты показывают, как обновить задачу на сервере Exchange.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-UpdateTaskOnExchange-UpdateTaskOnExchange.cs" >}}
 
-### **Удалить задачу**
+### **Удаление задачи**
 
-В следующем фрагменте кода показано, как удалить задачу на сервере Exchange.
+Следующий кодовый фрагмент показывает, как удалить задачу на сервере Exchange.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-DeleteTaskOnExchange-DeleteTaskOnExchange.cs" >}}
 
-### **Отправка запроса на задание**
+### **Отправка запроса на задачу**
 
-Сервис Aspose.Email Exchange предоставляет возможность отправлять запросы на выполнение задач аналогично Outlook. В следующем фрагменте кода показано, как загрузить сообщение с запросом на задание с диска и отправить его с помощью [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
+Сервис Aspose.Email Exchange предоставляет возможность отправлять запросы на задачи, аналогично Outlook. Следующий кодовый фрагмент показывает, как загрузить сообщение запроса на задачу с диска и отправить его с использованием [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SendTaskRequestUsingIEWSClient-SendTaskRequestUsingIEWSClient.cs" >}}
 
 ### **Сохранение задачи на диск**
 
-Aspose.Email также позволяет сохранять задачи Exchange на диск в формате Outlook MSG. В следующем фрагменте кода показано, как сохранить задачу на диск.
+Aspose.Email также позволяет сохранять задачи Exchange на диск в формате Outlook MSG. Следующий кодовый фрагмент показывает, как сохранить задачу на диск.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SaveExchangeTaskToDisc-SaveExchangeTaskToDisc.cs" >}}
 
-### **Вывод списка задач с сервера Exchange**
+### **Получение задач с сервера Exchange**
 
-[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) обеспечивает [ListTasks](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listtasks/#listtasks/) метод, который можно использовать для получения задач из веб-службы Exchange. Он имеет несколько перегрузок, которые можно использовать для извлечения списка задач из определенной папки или использования некоторых критериев поиска. Приведенный ниже пример кода иллюстрирует получение всех или отдельных задач из папки «Задачи».
+[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) предоставляет метод [ListTasks](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listtasks/#listtasks/), который можно использовать для получения задач из веб-сервиса Exchange. Он имеет несколько перегрузок, которые могут быть использованы для извлечения списка задач из конкретной папки или с использованием некоторых критериев поиска. Приведенный ниже кодовый пример иллюстрирует получение всех или конкретных задач из папки задач.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ListTasksFromExchangeServer-ListTasksFromExchangeServerWithEWS.cs" >}}
 
 ### **Фильтрация задач с сервера Exchange**
 
-Aspose.Email предоставляет возможность извлекать определенные задачи с сервера вместо получения всех задач с сервера. API можно использовать для поиска задач по статусам задач, таким как «Выполнено», «Отложено», «Выполнено», «Не запущено» или «Ожидает» других задач. [ExchangeQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder/) класс можно использовать для указания желаемого критерия с помощью свойства Status. Он также позволяет указать несколько условий для получения желаемых задач с сервера Exchange. Об этом свидетельствует следующий пример кода.
+Aspose.Email предоставляет возможность извлекать конкретные задачи с сервера, а не извлекать все задачи с сервера. API может использоваться для извлечения задач по статусу задачи, таким как Завершено, Отложено, В процессе, Не начато или Ожидание от других. Класс [ExchangeQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder/) может использоваться для указания желаемых критериев с использованием свойства Status. Он также позволяет указывать несколько условий для извлечения желаемых задач с сервера Exchange. Это демонстрируется следующим кодовым примером.

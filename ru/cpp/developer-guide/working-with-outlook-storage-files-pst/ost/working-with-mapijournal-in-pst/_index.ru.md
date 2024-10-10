@@ -1,25 +1,25 @@
 ---
-title: "Работа с журналом MAPIjournal в формате PST"
+title: "Работа с MapiJournal в PST"
 url: /ru/cpp/working-with-mapijournal-in-pst/
 weight: 70
 type: docs
 ---
 
-## **Добавление журнала MAPIjournal в PST**
-С помощью Aspose.Email вы можете добавить MapiJournal в подпапку Journal созданного или загруженного вами PST-файла. Ниже приведены шаги по добавлению MapiJournal в PST:
+## **Добавление MapiJournal в PST**
+С помощью Aspose.Email вы можете добавить MapiJournal в подпапку Журнал файла PST, который вы создали или загрузили. Ниже приведены шаги для добавления MapiJournal в PST:
 
 1. Создайте объект MapiJournal
-1. Задайте свойства MapiJournal с помощью конструктора и методов.
-1. Создайте PST с помощью метода PersonalStorage.create ().
-1. Создайте предварительно определенную папку (Journals) в корне файла PST, открыв корневую папку и вызвав метод addMapiMessageItem ().
+1. Установите свойства MapiJournal с помощью конструктора и методов.
+1. Создайте PST с помощью метода PersonalStorage.Create().
+1. Создайте предопределенную папку (Журналы) в корне файла PST, получив доступ к корневой папке и затем вызвав метод AddMapiMessageItem().
 
-В следующем фрагменте кода показано, как создать MapiJournal, а затем добавить его в папку журнала вновь созданного файла PST.
+Следующий фрагмент кода показывает, как создать MapiJournal и затем добавить его в папку журналов только что созданного файла PST.
 
 
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-CreateNewMapiJournalAndAddToSubfolder-CreateNewMapiJournalAndAddToSubfolder.cpp" >}}
 ## **Добавление вложений в MapiJournal**
-В следующем фрагменте кода показано, как добавлять вложения в MapiJournal.
+Следующий фрагмент кода показывает, как добавить вложения в MapiJournal.
 
 
 

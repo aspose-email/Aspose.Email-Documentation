@@ -7,9 +7,9 @@ type: docs
 
 
 ## **Работа с GraphClient**
-Пример [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) класс обрабатывает запросы на сборку, отправляет их в Microsoft Graph API и обрабатывает ответы.
+Экземпляр класса [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) обрабатывает создание запросов, их отправку в Microsoft Graph API и обработку ответов.
 ### **Создайте объект ITokenProvider**
-Чтобы создать новый экземпляр [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) класс, вам необходимо предоставить экземпляр [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), который может аутентифицировать запросы к Microsoft Graph.
+Чтобы создать новый экземпляр класса [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient), вам нужно предоставить экземпляр [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), который может аутентифицировать запросы к Microsoft Graph.
 
 
 ~~~Java
@@ -22,23 +22,23 @@ ITokenProvider tokenProvider = new ITokenProvider() {
 
     @Override
     public OAuthToken getAccessToken(boolean ignoreExistingToken) {
-        // Gets oAuth access token.
-        // If ignoreExistingToken is true, requests new token from a server. Otherwise behavior is depended on whether token exists or not.
-        // If token exists and its expiration date is not expired returns current token, otherwise requests new token from a server.
+        // Получает oAuth токен доступа.
+        // Если ignoreExistingToken равно true, запрашивает новый токен у сервера. В противном случае поведение зависит от наличия токена.
+        // Если токен существует и его срок действия не истек, возвращает текущий токен, иначе запрашивает новый токен у сервера.
         return null;
     }
 
     @Override
     public OAuthToken getAccessToken() {
-        // Gets oAuth access token.
-        // If token exists and its expiration date is not expired returns current token, otherwise requests new token from a server.
+        // Получает oAuth токен доступа.
+        // Если токен существует и его срок действия не истек, возвращает текущий токен, иначе запрашивает новый токен у сервера.
         return new OAuthToken("token", expirationDate);
     }
 };
 ~~~
 ### **Получите объект GraphClient**
-После того, как вы установили TokenProvider, вы должны получить [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) возражать против запросов к сервису.
-После того, как вы получите [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) который прошел аутентификацию, вы можете начать звонить в службу.
+После того, как вы настроили TokenProvider, вам нужно получить объект [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient), чтобы делать запросы к сервису.
+После того, как у вас есть аутентифицированный [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient), вы можете начать делать вызовы к сервису.
 
 
 ~~~Java
@@ -57,7 +57,7 @@ for (GraphFolderInfo folderInfo : folders) {
     }
 }
 ~~~
-### **Список подпапок из папки «Входящие»**
+### **Список подпаок из папки «Входящие»**
 
 
 ~~~Java
@@ -67,14 +67,14 @@ GraphFolderInfoCollection inboxFolders = client.listFolders(GraphKnownFolders.In
 
 
 ~~~Java
-GraphFolderInfo newFolder = client.createFolder("TEST_FOLDER");
+GraphFolderInfo newFolder = client.createFolder("ТЕСТОВАЯ_ПАПКА");
 ~~~
 ### **Создать подпапку**
 
 
 ~~~Java
-GraphFolderInfo inboxTestSubFolder1 = client.createFolder(GraphKnownFolders.Inbox, "TEST_SUBFOLDER_1");
-GraphFolderInfo inboxTestSubFolder2 = client.createFolder(newFolder.getItemId(), "TEST_SUBFOLDER_2");
+GraphFolderInfo inboxTestSubFolder1 = client.createFolder(GraphKnownFolders.Inbox, "ТЕСТОВАЯ_ПОДПАПКА_1");
+GraphFolderInfo inboxTestSubFolder2 = client.createFolder(newFolder.getItemId(), "ТЕСТОВАЯ_ПОДПАПКА_2");
 ~~~
 ### **Получить папку**
 
@@ -86,38 +86,38 @@ GraphFolderInfo sentItemsFolder = client.getFolder(GraphKnownFolders.SentItems);
 
 
 ~~~Java
-GraphFolderInfo originalFolder = client.createFolder("TEST_FOLDER");
-originalFolder.setDisplayName("NEW_TEST_FOLDER");
+GraphFolderInfo originalFolder = client.createFolder("ТЕСТОВАЯ_ПАПКА");
+originalFolder.setDisplayName("НОВАЯ_ТЕСТОВАЯ_ПАПКА");
 GraphFolderInfo updatedFolder = client.updateFolder(originalFolder);
 ~~~
-### **Скопировать папку и содержимое**
+### **Копировать папку и содержимое**
 
 
 ~~~Java
-GraphFolderInfo parentFolder = client.createFolder("PARENT_FOLDER");
-GraphFolderInfo testFolder = client.createFolder("TEST_FOLDER");
-GraphFolderInfo testSubFolder = client.createFolder(testFolder.getItemId(), "TEST_SUBFOLDER");
+GraphFolderInfo parentFolder = client.createFolder("РОДИТЕЛЬСКАЯ_ПАПКА");
+GraphFolderInfo testFolder = client.createFolder("ТЕСТОВАЯ_ПАПКА");
+GraphFolderInfo testSubFolder = client.createFolder(testFolder.getItemId(), "ТЕСТОВАЯ_ПОДПАПКА");
 
 MapiMessage message = new MapiMessage();
-message.setSubject("Test subject");
-message.setBody("Test body");
+message.setSubject("Тестовая тема");
+message.setBody("Тестовое тело");
 message.setProperty(KnownPropertyList.DISPLAY_TO, "to@host.com");
-message.setProperty(KnownPropertyList.SENDER_NAME, "from");
+message.setProperty(KnownPropertyList.SENDER_NAME, "от");
 message.setProperty(KnownPropertyList.SENT_REPRESENTING_EMAIL_ADDRESS, "from@host.com");
 MapiMessage createdMessage = client.createMessage(testSubFolder.getItemId(), message);
 
 GraphFolderInfo folderCopy = client.copyFolder(parentFolder.getItemId(), testFolder.getItemId());
 
 GraphFolderInfoCollection folderColl = client.listFolders(parentFolder.getItemId());
-// TEST_FOLDER
+// ТЕСТОВАЯ_ПАПКА
 System.out.println(folderColl.get(0).getDisplayName());
 
 folderColl = client.listFolders(folderColl.get(0).getItemId());
-// TEST_SUBFOLDER
+// ТЕСТОВАЯ_ПОДПАПКА
 System.out.println(folderColl.get(0).getDisplayName());
 
 GraphMessageInfoCollection listMessages = client.listMessages(folderColl.get(0).getItemId());
-// Test subject
+// Тестовая тема
 System.out.println(listMessages.get(0).getSubject());
 ~~~
 ### **Переместить папку и содержимое**
@@ -143,12 +143,12 @@ for (GraphMessageInfo messageInfo : messageInfoColl) {
 
 ### **Список сообщений по дате отправки**
 
-The [OrderBy](https://reference.aspose.com/email/java/com.aspose.email/comparisonfield/#orderBy-boolean-) функция используется для указания того, что сообщения должны быть упорядочены в порядке возрастания по дате отправки. Это позволяет клиенту получить список сообщений из [GraphKnownFolders.Inbox](https://reference.aspose.com/email/java/com.aspose.email/graphknownfolders/#Inbox) папка в определенном порядке, в данном случае в зависимости от даты отправки.
+Функция [OrderBy](https://reference.aspose.com/email/java/com.aspose.email/comparisonfield/#orderBy-boolean-) используется для указания того, что сообщения должны упорядочиваться по возрастанию по их дате отправки. Это позволяет клиенту получать список сообщений из папки [GraphKnownFolders.Inbox](https://reference.aspose.com/email/java/com.aspose.email/graphknownfolders/#Inbox) в определенном порядке, в данном случае, на основе даты отправки.
 
-В следующем примере кода показано, как создать запрос, определяющий порядок сообщений по дате отправки, а затем использовать этот запрос для извлечения страницы сообщений из папки «Входящие» с помощью Graph API:
+Следующий пример кода демонстрирует, как создать запрос, указывающий порядок сообщений по дате отправки, и затем использовать этот запрос для получения страницы сообщений из папки «Входящие», используя Graph API:
 
 ```java
-// create orderby messages query 'ASC'
+// создать запрос на упорядочивание сообщений 'ASC'
 GraphQueryBuilder builder = new GraphQueryBuilder();
 builder.getSentDate().orderBy(true);
 MailQuery query = builder.getQuery();
@@ -164,37 +164,37 @@ GraphMessageInfo messageInfo = messageInfoColl.get(0);
 MapiMessage fetchedMessage = client.fetchMessage(messageInfo.getItemId());
 ~~~
 
-### **Разбивка на страницы в списке сообщений**
+### **Пагинация в списке сообщений**
 
-API обеспечивает поддержку разбиения на страницы и фильтрации сообщений со списком. Это очень удобно, если в почтовом ящике содержится большое количество сообщений и для получения сводной информации о них требуется много времени. В приведенном ниже примере кода показано, как использовать пейджинг для больших наборов сообщений при отображении сообщений с сервера Exchange с помощью iGraphClient:
+API предоставляет поддержку постраничной навигации и фильтрации для списка сообщений. Это очень полезно, когда почтовый ящик содержит большое количество сообщений и требует много времени для получения сводной информации о них. Пример кода ниже покажет вам, как использовать пагинацию для больших наборов сообщений при получении сообщений из Exchange Server, используя IGraphClient:
 
 ```java
-// send ping test messages
+// отправить тестовые сообщения
 for (int i = 0; i < 5; i++) {
-    MailMessage eml = new MailMessage(user.EMail, user.EMail, "ping" + i, "test body");
+    MailMessage eml = new MailMessage(user.EMail, user.EMail, "ping" + i, "тестовое тело");
     client.send(MapiMessage.fromMailMessage(eml));
 }
-// waiting for inbox
+// ожидание входящих
 Thread.sleep(10000);
 
-// paging option
+// параметры пагинации
 int itemsPerPage = 2;
-// create unread messages filter
+// создать фильтр для непрочитанных сообщений
 GraphQueryBuilder builder = new GraphQueryBuilder();
 builder.isRead().equals(false);
 MailQuery query = builder.getQuery();
 
-// list messages
+// список сообщений
 GraphMessagePageInfo pageInfo = client.listMessages(GraphKnownFolders.Inbox, new PageInfo(itemsPerPage), query);
 GraphMessageInfoCollection messages = pageInfo.getItems();
 while (!pageInfo.getLastPage())
 {
     pageInfo = client.listMessages(GraphKnownFolders.Inbox, pageInfo.getNextPage(), query);
-    // add next page items to common collection
+    // добавить элементы следующей страницы в общую коллекцию
     messages.addRange(pageInfo.getItems());
 }
 
-// set messages state as read
+// установить состояние сообщений как прочитанные
 for (GraphMessageInfo message : messages) {
     client.setRead(message.getItemId());
 }
@@ -205,10 +205,10 @@ for (GraphMessageInfo message : messages) {
 
 ~~~Java
 MapiMessage message = new MapiMessage();
-message.setSubject("Subject");
-message.setBody("Body");
+message.setSubject("Тема");
+message.setBody("Тело");
 message.setProperty(KnownPropertyList.DISPLAY_TO, "to@host.com");
-message.setProperty(KnownPropertyList.SENDER_NAME, "from");
+message.setProperty(KnownPropertyList.SENDER_NAME, "от");
 message.setProperty(KnownPropertyList.SENT_REPRESENTING_EMAIL_ADDRESS, "from@host.com");
 
 MapiMessage createdMessage = client.createMessage(GraphKnownFolders.Inbox, message);
@@ -217,7 +217,7 @@ MapiMessage createdMessage = client.createMessage(GraphKnownFolders.Inbox, messa
 
 
 ~~~Java
-fetchedMessage.setSubject("Update message");
+fetchedMessage.setSubject("Обновить сообщение");
 MapiMessage updatedMessage = client.updateMessage(fetchedMessage);
 ~~~
 ### **Отправить сообщение**
@@ -233,7 +233,7 @@ client.send(message);
 MapiMessage draftMessage = client.createMessage(GraphKnownFolders.Drafts, message);
 client.send(draftMessage.getItemId());
 ~~~
-### **Скопировать сообщение**
+### **Копировать сообщение**
 
 
 ~~~Java
@@ -245,7 +245,7 @@ MapiMessage copiedMessage = client.copyMessage(GraphKnownFolders.Inbox, draftMes
 ~~~Java
 MapiMessage movedMessage = client.moveMessage(GraphKnownFolders.Inbox, draftMessage.getItemId());
 ~~~
-### **Вложения в сообщения**
+### **Вложения сообщения**
 
 
 ~~~Java
@@ -260,24 +260,24 @@ for (MapiAttachment att : attachments) {
 ~~~Java
 client.delete(message.getItemId());
 ~~~
-## **Категории Api**
+## **API категорий**
 
 
 ~~~Java
-String categoryName = "Test Category";
+String categoryName = "Тестовая категория";
 int preset = CategoryPreset.Preset10;
 OutlookCategory category = client.createCategory(categoryName, preset);
 OutlookCategory fetchedCategory = client.fetchCategory(category.getId());
 
 List<OutlookCategory> categories = client.listCategories();
 
-fetchedCategory.setDisplayName("Update Category");
+fetchedCategory.setDisplayName("Обновить категорию");
 fetchedCategory.setPreset(CategoryPreset.Preset11);
 OutlookCategory updatedCategory = client.updateCategory(fetchedCategory);
 
 client.delete(category.getId());
 ~~~
-## **Переопределяет API**
+## **API переопределений**
 
 
 ~~~Java
@@ -299,12 +299,12 @@ updatedOverride = client.updateOverride(fetchedOverride);
 
 client.delete(updatedOverride.getId());
 ~~~
-## **Правила Api**
+## **API правил**
 
 
 ~~~Java
 InboxRule rule = new InboxRule();
-rule.setDisplayName("Test rule");
+rule.setDisplayName("Тестовое правило");
 rule.setPriority(1);
 rule.setEnabled(true);
 rule.setConditions(new RulePredicates());
@@ -323,7 +323,7 @@ for (InboxRule item : listedRules)
 
 InboxRule fetchedRule = client.fetchRule(createdRule.getRuleId());
 
-createdRule.setDisplayName("Test rule 1");
+createdRule.setDisplayName("Тестовое правило 1");
 createdRule.setEnabled(false);
 InboxRule updatedRule = client.updateRule(createdRule);
 
@@ -336,6 +336,6 @@ client.delete(createdRule.getRuleId());
 сlient.setResource(ResourceType.Users);
 сlient.setResourceId("mailbox");
 сlient.listMessages("mailfolder")
-// back to the current mailbox
+// вернуться к текущему почтовому ящику
 сlient.setResource(ResourceType.Me);
 ~~~

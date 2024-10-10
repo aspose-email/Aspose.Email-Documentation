@@ -1,5 +1,5 @@
 ---
-title: "Работа с сообщениями с сервера IMAP"
+title: "Работа с сообщениями с IMAP-сервера"
 url: /ru/net/working-with-messages-from-imap-server/
 weight: 20
 type: docs
@@ -7,18 +7,17 @@ type: docs
 
 ## **Получение идентификационной информации для сообщений, полученных из почтового ящика**
 
-При получении и обработке сообщений электронной почты вы можете получить сведения об этих сообщениях, используя их порядковые номера.
-Для взаимодействия с почтовым ящиком IMAP используются следующие функции:
+При извлечении и обработке электронных писем вы можете получить детали этих сообщений, используя их последовательные номера. Для взаимодействия с IMAP-почтовым ящиком используются следующие функции:
 
-- `Aspose.Email.MailboxInfo` class — представляет идентификационную информацию о сообщении в почтовом ящике.
+- `Aspose.Email.MailboxInfo` класс - Представляет идентификационную информацию о сообщении в почтовом ящике.
 
-    - `Aspose.Email.MailboxInfo.SequenceNumber` свойство - порядковый номер сообщения.
+    - `Aspose.Email.MailboxInfo.SequenceNumber` свойство - Последовательный номер сообщения.
 
-    - `Aspose.Email.MailboxInfo.UniqueId` свойство - уникальный идентификатор сообщения.
+    - `Aspose.Email.MailboxInfo.UniqueId` свойство - Уникальный идентификатор сообщения.
 
-- `Aspose.Email.MailMessage.ItemId` свойство — представляет идентификационную информацию о сообщении в почтовом ящике.
+- `Aspose.Email.MailMessage.ItemId` свойство - Представляет идентификационную информацию о сообщении в почтовом ящике.
 
-В приведенном ниже фрагменте кода показано, как получить идентификационную информацию о сообщениях:
+Приведенный ниже фрагмент кода показывает, как получить идентификационную информацию о сообщениях:
 
 ```cs
 using (var client = new ImapClient(imapHost, port, emailAddress, password, securityOption))
@@ -35,97 +34,96 @@ using (var client = new ImapClient(imapHost, port, emailAddress, password, secur
 }
 ```
 
-## **Отображение идентификаторов сообщений MIME с сервера**
+## **Перечисление идентификаторов MIME-сообщений с сервера**
 
-[ImapMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/) предоставляет MIME [MessageId](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/messageid/) для идентификации сообщения без извлечения всего сообщения. В следующем фрагменте кода показано, как указать MIME MessageID.
+[ImapMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/) предоставляет MIME [MessageId](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/messageid/) для идентификации сообщения без извлечения полного сообщения. Приведенный ниже фрагмент кода показывает, как перечислить идентификаторы MIME-сообщений.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-ListingMIMEMessageIdInImapMessageInfo-ListingMIMEMessageIdInImapMessageInfo.cs" >}}
 
-## **Список сообщений с сервера**
+## **Перечисление сообщений с сервера**
 
-Aspose.Email предоставляет перегруженный вариант из 2 человек [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/#listmessages_12) для получения заданного количества сообщений на основе запроса. В следующем фрагменте кода показано, как составить список сообщений.
+Aspose.Email предоставляет перегруженный вариант [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/#listmessages_12) с 2 членами, чтобы извлечь определенное количество сообщений на основе запроса. Приведенный ниже фрагмент кода показывает, как перечислить сообщения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-ListMessagesWithMaximumNumberOfMessages-ListMessagesWithMaximumNumberOfMessages.cs" >}}
 
-## **Рекурсивный список сообщений с сервера**
+## **Перечисление сообщений с сервера рекурсивно**
 
-Протокол IMAP поддерживает рекурсивный список сообщений из папки почтового ящика. Это также помогает отображать сообщения из подпапок папки. В следующем фрагменте кода показано, как рекурсивно перечислять сообщения.
+Протокол IMAP поддерживает рекурсивное перечисление сообщений из папки почтового ящика. Это также помогает перечислять сообщения из подпапок папки. Приведенный ниже фрагмент кода показывает, как рекурсивно перечислять сообщения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-ListingMessagesRecursively-ListingMessagesRecursively.cs" >}}
 
-## **Список сообщений с помощью MultiConnection**
+## **Перечисление сообщений с использованием многосоединений**
 
-[ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) обеспечивает [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/) свойство, которое можно использовать для создания нескольких соединений для тяжелых операций. Вы также можете настроить количество подключений, которое будет использоваться в режиме нескольких подключений, используя [ImapClient.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/connectionsquantity/). В следующем фрагменте кода показано использование режима нескольких подключений для перечисления сообщений и сравнивается его производительность с режимом одиночного подключения.
+[ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) предоставляет свойство [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/), которое можно использовать для создания нескольких соединений для тяжелых операций. Вы также можете установить количество соединений, которые будут использоваться в режиме многосоединения, используя [ImapClient.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/connectionsquantity/). Приведенный ниже фрагмент кода демонстрирует использование режима многосоединения для перечисления сообщений и сравнивает его производительность с режимом одного соединения.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapListMessagesWithMultiConnection-1.cs" >}}
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Обратите внимание, что использование режима нескольких подключений не гарантирует повышения производительности.
+Обратите внимание, что использование режима многосоединения не гарантирует повышения производительности.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-## **Получайте сообщения в порядке убывания**
+## **Получение сообщений в порядке убывания**
 
-Aspose.Email предоставляет [`ImapClient.ListMessagesByPage`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) метод, который перечисляет сообщения с поддержкой пейджинга. Некоторые перегрузки [`ImapClient.ListMessagesByPage`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) accept [`PageSettings`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) в качестве параметра. [`PageSettings`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) обеспечивает [`AscendingSorting`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/) свойство, которое, если установлено значение **false**, возвращает электронные письма в порядке убывания.
+Aspose.Email предоставляет метод [`ImapClient.ListMessagesByPage`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/), который перечисляет сообщения с поддержкой постраничной навигации. Некоторые перегрузки [`ImapClient.ListMessagesByPage`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessagesbypage/#listmessagesbypage/) принимают [`PageSettings`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) как параметр. [`PageSettings`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) предоставляет свойство [`AscendingSorting`](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/), которое, когда установлено в **false**, возвращает электронные письма в порядке убывания.
 
-Следующий пример кода демонстрирует использование [AscendingSorting](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/) собственность [PageSettings](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) класс для изменения порядка писем.
+Пример кода ниже демонстрирует использование [AscendingSorting](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/ascendingsorting/) свойства класса [PageSettings](https://reference.aspose.com/email/net/aspose.email.clients.imap/pagesettings/) для изменения порядка электронных писем.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ChangeOrderOfEmails-1.cs" >}}
 
-## **Получение сообщений с сервера и сохранение на диск**
+## **Извлечение сообщений с сервера и сохранение на диск**
 
-The [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) класс может получать сообщения с сервера IMAP и сохранять сообщения в формате EML на локальный диск. Для сохранения сообщений на диск необходимо выполнить следующие шаги:
+Класс [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) может извлекать сообщения с IMAP-сервера и сохранять сообщения в формате EML на локальном диске. Для сохранения сообщений на диск необходимо выполнить следующие шаги:
 
-1. Создайте экземпляр [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) class.
-1. Укажите имя хоста, порт, имя пользователя и пароль в iMapClient [constructor](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/imapclient/#constructor).
-1. Выберите папку, используя [SelectFolder()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/selectfolder/#selectfolder/) method.
-1. Позвоните [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/#listmessages) метод получения [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/) object.
-1. Пройдите итерацию через [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/) коллекция, позвоните в [SaveMessage()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/savemessage/#savemessage/) метод и укажите выходной путь и имя файла.
+1. Создайте экземпляр класса [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/).
+1. Укажите имя хоста, порт, имя пользователя и пароль в [конструкторе](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/imapclient/#constructor) ImapClient.
+1. Выберите папку, используя метод [SelectFolder()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/selectfolder/#selectfolder/).
+1. Вызовите метод [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/#listmessages), чтобы получить объект [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/).
+1. Переберите коллекцию [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/), вызовите метод [SaveMessage()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/savemessage/#savemessage/) и укажите выходной путь и имя файла.
 
-В следующем фрагменте кода показано, как получать сообщения электронной почты с сервера и сохранять их.
+Приведенный ниже фрагмент кода показывает, как извлекать электронные письма с сервера и сохранять их.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-FetchEmailMessagesFromIMAPServer-FetchEmailMessagesFromIMAPServer.cs" >}}
 
 ## **Сохранение сообщений в формате MSG**
 
-[В приведенном выше примере](#fetch-messages-from-server-and-save-to-disc), электронные письма сохраняются в формате EML. Чтобы сохранить электронные письма в формате MSG, [ImapClient.FetchMessage()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/fetchmessage/#fetchmessage/) метод должен быть вызван. Он возвращает сообщение в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. [MailMessage.Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save/) Затем можно вызвать метод для сохранения сообщения в MSG. В следующем фрагменте кода показано, как сохранять сообщения в формате MSG.
+[В приведенном выше примере](#fetch-messages-from-server-and-save-to-disc) электронные письма сохраняются в формате EML. Чтобы сохранить электронные письма в формате MSG, необходимо вызвать метод [ImapClient.FetchMessage()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/fetchmessage/#fetchmessage/). Он возвращает сообщение в экземпляре класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Затем можно вызвать метод [MailMessage.Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save/), чтобы сохранить сообщение в формате MSG. Приведенный ниже фрагмент кода показывает, как сохранять сообщения в формате MSG.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SavingMessagesFromIMAPServer-SavingMessagesFromIMAPServer.cs" >}}
 
-## **Групповая выборка сообщений**
+## **Групповое извлечение сообщений**
 
-[ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) обеспечивает [FetchMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/fetchmessages/#fetchmessages/) метод, который принимает итерацию последовательных номеров или уникальных идентификаторов и возвращает список [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Следующий фрагмент кода демонстрирует использование [FetchMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/fetchmessages/#fetchmessages/) метод получения сообщений по порядковым номерам и уникальному идентификатору.
+[ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) предоставляет метод [FetchMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/fetchmessages/#fetchmessages/), который принимает итерируемый набор последовательных номеров или уникальных идентификаторов и возвращает список [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Приведенный ниже фрагмент кода демонстрирует использование метода [FetchMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/fetchmessages/#fetchmessages/) для извлечения сообщений по последовательным номерам и уникальным идентификаторам.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapFetchGroupMessages-1.cs" >}}
 
+## **Перечисление сообщений с поддержкой постраничной навигации**
 
-## **Список сообщений с поддержкой пейджинга**
-
-В сценариях, когда почтовый сервер содержит большое количество сообщений в почтовом ящике, часто требуется перечислить или получить сообщения с поддержкой пейджинга. API Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) позволяет получать сообщения с сервера с поддержкой пейджинга.
+В ситуациях, когда почтовый сервер содержит большое количество сообщений в почтовом ящике, часто возникает желание перечислять или извлекать сообщения с поддержкой постраничной навигации. API Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) позволяет извлекать сообщения с сервера с поддержкой постраничной навигации.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-ListingMessagesWithPagingSupport-ListingMessagesWithPagingSupport.cs" >}}
 
-## **Список вложений к сообщениям**
+## **Перечисление вложений сообщений** 
 
-Чтобы получить информацию о вложениях, таких как имя и размер, без извлечения данных вложения, попробуйте использовать следующие API:
+Чтобы получить информацию о вложениях, таких как имя, размер, не извлекая данные вложения, попробуйте следующие API:
 
-- *Aspose.Email.Clients.Imap.ImapAttachmentInfo* - Представляет собой информацию о вложении.
-- *Aspose.Email.Clients.Imap.ImapAttachmentInfoCollection* - Представляет собой коллекцию [ImapAttachmentInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfo/) class.
-- *Вложения aspose.email.clients.imap.List (целочисленный порядковый номер)* - Получает информацию о каждом вложении в сообщении.
+- *Aspose.Email.Clients.Imap.ImapAttachmentInfo* - Представляет информацию о вложении. 
+- *Aspose.Email.Clients.Imap.ImapAttachmentInfoCollection* - Представляет коллекцию класса [ImapAttachmentInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfo/). 
+- *Aspose.Email.Clients.Imap.ListAttachments(int sequenceNumber)* - Получает информацию для каждого вложения в сообщении.
 
-Пример кода со следующими шагами покажет вам, как использовать API:
+Пример кода с шагами ниже покажет, как использовать эти API:
 
-1. Позвоните [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/) метод на объекте IMapClient. Этот метод вернет коллекцию IMapMessageInfoCollection, содержащую информацию о сообщениях в почтовом ящике.
-2. Просмотрите каждое сообщение в коллекции MessageInfoCollection, используя цикл foreach.
-3. Позвоните [ListAttachments()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/#imapclientlistattachments-method) метод на объекте IMapClient, передающий свойство SequenceNumber объекта сообщения в качестве параметра. Этот метод вернет коллекцию IMAPAttachmentInfoCollection, содержащую информацию о вложениях в сообщении.
-4. Просмотрите каждое вложение в коллекции AttachmentInfoCollection, используя цикл foreach.
-5. Во внутреннем цикле вы можете получить доступ к информации о каждом вложении, используя свойства объекта AttachmentInfo. В этом примере имя и размер каждого вложения регистрируются в консоли с помощью `Console.WriteLine()`.
-  
+1. Вызовите метод [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listmessages/) на объекте imapClient. Этот метод вернет ImapMessageInfoCollection с информацией о сообщениях в почтовом ящике.
+2. Переберите каждое сообщение в messageInfoCollection, используя цикл foreach.
+3. Вызовите метод [ListAttachments()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/#imapclientlistattachments-method) на объекте imapClient, передавая свойство SequenceNumber объекта сообщения в качестве параметра. Этот метод вернет ImapAttachmentInfoCollection с информацией о вложениях в сообщении.
+4. Переберите каждое вложение в attachmentInfoCollection, используя цикл foreach.
+5. Внутри внешнего цикла вы можете получить доступ к информации о каждом вложении, используя свойства объекта attachmentInfo. В этом примере имя и размер каждого вложения выводятся в консоль с помощью `Console.WriteLine()`.
+
    `Console.WriteLine("Attachment: {0} (size: {1})", attachmentInfo.Name, attachmentInfo.Size);`
 ```cs
 var messageInfoCollection = imapClient.ListMessages();
-   
+    
 foreach (var message in messageInfoCollection)
 {
     var attachmentInfoCollection = imapClient.ListAttachments(message.SequenceNumber);
@@ -137,18 +135,18 @@ foreach (var message in messageInfoCollection)
 }
 ```
 
-## **Получение папок и рекурсивное чтение сообщений**
+## **Получение папок и чтение сообщений рекурсивно**
 
-В этой статье большинство [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) функции используются для создания приложения, рекурсивно перечисляющего все папки и подпапки с сервера IMAP. Оно также сохраняет сообщения в каждой папке и подпапке в формате MSG на локальном диске. На диске папки и сообщения создаются и сохраняются в той же иерархической структуре, что и на сервере IMAP. В следующем фрагменте кода показано, как рекурсивно получать информацию о сообщениях и подпапках.
+В этой статье используются большинство функций [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) для создания приложения, которое рекурсивно перечисляет все папки и подпапки с IMAP-сервера. Оно также сохраняет сообщения в каждой папке и подпапке в формате MSG на локальном диске. На диске папки и сообщения создаются и сохраняются в той же иерархической структуре, что и на IMAP-сервере. Приведенный ниже фрагмент кода показывает, как получить информацию о сообщениях и подпапках рекурсивно.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-ReadMessagesRecursively-ReadMessagesRecursively.cs" >}}
 
-## **Получение дополнительных параметров в виде сводной информации**
+## **Извлечение дополнительных параметров в качестве сводной информации**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-RetrieveExtraParameters-RetrieveExtraParametersAsSummaryInformation.cs" >}}
 
-## **Получение информации в заголовке списка «Отказаться от подписки»**
+## **Получение информации заголовка List-Unsubscribe**
 
-Заголовок List-Unsubscribe содержит URL-адрес для отказа от подписки на списки рассылки, например на рекламные объявления, информационные бюллетени и т. д. Чтобы получить заголовок List-Unsubscribe, используйте [ListUnsubscribe](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/listunsubscribe/) собственность [ImapMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/) класс. В следующем примере показано использование [ListUnsubscribe](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/listunsubscribe/) свойство для получения заголовка List-Unsubscribe.
+Заголовок List-Unsubscribe содержит URL-адрес для отписки от списков рассылки, например, рекламных, информационных и т. д. Для получения заголовка List-Unsubscribe используйте свойство [ListUnsubscribe](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/listunsubscribe/) класса [ImapMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfo/). Приведенный ниже пример показывает использование свойства [ListUnsubscribe](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/listunsubscribe/) для получения заголовка List-Unsubscribe.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-GetListUnsubscribeHeader-1.cs" >}}

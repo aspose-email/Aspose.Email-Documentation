@@ -1,20 +1,20 @@
 ---
-title: "Добавление MapicaLendar в PST в Ruby"
+title: "Добавление MapiCalendar в PST на Ruby"
 url: /ru/java/adding-mapicalendar-to-pst-in-ruby/
 weight: 20
 type: docs
 ---
 
 ## **Aspose.Email - Добавление MapiCalendar в PST**
-Чтобы добавить MapicaLendar в PST, используя **Aspose.Электронная почта Java для Ruby**, просто вызовите **AddMapiCalendarToPST** модуль. Здесь вы можете увидеть пример кода.
+Чтобы добавить MapiCalendar в PST с использованием **Aspose.Email Java для Ruby**, просто вызовите модуль **AddMapiCalendarToPST**. Здесь вы можете видеть пример кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ```ruby
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
-\# Create the appointment
+\# Создание встречи
 
 appointment = Rjb::import('com.aspose.email.MapiCalendar').new(
 
@@ -22,13 +22,13 @@ appointment = Rjb::import('com.aspose.email.MapiCalendar').new(
 
     "Appointment",
 
-    "This is a very important meeting :)",
+    "Это очень важная встреча :)",
 
     Rjb::import('java.util.Date').new(2012, 10, 2),
 
     Rjb::import('java.util.Date').new(2012, 10, 2, 14, 0, 0))
 
-\# Create the meeting
+\# Создание собрания
 
 attendees = Rjb::import('com.aspose.email.MapiRecipientCollection').new
 
@@ -42,7 +42,7 @@ meeting = Rjb::import('com.aspose.email.MapiCalendar').new(
 
     "Meeting",
 
-    "Please confirm your availability.",
+    "Пожалуйста, подтвердите свою доступность.",
 
     Rjb::import('java.util.Date').new(2012, 10, 2, 13, 0, 0),
 
@@ -56,16 +56,16 @@ meeting = Rjb::import('com.aspose.email.MapiCalendar').new(
 
 pst = Rjb::import('com.aspose.email.PersonalStorage').create(data_dir + "MapiCalendarToPST.pst", Rjb::import('com.aspose.email.FileFormatVersion').Unicode)
 
-calendar_folder = pst.createPredefinedFolder("Calendar", Rjb::import('com.aspose.email.StandardIpmFolder').Appointments)
+calendar_folder = pst.createPredefinedFolder("Календарь", Rjb::import('com.aspose.email.StandardIpmFolder').Appointments)
 
 calendar_folder.addMapiMessageItem(appointment)
 
 calendar_folder.addMapiMessageItem(meeting)
 
-puts "Added MapiCalendar Successfully."
+puts "MapiCalendar успешно добавлен."
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление MapicaLendar в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Добавление MapiCalendar в PST (Aspose.Email)** с любых из нижеупомянутых социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/addmapicalendartopst.rb)

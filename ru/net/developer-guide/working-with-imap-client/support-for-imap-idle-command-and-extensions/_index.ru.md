@@ -1,34 +1,34 @@
 ---
-title: "Поддержка команд и расширений IMAP IDLE"
+title: "Поддержка команды IMAP IDLE и расширений"
 url: /ru/net/support-for-imap-idle-command-and-extensions/
 weight: 110
 type: docs
 ---
 
 
-## **Поддержка команды IMAP Idle**
+## **Поддержка команды IMAP IDLE**
 
-API Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) предоставляет возможность открыть соединение с сервером и дождаться получения сообщения электронной почты. Это позволяет избежать повторного опроса сервера на предмет получения входящей электронной почты. В следующем фрагменте кода показано, как поддерживать команду IMAP Idle.
+API Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) предоставляет возможность установить соединение с сервером и ожидать поступления email-сообщения. Это позволяет избежать повторных запросов к серверу для получения входящих писем. Следующий фрагмент кода показывает, как поддерживать команду IMAP IDLE.
 
 ```csharp
 var client = = new ImapClient("imap.domain.com", "username", "password");
 
-//anySuccess is a flag to prevent infinite Client.ResumeMonitoring calls
+//anySuccess – это флаг, предотвращающий бесконечные вызовы Client.ResumeMonitoring
 var anySuccess = false;
 await client.StartMonitoringAsync(OnNewMessagesCallback, OnErrorCallback);
 
 void OnErrorCallback(object eventSender, ImapMonitoringErrorEventArgs errorEventArguments)
 {
-    //The exception can be handled here
+    //Исключение можно обработать здесь
     Logger.Debug.Write(
-        $"An error occured while folder monitoring: {errorEventArguments.FolderName}",
+        $"Произошла ошибка при мониторинге папки: {errorEventArguments.FolderName}",
         errorEventArguments.Error);
-    //IMAP folder monitoring is stopped on any error. Here is an example
-    //of resuming after that.
+    //Мониторинг IMAP папки останавливается при любой ошибке. Вот пример
+    //возобновления после этого.
     if (!anySuccess) return;
     anySuccess = false;
-    //Make sure you use ResumeMonitoring instead of StartMonitoring here
-    //to prevent missing any emails between the error handling and resuming.
+    //Убедитесь, что вы используете ResumeMonitoring вместо StartMonitoring здесь
+    //чтобы избежать пропуска каких-либо писем между обработкой ошибок и возобновлением.
     client.ResumeMonitoring(OnNewMessagesCallback, OnErrorCallback,
         errorEventArguments.MonitoringState);
 }
@@ -36,27 +36,27 @@ void OnErrorCallback(object eventSender, ImapMonitoringErrorEventArgs errorEvent
 void OnNewMessagesCallback(object sender, ImapMonitoringEventArgs successEventArgs)
 {
     anySuccess = true;
-    //Use successEventArgs.NewMessages to handle new messages
-    //Use successEventArgs.DeletedMessages to handle deleted messages
+    //Используйте successEventArgs.NewMessages для обработки новых сообщений
+    //Используйте successEventArgs.DeletedMessages для обработки удаленных сообщений
 }
 ```
 
 ## **Поддержка расширений IMAP**
 
-API Aspose.Email обеспечивает поддержку расширений IMAP. В настоящее время API поддерживает следующие расширения IMAP. Эти расширения IMAP поддерживаются не всеми серверами.
+API Aspose.Email предоставляет поддержку расширений IMAP. В настоящее время API поддерживает следующие расширения IMAP. Эти расширения IMAP не поддерживаются всеми серверами.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для получения полных примеров и файлов данных, пожалуйста, перейдите на https://github.com/aspose-email/Aspose.Email-for-.NET
 using (ImapClient client = new ImapClient("imap.gmail.com", 993, "username", "password"))
 {
-    // Set SecurityOptions
+    // Установить SecurityOptions
     client.SecurityOptions = SecurityOptions.Auto;
     Console.WriteLine(client.IdSupported.ToString());
 
     ImapIdentificationInfo serverIdentificationInfo1 = client.IntroduceClient();
     ImapIdentificationInfo serverIdentificationInfo2 = client.IntroduceClient(ImapIdentificationInfo.DefaultValue);
 
-    // Display ImapIdentificationInfo properties
+    // Отобразить свойства ImapIdentificationInfo
     Console.WriteLine(serverIdentificationInfo1.ToString(), serverIdentificationInfo2);
     Console.WriteLine(serverIdentificationInfo1.Name);
     Console.WriteLine(serverIdentificationInfo1.Vendor);
@@ -65,40 +65,40 @@ using (ImapClient client = new ImapClient("imap.gmail.com", 993, "username", "pa
 }
 ```
 
-### **Команда расширенного списка IMAP4**
+### **Расширенная команда IMAP4 List**
 
-В следующем фрагменте кода показано, как использовать команду IMAP4 extended list.
+Следующий фрагмент кода показывает, как использовать расширенную команду IMAP4 List.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для получения полных примеров и файлов данных, пожалуйста, перейдите на https://github.com/aspose-email/Aspose.Email-for-.NET
 using (ImapClient client = new ImapClient("imap.gmail.com", 993, "username", "password"))
 {
     ImapFolderInfoCollection folderInfoCol = client.ListFolders("*");
-    Console.WriteLine("Extended List Supported: " + client.ExtendedListSupported);
+    Console.WriteLine("Расширенный список поддерживается: " + client.ExtendedListSupported);
     foreach (ImapFolderInfo folderInfo in folderInfoCol)
     {
         switch (folderInfo.Name)
         {
-            case "[Gmail]/All Mail":
-                Console.WriteLine("Has Children: " + folderInfo.HasChildren);
+            case "[Gmail]/Все письма":
+                Console.WriteLine("Есть дочерние? " + folderInfo.HasChildren);
                 break;
-            case "[Gmail]/Bin":
-                Console.WriteLine("Bin has children? " + folderInfo.HasChildren);
+            case "[Gmail]/Корзина":
+                Console.WriteLine("В корзине есть дочерние? " + folderInfo.HasChildren);
                 break;
-            case "[Gmail]/Drafts":
-                Console.WriteLine("Drafts has children? " + folderInfo.HasChildren);
+            case "[Gmail]/Черновики":
+                Console.WriteLine("В черновиках есть дочерние? " + folderInfo.HasChildren);
                 break;
-            case "[Gmail]/Important":
-                Console.WriteLine("Important has Children? " + folderInfo.HasChildren);
+            case "[Gmail]/Важные":
+                Console.WriteLine("В важных есть дочерние? " + folderInfo.HasChildren);
                 break;
-            case "[Gmail]/Sent Mail":
-                Console.WriteLine("Sent Mail has Children? " + folderInfo.HasChildren);
+            case "[Gmail]/Отправленные":
+                Console.WriteLine("В отправленных есть дочерние? " + folderInfo.HasChildren);
                 break;
-            case "[Gmail]/Spam":
-                Console.WriteLine("Spam has Children? " + folderInfo.HasChildren);
+            case "[Gmail]/Спам":
+                Console.WriteLine("В спаме есть дочерние? " + folderInfo.HasChildren);
                 break;
-            case "[Gmail]/Starred":
-                Console.WriteLine("Starred has Children? " + folderInfo.HasChildren);
+            case "[Gmail]/Звёздные":
+                Console.WriteLine("В звёздных есть дочерние? " + folderInfo.HasChildren);
                 break;
         }
     }

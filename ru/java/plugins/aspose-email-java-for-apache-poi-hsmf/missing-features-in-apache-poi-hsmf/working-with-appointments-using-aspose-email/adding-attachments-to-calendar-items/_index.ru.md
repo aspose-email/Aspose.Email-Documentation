@@ -5,7 +5,7 @@ weight: 60
 type: docs
 ---
 
-## **Aspose.Email - добавление вложений к элементам календаря**
+## **Aspose.Email - Добавление вложений к элементам календаря**
 Aspose.Email предоставляет коллекцию вложений, которую можно использовать для добавления вложений, связанных с элементами календаря.
 
 **Java**
@@ -24,17 +24,17 @@ Date endDate = calendar.getTime();
 
 MailAddressCollection attendees = new MailAddressCollection();
 
-attendees.addItem(new MailAddress("attendee_address@domain.com", "Attendee"));
+attendees.addItem(new MailAddress("attendee_address@domain.com", "Участник"));
 
 WeeklyRecurrencePattern expected = new WeeklyRecurrencePattern(3);
 
-Appointment app = new Appointment("Appointment Location", "Appointment Summary", "Appointment Description",
+Appointment app = new Appointment("Место встречи", "Сводка встречи", "Описание встречи",
 
 									startDate, endDate,
 
-									new MailAddress("organizer_address@domain.com", "Organizer"), attendees, expected);
+									new MailAddress("organizer_address@domain.com", "Организатор"), attendees, expected);
 
-//Attach a file from disc to this appointment
+//Прикрепить файл с диска к этой встрече
 
 File file = new File(dataDir + "AsposeXLS.xls");
 
@@ -51,15 +51,15 @@ String savedFile = dataDir + "AppWithAttachments.ics";
 app.save(savedFile, AppointmentSaveFormat.Ics);
 
 ```
-## **Загрузить рабочий код**
+## **Скачать работающий код**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/appointments/addattachmentstocalenderitems/AsposeAddAttachmentToCalenderItems.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/appointments/addattachmentstocalenderitems/AsposeAddAttachmentToCalenderItems.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Для получения дополнительной информации посетите [Добавление и получение вложений из элементов календаря](/email/java/working-with-appointments/).
+Для получения дополнительных сведений посетите [Добавление и извлечение вложений из элементов календаря](/email/java/working-with-appointments/).
 
 {{% /alert %}}

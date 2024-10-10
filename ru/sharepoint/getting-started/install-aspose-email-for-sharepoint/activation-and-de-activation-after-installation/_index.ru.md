@@ -6,22 +6,22 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-After [установка Aspose.Email для SharePoint](/email/sharepoint/installing-aspose-email-for-sharepoint/), активируйте функции на корневом веб-сайте.
+После [установки Aspose.Email для SharePoint](/email/sharepoint/installing-aspose-email-for-sharepoint/) активируйте функции на корневом сайте. 
 
-{{% /alert %}}
+{{% /alert %}} 
 ## **Активация и деактивация Aspose.Email**
-Чтобы активировать или деактивировать функции, выполните следующие действия:
+Чтобы активировать или деактивировать функции: 
 
-1. Нажмите кнопку **Действия на сайте** меню и выберите **Настройки сайта**.
+1. Нажмите на меню **Действия сайта** и выберите **Настройки сайта**. 
 
 ![todo:image_alt_text](activation-and-de-activation-after-installation_1.png)
 
 
 
 
-1. В **Администрирование семейства сайтов** категория, нажмите **Функции коллекции сайтов** чтобы открыть страницу активации и деактивации функций.
+1. В категории **Администрирование коллекции сайтов** нажмите **Функции коллекции сайтов**, чтобы открыть страницу для активации и деактивации функций. 
 
 ![todo:image_alt_text](activation-and-de-activation-after-installation_2.png)
 
@@ -33,6 +33,6 @@ After [установка Aspose.Email для SharePoint](/email/sharepoint/inst
 
 
 
-Когда функции будут активированы, **Инструменты Aspose** лента доступна в библиотеке документов SharePoint.
+Когда функции активированы, лента **Aspose Tools** доступна в библиотеке документов SharePoint. 
 
 ![todo:image_alt_text](activation-and-de-activation-after-installation_4.png)

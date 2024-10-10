@@ -1,12 +1,12 @@
 ---
-title: "Показать или скрыть дополнительные заголовки для печати"
+title: "Показать или Скрыть Дополнительные Заголовки Печати"
 url: /ru/java/show-or-hide-extra-print-headers/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Показать или скрыть дополнительные заголовки для печати**
-Дополнительные заголовки для печати можно показать или скрыть с помощью MhtFormatOptions и MailMessageSaveOptions. MHTFormatOptions — это перечислитель, состоящий из двух элементов: «Записать полный адрес электронной почты в HT» и «HideExtraPrintHeader». MHTFormatOptions используется вместе с MHTMessageFormatter в качестве публичного метода MHTMessageFormatter.Формат с аргументом WriteCompleteEmailAddress теперь устарел.
+## **Aspose.Email - Показать или Скрыть Дополнительные Заголовки Печати**
+Дополнительные заголовки печати могут быть показаны или скрыты с помощью MhtFormatOptions и MailMessageSaveOptions. MhtFormatOptions является перечислением, которое содержит два члена - WriteCompleteEmailAddressToMht и HideExtraPrintHeader. MhtFormatOptions используется с MhtMessageFormatter как публичный метод MhtMessageFormatter.Format, в котором аргумент writeCompleteEmailAddress в настоящее время устарел.
 
 **Java**
 
@@ -21,9 +21,9 @@ int saveOptions =  MailMessageSaveOptions.HideExtraPrintHeader;
 message.save(dataDir + "AsposeHideExtraHeaders.mhtml", MailMessageSaveType.getMHtmlFormat(), saveOptions);
 
 ```
-## **Загрузить рабочий код**
+## **Скачать Исполняемый Код**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Загрузить образец кода**
+## **Скачать Пример Кода**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/printheaders/AsposeShowHidePrintHeaders.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/printheaders/AsposeShowHidePrintHeaders.java)

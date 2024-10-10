@@ -5,10 +5,10 @@ weight: 10
 type: docs
 ---
 
-## **Aspose.Email - добавление файлов в PST**
-Чтобы добавить файл в PST, используя **Aspose.Электронная почта Java для PHP**, просто вызовите **AddFileToPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Добавление файлов в PST**
+Чтобы добавить файл в PST с помощью **Aspose.Email Java для PHP**, просто вызовите модуль **AddFileToPST**. Здесь вы можете видеть пример кода.
 
-**Код PHP**
+**PHP код**
 
 ``` php
 
@@ -26,11 +26,11 @@ $fi->addFile($dataDir . "Report.xlsx", "IPM.Document.Excel.Sheet.8");
 
 $pst->dispose();
 
-print "Added file to PST".PHP_EOL;
+print "Добавлен файл в PST".PHP_EOL;
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление файлов в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Загрузка работающего кода**
+Скачайте **Добавление файлов в PST (Aspose.Email)** с любого из указанных ниже сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddFileToPST.php)
 - [CodePlex](https://asposeemailjavaphp.codeplex.com/SourceControl/latest#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddFileToPST.php)

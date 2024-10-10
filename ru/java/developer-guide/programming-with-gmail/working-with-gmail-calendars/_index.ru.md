@@ -7,128 +7,128 @@ type: docs
 
 
 ## **Добавление, редактирование и удаление календаря**
-Aspose.Email позволяет приложениям управлять календарями Gmail с помощью [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) который предоставляет такие функции, как добавление, удаление и обновление календарей Gmail. Этот клиентский класс возвращает список объектов типа ExtendedCalendar, содержащих информацию об элементах календаря Gmail. [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) класс предоставляет следующие функции для календарей:
+Aspose.Email позволяет приложениям управлять календарями Gmail с использованием [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient), который предоставляет такие функции, как добавление, удаление и обновление календарей Gmail. Этот класс клиента возвращает список объектов типа ExtendedCalendar, которые содержат информацию о элементах календаря Gmail. Класс [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) предоставляет следующие функции для работы с календарями:
 
 - [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\))
-  Чтобы вставить новый календарь
+  Для вставки нового календаря
 - [listCalendars](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\))
 
-Получите список всех календарей клиента
+Получить список всех календарей клиента
 
 - [deleteCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteCalendar\(java.lang.String\))
-  Его можно использовать для удаления календаря
+  Может быть использован для удаления календаря
 - [fetchCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchCalendar\(java.lang.String\))
-  Его можно использовать для получения определенного календаря клиента
+  Может быть использован для получения конкретного календаря клиента
 - [updateCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateCalendar\(com.aspose.email.Calendar\))
-  Эта функция используется для вставки измененного календаря клиента
+  Эта функция используется для вставки обратно измененного календаря клиента
 
-Чтобы получить доступ к календарям, GoogleTestUser инициализируется с использованием учетных данных учетной записи gmail. GoogleOAuthHelper используется для получения токена доступа для пользователя, который в дальнейшем используется для инициализации [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient).
-### **Вставка, загрузка и обновление**
-Для вставки календаря инициализируйте [Calendar](https://apireference.aspose.com/email/java/com.aspose.email/Calendar) введите объект и вставьте его, используя [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) function. [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) возвращает идентификатор только что вставленного календаря. Этот идентификатор можно использовать для загрузки календаря с сервера. В следующем фрагменте кода показано, как вставлять, извлекать и обновлять календарь.
+Для доступа к календарям GoogleTestUser инициализируется с использованием учетных данных gmail-аккаунта. GoogleOAuthHelper используется для получения токена доступа для пользователя, который далее используется для инициализации [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient).
+### **Вставка, получение и обновление**
+Для вставки календаря инициализируйте объект типа [Calendar](https://apireference.aspose.com/email/java/com.aspose.email/Calendar) и вставьте его с помощью функции [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)). [createCalendar](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createCalendar\(com.aspose.email.Calendar\)) возвращает идентификатор вновь вставленного календаря. Этот идентификатор может быть использован для получения календаря с сервера. Следующий фрагмент кода демонстрирует, как вставить, получить и обновить календарь.
 
 
 
 ~~~Java
 try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
-    // Insert, get and update calendar
+    // Вставить, получить и обновить календарь
     Calendar calendar = new Calendar("Summary", "Description", "Location", "America/Los_Angeles");
 
-    // Insert calendar and Retrieve same calendar using id
+    // Вставить календарь и получить тот же календарь по идентификатору
     String id = client.createCalendar(calendar);
     Calendar cal = client.fetchCalendar(id);
 
-    // Change information in the fetched calendar and Update calendar
+    // Изменить информацию в полученном календаре и обновить календарь
     cal.setDescription("New Description");
     cal.setLocation("New Location");
     client.updateCalendar(cal);
 }
 ~~~
-### **Удалить определенный календарь**
-Чтобы удалить определенный календарь, нам нужно получить список всех календарей клиента, а затем удалить его при необходимости. [listCalendars](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\)) возвращает список [ExtendedCalendar](https://apireference.aspose.com/email/java/com.aspose.email/ExtendedCalendar) который содержит календари Gmail. В следующем фрагменте кода показано, как удалить определенный календарь.
+### **Удаление конкретного календаря**
+Чтобы удалить конкретный календарь, нужно получить список всех календарей клиента и затем удалить по мере необходимости. [listCalendars](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listCalendars\(\)) возвращает список [ExtendedCalendar](https://apireference.aspose.com/email/java/com.aspose.email/ExtendedCalendar), который содержит календари Gmail. Следующий фрагмент кода демонстрирует, как удалить конкретный календарь.
 
 
 
 ~~~Java
 try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
-    // Access and delete calendar with summary starting from "Calendar summary"
+    // Получить доступ и удалить календарь с описанием, начинающимся с "Calendar summary"
     String summary = "Calendar summary";
 
-    // Get calendars list
+    // Получить список календарей
     ExtendedCalendar[] lst = client.listCalendars();
 
     for (ExtendedCalendar extCal : lst) {
-        // Delete selected calendars
+        // Удалить выбранные календари
         if (extCal.getSummary().startsWith(summary))
             client.deleteCalendar(extCal.getId());
     }
 }
 ~~~
 ## **Работа с контролем доступа к календарю**
-Aspose.Email обеспечивает полный контроль доступа к элементам календаря. [listAccessRules](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\)) функция раскрывается [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) который возвращает список [AccessControlRule](https://apireference.aspose.com/email/java/com.aspose.email/AccessControlRule). Информация об отдельных правилах может быть извлечена, изменена и сохранена в календаре клиента. [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) содержит следующие функции для управления правилами контроля доступа.
+Aspose.Email предоставляет полный контроль над доступом к элементам календаря. Функция [listAccessRules](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\)) предоставляется классом [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient), который возвращает список [AccessControlRule](https://apireference.aspose.com/email/java/com.aspose.email/AccessControlRule). Информация об отдельных правилах может быть получена, изменена и сохранена для календаря клиента. [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) содержит следующие функции для управления правилами контроля доступа.
 
 - [listAccessRules](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAccessRules\(java.lang.String\))
   Эта функция предоставляет список [AccessControlRule](https://apireference.aspose.com/email/java/com.aspose.email/AccessControlRule)
 - [createAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createAccessRule\(java.lang.String,%20com.aspose.email.AccessControlRule\))
-  Эта функция создает новое правило доступа к календарю.
+  Эта функция создает новое правило доступа для календаря.
 - [updateAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAccessRule\(java.lang.String,%20com.aspose.email.AccessControlRule\))
   Эта функция используется для обновления правила доступа.
 - [fetchAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAccessRule\(java.lang.String,%20java.lang.String\))
-  Его можно использовать для получения определенного правила доступа к календарю клиента.
+  Может быть использована для получения конкретного правила доступа для календаря клиента
 - [deleteAccessRule](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteAccessRule\(java.lang.String,%20java.lang.String\))
   Эта функция используется для удаления правила доступа.
 
-В следующем фрагменте кода показано, как используются функции для управления правилами доступа:
+Следующий фрагмент кода демонстрирует, как использовать функции для управления правилами доступа:
 
 
 ~~~Java
 try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
-    // Retrieve list of calendars for the current client
+    // Получить список календарей для текущего клиента
     ExtendedCalendar[] calendarList = client.listCalendars();
 
-    // Get first calendar id and retrieve list of AccessControlRule for the first calendar
+    // Получить идентификатор первого календаря и извлечь список AccessControlRule для первого календаря
     String calendarId = calendarList[0].getId();
     AccessControlRule[] roles1 = client.listAccessRules(calendarId);
 
-    // Create a local access control rule and Set rule properties
+    // Создать локальное правило контроля доступа и установить свойства правила
     AccessControlRule rule = new AccessControlRule();
     rule.setRole(AccessRole.reader);
     rule.setScope(new AclScope(AclScopeType.user, email2));
 
-    // Insert new rule for the calendar. It returns the newly created rule
+    // Вставить новое правило для календаря. Оно возвращает вновь созданное правило
     AccessControlRule createdRule = client.createAccessRule(calendarId, rule);
 
-    // Get list of rules
+    // Получить список правил
     AccessControlRule[] roles2 = client.listAccessRules(calendarId);
 
-    // Current list length should be 1 more than the earlier one
+    // Длина текущего списка должна быть на 1 больше, чем раньше
     if (roles1.length + 1 == roles2.length) {
-        System.out.println("List lengths are ok");
+        System.out.println("Длины списков в порядке");
     } else {
-        System.out.println("List lengths are not ok");
+        System.out.println("Длины списков не в порядке");
         return;
     }
 
-    // Change rule and Update the rule for the selected calendar
+    // Изменить правило и обновить правило для выбранного календаря
     createdRule.setRole(AccessRole.writer);
     AccessControlRule updatedRule = client.updateAccessRule(calendarId, createdRule);
 
-    // Retrieve individaul rule against a calendar
+    // Извлечь отдельное правило для календаря
     AccessControlRule fetchedRule = client.fetchAccessRule(calendarId, createdRule.getId());
 
-    // Delete particular rule against a given calendar and Retrieve the all rules list for the same calendar
+    // Удалить конкретное правило для данного календаря и извлечь весь список правил для того же календаря
     client.deleteAccessRule(calendarId, createdRule.getId());
     AccessControlRule[] roles3 = client.listAccessRules(calendarId);
 
-    // Check that current rules list length should be equal to the original list length before adding and deleting the rule
+    // Проверить, что длина текущего списка правил должна быть равна длине исходного списка до добавления и удаления правила
     if (roles1.length == roles3.length) {
-        System.out.println("List lengths are same");
+        System.out.println("Длины списков равны");
     } else {
-        System.out.println("List lengths are not equal");
+        System.out.println("Длины списков не равны");
         return;
     }
 }
 ~~~
-## **Работа с настройками клиента и информацией о цвете**
+## **Работа с настройками клиента и информацией о цветах**
 Aspose.Email поддерживает доступ к настройкам клиента с помощью [IGmailClient.getSettings](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#getSettings\(\)). Он возвращает список настроек, как указано ниже:
 
 1. dateFieldOrder
@@ -151,34 +151,34 @@ Aspose.Email поддерживает доступ к настройкам кл�
 1. useKeyboardShortcuts
 1. country
 
-Аналогичным образом, информацию о цвете для клиентов также можно получить с помощью [IGmailClient.getColors](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#getColors\(\)). Этот информационный объект цвета возвращает список цветов переднего плана, цветов фона, а также дату и время обновления.
+Аналогично информация о цветах для клиентов также может быть получена с использованием [IGmailClient.getColors](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#getColors\(\)). Этот объект информации о цветах возвращает список основных цветов, фоновых цветов и даты и времени обновления.
 ### **Доступ к настройкам клиента**
-В следующем фрагменте кода показано, как используются функции для доступа к настройкам клиента:
+Следующий фрагмент кода демонстрирует, как использовать функции для доступа к настройкам клиента:
 
 
 ~~~Java
 try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
-    // Retrieve client settings
+    // Получить настройки клиента
     Dictionary<String, String> settings = client.getSettings();
     if (settings.size() < 1) {
-        System.out.println("No settings are available.");
+        System.out.println("Нет доступных настроек.");
         return;
     }
 
-    // Traverse the settings list
+    // Пройтись по списку настроек
     for (KeyValuePair<String, String> pair : settings) {
-        // Get the setting value and test if settings are ok
+        // Получить значение настройки и проверить, все ли в порядке
         String value = client.getSetting(pair.getKey());
         if (pair.getValue().equals(value)) {
-            System.out.println("Key = " + pair.getKey() + ", Value = " + pair.getValue());
+            System.out.println("Ключ = " + pair.getKey() + ", Значение = " + pair.getValue());
         } else {
-            System.out.println("Settings could not be retrieved");
+            System.out.println("Настройки не удалось извлечь");
         }
     }
 }
 ~~~
-### **Доступ к информации о цвете**
-В следующем фрагменте кода показано, как используются функции для доступа к цветовым настройкам клиента.
+### **Доступ к информации о цветах**
+Следующий фрагмент кода демонстрирует, как использовать функции для доступа к настройкам цветов клиента.
 
 
 ~~~Java
@@ -186,89 +186,89 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
     ColorsInfo colors = client.getColors();
     Dictionary<String, Colors> palettes = colors.getCalendar();
 
-    // Traverse the settings list
+    // Пройтись по списку настроек
     for (KeyValuePair<String, Colors> pair : palettes) {
-        System.out.println("Key = " + pair.getKey() + ", Color = " + pair.getValue());
+        System.out.println("Ключ = " + pair.getKey() + ", Цвет = " + pair.getValue());
     }
-    System.out.println("Update Date = " + colors.getUpdated());
+    System.out.println("Дата обновления = " + colors.getUpdated());
 }
 ~~~
-## **Работа с назначениями**
-Aspose.Email предоставляет функции для работы с [Appointments](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) в календарях Google. Ниже приведен список задач, которые можно выполнять на встречах в календаре Google:
+## **Работа с встречами**
+Aspose.Email предоставляет функции для работы с [Appointments](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) в календарях Google. Вот список задач, которые можно выполнить с встречами в календаре Google:
 
 1. Добавить встречи - [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#createAppointment\(java.lang.String,%20com.aspose.email.Appointment\)), [importAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#importAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
-1. Получить список встреч - [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointments\(java.lang.String\))
-1. Запишитесь на конкретную встречу - [fetchAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAppointment\(java.lang.String,%20java.lang.String\)), [listAppointmentInstances](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointmentInstances\(java.lang.String,%20java.lang.String\))
-1. Обновить запись на прием - [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
-1. Перенести встречу из одного календаря в другой - [moveAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#moveAppointment\(java.lang.String,%20java.lang.String,%20java.lang.String\))
+1. Извлечь список встреч - [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointments\(java.lang.String\))
+1. Извлечь конкретную встречу - [fetchAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#fetchAppointment\(java.lang.String,%20java.lang.String\)), [listAppointmentInstances](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#listAppointmentInstances\(java.lang.String,%20java.lang.String\))
+1. Обновить встречу - [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#updateAppointment\(java.lang.String,%20com.aspose.email.Appointment\))
+1. Переместить встречу из одного календаря в другой - [moveAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#moveAppointment\(java.lang.String,%20java.lang.String,%20java.lang.String\))
 1. Удалить встречу - [deleteAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient#deleteAppointment\(java.lang.String,%20java.lang.String\))
 
 ### **Добавление встречи**
-Следующий пример кода демонстрирует возможность добавления встречи в календарь. В этом примере выполняются следующие шаги:
+Следующий образец кода демонстрирует возможность добавления встречи в календарь. В этом примере выполняются следующие шаги:
 
-1. Создайте и вставьте календарь.
-1. Извлеките список встреч из нового календаря.
-1. Назначьте встречу.
-1. Укажите встречу.
+1. Создать и вставить календарь.
+1. Извлечь список встреч из нового календаря.
+1. Создать встречу.
+1. Вставить встречу.
 
 
 ~~~Java
 try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
-    // Create local calendar
+    // Создать локальный календарь
     Calendar calendar1 = new Calendar("Summary", null, null, "Europe/Kiev");
 
-    // Insert calendar and get id of inserted calendar and Get back calendar using an id
+    // Вставить календарь и получить идентификатор вставленного календаря, а также получить календарь по идентификатору
     String id = client.createCalendar(calendar1);
     Calendar cal1 = client.fetchCalendar(id);
     String calendarId1 = cal1.getId();
 
     try {
-        // Retrieve list of appointments from the first calendar
+        // Извлечь список встреч из первого календаря
         Appointment[] appointments = client.listAppointments(calendarId1);
         if (appointments.length > 0) {
-            System.out.println("Wrong number of appointments");
+            System.out.println("Неверное количество встреч");
             return;
         }
 
-        // Get current time and Calculate time after an hour from now
+        // Получить текущее время и рассчитать время через час от начала
         java.util.Calendar c = java.util.Calendar.getInstance();
         Date startDate = c.getTime();
         c.add(java.util.Calendar.HOUR_OF_DAY, 1);
         Date endDate = c.getTime();
 
-        // Initialize a mail address collection and set attendees mail address
+        // Инициализировать коллекцию адресов электронной почты и установить адреса электронной почты участников
         MailAddressCollection attendees = new MailAddressCollection();
         attendees.add("User1.EMail@domain.com");
         attendees.add("User3.EMail@domain.com");
 
-        // Create an appointment with above attendees
+        // Создать встречу с вышеуказанными участниками
         Appointment app1 = new Appointment("Location", startDate, endDate, MailAddress.to_MailAddress(email2), attendees);
 
-        // Set appointment summary, description, start/end time zone
+        // Установить краткое содержание встречи, описание, временные зоны начала/конца
         app1.setSummary("New Summary");
         app1.setDescription("New Description");
         app1.setStartTimeZone("Europe/Kiev");
         app1.setEndTimeZone("Europe/Kiev");
 
-        // Insert appointment in the first calendar inserted above and get back inserted appointment
+        // Вставить встречу в первый календарь, вставленный выше, и получить вставленную встречу
         Appointment app2 = client.createAppointment(calendarId1, app1);
 
-        // Retrieve appointment using unique id
+        // Извлечь встречу по уникальному идентификатору
         Appointment app3 = client.fetchAppointment(calendarId1, app2.getUniqueId());
     } catch (Exception ex) {
         System.err.println(ex);
     }
-   
+    
 }
 ~~~
-### **Запросить и обновить запись**
-Здесь извлечение и обновление календаря демонстрируется следующим образом:
+### **Извлечение и обновление встречи**
+Здесь демонстрируется извлечение и обновление календаря следующим образом:
 
-1. Запишитесь на определенную встречу.
-1. Измените встречу.
-1. Обновите встречу в календаре.
+1. Извлечь конкретную встречу.
+1. Изменить встречу.
+1. Обновить встречу в календаре.
 
-Предполагается, что календарь с идентификатором «CalendarID» и уникальным идентификатором встречи «AppointmentUniqueID» уже извлечены. В следующем фрагменте кода показано, как восстановить и обновить встречу.
+Предполагается, что календарь с идентификатором "calendarId" и уникальный идентификатор встречи "AppointmentUniqueId" уже извлечены. Следующий фрагмент кода демонстрирует, как извлечь и обновить встречу.
 
 
 
@@ -277,9 +277,9 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
     String calendarId = client.listCalendars()[0].getId();
     String AppointmentUniqueId = client.listAppointments(calendarId)[0].getUniqueId();
 
-    // Retrieve Appointment
+    // Извлечь встречу
     Appointment app3 = client.fetchAppointment(calendarId, AppointmentUniqueId);
-    // Change the appointment information
+    // Изменить информацию о встрече
     app3.setSummary("New Summary");
     app3.setDescription("New Description");
     app3.setLocation("New Location");
@@ -291,12 +291,12 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
     app3.setEndDate(c.getTime());
     app3.setStartTimeZone("Europe/Kiev");
     app3.setEndTimeZone("Europe/Kiev");
-    // Update the appointment and get back updated appointment
+    // Обновить встречу и получить обновленную встречу
     Appointment app4 = client.updateAppointment(calendarId, app3);
 }
 ~~~
-### **Переместить и удалить встречу**
-[Appointment](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) можно переместить, указав исходный календарь, календарь назначения и уникальный идентификатор встречи в исходном календаре. В следующем фрагменте кода показано, как перемещать и удалять встречу.
+### **Перемещение и удаление встречи**
+[Appointment](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) может быть перемещена, если указаны исходный календарь, целевой календарь и уникальный идентификатор встречи в исходном календаре. Следующий фрагмент кода демонстрирует, как переместить и удалить встречу.
 
 
 ~~~Java
@@ -305,20 +305,20 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
     String DestinationCalendarId = client.listCalendars()[1].getId();
     String TargetAppUniqueId = client.listAppointments(SourceCalendarId)[0].getUniqueId();
 
-    // Retrieve the list of appointments in the destination calendar before moving the appointment
+    // Извлечь список встреч в целевом календаре перед перемещением встречи
     Appointment[] appointments = client.listAppointments(DestinationCalendarId);
-    System.out.println("Before moving count = " + appointments.length);
+    System.out.println("Перед перемещением количество = " + appointments.length);
     Appointment Movedapp = client.moveAppointment(SourceCalendarId, DestinationCalendarId, TargetAppUniqueId);
 
-    // Retrieve the list of appointments in the destination calendar after moving the appointment
+    // Извлечь список встреч в целевом календаре после перемещения встречи
     appointments = client.listAppointments(DestinationCalendarId);
-    System.out.println("After moving count = " + appointments.length);
+    System.out.println("После перемещения количество = " + appointments.length);
 
-    // Delete particular appointment from a calendar using unique id
+    // Удалить конкретную встречу из календаря, используя уникальный идентификатор
     client.deleteAppointment(DestinationCalendarId, Movedapp.getUniqueId());
 
-    // Retrieve the list of appointments. It should be one less than the earlier appointments in the destination calendar
+    // Извлечь список встреч. Он должен быть на одну меньше, чем количество встреч в целевом календаре ранее
     appointments = client.listAppointments(DestinationCalendarId);
-    System.out.println("After deleting count = " + appointments.length);
+    System.out.println("После удаления количество = " + appointments.length);
 }
 ~~~

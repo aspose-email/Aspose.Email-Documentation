@@ -1,14 +1,14 @@
 ---
-title: "Управление вложениями в сообщении электронной почты в Jython"
+title: "Управление вложениями в электронной почте на Jython"
 url: /ru/java/manage-attachments-in-email-message-in-jython/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Управление вложениями в сообщении электронной почты**
-Чтобы добавить вложения в новое сообщение электронной почты, используя **Aspose.Электронная почта Java для Mython**, позвоните **add_attachments** метод **ManageAttachments** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Управление вложениями в электронной почте**
+Чтобы добавить вложения в новое электронное сообщение с помощью **Aspose.Email Java for Jython**, вызовите метод **add_attachments** модуля **ManageAttachments**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ``` python
 
@@ -40,61 +40,61 @@ class ManageAttachments:
 
 
 
-        # Create a instance of MailMessage class
+        # Создание экземпляра класса MailMessage
 
         message =MailMessage()
 
-        # Set subject of the message
+        # Установка темы сообщения
 
-        message.setSubject("New message created by Aspose.Email for Java")
+        message.setSubject("Новое сообщение, созданное Aspose.Email для Java")
 
         mail_address = MailAddress
 
-        # Set Html body
+        # Установка HTML-содержимого
 
-        message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+        message.setHtmlBody("<b>Эта строка выделена жирным шрифтом.</b> <br/> <br/>" +
 
-            "<font color=blue>This line is in blue color</font>")
+            "<font color=blue>Эта строка синего цвета</font>")
 
-        # Set sender information
+        # Установка информации об отправителе
 
-        message.setFrom(MailAddress("from@domain.com", "Sender Name", False))
+        message.setFrom(MailAddress("from@domain.com", "Имя отправителя", False))
 
-        # Add TO recipients
+        # Добавление получателей по адресу TO
 
-        message.getTo().add(MailAddress("to1@domain.com", "Recipient 1", False))
+        message.getTo().add(MailAddress("to1@domain.com", "Получатель 1", False))
 
-        # Adding attachment
+        # Добавление вложения
 
-        # Load an attachment
+        # Загрузка вложения
 
         attachment = Attachment(dataDir + "1.txt")
 
-        # Add attachment in instance of MailMessage class
+        # Добавление вложения в экземпляр класса MailMessage
 
         message.addAttachment(attachment)
 
-        # Save message to disc
+        # Сохранение сообщения на диск
 
         messageFormat=MessageFormat()
 
         message.save(dataDir + "Add-Attachment.msg", messageFormat.getMsg())
 
-        # Display Status
+        # Показать статус
 
-        print "Added attachment successfully."
-
-
+        print "Вложение успешно добавлено."
 
 
 
-if __name__ == '__main__':       
+
+
+if __name__ == '__main__':        
 
     ManageAttachments()
 
 ```
-## **Загрузить рабочий код**
-Download **Управление вложениями в сообщении электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачать **Управление вложениями в электронной почте (Aspose.Email)** с любого из упомянутых ниже социальных сайтов программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

@@ -1,37 +1,37 @@
 ---
-title: "Конвертировать EML в HTML"
+title: "Конвертация EML в HTML"
 url: /ru/net/converting-between-formats/
 weight: 60
 type: docs
 ---
 
-## **Конвертировать EML в HTML**
+## **Конвертация EML в HTML**
 
-Для интеграции содержимого электронной почты в веб-приложения преобразование EML в HTML является правильным выбором, обеспечивающим визуально привлекательную презентацию электронной почты.
+Для интеграции содержимого электронной почты в веб-приложения конвертация EML в HTML является правильным выбором, облегчающим визуально привлекательное представление электронной почты.
 
-Чтобы преобразовать EML в HTML, вам понадобятся следующие классы:
+Чтобы конвертировать EML в HTML, вам понадобятся следующие классы:
 
-- [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс используется для создания объекта, представляющего сообщение электронной почты. Он позволяет получить доступ к свойствам сообщения, таким как тема, текст, адреса отправителя и получателя и т. д. С его помощью вы можете создавать, загружать и анализировать, изменять, сохранять электронные письма или выполнять другие манипуляции с ними.
-- [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/) класс предоставляет возможности для сохранения сообщений электронной почты в различных форматах. Он позволяет пользователям настраивать способ сохранения сообщений электронной почты в разных форматах. С помощью этого класса пользователи могут указать параметры сохранения вложений, заголовков, метаданных и свойств сообщений электронной почты, задать параметры кодирования или выбрать, следует ли сохранять сообщения с шифрованием или нет.
+- Класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) используется для создания объекта, представляющего электронное сообщение. Он позволяет получить доступ к свойствам сообщения, таким как тема, тело, адрес отправителя и получателей и т. д. С его методами вы можете создавать, загружать и анализировать, изменять, сохранять электронные письма или выполнять с ними другие манипуляции. 
+- Класс [SaveOptions](https://reference.aspose.com/email/net/aspose.email/saveoptions/) предоставляет параметры для сохранения электронных сообщений в различных форматах. Он позволяет пользователям настраивать способ сохранения электронных сообщений в разных форматах. С помощью этого класса пользователи могут задавать параметры для сохранения вложений, заголовков, метаданных и свойств электронных сообщений, устанавливать параметры кодирования или выбирать, сохранять сообщения с шифрованием или нет. 
 
-В приведенном ниже примере кода эти классы совместно загружают существующий файл EML и задают формат сообщения как EML. Затем загруженное сообщение электронной почты сохраняется в виде HTML-файла, используя указанные по умолчанию параметры сохранения HTML:
+В приведенном ниже образце кода эти классы работают вместе, чтобы загрузить существующий EML файл и указать формат сообщения как EML. Затем они сохраняют загруженное сообщение электронной почты в виде HTML файла, используя указанные параметры сохранения HTML по умолчанию:
 
-1. Используйте [MailMessage.Load()](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) метод загрузки существующего файла в объект MailMessage с указанием формата сообщения.
-2. Сохраните загруженный объект MailMessage в виде HTML-файла, используя [save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) метод. Использование [SaveOptions.DefaultHtml()](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaulthtml/) чтобы указать параметры сохранения для формата HTML.
+1. Используйте метод [MailMessage.Load()](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) для загрузки существующего файла в объект MailMessage, указав формат сообщения. 
+2. Сохраните загруженный объект MailMessage как HTML файл, используя метод [save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3). Используйте [SaveOptions.DefaultHtml()](https://reference.aspose.com/email/net/aspose.email/saveoptions/defaulthtml/) для указания параметров сохранения для HTML формата.
 
 ```cs
-// Initialize and Load an existing EML file by specifying the MessageFormat
+// Инициализировать и загрузить существующий EML файл, указав формат сообщения
 var message = MailMessage.Load("myMessage.eml");
 message.Save("output.html", SaveOptions.DefaultHtml);
 ```
 
-### **Сохранение ресурсов EML в отдельном файле**
+### **Сохранение ресурсов EML в отдельный файл**
 
-Aspose.Email предоставляет [ResourceRenderingMode](https://reference.aspose.com/email/net/aspose.email/resourcerenderingmode/#resourcerenderingmode-enumeration) перечисление, позволяющее разработчикам управлять ресурсами в HTML-файле. В приведенном ниже примере кода это перечисление используется для сохранения ресурсов в файле и вставки в HTML тега src с путем к этому файлу:
+Aspose.Email предоставляет перечисление [ResourceRenderingMode](https://reference.aspose.com/email/net/aspose.email/resourcerenderingmode/#resourcerenderingmode-enumeration), позволяющее разработчикам манипулировать ресурсами в HTML файле. В приведенном ниже образце кода это перечисление используется для сохранения ресурсов в файл и вставки в HTML тега 'src' с путем к этому файлу:
 
-1. Загрузите сообщение электронной почты из исходного файла, используя [MapiMessage.Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_2) method.
-2. Создайте экземпляр [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/#htmlsaveoptions-class) с заданными параметрами рендеринга и ресурсов.
-3. Сохраните загруженное сообщение электронной почты в виде HTML-файла в целевом месте, используя [Save](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/save/#save_3) метод с параметром htmlSaveOptions.
+1. Загрузите сообщение электронной почты из исходного файла, используя метод [MapiMessage.Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_2).
+2. Создайте экземпляр [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/#htmlsaveoptions-class) с указанными параметрами рендеринга и ресурсов.
+3. Сохраните загруженное сообщение электронной почты как HTML файл в целевом месте, используя метод [Save](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/save/#save_3) с параметром HtmlSaveOptions.
 
 ```cs
 var msg = MapiMessage.Load(sourceFileName);
@@ -43,13 +43,13 @@ UseRelativePathToResources = true
 msg.Save(Path.Combine("target.html"), htmlSaveOptions);
 ```
 
-### **Встраивание ресурсов в HTML-файл**
+### **Встраивание ресурсов в HTML файл**
 
-В некоторых случаях требуется встраивать ресурсы, например изображения, непосредственно в HTML-файл для беспрепятственного распространения и презентации. С помощью Aspose.Email для .NET вы можете легко сделать это, используя [ResourceRenderingMode](https://reference.aspose.com/email/net/aspose.email/resourcerenderingmode/#resourcerenderingmode-enumeration) enumeration:
+В некоторых случаях необходимо встроить ресурсы, такие как изображения, непосредственно в HTML файл для бесшовного распределения и представления. С Aspose.Email для .NET вы можете легко достичь этого, используя перечисление [ResourceRenderingMode](https://reference.aspose.com/email/net/aspose.email/resourcerenderingmode/#resourcerenderingmode-enumeration):
 
-1. Загрузите сообщение электронной почты из исходного файла, используя [MapiMessage.Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_2) method.
-2. Создайте новый [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/#htmlsaveoptions-class) создайте объект и задайте свойству ResourceRenderingMode значение EmbedInToHTML.
-3. Сохраните загруженное сообщение электронной почты в виде HTML-файла, используя [Save](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/save/#save_3) метод, указывающий путь к целевому файлу и передающий объект HTMLSaveOptions в качестве параметра для встраивания ресурсов в HTML-файл.
+1. Загрузите сообщение электронной почты из исходного файла, используя метод [MapiMessage.Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_2).
+2. Создайте новый объект [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/#htmlsaveoptions-class) и установите свойство ResourceRenderingMode в EmbedIntoHtml.
+3. Сохраните загруженное сообщение электронной почты как HTML файл, используя метод [Save](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/save/#save_3), указав путь к целевому файлу и передав объект HtmlSaveOptions в качестве параметра для встраивания ресурсов в HTML файл.
 
 ```cs
 var msg = MapiMessage.Load(sourceFileName);
@@ -60,132 +60,132 @@ ResourceRenderingMode = ResourceRenderingMode.EmbedIntoHtml
 msg.Save(Path.Combine("target.html"), htmlSaveOptions);
 ```
 
-## **Конвертируйте EML в ICS**
+## **Конвертация EML в ICS**
 
-В следующем примере кода показано, как извлечь данные календарных событий из файла EML и сохранить их в отдельном файле ICS для дальнейшего использования или обработки.
+Следующий пример кода демонстрирует, как извлечь данные о событии календаря из EML файла и сохранить их в отдельный ICS файл для дальнейшего использования или манипуляции.
 
 ```cs
-// Load the EML file
+// Загрузить EML файл
 var eml = MailMessage.Load("message.eml");
-// Find the alternate view with MediaType "text/calendar" (ICS)
+// Найти альтернативный вид с MediaType "text/calendar" (ICS)
 var icsView = eml.GetAlternateViewContent("text/calendar");
-// If an ICS view is found, save it to a file
+// Если альтернативный вид ICS найден, сохраните его в файл
 if (icsView != null)
 {
     File.WriteAllText("appointment.ics", icsView);
 }
 ```
-### **Customization**
+### **Настройка**
 
-Aspose.Email for .NET предоставляет инструменты для настройки содержимого ICS (iCalendar), извлеченного из файлов EML (электронная почта).
+Aspose.Email для .NET предоставляет инструменты для настройки содержимого ICS (iCalendar), извлеченного из EML (Электронная почта).
 
-**Настройте детали мероприятия**
+**Настройка деталей события**
 
-В следующем примере кода показано, как задать различные детали встречи, такие как краткое описание, место и описание. В коде используется [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) класс, который представляет календарные встречи или события в формате ICS (iCalendar). Класс предоставляет свойства и методы для программного создания, изменения календарных событий и управления ими.
+Следующий пример кода демонстрирует, как установить различные детали назначения, такие как резюме, местоположение и описание. Код использует класс [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class), который представляет календарные назначения или события в формате ICS (iCalendar). Класс предоставляет свойства и методы для создания, изменения и управления календарными событиями программно.
 
 ```cs
-// Load the EML file
+// Загрузить EML файл
 var eml = MailMessage.Load("message.eml");
-// Find the alternate view with MediaType "text/calendar" (ICS)
+// Найти альтернативный вид с MediaType "text/calendar" (ICS)
 var icsView = eml.GetAlternateViewContent("text/calendar");
-// If an ICS view is found, load it to Appointment class object
+// Если альтернативный вид ICS найден, загрузите его в объект класса Appointment
 var appointment = Appointment.Load(new MemoryStream(Encoding.UTF8.GetBytes(icsView)));
 
-// Настройте детали мероприятия
-appointment.Summary = "Customized Event Summary";
-appointment.Location = "Customized Location";
-appointment.Description = "Customized Event Description";
+// Настройка деталей события
+appointment.Summary = "На.Customized Event Summary";
+appointment.Location = "Настроенное Местоположение";
+appointment.Description = "Настроенное Описание События";
 
-// Add or modify attendees as needed
+// Добавьте или измените участников по мере необходимости
 appointment.Attendees.Clear();
 appointment.Attendees.Add("custom@example.com");
 
-// Save the customized ICS content to a file
+// Сохраните настроенное содержание ICS в файл
 appointment.Save("customized_appointment.ics");
 ```
-**Создайте шаблон повторения**
+**Создание паттерна повторения**
 
-В следующем примере кода показано, как создать режим еженедельного повторения визита, при котором прием проводится каждые 5 недель по субботам. В коде используется [Recurrence](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/recurrence/#appointmentrecurrence-property) собственность [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) класс, который получает или задает шаблон повторения.
+Следующий пример кода демонстрирует, как создать еженедельный паттерн повторения для назначения, которое происходит каждые 5 недель по субботам. Код использует свойство [Recurrence](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/recurrence/#appointmentrecurrence-property) класса [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class), которое получает или устанавливает паттерн повторения.
 
 ```cs
-var pattern = new  WeeklyRecurrencePattern(5, 7);
-pattern. EndDate = new DateTime(2023, 8, 7);
+var pattern = new WeeklyRecurrencePattern(5, 7);
+pattern.EndDate = new DateTime(2023, 8, 7);
 
 appointment.Recurrence = pattern;
 ```
 
-## **Добавить EML в MBOX**
+## **Добавление EML в MBOX**
 
-MBOX — это широко используемый формат для хранения нескольких сообщений электронной почты в одном файле, что делает его пригодным для архивирования и миграции электронной почты. Используйте [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/#mboxrdstoragewriter-class) класс для записи сообщений электронной почты в файл MBOX. В следующем примере кода показано, как выполнить эту задачу:
+MBOX — это общепринятый формат для хранения нескольких электронных сообщений в одном файле, что делает его подходящим для архивирования и миграции электронной почты. Используйте класс [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/#mboxrdstoragewriter-class), чтобы записать электронные сообщения в файл MBOX. Следующий пример кода демонстрирует, как выполнить эту задачу:
 
 ```cs
 using (var message = MailMessage.Load("inputFile.eml")){
 	using (var writer = new MboxrdStorageWriter("output.mbox", false)){
 			writer.WriteMessage(message);
 	}
-}
+} 
 ```
 
-## **Конвертируйте EML в MHTML**
+## **Конвертация EML в MHTML**
 
-С помощью Aspose.Email для .NET вы можете легко конвертировать файлы EML в формат MHTML для различных целей, таких как архивирование, совместимость, просмотр в автономном режиме и т. д. Загрузите сообщение электронной почты с помощью [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2), затем используйте [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/) класс в качестве параметра для [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) метод указания формата выходного файла при сохранении сообщения в виде отдельного файла:
+С Aspose.Email для .NET вы можете легко конвертировать EML файлы в формат MHTML для различных целей, таких как архивирование, совместимость, офлайн-просмотр и т. д. Загрузите сообщение электронной почты, используя [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2), затем используйте класс [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/) в качестве параметра для метода [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3), чтобы указать формат выходного файла при сохранении сообщения в отдельный файл:
 
 ```cs
-// Initialize and Load an existing EML file by specifying the MessageFormat
+// Инициализировать и загрузить существующий EML файл, указав формат сообщения
 var message = MailMessage.Load("myMessage.eml");
-var mhtSaveOptions = new MhtSaveOptions;
+var mhtSaveOptions = new MhtSaveOptions();
 message.Save("output.mhtml", mhtSaveOptions);
 ```
 
-The [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/) класс предоставляет различные варианты настройки выходных файлов MHTML в соответствии с вашими конкретными требованиями:
+Класс [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/) предоставляет различные параметры для настройки выходных файлов MHTML в соответствии с вашими конкретными требованиями:
 
-- Сохраните исходное форматирование даты. В процессе конвертации вы можете сохранить исходное форматирование сообщений электронной почты:
+- Сохранять оригинальное форматирование даты. Вы можете выбрать сохранение оригинального форматирования сообщений электронной почты в процессе конверсии:
 
   ```cs
   saveOptions.PreserveOriginalDate = true;
   ```
 
-- Задайте выходную кодировку. Можно указать кодировку, которая будет использоваться при записи выходных файлов MHTML:
+- Установить кодировку выходных данных. Вы можете указать кодировку, которая будет использоваться при записи выходных файлов MHTML:
 
   ```cs
-  saveOptions.OutputEncoding = Encoding.UTF8;
+  saveOptions.OutputEncoding = Encoding.UTF8; 
   ```
 
-- Включите вложения. Это может быть полезно, если вы хотите сохранить вложения при преобразовании писем в формат MHTML:
+- Включить вложения. Это может быть полезно, если вы хотите сохранить вложения при конвертации электронных писем в формат MHTML:
 
   ```cs
   saveOptions.SaveAttachments = true;
   ```
 
-## **Конвертировать EML в MSG**
+## **Конвертация EML в MSG**
 
-Если вам нужно перенести данные электронной почты, архивировать сообщения или интегрироваться с Microsoft Outlook, Aspose.Email предлагает решения для достижения ваших целей. Файлы MSG широко используются в Microsoft Outlook. Для преобразования EML в MSG используйте [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) метод загрузки существующего файла EML с указанием способа его загрузки [EmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/emlloadoptions/#emlloadoptions-class).
+Независимо от того, нужно ли вам мигрировать данные электронной почты, архивировать сообщения или интегрироваться с Microsoft Outlook, Aspose.Email предоставляет решения для достижения ваших целей. Файлы MSG широко используются Microsoft Outlook. Для конверсии EML в MSG используйте метод [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) для загрузки существующего EML файла, указывая, как он будет загружен с помощью [EmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/emlloadoptions/#emlloadoptions-class).
 
-В следующем примере кода показано, как конвертировать файлы EML в формат MSG:
+Следующий пример кода демонстрирует, как конвертировать файлы EML в формат MSG:
 
 ```cs
-// Load mail message
+// Загрузить сообщение электронной почты
 using (var message = MailMessage.Load("sourceFile.eml", new EmlLoadOptions())){
-// Save as MSG
-var msgSaveOptions = new MsgSaveOptions;
-message.Save("output.msg", MsgSaveOptions);
-}
+// Сохранить как MSG
+var msgSaveOptions = new MsgSaveOptions();
+message.Save("output.msg", msgSaveOptions);
+} 
 ```
 
-## **Конвертируйте EML в OFT**
+## **Конвертация EML в OFT**
 
-Чтобы преобразовать файлы EML в формат Outlook Template (OFT), загрузите существующее сообщение электронной почты, используя [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) метод и сохраните его с помощью [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) указание параметров по умолчанию для сохранения сообщения в формате OFT:
+Чтобы конвертировать EML файлы в формат шаблона Outlook (OFT), загрузите существующее сообщение электронной почты с помощью метода [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) и сохраните его с [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3), указав параметры по умолчанию для сохранения сообщения в формате OFT:
 
 ```cs
-// load the EML file to be converted
-var message = MailMessage.Load("My File.eml");
-// save EML as a OFT
+// загрузить EML файл для конверсии
+var message = MailMessage.Load("My File.eml"); 
+// сохранить EML как OFT 
 message.Save("Saved File.oft", SaveOptions.DefaultOft);
 ```
 
-## **Добавить EML в PST**
+## **Добавление EML в PST**
 
-Чтобы преобразовать файлы EML в формат Personal Storage Table (PST), загрузите сообщение, используя [MapiMessage.Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_3) метод, создайте выходной файл с помощью [PersonalStorage.Create](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create_4) и добавьте электронное письмо в созданную папку «Входящие» в файле хранилища, используя [AddMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/):
+Чтобы конвертировать EML файлы в формат таблицы личных данных (PST), загрузите сообщение с помощью метода [MapiMessage.Load](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/load/#load_3), создайте выходной файл с помощью [PersonalStorage.Create](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create_4) и добавьте электронное письмо в созданную папку «Входящие» в файле хранилища с помощью [AddMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessage/): 
 
 ```cs
 using (var msg = MapiMessage.Load("sourceFile.eml", new EmlLoadOptions()))
@@ -198,35 +198,35 @@ using (var msg = MapiMessage.Load("sourceFile.eml", new EmlLoadOptions()))
 }
 ```
 
-## **Добавить EML в OST**
+## **Добавление EML в OST**
 
-Разработчики могут легко конвертировать файлы EML в формат таблицы автономного хранилища Outlook (OST), обеспечивая интеграцию с Microsoft Outlook. В следующем примере кода показано, как добавить сообщение EML в OST-файл:
+Разработчики могут легко конвертировать EML файлы в формат таблицы оффлайн-данных Outlook (OST), что позволяет интегрироваться с Microsoft Outlook. Следующий пример кода демонстрирует, как добавить сообщение EML в OST файл:
 
 ```cs
 using (var ost = PersonalStorage.FromFile("storage.ost"))
 {
-    // Load the EML file
+    // Загрузить EML файл
     var msg = MapiMessage.Load("message.eml", new EmlLoadOptions());
 
-    // Add the EML message to the OST file
+    // Добавить сообщение EML в OST файл
     var folderInfo = ost.RootFolder.GetSubFolder("Inbox");
     folderInfo.AddMessage(msg);
 }
 ```
-The [EmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/emlloadoptions/#emlloadoptions-class) параметр указывает дополнительные параметры загрузки файлов EML, такие как сохранение встроенных форматов сообщений, удаление подписей и многое другое.
+Параметр [EmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/emlloadoptions/#emlloadoptions-class) определяет дополнительные параметры для загрузки EML файлов, такие как сохранение встроенных форматов сообщений, удаление подписей и многое другое. 
 
 
-## **Конвертировать EML в VCF**
+## **Конвертация EML в VCF**
 
-Aspose.Email for .NET предлагает функцию преобразования файлов EML в формат vCard (VCF), что позволяет разработчикам извлекать контактную информацию из сообщений электронной почты. Для этого библиотека предлагает [GetAlternateViewContent](https://reference.aspose.com/email/net/aspose.email/mailmessage/getalternateviewcontent/) метод [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class) класс, позволяющий разработчикам получать доступ к альтернативным представлениям сообщений электронной почты и извлекать содержимое VCF, встроенное в файлы EML, для дальнейшего использования:
+Aspose.Email для .NET предлагает функциональность для конвертации EML файлов в формат vCard (VCF), позволяя разработчикам извлекать контактную информацию из электронных писем. Для этой цели библиотека предлагает метод [GetAlternateViewContent](https://reference.aspose.com/email/net/aspose.email/mailmessage/getalternateviewcontent/) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class), позволяющий разработчикам получать альтернативные представления внутри электронных писем и извлекать содержимое VCF, встроенное в EML файлы для дальнейшего использования:
 
 
 ```cs
-// Load the EML file
+// Загрузить EML файл
 var eml = MailMessage.Load("message.eml");
-// Find the alternate view with MediaType "text/vcard" (VCF)
+// Найти альтернативный вид с MediaType "text/vcard" (VCF)
 var vcfView = eml.GetAlternateViewContent("text/vcard");
-// If an VCF view is found, save it to a file
+// Если альтернативный вид VCF найден, сохраните его в файл
 if (vcfView != null)
 {
     File.WriteAllText("contact.vcf", vcfView);

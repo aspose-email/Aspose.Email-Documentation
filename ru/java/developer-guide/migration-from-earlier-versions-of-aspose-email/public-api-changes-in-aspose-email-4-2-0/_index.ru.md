@@ -1,38 +1,38 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 4.2.0"
+title: "Изменения в публичном API Aspose.Email 4.2.0"
 url: /ru/java/public-api-changes-in-aspose-email-4-2-0/
 weight: 40
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Ниже приведен список любых изменений, внесенных в общедоступный API, таких как: [added](/email/java/public-api-changes-in-aspose-email-4-2-0/), переименован, удален или [deprecated](/email/java/public-api-changes-in-aspose-email-4-2-0/) участников, а также любые изменения, не совместимые с обратной совместимостью, внесенные в Aspose.Email для Java. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
+Следующий список содержит изменения, внесенные в публичный API, такие как [добавленные](/email/java/public-api-changes-in-aspose-email-4-2-0/), переименованные, удаленные или [устаревшие](/email/java/public-api-changes-in-aspose-email-4-2-0/) элементы, а также любые изменения, не совместимые с предыдущими версиями, внесенные в Aspose.Email для Java. Если у вас есть опасения по поводу какого-либо из перечисленных изменений, пожалуйста, обсудите это на форуме поддержки Aspose.Email.
 ## **Добавленные методы**
-**`FollowUpOptions.getCategories()` and `FollowUpOptions.setCategories()` Methods**
-Возвращает или задает строку, представляющую список категорий, разделенных точками с запятой.
+**`FollowUpOptions.getCategories()` и `FollowUpOptions.setCategories()` Методы**
+Получает или устанавливает строку, представляющую список категорий, разделенных точками с запятой.
 
-**`FollowUpOptions.getVotingButtons()` and `FollowUpOptions.setVotingButtons()` Methods**
-Возвращает или задает строку, представляющую список имен кнопок голосования, разделенных точкой с запятой.
+**`FollowUpOptions.getVotingButtons()` и `FollowUpOptions.setVotingButtons()` Методы**
+Получает или устанавливает строку, представляющую список имен кнопок голосования, разделенных точками с запятой.
 
-**`FollowUpManager.setOptions(MapiMessage message, FollowUpOptions options)` and `FollowUpManager.getOptions(MapiMessage message)` Methods**
-Получает и задает дополнительные параметры отслеживания сообщения.
+**`FollowUpManager.setOptions(MapiMessage message, FollowUpOptions options)` и `FollowUpManager.getOptions(MapiMessage message)` Методы**
+Получает и устанавливает дополнительные параметры последующего действия для сообщения.
 
-Существующие методы `FollowUpManager.setFlag(MapiMessage message, FollowUpOptions options)` and `FollowUpManager.getFlag(MapiMessage message)` помечено как [deprecated](/email/java/public-api-changes-in-aspose-email-4-2-0/).
-Пожалуйста, используйте `getOptions(MapiMessage message)` and `setOptions(MapiMessage message, FollowUpOptions options)` методы вместо этого.
+Существующие методы `FollowUpManager.setFlag(MapiMessage message, FollowUpOptions options)` и `FollowUpManager.getFlag(MapiMessage message)` помечены как [устаревшие](/email/java/public-api-changes-in-aspose-email-4-2-0/).
+Пожалуйста, используйте методы `getOptions(MapiMessage message)` и `setOptions(MapiMessage message, FollowUpOptions options)` вместо них.
 
-- **`FollowUpManager.addVotingButton(MapiMessage message, String displayName)` Method**
+- **`FollowUpManager.addVotingButton(MapiMessage message, String displayName)` Метод**
 Добавляет кнопку голосования в MapiMessage.
-- **`FollowUpManager.removeVotingButton(MapiMessage message, String displayName)` Method**
+- **`FollowUpManager.removeVotingButton(MapiMessage message, String displayName)` Метод**
 Удаляет указанную кнопку голосования из MapiMessage.
-- **`FollowUpManager.clearVotingButtons(MapiMessage message)` Method**
+- **`FollowUpManager.clearVotingButtons(MapiMessage message)` Метод**
 Удаляет кнопки голосования из MapiMessage.
-- **`FollowUpManager.getVotingButtons(MapiMessage message)` Method**
-Получите доступные кнопки голосования за сообщения.
-- **`MapiTask.getAttachments` and `MapiTask.setAttachments` Methods**
-Получите коллекцию `MapiAttachments` в `MapiTask`.
+- **`FollowUpManager.getVotingButtons(MapiMessage message)` Метод**
+Получает доступные кнопки голосования для сообщения.
+- **`MapiTask.getAttachments` и `MapiTask.setAttachments` Методы**
+Получает коллекцию `MapiAttachments` в `MapiTask`.
 ## **Устаревшие методы**
-**`FollowUpManager.setFlag(MapiMessage message, FollowUpOptions options)` and `FollowUpManager.getFlag(MapiMessage message)`**
-Пожалуйста, используйте getOptions (`MapiMessage` сообщение) и `setOptions(MapiMessage message, FollowUpOptions options)` вместо этого методы, [как указано выше](/email/java/public-api-changes-in-aspose-email-4-2-0/).
+**`FollowUpManager.setFlag(MapiMessage message, FollowUpOptions options)` и `FollowUpManager.getFlag(MapiMessage message)`**
+Пожалуйста, используйте методы getOptions(`MapiMessage` message) и `setOptions(MapiMessage message, FollowUpOptions options)` вместо них, [как указано выше](/email/java/public-api-changes-in-aspose-email-4-2-0/).
 
 {{% /alert %}}

@@ -5,49 +5,41 @@ weight: 40
 type: docs
 ---
 
-Aspose.Email можно использовать для управления элементами беседы на сервере Exchange с помощью [EWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.e_w_s_client) класс. В этом классе используются веб-службы Exchange, доступные только в Exchange Server 2007 и более поздних версиях. В этой статье показано, как находить, копировать, перемещать и удалять элементы беседы в Exchange Server 2010. Для всех функций, описанных в этом разделе, требуется пакет обновления 1 для Microsoft Exchange Server 2010.
-##  **Поиск разговоров**
-Чтобы получить информацию о разговоре из определенной папки на сервере Exchange, выполните следующие действия:
+Aspose.Email можно использовать для управления элементами беседы на Exchange Server с помощью класса [EWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.e_w_s_client). Этот класс использует Exchange Web Services, которые доступны только в Exchange Server 2007 и более поздних версиях. В этой статье показано, как найти, скопировать, переместить и удалить элементы беседы на Exchange Server 2010. Для всех функций, включенных в этот раздел, требуется Microsoft Exchange Server 2010 Service Pack 1.
+##  **Поиск бесед**
+Чтобы получить информацию о беседе из определенной папки на Exchange Server:
 
-1. Подключитесь к серверу Exchange с помощью [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
-1. Позвоните [FindConversations()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) метод поиска всех элементов беседы в папке.
-1. Отобразите свойства элемента беседы, такие как идентификатор, тема разговора и статус флага.
+1. Подключитесь к Exchange Server с помощью класса [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+1. Вызовите метод [FindConversations()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), чтобы найти все элементы беседы в папке.
+1. Отобразите свойства элемента беседы, такие как ID, тема беседы и статус флага.
 
-В следующем фрагменте кода показано, как найти разговоры.
-
-
+Следующий фрагмент кода показывает, как найти беседы.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FindConversationsOnExchangeServer-FindConversationsOnExchangeServer.cpp" >}}
-##  **Копирование разговоров**
-Чтобы скопировать разговоры из одной папки в другую, выполните следующие действия:
+##  **Копирование бесед**
+Чтобы скопировать беседы из одной папки в другую:
 
-1. Подключитесь к серверу Exchange с помощью [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
-1. Позвоните [CopyConversationItems()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) метод копирования элемента беседы из исходной папки в папку назначения.
+1. Подключитесь к Exchange Server с помощью класса [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+1. Вызовите метод [CopyConversationItems()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), чтобы скопировать элемент беседы из исходной папки в папку назначения.
 
-В следующем фрагменте кода показано, как копировать разговоры.
-
-
+Следующий фрагмент кода показывает, как копировать беседы.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-CopyConversations-CopyConversations.cpp" >}}
-##  **Трогательные разговоры**
-Чтобы перенести беседы из одной папки в другую, выполните следующие действия:
+##  **Перемещение бесед**
+Чтобы переместить беседы из одной папки в другую:
 
-1. Подключитесь к серверу Exchange с помощью [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
-1. Позвоните [MoveConversationItems()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) метод перемещения беседы из исходной папки в папку назначения.
+1. Подключитесь к Exchange Server с помощью класса [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+1. Вызовите метод [MoveConversationItems()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), чтобы переместить беседу из исходной папки в папку назначения.
 
-В следующем фрагменте кода показано, как перемещать разговоры.
-
-
+Следующий фрагмент кода показывает, как перемещать беседы.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-MoveConversations-MoveConversations.cpp" >}}
-##  **Удаление разговоров**
-Чтобы удалить разговоры из папки, выполните следующие действия:
+##  **Удаление бесед**
+Чтобы удалить беседы из папки:
 
-1. Подключитесь к серверу Exchange с помощью [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
-1. Позвоните [DeleteConversationItems()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) метод удаления элемента беседы из исходной папки.
+1. Подключитесь к Exchange Server с помощью класса [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+1. Вызовите метод [DeleteConversationItems()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), чтобы удалить элемент беседы из исходной папки.
 
-В следующем фрагменте кода показано, как удалять разговоры.
-
-
+Следующий фрагмент кода показывает, как удалять беседы.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-DeleteConversations-DeleteConversations.cpp" >}}

@@ -1,36 +1,40 @@
 ---
-title: "Преобразование сообщений электронной почты в Python"
+title: "Конвертация электронных сообщений в Python"
 url: /ru/java/converting-email-messages-in-python/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - конвертация сообщений электронной почты**
-Для преобразования сообщений электронной почты с помощью **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Конвертация электронных сообщений**
 
-**Код Python**
+Чтобы конвертировать электронные сообщения с использованием **Aspose.Email Java for Python**, используйте следующий код.
 
-``` python
+**Python Код**
 
- # Initialize and Load an existing EML file by specifying the MessageFormat
+```python
+
+ # Инициализация и загрузка существующего EML файла, указав формат сообщения
 
 mailMessage = self.MailMessage
 
 eml = mailMessage.load(self.dataDir + "Message.eml")
 
-\# Save the Email message to disk in Unicode format
+\# Сохранить электронное сообщение на диск в формате Unicode
 
 saveOptions= self.SaveOptions
 
 eml.save(self.dataDir + "AnEmail.msg", saveOptions.getDefaultMsgUnicode())
 
-\# Display Status
+\# Показать статус
 
-print "Converted email to msg successfully."
+print "Электронное сообщение успешно конвертировано в msg."
 
 ```
-## **Загрузить рабочий код**
-Download **Преобразование сообщений электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+
+## **Скачать исполняемый код**
+
+Скачать **Конвертацию электронных сообщений (Aspose.Email)** с любого из нижеупомянутых сайтов социального программирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)
+

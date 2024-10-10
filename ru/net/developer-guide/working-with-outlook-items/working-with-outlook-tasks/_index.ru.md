@@ -6,50 +6,50 @@ type: docs
 ---
 
 
-## **Создание, сохранение и чтение заданий**
+## **Создание, сохранение и чтение задач**
 
-Aspose.Email для .NET позволяет создавать задачи Outlook и сохранять их в формате MSG. [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) класс предоставляет ряд свойств, таких как [PercentComplete](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/percentcomplete/), [EstimatedEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/estimatedeffort/), [ActualEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/actualeffort/), [History](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/history/), [LastUpdate](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/lastupdate/)и другие для сбора и настройки информации, необходимой для выполнения задачи Outlook. В этой статье показано, как создать, сохранить и прочитать [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) с диска. Чтобы создать и сохранить задачу на диске, выполните следующие действия:
+Aspose.Email для .NET позволяет создавать задачи Outlook и сохранять их в формате MSG. Класс [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) предоставляет ряд свойств, таких как [PercentComplete](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/percentcomplete/), [EstimatedEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/estimatedeffort/), [ActualEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/actualeffort/), [History](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/history/), [LastUpdate](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/lastupdate/) и другие, для хранения и установки информации, необходимой для задачи Outlook. Эта статья показывает, как создать, сохранить и прочитать [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) с диска. Чтобы создать и сохранить задачу на диск:
 
-1. Создайте новый объект из [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) class.
+1. Создайте новый объект класса [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/).
 1. Введите информацию о свойствах задачи.
-1. Сохраните задачу на диске в формате MSG.
+1. Сохраните задачу на диск в формате MSG.
 
-В следующем фрагменте кода показано, как создавать, сохранять и читать задачи.
+Следующий фрагмент кода показывает, как создать, сохранить и прочитать задачи.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreatingAndSavingOutlookTasks-CreatingAndSavingOutlookTasks.cs" >}}
 
-### **Чтение задачи MapiTask**
+### **Чтение MapiTask**
 
-The [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) объект класса используется для создания [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) объект, который загружает задачу с диска в формате MSG. В следующем фрагменте кода показано, как читать [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+Объект класса [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) используется для приведения объекта [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) к типу, который загружает задачу с диска в формате MSG. Следующий фрагмент кода показывает, как прочитать [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-LoadingContactFromMSG-LoadingContactFromMSG.cs" >}}
 
-### **Чтение задачи vTodo**
+### **Чтение задачи VToDo**
 
-Задачи Google, экспортированные в формате iCalendar в виде событий vTodo, можно загрузить с помощью [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) класс, как показано в следующем примере кода. В следующем фрагменте кода показано, как читать задачу vTodo.
+Задачи Google, экспортированные в формате iCalendar как события VToDo, могут быть загружены с использованием класса [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/), как показано в следующем примере кода. Следующий фрагмент кода показывает, как прочитать задачу VToDo.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadingVToDoTask-ReadingVToDoTask.cs" >}}
 
-### **Добавление информации о напоминаниях в MapiTask**
+### **Добавление информации о напоминании к MapiTask**
 
-Как и Microsoft Outlook, Aspose.Email может добавлять информацию о напоминаниях в [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/). В следующем фрагменте кода показано, как добавить в файл напоминания [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+Подобно Microsoft Outlook, Aspose.Email может добавлять информацию о напоминании к [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/). Следующий фрагмент кода показывает, как добавить информацию о напоминании к [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddReminderInformationToMapiTask-AddReminderInformationToMapiTask.cs" >}}
 
-### **Добавление вложений в MapiTask**
+### **Добавление вложений к MapiTask**
 
-В следующем фрагменте кода показано, как добавлять вложения в [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+Следующий фрагмент кода показывает, как добавить вложения к [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddAttachmentsToMapiTask-AddAttachmentsToMapiTask.cs" >}}
 
-### **Добавление повторения в MapiTask**
+### **Добавление повторений к MapiTask**
 
-Aspose.Email позволяет создавать повторяющиеся задачи, повторяющиеся ежедневно, еженедельно, ежемесячно или ежегодно. В следующем фрагменте кода показано, как создать задачу с различными типами повторения.
+Aspose.Email позволяет создавать повторяющуюся задачу, где повторение может быть ежедневным, еженедельным, ежемесячным или ежегодным. Следующий фрагмент кода показывает, как создать задачу с различными типами повторений.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddRecurrenceToMapiTask-AddRecurrenceToMapiTask.cs" >}}
 
-### **Преобразование задачи в MHT**
+### **Конвертация задачи в MHT**
 
-Aspose.Email может генерировать [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) например, вывод во время преобразования [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) в MHT.
+Aspose.Email может генерировать вывод в формате [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) во время конвертации [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) в MHT.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ConvertMapiTaskToMHT-ConvertMapiTaskToMHT.cs" >}}

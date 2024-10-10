@@ -1,12 +1,12 @@
 ---
-title: "Настройка заголовков писем в Ruby"
+title: "Настройка Заголовков Писем в Ruby"
 url: /ru/java/customizing-email-headers-in-ruby/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Настройка заголовков писем**
-Для настройки заголовков электронной почты с помощью **Aspose.Электронная почта Java для Ruby**, просто вызовите **CustomizeEmailHeaders** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Настройка Заголовков Писем**
+Чтобы настроить заголовки писем с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **CustomizeEmailHeaders**. Здесь вы можете увидеть пример кода.
 
 **Код Ruby**
 
@@ -16,33 +16,33 @@ type: docs
 
 
 
-\# Create a new instance of MailMessage class
+\# Создайте новый экземпляр класса MailMessage
 
 message = Rjb::import('com.aspose.email.MailMessage').new
 
-\# Set subject of the message
+\# Установите тему сообщения
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Новое сообщение, созданное Aspose.Email для Java")
 
-\# Set Html body
+\# Установите Html тело
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Эта строка выделена жирным.</b> <br/> <br/>" +
 
-        "<font color=blue>This line is in blue color</font>")
+        "<font color=blue>Эта строка синего цвета</font>")
 
-\# Set sender information
+\# Установите информацию отправителя
 
-message.setFrom(Rjb::import('com.aspose.email.MailAddress').new("from@domain.com", "Sender Name", false))
+message.setFrom(Rjb::import('com.aspose.email.MailAddress').new("from@domain.com", "Имя Отправителя", false))
 
-\# Add TO recipients
+\# Добавьте получателей TO
 
-message.getTo().add(Rjb::import('com.aspose.email.MailAddress').new("to@domain.com", "Recipient 1", false))
+message.getTo().add(Rjb::import('com.aspose.email.MailAddress').new("to@domain.com", "Получатель 1", false))
 
-\# Message subject
+\# Тема сообщения
 
-message.setSubject("Customizing Email Headers")
+message.setSubject("Настройка Заголовков Писем")
 
-\# Specify Date
+\# Укажите дату
 
 calendar = Rjb::import('java.util.Calendar').getInstance(Rjb::import('java.util.TimeZone').getTimeZone("GMT"))
 
@@ -50,24 +50,24 @@ date = calendar.getTime()
 
 message.setDate(date)
 
-\# Specify XMailer
+\# Укажите XMailer
 
 message.setXMailer("Aspose.Email")
 
-\# Specify Secret Header
+\# Укажите Секретный Заголовок
 
 message.getHeaders().add("secret-header", "mystery")
 
-\# Save message to disc
+\# Сохраните сообщение на диск
 
 message.save(data_dir + "MsgHeaders.msg", Rjb::import('com.aspose.email.MessageFormat').getMsg())
 
-\# Display Status
+\# Выведите Статус
 
-puts "Customized message headers Successfully."
+puts "Заголовки сообщения успешно настроены."
 
 ```
-## **Загрузить рабочий код**
-Download **Настройка заголовков электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать Рабочий Код**
+Скачайте **Настройка Заголовков Писем (Aspose.Email)** с любого из нижеуказанных сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/customizeemailheaders.rb)

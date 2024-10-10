@@ -1,23 +1,23 @@
 ---
-title: "Работа со свойствами защиты паролем PST"
+title: "Работа с свойствами защиты паролем PST"
 url: /ru/net/working-with-pst-password-protection-properties/
 weight: 100
 type: docs
 ---
 
-## **Работа со свойствами защиты паролем PST**
+## **Работа с свойствами защиты паролем PST**
 
-Microsoft Outlook позволяет пользователям защищать файлы PST паролем для ограничения доступа к ним. Aspose.Email может обнаруживать защиту паролем в PST-файле. Защита паролем на самом деле реализована только в Outlook; данные вообще не зашифрованы. Кроме того, это позволяет использовать API для извлечения электронных писем без знания пароля.
+Microsoft Outlook позволяет пользователям защищать файлы PST паролем для ограничения доступа к ним. Aspose.Email может обнаружить защиту паролем в файле PST. На самом деле защита паролем реализована только в Outlook; данные вообще не шифруются. И это позволяет использовать API для извлечения электронных писем без знания пароля.
 
 {{% alert %}}
-**Попробуйте!**
+**Попробуйте это!**
 
-Запустите [PstPasswordManager](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/PstPasswordManager/PstPasswordManager) простой проект приложения и попробуйте функции Aspose.Email для управления паролями PST.
+Запустите проект простого приложения [PstPasswordManager](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/PstPasswordManager/PstPasswordManager) и испробуйте возможности Aspose.Email для управления паролями PST.
 {{% /alert %}}
 
-### **Чтение защищенных паролем файлов PST**
+### **Чтение файлов PST с защитой паролем**
 
-Вы можете читать защищенные паролем файлы так же, как обычные незащищенные pst-файлы.
+Вы можете читать файлы с защитой паролем так же, как и обычные незащищенные файлы PST.
 
 ```csharp
 using var pst = PersonalStorage.FromFile(fileName);
@@ -30,42 +30,42 @@ foreach (var folder in pst.RootFolder.GetSubFolders())
 }
 ```
 
-## **Проверьте, защищен ли PST-файл паролем**
+## **Проверка, защищён ли файл PST паролем**
 
-API предоставляет [PersonalStorage.Store.IsPasswordProtected](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordprotected/) имущество. Это [PersonalStorage.Store.IsPasswordProtected](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordprotected/) свойство возвращает значение true, если PST-файл защищен паролем, и false, если это не так.
+API предоставляет свойство [PersonalStorage.Store.IsPasswordProtected](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordprotected/). Свойство [PersonalStorage.Store.IsPasswordProtected](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordprotected/) возвращает true, если файл PST защищён паролем, и false, если нет.
 
-Следующий фрагмент кода демонстрирует использование [PersonalStorage.Store.IsPasswordProtected](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordprotected/) property.
-
-```csharp
-using var pst = PersonalStorage.FromFile("passwordprotectedPST.pst");
-Console.WriteLine($"The storage is password protected - {pst.Store.IsPasswordProtected}");
-```
-
-## **Подтвердите пароль в защищенном паролем PST**
-
-The [PersonalStorage.Store.IsPasswordValid()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordvalid/#ispasswordvalid) метод принимает строковый пароль в качестве параметра и возвращает true, если пароль правильный, и false, если он неверен.
-
-Следующий фрагмент кода демонстрирует использование [PersonalStorage.Store.IsPasswordValid()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordvalid/#ispasswordvalid) method.
+Следующий кодовый фрагмент демонстрирует использование свойства [PersonalStorage.Store.IsPasswordProtected](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordprotected/).
 
 ```csharp
 using var pst = PersonalStorage.FromFile("passwordprotectedPST.pst");
-Console.WriteLine($"Password is valid - {pst.Store.IsPasswordValid("Password1")}");
+Console.WriteLine($"Хранилище защищено паролем - {pst.Store.IsPasswordProtected}");
 ```
 
-## **Добавление/изменение/удаление пароля в файлах PST**
+## **Проверка пароля в защищенном паролем PST**
 
-The [PersonalStorage.Store.ChangePassword](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/changepassword/) метод используется для добавления, изменения или удаления пароля.
+Метод [PersonalStorage.Store.IsPasswordValid()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordvalid/#ispasswordvalid) принимает строку пароля в качестве параметра и возвращает true, если пароль верен, и false, если он неверен.
 
-Для этого выполните следующие действия:
+Следующий кодовый фрагмент демонстрирует использование метода [PersonalStorage.Store.IsPasswordValid()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/ispasswordvalid/#ispasswordvalid).
+
+```csharp
+using var pst = PersonalStorage.FromFile("passwordprotectedPST.pst");
+Console.WriteLine($"Пароль верный - {pst.Store.IsPasswordValid("Password1")}");
+```
+
+## **Добавление/изменение/удаление пароля для файлов PST**
+
+Метод [PersonalStorage.Store.ChangePassword](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/changepassword/) используется для добавления, изменения или удаления пароля.
+
+Для этого выполните следующие шаги:
 
 - Загрузите PST из файла или потока.
-- Позвоните [PersonalStorage.Store.ChangePassword](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/changepassword/) метод. Чтобы добавить или изменить пароль, передайте строку пароля в качестве параметра, а чтобы удалить пароль, передайте нулевое значение.
+- Вызовите метод [PersonalStorage.Store.ChangePassword](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/changepassword/). Чтобы добавить или изменить пароль, передайте строку пароля в качестве параметра, а чтобы удалить пароль, передайте значение null.
 
 ```csharp
 using var pst = PersonalStorage.Create("SetPasswordOnPST_out.pst", FileFormatVersion.Unicode);
-// Add or change the password
+// Добавить или изменить пароль
 const string password = "Password1";
 pst.Store.ChangePassword(password);
-// Remove the password
+// Удалить пароль
 pst.Store.ChangePassword(null);
 ```

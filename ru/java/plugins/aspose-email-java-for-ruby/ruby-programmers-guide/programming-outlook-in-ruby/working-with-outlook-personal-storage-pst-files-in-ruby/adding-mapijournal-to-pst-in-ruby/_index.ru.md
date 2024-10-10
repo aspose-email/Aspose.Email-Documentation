@@ -1,14 +1,14 @@
 ---
-title: "Добавление журнала MapiJournal в PST в Ruby"
+title: "Добавление MapiJournal в PST на Ruby"
 url: /ru/java/adding-mapijournal-to-pst-in-ruby/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - Добавление журнала MapiJournal в PST**
-Чтобы добавить MapiJournal в PST, используя **Aspose.Электронная почта Java для Ruby**, просто вызовите **AddMapiJournalToPST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Добавление MapiJournal в PST**
+Чтобы добавить MapiJournal в PST с помощью **Aspose.Email Java для Ruby**, просто вызовите модуль **AddMapiJournalToPST**. Здесь вы можете увидеть пример кода.
 
-**Код Ruby**
+**Ruby Код**
 
 ```ruby
 
@@ -24,7 +24,7 @@ cl.add(Rjb::import('java.util.Calendar').HOUR, 1)
 
 d2 = cl.getTime()
 
-journal = Rjb::import('com.aspose.email.MapiJournal').new("daily record", "called out in the dark", "Phone call", "Phone call")
+journal = Rjb::import('com.aspose.email.MapiJournal').new("ежедневная запись", "позвонил в темноте", "Телефонный звонок", "Телефонный звонок")
 
 journal.setStartTime(d1)
 
@@ -32,14 +32,14 @@ journal.setEndTime(d2)
 
 pst = Rjb::import('com.aspose.email.PersonalStorage').create(data_dir + "JournalPST.pst", Rjb::import('com.aspose.email.FileFormatVersion').Unicode)
 
-journal_folder = pst.createPredefinedFolder("Journal", Rjb::import('com.aspose.email.StandardIpmFolder').Journal)
+journal_folder = pst.createPredefinedFolder("Журнал", Rjb::import('com.aspose.email.StandardIpmFolder').Journal)
 
 journal_folder.addMapiMessageItem(journal)
 
-puts "Added MapiJournal Successfully."
+puts "MapiJournal успешно добавлен."
 
 ```
-## **Загрузить рабочий код**
-Download **Добавление журнала MAPIjournal в PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Добавление MapiJournal в PST (Aspose.Email)** с любого из нижеупомянутых социальных кодинговых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/addmapijournaltopst.rb)

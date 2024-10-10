@@ -1,17 +1,16 @@
 ---
-title: "Работа с сообщениями с сервера IMAP"
+title: "Работа с сообщениями с IMAP-сервера"
 url: /ru/java/working-with-messages-from-imap-server/
 weight: 20
 type: docs
 ---
 
+## **Получение идентификаторов MIME-сообщений с сервера**
 
-## **Отображение идентификаторов сообщений MIME с сервера**
-
-[ImapMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/) предоставляет MIME [MessageId](https://reference.aspose.com/email/java/com.aspose.email/messageinfobase/#getMessageId--) для идентификации сообщения без извлечения всего сообщения. В следующем фрагменте кода показано, как указать MIME MessageID.
+[ImapMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/) предоставляет MIME [MessageId](https://reference.aspose.com/email/java/com.aspose.email/messageinfobase/#getMessageId--) для идентификации сообщения без извлечения полного сообщения. Следующий фрагмент кода показывает, как получить список MIME messageId.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 ImapClient client = new ImapClient();
 client.setHost("domain.com");
 client.setUsername("username");
@@ -20,7 +19,7 @@ client.setPassword("password");
 try {
     ImapMessageInfoCollection messageInfoCol = client.listMessages("Inbox");
     for (ImapMessageInfo info : messageInfoCol) {
-        // Display MIME Message ID
+        // Отобразить MIME Message ID
         System.out.println("Message Id = " + info.getMessageId());
     }
 } catch (java.lang.RuntimeException ex) {
@@ -28,46 +27,46 @@ try {
 }
 ~~~
 
-## **Список сообщений с сервера**
+## **Получение сообщений с сервера**
 
-Aspose.Email предоставляет перегруженный вариант из 2 человек [listMessages()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) для получения заданного количества сообщений на основе запроса. В следующем фрагменте кода показано, как составить список сообщений.
+Aspose.Email предоставляет перегруженный вариант [listMessages()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) для извлечения указанного количества сообщений на основе запроса. Следующий фрагмент кода показывает, как получить список сообщений.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Create an imapclient with host, user and password
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
+// Создайте imapclient с хостом, пользователем и паролем
 ImapClient client = new ImapClient("localhost", "user", "password");
 
-// Select the inbox folder and Get the message info collection
+// Выберите папку "Входящие" и получите коллекцию информации о сообщениях
 ImapQueryBuilder builder = new ImapQueryBuilder();
 MailQuery query = builder
         .or(builder.or(builder.or(builder.or(builder.getSubject().contains(" (1) "), builder.getSubject().contains(" (2) ")), builder.getSubject().contains(" (3) ")),
                 builder.getSubject().contains(" (4) ")), builder.getSubject().contains(" (5) "));
 ImapMessageInfoCollection messageInfoCol4 = client.listMessages(query, 4);
-System.out.println((messageInfoCol4.size() == 4) ? "Success" : "Failure");
+System.out.println((messageInfoCol4.size() == 4) ? "Успех" : "Неудача");
 ~~~
 
-## **Рекурсивный список сообщений с сервера**
+## **Получение сообщений с сервера рекурсивно**
 
-Протокол IMAP поддерживает рекурсивный список сообщений из папки почтового ящика. Это также помогает отображать сообщения из подпапок папки. В следующем фрагменте кода показано, как рекурсивно перечислять сообщения.
+Протокол IMAP поддерживает рекурсивное получение сообщений из почтовой папки. Это помогает получить сообщения из подкаталогов папки. Следующий фрагмент кода показывает, как получить сообщения рекурсивно.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Create an imapclient with host, user and password
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
+// Создайте imapclient с хостом, пользователем и паролем
 ImapClient client = new ImapClient();
 client.setHost("domain.com");
 client.setUsername("username");
 client.setPassword("password");
 client.selectFolder("InBox");
 ImapMessageInfoCollection msgsColl = client.listMessages(true);
-System.out.println("Total Messages: " + msgsColl.size());
+System.out.println("Всего сообщений: " + msgsColl.size());
 ~~~
 
-## **Список сообщений с помощью MultiConnection**
+## **Получение сообщений с MultiConnection**
 
-[ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) обеспечивает [UseMultiConnection](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#setUseMultiConnection-int-) свойство, которое можно использовать для создания нескольких соединений для тяжелых операций. Вы также можете настроить количество подключений, которое будет использоваться в режиме нескольких подключений, используя [ImapClient.ConnectionsQuantity](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#setConnectionsQuantity-int-). В следующем фрагменте кода показано использование режима нескольких подключений для перечисления сообщений и сравнивается его производительность с режимом одиночного подключения.
+[ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) предоставляет свойство [UseMultiConnection](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#setUseMultiConnection-int-), которое может быть использовано для создания нескольких соединений для тяжелых операций. Вы также можете установить количество соединений, которые будут использоваться в режиме многосоединения, с помощью [ImapClient.ConnectionsQuantity](https://reference.aspose.com/email/java/com.aspose.email/emailclient/#setConnectionsQuantity-int-). Следующий фрагмент кода демонстрирует использование режима многосоединения для получения сообщений и сравнивает его производительность с режимом одного соединения.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 ImapClient imapClient = new ImapClient();
 imapClient.setHost("<HOST>");
 imapClient.setPort(993);
@@ -89,22 +88,22 @@ ImapMessageInfoCollection messageInfoCol2 = imapClient.listMessages(true);
 long singleConnectionModeTimeSpan = System.currentTimeMillis() - singleConnectionModeStartTime;
 
 double performanceRelation = singleConnectionModeTimeSpan / multiConnectionModeTimeSpan;
-System.out.println("Performance Relation: " + performanceRelation);
+System.out.println("Отношение производительности: " + performanceRelation);
 ~~~
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Обратите внимание, что использование режима нескольких подключений не гарантирует повышения производительности.
+Пожалуйста, обратите внимание, что использование режима многосоединения не гарантирует увеличение производительности.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-## **Получайте сообщения в порядке убывания**
+## **Получение сообщений в порядке убывания**
 
-Aspose.Email предоставляет [ImapClient.listMessagesByPage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessagesByPage-com.aspose.email.IConnection-com.aspose.email.PageInfo-) метод, который перечисляет сообщения с поддержкой пейджинга. Некоторые перегрузки [ImapClient.listMessagesByPage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessagesByPage-com.aspose.email.IConnection-com.aspose.email.PageInfo-) accept [PageSettings](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/) в качестве параметра. [PageSettings](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/) обеспечивает [AscendingSorting](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/#getAscendingSorting--) свойство, для которого задано значение **false**, возвращает электронные письма в порядке убывания.
+Aspose.Email предоставляет метод [ImapClient.listMessagesByPage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessagesByPage-com.aspose.email.IConnection-com.aspose.email.PageInfo-), который позволяет выводить сообщения с поддержкой постраничного отображения. Некоторые перегрузки метода [ImapClient.listMessagesByPage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessagesByPage-com.aspose.email.IConnection-com.aspose.email.PageInfo-) принимают [PageSettings](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/) в качестве параметра. [PageSettings](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/) предоставляет свойство [AscendingSorting](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/#getAscendingSorting--) которое, когда установлено в **false**, возвращает электронные письма в порядке убывания.
 
-Следующий пример кода демонстрирует использование [AscendingSorting](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/#getAscendingSorting--) собственность [PageSettings](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/) класс для изменения порядка писем.
+Следующий пример кода демонстрирует использование свойства [AscendingSorting](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/#getAscendingSorting--) класса [PageSettings](https://reference.aspose.com/email/java/com.aspose.email/pagesettings/) для изменения порядка электронных писем.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 ImapClient imapClient = new ImapClient();
 imapClient.setHost("<HOST>");
 imapClient.setPort(993);
@@ -125,59 +124,59 @@ for (ImapMessageInfo message : messages) {
 
 ## **Получение сообщений с сервера и сохранение на диск**
 
-The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) класс может получать сообщения с сервера IMAP и сохранять сообщения в формате EML на локальный диск. Для сохранения сообщений на диск необходимо выполнить следующие шаги:
+Класс [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) может извлекать сообщения с IMAP-сервера и сохранять сообщения в формате EML на локальном диске. Для сохранения сообщений на диск необходимы следующие шаги:
 
-1. Создайте экземпляр [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) class.
-1. Укажите имя хоста, порт, имя пользователя и пароль в iMapClient [constructor](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#ImapClient\(java.lang.String,%20int,%20java.lang.String,%20java.lang.String\)).
-1. Выберите папку, используя [selectFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#selectFolder-com.aspose.email.IConnection-java.lang.String-) method.
-1. Позвоните [listMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) метод получения [ImapMessageInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfocollection/) object.
-1. Пройдите итерацию через [ImapMessageInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfocollection/) коллекция, позвоните в [saveMessage()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#saveMessage-com.aspose.email.IConnection-int-java.io.OutputStream-) метод и укажите выходной путь и имя файла.
+1. Создайте экземпляр класса [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/).
+2. Укажите имя хоста, порт, имя пользователя и пароль в [конструкторе](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#ImapClient\(java.lang.String,%20int,%20java.lang.String,%20java.lang.String\)) класса ImapClient.
+3. Выберите папку, используя метод [selectFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#selectFolder-com.aspose.email.IConnection-java.lang.String-).
+4. Вызовите метод [listMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) для получения объекта [ImapMessageInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfocollection/).
+5. Переберите коллекцию [ImapMessageInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfocollection/), вызовите метод [saveMessage()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#saveMessage-com.aspose.email.IConnection-int-java.io.OutputStream-) и предоставьте путь и имя файла для вывода.
 
-В следующем фрагменте кода показано, как получать сообщения электронной почты с сервера и сохранять их.
+Следующий фрагмент кода показывает, как извлечь электронные письма с сервера и сохранить их.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Select the inbox folder and Get the message info collection
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
+// Выберите папку "Входящие" и получите коллекцию информации о сообщениях
 client.selectFolder(ImapFolderInfo.IN_BOX);
 ImapMessageInfoCollection list = client.listMessages();
 
-// Download each message
+// Скачайте каждое сообщение
 for (int i = 0; i < list.size(); i++) {
-    // Save the EML file locally
+    // Сохраните файл EML локально
     client.saveMessage(list.get_Item(i).getUniqueId(), dataDir + list.get_Item(i).getUniqueId() + ".eml");
 }
 ~~~
 
 ## **Сохранение сообщений в формате MSG**
 
-[В приведенном выше примере](#fetch-messages-from-server-and-save-to-disc), электронные письма сохраняются в формате EML. Чтобы сохранить электронные письма в формате MSG, [ImapClient.fetchMessage()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#fetchMessage-com.aspose.email.IConnection-int-) метод должен быть вызван. Он возвращает сообщение в экземпляре [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс. [MailMessage.save()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.lang.String-) Затем можно вызвать метод для сохранения сообщения в MSG. В следующем фрагменте кода показано, как сохранять сообщения в формате MSG.
+[В приведенном выше примере](#fetch-messages-from-server-and-save-to-disc) сообщения сохраняются в формате EML. Чтобы сохранить электронные письма в формате MSG, необходимо вызвать метод [ImapClient.fetchMessage()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#fetchMessage-com.aspose.email.IConnection-int-). Он возвращает сообщение в экземпляре класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Затем можно вызвать метод [MailMessage.save()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.lang.String-) для сохранения сообщения в формате MSG. Следующий фрагмент кода показывает, как сохранить сообщения в формате MSG.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the file directory.
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
+// Путь к каталогу файлов.
 String dataDir = "data/";
 
-// Create an imapclient with host, user and password
+// Создайте imapclient с хостом, пользователем и паролем
 ImapClient client = new ImapClient("localhost", "user", "password");
 
-// Select the inbox folder and Get the message info collection
+// Выберите папку "Входящие" и получите коллекцию информации о сообщениях
 client.selectFolder(ImapFolderInfo.IN_BOX);
 ImapMessageInfoCollection list = client.listMessages();
 
-// Download each message
+// Скачайте каждое сообщение
 for (int i = 0; i < list.size(); i++) {
-    // Save the message in MSG format
+    // Сохраните сообщение в формате MSG
     MailMessage message = client.fetchMessage(list.get_Item(i).getUniqueId());
     message.save(dataDir + list.get_Item(i).getUniqueId() + "_out.msg", SaveOptions.getDefaultMsgUnicode());
 }
 ~~~
 
-## **Групповая выборка сообщений**
+## **Групповая загрузка сообщений**
 
-[ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) обеспечивает [fetchMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#fetchMessagesBySequences-com.aspose.email.IConnection-java.lang.Iterable-java.lang.Integer--) метод, который принимает итерацию последовательных номеров или уникальных идентификаторов и возвращает список [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Следующий фрагмент кода демонстрирует использование [fetchMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#fetchMessagesBySequences-com.aspose.email.IConnection-java.lang.Iterable-java.lang.Integer--) метод получения сообщений по порядковым номерам и уникальному идентификатору.
+[ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) предоставляет метод [fetchMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#fetchMessagesBySequences-com.aspose.email.IConnection-java.lang.Iterable-java.lang.Integer--), который принимает итератор последовательных номеров или уникальных идентификаторов и возвращает список [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Следующий фрагмент кода демонстрирует использование метода [fetchMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#fetchMessagesBySequences-com.aspose.email.IConnection-java.lang.Iterable-java.lang.Integer--) для получения сообщений по последовательным номерам и уникальным идентификаторам.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 ImapClient imapClient = new ImapClient();
 imapClient.setHost("<HOST>");
 imapClient.setPort(993);
@@ -187,7 +186,7 @@ imapClient.setSupportedEncryption(EncryptionProtocols.Tls);
 imapClient.setSecurityOptions(SecurityOptions.SSLImplicit);
 
 ImapMessageInfoCollection messageInfoCol = imapClient.listMessages();
-System.out.println("ListMessages Count: " + messageInfoCol.size());
+System.out.println("Количество ListMessages: " + messageInfoCol.size());
 
 List<Integer> sequenceNumberAr = new ArrayList<Integer>();
 List<String> uniqueIdAr = new ArrayList<String>();
@@ -205,18 +204,18 @@ for (MailMessage m : imapClient.fetchMessagesByUids(uniqueIdAr)) {
 }
 ~~~
 
-## **Отправка электронных письмов/Организация электронных писем в беседы**
+## **Потоковая обработка электронной почты/Организация писем в беседы**
 
-Aspose.Email позволяет группировать все пересылки, ответы и ответы на все сообщения, связанные с одним и тем же разговором, в иерархическом порядке. По сути, протокол IMAP может поддерживать функцию THREAD, определенную в RFC-5256. Кроме того, существует еще одно расширение IMAP, предоставленное Gmail и описываемое как X-GM-EXT-1.
+Aspose.Email позволяет группировать все пересылки, ответы и ответы всем, относящимся к одной беседе, вместе в иерархическом порядке. В основном, протокол IMAP может поддерживать возможность THREAD, определенную в RFC-5256. Кроме того, существует еще одно расширение IMAP, предоставляемое Gmail и описываемое как X-GM-EXT-1.
 
-Доступны следующие функции потоковой обработки электронной почты:
+Следующие функции потоковой обработки электронной почты доступны для использования:
 
-- [getMessageThreads](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getMessageThreads-com.aspose.email.BaseSearchConditions-) метод - получает цепочки сообщений с помощью [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/).
-- boolean [getGmExt1Supported](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getGmExt1Supported--) - Получает информацию о том, поддерживается ли расширение Gmail X-GM-EXT-1.
-- boolean [getThreadSupported](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getThreadSupported--) - Получает информацию о том, поддерживается ли расширение THREAD.
-- String[] [getThreadAlgorithms](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getThreadAlgorithms--) - Получает поддерживаемые алгоритмы THREAD.
+- Метод [getMessageThreads](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getMessageThreads-com.aspose.email.BaseSearchConditions-) - получает потоки сообщений по [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/).
+- boolean [getGmExt1Supported](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getGmExt1Supported--) - получает информацию о том, поддерживается ли расширение Gmail X-GM-EXT-1.
+- boolean [getThreadSupported](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getThreadSupported--) - получает информацию о том, поддерживается ли расширение THREAD.
+- String[] [getThreadAlgorithms](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#getThreadAlgorithms--) - получает поддерживаемые алгоритмы THREAD.
 
-В следующих примерах кода показано использование этих функций для получения цепочек электронной почты из Gmail:
+Следующие примеры кода показывают использование этих функций для получения потоков электронной почты из Gmail:
 
 ```java
   ImapClient client = new ImapClient("imap.gmail.com", 993, "username", "password", SecurityOptions.SSLImplicit);
@@ -225,15 +224,15 @@ try {
 
     client.selectFolder(ImapFolderInfo.IN_BOX);
 
-   // get a list of messages that we'll group by conversation
+   // получаем список сообщений, которые мы сгруппируем по беседе
 
    ImapMessageInfoCollection messages = client.listMessages();
 
-   // make sure the IMAP server supports X-GM-EXT-1 extension
+   // убедитесь, что IMAP-сервер поддерживает расширение X-GM-EXT-1
 
    if (client.getGmExt1Supported()) {
 
-       // gets unique conversationId for our example
+       // получаем уникальный conversationId для нашего примера
 
        Set<String> conversationIds = new HashSet<String>();
 
@@ -247,7 +246,7 @@ try {
 
        for (String conversationId : conversationIds) {
 
-           // create the necessary search conditions for a thread
+           // создаем необходимые условия поиска для потока
 
            XGMThreadSearchConditions conditions = new XGMThreadSearchConditions();
 
@@ -255,11 +254,11 @@ try {
 
             conditions.setUseUId(true);
 
-           // get results
+           // получаем результаты
 
            List<MessageThreadResult> conversation = client.getMessageThreads(conditions);
 
-           // print the email conversation in hierarchically manner
+           // печатаем переписку по электронной почте в иерархическом порядке
 
            printConversaton("", conversation, messages);
 
@@ -279,7 +278,7 @@ try {
 
  * <p>
 
- * Prints the email conversation in hierarchically manner
+ * Печатает переписку по электронной почте в иерархическом порядке
 
  * </p>
 
@@ -313,14 +312,14 @@ public static void printConversaton(String indent, Iterable<MessageThreadResult>
 
 }
 ```
-Код немного меняется, если сервер IMAP поддерживает функцию THREAD:
+Код немного меняется, если IMAP-сервер поддерживает возможность THREAD:
 
-Проверьте, поддерживает ли сервер IMAP расширение THREAD:
+Проверьте, поддерживает ли IMAP-сервер расширение THREAD:
 
 ```java
  if (client.getThreadSupported())
 ```
-Создайте подходящие условия поиска для темы:
+Создайте подходящие условия поиска для потока:
 ```java
  ThreadSearchConditions conditions = new ThreadSearchConditions();
 
@@ -329,34 +328,34 @@ conditions.setAlgorithm(client.getThreadAlgorithms()[0]);
 conditions.setUseUId(true);
 ```
 
-## **Список сообщений с поддержкой пейджинга**
+## **Получение списков сообщений с поддержкой постраничного отображения**
 
-В сценариях, когда почтовый сервер содержит большое количество сообщений в почтовом ящике, часто требуется перечислить или получить сообщения с поддержкой пейджинга. API Aspose.Email [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) позволяет получать сообщения с сервера с поддержкой пейджинга.
+В ситуациях, когда почтовый сервер содержит большое количество сообщений в почтовом ящике, часто требуется перечислить или извлечь сообщения с поддержкой постраничного отображения. API Aspose.Email [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) позволяет извлекать сообщения с сервера с поддержкой постраничного отображения.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// This example shows the paging support of ImapClient for listing messages from the server
-// Available in Aspose.Email for Java and onwards
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
+// Этот пример показывает поддержку постраничного отображения ImapClient для получения сообщений с сервера
+// Доступно в Aspose.Email для Java и более поздних версий
 final ImapClient client = new ImapClient("host.domain.com", 993, "username", "password");
 try {
     try {
         int messagesNum = 12;
         int itemsPerPage = 5;
         MailMessage message = null;
-        // Create some test messages and append these to server's inbox
+        // Создайте несколько тестовых сообщений и добавьте их в папку "Входящие" сервера
         for (int i = 0; i < messagesNum; i++) {
             message = new MailMessage("from@domain.com", "to@domain.com", "EMAILNET-35157 - " + UUID.randomUUID(),
-                    "EMAILNET-35157 Move paging parameters to separate class");
+                    "EMAILNET-35157 Переместить параметры постраничной навигации в отдельный класс");
             client.appendMessage(ImapFolderInfo.IN_BOX, message);
         }
 
-        // List messages from inbox
+        // Перечислить сообщения из папки "Входящие"
         client.selectFolder(ImapFolderInfo.IN_BOX);
         ImapMessageInfoCollection totalMessageInfoCol = client.listMessages();
-        // Verify the number of messages added
+        // Проверьте количество добавленных сообщений
         System.out.println(totalMessageInfoCol.size());
 
-        ////////////////// RETREIVE THE MESSAGES USING PAGING SUPPORT////////////////////////////////////
+        ////////////////// ПОЛУЧИТЕ СООБЩЕНИЯ С ИСПОЛЬЗОВАНИЕМ ПОДДЕРЖКИ ПОСТРАНИЧНОГО ОТОБРАЖЕНИЯ////////////////////////////////////
 
         List<ImapPageInfo> pages = new ArrayList<ImapPageInfo>();
         PageSettings pageSettings = new PageSettings();
@@ -369,7 +368,7 @@ try {
         }
         int retrievedItems = 0;
 
-        // foreach to while statements conversion
+        // преобразование foreach в циклы while
         for (ImapPageInfo folderCol : pages) {
             retrievedItems += folderCol.getItems().size();
         }
@@ -382,76 +381,76 @@ try {
 }
 ~~~
 
-## **Получение папок и рекурсивное чтение сообщений**
+## **Получение папок и чтение сообщений рекурсивно**
 
-В этой статье большинство [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) функции используются для создания приложения, рекурсивно перечисляющего все папки и подпапки с сервера IMAP. Оно также сохраняет сообщения в каждой папке и подпапке в формате MSG на локальном диске. На диске папки и сообщения создаются и сохраняются в той же иерархической структуре, что и на сервере IMAP. В следующем фрагменте кода показано, как рекурсивно получать информацию о сообщениях и подпапках.
+В этой статье используются многие функции [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) для создания приложения, которое рекурсивно перечисляет все папки и подкаталоги с IMAP-сервера. Оно также сохраняет сообщения в каждой папке и подкаталоге в формате MSG на локальном диске. На диске папки и сообщения создаются и сохраняются в той же иерархической структуре, что и на IMAP-сервере. Следующий фрагмент кода показывает, как рекурсивно получать информацию о сообщениях и подкаталогах.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 public static void run() throws Exception {
-    // Создайте экземпляр ImapClient class
+    // Создайте экземпляр класса ImapClient
     ImapClient client = new ImapClient();
 
-    // Specify host, username, password, Port and SecurityOptions for your client
+    // Укажите хост, имя пользователя, пароль, порт и параметры безопасности для вашего клиента
     client.setHost("imap.gmail.com");
     client.setUsername("your.username@gmail.com");
     client.setPassword("your.password");
     client.setPort(993);
     client.setSecurityOptions(SecurityOptions.Auto);
     try {
-        // The root folder (which will be created on disk) consists of host and username
+        // Корневая папка (которая будет создана на диске) состоит из хоста и имени пользователя
         String rootFolder = client.getHost() + "-" + client.getUsername();
 
-        // Create the root folder and List all the folders from IMAP server
+        // Создайте корневую папку и перечислите все папки с IMAP-сервера
         new File(rootFolder).mkdirs();
         ImapFolderInfoCollection folderInfoCollection = client.listFolders();
         for (ImapFolderInfo folderInfo : folderInfoCollection) {
-            // Позвоните recursive method to read messages and get sub-folders
+            // Вызовите рекурсивный метод для чтения сообщений и получения подкаталогов
             listMessagesInFolder(folderInfo, rootFolder, client);
         }
-        // Disconnect to the remote IMAP server
+        // Отключитесь от удаленного IMAP-сервера
         client.dispose();
     } catch (java.lang.RuntimeException ex) {
         System.out.println(ex);
     }
 
-    System.out.println("Downloaded messages recursively from IMAP server.");
+    System.out.println("Загруженные сообщения рекурсивно с IMAP-сервера.");
 }
 
-/// Recursive method to get messages from folders and sub-folders
+/// Рекурсивный метод получения сообщений из папок и подкаталогов
 private static void listMessagesInFolder(ImapFolderInfo folderInfo, String rootFolder, ImapClient client) {
-    // Create the folder in disk (same name as on IMAP server)
+    // Создайте папку на диске (с тем же именем, что и на IMAP-сервере)
     String currentFolder = "data/";
     new File(currentFolder).mkdirs();
 
-    // Read the messages from the current folder, if it is selectable
+    // Прочитайте сообщения из текущей папки, если она выбираемая
     if (folderInfo.getSelectable()) {
-        // Send status command to get folder info
+        // Отправьте команду состояния для получения информации о папке
         ImapFolderInfo folderInfoStatus = client.getFolderInfo(folderInfo.getName());
-        System.out.println(folderInfoStatus.getName() + " folder selected. New messages: " + folderInfoStatus.getNewMessageCount() + ", Total messages: "
+        System.out.println(folderInfoStatus.getName() + " папка выбрана. Новые сообщения: " + folderInfoStatus.getNewMessageCount() + ", Всего сообщений: "
                 + folderInfoStatus.getTotalMessageCount());
 
-        // Select the current folder and List messages
+        // Выберите текущую папку и перечислите сообщения
         client.selectFolder(folderInfo.getName());
         ImapMessageInfoCollection msgInfoColl = client.listMessages();
-        System.out.println("Listing messages....");
+        System.out.println("Перечисление сообщений....");
         for (ImapMessageInfo msgInfo : msgInfoColl) {
-            // Get subject and other properties of the message
-            System.out.println("Subject: " + msgInfo.getSubject());
-            System.out.println("Read: " + msgInfo.isRead() + ", Recent: " + msgInfo.getRecent() + ", Answered: " + msgInfo.getAnswered());
+            // Получите тему и другие свойства сообщения
+            System.out.println("Тема: " + msgInfo.getSubject());
+            System.out.println("Прочитано: " + msgInfo.isRead() + ", Недавнее: " + msgInfo.getRecent() + ", Ответ: " + msgInfo.getAnswered());
 
-            // Get rid of characters like ? and :, which should not be included in a file name and Save the message in MSG format
+            // Удалите символы, такие как ? и :, которые не должны включаться в имя файла, и сохраните сообщение в формате MSG
             String fileName = msgInfo.getSubject().replace(":", " ").replace("?", " ");
             MailMessage msg = client.fetchMessage(msgInfo.getSequenceNumber());
             msg.save(currentFolder + "\\" + fileName + "-" + msgInfo.getSequenceNumber() + ".msg", SaveOptions.getDefaultMsgUnicode());
         }
         System.out.println("============================\n");
     } else {
-        System.out.println(folderInfo.getName() + " is not selectable.");
+        System.out.println(folderInfo.getName() + " не выбираемая.");
     }
 
     try {
-        // If this folder has sub-folders, call this method recursively to get messages
+        // Если у этой папки есть подкаталоги, вызовите этот метод рекурсивно для получения сообщений
         ImapFolderInfoCollection folderInfoCollection = client.listFolders(folderInfo.getName());
         for (ImapFolderInfo subfolderInfo : folderInfoCollection) {
             listMessagesInFolder(subfolderInfo, rootFolder, client);
@@ -461,18 +460,18 @@ private static void listMessagesInFolder(ImapFolderInfo folderInfo, String rootF
 }
 ~~~
 
-## **Получите UID или порядковый номер сообщения**
+## **Получение UID или номера последовательности сообщения**
 
-Публичный API Aspose.Email предоставляет следующие возможности для получения идентификационной информации сообщения, такой как UID или порядковый номер, которые могут потребоваться при обработке сообщений, полученных с сервера:
+Общий API Aspose.Email предоставляет следующие функции для получения идентификационной информации о сообщении, такой как UID или номер последовательности, которые могут потребоваться при обработке сообщений, полученных с сервера:
 
-[MailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/mailboxinfo/) class — представляет идентификационную информацию о сообщении в почтовом ящике.
-- [getSequenceNumber()](https://reference.aspose.com/email/java/com.aspose.email/mailboxinfo/#getSequenceNumber--) method - Возвращает порядковый номер сообщения.
-- [getUniqueId()](https://reference.aspose.com/email/java/com.aspose.email/mailboxinfo/#getUniqueId--) метод - получает уникальный идентификатор сообщения.
+[MailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/mailboxinfo/) - представляет собой идентификационную информацию о сообщении в почтовом ящике.
+- [getSequenceNumber()](https://reference.aspose.com/email/java/com.aspose.email/mailboxinfo/#getSequenceNumber--) - получает номер последовательности сообщения.
+- [getUniqueId()](https://reference.aspose.com/email/java/com.aspose.email/mailboxinfo/#getUniqueId--) - получает уникальный идентификатор сообщения.
 
-[MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс — представляет собой сообщение электронной почты и позволяет получить доступ к свойствам сообщения, например теме, телу, адресам отправителя и получателя и т. д.
-- [getItemId](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getItemId--) метод — представляет идентификационную информацию о сообщении в почтовом ящике.
+[MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) - представляет собой электронное сообщение и позволяет получить доступ к свойствам сообщения, например, теме, содержимому, отправителю и адресам получателей и т.д.
+- [getItemId](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getItemId--) - представляет собой идентификационную информацию о сообщении в почтовом ящике.
 
-В приведенном ниже примере кода показано, как получать и отображать сведения о сообщениях из папки «INBOX» на сервере IMAP с помощью [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) class:
+Ниже приведен пример кода, который демонстрирует, как извлечь и отобразить детали сообщений из папки "Входящие" на IMAP-сервере с использованием класса [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/):
 
 ```java
 try (ImapClient client = new ImapClient(imapHost, port, emailAddress, password, securityOption)) {
@@ -489,36 +488,36 @@ try (ImapClient client = new ImapClient(imapHost, port, emailAddress, password, 
     }
 }
 ```
-## **Получение дополнительных параметров в виде сводной информации**
+## **Получение дополнительных параметров в качестве сводной информации**
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
 final ImapClient client = new ImapClient("host.domain.com", "username", "password");
 try {
     MailMessage message = new MailMessage("from@domain.com", "to@doman.com", "EMAILNET-38466 - " + UUID.randomUUID().toString(),
-            "EMAILNET-38466 Add extra parameters for UID FETCH command");
+            "EMAILNET-38466 Добавить дополнительные параметры для команды UID FETCH");
 
-    // append the message to the server
+    // добавьте сообщение на сервер
     String uid = client.appendMessage(message);
 
-    // wait for the message to be appended
+    // подождите, пока сообщение будет добавлено
     Thread.sleep(5000);
 
-    // Define properties to be fetched from server along with the message
+    // Определите свойства, которые должны быть извлечены с сервера вместе с сообщением
     List<String> messageExtraFields = Arrays.asList("X-GM-MSGID", "X-GM-THRID");
 
-    // retreive the message summary information using it's UID
+    // получите сводную информацию о сообщении, используя его UID
     ImapMessageInfo messageInfoUID = client.listMessage(uid, messageExtraFields);
 
-    // retreive the message summary information using it's sequence number
+    // получите сводную информацию о сообщении, используя его номер последовательности
     ImapMessageInfo messageInfoSeqNum = client.listMessage(1, messageExtraFields);
 
-    // List messages in general from the server based on the defined properties
+    // Перечислите сообщения с сервера в общем порядке на основе определенных свойств
     ImapMessageInfoCollection messageInfoCol = client.listMessages(messageExtraFields);
 
     ImapMessageInfo messageInfoFromList = messageInfoCol.get_Item(0);
 
-    // verify that the parameters are fetched in the summary information
+    // проверьте, что параметры извлекаются в сводной информации
     for (String paramName : messageExtraFields) {
         System.out.println(messageInfoFromList.getExtraParameters().containsKey(paramName));
         System.out.println(messageInfoUID.getExtraParameters().containsKey(paramName));
@@ -530,13 +529,13 @@ try {
 }
 ~~~
 
-## **Получение информации в заголовке списка «Отказаться от подписки»**
+## **Получение информации заголовка List-Unsubscribe**
 
-Заголовок List-Unsubscribe содержит URL-адрес для отказа от подписки на списки рассылки, например на рекламные объявления, информационные бюллетени и т. д. Чтобы получить заголовок List-Unsubscribe, используйте [listUnsubscribe](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getListUnsubscribe--) собственность [ImapMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/) класс. В следующем примере показано использование [listUnsubscribe](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getListUnsubscribe--) свойство для получения заголовка List-Unsubscribe.
+Заголовок List-Unsubscribe содержит URL для отказа от подписки на списки электронной почты, например, рекламные письма, информационные бюллетени и т.д. Чтобы получить заголовок List-Unsubscribe, используйте свойство [listUnsubscribe](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getListUnsubscribe--) класса [ImapMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/). Следующий пример показывает использование свойства [listUnsubscribe](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getListUnsubscribe--) для получения заголовка List-Unsubscribe.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-ImapClient imapClient = new ImapClient();
+// Для полных примеров и файлов данных перейдите на https://github.com/aspose-email/Aspose.Email-for-Java
+ImapClient имапКлиент = новый ImapClient();
 imapClient.setHost("<HOST>");
 imapClient.setPort(993);
 imapClient.setUsername("<USERNAME>");
@@ -546,6 +545,6 @@ imapClient.setSecurityOptions(SecurityOptions.SSLImplicit);
 
 ImapMessageInfoCollection messageInfoCol = imapClient.listMessages();
 for (ImapMessageInfo imapMessageInfo : messageInfoCol) {
-    System.out.println("ListUnsubscribe Header: " + imapMessageInfo.getListUnsubscribe());
+    System.out.println("Заголовок ListUnsubscribe: " + imapMessageInfo.getListUnsubscribe());
 }
 ~~~

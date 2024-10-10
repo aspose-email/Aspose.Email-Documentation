@@ -1,14 +1,14 @@
 ---
-title: "Создайте новый PST в Mython"
+title: "Создание нового PST в Jython"
 url: /ru/java/create-new-pst-in-jython/
 weight: 60
 type: docs
 ---
 
-## **Aspose.Email - Создайте новый PST**
-Чтобы создать новый PST, используя **Aspose.Электронная почта Java для Mython**, просто вызовите **CreatePST** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Создание нового PST**
+Чтобы создать новый PST с использованием **Aspose.Email Java для Jython**, просто вызовите модуль **CreatePST**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Jython код**
 
 ``` python
 
@@ -38,35 +38,35 @@ class CreatePST:
 
 
 
-        # Create an instance of PersonalStorage
+        # Создать экземпляр PersonalStorage
 
         personalStorage=PersonalStorage()
 
         pst = personalStorage.create(dataDir + "sample1.pst", 0)
 
-        # Create a folder at root of pst
+        # Создать папку на корневом уровне pst
 
         pst.getRootFolder().addSubFolder("myInbox")
 
-        # Add message to newly created folder
+        # Добавить сообщение в только что созданную папку
 
         mapi_message = MapiMessage()
 
         pst.getRootFolder().getSubFolder("myInbox").addMessage(mapi_message.fromFile(dataDir + "Message.msg"))
 
-        print "Created PST successfully."
+        print "PST успешно создан."
 
 
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     CreatePST()
 
 ```
-## **Загрузить рабочий код**
-Download **Создайте новый PST (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Создание нового PST (Aspose.Email)** с любого из ниже упомянутых социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

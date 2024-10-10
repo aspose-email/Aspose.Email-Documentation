@@ -4,4 +4,3 @@ url: /ru/java/working-with-exchange-ews-client/
 weight: 80
 type: docs
 ---
-

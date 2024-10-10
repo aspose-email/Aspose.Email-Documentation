@@ -8,17 +8,17 @@ type: docs
 
 ## **Работа с запросом FreeBusy**
 
-Aspose.Email предоставляет механизм запросов, позволяющий проверить, назначена ли встреча в соответствии с критериями. Для этого предусмотрен класс FreeBusyQuery, который позволяет подготовить запрос к определенному календарю.
+Aspose.Email предоставляет механизм запроса для проверки, является ли какое-либо событие назначенным или нет в соответствии с критериями. Для этой цели предоставлен класс FreebusyQuery, который позволяет подготовить запрос для конкретного календаря.
 
 ### **Запрос календаря**
 
-В этом примере кода показана возможность запроса календаря. В этом примере выполняются следующие задачи:
+Этот пример кода демонстрирует функцию запроса календаря. В этом примере выполняются следующие задачи:
 
 1. Создание и вставка календаря
-1. Назначьте встречу
-1. Укажите встречу
-1. Подготовьте бесплатный запрос Busy
-1. Получите бесплатный ответ Busy
+1. Создание события
+1. Вставка события
+1. Подготовка FreeBusyQuery
+1. Получение FreebusyResponse
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -39,7 +39,7 @@ using (IGmailClient client = GmailClient.GetInstance(accessToken, user.Email))
         Appointment[] appointments = client.ListAppointments(calendarId1);
         if (appointments.Length != 0)
         {
-            Console.WriteLine("Wrong number of appointments");
+            Console.WriteLine("Неправильное количество встреч");
             return;
         }
 
@@ -68,7 +68,7 @@ using (IGmailClient client = GmailClient.GetInstance(accessToken, user.Email))
         query.TimeMax = DateTime.Now.AddDays(1);
         query.TimeZone = "Europe/Kiev";
 
-        // Set calendar item to search and Get the reponse of query containing
+        // Set calendar item to search and Get the reponse of query containing 
         query.Items.Add(cal1.Id);
         FreebusyResponse resp = client.GetFreebusyInfo(query);
         // Delete the appointment
@@ -82,50 +82,50 @@ using (IGmailClient client = GmailClient.GetInstance(accessToken, user.Email))
 }
 ```
 
-## **Создание проекта в консоли разработчика Google**
+## **Создание проекта в Google Developer Console**
 
-Проект должен быть создан в консоли разработчика Google для пользователя, имеющего учетную запись Gmail. На странице API & auth -> Учетные данные проекта Google необходимо указать такую информацию, как идентификатор клиента и секрет клиента. Эта информация, а также имя пользователя и пароль учетной записи Gmail потребуются для выполнения кода, например, календарь Google, списки контроля доступа, встречи, контакты, настройки и т. д. в этом разделе.
+Для пользователя с учетной записью Gmail необходимо создать проект в Google Developer Console. На странице API и аутентификация -> Учетные данные проекта Google необходимо записать информацию, такую как идентификатор клиента и секрет клиента. Эта информация вместе с именем пользователя и паролем учетной записи Gmail потребуется для выполнения кода, например, для работы с календарем Google, списками управления доступом, событиями, контактами, настройками и т. д. в этом разделе.
 
-### **Шаги по созданию проекта в консоли разработчика Google**
+### **Шаги для создания проекта в Google Developer Console**
 
-Ниже приведено пошаговое руководство по созданию проекта в консоли разработчика Google.
+Ниже приводится пошаговое руководство по созданию проекта в Google Developer Console.
 
-1. Перейти по ссылке <https://cloud.google.com/console/project> и войдите в систему, используя свои учетные данные gmail
+1. Перейдите по ссылке <https://cloud.google.com/console/project> и войдите в систему, используя свои учетные данные Gmail
 
 |![todo:image_alt_text](gmail-utility-features_1.png)|
-|: - |
-2. Установите флажок «Я прочитал и согласен со всеми Условиями обслуживания продуктов Google Cloud Platform» и нажмите кнопку «Создать»
+| :- |
+2. Установите флажок "Я прочитал и согласен со всеми Условиями использования продуктов Google Cloud Platform." и нажмите кнопку Создать
 
 |![todo:image_alt_text](gmail-utility-features_2.png)|
-|: - |
-3. Будет запрошена «Подтверждение по SMS». Нажмите кнопку «Продолжить»:
+| :- |
+3. Запрос на "SMS-подтверждение". Нажмите кнопку продолжить:
 
 |![todo:image_alt_text](gmail-utility-features_3.png)|
-|: - |
-4. Введите название страны и номер мобильного телефона. Нажмите кнопку: Отправить проверочный код
+| :- |
+4. Введите название своей страны и введите номер мобильного телефона. Нажмите кнопку: Отправить код подтверждения
 
 |![todo:image_alt_text](gmail-utility-features_4.png)|
-|: - |
-5. Введите проверочный код, полученный на вашем мобильном телефоне.
+| :- |
+5. Введите код подтверждения, полученный на ваш мобильный.
 
 |![todo:image_alt_text](gmail-utility-features_5.png)|
-|: - |
-6. В списке API и auth\ API включите статус API календаря и API контактов. Выключите все остальные.
+| :- |
+6. В списке API и аутентификация \ API включите статус API Календаря и API Контактов. Выключите все остальные.
 
 |![todo:image_alt_text](gmail-utility-features_6.png)|
-|: - |
-7. В разделе «API и аутентификация» -> «Учетные данные» нажмите кнопку «СОЗДАТЬ НОВЫЙ ИДЕНТИФИКАТОР КЛИЕНТА» в разделе «OAuth». Выберите «Установленное приложение» и «Другое» из предложенных вариантов и нажмите кнопку «Создать идентификатор клиента». Запишите здесь идентификатор клиента и секрет клиента, которые будут использованы в примерах кодов в этом разделе.
+| :- |
+7. На странице API и аутентификация -> Учетные данные нажмите кнопку "СОЗДАТЬ НОВЫЙ ИДЕНТИФИКАТ КЛИЕНТА" в разделе "OAuth". Выберите "Установленное приложение" и "Другое" из предложенных вариантов и нажмите кнопку "Создать идентификатор клиента". Запишите здесь идентификатор клиента и секрет клиента, которые будут использоваться в примерах кода в этом разделе.
 
 |![todo:image_alt_text](gmail-utility-features_7.png)|
-|: - |
+| :- |
 
 ## **Вспомогательные классы**
 
-Для запуска примеров кода, приведенных в этом разделе, необходимы следующие вспомогательные классы. Эти классы `GoogleOAuthHelper` and `GoogleUser` предназначены только для упрощения демонстрации. Методы этих классов используют закрытую структуру веб-страниц, которая может измениться в любое время.
+Следующие вспомогательные классы необходимы для выполнения примеров кода в этом разделе. Эти классы `GoogleOAuthHelper` и `GoogleUser` служат только для упрощения демонстрации. Методы в этих классах используют непубличную структуру веб-страниц, которая может изменяться в любое время.
 
-### **Вспомогательный класс Google OAuth**
+### **Класс GoogleOAuthHelper**
 
-В следующем фрагменте кода показано, как реализовать `GoogleOAuthHelper` class.
+Следующий фрагмент кода показывает, как реализовать класс `GoogleOAuthHelper`.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -294,40 +294,40 @@ internal class GoogleOAuthHelper
 }
 ```
 
-**Помощник Google по аутентификации** следует использовать следующим образом:
+**Помощник Google OAuth** должен использоваться следующим образом:
 
 1. Сначала необходимо сгенерировать URL-адрес кода авторизации.
-1. Откройте URL-адрес в браузере и выполните все операции. В результате вы получите код авторизации.
-1. Используйте код авторизации для получения токена обновления.
-1. Если токен обновления существует, вы можете использовать его для получения токенов доступа.
+1. Откройте URL-адрес в браузере и завершите все операции. В результате вы получите код авторизации.
+1. Используйте код авторизации, чтобы получить токен обновления.
+1. Когда токен обновления существует, вы можете использовать его для получения токенов доступа.
 
 ```csharp
 GoogleUser user = new GoogleUser(email, password, clientId, clientSecret);
 
 string authUrl = GoogleOAuthHelper.GetAuthorizationCodeUrl(user);
 
-Console.WriteLine("Go to the following URL and get your authorization code:");
+Console.WriteLine("Перейдите по следующему URL-адресу и получите свой код авторизации:");
 Console.WriteLine(authUrl);
 Console.WriteLine();
 
-Console.WriteLine("Enter the authorization code:");
+Console.WriteLine("Введите код авторизации:");
 string authorizationCode = Console.ReadLine();
 Console.WriteLine();
 
 TokenResponse tokenInfo = GoogleOAuthHelper.GetAccessTokenByAuthCode(authorizationCode, user);
-Console.WriteLine("The refresh token has been received:");
+Console.WriteLine("Токен обновления получен:");
 Console.WriteLine(tokenInfo.RefreshToken);
 Console.WriteLine();
 
 user.RefreshToken = tokenInfo.RefreshToken;
 tokenInfo = GoogleOAuthHelper.GetAccessTokenByRefreshToken(user);
-Console.WriteLine("The new access token has been received:");
+Console.WriteLine("Получен новый токен доступа:");
 Console.WriteLine(tokenInfo.AccessToken);
 Console.WriteLine();
 ```
 
-### **Класс пользователя Google**
-В следующем фрагменте кода показано, как реализовать `GoogleUser` class.
+### **Класс GoogleUser**
+Следующий фрагмент кода показывает, как реализовать класс `GoogleUser`.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -357,9 +357,9 @@ public class GoogleUser
 }
 ```
 
-### **Класс ответа токена**
+### **Класс TokenResponse**
 
-В следующем фрагменте кода показано, как реализовать `TokenResponse` class.
+Следующий фрагмент кода показывает, как реализовать класс `TokenResponse`.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

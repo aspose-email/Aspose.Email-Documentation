@@ -1,14 +1,14 @@
 ---
-title: "Создайте черновик запроса на встречу"
+title: "Создание черновика запроса на назначение"
 url: /ru/java/create-draft-appointment-request/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - создайте черновик запроса на встречу**
-Может быть полезно создать запрос на встречу в черновом режиме, чтобы добавить основную информацию, а затем тот же черновик встречи можно было бы переслать другим пользователям, которые могут внести изменения. Aspose.Email для Java позволяет создавать и сохранять встречу в черновом режиме для последующего использования.
+## **Aspose.Email - Создание черновика запроса на назначение**
+Создание запроса на назначение в черновом режиме может быть полезным, чтобы добавить основную информацию, а затем этот же черновик можно переслать другим пользователям, которые могут внести изменения. Aspose.Email для Java предоставляет гибкость для создания и сохранения назначения в черновом режиме для последующего использования.
 
-Чтобы сохранить встречу в черновом режиме, для свойства Method класса Appointment необходимо задать значение **Publish**.
+Чтобы сохранить назначение в черновом режиме, свойство Method класса Appointment должно быть установлено на **Publish**.
 
 **Java**
 
@@ -32,17 +32,17 @@ Date endDate = calendar.getTime();
 
 MailAddressCollection attendees = new MailAddressCollection();
 
-attendees.addMailAddress(new MailAddress("attendee_address@aspose.com", "Attendee"));
+attendees.addMailAddress(new MailAddress("attendee_address@aspose.com", "Участник"));
 
 WeeklyRecurrencePattern expected = new WeeklyRecurrencePattern(3);
 
-Appointment app = new Appointment("Appointment Location", "Appointment Summary", "Appointment Description",
+Appointment app = new Appointment("Место проведения встречи", "Сводка назначения", "Описание назначения",
 
         startDate, endDate,
 
-        new MailAddress("organizer_address@aspose.com", "Organizer"), attendees, expected);
+        new MailAddress("organizer_address@aspose.com", "Организатор"), attendees, expected);
 
-//Set the Appointment as Draft
+//Установить назначение как черновик
 
 app.setMethod(AppointmentMethodType.Publish);//.Method = AppointmentMethodType.Publish;
 
@@ -50,21 +50,21 @@ message.addAlternateView(app.requestApointment());
 
 MapiMessage msg = MapiMessage.fromMailMessage(message);
 
-// Save the appointment as draft.
+// Сохранить назначение как черновик.
 
 msg.save("data/AsposeDraft.msg");
 
 ```
-## **Загрузить рабочий код**
-Download **Создайте черновик запроса на встречу** с любого из нижеперечисленных сайтов социального кодирования:
+## **Скачать рабочий код**
+Скачайте **Создание черновика запроса на назначение** с любого из упомянутых ниже сайтов социального кодирования:
 
 - [CodePlex](https://asposeapachepoi.codeplex.com/downloads/get/1381615)
 - [SourceForge](http://sourceforge.net/projects/asposeforapachepoi/files/Aspose.Email%20Features%20Not%20in%20Apache%20POI%20HSMF%20for%20Outlook/Create%20Draft%20Appointment%20Request%20%28Aspose.Email%29.zip/download)
 - [GitHub](https://github.com/asposemarketplace/Aspose_for_Apache_POI/releases/download/More-Features-in-Aspose.Email-v1.1/Create.Draft.Appointment.Request.Aspose.Email.zip)
 - [BitBucket](https://bitbucket.org/asposemarketplace/aspose-for-apache-poi/downloads/Create%20Draft%20Appointment%20Request%20\(Aspose.Email\).zip)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Для получения дополнительной информации посетите [Создайте черновик запроса на встречу](/email/java/working-with-appointments/).
+Для получения дополнительных сведений посетите [Создание запроса на черновик назначения](/email/java/working-with-appointments/).
 
 {{% /alert %}}

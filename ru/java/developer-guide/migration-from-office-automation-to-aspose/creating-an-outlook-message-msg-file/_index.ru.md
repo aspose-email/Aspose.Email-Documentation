@@ -1,50 +1,50 @@
 ---
-title: "Создание файла сообщений Outlook (MSG)"
+title: "Создание файла сообщения Outlook (MSG)"
 url: /ru/java/creating-an-outlook-message-msg-file/
 weight: 20
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Наши советы по миграции показывают, как продукты Aspose можно использовать для улучшения приложений и избавления вас от зависимости от традиционной автоматизации.
+Наши советы по миграции показывают, как продукты Aspose могут быть использованы для улучшения ваших приложений и освобождения вас от зависимости от традиционной автоматизации.
 
-В этом совете по миграции показано, как создать файл сообщений Outlook (MSG), используя [Автоматизация работы Microsoft Office](#office-automation) and [Aspose.Email](#asposeemail-for-java). В примерах кода задаются основные свойства MSG-файла (To, Cc, Subject и текст HTML) перед сохранением файла на диск.
+Этот совет по миграции показывает, как создать файл сообщения Outlook (MSG) с использованием [Microsoft Office Automation](#office-automation) и [Aspose.Email](#asposeemail-for-java). Примеры кода устанавливают основные свойства файла MSG - Кому, Копия, Тема и HTML-содержимое - перед сохранением файла на диск.
 
-{{% /alert %}}
-## **Автоматизация делопроизводства**
-Чтобы использовать Автоматизация делопроизводства, Microsoft Outlook должен быть установлен на компьютере, на котором работает код. Также требуется ссылка на Outlook.Interop.dll.
+{{% /alert %}} 
+## **Автоматизация Office**
+Для использования автоматизации Office на машине, где выполняется код, должна быть установлена Microsoft Outlook. Также требуется ссылка на Outlook.interop.dll.
 ### **Примеры программирования**
-Следующие фрагменты кода создают файл MSG с помощью Автоматизация делопроизводства.
+Следующие фрагменты кода создают файл MSG с использованием автоматизации Office.
 
 **C#**
 
 ~~~cs
 
- // Creates a new Outlook Application instance
+ // Создает новый экземпляр приложения Outlook
 
 Outlook.Application objOutlook = new Outlook.Application();
 
-// Creating a new Outlook message from the Outlook Application instance
+// Создание нового сообщения Outlook из экземпляра приложения Outlook
 
 Outlook.MailItem msgInterop = (Outlook.MailItem)(objOutlook.CreateItem(Outlook.OlItemType.olMailItem));
 
-// Set recipient information
+// Установка информации о получателе
 
 msgInterop.To = "to@domain.com";
 
 msgInterop.CC = "cc@domain.com";
 
-// Set the message subject
+// Установка темы сообщения
 
-msgInterop.Subject = "Subject";
+msgInterop.Subject = "Тема";
 
-// Set some HTML text in the HTML body
+// Установка текста HTML в HTML-содержимом
 
-msgInterop.HTMLBody = "<h3>HTML Heading 3</h3> <u>This is underlined text</u>";
+msgInterop.HTMLBody = "<h3>HTML Заголовок 3</h3> <u>Это подчеркиваемый текст</u>";
 
-// Save the MSG file in local disk
+// Сохранение файла MSG на локальном диске
 
 string strMsg = @"c:\\temp\TestInterop.msg";
 
@@ -53,28 +53,28 @@ msgInterop.SaveAs(strMsg, Outlook.OlSaveAsType.olMSG);
 
 
 ~~~
-## **Aspose.Электронная почта для Java**
-В приведенных ниже примерах используется Aspose.Email для создания файла Outlook MSG. Он написан на чистом языке Java и не использует COM Interop. Для создания msg-файла таким образом установка Outlook не требуется.
+## **Aspose.Email для Java**
+Примеры ниже используют Aspose.Email для создания файла MSG Outlook. Он написан на чистом Java и не использует COM Interop. Установка Outlook не требуется для создания файла msg таким образом.
 
 ~~~Java
 
-// Create an instance of the Aspose.Email.MailMessage class
+// Создание экземпляра класса Aspose.Email.MailMessage
 MailMessage msg = new MailMessage();
 
-// Set recipients information
+// Установка информации о получателях
 msg.setTo(MailAddressCollection.to_MailAddressCollection("to@domain.com"));
 msg.setCC(MailAddressCollection.to_MailAddressCollection("cc@domain.com"));
 
-// Set the subject
-msg.setSubject("Subject");
+// Установка темы
+msg.setSubject("Тема");
 
-// Set HTML body
-msg.setHtmlBody("<h3>HTML Heading 3</h3> <u>This is underlined text</u>");
+// Установка HTML-содержимого
+msg.setHtmlBody("<h3>HTML Заголовок 3</h3> <u>Это подчеркиваемый текст</u>");
 
-// Add an attachment
+// Добавление вложения
 msg.getAttachments().addItem(new Attachment("test.txt"));
 
-// Save it in local disk
+// Сохранение на локальном диске
 String strMsg = "c:\\ TestAspose.msg";
 msg.save(strMsg, SaveOptions.getDefaultMsgUnicode());
 

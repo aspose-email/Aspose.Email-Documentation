@@ -1,12 +1,12 @@
 ---
-title: "Создайте новую электронную почту в Python"
+title: "Создание нового email на Python"
 url: /ru/java/create-new-email-in-python/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email - Создайте новое письмо**
-Чтобы создать новое электронное письмо, используя **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Создание нового email**
+Чтобы создать новый email с помощью **Aspose.Email Java для Python**, используйте следующий код.
 
 **Код Python**
 
@@ -14,39 +14,39 @@ type: docs
 
 
 
-\# Create a instance of MailMessage class
+\# Создание экземпляра класса MailMessage
 
 message = self.MailMessage()
 
-\# Set subject of the message
+\# Установка темы сообщения
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Новое сообщение, созданное с помощью Aspose.Email для Java")
 
 mail_address = self.MailAddress
 
-\# Set Html body
+\# Установка Html-содержимого
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Эта строка выделена жирным шрифтом.</b> <br/> <br/>" +
 
-   "<font color=blue>This line is in blue color</font>")
+   "<font color=blue>Эта строка синего цвета</font>")
 
-\# Set sender information
+\# Установка информации об отправителе
 
-message.setFrom(self.MailAddress("from@domain.com", "Sender Name", False))
+message.setFrom(self.MailAddress("from@domain.com", "Имя отправителя", False))
 
-\# Add TO recipients
+\# Добавление получателей в TO
 
-message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Recipient 1", False))
+message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Получатель 1", False))
 
-message.getTo().addMailAddress(self.MailAddress("to2@domain.com", "Recipient 2", False))
+message.getTo().addMailAddress(self.MailAddress("to2@domain.com", "Получатель 2", False))
 
-\# Add CC recipients
+\# Добавление получателей в CC
 
-message.getCC().addMailAddress(self.MailAddress("cc1@domain.com", "Recipient 3", False))
+message.getCC().addMailAddress(self.MailAddress("cc1@domain.com", "Получатель 3", False))
 
-message.getCC().addMailAddress(self.MailAddress("cc2@domain.com", "Recipient 4", False))
+message.getCC().addMailAddress(self.MailAddress("cc2@domain.com", "Получатель 4", False))
 
-\# Save message in EML and MSG formats
+\# Сохранение сообщения в форматах EML и MSG
 
 mail_message_save_type = self.MailMessageSaveType
 
@@ -54,13 +54,13 @@ message.save(self.dataDir + "Message.eml", mail_message_save_type.getEmlFormat()
 
 message.save(self.dataDir + "Message.msg", mail_message_save_type.getOutlookMessageFormat())
 
-\# Display Status
+\# Отображение статуса
 
-print "Created email messages Successfully."
+print "Сообщение успешно создано."
 
 ```
-## **Загрузить рабочий код**
-Download **Создать новое электронное письмо (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Создание нового email (Aspose.Email)** с любого из нижеупомянутых сайтов социальных кодов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

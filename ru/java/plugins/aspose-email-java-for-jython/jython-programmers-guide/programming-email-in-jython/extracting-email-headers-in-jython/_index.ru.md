@@ -1,14 +1,14 @@
 ---
-title: "Извлечение заголовков электронной почты в Mython"
+title: "Извлечение заголовков электронной почты в Jython"
 url: /ru/java/extracting-email-headers-in-jython/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - Извлечение заголовков писем**
-Извлечение заголовков электронных писем с помощью **Aspose.Электронная почта Java для Mython**, просто вызовите **ExtractEmailHeaders** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Извлечение заголовков электронной почты**
+Чтобы извлечь заголовки электронной почты с помощью **Aspose.Email Java для Jython**, просто вызовите модуль **ExtractEmailHeaders**. Здесь вы можете увидеть пример кода.
 
-**Код Митона**
+**Jython Код**
 
 ``` python
 
@@ -26,15 +26,15 @@ class ExtractEmailHeaders:
 
 
 
-        # Initialize and Load an existing EML file by specifying the MessageFormat
+        # Инициализируйте и загрузите существующий файл EML, указав формат сообщения
 
         mailMessage=MailMessage()
 
         message = mailMessage.load(dataDir + "Message.eml")
 
-        print "Printing all Headers:"
+        print "Печать всех заголовков:"
 
-        # Print out all the headers
+        # Вывод всех заголовков
 
         i=0
 
@@ -48,13 +48,13 @@ class ExtractEmailHeaders:
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     ExtractEmailHeaders()
 
 ```
-## **Загрузить рабочий код**
-Download **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Извлечение заголовков электронной почты (Aspose.Email)** с любого из нижеупомянутых сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

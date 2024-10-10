@@ -1,12 +1,12 @@
 ---
-title: "Подключение к серверу Exchange с помощью WebDAV"
+title: "Подключение к Exchange Server с использованием WebDav"
 url: /ru/net/connecting-to-exchange-server-using-webdav/
 weight: 10
 type: docs
 ---
 
 
-Aspose.Email предоставляет возможность Exchange 2003 и 2007 с использованием протокола WebDAV, предоставляя [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) класс. В этой статье показано, как создать экземпляр [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) и можно использовать тот же метод. В следующем фрагменте кода показано, как подключиться с помощью [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient).
+Aspose.Email предоставляет возможность для Exchange 2003 и 2007 с использованием протокола WebDAV, предлагая класс [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient). В этой статье показано, как создать экземпляр [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient), и тот же метод может быть использован. Следующий фрагмент кода показывает, как подключиться с использованием [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient).
 
 
 

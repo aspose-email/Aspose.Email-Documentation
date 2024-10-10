@@ -1,18 +1,18 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 5.5.0"
+title: "Изменения в публичном API Aspose.Email 5.5.0"
 url: /ru/java/public-api-changes-in-aspose-email-5-5-0/
 weight: 160
 type: docs
 ---
 
-Ниже приведен список любых изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание участников, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email for .NET. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
-## **Добавлены API**
-- Class `FolderKind`
-- Enum `FolderKind.Normal`
-- Enum `FolderKind.Search`
+Следующий список содержит изменения в публичном API, такие как добавленные, переименованные, удаленные или устаревшие члены, а также любые изменения, которые не являются обратными совместимыми, внесенные в Aspose.Email для .NET. Если у вас есть замечания по каким-либо перечисленным изменениям, пожалуйста, сообщите об этом на форуме поддержки Aspose.Email.
+## **Добавленные API**
+- Класс `FolderKind`
+- Перечисление `FolderKind.Normal`
+- Перечисление `FolderKind.Search`
 
-- Method `MapiDistributionList.save(OutputStream)`
-- Method `MapiDistributionList.save(String)`
-- Method `FolderInfo.enumerateFolders(FolderKind)`
-- Method `FolderInfo.getSubFolders(FolderKind)`
-- Property `CredentialsByHostClient.getUsePipelining, setUsePipelining(boolean value)`
+- Метод `MapiDistributionList.save(OutputStream)`
+- Метод `MapiDistributionList.save(String)`
+- Метод `FolderInfo.enumerateFolders(FolderKind)`
+- Метод `FolderInfo.getSubFolders(FolderKind)`
+- Свойство `CredentialsByHostClient.getUsePipelining, setUsePipelining(boolean value)`

@@ -1,20 +1,20 @@
 ---
-title: "Программирование верификации электронной почты"
+title: "Программирование проверки электронной почты"
 url: /ru/java/programming-email-verification/
 weight: 125
 type: docs
 ---
 
 
-## **Использование валидатора электронной почты**
-[EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) обеспечивает полную поддержку проверки адресов электронной почты. С помощью [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) класс, можно выполнять различные типы проверки, включая проверку синтаксиса электронной почты, проверку домена электронной почты и проверку учетных записей пользователей на почтовых серверах. [ValidationPolicy](https://apireference.aspose.com/email/java/com.aspose.email/ValidationPolicy) перечисление используется для установки уровня политики валидации:
+## **Использование EmailValidator**
+[EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) предоставляет полную поддержку проверки адресов электронной почты. С помощью класса [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) можно выполнять различные виды проверки, включая проверку синтаксиса электронной почты, проверку домена электронной почты и проверку учетных записей пользователей с почтовыми серверами. Для установки уровня политики проверки используется перечисление [ValidationPolicy](https://apireference.aspose.com/email/java/com.aspose.email/ValidationPolicy):
 
-- SyntaxOnly проверяет синтаксис адреса электронной почты.
-- SyntaxAndDomain проверяет синтаксис адреса электронной почты, а затем проверяет домен.
-## **Базовая функциональность валидации**
-Use [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) для проверки достоверности адресов электронной почты.
-### **Проверка электронных писем**
-Функциональность проверки Aspose.Email может использоваться для проверки адресов электронной почты, доменных имен и почтовых серверов. В следующем фрагменте кода показано, как использовать [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) для подтверждения адреса электронной почты.
+- SyntaxOnly проверяет только синтаксис адреса электронной почты.
+- SyntaxAndDomain проверяет синтаксис адреса электронной почты, затем проверяет домен.
+## **Основная функциональность проверки**
+Используйте [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) для проверки действительности адресов электронной почты.
+### **Проверка электронной почты**
+Функциональность проверки в Aspose.Email может быть использована для проверки адресов электронной почты, доменных имен и почтовых серверов. Следующий фрагмент кода показывает, как использовать [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) для проверки адреса электронной почты.
 
 
 ~~~Java
@@ -23,48 +23,48 @@ ValidationResult[] result = new ValidationResult[] { null };
 ev.validate("user@domain.com", result);
 if (result[0].getReturnCode() == ValidationResponseCode.ValidationSuccess)
 {
-    System.out.println("the email address is valid.");
+    System.out.println("адрес электронной почты действителен.");
 }
 else
 {
-    System.out.println("the mail address is invalid,for the " + result[0].getMessage());
+    System.out.println("адрес электронной почты недействителен, " + result[0].getMessage());
 }
 ~~~
-## **Подтверждение сообщений электронной почты**
+## **Проверка электронных сообщений**
 
-Эта функция позволяет пользователям проверять файлы сообщений, обеспечивая соответствие указанным форматам и структурам. Она поддерживает проверку файлов/потоков в следующих форматах:
+Эта функциональность позволяет пользователям проверять файлы сообщений, обеспечивая соблюдение заданных форматов и структур. Она поддерживает проверку для файлов/потоков в следующих форматах:
 
-- **Форматы MIME:** эмель, эмикс, миф
-- **Форматы MAPI:** сообщение, часто
+- **Форматы MIME:** eml, emlx, mht
+- **Форматы MAPI:** msg, oft
 
-Aspose.Email предоставляет следующие инструменты для выполнения задачи:
+Aspose.Email предоставляет следующие инструменты для выполнения данной задачи:
 
-- [MessageValidator.validate](https://reference.aspose.com/email/java/com.aspose.email/messagevalidator/#validate-java.lang.String-) метод - проверяйте сообщения с помощью этого метода, указывая путь к файлу или поток в качестве входных данных.
-- [MessageValidationResult](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationresult/) class — инкапсулирует результаты процесса проверки сообщений. Предоставляет информацию об успешности проверки, типе формата и любых обнаруженных ошибках.
-- [MessageValidationErrorType](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationerrortype/) Enum — перечисляет различные типы ошибок валидации.
+- Метод [MessageValidator.validate](https://reference.aspose.com/email/java/com.aspose.email/messagevalidator/#validate-java.lang.String-) - проверяйте сообщения с помощью этого метода, предоставляя путь к файлу или поток в качестве ввода.
+- Класс [MessageValidationResult](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationresult/) - инкапсулирует результаты процесса проверки сообщения. Предоставляет информацию о успешности проверки, типе формата и любых обнаруженных ошибках.
+- Перечисление [MessageValidationErrorType](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationerrortype/) - перечисляет различные типы ошибок проверки.
 
-В приведенном ниже примере кода показано, как использовать эти инструменты для проверки сообщений:
+Ниже приведен пример кода, демонстрирующий, как использовать эти инструменты для проверки сообщений:
 
 ```java
 MessageValidationResult result = MessageValidator.validate(fileName);
 
-// Check if validation is successful
+// Проверка успешности валидации
 if (!result.isSuccess()) {
-    System.out.println("Validation failed.");
+    System.out.println("Проверка не прошла.");
 
-    // Check the format type
+    // Проверка типа формата
     if (result.getFormatType() == FileFormatType.Mht) {
-        System.out.println("Format type is Mht.");
+        System.out.println("Тип формата Mht.");
     }
 
-    // Check and display errors
-    System.out.println("Number of errors: " + result.getErrors().size());
+    // Проверка и вывод ошибок
+    System.out.println("Количество ошибок: " + result.getErrors().size());
 
     for (MessageValidationError error : result.getErrors()) {
-        System.out.println("Error Type: " + error.getErrorType());
-        System.out.println("Description: " + error.getDescription());
+        System.out.println("Тип ошибки: " + error.getErrorType());
+        System.out.println("Описание: " + error.getDescription());
     }
 } else {
-    System.out.println("Validation successful.");
+    System.out.println("Проверка успешна.");
 }
 ```

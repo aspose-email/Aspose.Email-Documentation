@@ -1,30 +1,30 @@
 ---
-title: "Чтение поврежденных файлов PST/OST"
+title: "Чтение поврежденных PST/OST файлов"
 url: /ru/python-net/reading-corrupted-pst-ost-files/
 weight: 90
 type: docs
 ---
 
 
-## **Чтение поврежденных файлов PST/OST**
+## **Чтение поврежденных PST/OST файлов**
 
-Иногда из-за некоторых проблем может быть невозможно открыть файл PST. Одной из таких проблем является повреждение файла. Если файл PST поврежден или поврежден, возможно, его невозможно открыть с помощью почтового клиента Outlook. Aspose.Email предоставляет API, предназначенный для сканирования поврежденного файла PST и чтения неповрежденных сообщений в файле по их идентификаторам.
+Иногда может возникнуть невозможность открыть PST файл из-за некоторых проблем. Одной из таких проблем является повреждение файла. Если PST файл поврежден или испорчен, его может быть невозможно открыть с помощью клиента электронной почты Outlook. Aspose.Email предоставляет API, предназначенное для сканирования поврежденного PST файла и чтения неповрежденных сообщений в файле по их идентификаторам.
 
-Следующие методы [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) классы необходимы для решения следующих задач:
+Следующие методы класса [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) являются важными для решения этих задач:
 
-Чтобы получить список идентификаторов, выполните следующие действия:
+Чтобы получить список идентификаторов:
 
 - **find_messages(parent_entry_id)** - извлекает список идентификаторов сообщений в указанной папке.
 
 - **find_subfolders(parent_entry_id)** - получает список идентификаторов подпапок в корневой папке.
 
-Чтобы использовать эти идентификаторы для получения содержимого файла, выполните следующие действия:
+Чтобы использовать эти идентификаторы для получения содержимого файла:
 
-- **extract_message(entry_id)** - пытается получить сообщение.
+- **extract_message(entry_id)** - пытается извлечь сообщение.
 
 - **get_folder_by_id(entry_id)** - получает доступ к каждой папке.
 
-В следующем примере кода показано, как исследовать и получить доступ к содержимому потенциально поврежденного PST-файла:
+Следующий пример кода демонстрирует, как исследовать и получать доступ к содержимому потенциально поврежденного PST файла:
 
 ```py
 import aspose.email as ae
@@ -37,7 +37,7 @@ def explore_corrupted_pst(pst, root_folder_id):
             msg = pst.extract_message(message_id)
             print("- " + msg.subject)
         except Exception as e:
-            print("Message reading error. Entry id: " + message_id)
+            print("Ошибка чтения сообщения. Идентификатор записи: " + message_id)
 
     folder_id_list = pst.find_subfolders(root_folder_id)
 
@@ -47,7 +47,7 @@ def explore_corrupted_pst(pst, root_folder_id):
                 subfolder = pst.get_folder_by_id(sub_folder_id)
                 print(subfolder.display_name)
             except Exception as e:
-                print("Message reading error. Entry id: " + sub_folder_id)
+                print("Ошибка чтения сообщения. Идентификатор записи: " + sub_folder_id)
 
             explore_corrupted_pst(pst, sub_folder_id)
 

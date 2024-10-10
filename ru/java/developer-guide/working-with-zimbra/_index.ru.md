@@ -5,31 +5,31 @@ weight: 110
 type: docs
 ---
 
-## **О Зимбре**
-Zimbra — это пакет электронной почты, календаря и совместной работы, созданный для облака. Zimbra включает полный набор функций электронной почты, контактов, календаря, обмена файлами, задач, обмена сообщениями и видеоконференций, доступ к которым осуществляется через веб-клиент Zimbra с любого устройства.
-## **Прочитайте все сообщения из хранилища Zimbra TGZ**
-Aspose.Email предоставляет [TgzReader](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader) класс для чтения файлов хранения Zimbra TGZ. Следующий пример кода демонстрирует использование [TgzReader](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader) класс для чтения всех сообщений из файла. 
+## **О Zimbra**
+Zimbra - это набор инструментов для электронной почты, календаря и совместной работы, созданный для облака. Zimbra включает в себя полноценные функции электронной почты, контактов, календаря, совместного использования файлов, задач и обмена сообщениями/видеоконференций, доступные через веб-клиент Zimbra с любого устройства.
+## **Чтение всех сообщений из хранилища Zimbra TGZ**
+Aspose.Email предоставляет класс [TgzReader](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader) для чтения файлов хранилища Zimbra TGZ. Приведенный ниже образец кода демонстрирует использование класса [TgzReader](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader) для чтения всех сообщений из файла.
 
 
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-ReadAllMessagesFromZimbraTgzStorage-1.java" >}}
-## **Сохранить сообщения и структуру каталогов**
-Вы также можете сохранить все сообщение со структурой каталогов из файла хранилища Zimbra TGZ. Для этого [TgzReader](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader) класс предоставляет метод [ExportTo](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader#exportTo\(java.lang.String\)) который принимает выходной путь в качестве параметра.
+## **Сохранение сообщений и структуры каталогов**
+Вы также можете сохранить все сообщения с сохранением структуры каталогов из файла хранилища Zimbra TGZ. Для этого класс [TgzReader](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader) предоставляет метод [ExportTo](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader#exportTo\(java.lang.String\)), который принимает путь к выходному файлу в качестве параметра.
 
-Следующий фрагмент кода демонстрирует использование [TgzReader.ExportTo](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader#exportTo\(java.lang.String\)) метод сохранения всех сообщений из файла хранения Zimbra TGZ.
+Приведенный ниже фрагмент кода демонстрирует использование метода [TgzReader.ExportTo](https://apireference.aspose.com/email/java/com.aspose.email/TgzReader#exportTo\(java.lang.String\)) для сохранения всех сообщений из файла хранилища Zimbra TGZ.
 
 
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-SaveMessagesFromZimbraTgzStorage-1.java" >}}
 
-## **Экспорт элементов календаря и контактов из файлов резервных копий Zimbra**
+## **Экспорт элементов календаря и контактов из резервных файлов Zimbra**
 
-Aspose.Email позволяет экспортировать календарь и контакты Zimbra в форматы iCalendar и vCard. В приведенном ниже примере кода показано, как реализовать эту функцию в нашем проекте:
+Aspose.Email позволяет экспортировать календари и контакты Zimbra в форматы iCalendar и VCard. Приведенный ниже пример кода показывает, как реализовать эту функцию в нашем проекте:
 
 ```java
 try (TgzReader reader = new TgzReader("test2.tgz")) {
-    //contacts files can be found in Contacts and Emailed Contacts subfolders
-    //calendar files can be found in Calendar subfolder
+    //файлы контактов можно найти в подпапках Contacts и Emailed Contacts
+    //файлы календаря можно найти в подпапке Calendar
     reader.exportTo("out");
 }
 ```

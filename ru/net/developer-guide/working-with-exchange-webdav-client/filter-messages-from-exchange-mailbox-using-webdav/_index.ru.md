@@ -1,71 +1,71 @@
 ---
-title: "Фильтрация сообщений из почтового ящика Exchange с помощью WebDAV"
+title: "Фильтрация сообщений из почтового ящика Exchange с использованием WebDav"
 url: /ru/net/filter-messages-from-exchange-mailbox-using-webdav/
 weight: 30
 type: docs
 ---
 
 
-## **Фильтрация сообщений с помощью WebDAV**
-The [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) класс предоставляет [ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listmessages/index) метод, который получает все сообщения из почтового ящика. Чтобы получать только сообщения, соответствующие определенному условию, используйте перегруженный [ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav.exchangeclient/listmessages/methods/2) метод, который принимает [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) класс в качестве аргумента. [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) класс предоставляет различные свойства для указания условий, например даты, темы, отправителя и получателя. Кроме того, API также позволяет применять фильтры, учитывающие регистр символов, для получения писем из почтового ящика.
+## **Фильтрация сообщений с использованием WebDav**
+Класс [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient) предоставляет метод [ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/methods/listmessages/index), который получает все сообщения из почтового ящика. Чтобы получить только сообщения, соответствующие некоторым условиям, используйте перегруженный метод [ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav.exchangeclient/listmessages/methods/2), который принимает класс [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) в качестве аргумента. Класс [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) предоставляет различные свойства для указания условий, например, дата, тема, отправитель и получатель. Кроме того, API также позволяет применять фильтры с учетом регистра для извлечения электронных писем из почтового ящика.
 ### **Фильтрация сообщений**
-Чтобы получить отфильтрованные сообщения из почтового ящика, выполните следующие действия:
+Чтобы получить отфильтрованные сообщения из почтового ящика:
 
 1. Подключитесь к серверу Exchange.
-1. Создайте экземпляр [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) и задайте нужные свойства.
-1. Позвоните [ExchangeClient.ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav.exchangeclient/listmessages/methods/2) метод и передайте [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) в параметрах, чтобы получать только отфильтрованные сообщения.
+1. Создайте экземпляр [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) и установите необходимые свойства.
+1. Вызовите метод [ExchangeClient.ListMessages()](https://apireference.aspose.com/email/net/aspose.email.clients.exchange.dav.exchangeclient/listmessages/methods/2) и передайте [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery) в параметрах, чтобы получить только отфильтрованные сообщения.
 
-В следующем фрагменте кода показано, как подключиться к почтовому ящику IMAP и получать сообщения со строкой «Newsletter» в теме и отправленные сегодня.
+Следующий фрагмент кода показывает, как подключиться к IMAP почтовому ящику и получить сообщения, которые содержат строку "Newsletter" в теме и были отправлены сегодня.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesFromExchangeMailbox-FilterMessagesFromExchangeMailbox.cs" >}}
 ### **Фильтрация сообщений по критериям**
-Приведенные выше примеры кода фильтруют сообщения по теме и дате письма. Мы также можем фильтровать другие свойства. Ниже приведены несколько примеров настройки условий с помощью [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery).
-#### **Критерии фильтрации: сегодняшняя дата**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе сегодняшней даты.
+Примеры кода выше фильтруют сообщения на основе темы электронной почты и даты. Мы также можем фильтровать по другим свойствам. Ниже приведены примеры настройки условий с использованием [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery).
+#### **Фильтрация по критерию сегодняшней даты**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе сегодняшней даты.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetEmailsWithTodayDate.cs" >}}
-#### **Диапазон дат критериев фильтрации**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе диапазона дат.
+#### **Фильтрация по критерию диапазона дат**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе диапазона дат.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetEmailsOverDateRange.cs" >}}
-#### **Критерии фильтрации: конкретный отправитель**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе конкретного отправителя.
+#### **Фильтрация по критерию конкретного отправителя**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе конкретного отправителя.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetSpecificSenderEmails.cs" >}}
-#### **Критерии фильтрации: конкретный домен**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе определенного домена.
+#### **Фильтрация по критерию конкретного домена**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе конкретного домена.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetSpecificDomainEmails.cs" >}}
-#### **Критерии фильтрации: конкретный получатель**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе конкретного получателя.
+#### **Фильтрация по критерию конкретного получателя**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе конкретного получателя.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetSpecificRecipientEmails.cs" >}}
-#### **Критерии фильтрации по MessageID**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе MessageID.
+#### **Фильтрация по критерию по MessageID**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе MessageID.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetSpecificMessageIdEmail.cs" >}}
-#### **Критерии фильтрации Все уведомления о доставке почты**
-В следующем фрагменте кода показано, как фильтровать все электронные письма на основе всех уведомлений о доставке почты.
+#### **Фильтрация по критерию всех уведомлений о доставке почты**
+Следующий фрагмент кода показывает, как отфильтровать все электронные письма на основе всех уведомлений о доставке почты.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterMessagesOnCriteriaUsingExchangeClient-GetMailDeliveryNotifications.cs" >}}
 ### **Создание сложных запросов**
-Если отличается [ExchangeQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder) свойства задаются в отдельном выражении, все условия соблюдены. Например, чтобы получить сообщение в определенном диапазоне дат и от определенного хоста, напишите три выражения:
+Если разные свойства [ExchangeQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder) установлены в отдельном операторе, все условия совпадают. Например, чтобы получить сообщение в определенном диапазоне дат и от конкретного хоста, напишите три оператора:
 #### **Объединение запросов с AND**
-В следующем фрагменте кода показано, как комбинировать запросы с AND.
+Следующий фрагмент кода показывает, как объединить запросы с помощью AND.
 
 
 
@@ -73,13 +73,13 @@ The [ExchangeClient](https://apireference.aspose.com/email/net/aspose.email.cli
 
 #### **Объединение запросов с OR**
 
-[ExchangeQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder) обеспечивает [Or()](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or) метод, который требует двух [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery)экземпляры в качестве параметров. Он получает сообщения, соответствующие любому из двух указанных условий. В приведенном ниже примере отфильтровываются сообщения, в теме которых указано слово «test» или «noreply@host.com» в качестве отправителя. В следующем фрагменте кода показано, как комбинировать запросы с OR.
+[ExchangeQueryBuilder](https://apireference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder) предоставляет метод [Or()](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/methods/or), который принимает два экземпляра [MailQuery](https://apireference.aspose.com/email/net/aspose.email.tools.search/mailquery)в качестве параметров. Он получает сообщения, которые соответствуют любому из двух указанных условий. Пример ниже фильтрует сообщения, которые содержат слово “test” в теме или “noreply@host.com” в качестве отправителя. Следующий фрагмент кода показывает, как объединить запросы с помощью OR.
 
 
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_WebDav-FilterWithComplexQueriesUsingExchangeClient-CombiningQueriesWithOR.cs" >}}
 ### **Фильтрация электронной почты с учетом регистра**
-Электронные письма можно отфильтровать на основе чувствительности к регистру, указав флаг IgnoreCase в критериях фильтрации, как показано в следующем фрагменте кода.
+Электронные письма можно фильтровать с учетом регистра, указав флаг IgnoreCase в критериях фильтрации, как показано в следующем фрагменте кода.
 
 
 

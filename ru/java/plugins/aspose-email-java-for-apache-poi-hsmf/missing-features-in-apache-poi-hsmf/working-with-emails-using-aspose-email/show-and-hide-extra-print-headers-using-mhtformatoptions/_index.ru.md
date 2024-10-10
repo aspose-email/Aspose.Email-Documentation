@@ -1,12 +1,12 @@
 ---
-title: "Показать и скрыть дополнительные заголовки для печати с помощью MHTFormatOptions"
+title: "Показать и скрыть дополнительные заголовки печати с использованием MHTFormatOptions"
 url: /ru/java/show-and-hide-extra-print-headers-using-mhtformatoptions/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - отображение и скрытие дополнительных заголовков для печати с помощью MHTFormatOptions**
-Дополнительные заголовки для печати можно показать или скрыть с помощью MhtFormatOptions и MailMessageSaveOptions. MHTFormatOptions — это перечислитель, состоящий из двух элементов: «Записать полный адрес электронной почты в HT» и «HideExtraPrintHeader». MhtFormatOptions используется вместе с MHTMessageFormatter в качестве публичного метода MHTMessageFormatter.Формат с аргументом WriteCompleteEmailAddress теперь устарел.
+## **Aspose.Email - Показать и скрыть дополнительные заголовки печати с использованием MHTFormatOptions**
+Дополнительные заголовки печати можно показать или скрыть с помощью MhtFormatOptions и MailMessageSaveOptions. MhtFormatOptions - это перечисление, которое содержит два члена - WriteCompleteEmailAddressToMht и HideExtraPrintHeader. MhtFormatOptions используется с MhtMessageFormatter, так как публичный метод MhtMessageFormatter.Format с аргументом writeCompleteEmailAddress теперь устарел.
 
 **Java**
 
@@ -33,8 +33,8 @@ else
 	System.out.println("False");
 
 ```
-## **Загрузить рабочий код**
-Download **Показать и скрыть дополнительные заголовки для печати с помощью MHTFormatOptions** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Показать и скрыть дополнительные заголовки печати с использованием MHTFormatOptions** с любого из указанных ниже сайтов социального программирования:
 
 - [CodePlex](https://asposeapachepoi.codeplex.com/releases)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases)

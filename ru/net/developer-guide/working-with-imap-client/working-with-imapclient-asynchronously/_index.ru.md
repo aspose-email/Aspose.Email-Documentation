@@ -1,37 +1,37 @@
 ---
-title: "Асинхронная работа с IMapClient"
+title: "Работа с ImapClient асинхронно"
 url: /ru/net/working-with-imapclient-asynchronously/
 weight: 70
 type: docs
 ---
 
 
-Работа с сообщениями может выполняться асинхронно с помощью Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). В этой статье показано асинхронное получение сообщений из почтового ящика. В этой статье также показано, как составить список сообщений, указав критерии поиска, используя [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/). Отдельно будет показано, как прервать операцию с сообщениями электронной почты, запущенную по асинхронному шаблону, основанному на задаче ([TAP](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)) метод.
+Работа с сообщениями может выполняться асинхронно с использованием Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). В этой статье показано, как асинхронно получать сообщения из почтового ящика. Также в статье показано, как перечислять сообщения, предоставляя критерии поиска с помощью [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/). Отдельно будет показано, как прервать операцию с электронными сообщениями, инициированную методом асинхронного шаблона на основе задач ([TAP](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)).
 
-## **Асинхронное получение сообщений**
+## **Получение сообщений асинхронно**
 
-В следующем фрагменте кода показано, как асинхронно извлекать сообщения.
+Следующий фрагмент кода показывает, как асинхронно получать сообщения.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-RetrievingMessagesasynchronously-RetrievingMessagesasynchronously.cs" >}}
 
-## **Асинхронный список сообщений с помощью MailQuery**
+## **Перечисление сообщений асинхронно с MailQuery**
 
-The [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) класс можно использовать для указания критериев поиска для асинхронного получения указанного списка сообщений, как показано в следующем примере кода.
+Класс [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) может использоваться для указания критериев поиска для асинхронного получения заданного списка сообщений, как показано в следующем примере кода.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-ListMessagesasynchronously-ListMessagesasynchronouslyWithMailQuery.cs" >}}
 
 ## **Как прервать метод TAP**
 
-Начиная с платформы.NET Framework 4.5 можно использовать асинхронные методы, реализованные по модели TAP. В приведенном ниже фрагменте кода показано, как добавлять много сообщений, используя метод асинхронных шаблонов на основе задач под названием `AppendMessagesAsync` а затем прервите этот процесс через некоторое время.
+Начиная с .NET Framework 4.5, вы можете использовать асинхронные методы, реализованные в соответствии с моделью TAP. Ниже приведен фрагмент кода, который показывает, как добавлять многие сообщения с использованием метода асинхронного шаблона на основе задач, названного `AppendMessagesAsync`, а затем прервать этот процесс через некоторое время.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Для полных примеров и файлов данных, пожалуйста, посетите https://github.com/aspose-email/Aspose.Email-for-.NET
 
 List<MailMessage> mailMessages = new List<MailMessage>();
 
-// create mail messages
+// создайте почтовые сообщения
 for (int i = 0; i < 100; i++)
-    mailMessages.Add(new MailMessage(senderEmail, receiverEmail, $"Message #{i}", "Text"));
+    mailMessages.Add(new MailMessage(senderEmail, receiverEmail, $"Сообщение #{i}", "Текст"));
 
 using (ImapClient client = new ImapClient(host, 993, senderEmail, password, SecurityOptions.SSLImplicit))
 {
@@ -43,10 +43,10 @@ using (ImapClient client = new ImapClient(host, 993, senderEmail, password, Secu
     {
         try
         {
-            // start uploading the messages
+            // начните загрузку сообщений
             var task = client.AppendMessagesAsync(mailMessages, cancellationTokenSource.Token);
             AppendMessagesResult appendMessagesResult = task.GetAwaiter().GetResult();
-            Console.WriteLine("All messages have been appended.");
+            Console.WriteLine("Все сообщения были добавлены.");
         }
         catch (Exception e)
         {
@@ -60,7 +60,7 @@ using (ImapClient client = new ImapClient(host, 993, senderEmail, password, Secu
 
     Thread.Sleep(5000);
 
-    // stop uploading the messages
+    // остановите загрузку сообщений
     cancellationTokenSource.Cancel();
     autoResetEvent.WaitOne();
 
@@ -68,49 +68,49 @@ using (ImapClient client = new ImapClient(host, 993, senderEmail, password, Secu
         mailMessage.Dispose();
 
     if (exception is OperationCanceledException)
-        Console.WriteLine("Operation has been interrupted: " + exception.Message);
+        Console.WriteLine("Операция была прервана: " + exception.Message);
 }
 ```
-## **Асинхронная отправка сообщений**
+## **Отправка сообщений асинхронно**
 
-Асинхронная отправка электронных писем очень удобна, так как этот процесс не блокирует выполнение программы или потока. Вместо ожидания отправки письма перед выполнением других задач программа может продолжать работать, пока электронное письмо отправляется в фоновом режиме.
+Отправка электронных писем асинхронно очень удобна, так как процесс не блокирует выполнение программы или потока. Вместо того чтобы ждать, пока электронная почта будет отправлена, прежде чем продолжить выполнение других задач, программа может продолжать работать, пока электронная почта отправляется в фоновом режиме.
 
-Следующие функции помогут внедрить асинхронную отправку в проект:
+Следующие функции помогут вам реализовать асинхронную отправку в ваш проект:
 
-- [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Позволяет приложениям получать доступ к сообщениям и управлять ими с помощью протокола доступа к сообщениям Интернета (IMAP).
+- [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Позволяет приложениям получать доступ и манипулировать сообщениями, используя Протокол для доступа к интернет-сообщениям (IMAP).
 
-- [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Создает новый экземпляр `Aspose.Email.Clients.Imap.ImapClient` class
+- [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Создает новый экземпляр класса `Aspose.Email.Clients.Imap.ImapClient`.
 
-В приведенном ниже примере кода показано, как отображать сообщения в фоновом режиме:
+Пример кода, приведенный ниже, демонстрирует, как перечислять сообщения в фоновом режиме:
 
 ```cs
-// Authenticate the client to obtain necessary permissions
-static readonly string tenantId = "YOU_TENANT_ID";
-static readonly string clientId = "YOU_CLIENT_ID";
+// Аутентификация клиента для получения необходимых разрешений
+static readonly string tenantId = "ВАШ_TENANT_ID";
+static readonly string clientId = "ВАШ_CLIENT_ID";
 static readonly string redirectUri = "http://localhost";
-static readonly string username = "username";
+static readonly string username = "имя пользователя";
 static readonly string[] scopes = { "https://outlook.office.com/IMAP.AccessAsUser.All" };
 
-// Use the ImapAsync method for asynchronous operations
+// Используйте метод ImapAsync для асинхронных операций
 static async Task Main(string[] args)
 {
     await ImapAsync();
     Console.ReadLine();
 }
 
-// Establish the connection with the server
-// Create an instance of the ImapClient asynchronously using the CreateAsync method
-// Select the Inbox folder using SelectFolderAsync method to complete and fetch the list of email messages asynchronously using the ListMessagesAsync method.
+// Установите соединение с сервером
+// Создайте экземпляр ImapClient асинхронно, используя метод CreateAsync
+// Выберите папку Входящие, используя метод SelectFolderAsync, чтобы завершить и получить список электронных сообщений асинхронно с использованием метода ListMessagesAsync.
 static async Task ImapAsync()
 {
     var tokenProvider = new TokenProvider(clientId, tenantId, redirectUri, scopes);
     var client = ImapClient.CreateAsync("outlook.office365.com", username, tokenProvider, 993).GetAwaiter().GetResult();
     await client.SelectFolderAsync(ImapFolderInfo.InBox);
     var messages = await client.ListMessagesAsync();
-    Console.WriteLine("Messages :" + messages.Count);
+    Console.WriteLine("Сообщения :" + messages.Count);
 }
 
-// Token provider implementation
+// Реализация поставщика токенов
 public class TokenProvider : IAsyncTokenProvider
 {
     private readonly PublicClientApplicationOptions _pcaOptions;
@@ -144,11 +144,11 @@ public class TokenProvider : IAsyncTokenProvider
         }
         catch (MsalException ex)
         {
-            Console.WriteLine($"Error acquiring access token: {ex}");
+            Console.WriteLine($"Ошибка при получении токена доступа: {ex}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error: {ex}");
+            Console.WriteLine($"Ошибка: {ex}");
         }
 
         return null;
@@ -162,11 +162,11 @@ public class TokenProvider : IAsyncTokenProvider
 ```
 ## **Отмена асинхронных операций**
 
-Иногда вы можете столкнуться с необходимостью остановить асинхронные операции. Для этого наша библиотека предлагает отмену асинхронных операций с помощью параметра CancellationToken. При вызове асинхронного метода, поддерживающего отмену, вы можете передать экземпляр CancellationToken в качестве параметра. CancellationToken используется для сигнализации и управления отменой операции.
+Иногда вам может понадобиться остановить асинхронные операции. Для этой цели наша библиотека предлагает отмену асинхронных операций с помощью параметра CancellationToken. При вызове асинхронного метода, который поддерживает отмену, вы можете передать экземпляр CancellationToken в качестве параметра. CancellationToken используется для сигнализации и контроля отмены операции.
 
-Чтобы включить отмену, сначала необходимо создать экземпляр CancellationTokenSource, предоставляющий CancellationToken. Затем передайте CancellationToken асинхронному методу, чтобы он мог проверять запросы на отмену во время выполнения.
+Чтобы включить отмену, вам сначала нужно создать экземпляр CancellationTokenSource, который предоставляет CancellationToken. Затем передайте CancellationToken в асинхронный метод, что позволяет ему проверять запросы на отмену во время выполнения.
 
-Вот пример, демонстрирующий отмену с помощью CancellationToken:
+Вот пример, который демонстрирует отмену с использованием CancellationToken:
 
 ```cs
 CancellationTokenSource tokenSource = new CancellationTokenSource();

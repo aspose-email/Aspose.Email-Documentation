@@ -1,14 +1,14 @@
 ---
-title: "Разбор файлов сообщений Outlook в Jython"
+title: "Парсинг файлов сообщений Outlook в Jython"
 url: /ru/java/parsing-outlook-message-files-in-jython/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - парсинг файлов сообщений Outlook**
-Для анализа файла сообщений Outlook с помощью **Aspose.Электронная почта Java для Mython**, просто вызовите **ParseOutlookMessageFile** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Парсинг файлов сообщений Outlook**
+Чтобы распарсить файл сообщения Outlook, используя **Aspose.Email Java для Jython**, просто вызовите модуль **ParseOutlookMessageFile**. Здесь вы можете найти пример кода.
 
-**Код Митона**
+**Код Jython**
 
 ```python
 
@@ -30,21 +30,21 @@ class ParseOutlookMessageFile:
 
         outlook_message_file = mapiMessage.fromFile(dataDir + "Message.msg")
 
-        # Display sender's name
+        # Отобразить имя отправителя
 
-        print "Sender Name : "
+        print "Sender Name : " 
 
         print outlook_message_file.getSenderName()
 
-        #Display Subject
+        #Отобразить тему
 
-        print "Subject : "
+        print "Subject : " 
 
         print outlook_message_file.getSubject()
 
-        # Display Body
+        # Отобразить тело сообщения
 
-        print "Body : "
+        print "Body : " 
 
         print outlook_message_file.getBody()
 
@@ -52,13 +52,13 @@ class ParseOutlookMessageFile:
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     ParseOutlookMessageFile()
 
 ```
-## **Загрузить рабочий код**
-Download **Разбор файлов сообщений Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Парсинг файлов сообщений Outlook (Aspose.Email)** с любого из указанных ниже сайтов социального кодирования:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

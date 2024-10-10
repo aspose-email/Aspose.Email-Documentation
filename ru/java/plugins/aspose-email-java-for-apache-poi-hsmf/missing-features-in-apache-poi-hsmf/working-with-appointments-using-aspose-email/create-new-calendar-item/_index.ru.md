@@ -1,12 +1,12 @@
 ---
-title: "Создать новый элемент календаря"
+title: "Создание нового элемента календаря"
 url: /ru/java/create-new-calendar-item/
 weight: 10
 type: docs
 ---
 
 ## **Aspose.Email - Создание нового элемента календаря**
-Aspose.Email's [MapiCalendar](https://apireference.aspose.com/email/java/com.aspose.email/mapicalendar) класс предоставляет методы и атрибуты, которые задают различные свойства элемента календаря.
+Класс [Aspose.Email.MapiCalendar](https://apireference.aspose.com/email/java/com.aspose.email/mapicalendar) предоставляет методы и атрибуты, которые устанавливают различные свойства элемента календаря.
 
 **Java**
 
@@ -27,15 +27,15 @@ Aspose.Email's [MapiCalendar](https://apireference.aspose.com/email/java/com.as
 appointment.save(dataDir + "AsposeCalendarItem.ics", AppointmentSaveFormat.Ics);
 
 ```
-## **Загрузить рабочий код**
+## **Скачать исполняемый код**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Загрузить образец кода**
+## **Скачать пример кода**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/appointments/createcalenderitem/AsposeNewCalenderItems.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/appointments/createcalenderitem/AsposeNewCalenderItems.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Для получения дополнительной информации посетите [Работа с MapiCalendar](/email/java/working-with-mapicalendar/).
+Для получения дополнительных сведений посетите [Работа с MapiCalendar](/email/java/working-with-mapicalendar/).
 
 {{% /alert %}}

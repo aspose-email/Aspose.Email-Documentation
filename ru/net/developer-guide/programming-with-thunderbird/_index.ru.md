@@ -8,15 +8,15 @@ type: docs
 
 ## **Чтение файлов MBOX**
 
-[Мозилла Тандерберд](https://www.thunderbird.net/en-US/) это кроссплатформенный почтовый клиент с открытым исходным кодом, разработанный Mozilla Foundation. Он хранит электронные письма в собственной файловой структуре, управляя индексами сообщений и подпапками с помощью собственных форматов файлов. Aspose.Email может работать со структурами хранения почты Thunderbird. [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) класс позволяет разработчикам читать сообщения из файла почтового хранилища Мозилла Тандерберд. В этой статье показано, как читать сообщения из хранилища электронной почты Thunderbird:
+[Mozilla Thunderbird](https://www.thunderbird.net/en-US/) — это клиент электронной почты с открытым исходным кодом и кроссплатформенной поддержкой, разработанный фондом Mozilla. Он хранит электронные письма в собственной файловой структуре, управляя индексами сообщений и подпапками через собственные форматы файлов. Aspose.Email может работать со структурами хранения почты Thunderbird. Класс [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) позволяет разработчикам читать сообщения из файла хранения электронной почты Mozilla Thunderbird. В этой статье показано, как читать сообщения из хранилища электронной почты Thunderbird:
 
-1. Откройте файл хранилища Thunderbird в *FileStream*.
-1. Создайте экземпляр [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) класс и передайте указанный выше поток конструктору.
-1. Call [ReadNextMessage()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/readnextmessage/#readnextmessage/) чтобы получить первое сообщение.
-1. Используйте то же самое [ReadNextMessage()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/readnextmessage/#readnextmessage/) через некоторое время, чтобы прочитать все сообщения.
-1. Закройте все ручьи.
+1. Откройте файл хранения Thunderbird в *FileStream*.
+1. Создайте экземпляр класса [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) и передайте вышеуказанный поток в конструктор.
+1. Вызовите [ReadNextMessage()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/readnextmessage/#readnextmessage/) чтобы получить первое сообщение.
+1. Используйте тот же [ReadNextMessage()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/readnextmessage/#readnextmessage/) в цикле while, чтобы прочитать все сообщения.
+1. Закройте все потоки.
 
-В следующем фрагменте кода показано, как читать все сообщения из почтового хранилища Thunderbird.
+Следующий фрагмент кода показывает, как прочитать все сообщения из хранилища почты Thunderbird.
 
 ```cs
 // The path to the File directory.
@@ -24,7 +24,7 @@ var dataDir = RunExamples.GetDataDir_Thunderbird();
 
 // Open the storage file with FileStream
 var stream = new FileStream(dataDir + "ExampleMbox.mbox", FileMode.Open, FileAccess.Read);
-// Создайте экземпляр MboxrdStorageReader class and pass the stream
+// Create an instance of the MboxrdStorageReader class and pass the stream
 var reader = new MboxrdStorageReader(stream, false);
 // Start reading messages
 var message = reader.ReadNextMessage();
@@ -49,14 +49,14 @@ stream.Close();
 
 ### **Получение свойств сообщения**
 
-[MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class) класс содержит следующие свойства для получения информации о сообщении:
+Класс [MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class) содержит следующие свойства для получения информации о сообщении:
 
 - DateTime [Date](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/date/#mboxmessageinfodate-property) - Получает дату сообщения
 - MailAddress [From](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/from/#mboxmessageinfofrom-property) - Получает адрес отправителя
 - string [Subject](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/subject/) - Получает тему сообщения
 - MailAddressCollection [To](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/to/) - Получает коллекцию адресов, содержащую получателей сообщения
-- MailAddressCollection [CC](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/cc/) - Получает коллекцию адресов, содержащую получателей CC
-- MailAddressCollection [Bcc](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/bcc/) - Получает коллекцию адресов, содержащую получателей сообщения BCC
+- MailAddressCollection [CC](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/cc/) - Получает коллекцию адресов, содержащую адресаты CC
+- MailAddressCollection [Bcc](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/bcc/) - Получает коллекцию адресов, содержащую адресаты BCC сообщения
 
 **Пример кода**
 
@@ -76,13 +76,13 @@ foreach (var mboxMessageInfo in reader.EnumerateMessageInfo())
 
 ### **Извлечение сообщений из MBOX по идентификаторам**
 
-The [MboxStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/#mboxstoragereader-class) класс включает [EnumerateMessageInfo()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/enumeratemessageinfo/) метод, позволяющий перебирать каждое сообщение в файле MBOX. Используя этот метод, можно извлекать отдельные сообщения без необходимости многократного перемещения по всему хранилищу. Это повышает производительность и сокращает время обработки.
+Класс [MboxStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/#mboxstoragereader-class) включает метод [EnumerateMessageInfo()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/enumeratemessageinfo/), который позволяет перебирать каждое сообщение в файле MBOX. С помощью этого метода становится возможным извлечение отдельных сообщений без необходимости повторного прохода по всему хранилищу. Это улучшает производительность и снижает время обработки.
 
-The [MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class) класс предоставляет [EntryId](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/entryid/) свойство, обеспечивающее доступ к уникальным идентификаторам для каждого сообщения в файле MBOX. Этот идентификатор можно сохранить в базе данных или использовать в качестве справочника для быстрого поиска и извлечения определенных сообщений при необходимости.
+Класс [MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class) предоставляет свойство [EntryId](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/entryid/), которое предоставляет доступ к уникальным идентификаторам для каждого сообщения в файле MBOX. Этот идентификатор может быть сохранен в базе данных или использован в качестве ссылки для быстрого поиска и извлечения конкретных сообщений по мере необходимости.
 
-The [Извлечь сообщение (строковый идентификатор)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/extractmessage/) метод в [MboxStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/#mboxstoragereader-class) класс позволяет разработчикам извлекать сообщения на основе их уникального EntryID. С помощью [Извлечь сообщение (строковый идентификатор)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/extractmessage/) Метод, вы можете использовать сохраненный EntryID для получения соответствующего сообщения и выполнения дополнительных операций с ним.
+Метод [ExtractMessage(string id)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/extractmessage/) в классе [MboxStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/#mboxstoragereader-class) позволяет разработчикам извлекать сообщения на основе их уникального EntryId. С помощью метода [ExtractMessage(string id)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/extractmessage/) вы можете использовать сохраненный EntryId для извлечения соответствующего сообщения и выполнения с ним дополнительных операций.
 
-В следующем примере кода показано, как извлекать сообщения из файла MBOX с помощью идентификаторов:
+Следующий пример кода демонстрирует, как извлечь сообщения из файла MBOX с использованием идентификаторов:
 
 ```cs
 MboxStorageReader reader = MboxStorageReader.CreateReader("my.mbox", new MboxLoadOptions());
@@ -93,13 +93,13 @@ foreach (MboxMessageInfo msgInfo in reader.EnumerateMessageInfo())
 }
 ```
 
-### **Настройка параметров загрузки при чтении сообщений из MBOX**
+### **Настройка параметров загрузки при чтении сообщений из MBOX** 
 
 Следующие функции позволят вам указать различные параметры, связанные с загрузкой и обработкой сообщений:
 
-- Свойство MailStorageConverter.mboxMessageOptions — определяет или задает параметры загрузки электронной почты при анализе хранилища Mbox.
+- Свойство MailStorageConverter.MboxMessageOptions - Получает или задает параметры загрузки электронной почты при парсинге хранения Mbox.
 
-- Метод MboxRDStorageReader.ReadNextMessage (параметры EMLLoadOptions) — параметр emlloadOptions указывает параметры при чтении сообщения из хранилища Mbox.
+- Метод MboxrdStorageReader.ReadNextMessage(EmlLoadOptions options) - Параметр EmlLoadOptions указывает параметры при чтении сообщения из хранения Mbox.
 
 **Пример кода**
 
@@ -112,9 +112,9 @@ MailStorageConverter.MboxMessageOptions(new EmlLoadOptions {PreserveTnefAttachme
 var pst = MailStorageConverter.mboxToPst("Input.mbox", "Output.pst");
 ```
 
-### **Настройка предпочтительной кодировки текста при загрузке файлов Mbox для чтения**
+### **Установка предпочтительной кодировки текста при загрузке файлов Mbox для чтения**
 
-Опция кодирования доступна для класса MboxRDStorageReader. Это предоставляет дополнительные возможности для загрузки файла mbox и обеспечивает правильное чтение и обработку сообщений с закодированным содержимым. В следующем фрагменте кода показано, как настроить кодировку текста в соответствии с вашими потребностями:
+Опция кодировки доступна для класса MboxrdStorageReader. Это обеспечивает дополнительные параметры для загрузки файла mbox и гарантирует, что сообщения с закодированным содержимым будут правильно прочитаны и обработаны. Следующий фрагмент кода показывает, как можно установить кодировку текста, которая удовлетворяет вашим потребностям:
 
 ```cs
 var reader = new MboxrdStorageReader("sample.mbox", new MboxLoadOptions() { PreferredTextEncoding = Encoding.UTF8});
@@ -123,7 +123,7 @@ var message = reader.ReadNextMessage();
 
 ### **Получение общего количества сообщений из файла MBox**
 
-The [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) класс предоставляет возможность считывать количество элементов, доступных в файле MBox. Это можно использовать для разработки приложений, показывающих ход выполнения действий при обработке такого файла.
+Класс [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) предоставляет возможность прочитать количество элементов, доступных в файле MBox. Это можно использовать для разработки приложений, показывающих процесс выполнения операции над таким файлом.
 
 ```cs
 // The path to the File directory.
@@ -136,7 +136,7 @@ using (var reader = new MboxrdStorageReader(stream, false))
 }
 ```
 
-### **Получить текущий размер сообщения**
+### **Получение текущего размера сообщения**
 
 ```cs
 using (var stream = new FileStream(dataDir + "ExampleMbox.mbox", FileMode.Open, FileAccess.Read))
@@ -152,11 +152,11 @@ using (var reader = new MboxrdStorageReader(stream, false))
 }
 ```
 
-### **Преобразование MBOX в PST Сохранение или удаление подписи**
+### **Преобразование MBOX в PST с сохранением или удалением подписи**
 
-Чтобы удалить подпись из файла в процессе преобразования, установите [MboxToPstConversionOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.storage/mboxtopstconversionoptions/removesignature/) недвижимость для *true*.
+Чтобы удалить подпись из файла в процессе преобразования, установите свойство [MboxToPstConversionOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.storage.mboxtopstconversionoptions/removesignature/) в *true*.
 
-В следующем примере кода показано, как использовать это свойство:
+Следующий пример кода показывает, как использовать это свойство:
 
 ```cs
 var pstDataStream = new MemoryStream();
@@ -169,15 +169,15 @@ new MboxToPstConversionOptions() { RemoveSignature = true });
 
 ## **Запись файлов MBOX**
 
-The [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/) класс предоставляет возможность записывать новые сообщения в файл почтового хранилища Thunderbird. Чтобы писать сообщения, выполните следующие действия:
+Класс [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/) предоставляет возможность записывать новые сообщения в файл хранения электронной почты Thunderbird. Чтобы записать сообщения:
 
-1. Откройте файл хранилища Thunderbird в *FileStream*.
-1. Создайте экземпляр [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/) класс и передайте указанный выше поток конструктору.
-1. Подготовьте новое сообщение, используя [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Позвоните [WriteMessage()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/writemessage/#writemessage/) метод и передайте вышеуказанное [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр для добавления сообщения в хранилище Thunderbird.
-1. Закройте все трансляции.
+1. Откройте файл хранения Thunderbird в *FileStream*.
+1. Создайте экземпляр класса [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/) и передайте вышеуказанный поток в конструктор.
+1. Подготовьте новое сообщение с помощью класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Вызовите метод [WriteMessage()](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/writemessage/#writemessage/) и передайте вышеуказанный экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) для добавления сообщения в хранилище Thunderbird.
+1. Закройте все потоки.
 
-В следующем фрагменте кода показано, как писать сообщения в почтовое хранилище Thunderbird.
+Следующий фрагмент кода показывает, как записывать сообщения в хранилище электронной почты Thunderbird.
 
 ```cs
 // Open the storage file with FileStream
@@ -185,7 +185,7 @@ var stream = new FileStream(dataDir + "ExampleMbox.mbox", FileMode.Open, FileAcc
 
 // Initialize MboxStorageWriter and pass the above stream to it
 var writer = new MboxrdStorageWriter(stream, false);
-// Подготовьте новое сообщение, используя MailMessage class
+// Prepare a new message using the MailMessage class
 var message = new MailMessage("from@domain.com", "to@domain.com", Guid.NewGuid().ToString(), "added from Aspose.Email");
 message.IsDraft = false;
 // Add this message to storage
@@ -194,4 +194,3 @@ writer.WriteMessage(message);
 writer.Dispose();
 stream.Close();
 ```
-

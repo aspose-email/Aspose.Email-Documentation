@@ -1,58 +1,58 @@
 ---
-title: "Изменения в публичном API в Aspose.Email 6.0.0"
+title: "Изменения в общественном API Aspose.Email 6.0.0"
 url: /ru/java/public-api-changes-in-aspose-email-6-0-0/
 weight: 210
 type: docs
 ---
 
-Ниже приведен список любых изменений, внесенных в общедоступный API, таких как добавление, переименование, удаление или устаревание участников, а также любых изменений, не совместимых с обратной совместимостью, внесенных в Aspose.Email for .NET. Если у вас есть сомнения по поводу каких-либо перечисленных изменений, сообщите об этом на форуме поддержки Aspose.Email.
-## **Добавлены API**
-- Class `ExchangeDistributionList`
-- Method `ExchangeDistributionList.#ctor`
-- Method `ExchangeDistributionList.toMailAddress`
-- Method `IEWSClient.addToDistributionList(ExchangeDistributionList, MailAddressCollection)`
-- Method `IEWSClient.createDistributionList(ExchangeDistributionList, MailAddressCollection)`
-- Method `IEWSClient.deleteDistributionList( ExchangeDistributionList, boolean)`
-- Method `IEWSClient.deleteFromDistributionList( ExchangeDistributionList, MailAddressCollection)`
-- Method `IEWSClient.expandDistributionList(MailAddress)`
-- Method `IEWSClient.fetchDistributionList(ExchangeDistributionList)`
-- Method `IEWSClient.listDistributionLists`
-- Property `ExchangeDistributionList.getChangeKey(), setChangeKey(String)`
-- Property `ExchangeDistributionList.getDisplayName(), setDisplayName(String)`
-- Property `ExchangeDistributionList.getId(), setId(String)`
-- Property `MailAddress.Id`
+Следующий список содержит изменения, внесенные в общественный API, такие как добавление, переименование, удаление или устаревание членов, а также любые изменения, несовместимые с предыдущими версиями, внесенные в Aspose.Email для .NET. Если у вас есть сомнения по поводу любого из перечисленных изменений, пожалуйста, поднимите их на форуме поддержки Aspose.Email.
+## **Добавленные API**
+- Класс `ExchangeDistributionList`
+- Метод `ExchangeDistributionList.#ctor`
+- Метод `ExchangeDistributionList.toMailAddress`
+- Метод `IEWSClient.addToDistributionList(ExchangeDistributionList, MailAddressCollection)`
+- Метод `IEWSClient.createDistributionList(ExchangeDistributionList, MailAddressCollection)`
+- Метод `IEWSClient.deleteDistributionList( ExchangeDistributionList, boolean)`
+- Метод `IEWSClient.deleteFromDistributionList( ExchangeDistributionList, MailAddressCollection)`
+- Метод `IEWSClient.expandDistributionList(MailAddress)`
+- Метод `IEWSClient.fetchDistributionList(ExchangeDistributionList)`
+- Метод `IEWSClient.listDistributionLists`
+- Свойство `ExchangeDistributionList.getChangeKey(), setChangeKey(String)`
+- Свойство `ExchangeDistributionList.getDisplayName(), setDisplayName(String)`
+- Свойство `ExchangeDistributionList.getId(), setId(String)`
+- Свойство `MailAddress.Id`
 
-- Class `ForwardMessageBuilder`
-- Class `OriginalMessageAdditionMode`
-- Class `ReplyMessageBuilder`
-- Class `ResponseMessageBuilder`
-- Enum `OriginalMessageAdditionMode.Attachment`
-- Enum `OriginalMessageAdditionMode.None`
-- Enum `OriginalMessageAdditionMode.Textpart`
-- Enum `Outlook.MapiPropertyTag.PR_ATTACHMENT_HIDDEN`
-- Method `ForwardMessageBuilder.#ctor`
-- Method `ForwardMessageBuilder.buildResponse(MailMessage)`
-- Method `ForwardMessageBuilder.buildResponse(MapiMessage)`
-- Method `ReplyMessageBuilder.#ctor`
-- Method `ReplyMessageBuilder.buildResponse(MailMessage)`
-- Method `ReplyMessageBuilder.buildResponse(MapiMessage)`
-- Method `ResponseMessageBuilder.#ctor`
-- Method `ResponseMessageBuilder.buildResponse(MailMessage)`
-- Method `ResponseMessageBuilder.buildResponse(MapiMessage)`
-- Property `ReplyMessageBuilder.getReplyAll, setReplyAll(boolean)`
-- Property `ResponseMessageBuilder.getAdditionMode, setAdditionMode(int)`
-- Property `ResponseMessageBuilder.getResponseText, setResponseText(String)`
-- Property `ResponseMessageBuilder.getSender, setSender(MailAddress)`
+- Класс `ForwardMessageBuilder`
+- Класс `OriginalMessageAdditionMode`
+- Класс `ReplyMessageBuilder`
+- Класс `ResponseMessageBuilder`
+- Перечисление `OriginalMessageAdditionMode.Attachment`
+- Перечисление `OriginalMessageAdditionMode.None`
+- Перечисление `OriginalMessageAdditionMode.Textpart`
+- Перечисление `Outlook.MapiPropertyTag.PR_ATTACHMENT_HIDDEN`
+- Метод `ForwardMessageBuilder.#ctor`
+- Метод `ForwardMessageBuilder.buildResponse(MailMessage)`
+- Метод `ForwardMessageBuilder.buildResponse(MapiMessage)`
+- Метод `ReplyMessageBuilder.#ctor`
+- Метод `ReplyMessageBuilder.buildResponse(MailMessage)`
+- Метод `ReplyMessageBuilder.buildResponse(MapiMessage)`
+- Метод `ResponseMessageBuilder.#ctor`
+- Метод `ResponseMessageBuilder.buildResponse(MailMessage)`
+- Метод `ResponseMessageBuilder.buildResponse(MapiMessage)`
+- Свойство `ReplyMessageBuilder.getReplyAll, setReplyAll(boolean)`
+- Свойство `ResponseMessageBuilder.getAdditionMode, setAdditionMode(int)`
+- Свойство `ResponseMessageBuilder.getResponseText, setResponseText(String)`
+- Свойство `ResponseMessageBuilder.getSender, setSender(MailAddress)`
 
-- Enum `MhtFormatOptions.SkipByteOrderMarkInBody`
+- Перечисление `MhtFormatOptions.SkipByteOrderMarkInBody`
 
-- Class `MailMessageEventArgs`
-- Method `MailMessageEventArgs.#ctor(MailMessage)`
-- Property `MailMessageEventArgs.getMessage`
-- Method `IEWSClient.listMessages(IGenericEnumerable<String>)`
+- Класс `MailMessageEventArgs`
+- Метод `MailMessageEventArgs.#ctor(MailMessage)`
+- Свойство `MailMessageEventArgs.getMessage`
+- Метод `IEWSClient.listMessages(IGenericEnumerable<String>)`
 
-- Method `MapiAttachmentCollection.removeAt(int)`
-- Method `PersonalStorage.splitInto(long, String)`
+- Метод `MapiAttachmentCollection.removeAt(int)`
+- Метод `PersonalStorage.splitInto(long, String)`
 ## **Удаленные API**
-- Method `PersonalStorage.ыplitInto(int, String)`
-- Property `SmtpClientBulkSendEventArgs.getMessage`
+- Метод `PersonalStorage.ыplitInto(int, String)`
+- Свойство `SmtpClientBulkSendEventArgs.getMessage`

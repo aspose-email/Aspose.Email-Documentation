@@ -5,16 +5,16 @@ weight: 40
 type: docs
 ---
 
-## **Aspose.Email - отображение информации об электронной почте**
-Для отображения информации об электронной почте с помощью **Aspose.Электронная почта Java для Python**, Используйте следующий код.
+## **Aspose.Email - Отображение информации об электронной почте**
+Чтобы отобразить информацию об электронной почте с использованием **Aspose.Email Java для Python**, используйте следующий код.
 
-**Код Python**
+**Python код**
 
 ``` python
 
 
 
-\# Create MailMessage instance by loading an Eml file
+\# Создайте экземпляр MailMessage, загрузив файл Eml
 
 message_format = self.MessageFormat
 
@@ -22,29 +22,29 @@ mailMessage = self.MailMessage
 
 message = mailMessage.load(self.dataDir + "Message.eml")
 
-print "From: "
+print "От: " 
 
 print message.getFrom()
 
-print "To: "
+print "Кому: " 
 
 print message.getTo()
 
-print "Subject: "
+print "Тема: " 
 
 print message.getSubject()
 
-print "HtmlBody: "
+print "HtmlBody: " 
 
 print message.getHtmlBody()
 
-print "TextBody: "
+print "TextBody: " 
 
 print message.getTextBody()
 
 ```
-## **Загрузить рабочий код**
-Download **Отображение информации об электронной почте (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать работающий код**
+Скачайте **Отображение информации об электронной почте (Aspose.Email)** с любого из нижеуказанных социальных кодирующих сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

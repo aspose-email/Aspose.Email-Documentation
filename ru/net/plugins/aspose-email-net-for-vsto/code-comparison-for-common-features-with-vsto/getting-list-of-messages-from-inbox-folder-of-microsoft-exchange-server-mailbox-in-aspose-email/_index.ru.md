@@ -1,16 +1,16 @@
 ---
-title: "Получение списка сообщений из папки «Входящие» почтового ящика Microsoft Exchange Server в Aspose.Email"
+title: "Получение списка сообщений из папки Входящие почтового ящика Microsoft Exchange Server в Aspose.Email"
 url: /ru/net/getting-list-of-messages-from-inbox-folder-of-microsoft-exchange-server-mailbox-in-aspose-email/
 weight: 150
 type: docs
 ---
 
 
-Чтобы использовать объекты автоматизации делопроизводства для Microsoft Outlook, добавьте в проект ссылки на библиотеки Microsoft Office и Microsoft Office Interop для Outlook. Microsoft Office Outlook также должен быть установлен на компьютере, на котором работает код.
+Чтобы использовать объекты автоматизации Office для Microsoft Outlook, добавьте ссылки на библиотеки Microsoft Office и Microsoft Office Interop для Outlook в проект. Microsoft Office Outlook также должен быть установлен на машине, на которой выполняется код.
 ## **VSTO**
 ``` cs
 
- // Create Application class and get namespace
+ // Создание класса Application и получение пространства имен
 
 Outlook.Application outlook = new Outlook.Application();
 
@@ -20,15 +20,15 @@ object _missing = Type.Missing;
 
 ns.Logon(_missing, _missing, false, true);
 
-// Get Inbox information in objec of type MAPIFolder
+// Получить информацию о Входящих в объекте типа MAPIFolder
 
 Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
-// Unread emails
+// Непрочитанные электронные письма
 
 int unread = inbox.UnReadItemCount;
 
-// Display the subject of emails in the Inbox folder
+// Отобразить темы электронных писем в папке Входящие
 
 foreach (Outlook.MailItem mail in inbox.Items)
 
@@ -40,42 +40,42 @@ foreach (Outlook.MailItem mail in inbox.Items)
 
 ```
 ## **Aspose.Email**
-Однако Microsoft Outlook не нужно устанавливать на компьютер, на котором выполняется код. Для успешной сборки и запуска проекта обратитесь к файлу Aspose.Email.dll.
+Тем не менее, Microsoft Outlook не нужно устанавливать на машине, где выполняется код. Ссылайтесь на Aspose.Email.dll, чтобы успешно собрать и запустить проект.
 
 ``` cs
 
- // Create instance of ExchangeClient class by giving credentials
+ // Создание экземпляра класса ExchangeClient с указанием учетных данных
 
 ExchangeClient client = new ExchangeClient("http://MachineName/exchange/Username",
 
 				"username", "password", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Вызов метода ListMessages для получения информации о сообщениях из Входящих
 
 ExchangeMessageInfoCollection msgCollection = client.ListMessages(client.MailboxInfo.InboxUri);
 
-// Loop through the collection to display the basic information
+// Цикл по коллекции для отображения основной информации
 
 foreach (ExchangeMessageInfo msgInfo in msgCollection)
 
 {
 
-	Console.WriteLine("Subject: " + msgInfo.Subject);
+	Console.WriteLine("Тема: " + msgInfo.Subject);
 
-	Console.WriteLine("From: " + msgInfo.From.ToString());
+	Console.WriteLine("От: " + msgInfo.From.ToString());
 
-	Console.WriteLine("To: " + msgInfo.To.ToString());
+	Console.WriteLine("Кому: " + msgInfo.To.ToString());
 
-	Console.WriteLine("Message ID: " + msgInfo.MessageId);
+	Console.WriteLine("ID сообщения: " + msgInfo.MessageId);
 
-	Console.WriteLine("Unique URI: " + msgInfo.UniqueUri);
+	Console.WriteLine("Уникальный URI: " + msgInfo.UniqueUri);
 
 	Console.WriteLine("==================================");
 
 }
 
 ```
-## **Загрузить образец кода**
+## **Скачать образец кода**
 - [Codeplex](https://asposevsto.codeplex.com/downloads/get/772942)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/download/AsposeEmailVsVSTOv1.1/Getting.List.of.Messages.from.Inbox.of.Microsoft.Mailbox.Aspose.Email.zip)
 - [Sourceforge](https://sourceforge.net/projects/asposevsto/files/Aspose.Email%20Vs%20VSTO%20Outlook/Getting%20List%20of%20Messages%20from%20Inbox%20of%20Microsoft%20Mailbox%20\(Aspose.Email\).zip/download)

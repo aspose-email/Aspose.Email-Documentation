@@ -6,59 +6,59 @@ type: docs
 ---
 
 ## **Aspose.Email - Сохранить сообщение как черновик**
-Чтобы сохранить сообщение как черновик, используя **Aspose.Электронная почта Java для PHP**, просто вызовите **SaveMessageAsDraft** модуль. Здесь вы можете увидеть пример кода.
+Чтобы сохранить сообщение как черновик с помощью **Aspose.Email Java для PHP**, просто вызовите модуль **SaveMessageAsDraft**. Здесь вы можете увидеть пример кода.
 
-**Код PHP**
+**PHP Код**
 
 ``` php
 
- # Create a new instance of MailMessage class
+ # Создать новый экземпляр класса MailMessage
 
 $message = new MailMessage();
 
-\# Set subject of the message
+\# Установить тему сообщения
 
-$message->setSubject("New message created by Aspose.Email for Java");
+$message->setSubject("Новое сообщение, созданное Aspose.Email для Java");
 
 $mail_address = new MailAddress();
 
-\# Set Html body
+\# Установить Html тело
 
-$message->setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" .
+$message->setHtmlBody("<b>Эта строка жирная.</b> <br/> <br/>" .
 
-"<font color=blue>This line is in blue color</font>");
+"<font color=blue>Эта строка синего цвета</font>");
 
-\# Set sender information
+\# Установить информацию об отправителе
 
-$message->setFrom(new MailAddress("from@domain.com", "Sender Name", false));
+$message->setFrom(new MailAddress("from@domain.com", "Имя отправителя", false));
 
-\# Add TO recipients
+\# Добавить получателей в поле TO
 
-$message->getTo()->add(new MailAddress("to1@domain.com", "Recipient 1", false));
+$message->getTo()->add(new MailAddress("to1@domain.com", "Получатель 1", false));
 
-$message->getTo()->add(new MailAddress("to2@domain.com", "Recipient 2", false));
+$message->getTo()->add(new MailAddress("to2@domain.com", "Получатель 2", false));
 
-\# Create an instance of MapiMessage and load the MailMessag instance into it
+\# Создать экземпляр MapiMessage и загрузить экземпляр MailMessag в него
 
 $mapiMessage=new MapiMessage();
 
 $mapi_msg = $mapiMessage->fromMailMessage($message);
 
-\# Set the MapiMessageFlags as UNSENT and FROMME
+\# Установить флаги MapiMessageFlags как UNSENT и FROMME
 
 $mapi_message_flags = new MapiMessageFlags();
 
-\# Save the MapiMessage to disk
+\# Сохранить MapiMessage на диск
 
 $mapi_msg->save($dataDir . "New-Draft.msg");
 
-\# Display Status
+\# Показать статус
 
-print "Draft saved Successfully.".PHP_EOL;
+print "Черновик успешно сохранён.".PHP_EOL;
 
 ```
-## **Загрузить рабочий код**
-Download **Сохранить сообщение как черновик (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Сохранить сообщение как черновик (Aspose.Email)** с любого из указанных ниже социальных кодовых сайтов:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/SaveMessageAsDraft.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingEmail/SaveMessageAsDraft.php)

@@ -1,121 +1,124 @@
 ---
-title: "Работа с отслеживанием и сроками выполнения файлов Outlook MSG"
+title: 'Работа с флагом "Напомнить" и сроком исполнения для файлов MSG Outlook'
 url: /ru/python-net/working-with-follow-up-and-due-date-for-outlook-msg-files/
 weight: 50
 type: docs
 ---
 
+Флаг "Напомнить" помечает электронное сообщение для выполнения каких-либо действий. Microsoft Outlook позволяет пользователям помечать сообщения, а в настройках флага назначать срок исполнения для напоминания. Microsoft Outlook отправляет напоминание получателю, чтобы побудить его ответить на электронное сообщение. Программное управление пометкой электронных писем и установкой сроков исполнения позволяет разработчикам программного обеспечения автоматизировать определенные типы электронных писем и помогать получателям помнить о необходимости предпринять действия. Например, это может использоваться для отправки ежемесячных сообщений команде продаж, чтобы напомнить им о необходимости завершить свои отчеты; или для отправки сообщения всем сотрудникам, чтобы напомнить им о корпоративной встрече. Aspose.Email для .NET поддерживает установку флага "Напомнить" и срока исполнения для объектов MapiMessage с использованием FollowUpManager и FollowUpOptions. Существует несколько вариантов, как можно установить флаг "Напомнить" на сообщение. Все они используются в приведенном ниже примере кода:
 
-Флаг отслеживания означает, что в сообщении электронной почты содержится какое-либо действие. Microsoft Outlook позволяет пользователям отмечать сообщения и при настройке флага назначать срок отправки последующих сообщений. Microsoft Outlook отправляет получателю напоминание с просьбой ответить на сообщение электронной почты. Пометка писем и программная настройка сроков выполнения позволяют разработчикам программного обеспечения автоматизировать определенные типы электронных писем и помогать получателям не забывать принимать меры. Например, его можно использовать для отправки ежемесячных сообщений отделу продаж с напоминанием о необходимости заполнения отчетов или для отправки всем сотрудникам сообщений с напоминанием о собрании компании. Aspose.Email для .NET поддерживает настройку флага отслеживания и срока выполнения для объектов MapiMessage с помощью FollowupManager и FollowupOptions. Существует несколько вариантов, в которых флаг отслеживания может быть установлен на сообщении. Все они используются в приведенном ниже примере кода:
-
-1. Установите флаг отслеживания для сообщения
-1. Добавьте к сообщению срок и дату напоминания
-1. Добавьте флаг к сообщению получателя.
+1. Установить флаг "Напомнить" для сообщения
+1. Добавить срок исполнения и дату напоминания к сообщению
+1. Добавить флаг к сообщению получателя.
 1. Отметить как завершенное.
 1. Удалить флаг.
-1. Ознакомьтесь с вариантами последующих действий.
+1. Прочитать параметры напоминания.
 
-## **Настройка флага FollowUp**
+## **Установка флага "Напомнить"**
 
-В следующем фрагменте кода показано, как установить флаг FollowUp.
+Следующий фрагмент кода показывает, как установить флаг "Напомнить".
 
 ```py
 import aspose.email as ae
 from datetime import datetime, timedelta
 
-# Create a new MailMessage
+# Создать новое MailMessage
 mail_msg = ae.MailMessage()
 mail_msg.from_address = ae.MailAddress("from@domain.com")
 mail_msg.to.append(ae.MailAddress("to@domain.com"))
-mail_msg.body = "This message will test if follow-up options can be added to a new MAPI message."
+mail_msg.body = "Это сообщение протестирует возможность добавления опций напоминания к новому сообщению MAPI."
 
-# Convert MailMessage to MapiMessage
+# Преобразовать MailMessage в MapiMessage
 mapi = ae.mapi.MapiMessage.from_mail_message(mail_msg)
 
-# Define follow-up options
+# Определить параметры напоминания
 dt_start_date = datetime(2013, 5, 23, 14, 40, 0)
 dt_reminder_date = datetime(2013, 5, 23, 16, 40, 0)
 dt_due_date = dt_reminder_date + timedelta(days=1)
 
 options = ae.mapi.FollowUpOptions("Follow Up", dt_start_date, dt_due_date, dt_reminder_date)
 
-# Set follow-up options for the MapiMessage
+# Установить параметры напоминания для MapiMessage
 ae.mapi.FollowUpManager.set_options(mapi, options)
 
-# Save the MapiMessage
+# Сохранить MapiMessage
 mapi.save("SetFollowUpFlag_out.msg")
 ```
 
-## **Настройка отслеживания получателей**
-В следующем фрагменте кода показано, как настроить отслеживание получателей.
+## **Установка напоминания для получателей**
+
+Следующий фрагмент кода показывает, как установить напоминание для получателей.
 
 ```py
 import aspose.email as ae
 from datetime import datetime
 
-# Create a new MailMessage
+# Создать новое MailMessage
 mail_msg = ae.MailMessage()
 mail_msg.from_address = ae.MailAddress("from@domain.com")
 mail_msg.to.append(ae.MailAddress("to@domain.com"))
-mail_msg.body = "This message will test if follow-up options can be added to a new MAPI message."
+mail_msg.body = "Это сообщение протестирует возможность добавления опций напоминания к новому сообщению MAPI."
 
-# Convert MailMessage to MapiMessage
+# Преобразовать MailMessage в MapiMessage
 mapi = ae.mapi.MapiMessage.from_mail_message(mail_msg)
 
-# Mark the message as draft
+# Отметить сообщение как черновик
 mapi.set_message_flags(ae.mapi.MapiMessageFlags.UNSENT)
 
 dt_reminder_date = datetime(2013, 5, 23, 16, 40, 0)
 
-# Add the follow-up flag for recipients
+# Добавить флаг напоминания для получателей
 ae.mapi.FollowUpManager.set_flag_for_recipients(mapi, "Follow up", dt_reminder_date)
 
-# Save the MapiMessage
+# Сохранить MapiMessage
 mapi.save("SetFollowUpForRecipients_out.msg")
 ```
 
-## **Пометка флага FollowUp как завершенного**
+## **Отметка флага "Напомнить" как завершенного**
 
-В следующем фрагменте кода показано, как пометить флаг FollowUp как завершенный.
+Следующий фрагмент кода показывает, как отметить флаг "Напомнить" как завершенный.
 
 ```py
 import aspose.email as ae
 
-# Load the MapiMessage from file
+# Загрузить MapiMessage из файла
 mapi_message = ae.mapi.MapiMessage.load("Message.msg")
 
-# Mark the message as completed
+# Отметить сообщение как завершенное
 ae.mapi.FollowUpManager.mark_as_completed(mapi_message)
 
-# Save the updated MapiMessage
+# Сохранить обновленный MapiMessage
 mapi_message.save("MarkedCompleted_out.msg")
 ```
-## **Удаление флага FollowUp**
-В следующем фрагменте кода показано, как удалить флаг FollowUp.
+
+## **Удаление флага "Напомнить"**
+
+Следующий фрагмент кода показывает, как удалить флаг "Напомнить".
 
 ```py
 import aspose.email as ae
 
-# Load the MapiMessage from file
+# Загрузить MapiMessage из файла
 mapi_message = ae.mapi.MapiMessage.load("message.msg")
 
-# Clear the follow-up flag
+# Очистить флаг напоминания
 ae.mapi.FollowUpManager.clear_flag(mapi_message)
 
-# Save the updated MapiMessage
+# Сохранить обновленный MapiMessage
 mapi_message.save("RemoveFollowUpflag_out.msg")
 ```
 
-## **Прочитайте варианты флагов отслеживания сообщения**
+## **Чтение опций флага напоминания для сообщения**
 
-В следующем фрагменте кода показано, как прочитать опции флага отслеживания для сообщения.
+Следующий фрагмент кода показывает, как прочитать опции флага напоминания для сообщения.
 
 ```py
 import aspose.email as ae
 
-# Load the MapiMessage from file
+# Загрузить MapiMessage из файла
 mapi_message = ae.mapi.MapiMessage.load("message.msg")
 
-# Get the follow-up options
+# Получить параметры напоминания
 options = ae.mapi.FollowUpManager.get_options(mapi_message)
 ```
+

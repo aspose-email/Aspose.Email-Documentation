@@ -1,102 +1,102 @@
 ---
-title: "Функции утилиты"
+title: "Утилитарные функции"
 url: /ru/net/utility-features/
 weight: 120
 type: docs
 ---
 
 
-## **Отправка сообщения с опцией голосования**
+## **Отправка сообщения с вариантом голосования**
 
-Microsoft Outlook позволяет пользователям создавать опрос при создании нового сообщения. Для этого можно включить такие варианты голосования, как «Да», «Нет», «Возможно» и т. д. Класс FollowupOptions, предлагаемый Aspose.Email, предоставляет свойство VotingButtons, которое можно использовать для установки или получения значений параметров голосования. В этой статье приведен подробный пример создания MapiMessage с опциями голосования для создания опроса и последующей отправки сообщения с помощью клиента Exchange Web Service (EWS).
+Microsoft Outlook позволяет пользователям создавать опрос при составлении нового сообщения. Это делается путем включения вариантов голосования, таких как Да, Нет, Может быть и т.д. Класс FollowUpOptions, предлагаемый Aspose.Email, предоставляет свойство VotingButtons, которое может быть использовано для установки или получения значения вариантов голосования. Эта статья предоставляет детальный пример создания MapiMessage с вариантами голосования для создания опроса, а затем отправки сообщения с использованием клиента Exchange Web Service (EWS).
 
-### **Создание и отправка сообщения с опциями голосования**
+### **Создание и отправка сообщения с вариантами голосования**
 
-В следующем фрагменте кода показано, как создать новое сообщение, а затем отправить его с опциями голосования.
+Следующий кодовый фрагмент показывает, как создать новое сообщение, а затем отправить его с вариантами голосования.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateAndSendingMessageWithVotingOptions-CreateAndSendingMessageWithVotingOptions.cs" >}}
 
-### **Примерные методы, используемые в примерах**
+### **Пример методов, используемых в примерах**
 
-В следующем фрагменте кода показано, как использовать методы, использованные в приведенном выше примере.
+Следующий кодовый фрагмент показывает, как использовать методы, использованные в приведенном выше примере.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateAndSendingMessageWithVotingOptions-CreateTestMessage.cs" >}}
 
-## **Игнорировать или обходить недействительный или просроченный сертификат SSL**
+## **Игнорирование или обход недействительных или просроченных SSL сертификатов**
 
-Aspose.Email может обрабатывать SSL-сертификаты на сервере Exchange, используя оба [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/) and [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) классы. Если срок действия сертификата SSL истек или он стал недействительным, Aspose.Email выдает исключение из-за недействительного сертификата SSL. Избегайте таких ошибок SSL-сертификата, игнорируя их, используя метод, описанный в приведенном ниже коде. Зарегистрируйте обработчик обратного вызова в методе main () или init () и добавьте следующий метод в качестве члена класса.
+Aspose.Email может обрабатывать SSL сертификаты на Exchange Server, используя как [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/), так и [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) классы. Если SSL сертификат истек или стал недействительным, Aspose.Email генерирует исключение из-за недействительного SSL сертификата. Избегайте таких ошибок SSL сертификатов, игнорируя их с помощью метода, используемого в коде ниже. Зарегистрируйте обработчик обратного вызова в вашем методе main() или init() и добавьте метод ниже как член класса.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-IgnoringInvalidSSLCertificates-IgnoringInvalidSSLCertificates.cs" >}}
 
 ## **Создание сообщений RE и FW из файлов MSG**
 
-[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) позволяет разработчикам создавать сообщения RE (ответить/ответить всем) и FW (переслать) из исходного сообщения. Исходное сообщение идентифицируется путем выбора определенного [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) from [ExchangeMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfocollection/exchangemessageinfocollection/) получено [IEWSClient.ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/). Другой аргумент является фактическим [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) для отправки в виде сообщения RE или FW. В следующем фрагменте кода показано, как создать образец учетной записи, которая будет использоваться для отправки сообщения, а затем на примере этого примера сообщения продемонстрированы функции «Ответить» и «Переслать». Для выполнения этой задачи выполните следующие действия:
+[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) позволяет разработчикам создавать сообщения RE (Ответ/Ответить всем) и FW (Переслать) из исходного сообщения. Исходное сообщение определяется выбором определенного [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) из [ExchangeMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfocollection/exchangemessageinfocollection/), полученного с помощью [IEWSClient.ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/). Другим аргументом является фактическое [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/), которое будет отправлено в качестве сообщения RE или FW. Следующий кодовый фрагмент показывает, как создать образец учетной записи, который используется для отправки сообщения, а затем демонстрируются функции ответа и пересылки на этом образце сообщения. Для выполнения этой задачи:
 
-1. Инициализируйте [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) возразите, предоставив действительные учетные данные.
-1. Отправьте несколько образцов сообщений.
-1. Позвоните [IEWSClient.Reply()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/reply/), [IEWSClient.ReplyAll()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/replyall/) and [IEWSClient.Forward()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/forward/) функции для отправки сообщений.
+1. Инициализируйте объект [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) с действительными учетными данными.
+1. Отправьте несколько образцовых сообщений.
+1. Вызовите функции [IEWSClient.Reply()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/reply/), [IEWSClient.ReplyAll()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/replyall/) и [IEWSClient.Forward()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/forward/) для отправки сообщений.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateREAndFWMessages-CreateREAndFWMessages.cs" >}}
 
 ## **Поддержка отслеживания электронной почты**
 
-Aspose.Email API обеспечивает поддержку отслеживания электронной почты с помощью уведомления об удалении сообщений (MDN). Это достигается путем запроса квитанций о прочтении и создания необходимой информации. [MailMessage.ReadReceiptTo](https://reference.aspose.com/email/net/aspose.email/mailmessage/readreceiptto/) свойство получает или задает заданный адрес квитанции о прочтении. [CreateReadReceipt](https://reference.aspose.com/email/net/aspose.email/mailmessage/createreadreceipt/) and [ReadReceiptRequested](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/readreceiptrequested/) методы используются для создания и получения информации о том, запрашиваются ли квитанции о прочтении. В следующем фрагменте кода показано, как отслеживать сообщения по электронной почте с помощью Aspose.Email API.
+API Aspose.Email предоставляет поддержку отслеживания электронной почты с использованием Уведомления о распределении сообщения (MDN). Это достигается путем запроса квитанций о прочтении и создания необходимой информации. Свойство [MailMessage.ReadReceiptTo](https://reference.aspose.com/email/net/aspose.email/mailmessage/readreceiptto/) получает или устанавливает адрес для квитанций о прочтении. Методы [CreateReadReceipt](https://reference.aspose.com/email/net/aspose.email/mailmessage/createreadreceipt/) и [ReadReceiptRequested](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/readreceiptrequested/) используются для создания и получения информации о том, запрашиваются ли квитанции о прочтении. Следующий кодовый фрагмент показывает, как отслеживать электронную почту с использованием API Aspose.Email.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange-EmailTracking-EmailTracking.cs" >}}
 
-## **Поддержка входа в систему клиентов Exchange**
+## **Поддержка ведения журнала в клиентах Exchange**
 
-API Aspose.Email предоставляет возможность предоставлять возможность ведения журнала клиента веб-службы Exchange. Это можно сделать, настроив файл App.config.
+API Aspose.Email предоставляет возможность предоставлять средства ведения журнала для клиента Exchange Web Service. Это можно достичь, настроив файл App.config.
 
-### **Ведение журнала для клиента EWS**
+### **Ведение журнала для EWS клиента**
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "LoggingForEWSClient.xml" >}}
 
-## **Добавление заголовков в запросы EWS**
+## **Добавление заголовков в EWS запросы**
 
-API Aspose.Email позволяет добавлять заголовки в запросы Exchange. Это можно использовать для добавления заголовков в запросы EWS для разных заголовков, которые можно использовать для разных целей. Одним из таких примеров может служить добавление заголовка X-AnchorMailbox, который используется для решения проблем регулирования на сервере Exchange. [AddHeader](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/addheader/) метод [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) используется для добавления заголовков к запросам EWS, как показано в следующем фрагменте кода.
+API Aspose.Email позволяет добавлять заголовки в запросы Exchange. Это можно использовать для добавления заголовков в запросы EWS для различных заголовков, которые могут использоваться для разных целей. Одним из таких примеров может быть добавление заголовка X-AnchorMailbox, который используется для управления проблемами с ограничением на сервере Exchange. Метод [AddHeader](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/addheader/) класса [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) используется для добавления заголовков в запросы EWS, как показано в следующем кодовом фрагменте.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-AddingHeadersToEWSRequests-AddingHeadersToEWSRequests.cs" >}}
 
-## **Работа с единой системой обмена сообщениями**
+## **Работа с унифицированным сообщением**
 
-Aspose.Email может получать информацию единой системы обмена сообщениями из Exchange Server 2010. В настоящее время поддерживается единая система обмена сообщениями, такая как получение сведений о конфигурации, инициирование исходящего вызова, получение информации о телефонном звонке по идентификатору вызова и отключение телефонного звонка по идентификатору. В следующем примере кода показано, как получить сведения о конфигурации единой системы обмена сообщениями из Microsoft Exchange Server 2010.
+Aspose.Email может извлекать информацию о унифицированном сообщении из Exchange Server 2010. Поддерживается унифицированное сообщение, такое как получение конфигурационной информации, инициирование исходящего вызова, получение информации о телефонном звонке по идентификатору вызова и отключение телефонного звонка по идентификатору. Следующий образец кода показывает, как извлечь информацию о конфигурации унифицированного сообщения из Microsoft Exchange Server 2010.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-GettingUnifiedMessagingConfigurationInformation-GettingUnifiedMessagingConfigurationInformation.cs" >}}
 
-## **Советы по получению почты**
+## **Получение советов по электронной почте**
 
-Сервер Microsoft Exchange добавил несколько новых функций в Exchange Server 2010 и 2013. Одна из них позволяет пользователям получать советы по электронной почте при составлении сообщения электронной почты. Эти советы очень полезны, поскольку они предоставляют информацию до отправки электронного письма. Например, если адрес электронной почты указан неправильно в списке получателей, отображается подсказка, сообщающая вам, что адрес электронной почты недействителен. Кроме того, с помощью подсказок по почте вы можете просмотреть ответы, полученные от сотрудников, прежде чем отправлять электронное письмо: Exchange Server (2010 и 2013) отправляет сообщение по почте при составлении письма, если один или несколько получателей ответили, отсутствующие на рабочем месте. Для всех функций, описанных в этой статье, требуется пакет обновления 1 (SP1) для Microsoft Exchange Server 2010. В следующем фрагменте кода показано, как использовать [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) класс, использующий веб-службы Exchange, доступные в Microsoft Exchange Server 2007 и более поздних версиях.
+Microsoft Exchange Server добавил несколько новых функций с Exchange Server 2010 и 2013. Одна из них позволяет пользователям получать советы по электронной почте при составлении сообщения электронной почты. Эти советы очень полезны, поскольку они предоставляют информацию перед отправкой электронной почты. Например, если адрес электронной почты неверен в списке получателей, отображается совет, чтобы сообщить вам, что адрес электронной почты недействителен. Советы по электронной почте также позволяют вам видеть автоматические ответы "вне офиса" перед отправкой электронной почты: Exchange Server (2010 и 2013) отправляет совет по электронной почте, когда сообщение составляется, если один или несколько получателей настроили автоматические ответы "вне офиса". Для всех функций, продемонстрированных в этой статье, требуется Microsoft Exchange Server 2010 Service Pack 1. Следующий кодовый фрагмент показывает, как использовать класс [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/), который использует Exchange Web Services, доступные в Microsoft Exchange Server 2007 и более поздних версиях.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-GetMailTips-GetMailTips.cs" >}}
 
-## **Выдача себя за биржу**
+## **Имитация Exchange**
 
-Выдача себя за другое лицо Exchange позволяет пользователю выдавать себя за другую учетную запись и выполнять задачи и операции, используя разрешения выдаваемой учетной записи вместо своих собственных. Если делегирование позволяет пользователям действовать от имени других пользователей, то выдача себя за другое лицо позволяет им действовать как другие пользователи. Aspose.Email поддерживает выдачу себя за другое лицо в Exchange. [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) класс предоставляет [ImpersonateUser](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/impersonateuser/) and [ResetImpersonation](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/resetimpersonation/) методы, облегчающие эту функцию.
+Имитация Exchange позволяет кому-то выдавать себя за другую учетную запись и выполнять задачи и операции, используя разрешения учетной записи, за которую он выдает себя, вместо своих собственных. В то время как делегирование позволяет пользователям действовать от имени других пользователей, имитация позволяет им действовать как другие пользователи. Aspose.Email поддерживает имитацию Exchange. Класс [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) предоставляет методы [ImpersonateUser](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/impersonateuser/) и [ResetImpersonation](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/resetimpersonation/) для облегчения этой функции.
 
-Для выполнения этой задачи выполните следующие действия:
+Для выполнения этой задачи:
 
-1. Инициализируйте клиент ExchangeWebServiceClient для пользователя 1.
-1. Инициализируйте клиент ExchangeWebServiceClient для пользователя 2.
-1. Добавляйте тестовые сообщения к учетным записям.
-1. Включите выдачу себя за другое лицо.
-1. Сбросить олицетворение.
+1. Инициализируйте ExchangeWebServiceClient для пользователя 1.
+1. Инициализируйте ExchangeWebServiceClient для пользователя 2.
+1. Добавьте тестовые сообщения к учетным записям.
+1. Включите имитацию.
+1. Сбросьте имитацию.
 
-В следующем фрагменте кода показано, как использовать [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) класс для реализации функции Impersonation.
+Следующий кодовый фрагмент показывает, как использовать класс [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) для реализации функции имитации.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-ExchangeImpersonationUsingEWS-ExchangeImpersonationUsingEWS.cs" >}}
 
-## **Функция автоматического обнаружения с помощью EWS**
+## **Функция автопоиск с использованием EWS**
 
-API Aspose.Email позволяет узнать о настройках сервера Exchange с помощью клиента EWS. 
+API Aspose.Email позволяет вам узнать настройки Exchange Server с помощью клиента EWS. 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-AutoDiscoverUsingEWS-AutoDiscoverUsingEWS.cs" >}}
 
-## **Прервать операцию восстановления PST на сервере Exchange**
+## **Прерывание операции восстановления PST на сервер Exchange**
 
-API Aspose.Email позволяет восстановить файл PST на сервере Exchange. Однако если операция занимает много времени из-за большого размера файла PST, возможно, потребуется указать критерий для прерывания операции. Это можно сделать с помощью API, как показано в следующем примере кода.
+API Aspose.Email позволяет вам восстановить файл PST на сервер Exchange. Однако, если операция занимает много времени из-за большого размера файла PST, может потребоваться указать критерий для прерывания операции. Это можно реализовать с помощью API, как показано в следующем образце кода.
 
-**Note:** В пример также необходимо добавить следующий класс.
+**Примечание:** В примере необходимо также добавить следующий класс.
 
 ``` cs
 

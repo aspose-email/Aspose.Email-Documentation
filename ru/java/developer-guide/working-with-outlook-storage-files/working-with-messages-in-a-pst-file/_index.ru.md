@@ -8,12 +8,12 @@ type: docs
 
 ## **Добавление сообщений в файлы PST**
 
-[Создайте новый файл PST и добавьте подпапки](/email/java/create-new-pst-add-sub-folders-and-messages) показал, как создать файл PST и добавить в него подпапку. С помощью Aspose.Email вы можете добавлять сообщения в подпапки созданного или загруженного файла PST. В этой статье два сообщения с диска добавляются во вложенную папку «Входящие» PST. Используйте [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) and [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) классы для добавления сообщений в файлы PST. Чтобы добавить сообщения в папку «Входящие» PST-файла, выполните следующие действия:
+[Создание нового файла PST и добавление подпапок](/email/java/create-new-pst-add-sub-folders-and-messages) показало, как создать файл PST и добавить в него подпапку. С помощью Aspose.Email вы можете добавлять сообщения в подпапки файла PST, который вы создали или загрузили. В этой статье добавляются два сообщения с диска в подпапку "Входящие" файла PST. Используйте классы [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) и [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) для добавления сообщений в файлы PST. Чтобы добавить сообщения в папку "Входящие" файла PST:
 
-1. Создайте экземпляр **FolderInfo** класс и загрузите его вместе с содержимым папки «Входящие».
-1. Добавьте сообщения с диска в папку «Входящие», вызвав [FolderInfo.addMessage()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessage-com.aspose.email.MapiMessage-) метод. [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) класс раскрывает [addMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) метод, позволяющий добавлять большое количество сообщений в папку, сокращая количество операций ввода-вывода на диск и повышая производительность. Полный пример можно найти ниже, в [Добавление массовых сообщений](#adding-bulk-messages).
+1. Создайте экземпляр класса **FolderInfo** и загрузите его содержимое из папки "Входящие".
+2. Добавьте сообщения с диска в папку "Входящие", вызвав метод [FolderInfo.addMessage()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessage-com.aspose.email.MapiMessage-). Класс [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) предоставляет метод [addMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--), который позволяет добавлять большое количество сообщений в папку, сокращая операции ввода-вывода на диск и улучшая производительность. Полный пример можно найти ниже, в [Добавление массовых сообщений](#adding-bulk-messages).
 
-В приведенных ниже фрагментах кода показано, как добавлять сообщения в подпапку PST под названием «Входящие».
+Ниже приведен фрагмент кода, который показывает, как добавить сообщения в подпапку PST под названием "Входящие".
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -33,11 +33,11 @@ inboxFolder.addMessage(MapiMessage.fromFile(dataDir + "MapiMsgWithPoll.msg"));
 
 ### **Добавление массовых сообщений**
 
-Добавление отдельных сообщений в PST подразумевает большее количество операций ввода-вывода на диск и, следовательно, может снизить производительность. Для повышения производительности сообщения можно добавлять в PST в массовом режиме, чтобы минимизировать операции ввода-вывода. [addMessages(Iterable<MapiMessage> messages)](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) Метод позволяет определить диапазон сообщений, добавляемых в PST для повышения производительности, и может использоваться в следующих сценариях. Кроме того, событие MessageAdded возникает при добавлении сообщения в папку.
+Добавление отдельных сообщений в PST подразумевает больше операций ввода-вывода на диск и, следовательно, может замедлять производительность. Для повышения производительности сообщения могут быть добавлены в PST оптом, чтобы минимизировать операции ввода-вывода. Метод [addMessages(Iterable<MapiMessage> messages)](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) позволяет вам определить диапазон сообщений, которые будут добавлены в PST для повышения производительности, и может использоваться в следующих сценариях. Кроме того, событие MessageAdded происходит, когда сообщение добавляется в папку.
 
 ### **Загрузка сообщений с диска**
 
-В следующем фрагменте кода показано, как загружать сообщения с диска.
+Следующий фрагмент кода показывает, как загружать сообщения с диска.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -59,9 +59,9 @@ static void onMessageAdded(Object sender, MessageAddedEventArgs e) {
 }
 ~~~
 
-### **Итерируемая реализация**
+### **Реализация Iterable**
 
-В следующем фрагменте кода показано, как создать итерабельную реализацию.
+Следующий фрагмент кода показывает, как создать реализацию Iterable.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -100,7 +100,7 @@ public class MapiMessageIterator implements Iterator<MapiMessage> {
 
 ### **Добавление сообщений из другого PST**
 
-Для добавления сообщений из другого PST используйте [FolderInfo.enumerateMapiMessages()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) метод, возвращающий Iterable<MapiMessage>. В следующем фрагменте кода показано, как добавлять сообщения из других PST.
+Для добавления сообщений из другого PST используйте метод [FolderInfo.enumerateMapiMessages()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--), который возвращает Iterable<MapiMessage>. Следующий фрагмент кода показывает, как добавить сообщения из другого PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -135,11 +135,10 @@ static void onMessageAdded(Object sender, MessageAddedEventArgs e) {
 }
 ~~~
 
-## **Получение информации о сообщениях из файла Outlook PST**
+## **Получение информации о сообщениях из файла PST Outlook**
 
-In [Прочитайте файл Outlook PST и получите информацию о папках и подпапках](/email/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/), мы обсуждали загрузку файла Outlook PST и просмотр его папок, чтобы узнать имена папок и количество сообщений в них. В этой статье объясняется, как читать все папки и подпапки в файле PST и отображать информацию о сообщениях, например тему, отправителя и получателя. [FolderInfo.getContents()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents--) метод используется для отображения [краткая информация о сообщении](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) например, тема, отправитель, получатели.
-С точки зрения производительности это наиболее подходящий вариант для получения первичной информации о сообщениях. Чтобы [extract](#extracting-messages-form-pst-files) полные данные сообщения, [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-) предоставлен метод.
-Файл Outlook PST может содержать вложенные папки. Чтобы получить информацию о сообщениях из этих папок, а также из папок верхнего уровня, используйте рекурсивный метод чтения всех папок. В следующем фрагменте кода показано, как читать PST-файл Outlook и рекурсивно отображать содержимое папки и сообщения.
+В [Чтение файла PST Outlook и получение информации о папках и подпапках](/email/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/) мы обсуждали загрузку файла PST Outlook и просмотр его папок, чтобы получить имена папок и количество сообщений в них. Эта статья объясняет, как прочитать все папки и подпапки в файле PST и отобразить информацию о сообщениях, например, тему, отправителя и получателей. Метод [FolderInfo.getContents()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents--) используется для отображения [краткой информации о сообщении](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) такой как тема, отправитель, получатели. С точки зрения производительности, это наиболее подходящий вариант для получения основной информации о сообщениях. Чтобы [извлечь](#extracting-messages-form-pst-files) полные данные сообщения, предоставлен метод [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-).
+Файл PST Outlook может содержать вложенные папки. Чтобы получить информацию о сообщениях из этих папок, а также из верхних папок, используйте рекурсивный метод для чтения всех папок. Следующий фрагмент кода показывает, как загрузить файл PST Outlook и рекурсивно отобразить содержимое папки и сообщения.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -193,7 +192,7 @@ private static void displayFolderContents(FolderInfo folderInfo, PersonalStorage
 
 ## **Извлечение сообщений из файлов PST**
 
-В этой статье показано, как читать файлы Microsoft Outlook PST и [извлекать сообщения](#extracting-messages-form-pst-files). Затем сообщения сохраняются на диск в формате MSG. В статье также показано, как [извлеките определенное количество сообщений](#extracting-n-number-of-messages-from-a-pst-file) из файла PST. Используйте рекурсивный метод для просмотра всех папок (включая все вложенные папки) и вызовите [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-) метод получения сообщений Outlook в экземпляр [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) класс. После этого позвоните [MapiMessage.save()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#save-java.lang.String-) метод сохранения сообщения на диске или в потоке в формате MSG. В следующем фрагменте кода показано, как извлечь сообщения из файла PST.
+Эта статья показывает, как читать файлы PST Microsoft Outlook и [извлекать сообщения](#extracting-messages-form-pst-files). Сообщения затем сохраняются на диск в формате MSG. В статье также показано, как [извлечь определенное количество сообщений](#extracting-n-number-of-messages-from-a-pst-file) из файла PST. Используйте рекурсивный метод для просмотра всех папок (включая любые вложенные папки) и вызова метода [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-) для получения сообщений Outlook в экземпляре класса [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/). После этого вызовите метод [MapiMessage.save()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#save-java.lang.String-) для сохранения сообщения либо на диск, либо в поток в формате MSG. Следующий фрагмент кода показывает, как извлечь сообщения из файла PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -248,9 +247,9 @@ private static void extractMsgFiles(FolderInfo folderInfo, PersonalStorage pst) 
 }
 ~~~
 
-### **Сохранение сообщений непосредственно из PST в потоковую передачу**
+### **Сохранение сообщений непосредственно из PST в поток**
 
-Чтобы сохранить сообщения из файла PST непосредственно в потоковом режиме, не извлекая MsgInfo для сообщений, используйте [saveMessageToStream()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#saveMessageToStream-java.lang.String-java.io.OutputStream-) метод. В следующем фрагменте кода показано, как сохранять сообщения непосредственно из PST в потоковом режиме.
+Чтобы сохранить сообщения из файла PST непосредственно в поток, без извлечения MsgInfo для сообщений, используйте метод [saveMessageToStream()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#saveMessageToStream-java.lang.String-java.io.OutputStream-) метод. Следующий фрагмент кода показывает, как сохранить сообщения непосредственно из PST в поток.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -292,9 +291,9 @@ try (PersonalStorage pst = PersonalStorage.fromFile(path)) {
 }
 ~~~
 
-### **Извлечение n количества сообщений из PST-файла**
+### **Извлечение n количества сообщений из файла PST**
 
-В следующем фрагменте кода показано, как извлечь заданное количество сообщений из PST. Просто укажите индекс первого сообщения и общее количество сообщений, которые нужно извлечь.
+Следующий фрагмент кода показывает, как извлечь заданное количество сообщений из PST. Просто укажите индекс для первого сообщения и общее количество сообщений, которые нужно извлечь.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -304,11 +303,11 @@ FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Inbox");
 MessageInfoCollection messages = inbox.getContents(10, 100);
 ~~~
 
-### **Получить общее количество элементов из файла PST**
+### **Получение общего количества элементов из файла PST**
 
-Aspose.Email предоставляет [GetTotalItemsCount()](https://reference.aspose.com/email/java/com.aspose.email/messagestore/#getTotalItemsCount--) метод [PersonalStorage.Store](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#getStore--) имущество. Оно возвращает общее количество сообщений, содержащихся в PST.
+Aspose.Email предоставляет метод [GetTotalItemsCount()](https://reference.aspose.com/email/java/com.aspose.email/messagestore/#getTotalItemsCount--) свойства [PersonalStorage.Store](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#getStore--). Он возвращает общее количество элементов сообщений, содержащихся в PST.
 
-В следующем примере кода показано, как получить общее количество элементов (сообщений, встреч, контактов и т. д.), хранящихся в файле PST:
+Следующий образец кода показывает, как получить общее количество элементов (сообщений, назначений, контактов и т. д.), хранящихся в файле PST:
 
 ```java
 try (PersonalStorage pst = PersonalStorage.fromFile("my.pst", false)) {
@@ -316,16 +315,16 @@ try (PersonalStorage pst = PersonalStorage.fromFile("my.pst", false)) {
 }
 ```
 
-## **Удалить элементы из файлов PST**
+## **Удаление элементов из файлов PST**
 
-[Добавление сообщений в файлы PST](#adding-messages-to-pst-files) показал, как добавлять сообщения в файлы PST. Конечно, также можно удалять элементы (содержимое) из файла PST, и может быть желательно удалять сообщения массово. Элементы из файла PST можно удалить с помощью [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---) метод. API также предоставляет [FolderInfo.deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) метод массового удаления элементов из файла PST.
+[Добавление сообщений в файлы PST](#adding-messages-to-pst-files) показало, как добавлять сообщения в файлы PST. Конечно, также возможно удалять элементы (содержимое) из файла PST, и может быть желательным удалить сообщения оптом. Элементы из файла PST можно удалить, используя метод [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---). API также предоставляет метод [FolderInfo.deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) для массового удаления элементов из файла PST.
 
-### **Удаление сообщений из PST-файлов**
+### **Удаление сообщений из файлов PST**
 
-В этой статье показано, как использовать [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) класс для доступа к определенным папкам в файле PST. Чтобы удалить сообщения из подпапки «Отправленные» ранее загруженного или созданного файла PST, выполните следующие действия:
+Эта статья показывает, как использовать класс [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) для доступа к определенным папкам в файле PST. Чтобы удалить сообщения из папки "Отправленные" ранее загруженного или созданного файла PST:
 
-1. Создайте экземпляр [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) класс и загрузите его вместе с содержимым отправленной подпапки.
-1. Удалите сообщения из папки «Отправленные», вызвав [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---) метод и передача [MessageInfo.EntryId](https://reference.aspose.com/email/java/com.aspose.email/messageinfo/#getEntryId--) в качестве параметра. В следующем фрагменте кода показано, как удалять сообщения из вложенной папки Sent PST-файла.
+1. Создайте экземпляр класса [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) и загрузите его с содержимым из папки "Отправленные".
+2. Удалите сообщения из папки "Отправленные", вызвав метод [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---) и передав в качестве параметра [MessageInfo.EntryId](https://reference.aspose.com/email/java/com.aspose.email/messageinfo/#getEntryId--). Следующий фрагмент кода показывает, как удалить сообщения из подпапки "Отправленные" файла PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -351,7 +350,7 @@ for (MessageInfo msgInfo : msgInfoColl) {
 
 ### **Удаление папок из файлов PST**
 
-Папку PST можно удалить, переместив ее в папку «Удаленные».
+Вы можете удалить папку PST, переместив ее в папку "Удаленные элементы".
 
 ~~~Java
 try (PersonalStorage pst = PersonalStorage.fromFile("test.pst")) {
@@ -362,21 +361,18 @@ try (PersonalStorage pst = PersonalStorage.fromFile("test.pst")) {
     pst.moveItem(someFolder, deletedItemsFolder);
 }
 ~~~
-Преимущество этого метода в том, что удаленную папку можно легко восстановить.
-
+Преимущества этого метода заключаются в том, что удаленную папку можно легко восстановить.
 
 ~~~Java
 FolderInfo someFolder = deletedItemsFolder.getSubFolder("Some folder");
 pst.moveItem(someFolder, pst.getRootFolder());
 ~~~
-При необходимости можно также навсегда удалить папку из папки «Удаленные».
-
+Кроме того, по мере необходимости вы можете безвозвратно удалить папку из папки "Удаленные элементы".
 
 ~~~Java
 deletedItemsFolder.deleteChildItem(emptyFolder.getEntryId());
 ~~~
-The [deleteChildItem()](https://apireference.aspose.com/email/java/com.aspose.email/FolderInfo#deleteChildItem\(byte[]\)) метод можно использовать для любых папок, если вы хотите немедленно и навсегда удалить подпапку, минуя папку «Удаленные».
-
+Метод [deleteChildItem()](https://apireference.aspose.com/email/java/com.aspose.email/FolderInfo#deleteChildItem\(byte[]\)) может использоваться для любых папок, если вы хотите немедленно и навсегда удалить подпапку, минуя папку "Удаленные элементы".
 
 ~~~Java
 FolderInfo someFolder = pst.getRootFolder().getSubFolder("Some folder");
@@ -385,8 +381,7 @@ pst.getRootFolder().deleteChildItem(someFolder.getEntryId());
 
 ### **Массовое удаление элементов из файла PST**
 
-Aspose.Email API можно использовать для массового удаления элементов из файла PST. Это достигается с помощью [deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) метод, который принимает список элементов Entry ID, относящихся к удаляемым элементам. В следующем фрагменте кода показано, как массово удалять элементы из файла PST.
-
+API Aspose.Email может использоваться для массового удаления элементов из файла PST. Это достигается с помощью метода [deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--), который принимает список элементов Entry ID, относящихся к удаляемым элементам. Следующий фрагмент кода показывает, как удалить элементы массово из файла PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -412,23 +407,22 @@ try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir)) {
 }
 ~~~
 
-## **Поиск сообщений и папок в PST по критерию**
+## **Поиск сообщений и папок в PST по критериям**
 
-Файлы персонального хранилища (PST) могут содержать огромное количество данных, и для поиска данных, соответствующих определенным критериям, в таких больших файлах необходимо включить в код несколько контрольных точек для фильтрации информации. С помощью [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) class, Aspose.Email позволяет искать определенные записи в PST на основе заданных критериев поиска. В PST можно искать сообщения на основе таких параметров поиска, как отправитель, получатель, тема, важность сообщения, наличие вложений, размер сообщения и даже идентификатор сообщения. [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) также можно использовать для поиска подпапок.
+Файлы личного хранения (PST) могут содержать огромные объемы данных, и поиск данных, удовлетворяющих конкретному критерию в таких больших файлах, требует включения нескольких контрольных точек в код для фильтрации информации. С помощью класса [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) Aspose.Email позволяет искать конкретные записи в PST на основе заданных критериев поиска. PST можно искать по сообщениям на основе параметров поиска, таких как отправитель, получатель, тема, важность сообщения, наличие вложений, размер сообщения и даже идентификатор сообщения. Класс [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) также может использоваться для поиска подпапок.
 
 ### **Поиск сообщений и папок в PST**
 
-В следующем фрагменте кода показано, как использовать [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) класс для поиска содержимого в PST на основе различных критериев поиска. Например, он показывает поиск в PST на основе:
+Следующий фрагмент кода показывает, как использовать класс [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) для поиска содержимого в PST на основе различных критериев поиска. Например, он показывает поиск в PST по:
 
 - Важность сообщения.
-- Класс сообщений.
+- Класс сообщения.
 - Наличие вложений.
 - Размер сообщения.
 - Дата сообщения.
 - Непрочитанные сообщения.
 - Непрочитанные сообщения с вложениями и
-- папки с определенным именем подпапки.
-
+- папки с конкретным именем подпапки.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -508,9 +502,9 @@ try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir + "Outlo
 }
 ~~~
 
-### **Поиск строки в PST с параметром Ignore Case**
+### **Поиск строки в PST с параметром игнорирования регистра**
 
-В следующем фрагменте кода показано, как искать строку в PST с помощью параметра ignore case.
+Следующий фрагмент кода показывает, как искать строку в PST с параметром игнорирования регистра.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -527,11 +521,11 @@ try (PersonalStorage personalStorage = PersonalStorage.create(dataDir + "CaseSen
     MessageInfoCollection coll = folderinfo.getContents(query);
     System.out.println(coll.size());
 }
-~~~
+~~~ 
 
 ### **Поиск тем сообщений по нескольким ключевым словам в файле PST**
 
-Вы можете использовать [MailQueryBuilder.or](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) метод поиска сообщений, тема которых содержит хотя бы одно из указанных слов, как показано ниже:
+Вы можете использовать метод [MailQueryBuilder.or](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) для поиска сообщений с темой, содержащей по крайней мере одно из указанных слов, как показано ниже:
 
 ~~~java
 PersonalStorageQueryBuilder builder1 = new PersonalStorageQueryBuilder();
@@ -553,18 +547,18 @@ try (PersonalStorage storage = PersonalStorage.fromFile("example.pst"))
         System.out.println(messageInfo.getSubject());
     }
 }
-~~~
+~~~ 
 
-## **Переместить элементы в другие папки файла PST**
+## **Перемещение элементов в другие папки файла PST**
 
-Aspose.Email позволяет перемещать элементы из исходной папки в другую папку в том же файле личного хранилища (PST). Сюда входят:
+Aspose.Email позволяет перемещать элементы из одной папки в другую папку в одном и том же файле личного хранения (PST). Это включает:
 
 - Перемещение указанной папки в новую родительскую папку.
 - Перемещение указанного сообщения в новую папку.
 - Перемещение содержимого в новую папку.
 - Перемещение подпапок в новую родительскую папку.
 
-В следующем фрагменте кода показано, как перемещать такие элементы, как сообщения и папки, из исходной папки в другую папку того же файла PST.
+Следующий фрагмент кода показывает, как перемещать элементы, такие как сообщения и папки, из одной папки в другую папку в том же файле PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -582,11 +576,11 @@ try (PersonalStorage personalStorage = PersonalStorage.fromFile("test.pst")) {
     inbox.moveSubfolders(deleted);
     subfolder.moveContents(deleted);
 }
-~~~
+~~~ 
 
-## **Обновление свойств сообщения в файле PST**
+## **Обновление свойств сообщений в файле PST**
 
-Иногда требуется обновить некоторые свойства сообщений, такие как смена темы, маркировка важности сообщения и т. д. Обновление сообщения в PST-файле с такими изменениями в свойствах сообщения можно осуществить с помощью [FolderInfo.changeMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#changeMessages-com.aspose.email.MapiPropertyCollection-) метод. В этой статье показано, как массово обновлять сообщения в PST-файле для изменения свойств. В следующем фрагменте кода показано, как массово обновлять свойства сообщений для нескольких сообщений в PST-файле.
+Иногда требуется обновить определенные свойства сообщений, например, изменить тему, отметить важность сообщения и подобные вещи. Обновление сообщения в файле PST с такими изменениями в свойствах сообщения можно выполнить, используя метод [FolderInfo.changeMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#changeMessages-com.aspose.email.MapiPropertyCollection-). Эта статья показывает, как обновить сообщения оптом в файле PST для изменений в свойствах. Следующий фрагмент кода показывает, как обновить свойства сообщений в режиме массовой обработки для нескольких сообщений в файле PST.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -621,14 +615,14 @@ updatedProperties.add(MapiPropertyTag.PR_IMPORTANCE, new MapiProperty(MapiProper
 inbox.changeMessages(changeList, updatedProperties);
 ~~~
 
-## **Обновление настраиваемых свойств в файле PST**
+## **Обновление пользовательских свойств в файле PST**
 
-Иногда требуется пометить элементы, обрабатываемые в файле PST. API Aspose.Email позволяет сделать это с помощью свойств MapiProperty и MapInamedProperty. В этом помогают следующие методы.
+Иногда необходимо отметить элементы, которые были обработаны внутри файла PST. API Aspose.Email позволяет достичь этого с помощью MapiProperty и MapiNamedProperty. Следующие методы полезны для достижения этого.
 
 - `constructor MapiNamedProperty(long propertyTag, String nameIdentifier, UUID propertyGuid, byte[] propertyValue)`
 - `constructor MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, byte[] propertyValue)`
 - `FolderInfo.changeMessages(MapiPropertyCollection updatedProperties)` - изменяет все сообщения в папке
-- `PersonalStorage.changeMessage(String entryId, MapiPropertyCollection updatedProperties)` - изменить свойства сообщения
+- `PersonalStorage.changeMessage(String entryId, MapiPropertyCollection updatedProperties)` - изменение свойств сообщения
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -662,7 +656,7 @@ private static long generateNamedPropertyTag(long index, int dataType) {
 
 ## **Извлечение вложений без извлечения полного сообщения**
 
-Aspose.Email API можно использовать для извлечения вложений из сообщений PST без предварительного извлечения всего сообщения. [ExtractAttachments](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractAttachments-com.aspose.email.MessageInfo-) метод [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) можно использовать для этого. В следующем фрагменте кода показано, как извлекать вложения без извлечения всего сообщения.
+API Aspose.Email можно использовать для извлечения вложений из сообщений PST без предварительного извлечения полного сообщения. Метод [ExtractAttachments](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractAttachments-com.aspose.email.MessageInfo-) класса [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) может быть использован для этого. Следующий фрагмент кода показывает, как извлечь вложения без извлечения полного сообщения.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -688,11 +682,11 @@ try (PersonalStorage personalstorage = PersonalStorage.fromFile(dataDir + "Outlo
         }
     }
 }
-~~~
+~~~ 
 
 ## **Добавление файлов в PST**
 
-Ключевые функции Microsoft Outlook — управление электронной почтой, календарями, задачами, контактами и записями журнала. Кроме того, файлы также можно добавлять в папку PST, и полученный PST сохраняет добавленные документы. Aspose.Email предоставляет возможность добавлять файлы в папку таким же образом, а также добавлять сообщения, контакты, задачи и записи журнала в PST. В следующем фрагменте кода показано, как добавлять документы в папку PST с помощью Aspose.Email.
+Ключевая функция Microsoft Outlook - это управление электронной почтой, календарями, задачами, контактами и записями в журнале. Кроме того, файлы также могут быть добавлены в папку PST, и получившийся PST сохраняет записи о добавленных документах. Aspose.Email предоставляет возможность добавлять файлы в папку таким же образом, как и добавление сообщений, контактов, задач и записей в журнал в PST. Следующий фрагмент кода показывает, как добавить документы в папку PST с помощью Aspose.Email.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

@@ -8,38 +8,38 @@ type: docs
 
 ## **Управление вложениями электронной почты**
 
-Вложение электронной почты — это файл, который отправляется вместе с сообщением электронной почты. Файл можно отправить как отдельное сообщение, так и как часть сообщения, к которому он прикреплен. [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс используется с [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. Все сообщения содержат текст. Помимо основного текста, возможно, вы захотите отправить дополнительные файлы. Они отправляются в виде вложений и представлены в виде экземпляров [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс. Можно отправить любое количество вложений, но размер вложения ограничен почтовым сервером. Например, Gmail не поддерживает файлы размером более 10 МБ.
+Вложение электронной почты - это файл, который отправляется вместе с электронным сообщением. Файл может быть отправлен как отдельное сообщение, так и частью сообщения, к которому он прикреплен. Класс [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) используется совместно с классом [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Все сообщения включают текстовое содержание. В дополнение к содержимому вы можете отправлять дополнительные файлы. Они отправляются в виде вложений и представлены как экземпляры класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/). Вы можете отправить любое количество вложений, но размер вложения ограничен почтовым сервером. Gmail, например, не поддерживает размеры файлов более 10 МБ.
 {{% alert %}}
-**Попробуйте!**
+**Попробуйте это!**
 
-Добавляйте или удаляйте вложения электронной почты онлайн бесплатно [**Приложение для редактирования электронной почты Aspose.Email**](https://products.aspose.app/email/ru/editor).
+Добавьте или удалите вложения электронной почты онлайн с помощью бесплатного [**Aspose.Email Editor App**](https://products.aspose.app/email/ru/editor).
 {{% /alert %}}
 
 ### **Добавление вложения**
 
-Чтобы добавить вложение к электронному письму, выполните следующие действия:
+Чтобы добавить вложение к электронной почте, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Создайте экземпляр [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) class.
-1. Загрузите крепление в [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) instance.
-1. Добавьте [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) экземпляр в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Создайте экземпляр класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+3. Загрузите вложение в экземпляр [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+4. Добавьте экземпляр [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-В следующем фрагменте кода показано, как добавить вложение в электронное письмо.
+Следующий фрагмент кода показывает, как добавить вложение к электронному письму.
 
 ```csharp
-// Создайте экземпляр MailMessage class
+// Создайте экземпляр класса MailMessage
 var eml = new MailMessage
 {
     From = "sender@from.com",
     To = "receiver@to.com",
-    Subject = "This is message",
-    Body = "This is body"
+    Subject = "Это сообщение",
+    Body = "Это содержимое"
 };
 
-// Load an attachment
+// Загрузите вложение
 var attachment = new Attachment("1.txt");
 
-// Add Multiple Attachment in instance of MailMessage class and Save message to disk
+// Добавьте несколько вложений в экземпляр класса MailMessage и сохраните сообщение на диск
 eml.Attachments.Add(attachment);
 
 eml.AddAttachment(new Attachment("1.jpg"));
@@ -49,22 +49,20 @@ eml.AddAttachment(new Attachment("1.pdf"));
 eml.Save("AddAttachments.eml");
 ```
 
-Выше мы описали, как добавлять вложения в сообщение электронной почты с помощью Aspose.Email. Ниже показано, как удалять вложения и отображать информацию о них на экране.
+Выше мы описали, как добавить вложения к вашему электронному сообщению с помощью Aspose.Email. Следующий раздел показывает, как удалить вложения и отобразить информацию о них на экране.
 
-### **Добавление справочного вложения**
+### **Добавление ссылочного вложения**
 
-Ссылочное вложение — это тип вложения, который содержит ссылку или ссылку на файл или элемент, а не сам файл или элемент в сообщении электронной почты.
-Когда получатели письма нажмут на ссылочное вложение, они смогут получить доступ к связанному файлу, если у них есть на это соответствующие разрешения.
-Используя вложение ссылки, вы можете отправить электронное сообщение меньшего размера и обеспечить всем доступ к самой последней версии файла или элемента.
+Ссылочное вложение - это тип вложения, который включает ссылку или указание на файл или элемент, а не включает сам файл или элемент в сообщение электронной почты. Когда получатели электронной почты кликают на ссылочное вложение, они смогут получить доступ к связанному файлу, если у них есть соответствующие разрешения. Используя ссылочное вложение, вы можете отправить меньшее сообщение и убедиться, что все имеют доступ к самой актуальной версии файла или элемента.
 
-В приведенном ниже фрагменте кода показано, как добавить справочное вложение к электронному письму. Код выполняет следующие шаги:
+Ниже приведен пример кода, показывающий, как добавить ссылочное вложение к электронному письму. Код выполняет следующие шаги:
 
-1. Загружает файл сообщения электронной почты с помощью [MailMessage.Load()](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) method.
-2. Создает новый объект ReferenceAttachment с именем refAttach, передавая его конструктору URL-адрес вложения «https://[attach_uri]» в качестве параметра.
-3. Устанавливает имя вложения «Document.docx», используя [Name](https://reference.aspose.com/email/net/aspose.email/attachment/name/) свойство объекта refAttach.
-4. Устанавливает тип поставщика вложения на [AttachmentProviderType.OneDrivePro](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) используя [ProviderType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/providertype/) свойство объекта refAttach.
-5. Устанавливает тип разрешения для вложения на [AttachmentPermissionType.AnyoneCanEdit](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) используя [PermissionType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/permissiontype/) свойство объекта refAttach.
-6. Добавляет объект RefAttach в [Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/) коллекция объекта eml с использованием [Add()](https://reference.aspose.com/email/net/aspose.email/attachmentcollection/) method.
+1. Загружает файл электронного сообщения, используя метод [MailMessage.Load()](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2).
+2. Создает новый объект ReferenceAttachment под названием refAttach, передавая URL вложения "https://[attach_uri]" в качестве параметра его конструктора.
+3. Устанавливает имя вложения на "Document.docx" с помощью свойства [Name](https://reference.aspose.com/email/net/aspose.email/attachment/name/) объекта refAttach.
+4. Устанавливает тип провайдера вложения на [AttachmentProviderType.OneDrivePro](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) с помощью свойства [ProviderType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/providertype/) объекта refAttach.
+5. Устанавливает тип разрешения вложения на [AttachmentPermissionType.AnyoneCanEdit](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) с помощью свойства [PermissionType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/permissiontype/) объекта refAttach.
+6. Добавляет объект refAttach в коллекцию [Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/) объекта eml, используя метод [Add()](https://reference.aspose.com/email/net/aspose.email/attachmentcollection/).
 
 ```cs
 var eml = MailMessage.Load("fileName");
@@ -81,59 +79,59 @@ eml.Attachments.Add(refAttach);
 
 ### **Удаление вложения**
 
-Чтобы удалить вложение, выполните следующие действия:
+Чтобы удалить вложение, выполните следующие шаги:
 
-- Создайте экземпляр [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) class.
-- Грузовое крепление в случае [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) class.
-- Добавьте вложение к экземпляру [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Удалите вложения из экземпляра [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс, использующий [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр класса.
+- Создайте экземпляр класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+- Загрузите вложение в экземпляр класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+- Добавьте вложение в экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Удалите вложение из экземпляра класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) с использованием экземпляра класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-В следующем фрагменте кода показано, как удалить вложение.
+Следующий код показывает, как удалить вложение.
 
 ```csharp
-// Создайте экземпляр MailMessage class
+// Создайте экземпляр класса MailMessage
 var eml = new MailMessage {From = "sender@sender.com", To = "receiver@gmail.com"};
 
-// Load an attachment
+// Загрузите вложение
 var attachment = new Attachment("1.txt");
 eml.Attachments.Add(attachment);
 
-// Remove attachment from your MailMessage
+// Удалите вложение из вашего MailMessage
 eml.Attachments.Remove(attachment);
 ```
 
-### **Отображение имени вложенного файла**
+### **Отображение имени файла вложения**
 
-Чтобы отобразить имя вложенного файла, выполните следующие действия:
+Чтобы отобразить имя файла вложения, выполните следующие шаги:
 
-1. Просмотрите вложения в сообщении электронной почты и сохраните каждое вложение.
-2. Отобразите имя каждого вложения на экране.
+1. Пройдитесь по вложениям в электронном сообщении и сохраните каждое вложение.
+2. Отобразите каждое имя вложения на экране.
 
-В следующем фрагменте кода показано, как отобразить имя вложенного файла на экране.
+Следующий фрагмент кода показывает, как отобразить имя файла вложения на экране.
 
 ```csharp
 var eml = MailMessage.Load("Attachments.eml");
 
 foreach (var attachment in eml.Attachments)
 {
-    // Display the the attachment file name
+    // Отобразите имя файла вложения
     Console.WriteLine(attachment.Name);
 }
 ```
 
 ### **Извлечение вложений электронной почты**
 
-В этом разделе описывается, как извлечь вложение из файла электронной почты. Вложение электронной почты — это файл, который отправляется вместе с сообщением электронной почты. Файл можно отправить как отдельное сообщение, так и как часть сообщения, к которому он прикреплен. Все сообщения электронной почты включают возможность отправки дополнительных файлов. Они отправляются в виде вложений и представлены в виде экземпляров [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс. [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс используется с [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс по работе с вложениями. Чтобы извлечь вложения из сообщения электронной почты, выполните следующие действия:
+Эта тема объясняет, как извлечь вложение из файла электронной почты. Вложение электронной почты - это файл, который отправляется вместе с электронным сообщением. Файл может быть отправлен как отдельное сообщение, так и частью сообщения, к которому он прикреплен. Все электронные сообщения включают возможность отправки дополнительных файлов. Они отправляются в виде вложений и представлены как экземпляры класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/). Класс [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) используется с классом [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) для работы с вложениями. Чтобы извлечь вложения из электронного сообщения, выполните следующие шаги:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Загрузите файл электронной почты в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-- Создайте экземпляр [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс и используйте его в цикле для извлечения всех вложений.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Загрузите файл электронной почты в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Создайте экземпляр класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) и используйте его в цикле для извлечения всех вложений.
 - Сохраните вложение и отобразите его на экране.
 
-|**Извлеченные вложения в электронном письме**|
-|: - |
+|**Извлеченные вложения в электронной почте**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_1.png)|
-В следующем фрагменте кода показано, как извлекать вложения электронной почты.
+Следующий фрагмент кода показывает, как извлечь вложения электронной почты.
 
 ```csharp
 var eml = MailMessage.Load("Message.eml", new MsgLoadOptions());
@@ -145,68 +143,68 @@ foreach (var attachment in eml.Attachments)
 }
 ```
 
-#### **Извлечение описания содержимого из вложения**
+#### **Извлечение содержимого описания из вложения**
 
-Aspose.Email API предоставляет возможность читать описание содержимого вложения из заголовка вложения. В следующем фрагменте кода показано, как извлечь описание содержимого из вложения.
+API Aspose.Email предоставляет возможность считывать содержимое описания вложения из заголовка вложения. Следующий фрагмент кода показывает, как извлечь описание содержимого из вложения.
 
 ```csharp
 var eml = MailMessage.Load("EmailWithAttachEmbedded.eml");
 Console.WriteLine(eml.Attachments[0].Headers["Content-Description"]);
 ```
 
-#### **Определение того, является ли вложение встроенным сообщением**
+#### **Определение, является ли вложение встроенным сообщением**
 
-В следующем фрагменте кода показано, как определить, является ли вложение встроенным сообщением или нет.
+Следующий фрагмент кода демонстрирует, как определить, является ли вложение встроенным сообщением или нет.
 
 ```csharp
 var eml = MailMessage.Load("EmailWithAttachEmbedded.eml");
 
 Console.WriteLine(eml.Attachments[0].IsEmbeddedMessage
-    ? "Attachment is an embedded message."
-    : "Attachment isn't an embedded message.");
+    ? "Вложение является встроенным сообщением."
+    : "Вложение не является встроенным сообщением.");
 ```
 
-## **Работа со встроенными изображениями**
+## **Работа с встроенными изображениями**
 
-### **Добавить встроенное изображение в тело письма**
+### **Добавление встроенного изображения в тело электронной почты**
 
-The [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/) класс используется с [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс для встраивания объектов в сообщение электронной почты. Чтобы добавить встроенный объект, выполните следующие действия
+Класс [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/) используется совместно с классом [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) для встраивания объектов в ваше электронное сообщение. Чтобы добавить встроенный объект, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Укажите значения «от», «до» и «тема» в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Создайте экземпляр [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) class.
-1. Создайте экземпляр [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/) class.
-1. Загрузите встроенный объект в [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/).
-1. Добавьте загруженный встроенный объект в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр класса.
-1. Добавьте [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) экземпляр к [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) экземпляр класса.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Укажите значения от кого, кому и тему в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+3. Создайте экземпляр класса [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview).
+4. Создайте экземпляр класса [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/).
+5. Загрузите встроенный объект в [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/).
+6. Добавьте загруженный встроенный объект в экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+7. Добавьте экземпляр [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) в экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-Приведенные ниже фрагменты кода создают сообщение электронной почты, содержащее как обычный текст, так и текст HTML, а также изображение, встроенное в HTML.
+Ниже приведены фрагменты кода, которые создают электронное сообщение с текстовым и HTML содержанием и изображением, встроенным в HTML.
 
-|**Изображение, встроенное в электронную почту**|
-|: - |
+|**Изображение, встроенное в электронное письмо**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_2.png)|
-Можно отправить любое количество встроенных объектов. Размер вложения ограничен почтовым сервером. Например, Gmail не поддерживает файлы размером более 10 МБ. В приведенных ниже фрагментах кода показано, как встраивать объекты в электронное письмо.
+Вы можете отправить любое количество встроенных объектов. Размер вложения ограничен почтовым сервером. Gmail, например, не поддерживает размеры файлов более 10 МБ. Ниже приведены фрагменты кода, демонстрирующие, как встроить объекты в электронную почту.
 
 ```csharp
 var eml = new MailMessage
 {
     From = "AndrewIrwin@from.com",
     To = "SusanMarc@to.com",
-    Subject = "This is an email"
+    Subject = "Это электронное письмо"
 };
 
-// Create the plain text part It is viewable by those clients that don't support HTML
+// Создайте часть с простым текстом. Она будет доступна тем клиентам, которые не поддерживают HTML.
 var plainView =
-    AlternateView.CreateAlternateViewFromString("This is my plain text content", null, "text/plain");
+    AlternateView.CreateAlternateViewFromString("Это мое содержание в простом тексте", null, "text/plain");
 
-// Create the HTML part.To embed images, we need to use the prefix 'cid' in the img src value.
-// The cid value will map to the Content-Id of a Linked resource. Thus <img src='cid:barcode'>
-// will map to a LinkedResource with a ContentId of 'barcode'.
+// Создайте HTML часть. Чтобы встроить изображения, нужно использовать префикс 'cid' в значении img src.
+// Значение cid будет соответствовать Content-Id связанного ресурса. Таким образом, <img src='cid:barcode'>
+// будет соответствовать LinkedResource с ContentId 'barcode'.
 var htmlView =
-    AlternateView.CreateAlternateViewFromString("Here is an embedded image.<img src=cid:barcode>", null,
+    AlternateView.CreateAlternateViewFromString("Вот встроенное изображение.<img src=cid:barcode>", null,
         "text/html");
 
-// Create the LinkedResource (embedded image) and Добавьте LinkedResource to the appropriate view
+// Создайте LinkedResource (встроенное изображение) и добавьте LinkedResource в соответствующий вид.
 var barcode = new LinkedResource("1.jpg", MediaTypeNames.Image.Jpeg)
 {
     ContentId = "barcode"
@@ -219,43 +217,43 @@ eml.AlternateViews.Add(htmlView);
 eml.Save("EmbeddedImage_out.msg", SaveOptions.DefaultMsgUnicode);
 ```
 
-### **Удалить встроенное изображение из тела письма**
+### **Удаление встроенного изображения из тела электронной почты**
 
-[LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) доступ к которому осуществляется через [MailMessage.LinkedResources](https://reference.aspose.com/email/net/aspose.email/mailmessage/linkedresources/) имущество. Это [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) коллекция предоставляет метод полного удаления встроенных объектов, добавленных в сообщение электронной почты. Используйте перегруженную версию [LinkedResourceCollection.RemoveAt](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/removeat/#removeat/) метод удаления всех следов встроенного объекта из сообщения электронной почты.
+[LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) доступна через свойство [MailMessage.LinkedResources](https://reference.aspose.com/email/net/aspose.email/mailmessage/linkedresources/). Коллекция [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) предоставляет метод для полного удаления встроенных объектов, добавленных в электронное сообщение. Используйте перегруженную версию метода [LinkedResourceCollection.RemoveAt](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/removeat/#removeat/) для удаления всех следов встроенного объекта из электронного сообщения.
 
-В приведенном ниже примере кода показано, как удалить встроенные объекты из сообщения электронной почты.
+Примерный код ниже показывает, как удалить встроенные объекты из электронного сообщения.
 
 ```csharp
-//Load the test message with Linked Resources
+// Загрузите тестовое сообщение с связанными ресурсами
 var eml = MailMessage.Load("EmlWithLinkedResources.eml");
 
-//Remove a LinkedResource
+// Удалите LinkedResource
 eml.LinkedResources.RemoveAt(0, true);
 
-//Now clear the Alternate View for linked Resources
+// Теперь очистите альтернативный вид для связанных ресурсов
 eml.AlternateViews[0].LinkedResources.Clear(true);
 ```
-## **Работа со встроенными объектами**
+## **Работа с встроенными объектами**
 
-Встроенный объект — это объект, созданный в одном приложении и вложенный в документ или файл, созданный другим приложением. Например, электронную таблицу Microsoft Excel можно встроить в отчет Microsoft Word, а видеофайл — в презентацию Microsoft PowerPoint. Когда файл встраивается, а не вставляется или вставляется в другой документ, он сохраняет свой исходный формат. Встроенный документ можно открыть в исходном приложении и изменить.
+Встроенный объект - это объект, который был создан в одном приложении и заключен в документ или файл, созданный другим приложением. Например, электронная таблица Microsoft Excel может быть встроена в отчет Microsoft Word, или видеофайл может быть встроен в презентацию Microsoft PowerPoint. Когда файл встраивается, а не вставляется или копируется в другой документ, он сохраняет свой оригинальный формат. Встроенный документ может быть открыт в оригинальном приложении и изменен.
 
 ### **Извлечение встроенных объектов**
 
-В этом разделе описывается, как извлечь встроенные объекты из файла электронной почты. Встроенный документ можно открыть в исходном приложении и изменить. Чтобы извлечь встроенный объект из сообщения электронной почты, выполните следующие действия:
+Эта тема объясняет, как извлечь встроенные объекты из файла электронной почты. Встроенный документ может быть открыт в оригинальном приложении и изменен. Чтобы извлечь встроенный объект из электронного сообщения, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Загрузите файл электронной почты в [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Создайте цикл и создайте экземпляр [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) класс в нем.
-1. Сохраните вложение и отобразите его на экране.
-1. Укажите адрес отправителя и получателя в поле [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Отправка электронной почты с помощью [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Загрузите файл электронной почты в экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+3. Создайте цикл и создайте экземпляр класса [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) в нем.
+4. Сохраните вложение и отобразите его на экране.
+5. Укажите адреса отправителя и получателя в экземпляре [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+6. Отправьте электронную почту с помощью класса [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/).
 
-Приведенный ниже фрагмент кода извлекает встроенные объекты из электронного письма.
+Следующий фрагмент кода извлекает встроенные объекты из электронной почты.
 
 |**Извлеченные встроенные объекты в электронной почте**|
-|: - |
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_3.png)|
-В следующем фрагменте кода показано, как извлекать встроенные объекты.
+Следующий фрагмент кода показывает, как извлечь встроенные объекты.
 
 ```csharp
 var eml = MailMessage.Load("Message.msg", new MsgLoadOptions());
@@ -267,9 +265,9 @@ foreach (var attachment in eml.Attachments)
 }
 ```
 
-#### **Определите и извлеките встроенное вложение из MSG в формате RTF**
+#### **Идентификация и извлечение встроенного вложения из формата MSG как RTF**
 
-Для сообщений, отформатированных как RTF, следующий код можно использовать для различения и извлечения вложений, которые находятся в строке или отображаются в виде значка в теле сообщения. В следующем фрагменте кода показано, как идентифицировать и извлечь встроенное вложение из файла MSG в формате RTF.
+Для сообщений, отформатированных как RTF, следующий код может быть использован для различения и извлечения вложений, которые являются либо встроенными, либо появляются в виде иконки в теле сообщения. Следующий фрагмент кода показывает, как идентифицировать и извлечь встроенное вложение из MSG формата RTF.
 
 ```csharp
 
@@ -316,29 +314,28 @@ static void SaveAttachment(MapiAttachment attachment, string fileName)
 }
 ```
 
-## **Получение вложений из подписанного электронного письма**
+## **Извлечение вложений из подписанного электронного письма**
 
-Подписанные письма содержат одно **smime.p7m** вложение. Это означает, что электронное письмо зашифровано с помощью SMIME. **Smime.p7m** формат файла — цифровая подпись.
-Чтобы увидеть содержимое этого письма, используйте [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/) метод. Метод возвращает [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) объект без цифровой подписи.
+Подписанные электронные письма содержат одно вложение **smime.p7m**. Это означает, что электронное письмо зашифровано с использованием SMIME. Формат файла **Smime.p7m** является цифровой подписью. Чтобы увидеть содержимое этого электронного письма, используйте метод [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/). Метод возвращает объект [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) без цифровой подписи.
 
 ```csharp
 var signedEml = MailMessage.Load("signed.eml");
-       
+        
 if (signedEml.IsSigned)
 {
     for (var i = 0; i < signedEml.Attachments.Count; i++)
     {
-        Console.WriteLine($@"Signed email attachment{i}: {signedEml.Attachments[i].Name}");
+        Console.WriteLine($@"Подписанное вложение электронного письма{i}: {signedEml.Attachments[i].Name}");
     }
-   
-    // The email is signed. Remove a signature.
+    
+    // Электронное письмо подписано. Удалите подпись.
     var eml = signedEml.RemoveSignature();
-   
-    Console.WriteLine(@"Signature removed.");
+    
+    Console.WriteLine(@"Подпись удалена.");
 
     for (var i = 0; i < eml.Attachments.Count; i++)
     {
-        Console.WriteLine($@"Email attachment{i}: {eml.Attachments[i].Name}");
+        Console.WriteLine($@"Вложение электронного письма{i}: {eml.Attachments[i].Name}");
     }
 }
 ```

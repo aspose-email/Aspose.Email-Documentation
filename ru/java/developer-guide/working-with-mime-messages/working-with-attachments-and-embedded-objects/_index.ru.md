@@ -5,29 +5,28 @@ weight: 20
 type: docs
 ---
 
-
 ## **Управление вложениями электронной почты**
 
-Вложение электронной почты — это файл, который отправляется вместе с сообщением электронной почты. Файл можно отправить как отдельное сообщение, так и как часть сообщения, к которому он прикреплен. [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//) класс используется с [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage//) класс. Все сообщения содержат текст. Помимо основного текста, возможно, вы захотите отправить дополнительные файлы. Они отправляются в виде вложений и представлены в виде экземпляров [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//) класс. Можно отправить любое количество вложений, но размер вложения ограничен почтовым сервером. Например, Gmail не поддерживает файлы размером более 10 МБ.
+Вложение электронной почты – это файл, который отправляется вместе с сообщением электронной почты. Файл может быть отправлен как отдельное сообщение, так и частью сообщения, к которому он прикреплен. Класс [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//) используется вместе с классом [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage//). Все сообщения включают текст. В дополнение к тексту вы можете захотеть отправить дополнительные файлы. Они отправляются в качестве вложений и представлены в виде экземпляра класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//). Вы можете отправить любое количество вложений, но размер вложения ограничивается почтовым сервером. Gmail, например, не поддерживает размеры файлов более 10 МБ.
 {{% alert %}}
-**Попробуйте!**
+**Попробуйте это!**
 
-Добавляйте или удаляйте вложения электронной почты онлайн бесплатно [**Приложение для редактирования электронной почты Aspose.Email**](https://products.aspose.app/email/ru/editor).
+Добавьте или удалите вложения электронной почты онлайн с помощью бесплатного [**Aspose.Email Editor App**](https://products.aspose.app/email/ru/editor).
 {{% /alert %}}
 
 ### **Добавление вложения**
 
-Чтобы прикрепить вложение к электронному письму, выполните следующие действия:
+Чтобы прикрепить вложение к электронному письму, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Создайте экземпляр [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) class.
-1. Загрузите крепление в [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) instance.
-1. Добавьте [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) экземпляр в [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Создайте экземпляр класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+1. Загрузите вложение в экземпляр [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+1. Добавьте экземпляр [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) в экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-В следующем фрагменте кода показано, как добавить вложение в электронное письмо.
+Следующий код показывает, как добавить вложение к вашему электронному письму.
 
 ```java
-// Создайте экземпляр MailMessage class
+// Create an instance of MailMessage class
 MailMessage message = new MailMessage();
 message.setFrom(new MailAddress("sender@from.com"));
 message.getTo().add("receiver@to.com");
@@ -46,21 +45,21 @@ message.addAttachment(new Attachment("1.pdf"));
 message.save("AddAttachments.eml");
 ```
 
-Выше мы описали, как добавлять вложения в сообщение электронной почты с помощью Aspose.Email. Ниже показано, как удалять вложения и отображать информацию о них на экране.
+Выше мы описали, как добавить вложения к вашему сообщению электронной почты с помощью Aspose.Email. Далее показано, как удалить вложения и отобразить информацию о них на экране.
 
 ### **Удаление вложения**
 
-Чтобы удалить вложение, выполните следующие действия:
+Чтобы удалить вложение, выполните следующие шаги:
 
-- Создайте экземпляр [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) class.
-- Грузовое крепление в случае [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) class.
-- Добавьте вложение к экземпляру [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-- Удалите вложения из экземпляра [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) класс, использующий [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) экземпляр класса.
+- Создайте экземпляр класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+- Загрузите вложение в экземпляр класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+- Добавьте вложение в экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Удалите вложения из экземпляра класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) с помощью экземпляра класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-В следующем фрагменте кода показано, как удалить вложение.
+Следующий код показывает, как удалить вложение.
 
 ```java
-// Создайте экземпляр MailMessage class
+// Create an instance of MailMessage class
 MailMessage eml = new MailMessage();
 eml.setFrom(new MailAddress("sender@from.com"));
 eml.getTo().add("receiver@to.com");
@@ -73,15 +72,15 @@ eml.getAttachments().addItem(attachment);
 eml.getAttachments().removeItem(attachment);
 ```
 
-### **Отображение имени вложенного файла**
+### **Отображение имени файла вложения**
 
-Чтобы отобразить имя вложенного файла, выполните следующие действия:
+Чтобы отобразить имя файла вложения, выполните следующие шаги:
 
-1. Просмотрите вложения в сообщении электронной почты и
+1. Пройдитесь по вложениям в сообщении электронной почты и
    1. Сохраните каждое вложение.
-   1. Отобразите имя каждого вложения на экране.
+   1. Отобразите каждое имя вложения на экране.
 
-В следующем фрагменте кода показано, как отобразить имя вложенного файла на экране.
+Следующий код показывает, как отобразить имя файла вложения на экране.
 
 ```java
 MailMessage eml = MailMessage.load("Attachments.eml");
@@ -94,17 +93,17 @@ for (Attachment attachment : eml.getAttachments()) {
 
 ### **Извлечение вложений электронной почты**
 
-В этом разделе описывается, как извлечь вложение из файла электронной почты. Вложение электронной почты — это файл, который отправляется вместе с сообщением электронной почты. Файл можно отправить как отдельное сообщение, так и как часть сообщения, к которому он прикреплен. Все сообщения электронной почты включают возможность отправки дополнительных файлов. Они отправляются в виде вложений и представлены в виде экземпляров [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) класс. [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) класс используется с [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс по работе с вложениями. Чтобы извлечь вложения из сообщения электронной почты, выполните следующие действия:
+Эта тема объясняет, как извлечь вложение из файла электронной почты. Вложение электронной почты – это файл, который отправляется вместе с сообщением электронной почты. Файл может быть отправлен как отдельное сообщение, так и частью сообщения, к которому он прикреплен. Все сообщения электронной почты включают опцию отправки дополнительных файлов. Эти файлы отправляются в качестве вложений и представлены экземплярами класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/). Класс [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) используется с классом [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) для работы с вложениями. Чтобы извлечь вложения из сообщения электронной почты, выполните следующие шаги:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-- Загрузите файл электронной почты в [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-- Создайте экземпляр [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) класс и используйте его в цикле для извлечения всех вложений.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Загрузите файл электронной почты в экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Создайте экземпляр класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) в цикле для извлечения всех вложений.
 - Сохраните вложение и отобразите его на экране.
 
-|**Извлеченные вложения в электронном письме**|
-|: - |
+|**Извлеченные вложения в электронной почте**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_1.png)|
-В следующем фрагменте кода показано, как извлекать вложения электронной почты.
+Следующий код показывает, как извлечь вложения из электронной почты.
 
 ```java
 MailMessage eml = MailMessage.load("Message.eml", new MsgLoadOptions());
@@ -115,18 +114,18 @@ for (Attachment attachment : eml.getAttachments()) {
 }
 ```
 
-#### **Извлечение описания содержимого из вложения**
+#### **Получение Content-Description из вложения**
 
-Aspose.Email API предоставляет возможность читать описание содержимого вложения из заголовка вложения. В следующем фрагменте кода показано, как извлечь описание содержимого из вложения.
+API Aspose.Email предоставляет возможность читать Content-Description вложения из заголовка вложения. Следующий код показывает, как получить описание содержимого вложения.
 
 ```java
 MailMessage eml = MailMessage.load("EmailWithAttachEmbedded.eml");
 System.out.println(eml.getAttachments().get_Item(0).getHeaders().get_Item("Content-Description"));
 ```
 
-#### **Определение того, является ли вложение встроенным сообщением**
+#### **Определение, является ли вложение встроенным сообщением**
 
-В следующем фрагменте кода показано, как определить, является ли вложение встроенным сообщением или нет.
+Следующий код демонстрирует, как определить, является ли вложение встроенным сообщением или нет.
 
 ```java
 MailMessage eml = MailMessage.load("EmailWithAttachEmbedded.eml");
@@ -137,9 +136,9 @@ System.out.println(eml.getAttachments().get_Item(0).isEmbeddedMessage()
 ```
 #### **Определение вложений в формате TNEF**
 
-The [Attachment.isTnef](https://reference.aspose.com/email/java/com.aspose.email/attachment/#isTnef--) свойство Java API Aspose.Email указывает, является ли вложение сообщения сообщением в формате TNEF.
+Свойство [Attachment.isTnef](https://reference.aspose.com/email/java/com.aspose.email/attachment/#isTnef--) API Aspose.Email Java указывает, является ли вложение сообщения форматом TNEF.
 
-В следующем фрагменте кода показано, как определить, имеет ли вложение формат TNEF:
+Следующий код демонстрирует, как определить, является ли вложение в формате TNEF:
 
 ```java
 MailMessage eml = MailMessage.load(fileName);
@@ -151,7 +150,7 @@ for (Attachment attachment : eml.getAttachments()) {
 
 #### **Извлечение URI вложения, если вложение является URI-вложением**
 
-В следующем фрагменте кода показано, как извлечь URI вложения.
+Следующий код демонстрирует, как извлечь URI вложения.
 
 ~~~Java
 MailMessage eml = MailMessage.load("fileName");
@@ -164,20 +163,20 @@ if (attachment.isUri()) {
 }
 ~~~
 
-### **Добавление справочных вложений**
+### **Добавление ссылочных вложений**
 
-Ссылочное вложение является альтернативой локальному вложению файла. В некоторых случаях предпочтительнее использовать вложения ссылок, например, если вы хотите управлять доступом к ним. Следующие классы используются для управления сообщениями электронной почты и их вложениями и манипулирования ими:
+Ссылочное вложение является альтернативой локальному файловому вложению. В некоторых случаях ссылочные вложения могут быть предпочтительнее, например, если вы хотите управлять его доступом. Ниже приведены классы, используемые для управления и манипулирования сообщениями электронной почты и их вложениями:
 
-- [ReferenceAttachment](https://reference.aspose.com/email/java/com.aspose.email/referenceattachment/) - Представляет собой справочное вложение.
-- [AttachmentPermissionType](https://reference.aspose.com/email/java/com.aspose.email/attachmentpermissiontype/) - Данные типа разрешения, связанные с вложением веб-ссылки.
-- [AttachmentProviderType](https://reference.aspose.com/email/java/com.aspose.email/attachmentprovidertype/) - Тип веб-сервиса, манипулирующего вложением.
+- [ReferenceAttachment](https://reference.aspose.com/email/java/com.aspose.email/referenceattachment/) - представляет собой ссылочное вложение.
+- [AttachmentPermissionType](https://reference.aspose.com/email/java/com.aspose.email/attachmentpermissiontype/) - тип данных разрешения, связанный с веб-ссылочным вложением.
+- [AttachmentProviderType](https://reference.aspose.com/email/java/com.aspose.email/attachmentprovidertype/) - тип веб-сервиса, манипулирующего вложением.
 
-В следующем примере кода показано, как загрузить сообщение электронной почты из файла, создать ссылочное вложение с определенными свойствами и добавить вложение к сообщению электронной почты:
+Следующий пример кода демонстрирует, как загрузить сообщение электронной почты из файла, создать ссылочное вложение с определенными свойствами и добавить вложение в сообщение электронной почты:
 
 ```java
 MailMessage eml = MailMessage.load("fileName");
 
-ReferenceAttachment refAttach = new ReferenceAttachment("https://[attach_uri]")
+ReferenceAttachment refAttach = new ReferenceAttachment("https://[attach_uri]");
 refAttach.setName("Document.docx");
 refAttach.setProviderType(AttachmentProviderType.OneDrivePro);
 refAttach.setPermissionType(AttachmentPermissionType.AnyoneCanEdit);
@@ -185,31 +184,31 @@ refAttach.setPermissionType(AttachmentPermissionType.AnyoneCanEdit);
 eml.getAttachments().addItem(refAttach);
 ```
 
-## **Работа со встроенными объектами**
+## **Работа с встроенными объектами**
 
-Встроенный объект — это объект, созданный в одном приложении и вложенный в документ или файл, созданный другим приложением. Например, электронную таблицу Microsoft Excel можно встроить в отчет Microsoft Word, а видеофайл — в презентацию Microsoft PowerPoint. Когда файл встраивается, а не вставляется или вставляется в другой документ, он сохраняет свой исходный формат. Встроенный документ можно открыть в исходном приложении и изменить.
+Встроенный объект – это объект, созданный в одном приложении и заключенный в документ или файл, созданный другим приложением. Например, электронную таблицу Microsoft Excel можно встроить в отчет Microsoft Word, или видеофайл можно встроить в презентацию Microsoft PowerPoint. Когда файл встроен, а не вставлен или вставлен в другой документ, он сохраняет свой первоначальный формат. Встроенный документ можно открыть в оригинальном приложении и изменить.
 
-### **Встраивание объектов в электронное письмо**
+### **Встраивание объектов в электронную почту**
 
-The [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) класс используется с [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) класс для встраивания объектов в сообщения электронной почты. Чтобы добавить встроенный объект, выполните следующие действия
+Класс [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) используется с классом [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) для встраивания объектов в ваши сообщения электронной почты. Чтобы добавить встроенный объект, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Укажите значения «от», «до» и «тема» в [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Создайте экземпляр [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) class.
-1. Создайте экземпляр [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) class.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Укажите значения от, до и темы в экземпляре [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Создайте экземпляр класса [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/).
+1. Создайте экземпляр класса [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/).
 1. Загрузите встроенный объект в [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/).
-1. Добавьте загруженный встроенный объект в [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) экземпляр класса.
-1. Добавьте [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) экземпляр к [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) экземпляр класса.
+1. Добавьте загруженный встроенный объект в экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Добавьте экземпляр [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) в экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-Приведенные ниже фрагменты кода создают сообщение электронной почты, содержащее как обычный текст, так и текст HTML, а также изображение, встроенное в HTML.
+Примеры кода ниже создают сообщение электронной почты с текстовой и HTML-частями и изображением, встроенным в HTML.
 
 |**Изображение, встроенное в электронную почту**|
-|: - |
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_2.png)|
-Можно отправить любое количество встроенных объектов. Размер вложения ограничен почтовым сервером. Например, Gmail не поддерживает файлы размером более 10 МБ. В приведенных ниже фрагментах кода показано, как встраивать объекты в электронное письмо.
+Вы можете отправить любое количество встроенных объектов. Размер вложения ограничивается почтовым сервером. Gmail, например, не поддерживает размеры файлов более 10 МБ. Примеры кода ниже демонстрируют, как встроить объекты в электронную почту.
 
 ```java
-// Создайте экземпляр MailMessage class and Set the addresses and Set the content
+// Create an instance of the MailMessage class and Set the addresses and Set the content
 MailMessage mail = new MailMessage();
 mail.setFrom(new MailAddress("sender@from.com"));
 mail.getTo().add("receiver@to.com");
@@ -218,12 +217,12 @@ mail.setSubject("This is an email");
 // Create the plain text part It is viewable by those clients that don't support HTML
 AlternateView plainView = AlternateView.createAlternateViewFromString("This is my plain text content", null, "text/plain");
 
-// Create the HTML part.To embed images, we need to use the prefix 'cid' in the img src value.
-// The cid value will map to the Content-Id of a Linked resource.
+// Create the HTML part.To embed images, we need to use the prefix 'cid' in the img src value. 
+// The cid value will map to the Content-Id of a Linked resource. 
 // Thus <img src='cid:barcode'> will map to a LinkedResource with a ContentId of //'barcode'.
 AlternateView htmlView = AlternateView.createAlternateViewFromString("Here is an embedded image.<img src=cid:barcode>", null, "text/html");
 
-// Create the LinkedResource (embedded image) and Добавьте LinkedResource to the appropriate view
+// Create the LinkedResource (embedded image) and Add the LinkedResource to the appropriate view
 LinkedResource barcode = new LinkedResource("1.jpg", MediaTypeNames.Image.JPEG);
 barcode.setContentId("barcode");
 
@@ -235,9 +234,9 @@ mail.save("EmbeddedImage_out.msg", SaveOptions.getDefaultMsgUnicode());
 
 ### **Удаление встроенных объектов из электронной почты**
 
-[LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) доступ к которому осуществляется через [MailMessage.LinkedResources](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getLinkedResources--) имущество. Это [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) коллекция предоставляет метод полного удаления встроенных объектов, добавленных в сообщение электронной почты. Используйте перегруженную версию [LinkedResourceCollection.removeAt](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/#removeAt-int-boolean-) метод удаления всех следов встроенного объекта из сообщения электронной почты.
+[LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) доступна через свойство [MailMessage.LinkedResources](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getLinkedResources--). Коллекция [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) предоставляет метод для полного удаления встроенных объектов, добавленных в сообщение электронной почты. Используйте перегруженную версию метода [LinkedResourceCollection.removeAt](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/#removeAt-int-boolean-) для удаления всех следов встроенного объекта из сообщения электронной почты.
 
-В приведенном ниже примере кода показано, как удалить встроенные объекты из сообщения электронной почты.
+Пример кода ниже показывает, как удалить встроенные объекты из сообщения электронной почты.
 
 ```java
 // Load the test message with Linked Resources
@@ -252,21 +251,21 @@ msg.getAlternateViews().get_Item(0).getLinkedResources().clear(true);
 
 ### **Извлечение встроенных объектов**
 
-В этом разделе описывается, как извлечь встроенные объекты из файла электронной почты. Встроенный объект — это объект, созданный в одном приложении и вложенный в документ или файл, созданный другим приложением. Например, электронную таблицу Microsoft Excel можно встроить в отчет Microsoft Word, а видеофайл — в презентацию Microsoft PowerPoint. Когда файл встраивается, а не вставляется или вставляется в другой документ, он сохраняет свой исходный формат. Встроенный документ можно открыть в исходном приложении и изменить. Чтобы извлечь встроенный объект из сообщения электронной почты, выполните следующие действия:
+Эта тема объясняет, как извлечь встроенные объекты из файла электронной почты. Встроенный объект – это объект, созданный в одном приложении и заключенный в документ или файл, созданный другим приложением. Например, электронную таблицу Microsoft Excel можно встроить в отчет Microsoft Word, или видеофайл можно встроить в презентацию Microsoft PowerPoint. Когда файл встроен, а не вставлен или вставлен в другой документ, он сохраняет свой первоначальный формат. Встроенный документ можно открыть в оригинальном приложении и изменить. Чтобы извлечь встроенный объект из сообщения электронной почты, выполните следующие шаги:
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Загрузите файл электронной почты в [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Создайте цикл и создайте экземпляр [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) класс в нем.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Загрузите файл электронной почты в экземпляр [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Создайте цикл и создайте экземпляр класса [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) в нем.
 1. Сохраните вложение и отобразите его на экране.
-1. Укажите адрес отправителя и получателя в поле [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Отправка электронной почты с помощью [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) class.
+1. Укажите адреса отправителя и получателя в экземпляре [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Отправьте электронное письмо с помощью класса [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/).
 
-Приведенный ниже фрагмент кода извлекает встроенные объекты из электронного письма.
+Пример кода ниже извлекает встроенные объекты из электронной почты.
 
 |**Извлеченные встроенные объекты в электронной почте**|
-|: - |
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_3.png)|
-В следующем фрагменте кода показано, как извлекать встроенные объекты.
+Следующий код показывает, как извлечь встроенные объекты.
 
 ```java
 MailMessage mailMsg = MailMessage.load("Message.msg", new MsgLoadOptions());
@@ -277,9 +276,9 @@ for (Attachment attachment : mailMsg.getAttachments()) {
 }
 ```
 
-#### **Определите и извлеките встроенное вложение из MSG в формате RTF**
+#### **Определение и извлечение встроенного вложения из MSG, отформатированного как RTF**
 
-Следующий код можно использовать для сообщений, отформатированных в формате RTF, для различения и извлечения вложений, которые находятся в строке или отображаются в виде значка в теле сообщения. В следующем фрагменте кода показано, как идентифицировать и извлечь встроенное вложение из MSG в формате RTF.
+Следующий код можно использовать для сообщений, отформатированных как RTF, чтобы различать и извлекать вложения, которые являются либо встроенными, либо отображаются как иконка в теле сообщения. Следующий код показывает, как идентифицировать и извлечь встроенное вложение из MSG, отформатированного как RTF.
 
 ```java
 public static void extractInlineAttachments() {
@@ -318,11 +317,11 @@ static void saveAttachment(MapiAttachment attachment, String fileName) throws IO
 }
 ```
 
-## **Получение вложений из подписанного электронного письма**
+## **Извлечение вложений из подписанных писем**
 
-Подписанные письма содержат одно **smime.p7m** вложение. Это означает, что электронное письмо зашифровано с помощью SMIME.
-**Smime.p7m** формат файла — цифровая подпись.
-Чтобы увидеть содержимое этого письма, используйте [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/) метод. Метод возвращает [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) объект без цифровой подписи.
+Подписанные письма содержат одно вложение **smime.p7m**. Это означает, что письмо зашифровано SMIME. 
+Формат файла **Smime.p7m** – это цифровая подпись. 
+Чтобы увидеть содержимое этого письма, используйте метод [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/). Метод возвращает объект [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) без цифровой подписи.
 
 ```java
 MailMessage signedEml = MailMessage.load("signed.eml");
@@ -343,13 +342,13 @@ if (signedEml.isSigned()) {
 }
 ```
 
-### **Работа с типом контента и расположением контента**
+### **Работа с Content-Type и Content-Disposition**
 
-Aspose.Email API предоставляет возможность работы с вложением [Content-Type](https://datatracker.ietf.org/doc/html/rfc2045#section-5) and [Content-Disposition](https://datatracker.ietf.org/doc/html/rfc2183) из заголовка вложения. В следующем фрагменте кода показано, как получить и изменить описание содержимого из вложения.
+API Aspose.Email предоставляет возможность работать с [Content-Type](https://datatracker.ietf.org/doc/html/rfc2045#section-5) и [Content-Disposition](https://datatracker.ietf.org/doc/html/rfc2183) вложения из заголовка вложения. Следующий код показывает, как получить и изменить описание содержимого из вложения.
 
-#### **Отображение параметров типа контента и расположения контента**
+#### **Отображение параметров Content-Type и Content-Disposition**
 
-В следующем фрагменте кода показано, как отображать на экране параметры Content-Type и Content-Disposition:
+Следующий код показывает, как отобразить параметры Content-Type и Content-Disposition на экране:
 
 ~~~Java
 void run(MailMessage message) {
@@ -384,11 +383,11 @@ void printContentDisposition(ContentDisposition contentDisposition) {
     System.out.println("read-date: " + contentDisposition.getReadDate());
     System.out.println("size: " + contentDisposition.getSize());
 }
-~~~
+~~~ 
 
-#### **Использование параметров типа контента и расположения содержимого с вложениями**
+#### **Использование параметров Content-Type и Content-Disposition с вложениями**
 
-В следующем фрагменте кода показано, как использовать параметры Content-Type и Content-Disposition с вложением:
+Следующий код показывает, как использовать параметры Content-Type и Content-Disposition с вложением:
 
 ~~~Java
 MailMessage eml = MailMessage.load(fileName);

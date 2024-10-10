@@ -1,19 +1,19 @@
 ---
-title: "Настроить ведение журнала активности"
+title: "Настройка журналирования активности"
 url: /ru/net/set-up-activity-logging/
 weight: 41
 type: docs
 ---
 
-Ведение журнала используется для отладки, а также для сбора и анализа рабочей информации о приложении. Файлы журнала содержат системную информацию о работе клиентского приложения.
+Журналирование используется для отладки, а также для сбора и анализа рабочей информации о приложении. Файлы журналов содержат системную информацию о работе клиентского приложения.
 
-## **Включите ведение журнала активности с помощью файла appsettings.json**
+## **Включение журналирования активности с использованием файла appsettings.json**
 
-> **_NOTE:_** Этот вариант предпочтителен для приложений.NET Core.
+> **_ПРИМЕЧАНИЕ:_** Этот вариант предпочтителен для приложений .NET Core.
 
-Ниже приведены шаги, чтобы включить вход в систему [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+Следующие шаги позволяют включить журналирование в [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
 
-- Добавьте файл конфигурации appsettings.json в проект C#, если он не был добавлен ранее. Убедитесь, что файл проекта содержит следующие строки в разделе ItemGroup:
+- Добавьте файл конфигурации appsettings.json в проект C#, если он еще не был добавлен. Убедитесь, что файл проекта содержит следующие строки в секции ItemGroup:
 
   ```xml
   <Content Include="appsettings.json">
@@ -21,7 +21,7 @@ type: docs
   </Content>
   ```
 
-- Затем добавьте следующее содержимое в файл appsettings.json.
+- Затем добавьте следующий контент в файл appsettings.json.
 
   ```json
   {
@@ -30,22 +30,22 @@ type: docs
   }
   ```
 
-Есть два свойства:
+Существует два свойства:
 
 - `EWSDiagnosticLog` - Указывает относительный или абсолютный путь к файлу журнала.
-- `EWSDiagnosticLog_UseDate` - указывает, следует ли добавить строковое представление текущей даты к имени файла журнала.
+- `EWSDiagnosticLog_UseDate` - указывает, следует ли добавлять строковое представление текущей даты к имени файла журнала.
 
-## **Включить ведение журнала активности в программном коде**
+## **Включение журналирования активности в коде программы**
 
-Вы также можете сразу включить логирование в коде.
+Вы также можете немедленно включить журналирование в коде.
 
-> **_NOTE:_** даже если вы уже включили ведение журнала с помощью файлов конфигурации, эта опция будет применена.
+> **_ПРИМЕЧАНИЕ:_** даже если вы уже включили журналирование с использованием файлов конфигурации, этот вариант будет применен.
 
-Ниже приведены шаги, чтобы включить логирование в EWSClient.
+Следующие шаги позволяют включить журналирование в EWSClient.
 
 - Создайте [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
-- Задайте путь к файлу журнала, используя [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/logfilename/) property.
-- Установите [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/usedateinlogfilename/) имущество, если это необходимо.
+- Установите путь к файлу журнала с помощью свойства [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/logfilename/).
+- Установите свойство [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/usedateinlogfilename/), если это необходимо.
 
 ```csharp
 using (var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Exchange.asmx", credentials))
@@ -55,14 +55,14 @@ using (var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Ex
 }
 ```
 
-## **Включите ведение журнала активности с помощью файла App.config**
+## **Включение журналирования активности с использованием файла App.config**
 
-Этот вариант подходит для приложений, где `app.config` является предпочтительным способом сохранения конфигурации приложения.
+Этот вариант подходит для приложений, где `app.config` является предпочтительным способом хранения конфигурации приложения.
 
-Ниже приведены шаги, чтобы включить вход в систему [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+Следующие шаги позволяют включить журналирование в [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
 
-- Добавьте файл конфигурации приложения в проект C#, если он не был добавлен ранее.
-- Добавьте следующее содержимое в файл конфигурации.
+- Добавьте файл конфигурации приложения в проект C#, если он еще не был добавлен.
+- Добавьте следующий контент в файл конфигурации.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -85,7 +85,7 @@ using (var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Ex
 </configuration>
 ```
 
-Есть два раздела настроек:
+Существует два раздела настроек:
 
 - `EWSDiagnosticLog` - Указывает относительный или абсолютный путь к файлу журнала.
-- `EWSDiagnosticLog_UseDate` - указывает, следует ли добавить строковое представление текущей даты к имени файла журнала.
+- `EWSDiagnosticLog_UseDate` - указывает, следует ли добавлять строковое представление текущей даты к имени файла журнала.

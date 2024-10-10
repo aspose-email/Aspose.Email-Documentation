@@ -1,5 +1,5 @@
 ---
-title: "Живые демоверсии"
+title: "Живые демонстрации"
 url: /ru/python-net/live-demos/
 weight: 100
 type: docs
@@ -20,7 +20,7 @@ type: docs
 <a href="https://products.aspose.app/email/ru/viewer">
 <div class="democard">
 <h3 style="text-align: center">
-Средство просмотра электронной почты
+Просмотрщик электронной почты
 </h3>
 </div>
 </a>
@@ -53,7 +53,7 @@ type: docs
 <a href="https://products.aspose.app/email/ru/conversion/eml-to-jpg">
 <div class="democard">
 <h3 style="text-align: center">
-Конвертер из EML в JPG
+Конвертер EML в JPG
 </h3>
 </div>
 </a>
@@ -63,7 +63,7 @@ type: docs
 <a href="https://products.aspose.app/email/ru/conversion/eml-to-msg">
 <div class="democard">
 <h3 style="text-align: center">
-Конвертер из EML в MSG
+Конвертер EML в MSG
 </h3>
 </div>
 </a>
@@ -140,17 +140,17 @@ type: docs
 
 
 <style>
-.демокарта {
- заполнение: 20 пикселей;
- фон: #f5f7fb;
- радиус границы: 12 пикселей;
- минимальная высота: 150 пикселей;
- дисплей: гибкий;
- выравнивание элементов: по центру;
- justify-content: центр;
- flex-flow: столбец;
- тень прямоугольника: 0 пикселей 20 пикселей, 10 пикселей — 26 пикселей #333;
- рамка: 1 пиксель, сплошная #f2f2f2;
- верхнее поле: 50 пикселей;
+.democard {
+    padding: 20px;
+    background: #f5f7fb;
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    box-shadow: 0 20px 10px -26px #333;
+    border: 1px solid #f2f2f2;
+    margin-top: 50px;
 }
 </style>

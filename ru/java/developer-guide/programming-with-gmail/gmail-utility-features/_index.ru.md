@@ -1,5 +1,5 @@
 ---
-title: "Функции утилиты Gmail"
+title: "Утилиты Gmail"
 url: /ru/java/gmail-utility-features/
 weight: 10
 type: docs
@@ -7,52 +7,52 @@ type: docs
 
 
 ## **Работа с запросом FreeBusy**
-Aspose.Email предоставляет механизм запросов, позволяющий проверить, назначена ли встреча в соответствии с критериями. [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery) Для этого предусмотрен класс, позволяющий подготовить запрос к определенному календарю.
+Aspose.Email предоставляет механизм запросов для проверки, запланирована ли встреча в соответствии с заданными критериями. Для этой цели предоставляется класс [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery), который позволяет подготовить запрос для определённого календаря.
 ### **Запрос календаря**
-В этом примере кода показана возможность запроса календаря. В этом примере выполняются следующие задачи:
+Этот пример кода демонстрирует возможность запроса календаря. В этом примере выполняются следующие задачи:
 
 1. Создание и вставка календаря
-1. Назначьте встречу
-1. Укажите встречу
-1. Подготовьте [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery)
-1. Получите [FreebusyResponse](https://reference.aspose.com/email/java/com.aspose.email/FreebusyResponse)
+1. Создание встречи
+1. Вставка встречи
+1. Подготовка [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery)
+1. Получение [FreebusyResponse](https://reference.aspose.com/email/java/com.aspose.email/FreebusyResponse)
 
 ```java
-// Use the OAuthUser and GoogleOAuthHelper classes below to receive an access token
+// Используйте классы OAuthUser и GoogleOAuthHelper ниже для получения токена доступа
 IGmailClient client = GmailClient.getInstance(accessToken, "user@domain.com");
 try {
     Calendar newCalendar = new Calendar("summary", null, null, "Europe/Kiev");
 
-    // Insert calendar and get back id of newly inserted calendar and Fetch the same calendar using calendar id
+    // Вставьте календарь и получите идентификатор вновь вставленного календаря, затем получите тот же календарь, используя идентификатор календаря
     String id = client.createCalendar(newCalendar);
     Calendar fetchedCalendar = client.fetchCalendar(id);
     String calendarId = fetchedCalendar.getId();
     try {
-        // Get list of appointments in newly inserted calendar. It should be zero
+        // Получите список встреч в вновь вставленном календаре. Он должен быть равен нулю
         Appointment[] appointments = client.listAppointments(calendarId);
 
-        // Create a new appointment and Calculate appointment start and finish time
+        // Создайте новую встречу и рассчитайте время начала и окончания встречи
         java.util.Calendar c = java.util.Calendar.getInstance();
         Date startDate = c.getTime();
         c.add(java.util.Calendar.HOUR_OF_DAY, 1);
         Date endDate = c.getTime();
 
-        // Create attendees list for appointment
+        // Создайте список участников для встречи
         MailAddressCollection attendees = new MailAddressCollection();
         attendees.add("user1@domain.com");
         attendees.add("user2@domain.com");
 
-        // Create appointment
+        // Создайте встречу
         Appointment app1 = new Appointment("Location", startDate, endDate, MailAddress.to_MailAddress("user2@domain.com"), attendees);
         app1.setSummary("Summary");
         app1.setDescription("Description");
         app1.setStartTimeZone("Europe/Kiev");
         app1.setEndTimeZone("Europe/Kiev");
 
-        // Insert the newly created appointment and get back the same in case of successful insertion
+        // Вставьте вновь созданную встречу и получите её при успешной вставке
         Appointment newAppointment = client.createAppointment(calendarId, app1);
 
-        // Create Freebusy query by setting min/max timeand time zone
+        // Создайте запрос Freebusy, установив минимальное/максимальное время и временную зону
         FreebusyQuery query = new FreebusyQuery();
         c = java.util.Calendar.getInstance();
         c.add(java.util.Calendar.DATE, -1);
@@ -61,7 +61,7 @@ try {
         query.setTimeMax(c.getTime());
         query.setTimeZone("Europe/Kiev");
 
-        // Set calendar item to search and Получите reponse of query containing
+        // Установите элемент календаря для поиска и получите ответ на запрос
         query.getItems().add(calendarId);
         FreebusyResponse resp = client.getFreebusyInfo(query);
 
@@ -73,53 +73,53 @@ try {
     client.dispose();
 }
 ```
-## **Создание проекта в консоли разработчика Google**
-Проект должен быть создан в консоли разработчика Google для пользователя, имеющего учетную запись Gmail. На странице API & auth -> Учетные данные проекта Google необходимо указать такую информацию, как идентификатор клиента и секрет клиента. Эта информация, а также имя пользователя и пароль учетной записи Gmail потребуются для выполнения кода, например, календарь Google, списки контроля доступа, встречи, контакты, настройки и т. д. в этом разделе.
-### **Шаги по созданию проекта в консоли разработчика Google**
-Ниже приводится пошаговое руководство по созданию проекта в консоли разработчика Google.
+## **Создание проекта в Google Developer Console**
+Проект должен быть создан в Google Developer Console для пользователя с Gmail-аккаунтом. На странице API и авторизация -> Учетные данные Google проекта нужно записать информацию, такую как идентификатор клиента и секрет клиента. Эта информация вместе с именем пользователя и паролем Gmail потребуется для выполнения кода, например, для работы с Google Calendar, списками контроля доступа, встречами, контактами, настройками и т.д. в этом разделе.
+### **Шаги для создания проекта в Google Developer Console**
+Ниже представлено пошаговое руководство по созданию проекта в Google Developer Console.
 
-1. Перейти по ссылке <https://console.cloud.google.com> и войдите в систему, используя свои учетные данные gmail
+1. Перейдите по ссылке <https://console.cloud.google.com> и войдите с использованием данных своей учетной записи Gmail.
 
-2. Установите флажок «Я прочитал и согласен со всеми Условиями обслуживания продуктов Google Cloud Platform» и нажмите **НОВЫЙ ПРОЕКТ** button
+2. Установите флажок "Я прочитал и согласен со всеми условиями обслуживания продуктов Google Cloud Platform." и нажмите кнопку **НОВЫЙ ПРОЕКТ**.
 
 ![todo:image_alt_text](gmail-utility-features_1.png)
 
-3. **Create** and **Select** новый проект
+3. **Создайте** и **Выберите** новый проект.
 
 ![todo:image_alt_text](gmail-utility-features_2.png)
 
-4. Select **Library** и включите API контактов и календаря
+4. Выберите **Библиотека** и включите API контактов и календаря.
 
 ![todo:image_alt_text](gmail-utility-features_6.png)
 
-5. Open **Экран согласия OAuth**
+5. Откройте **Экран согласия OAuth**.
 
 ![todo:image_alt_text](gmail-utility-features_3.png)
 
-6. Select **External** установите флажок и нажмите **CREATE** button
+6. Установите флажок **Внешний** и нажмите кнопку **СОЗДАТЬ**.
 
 ![todo:image_alt_text](gmail-utility-features_4.png)
 
-7. Отредактируйте регистрацию приложения и нажмите **СОХРАНИТЬ И ПРОДОЛЖИТЬ** button
+7. Отредактируйте регистрацию приложения и нажмите кнопку **СОХРАНИТЬ И ПРОДОЛЖИТЬ**.
 
 ![todo:image_alt_text](gmail-utility-features_5.png)
 
-8. Добавьте области и нажмите **UPDATE** button
+8. Добавьте области и нажмите кнопку **ОБНОВИТЬ**.
 
 ![todo:image_alt_text](gmail-utility-features_7.png)
 
-9. Создайте учетные данные OAuth
+9. Создайте учетные данные OAuth.
 
 ![todo:image_alt_text](gmail-utility-features_8.png)
 
-10. Идентификатор клиента и секрет клиента здесь, которые будут использованы в примерах кодов в этом разделе.
+10. Идентификатор клиента и секрет клиента здесь, которые будут использоваться в примерах кода в этом разделе.
 
 ![todo:image_alt_text](gmail-utility-features_9.png)
 
 ## **Вспомогательные классы**
-Для запуска примеров кода, приведенных в этом разделе, необходимы следующие вспомогательные классы. Эти классы `GoogleOAuthHelper` and `OAuthUser` предназначены только для упрощения демонстрации. Методы этих классов используют закрытую структуру веб-страниц, которая может измениться в любое время.
-### **Вспомогательный класс Google OAuth**
-В следующем фрагменте кода показано, как реализовать `GoogleOAuthHelper` class.
+Для выполнения примеров кода в этом разделе требуются следующие вспомогательные классы. Эти классы `GoogleOAuthHelper` и `OAuthUser` предназначены только для упрощения демонстрации. Методы в этих классах используют непубличную структуру веб-страниц, которая может изменяться в любое время.
+### **Класс GoogleOAuthHelper**
+Следующий фрагмент кода показывает, как реализовать класс `GoogleOAuthHelper`.
 
 ```java
 import java.io.BufferedReader;
@@ -143,8 +143,8 @@ import javax.xml.bind.DatatypeConverter;
 
 /**
  * <p>
- * Developers console https://console.developers.google.com/projectselector/apis/credentials?pli=1
- * Documentation https://developers.google.com/identity/protocols/OAuth2InstalledApp
+ * Консоль разработчика https://console.developers.google.com/projectselector/apis/credentials?pli=1 
+ * Документация https://developers.google.com/identity/protocols/OAuth2InstalledApp
  * </p>
  */
 class GoogleOAuthHelper {
@@ -152,8 +152,8 @@ class GoogleOAuthHelper {
     public static final String TOKEN_REQUEST_URL = "https://oauth2.googleapis.com/token";
     public static final String REDIRECT_URI = "urn:ietf:wg:oauth:2.0:oob";
     public static final String REDIRECT_TYPE = "code";
-    public static final String SCOPE = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar" // Calendar
-            + "+https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds%2F" // Contacts
+    public static final String SCOPE = "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar" // Календарь
+            + "+https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds%2F" // Контакты
             + "+https%3A%2F%2Fmail.google.com%2F"; // IMAP & SMTP
 
     static class OAuthUser {
@@ -187,16 +187,16 @@ class GoogleOAuthHelper {
 
     static String getAuthorizationCodeUrl(OAuthUser acc, String scope, String redirectUri, String responseType) {
         System.out.println("---------------------------------------------------------");
-        System.out.println("------------- OAuth 2.0 AuthorizationCodeUrl -------------");
+        System.out.println("------------- URL авторизации OAuth 2.0 -------------");
         System.out.println("---------------------------------------------------------");
-        System.out.println("Login: " + acc.email);
+        System.out.println("Логин: " + acc.email);
         String codeChallenge = createCodeChalange();
 
         String state = urlEncode(UUID.randomUUID().toString());
         String approveUrl = AUTHORIZATION_URL + "?client_id=" + acc.clientId + "&redirect_uri=" + redirectUri + "&response_type=" + responseType + "&scope=" + scope
                 + "&code_challenge=" + codeChallenge + "&code_challenge_method=S256&state=" + state;
 
-        System.out.println("Approve Url: " + approveUrl);
+        System.out.println("URL для подтверждения: " + approveUrl);
         return approveUrl;
     }
 
@@ -222,7 +222,7 @@ class GoogleOAuthHelper {
         System.out.println("---------------------------------------------------------");
         System.out.println("------------- OAuth 2.0 AccessTokenByAuthCode -------------");
         System.out.println("---------------------------------------------------------");
-        System.out.println("Authorization code: " + authorizationCode);
+        System.out.println("Авторизационный код: " + authorizationCode);
 
         String result = "";
         Map<String, String> token = geToken(encodedParameters);
@@ -244,7 +244,7 @@ class GoogleOAuthHelper {
         System.out.println("---------------------------------------------------------");
         System.out.println("----------- OAuth 2.0 AccessTokenByRefreshToken -----------");
         System.out.println("---------------------------------------------------------");
-        System.out.println("Login: " + user.email);
+        System.out.println("Логин: " + user.email);
 
         String result = "";
         Map<String, String> token = geToken(encodedParameters);
@@ -284,7 +284,7 @@ class GoogleOAuthHelper {
             connection.connect();
 
             if (connection.getResponseCode() >= HttpURLConnection.HTTP_BAD_REQUEST) {
-                throw new IllegalAccessError("Operation failed: " + connection.getResponseCode() + "/" + connection.getResponseMessage() + "\r\nDetails:\r\n{2}"
+                throw new IllegalAccessError("Операция не удалась: " + connection.getResponseCode() + "/" + connection.getResponseMessage() + "\r\nДетали:\r\n{2}"
                         + readInputStream(connection.getErrorStream()));
             }
 
@@ -318,18 +318,18 @@ class GoogleOAuthHelper {
                 result.append(line);
             }
         } catch (IOException e) {
-            // ignore
+            // игнорировать
         }
         return result.toString();
     }
 }
 ```
 
-**Помощник Google по аутентификации** следует использовать следующим образом:
-1. Сначала необходимо сгенерировать URL-адрес кода авторизации.
-1. Откройте URL-адрес в браузере и выполните все операции. В результате вы получите код авторизации.
+**Google OAuth Helper** должен использоваться следующим образом:
+1. Сначала необходимо сгенерировать URL авторизации.
+1. Откройте URL в браузере и выполните все операции. В результате вы получите код авторизации.
 1. Используйте код авторизации для получения токена обновления.
-1. Если токен обновления существует, вы можете использовать его для получения токенов доступа.
+1. Когда токен обновления существует, вы можете использовать его для получения токенов доступа.
 
 ```java
 static class OAuthUser {
@@ -343,32 +343,32 @@ static void getRefreshToken() {
     Scanner inputReader = new Scanner(System.in);
     OAuthUser user = new OAuthUser();
 
-    // Set clientId, clientSecret and email
-    System.out.println("Set clientId: ");
+    // Установите clientId, clientSecret и email
+    System.out.println("Установите clientId: ");
     user.clientId = inputReader.nextLine();
-    System.out.println("Set clientSecret: ");
+    System.out.println("Установите clientSecret: ");
     user.clientSecret = inputReader.nextLine();
-    System.out.println("Set email: ");
+    System.out.println("Установите email: ");
     user.email = inputReader.nextLine();
 
-    // Generate AuthorizationCodeUrl
+    // Генерация URL для AuthorizationCode
     String authorizationCodeUrl = GoogleOAuthHelper.getAuthorizationCodeUrl(user);
 
-    System.out.println("You have to retrieve AuthorizationCode manually with generated AuthorizationCodeUrl");
-    System.out.println("Set authorizationCode: ");
+    System.out.println("Вы должны вручную получить AuthorizationCode с помощью сгенерированного AuthorizationCodeUrl");
+    System.out.println("Установите authorizationCode: ");
     String authorizationCode = inputReader.nextLine();
-    System.out.println("Copy Code Verifier from the previous step output");
-    System.out.println("Set codeVerifier: ");
+    System.out.println("Скопируйте Code Verifier из предыдущего шага.");
+    System.out.println("Установите codeVerifier: ");
     String codeVerifier = inputReader.nextLine();
 
-    // Get "Refresh Token"
+    // Получите "Refresh Token"
     String refreshToken = GoogleOAuthHelper.getAccessTokenByAuthCode(authorizationCode, codeVerifier, user);
     user.refreshToken = refreshToken;
 
-    // Get "Access Token"
+    // Получите "Access Token"
     String accessToken = GoogleOAuthHelper.getAccessTokenByRefreshToken(user);
-   
-    // Use "Access Token" in API
+    
+    // Используйте "Access Token" в API
     IGmailClient client = GmailClient.getInstance(accessToken, user.email);
 }
 ```

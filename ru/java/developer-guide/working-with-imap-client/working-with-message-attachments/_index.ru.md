@@ -1,20 +1,20 @@
 ---
-title: "Работа с вложениями сообщений с помощью IMAP"
-url: /ru/java/working-with-message-attachments-using-imap/
+title: "Работа с вложениями сообщений с использованием IMAP"
+url: /ru/java/работа-с-вложениями-сообщений-с-использованием-imap/
 weight: 30
 type: docs
 ---
 
 
-## **Список вложений сообщений с помощью клиента IMAP**
+## **Список вложений сообщений с использованием IMAP-клиента**
 
-Чтобы получить информацию о вложениях, таких как имя, размер, без извлечения данных вложения, используйте следующие функции API:
+Чтобы получить информацию о вложениях, таких как имя, размер, не извлекая данные вложений, используйте следующие функции API:
 
-- [ImapAttachmentInfo](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfo/) - Представляет собой информацию о вложении.
-- [ImapAttachmentInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfocollection/) - Представляет собой коллекцию IMapAttachmentInfo.
-- [Список вложений (целочисленный порядковый номер)](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listAttachments-int-) - Получает информацию о каждом вложении в сообщении.
+- [ImapAttachmentInfo](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfo/) - Представляет информацию о вложении. 
+- [ImapAttachmentInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfocollection/) - Представляет коллекцию ImapAttachmentInfo. 
+- [listAttachments(int sequenceNumber)](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listAttachments-int-) - Получает информацию для каждого вложения в сообщении.
 
-В следующем примере кода показано, как использовать клиент IMAP для получения информации о сообщениях электронной почты и их вложениях с сервера и последующего отображения сведений о вложениях для каждого сообщения. Он позволяет получать доступ к вложениям из сообщений электронной почты и обрабатывать их с помощью протокола IMAP.
+Следующий пример кода демонстрирует, как использовать IMAP-клиент для получения информации о электронных письмах и их вложениях с сервера, а затем отображает детали вложений для каждого сообщения. Это позволяет вам получать доступ к вложениям из электронных сообщений и обрабатывать их с использованием протокола IMAP.
 
 ```java
 ImapMessageInfoCollection messageInfoCollection = imapClient.listMessages();
@@ -25,9 +25,7 @@ for (ImapMessageInfo message : messageInfoCollection) {
 
     for (ImapAttachmentInfo attachmentInfo : attachmentInfoCollection) {
         System.out.println(
-                "Attachment: " + attachmentInfo.getName() + " (size: " + attachmentInfo.getSize() + ")");
+                "Вложение: " + attachmentInfo.getName() + " (размер: " + attachmentInfo.getSize() + ")");
     }
 }
 ```
-
-

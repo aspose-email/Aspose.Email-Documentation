@@ -1,5 +1,5 @@
 ---
-title: "Работа с сообщениями с сервера IMAP"
+title: "Работа с сообщениями с IMAP-сервера"
 url: /ru/python-net/working-with-messages-from-imap-server/
 weight: 70
 type: docs
@@ -8,18 +8,18 @@ type: docs
 
 ## **Получение идентификационной информации для сообщений, полученных из почтового ящика**
 
-При получении и обработке сообщений электронной почты вы можете получить подробную информацию о сообщениях, используя их порядковые номера.
+При получении и обработке электронных писем вы можете извлекать детали сообщений с помощью их последовательных номеров.
 
-Для взаимодействия с почтовым ящиком IMAP используются следующие функции:
+Для взаимодействия с IMAP-почтовым ящиком используются следующие функции:
 
-- [Aspose.Email.ImapMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) class — представляет идентификационную информацию о сообщении в почтовом ящике.
+- [Aspose.Email.ImapMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) класс - представляет идентификационную информацию о сообщении в почтовом ящике.
 
-- [Aspose.Email.ImapMessageInfo.sequence_number](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) свойство - порядковый номер сообщения.
+- [Aspose.Email.ImapMessageInfo.sequence_number](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) свойство - последовательный номер сообщения.
 
 - [Aspose.Email.ImapMessageInfo.unique_id](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) свойство - уникальный идентификатор сообщения.
 
 
-В приведенном ниже фрагменте кода показано, как получить идентификационную информацию о сообщениях:
+Ниже приведен фрагмент кода, показывающий, как получить идентификационную информацию о сообщениях:
 
 ```py
 import aspose.email as ae
@@ -29,26 +29,24 @@ client = ae.clients.imap.ImapClient("imap.domain.com", 993, "user@domain.com", "
 msg_infos = client.list_messages("INBOX")
 
 for msg_info in msg_infos:
-    # fetch by sequence number
+    # извлечение по последовательному номеру
     msg = client.fetch_message(msg_info.sequence_number)
 
-    # fetch by unique id
+    # извлечение по уникальному идентификатору
     msg = client.fetch_message(msg_info.unique_id)
 ```
 
 
-## **Отображение идентификаторов сообщений MIME с сервера**
-IMapMessageInfo предоставляет MIME MessageID для идентификации сообщения без извлечения всего сообщения. В следующем фрагменте кода показано, как указать MIME MessageID.
-
-
+## **Список MIME-идентификаторов сообщений с сервера**
+ImapMessageInfo предоставляет MIME MessageId для идентификации сообщений без извлечения полного сообщения. Ниже приведен фрагмент кода, показывающий, как перечислить MIME messageId.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-ListingMIMEMessageIdInImapMessageInfo-ListingMIMEMessageIdInImapMessageInfo.py" >}}
 
 ## **Список сообщений с сервера**
 
-Метод 'list_messages' [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) класс извлекает список всех сообщений из выбранной в данный момент папки (в данном случае «Входящие»). Этот список содержит объекты метаданных сообщений, которые обычно включают такую информацию, как идентификаторы сообщений, порядковые номера, идентификаторы UID и, возможно, сводные данные, такие как темы или сведения об отправителе.
+Метод 'list_messages' класса [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) извлекает список всех сообщений из текущей выбранной папки (в данном случае "Входящие"). Этот список содержит объекты метаданных сообщений, которые обычно включают информацию, такую как идентификаторы сообщений, последовательные номера, UIDs и, возможно, сводные данные, такие как темы сообщений или информация о отправителе.
 
-В приведенном ниже фрагменте кода показано, как извлечь метаданные сообщений из папки «Входящие» и распечатать общее количество содержащихся в них сообщений:
+Ниже приведен фрагмент кода, демонстрирующий, как извлечь метаданные сообщений из Входящих и напечатать общее количество содержащихся в них сообщений:
 
 ```py
 import aspose.email as ae
@@ -58,19 +56,17 @@ client = ae.clients.imap.ImapClient("imap.domain.com", 993, "user@domain.com", "
 client.select_folder("Inbox")
 
 messages = client.list_messages()
-print(f"Total Messages: {len(messages)}")
+print(f"Всего сообщений: {len(messages)}")
 ```
 
 ## **Рекурсивный список сообщений с сервера**
-Протокол IMAP поддерживает рекурсивный список сообщений из папки почтового ящика. Это также помогает отображать сообщения из подпапок папки. В следующем фрагменте кода показано, как рекурсивно перечислять сообщения.
-
-
+Протокол IMAP поддерживает рекурсивное перечисление сообщений из папки почтового ящика. Это помогает перечислить сообщения из подпапок. Ниже приведен фрагмент кода, показывающий, как рекурсивно перечислить сообщения.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-ListingMessagesRecursively-ListingMessagesRecursively.py" >}}
 
 ## **Список сообщений с помощью MultiConnection**
 
-The [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) класс предоставляет свойство use_multi_connection для использования нескольких подключений для высоконагруженных операций. Можно также задать количество подключений в режиме нескольких подключений с помощью свойства 'connections_quantity'. Приведенный ниже фрагмент кода демонстрирует использование режима нескольких подключений в списках сообщений: 
+Класс [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) предоставляет свойство 'use_multi_connection' для использования нескольких соединений для операций с высокой нагрузкой. Вы также можете установить количество соединений в режиме многосоединения, используя свойство 'connections_quantity'. Ниже приведен фрагмент кода, демонстрирующий использование режима многосоединения при перечислении сообщений:
 
 ```py
 import aspose.email as ae
@@ -83,11 +79,11 @@ client.use_multi_connection = ae.clients.MultiConnectionMode.ENABLE
 
 message_info_col = client.list_messages(True)
 ```
-*Обратите внимание, что использование этого режима не обязательно должно приводить к повышению производительности.*
+*Пожалуйста, имейте в виду, что использование этого режима не обязательно приведет к увеличению производительности.*
 
-## **Получайте сообщения в порядке убывания**
+## **Получение сообщений в порядке убывания**
 
-Задача решается путем определения параметров разбиения на страницы для извлечения сообщений. Для этого используйте свойство 'ascending_sorting' в поле [PageSettings](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/pagesettings/#pagesettings-class) класс, входящий в модуль клиента IMAP. Задайте атрибуту ascending_sorting в объекте PageSettings значение False. Это означает, что во время извлечения сообщения по умолчанию следует сортировать в порядке убывания. В следующем фрагменте кода показано, как извлекать сообщения в порядке убывания:
+Задача достигается путем определения настроек страницы для извлечения сообщений. Для этой цели используйте свойство 'ascending_sorting' класса [PageSettings](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/pagesettings/#pagesettings-class), который является частью модуля IMAP-клиента. Установите атрибут 'ascending_sorting' на объекте PageSettings в False. Это указывает на то, что сообщения должны быть отсортированы по убыванию по умолчанию при извлечении. Ниже приведен фрагмент кода, показывающий, как извлечь сообщения в порядке убывания:
 
 ```py
 import aspose.email as ae
@@ -103,121 +99,116 @@ for message in messages:
     print(message.subject)
 ```
 
-## **Получение сообщений с сервера и сохранение на диск**
-Класс IMAPClient может получать сообщения с сервера IMAP и сохранять сообщения в формате EML на локальный диск. Для сохранения сообщений на диск необходимо выполнить следующие шаги:
+## **Извлечение сообщений с сервера и сохранение на диск**
+Класс ImapClient может извлекать сообщения с IMAP-сервера и сохранять сообщения в формате EML на локальном диске. Для сохранения сообщений на диск требуется выполнить следующие шаги:
 
-1. Создайте экземпляр класса IMAPClient.
-1. Укажите имя хоста, имя пользователя и пароль в конструкторе IMapClient.
-1. Выберите папку с помощью метода selectFolder ().
-1. Вызовите метод ListMessages, чтобы получить объект IMapMessageInfoCollection.
-1. Просмотрите коллекцию IMapMessageInfoCollection, вызовите метод saveMessage () и укажите путь к выходным данным и имя файла.
+1. Создайте экземпляр класса ImapClient.
+1. Укажите имя хоста, имя пользователя и пароль в конструкторе ImapClient.
+1. Выберите папку, используя метод SelectFolder().
+1. Вызовите метод ListMessages для получения объекта ImapMessageInfoCollection.
+1. Переберите коллекцию ImapMessageInfoCollection, вызовите метод SaveMessage() и укажите путь к выходному файлу и имя файла.
 
-В следующем фрагменте кода показано, как получать сообщения электронной почты с сервера и сохранять их.
-
-
+Ниже приведен фрагмент кода, показывающий, как извлечь электронные письма с сервера и сохранить их.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-FetchEmailMessageFromServer-FetchEmailMessageFromServer.py" >}}
+
 ## **Сохранение сообщений в формате MSG**
-В приведенном выше примере электронные письма сохраняются в формате EML. Чтобы сохранить электронные письма в формате MSG, необходимо вызвать метод IMAPClient.fetchMessage (). Он возвращает сообщение в экземпляре класса MailMessage. Затем можно вызвать метод MailMessage.save () для сохранения сообщения в MSG. В следующем фрагменте кода показано, как сохранять сообщения в формате MSG.
-
-
+В приведенном выше примере электронные письма сохраняются в формате EML. Чтобы сохранить электронные письма в формате MSG, необходимо вызвать метод ImapClient.FetchMessage(). Он возвращает сообщение в экземпляре класса MailMessage. Затем можно вызвать метод MailMessage.Save(), чтобы сохранить сообщение в формате MSG. Ниже приведен фрагмент кода, показывающий, как сохранить сообщения в формате MSG.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-SavingMessageFromIMAPServer-SavingMessageFromIMAPServer.py" >}}
 
-## **Получайте сообщения по порядковому номеру или уникальному идентификатору**
+## **Извлечение сообщений по последовательному номеру или уникальному идентификатору**
 
-Библиотека позволяет создать два списка сообщений, один из которых содержит порядковые номера, а другой — уникальные идентификаторы всех сообщений в папке «Входящие». Чтобы получать сообщения с сервера IMAP по этим идентификаторам, используйте метод fetch_messages [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) класс. В приведенном ниже фрагменте кода показано, как перечислить сообщения по идентификаторам:
+Библиотека позволяет генерировать два списка сообщений: один с последовательными номерами, другой с уникальными идентификаторами всех сообщений во входящих. Чтобы извлечь сообщения с IMAP-сервера по этим идентификаторам, используйте метод 'fetch_messages' класса [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class). Ниже приведен фрагмент кода, демонстрирующий, как перечислить сообщения по идентификаторам:
 
 ```py
 import aspose.email as ae
 
 client = ae.clients.imap.ImapClient("imap.domain.com", 993, "user@domain.com", "pwd", ae.clients.SecurityOptions.SSL_IMPLICIT)
 
-# List messages
+# Перечисление сообщений
 message_info_col = client.list_messages()
-print("ListMessages Count:", message_info_col.count)
+print("Количество ListMessages:", message_info_col.count)
 
-# Get sequence numbers and unique IDs
+# Получаем последовательные номера и уникальные идентификаторы
 sequence_number_ar = [mi.sequence_number for mi in message_info_col]
 unique_id_ar = [mi.unique_id for mi in message_info_col]
 
-# Fetch messages by sequence number
+# Извлечение сообщений по последовательному номеру
 fetched_messages_by_snum = client.fetch_messages(sequence_number_ar)
 print("FetchMessages-sequenceNumberAr Count:", len(fetched_messages_by_snum))
 
-# Fetch messages by UID
+# Извлечение сообщений по UID
 fetched_messages_by_uid = client.fetch_messages(unique_id_ar)
 print("FetchMessages-uniqueIdAr Count:", len(fetched_messages_by_uid))
 ```
 
-## **Список сообщений с поддержкой пейджинга**
-В сценариях, когда почтовый сервер содержит большое количество сообщений в почтовом ящике, часто требуется перечислить или получить сообщения с поддержкой пейджинга. IMapClient API от Aspose.Email позволяет получать сообщения с сервера с поддержкой пейджинга.
-
-
+## **Перечисление сообщений с поддержкой постраничной навигации**
+В ситуациях, когда почтовый сервер содержит большое количество сообщений в почтовом ящике, часто требуется перечислить или извлечь сообщения с поддержкой постраничной навигации. API Aspose.Email для ImapClient позволяет вам извлекать сообщения с сервера с поддержкой постраничной навигации.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-ListingMessagesWithPagingSupport-ListingMessagesWithPagingSupport.py" >}}
 
-## **Список вложений к сообщениям**
+## **Список вложений сообщений**
 
-Чтобы получить информацию о вложениях, такую как имя, размер, без извлечения данных вложений, используйте следующие ресурсы библиотеки:
+Чтобы получить информацию о вложениях, такую как имя, размер без извлечения данных вложения, используйте следующие ресурсы библиотеки:
 
-- [ImapAttachmentInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapattachmentinfo/#imapattachmentinfo-class) класс — представляет информацию о вложении (размер, имя, тип носителя).
+- [ImapAttachmentInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapattachmentinfo/#imapattachmentinfo-class) класс - представляет информацию о вложении (размер, имя, тип медиа).
 
-- [ImapAttachmentInfoCollection](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapattachmentinfocollection/#imapattachmentinfocollection-class) класс - представляет собой коллекцию [ImapAttachmentInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapattachmentinfo/#imapattachmentinfo-class).
+- [ImapAttachmentInfoCollection](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapattachmentinfocollection/#imapattachmentinfocollection-class) класс - представляет коллекцию [ImapAttachmentInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapattachmentinfo/#imapattachmentinfo-class).
 
-- '`list_attachments(sequence_number)`'метод [`ImapClient`](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) class - получает итерацию или набор вложенной информации для сообщения.
+- '`list_attachments(sequence_number)`' метод класса [`ImapClient`](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) - получает итерабельную или коллекцию информации о вложениях для сообщения.
 
 ```py
-# List messages
+# Перечисление сообщений
 message_info_col = client.list_messages()
 
-# Iterate through each message
+# Перебор каждого сообщения
 for message_info in message_info_col:
-    print(f"Attachments for message with sequence number {message_info.sequence_number}:")
+    print(f"Вложения для сообщения с последовательным номером {message_info.sequence_number}:")
 
-    # List attachments for the current message
+    # Перечисление вложений для текущего сообщения
     attachment_info_col = client.list_attachments(message_info.sequence_number)
 
-    # Iterate through each attachment
+    # Перебор каждого вложения
     for attachment_info in attachment_info_col:
-        print(f"Attachment: {attachment_info.name} (size: {attachment_info.size})")
+        print(f"Вложение: {attachment_info.name} (размер: {attachment_info.size})")
 ```
-## **Получение папок и рекурсивное чтение сообщений**
+## **Получение папок и чтение сообщений рекурсивно**
 
-[ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) использует рекурсивный метод для вывода списка папок и подпапок с сервера IMAP. Этот же метод также используется для чтения и сохранения сообщений на локальном диске в формате MSG. Папки и сообщения создаются и сохраняются в той же иерархической структуре, что и на сервере IMAP. В следующем фрагменте кода показано, как рекурсивно получать папки и сообщения:
+[ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) использует рекурсивный метод для перечисления папок и подпапок с IMAP-сервера. Тот же метод также используется для чтения и сохранения сообщений на локальный диск в формате MSG. Папки и сообщения создаются и сохраняются в той же иерархической структуре, что и на IMAP-сервере. Ниже приведен фрагмент кода, показывающий, как получить папки и сообщения рекурсивно:
 
 ```py
 import aspose.email as ae
 import os
 
-# Recursive method to get messages from folders and sub-folders
+# Рекурсивный метод для получения сообщений из папок и подпапок
 def list_messages_in_folder(folder_info, root_folder, client):
-    # Create the folder on disk (same name as on the IMAP server)
+    # Создаем папку на диске (такое же имя, как на IMAP-сервере)
     current_folder = os.path.join(root_folder, folder_info.name)
     os.makedirs(current_folder, exist_ok=True)
 
-    # Read the messages from the current folder, if it is selectable
+    # Чтение сообщений из текущей папки, если она может быть выбрана
     if folder_info.selectable:
-        # Send a status command to get folder info
+        # Отправить команду статуса для получения информации о папке
         folder_info_status = client.get_folder_info(folder_info.name)
         print(
-            f"{folder_info_status.name} folder selected. New messages: {folder_info_status.new_message_count}, "
-            f"Total messages: {folder_info_status.total_message_count}"
+            f"Папка {folder_info_status.name} выбрана. Новые сообщения: {folder_info_status.new_message_count}, "
+            f"Всего сообщений: {folder_info_status.total_message_count}"
         )
 
-        # Select the current folder and list messages
+        # Выберите текущую папку и перечислите сообщения
         client.select_folder(folder_info.name)
         msg_info_coll = client.list_messages()
-        print("Listing messages....")
+        print("Перечисление сообщений....")
         for msg_info in msg_info_coll:
-            # Get subject and other properties of the message
-            print("Subject:", msg_info.subject)
+            # Получение темы и других свойств сообщения
+            print("Тема:", msg_info.subject)
             print(
-                f"Read: {msg_info.is_read}, Recent: {msg_info.recent}, Answered: {msg_info.answered}"
+                f"Прочитано: {msg_info.is_read}, Последнее: {msg_info.recent}, Ответили: {msg_info.answered}"
             )
 
-            # Get rid of characters like ? and :, which should not be included in a file name
-            # Save the message in MSG format
+            # Избавление от символов, таких как ? и :, которые не должны быть включены в имя файла
+            # Сохранение сообщения в формате MSG
             file_name = (
                 msg_info.subject.replace(":", " ").replace("?", " ")
                 + "-"
@@ -231,45 +222,42 @@ def list_messages_in_folder(folder_info, root_folder, client):
             )
         print("============================\n")
     else:
-        print(f"{folder_info.name} is not selectable.")
+        print(f"{folder_info.name} не может быть выбрана.")
 
     try:
-        # If this folder has sub-folders, call this method recursively to get messages
+        # Если у этой папки есть подпапки, рекурсивно вызовите этот метод для получения сообщений
         folder_info_collection = client.list_folders(folder_info.name)
         for subfolder_info in folder_info_collection:
             list_messages_in_folder(subfolder_info, root_folder, client)
     except Exception:
         pass
 
-
-
 client = ae.clients.imap.ImapClient("imap.domain.com", 993, "user@domain.com", "pwd", ae.clients.SecurityOptions.SSL_IMPLICIT)
 
 try:
-    # The root folder (which will be created on disk) consists of host and username
+    # Корневая папка (которая будет создана на диске) состоит из хоста и имени пользователя
     root_folder = f"{client.host}-{client.username}"
 
-    # Create the root folder and list all the folders from the IMAP server
+    # Создаем корневую папку и перечисляем все папки с IMAP-сервера
     os.makedirs(root_folder, exist_ok=True)
     folder_info_collection = client.list_folders()
     for folder_info in folder_info_collection:
-        # Call the recursive method to read messages and get sub-folders
+        # Вызываем рекурсивный метод для чтения сообщений и получения подпапок
         list_messages_in_folder(folder_info, root_folder, client)
 except Exception as ex:
         print("\n", ex)
 
-print("\nDownloaded messages recursively from IMAP server.")
+print("\nЗагружены сообщения рекурсивно с IMAP-сервера.")
 ```
 
 
-## **Получение дополнительных параметров в виде сводной информации**
-
+## **Извлечение дополнительных параметров как сводной информации**
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-RetreiveExtraParametersAsSummaryInformation-RetreiveExtraParametersAsSummaryInformation.py" >}}
 
-## **Получение информации в заголовке списка «Отказаться от подписки»**
+## **Получение информации заголовка List-Unsubscribe**
 
-Заголовок «ListUnsubscribe» обычно включается в заголовки сообщений электронной почты, отправляемых списками рассылки или автоматизированными системами электронной почты. В нем содержится ссылка или адрес электронной почты, по которым получатели могут отказаться от подписки на список рассылки или автоматические электронные письма. Aspose.Email предоставляет свойство list_unsubscribe, принадлежащее [ImapMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) класс для получения этого заголовка. Приведенный ниже фрагмент кода демонстрирует использование этого свойства и может использоваться как часть системы для автоматизации процесса отписки от нежелательных писем:
+Заголовок "ListUnsubscribe" обычно включается в заголовки электронных сообщений, отправленных почтовыми рассылками или автоматизированными системами. Он предоставляет ссылку или адрес электронной почты, который получатели могут использовать для отказа от рассылки или автоматических писем. Aspose.Email предоставляет свойство 'list_unsubscribe' класса [ImapMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapmessageinfo/#imapmessageinfo-class) для получения этого заголовка. Ниже приведен фрагмент кода, демонстрирующий использование этого свойства и который может быть использован как часть системы для автоматизации процесса отказа от нежелательных электронных писем:
 
 ```py
 import aspose.email as ae
@@ -278,7 +266,7 @@ client = ae.clients.imap.ImapClient("imap.domain.com", 993, "user@domain.com", "
 
 message_info_col = client.list_messages()
 
-# Iterate through each message
+# Перебор каждого сообщения
 for imap_message_info in message_info_col:
-    print("ListUnsubscribe Header:", imap_message_info.list_unsubscribe)
+    print("Заголовок ListUnsubscribe:", imap_message_info.list_unsubscribe)
 ```

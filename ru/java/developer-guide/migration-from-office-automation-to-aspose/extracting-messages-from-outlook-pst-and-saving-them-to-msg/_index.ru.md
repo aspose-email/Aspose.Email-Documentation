@@ -1,24 +1,24 @@
 ---
-title: "Извлечение сообщений из Outlook PST и сохранение их в формате MSG"
+title: "Извлечение сообщений из Outlook PST и сохранение их в MSG"
 url: /ru/java/extracting-messages-from-outlook-pst-and-saving-them-to-msg/
 weight: 60
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-В этом совете по миграции показано, как извлечь сообщения из файла Outlook PST и сохранить их на диске в виде файлов MSG. Это включает в себя несколько этапов:
+Этот совет по миграции показывает, как извлечь сообщения из файла PST Outlook и сохранить их на диске в виде файлов MSG. Это включает несколько этапов:
 
-1. Прочитайте файл Outlook PST,
-1. извлеките сообщения и, наконец,
-1. сохраните извлеченные сообщения.
+1. Прочитать файл PST Outlook,
+1. извлечь сообщения и, наконец,
+1. сохранить извлеченные сообщения.
 
-Существуют разные способы достижения одного и того же результата: в этой статье сравнивается использование VSTO и Aspose.Email. Во-первых, это [примеры кода для использования Microsoft Office Interop](#using-microsoft-office-interop) для извлечения сообщений из PST. После этого примера [примеры кода показывают, как использовать Aspose.Email Outlook](#using-asposeemail), на Java, для выполнения той же задачи.
+Существует несколько способов достигнуть того же результата: эта статья сравнивает использование VSTO и Aspose.Email. Сначала идут [примеры кода для использования Microsoft Office Interop](#using-microsoft-office-interop) для извлечения сообщений из PST. После этого примера [примеры кода показывают, как использовать Aspose.Email Outlook](#using-asposeemail), на Java, для выполнения той же задачи.
 
-{{% /alert %}}
-## **Использование интерфейса Microsoft Office**
-Чтобы использовать объекты автоматизации делопроизводства для Microsoft Outlook, добавьте в проект ссылки на библиотеки Microsoft Office Interop для Outlook. Microsoft Office Outlook также должен быть установлен на компьютере, на котором работает код. В приведенном ниже примере кода используется пространство имен Microsoft.Office.Interop.Outlook.
+{{% /alert %}} 
+## **Использование Microsoft Office Interop**
+Чтобы использовать объекты автоматизации Office для Microsoft Outlook, добавьте ссылки на библиотеки Microsoft Office Interop для Outlook в проект. Microsoft Office Outlook также должен быть установлен на машине, на которой выполняется код. Пространство имен, используемое в следующем примере кода, - Microsoft.Office.Interop.Outlook.
 ### **Примеры программирования**
 **C#**
 
@@ -30,15 +30,15 @@ Application app = new Application();
 
 NameSpace outlookNs = app.GetNamespace("MAPI");
 
-// Add PST file (Outlook Data File) to Default Profile
+// Добавить файл PST (файл данных Outlook) в профиль по умолчанию
 
 outlookNs.AddStore(pstFilePath);
 
 MAPIFolder rootFolder = outlookNs.Stores["items"].GetRootFolder();
 
-// Traverse through all folders in the PST file
+// Перебирать все папки в файле PST
 
-// TODO: This is not recursive
+// TODO: Это не рекурсивно
 
 Folders subFolders = rootFolder.Folders;
 
@@ -56,15 +56,15 @@ foreach (Folder folder in subFolders)
 
         {
 
-            // Retrieve the Object into MailItem
+            // Извлечь объект в MailItem
 
             MailItem mailItem = item as MailItem;
 
-            Console.WriteLine("Saving message {0} ....", mailItem.Subject);
+            Console.WriteLine("Сохранение сообщения {0} ....", mailItem.Subject);
 
-            // Save the message to disk in MSG format
+            // Сохранить сообщение на диск в формате MSG
 
-            // TODO: File name may contain invalid characters [\ / : * ? " < > |]
+            // TODO: Имя файла может содержать недопустимые символы [\ / : * ? " < > |]
 
             mailItem.SaveAs(@"\extracted\" + mailItem.Subject + ".msg",OlSaveAsType.olMSG);
 
@@ -74,39 +74,39 @@ foreach (Folder folder in subFolders)
 
 }
 
-// Remove PST file from Default Profile
+// Удалить файл PST из профиля по умолчанию
 
 outlookNs.RemoveStore(rootFolder);
 
 ~~~
 ## **Использование Aspose.Email**
-Следующие фрагменты кода делают то же самое, что и [приведенный выше код](#using-microsoft-office-interop) но использует Aspose.Email. После установки Aspose.Email для Java Microsoft Outlook больше не требуется на компьютере. Просто обратитесь к Aspose.Email, чтобы успешно создать и запустить проект.
+Следующие фрагменты кода выполняют то же самое, что и [код выше](#using-microsoft-office-interop), но используют Aspose.Email. При установленном Aspose.Email для Java Microsoft Outlook больше не нужен на машине. Просто укажите Aspose.Email, чтобы успешно собрать и выполнить проект.
 ### **Примеры программирования**
 
 ~~~Java
 
 String pstFilePath = "C:\\sample.pst";
 
-// Create an instance of PersonalStorage and load the PST from file
+// Создайте экземпляр PersonalStorage и загрузите PST из файла
 try (PersonalStorage personalStorage = PersonalStorage.fromFile(pstFilePath)) {
-    // Get the list of subfolders in PST file
+    // Получите список подпапок в файле PST
     FolderInfoCollection folderInfoCollection = personalStorage.getRootFolder().getSubFolders();
 
-    // Traverse through all folders in the PST file
-    // This is not recursive
+    // Перебрать все папки в файле PST
+    // Это не рекурсивно
     for (FolderInfo folderInfo : folderInfoCollection) {
-        // Get all messages in this folder
+        // Получить все сообщения в этой папке
         MessageInfoCollection messageInfoCollection = folderInfo.getContents();
 
-        // Loop through all the messages in this folder
+        // Перебрать все сообщения в этой папке
         for (MessageInfo messageInfo : messageInfoCollection) {
-            // Extract the message in MapiMessage instance
+            // Извлечь сообщение в экземпляр MapiMessage
             MapiMessage message = personalStorage.extractMessage(messageInfo);
 
-            System.out.println("Saving message " + message.getSubject() + " ...");
+            System.out.println("Сохранение сообщения " + message.getSubject() + " ...");
 
-            // Save the message to disk in MSG format
-            // TODO: File name may contain invalid characters [\ / : * ? " < > |]
+            // Сохранить сообщение на диск в формате MSG
+            // TODO: Имя файла может содержать недопустимые символы [\ / : * ? " < > |]
             message.save("\\extracted\\" + message.getSubject() + ".msg");
         }
     }

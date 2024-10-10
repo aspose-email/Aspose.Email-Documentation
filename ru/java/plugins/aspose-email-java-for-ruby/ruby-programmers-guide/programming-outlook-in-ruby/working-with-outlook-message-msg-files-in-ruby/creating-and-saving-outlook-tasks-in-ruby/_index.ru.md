@@ -1,14 +1,14 @@
 ---
-title: "Создание и сохранение задач Outlook в Ruby"
+title: "Создание и сохранение задач Outlook на Ruby"
 url: /ru/java/creating-and-saving-outlook-tasks-in-ruby/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - создание и сохранение задач Outlook**
-Для создания задач Outlook с помощью **Aspose.Электронная почта Java для Ruby**, просто вызовите **CreateOutlookTask** модуль. Здесь вы можете увидеть пример кода.
+## **Aspose.Email - Создание и сохранение задач Outlook**
+Чтобы создать задачи Outlook с использованием **Aspose.Email Java для Ruby**, просто вызовите модуль **CreateOutlookTask**. Здесь вы можете ознакомиться с примером кода.
 
-**Код Ruby**
+**Код на Ruby**
 
 ``` ruby
 
@@ -67,7 +67,7 @@ task.save(data_dir + "MapiTask.msg", Rjb::import('com.aspose.email.TaskSaveForma
 puts "Created outlook task successfully."
 
 ```
-## **Загрузить рабочий код**
-Download **Создание и сохранение задач Outlook (Aspose.Email)** с любого из нижеперечисленных сайтов социального программирования:
+## **Скачать рабочий код**
+Скачайте **Создание и сохранение задач Outlook (Aspose.Email)** с любого из нижеупомянутых сайтов социальной программной разработки:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/createoutlooktask.rb)

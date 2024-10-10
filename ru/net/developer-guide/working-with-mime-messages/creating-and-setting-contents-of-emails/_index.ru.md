@@ -1,33 +1,33 @@
 ---
-title: "Создание и настройка содержимого электронных писем в.NET"
+title: "Создание и установка содержимого электронных писем в .NET"
 url: /ru/net/creating-and-setting-contents-of-emails/
 weight: 10
 type: docs
-linktitle: "Создание и настройка содержимого электронных писем"
+linktitle: "Создание и установка содержимого электронных писем"
 ---
 
-## **Создать новое сообщение электронной почты**
+## **Создание нового электронного сообщения**
 
-Чтобы создать новое сообщение электронной почты, вы можете использовать [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. **MailMessage** класс также инициализирует свойства созданного сообщения электронной почты, такие как адрес электронной почты отправителя, адреса электронной почты получателей, тема письма и содержимое текста письма в формате HTML.
+Чтобы создать новое электронное сообщение, вы можете использовать класс [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Класс **MailMessage** также инициализирует свойства создаваемого электронного сообщения, такие как адрес электронной почты отправителя, адреса электронной почты получателей, тему письма и содержимое тела письма в формате HTML.
 
-Рассмотрим следующий код с подробными инструкциями по созданию нового сообщения электронной почты и настройке его свойств.
+Рассмотрим следующий код с детальными шагами для создания нового электронного сообщения и установки его свойств.
 
-**Этапы написания кода:**
+**Шаги кода:**
 
-1. Создайте новый экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-2. Установите [From](https://reference.aspose.com/email/net/aspose.email/mailmessage/from/) свойство к адресу электронной почты отправителя.
-3. Установите [To](https://reference.aspose.com/email/net/aspose.email/mailmessage/to/) свойство списка адресов электронной почты получателей, разделенных запятыми.
-4. Установите [Subject](https://reference.aspose.com/email/net/aspose.email/mailmessage/subject/) свойство к теме письма.
-5. Установите [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) свойство к HTML-содержимому тела письма.
+1. Создайте новый экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Установите свойство [From](https://reference.aspose.com/email/net/aspose.email/mailmessage/from/) на адрес электронной почты отправителя.
+3. Установите свойство [To](https://reference.aspose.com/email/net/aspose.email/mailmessage/to/) на список адресов электронной почты получателей, разделенных запятыми.
+4. Установите свойство [Subject](https://reference.aspose.com/email/net/aspose.email/mailmessage/subject/) на тему письма.
+5. Установите свойство [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) на содержимое тела письма в HTML.
 
 **Пример кода:**
 ```cs
-// Create a new instance of MailMessage class
+// Создайте новый экземпляр класса MailMessage
 var message = new MailMessage
 {
     From = "from@domain.com",
     To = "to1@domain.com, to2@domain.com",
-    Subject = "New message",
+    Subject = "Новое сообщение",
     HtmlBody = @"<!DOCTYPE html>
     <html>
      <head>
@@ -38,8 +38,8 @@ var message = new MailMessage
       </style>
      </head>
      <body>
-       <h3>New message</h3>
-       <p>This is a new message created by Aspose.Email.</p>
+       <h3>Новое сообщение</h3>
+       <p>Это новое сообщение, созданное с помощью Aspose.Email.</p>
      </body>
     </html>"
 };
@@ -47,73 +47,72 @@ var message = new MailMessage
 
 ## **Указание нескольких получателей**
 
-Есть три способа указать получателей сообщения электронной почты: используя **To**, **CC**, или **BCC** fields.
+Существует три способа указать получателей электронного сообщения: используя поля **To**, **CC** или **BCC**.
 
-- **To** поле — основной получатель вашего сообщения. В это поле можно ввести один или несколько адресов электронной почты, разделенных запятыми. Поле «Кому» обязательно для каждого сообщения электронной почты.
+- Поле **To** является основным получателем вашего сообщения. Вы можете ввести один или несколько адресов электронной почты в это поле, разделенных запятыми. Поле To является обязательным для каждого электронного сообщения.
 
-- **CC** поле расшифровывается как копия. Оно используется для отправки копии вашего сообщения другим людям, которые заинтересованы или вовлечены в эту тему. Поле CC необязательно и может содержать несколько адресов электронной почты. Получатели в поле CC могут видеть, кто еще получил сообщение.
+- Поле **CC** означает "копия". Оно используется для отправки копии вашего сообщения другим людям, заинтересованным или вовлеченным в тему. Поле CC является необязательным и также может содержать несколько адресов электронной почты. Получатели в поле CC могут видеть, кто еще получил сообщение.
 
-- **BCC** поле расшифровывается как слепая копия. Оно похоже на поле CC, но получатели в поле BCC скрыты от других получателей. Поле BCC удобно использовать, если вы хотите защитить конфиденциальность некоторых получателей или не загромождать их входящие сообщения ответами. Поле BCC также необязательно и может содержать несколько адресов электронной почты.
+- Поле **BCC** обозначает "слепая копия". Оно похоже на поле CC, но получатели в поле BCC скрыты от других получателей. Поле BCC полезно, когда вы хотите защитить конфиденциальность некоторых получателей или избежать переполнения их почтового ящика ответами. Поле BCC также является необязательным и может иметь несколько адресов электронной почты.
 
-Рассмотрим следующий код с подробными инструкциями по указанию нескольких получателей сообщения электронной почты.
+Рассмотрим следующий код с детальными шагами для указания нескольких получателей для электронного сообщения.
 
-**Этапы написания кода:**
+**Шаги кода:**
 
-1. Создайте новый экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-2. Установите [From](https://reference.aspose.com/email/net/aspose.email/mailmessage/from/) свойство к адресу электронной почты отправителя.
-3. Установите [To](https://reference.aspose.com/email/net/aspose.email/mailmessage/to/) свойство массива адресов электронной почты основных получателей.
-4. Установите [CC](https://reference.aspose.com/email/net/aspose.email/mailmessage/cc/) свойство массива адресов электронной почты получателей, которые получат копию письма.
-5. Установите [Bcc](https://reference.aspose.com/email/net/aspose.email/mailmessage/bcc/) свойство к массиву адресов электронной почты получателей, которые получат слепую копию письма.
+1. Создайте новый экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Установите свойство [From](https://reference.aspose.com/email/net/aspose.email/mailmessage/from/) на адрес электронной почты отправителя.
+3. Установите свойство [To](https://reference.aspose.com/email/net/aspose.email/mailmessage/to/) на массив адресов электронной почты основных получателей.
+4. Установите свойство [CC](https://reference.aspose.com/email/net/aspose.email/mailmessage/cc/) на массив адресов электронной почты получателей, которые получат копию письма.
+5. Установите свойство [Bcc](https://reference.aspose.com/email/net/aspose.email/mailmessage/bcc/) на массив адресов электронной почты получателей, которые получат слепую копию письма.
 
 **Пример кода:**
 
 ```cs
 var eml = new MailMessage
 {
-    // Specify From address
+    // Указать адрес From
     From = "sender@sender.com",
-    //  Specify recipients’ mail addresses
+    // Указать адреса электронной почты получателей
     To = {"receiver1@receiver.com", "receiver2@receiver.com", "receiver3@receiver.com"},
-    // Specify CC addresses
+    // Указать адреса CC
     CC = {"CC1@receiver.com", "CC2@receiver.com"},
-    // Specify BCC addresses
+    // Указать адреса BCC
     Bcc = {"Bcc1@receiver.com", "Bcc2@receiver.com"}
 };
 ```
 
 ## **Добавление отображаемых имен к адресам электронной почты**
 
-Наряду с адресом электронной почты **отображаемое имя** может быть включено для идентификации отправителя или получателя электронного письма. Оно может включать полное имя, псевдоним или другой идентификатор человека.
+Вместе с адресом электронной почты может быть включено **отображаемое имя**, чтобы идентифицировать отправителя или получателя письма. Оно может содержать полное имя человека, прозвище или другой идентификатор.
 
-Когда сообщение электронной почты отображается в почтовом клиенте или интерфейсе веб-почты, отображаемое имя обычно отображается рядом с адресом электронной почты, что позволяет пользователю определить, от кого и кому оно адресовано. Например, адрес электронной почты может быть «johndoe@example.com», но отображаемое имя, связанное с ним, может быть «John Doe».
+Когда электронное сообщение отображается в почтовом клиенте или веб-интерфейсе, отображаемое имя обычно показывается рядом с адресом электронной почты, что облегчает пользователю идентификацию, от кого пришло сообщение или кому оно адресовано. Например, адрес электронной почты может быть "johndoe@example.com", но связанное с ним отображаемое имя может быть "John Doe".
 
-Чтобы добавить отображаемые имена к адресам электронной почты в сообщении электронной почты, рассмотрите следующий код с подробными инструкциями:
+Чтобы добавить отображаемые имена к адресам электронной почты в электронном сообщении, рассмотрим следующий код с детальными шагами:
 
-**Этапы написания кода:**
+**Шаги кода:**
 
-1. Загрузите сообщение электронной почты из файла, используя [MailMessage.Load]() method.
-2. Задайте отправителя электронного письма с помощью [From]() свойство объекта eml путем создания нового [MailAddress]() объект с адресом электронной почты и отображаемым именем отправителя.
-3. Добавьте получателя в электронное письмо, используя [To]() свойство объекта eml, при необходимости добавьте список CC (Carbon Copy), используя [CC]() свойство, список BCC (слепая копия) с использованием [Bcc]() недвижимость и позвоните [Add]() метод с новым [MailAddress]() объект, содержащий адрес электронной почты и отображаемое имя получателя.
+1. Загрузите электронное сообщение из файла, используя метод [MailMessage.Load]() .
+2. Установите отправителя письма, используя свойство [From]() объекта eml, создав новый объект [MailAddress]() с адресом электронной почты и отображаемым именем отправителя.
+3. Добавьте получателя к электронной почте, используя свойство [To]() объекта eml, при необходимости добавьте список CC (копия) с помощью свойства [CC](), список BCC (слепая копия) с помощью свойства [Bcc]() и вызовите метод [Add]() с новым объектом [MailAddress](), который содержит адрес электронной почты и отображаемое имя получателя.
 
 **Пример кода:**
 
 ```cs
-// Load eml from file
+// Загрузите eml из файла
 MailMessage eml = MailMessage.Load(Data.Email/"test.eml");
 
 eml.From = new MailAddress("TimothyFairfield@from.com", "Timothy Fairfield");
 
-// A To address with a friendly name can also be specified like this
+// Адрес To с отображаемым именем также можно указать так
 eml.To.Add(new MailAddress("kyle@to.com", "Kyle Huang"));
 
-// Specify Cc and Bcc email address along with a friendly name
+// Укажите адреса Cc и Bcc, а также отображаемые имена
 eml.CC.Add(new MailAddress("guangzhou@cc.com", "Guangzhou Team"));
 eml.Bcc.Add(new MailAddress("ahaq@bcc.com", "Ammad ulHaq "));
 ```
-## **Отображение дополнительных участников в выходных данных заголовка mht**
+## **Отображение необязательных участников в заголовке вывода mht**
 
-В приведенном ниже примере кода показано, как использовать *показать дополнительных участников* функция при сохранении сообщения в формате mhtml:
-
+Следующий пример кода демонстрирует, как использовать функцию *отображения необязательных участников* при сохранении сообщения в формате mhtml:
 
 ```cs
 MhtSaveOptions options = new MhtSaveOptions()
@@ -124,107 +123,106 @@ MhtSaveOptions options = new MhtSaveOptions()
 MapiMessage msg = MapiMessage.Load(fileName);
 msg.Save(fileName + ".mhtml", options);
 
-//if you need to skip OptionalAttendees in mhtml file you can clear format template for OptionalAttendees
+// если вам нужно пропустить OptionalAttendees в mhtml-файле, вы можете очистить формат шаблона для OptionalAttendees
 options.FormatTemplates[MhtTemplateName.OptionalAttendees] = "";
 msg.Save(fileName + "2.mhtml", options);
 ```
 
-
-## **Установить тело письма**
+## **Установка тела письма**
 
 В этой статье вы узнаете, как:
 
-- [задать текст в виде обычного текста](#Set-Plain-Text-Body)
-- [установить тело HTML](#Setting-HTML-Body)
-- [задать альтернативный текст](#Setting-Alternate-Text)
-- [укажите кодировку текста письма](#Specifying-Mail-Body-Encoding)
+- [установить текстовое тело](#Set-Plain-Text-Body)
+- [установить HTML-тело](#Setting-HTML-Body)
+- [установить альтернативный текст](#Setting-Alternate-Text)
+- [указать кодировку тела письма](#Specifying-Mail-Body-Encoding)
 
-### **Настройка текста в виде обычного текста**
+### **Установка текстового тела**
 
-Тело письма можно указать с помощью [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) собственность [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
+Тело письма можно указать с использованием свойства [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
 ```cs
-// Declare message as MailMessage instance
+// Объявите сообщение как экземпляр MailMessage
 var eml = new MailMessage
 {
-    // Specify HtmlBody
-    Body = "This is a простой текст body"
+    // Укажите HtmlBody
+    Body = "Это текстовое тело"
 };
 ```
 
-### **Настройка тела HTML**
+### **Установка HTML-тела**
 
-Тело письма также можно указать с помощью [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) собственность [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
+Тело письма также можно указать с использованием свойства [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
 ```cs
-// Declare message as MailMessage instance
+// Объявите сообщение как экземпляр MailMessage
 var eml = new MailMessage
 {
-    // Specify HtmlBody
-    HtmlBody = "<html><body>This is the HTML body</body></html>"
+    // Укажите HtmlBody
+    HtmlBody = "<html><body>Это HTML тело</body></html>"
 };
 ```
 
-### **Настройка альтернативного текста**
+### **Установка альтернативного текста**
 
-Альтернативное представление в файле EML — это дополнительное представление содержимого электронной почты, которое можно использовать для обеспечения другого представления сообщения электронной почты. Например, если вы отправляете сообщение в формате HTML, вы также можете указать **простой текст** версия на случай, если некоторые из получателей используют программы чтения электронной почты, которые не могут отображать HTML-содержимое. Для этого используйте [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/) класс. У этого класса есть два свойства: [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) and [BaseUri](https://reference.aspose.com/email/net/aspose.email/alternateview/baseuri/), которые используются для разрешения URL-адресов в содержимом электронного письма.
+Альтернативный вид в файле EML – это дополнительное представление содержимого электронного письма, которое можно использовать для предоставления другого рендеринга электронного сообщения. Например, если вы отправляете сообщение в HTML, вы также можете предоставить версию **в текстовом формате** на случай, если некоторые из получателей используют почтовые клиенты, которые не могут отображать HTML-содержимое. Для этой цели используйте класс [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/). Этот класс имеет два свойства, [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) и [BaseUri](https://reference.aspose.com/email/net/aspose.email/alternateview/baseuri/), которые используются для разрешения URL-адресов в содержимом электронной почты.
 
-- [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) представляет собой коллекцию [LinkedResource](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) объекты. При рендеринге URL-адреса в содержимом электронного письма сначала сопоставляются с URL-адресами в ссылке на содержимое каждого из них [LinkedResource](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) объект в [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) сбор и урегулирование.
-- [BaseUri](https://reference.aspose.com/email/net/aspose.email/alternateview/baseuri/) используется программой чтения почты для разрешения относительных URL-адресов в теле, а также для разрешения относительных URL-адресов ссылок на содержимое в [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) collection.
+- [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) – это коллекция объектов [LinkedResource](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/). При рендеринге URL в содержимом электронной почты сначала сопоставляются с URL в компоненте Content Link каждого объекта [LinkedResource](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) в коллекции [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/) и разрешаются.
+- [BaseUri](https://reference.aspose.com/email/net/aspose.email/alternateview/baseuri/) используется почтовым читателем для разрешения относительных URL в теле, а также для разрешения относительных URL компонент Content Link в коллекции [LinkedResources](https://reference.aspose.com/email/net/aspose.email/alternateview/linkedresources/).
 
-Рассмотрим следующий код с подробными инструкциями по настройке альтернативного текста.
+Рассмотрим следующий код с детальными шагами для установки альтернативного текста.
 
-**Этапы написания кода:**
+**Шаги кода:**
 
-1. Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-2. Create [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/createalternateviewfromstring/) для просмотра сообщения электронной почты с использованием содержимого, указанного в строке.
-3. Добавьте альтернативный текст, используя [Add](https://reference.aspose.com/email/net/aspose.email/mailmessage/addalternateview/) метод [MailMessage.AlternateViews](https://reference.aspose.com/email/net/aspose.email/mailmessage/alternateviews/) collection.
+1. Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+2. Создайте [AlternateView](https://reference.aspose.com/email/net/aspose.email/alternateview/createalternateviewfromstring/) для просмотра электронного сообщения, используя содержимое, указанное в строке.
+3. Добавьте альтернативный текст, используя метод [Add](https://reference.aspose.com/email/net/aspose.email/mailmessage/addalternateview/) коллекции [MailMessage.AlternateViews](https://reference.aspose.com/email/net/aspose.email/mailmessage/alternateviews/).
 
 **Пример кода:**
 ```cs
-// Declare message as MailMessage instance
+// Объявите сообщение как экземпляр MailMessage
 var eml = new MailMessage();
 
-// Creates AlternateView to view an email message using the content specified in the //string
-AlternateView alternate = AlternateView.CreateAlternateViewFromString("Alternate Text");
+// Создает AlternateView для просмотра электронного сообщения, используя содержимое, указанное в строке
+AlternateView alternate = AlternateView.CreateAlternateViewFromString("Альтернативный текст");
 
-// Adding alternate text
+// Добавление альтернативного текста
  eml.AlternateViews.Add(alternate);
 ```
 
-### **Указание кодировки текста письма**
+### **Указание кодировки тела письма**
 
-Aspose.Email использует [BodyEncoding](https://reference.aspose.com/email/net/aspose.email/mailmessage/bodyencoding/) собственность [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс для указания кодировки текста письма. Например:
+Aspose.Email использует свойство [BodyEncoding](https://reference.aspose.com/email/net/aspose.email/mailmessage/bodyencoding/) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) для указания кодировки тела письма. Например:
 
 ```cs
 eml.BodyEncoding = Encoding.UTF8;
 ```
 
-## **Настройка дополнительных свойств MailMessage**
+## **Установка дополнительных свойств MailMessage**
 
-С Aspose.Email вы можете использовать дополнительные свойства [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс, такой как:
+С помощью Aspose.Email вы можете использовать дополнительные свойства класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) такие как:
 
-- [Date](https://reference.aspose.com/email/net/aspose.email/mailmessage/date/) свойства - наборы **дата и время** электронного письма. По умолчанию дата — это фактическая дата отправки сообщения, а время — время отправки, отображаемое в Microsoft Outlook. Однако реальное время доставки электронной почты добавляется самим SMTP-сервером в заголовке письма. Например, ниже приведен обычный заголовок письма, где [Date](https://reference.aspose.com/email/net/aspose.email/mailmessage/date/) задает поле Дата.
+- [Date](https://reference.aspose.com/email/net/aspose.email/mailmessage/date/) — свойство, устанавливающее **дату и время** электронного письма. По умолчанию дата — это фактическая дата, когда было отправлено сообщение, а время — время, в которое оно было отправлено, как отображает Microsoft Outlook. Тем не менее, фактическое время доставки электронной почты добавляется самим SMTP-сервером в заголовок письма. Например, ниже приведен обычный заголовок письма, где [Date](https://reference.aspose.com/email/net/aspose.email/mailmessage/date/) устанавливает поле Date.
 
    ```cs
-   // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-  
-   // Add by SMTP server in delivery emails
+   // Для полных примеров и файлов данных, пожалуйста, перейдите по адресу https://github.com/aspose-email/Aspose.Email-for-.NET
+   
+   // Добавлено SMTP-сервером при доставке писем
    Received: from ip-123.56.99.216.dsl-cust.ca.inter.net ([216.99.56.123]) by Aspose.secureserver.net with MailEnable ESMTP; Thu, 22 Feb 2007 13:58:57 -0700
-  
-   // Add by SMTP server in delivery emails
+   
+   // Добавлено SMTP-сервером при доставке писем
    Return-Path: <xyz@oikoscucine.it>
-  
-   // Add by SMTP server in delivery emails
+   
+   // Добавлено SMTP-сервером при доставке писем
    Received: from 195.120.225.20 (HELO mail.oikoscucine.it)
    by aspose.com with esmtp (:1CYY+<LA*- *1WK@)
    id Q8,/O/-.N83@7-9M
    for abc@aspose.com; Thu, 22 Feb 2007 20:58:51 +0300
    From: "XYZ" <xyz@oikoscucine.it>
    To: <abc@aspose.com>
-   Subject: For ABC
-  
-   // Date will set the Date field, outlook will show this as
+   Subject: Для ABC
+   
+   // Дата будет установлена в поле Date, Outlook покажет это как
    Date: Thu, 22 Feb 2007 20:58:51 +0300
    Message-ID: <01c756c4$41b554d0$6c822ecf@dishonestyinsufferably>
    MIME-Version: 1.0
@@ -236,14 +234,14 @@ eml.BodyEncoding = Encoding.UTF8;
    X-Read: 1
    ```
 
-- [MailPriority](https://reference.aspose.com/email/net/aspose.email/mailpriority/#mailpriority-enumeration) перечисление — определяет уровни приоритета для отправки сообщения электронной почты. Он может быть низким, нормальным или высоким. Приоритет влияет на скорость передачи и доставку.
-- [MailSensitivity](https://reference.aspose.com/email/net/aspose.email/mailsensitivity/#mailsensitivity-enumeration) перечисление — определяет пять уровней чувствительности.
-- [XMailer](https://reference.aspose.com/email/net/aspose.email/mailmessage/xmailer/)- указывает программное обеспечение, создавшее сообщение электронной почты.
+- [MailPriority](https://reference.aspose.com/email/net/aspose.email/mailpriority/#mailpriority-enumeration) перечисление — указывает приоритеты для отправки электронного сообщения. Он может быть низким, нормальным или высоким. Приоритет влияет на скорость передачи и доставку.
+- [MailSensitivity](https://reference.aspose.com/email/net/aspose.email/mailsensitivity/#mailsensitivity-enumeration) перечисление — указывает пять уровней чувствительности.
+- [XMailer](https://reference.aspose.com/email/net/aspose.email/mailmessage/xmailer/) — указывает на программное обеспечение, которое создало электронное сообщение.
 
-Приведенный ниже фрагмент кода иллюстрирует, как можно использовать каждое из описанных выше свойств.
+Следующий фрагмент кода иллюстрирует, как каждое из вышеупомянутых свойств может быть использовано.
 
 ```cs
-var eml = new MailMessage("sender@gmail.com", "receiver@gmail.com", "Some subject", "Some body text")
+var eml = new MailMessage("sender@gmail.com", "receiver@gmail.com", "Некоторый заголовок", "Некоторый текст тела")
 {
     Date = DateTime.Now,
     Priority = MailPriority.High,
@@ -252,30 +250,30 @@ var eml = new MailMessage("sender@gmail.com", "receiver@gmail.com", "Some subjec
 };
 ```
 
-## **Запрос квитанции о прочтении**
+## **Запрос на получение подтверждения прочтения**
 
-Чтобы запросить [прочитайте квитанцию](https://en.wikipedia.org/wiki/Return_receipt), используйте Aspose.Email [DeliveryNotificationOptions](https://reference.aspose.com/email/net/aspose.email/mailmessage/deliverynotificationoptions/) собственность [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. Это свойство содержит значения [DeliveryNotificationOptions](https://reference.aspose.com/email/net/aspose.email/deliverynotificationoptions/#deliverynotificationoptions-enumeration) enumeration.
+Чтобы запросить [подтверждение прочтения](https://en.wikipedia.org/wiki/Return_receipt), используйте свойство Aspose.Email [DeliveryNotificationOptions](https://reference.aspose.com/email/net/aspose.email/mailmessage/deliverynotificationoptions/) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Это свойство содержит значения перечисления [DeliveryNotificationOptions](https://reference.aspose.com/email/net/aspose.email/deliverynotificationoptions/#deliverynotificationoptions-enumeration).
 
-Рассмотрим следующее **пример кода**:
+Рассмотрим следующий **пример кода**:
 
 ```cs
-// Create an Instance of MailMessage class
+// Создайте экземпляр класса MailMessage
 var eml = new MailMessage
 {
-    // Specify From, To, HtmlBody, DeliveryNotificationOptions field
+    // Укажите поля From, To, HtmlBody, DeliveryNotificationOptions
     From = "sender@sender.com",
     To = "receiver@receiver.com",
-    HtmlBody = "<html><body>This is the Html body</body></html>",
+    HtmlBody = "<html><body>Это HTML тело</body></html>",
     DeliveryNotificationOptions = DeliveryNotificationOptions.OnSuccess
 };
 
 eml.Headers.Add("Return-Receipt-To", "sender@sender.com");
 eml.Headers.Add("Disposition-Notification-To", "sender@sender.com");
 
-// Создайте экземпляр SmtpClient Class
+// Создайте экземпляр класса SmtpClient
 var client = new SmtpClient
 {
-    // Specify your mailing host server, Username, Password and Port No
+    // Укажите ваш хост почтового сервера, имя пользователя, пароль и номер порта
     Host = "smtp.server.com",
     Username = "Username",
     Password = "Password",
@@ -284,10 +282,10 @@ var client = new SmtpClient
 
 try
 {
-    // Client.Send will send this message
+    // Client.Send отправит это сообщение
     client.Send(eml);
-    // Display ‘Message Sent’, only if message sent successfully
-    Console.WriteLine(@"Message sent");
+    // Отобразить 'Сообщение отправлено', только если сообщение было успешно отправлено
+    Console.WriteLine(@"Сообщение отправлено");
 }
 catch (Exception ex)
 {
@@ -295,47 +293,46 @@ catch (Exception ex)
 }
 ```
 
-**Note**: Запросы на получение информации о прочтении могут не всегда удовлетворяться по следующим причинам:
+**Примечание**: Запросы на получение подтверждения прочтения могут не всегда выполняться, потому что:
 
-- Почтовый клиент может не реализовать эту функциональность.
-- У конечного пользователя эта функция может быть отключена.
-- Конечный пользователь может отказаться от отправки.
+- Почтовый клиент может не реализовывать эту функциональность.
+- У конечного пользователя может быть отключена эта функция.
+- Конечный пользователь может выбрать, чтобы не отправлять его.
 
+## **Установка заголовков электронного письма**
 
-## **Настройка заголовков электронной почты**
+Заголовки электронных писем представляют собой интернет-стандарт, и RFC определяет поля заголовков, которые включаются в интернет-сообщения. Заголовок email можно указать с помощью класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Общие типы заголовков определены в классе [HeaderType](https://reference.aspose.com/email/net/aspose.email/headertype/). Это запечатанный класс, работающий как обычное перечисление.
 
-Заголовки электронных писем представляют собой стандарт Интернета, а RFC определяет поля заголовков, которые включаются в сообщения электронной почты Интернета. Заголовок электронного письма можно указать с помощью [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. Общие типы заголовков определены в поле [HeaderType](https://reference.aspose.com/email/net/aspose.email/headertype/) класс. Это запечатанный класс, работающий как обычное перечисление.
+Как правило, заголовок электронного письма содержит следующие поля:
 
-Обычно заголовок электронного письма содержит следующие поля:
+- **To**: Адреса получателей могут быть указаны в поле To. Получатели поля To являются основной аудиторией сообщения. Может быть больше одного адреса получателя.
+- **From**: Это поле представляет собой адрес электронной почты отправителя сообщения.
+- **Cc**: Позволяет пользователям отправлять сообщение в виде "Carbon Copy" или "Courtesy Copy". То есть, от получателя не ожидается ответ или действие. Обычно надзорный персонал уведомляется с помощью CC.
+- **Bcc**: Это означает Blind Carbon Copy, который позволяет отправить электронное письмо получателю, скрытому от других получателей.
+- **ReplyTo**: Это поле заголовка предназначено для указания, куда отправитель хочет, чтобы шли ответы.
+- **Subject**: Заголовок, заглавие, тема. Часто используется как индикатор потока для сообщений, отвечающих на или комментирующих другие сообщения.
+- **Date**: Этот заголовок указывает дату (и время). Обычно это дата, когда сообщение было составлено и отправлено.
+- **XMailer**: Информация о клиентском ПО инициатора. Пример: X-Mailer: Aspose.Email. XMailer используется почтовыми клиентами. Разные почтовые клиенты будут иметь разные значения XMailer. Значение XMailer MS Outlook — Microsoft Office Outlook, Build 11.0.5510. Оно игнорируется получателем электронного письма или читателем почты.
 
-- **To**: Адреса получателей можно указать в поле Кому. Получатели в поле «Кому» являются основной аудиторией сообщения. Адресов получателей может быть несколько.
-- **From**: В этом поле указан адрес электронной почты отправителя сообщения.
-- **Cc**: Позволяет пользователям отправлять сообщения в виде «точной копии» или «любезной копии». То есть от получателя не ожидается ответа или действий. Как правило, руководящий персонал уведомляется с помощью CC.
-- **Bcc**: Оно расшифровывается как Blind Carbon Copy, что позволяет отправлять получателю электронное письмо, скрытое от других получателей.
-- **ReplyTo**: Это поле заголовка предназначено для указания того, куда отправитель хочет отправить ответы.
-- **Subject**: Заголовок, заголовок, тема. Часто используется в качестве индикатора темы сообщений, отвечающих на другие сообщения или комментирующих их.
-- **Date**: В этом заголовке указаны дата (и время). Обычно это дата составления и отправки сообщения.
-- **XMailer**: Информация о клиентском программном обеспечении автора. Пример: программа X-Mailer: Aspose.Email. XMailer используется почтовыми клиентами. Разные почтовые клиенты будут иметь разные значения XMailer. Значение XMailer в MS Outlook — Microsoft Office Outlook, сборка 11.0.5510. Получатель электронной почты или программа для чтения электронной почты игнорируют его.
-
-Обычно заголовок электронного письма выглядит следующим образом:
+Как правило, заголовок электронного письма выглядит примерно так:
 
 ```
 Reply-To: reply@reply.com
 From: sender@sender.com
 To: guangzhou@guangzhoo.com
-Subject: test mail
-Date: 6 Mar 2006 8:2:2 +0800
+Subject: тестовое письмо
+Date: 6 Марта 2006 8:2:2 +0800
 X-Mailer: Aspose.Email
 ```
 
-Чтобы настроить заголовок письма, выполните следующие действия **шаги кода**:
+Чтобы настроить заголовок электронного письма, следуйте этим **шагам кода**:
 
-- Создайте экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Укажите «Кому», «От», «Cc», «Bcc», «ReplyTo», «Тема», «Дата» и «XMailer», используя экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
-- Создайте экземпляр [MimeHeader](https://reference.aspose.com/email/net/aspose.email.mime/mimeheader/) класс и укажите пользовательский заголовок.
-- Добавьте пользовательский заголовок в поле [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
+- Создайте экземпляр класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Укажите To, From, Cc, Bcc, ReplyTo, Subject, Date и XMailer, используя экземпляр [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Создайте экземпляр класса [MimeHeader](https://reference.aspose.com/email/net/aspose.email.mime/mimeheader/) и укажите пользовательский заголовок.
+- Добавьте пользовательский заголовок к экземпляру [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-Следующее **фрагмент кода** показывает, как настроить заголовки электронной почты.
+Следующий **пример кода** показывает, как установить заголовки электронной почты.
 
 ```cs
 var eml = new MailMessage
@@ -345,13 +342,13 @@ var eml = new MailMessage
     To = "receiver1@receiver.com",
     CC = "receiver2@receiver.com",
     Bcc = "receiver3@receiver.com",
-    Subject = "test mail",
+    Subject = "тестовое письмо",
     Date = new System.DateTime(2006, 3, 6),
     XMailer = "Aspose.Email"
 };
 ```
 
-Приведенный выше фрагмент кода создает заголовок электронного письма в следующем формате:
+Вышеуказанный фрагмент кода создает заголовок электронного письма в следующем формате:
 
 ```
 Reply-To: reply@reply.com
@@ -359,22 +356,22 @@ From: sender@sender.com
 To: receiver1@receiver.com
 CC: receiver2@receiver.com
 BCC: receiver3@receiver.com
-Subject: test mail
-Date: 6 Mar 2006 8:2:2 +0800
+Subject: тестовое письмо
+Date: 6 Марта 2006 8:2:2 +0800
 X-Mailer: Aspose.Email
 ```
 
-### **Вставьте заголовок в определенном месте**
+### **Вставка заголовка в конкретное место**
 
-The [Add](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/add/#add/) метод [HeaderCollection](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/) класс вставляет заголовок в конце коллекции. Однако иногда может возникнуть необходимость вставить заголовок в определенном месте. В таком случае [Add](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/add/#add/) метод не поможет. Для этого используйте [Insert](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/insert/#insert) метод [HeaderCollection](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/). Если коллекция содержит заголовки с одинаковыми именами, этот заголовок будет вставлен перед другими заголовками с таким же именем. В следующем фрагменте кода показано, как вставить заголовок в определенное место.
+Метод [Add](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/add/#add/) класса [HeaderCollection](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/) вставляет заголовок в конец коллекции. Тем не менее, иногда может быть необходимо вставить заголовок в конкретное место. В таком случае метод [Add](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/add/#add/) не поможет. Чтобы добиться этого, используйте метод [Insert](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/insert/#insert) класса [HeaderCollection](https://reference.aspose.com/email/net/aspose.email.mime/headercollection/). Если коллекция содержит заголовки с одинаковым именем, этот заголовок будет вставлен перед другими заголовками с таким же именем. Следующий фрагмент кода показывает, как вставить заголовок в конкретное место.
 
 ```cs
 eml.Headers.Insert("Received", "Value");
 ```
 
-### **Сохранить все заголовки в MHTML**
+### **Сохранение всех заголовков в MHTML**
 
-The [MhtSaveOptions.SaveAllHeaders](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveallheaders/#mhtsaveoptionssaveallheaders-property) собственность [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/#mhtsaveoptions-class) класс определяет, нужно ли сохранять все заголовки в выходном файле mhtml или нет. В следующем фрагменте кода показано, как сохранить все заголовки файла mhtml:
+Свойство [MhtSaveOptions.SaveAllHeaders](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveallheaders/#mhtsaveoptionssaveallheaders-property) класса [MhtSaveOptions](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/#mhtsaveoptions-class) определяет необходимость сохранить все заголовки в выходном mhtml или нет. Следующий фрагмент кода показывает, как сохранить все заголовки файла mhtml:
 
 ```cs
 var eml = MailMessage.Load("message.eml");
@@ -383,23 +380,23 @@ sopt.SaveAllHeaders = true;
 eml.Save("message.mhtml", sopt);
 ```
 
-### **Добавление настраиваемых заголовков в электронное письмо**
+### **Добавление пользовательских заголовков к электронному письму**
 
-Заголовок электронного письма можно указать с помощью [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс. Чтобы указать **настраиваемый заголовок** в сообщении электронной почты рассмотрим следующий пример кода:
+Заголовок электронного письма можно указать с помощью класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Чтобы указать **пользовательский заголовок** в электронном сообщении, рассмотрите следующий образец кода:
 
 ```cs
 eml.Headers.Add("secret-header", "mystery");
 ```
 
-Приведенный выше фрагмент кода создает заголовок электронного письма в следующем формате:
+Вышеуказанный фрагмент кода создает заголовок электронной почты в следующем формате:
 
 ```cs
 secret-header: mystery
 ```
 
-## **Сохраните HTML-файл с полями задач в заголовке**
+## **Сохранение HTML-файла с полями задачы в заголовке**
 
-The [HtmlFormatOptions.RenderTaskFields](https://reference.aspose.com/email/net/aspose.email/htmlformatoptions/#htmlformatoptions-enumeration) перечисление позволяет указать, что поля задач должны быть включены в заголовок сохраненного HTML-файла. В следующем фрагменте кода показано, как сохранить поля задачи в заголовке при сохранении html-файла:
+Перечисление [HtmlFormatOptions.RenderTaskFields](https://reference.aspose.com/email/net/aspose.email/htmlformatoptions/#htmlformatoptions-enumeration) позволяет вам указать, что поля задач должны быть включены в заголовок сохраняемого HTML-файла. Следующий фрагмент кода показывает, как сохранить поля задач в заголовке при сохранении HTML-файла:
 
 ```cs
 var msg = MapiMessage.Load("task.msg");
@@ -408,14 +405,14 @@ opt.HtmlFormatOptions = HtmlFormatOptions.WriteHeader | HtmlFormatOptions.Render
 msg.Save("task.html", opt);
 ```
 
-## **Подписывайте электронные письма с помощью DKIM**
+## **Подписание электронных писем с помощью DKIM**
 
-> **_NOTE:_** Эта функция доступна только для версий библиотек, ориентированных на платформу.NET Framework. Версии, ориентированные на .NET Core, не имеют этой функции.
+> **_ПРИМЕЧАНИЕ:_** Эта функция доступна только для версий библиотеки, нацеленных на .NET Framework. Версии, нацеленные на .NET Core, не имеют этой функции.
 
-Aspose.Email позволяет подписывать электронную почту с помощью DKIM (почта, идентифицированная доменными ключами). Это позволяет организации взять на себя ответственность за передаваемое сообщение ([Дополнительная информация](https://www.dkim.org/)). DKIM добавляет цифровую подпись к заголовкам сообщений электронной почты, которую могут проверить получатели. Открытый ключ отправителя позволяет получателю проверить, соответствует ли подпись содержимому сообщения. [DKIMSign](https://reference.aspose.com/email/net/aspose.email/mailmessage/dkimsign/#dkimsign) метод [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) класс используется для задания криптографической и сигнатурной информации для подписи сообщения. В следующем фрагменте кода показано, как подписывать электронные письма с помощью DKIM.
+Aspose.Email позволяет подписывать электронную почту с помощью DKIM (DomainKeys Identified Mail). Это позволяет организации взять на себя ответственность за сообщение, находящееся в транзите ([Дополнительная информация](https://www.dkim.org/)). DKIM добавляет цифровую подпись к заголовкам электронного сообщения, которую могут проверять получатели. Открытый ключ отправителя позволяет получателю подтвердить, что подпись соответствует содержимому сообщения. Метод [DKIMSign](https://reference.aspose.com/email/net/aspose.email/mailmessage/dkimsign/#dkimsign) класса [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) используется для установки криптографической информации и информации о подписи для подписания сообщения. Следующий фрагмент кода показывает, как подписать электронные письма с помощью DKIM.
 
 ```cs
-var eml = new MailMessage("sender@gmail.com", "receiver@gmail.com", "Some subject", "Some body text");
+var eml = new MailMessage("sender@gmail.com", "receiver@gmail.com", "Некоторый заголовок", "Некоторый текст тела");
 
 string privateKeyFile = "key2.pem";
 RSACryptoServiceProvider rsa = PemReader.GetPrivateKey(privateKeyFile);
