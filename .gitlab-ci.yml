@@ -41,5 +41,6 @@ push-to-github:
     - eval $(ssh-agent -s)
     - echo "$GITHUB_DEPLOY_KEY" | tr -d '\r' | ssh-add -
     - ssh-keyscan github.com >> ~/.ssh/known_hosts
+    - git checkout master
     - git remote add github git@github.com:aspose-email/Aspose.Email-Documentation.git
     - git push github master
