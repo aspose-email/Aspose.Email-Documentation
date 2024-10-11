@@ -42,5 +42,4 @@ push-to-github:
     - echo "$GITHUB_DEPLOY_KEY" | tr -d '\r' | ssh-add -
     - ssh-keyscan github.com >> ~/.ssh/known_hosts
     - git remote add github git@github.com:aspose-email/Aspose.Email-Documentation.git
-    - if [ "$(git symbolic-ref --short HEAD)" != "master" ]; then echo "Not on master branch"; exit 1; fi
     - git push github master
