@@ -26,23 +26,21 @@ test:
   stage: test-translation
   rules:
     - if: '$CI_MERGE_REQUEST_TITLE =~ /^Gai18n:.*\/Ready for testing$/'
-  before_script:
+  script:
     - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@git.saltov.dynabic.com/spb/webapps/utilities/docs-content-tester.git
     - chmod u+x docs-content-tester/build.sh
-  script:
     - cd docs-content-tester && ./build.sh Build
 
 push-to-github:
   stage: push-to-github
   rules:
     - if: '$CI_COMMIT_BRANCH == "master"'
-  before_script:
+  script:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - eval $(ssh-agent -s)
     - echo "$GITHUB_DEPLOY_KEY" | tr -d '\r' | ssh-add -
     - ssh-keyscan github.com >> ~/.ssh/known_hosts
-  script:
     - git remote add github git@github.com:aspose-email/Aspose.Email-Documentation.git
     - if [ "$(git symbolic-ref --short HEAD)" != "master" ]; then echo "Not on master branch"; exit 1; fi
     - git push github master
