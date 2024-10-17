@@ -1,19 +1,19 @@
 ---
-title: "Eliminar mensajes del servidor"
-url: /es/python-net/deleting-messages-from-server/
+title: "Eliminando Mensajes del Servidor"
+url: /es/python-net/eliminando-mensajes-del-servidor/
 weight: 20
 type: docs
 ---
 
 
-## **Eliminar mensajes**
-La clase ImapClient puede eliminar mensajes de un servidor IMAP. La función deleteMessage () de la clase IMAPClient se usa para eliminar mensajes. Toma el número de secuencia del mensaje o el identificador único como parámetro. El ImapClient proporciona los métodos DeleteMessage y DeleteMessages para eliminar los mensajes uno por uno o varios. El siguiente fragmento de código muestra cómo eliminar un mensaje de correo electrónico con el identificador de mensaje 1 de un servidor IMAP.
+## **Eliminando Mensajes**
+La clase ImapClient puede eliminar mensajes de un servidor IMAP. La función DeleteMessage() de la clase ImapClient se utiliza para eliminar mensajes. Toma el número de secuencia del mensaje o el ID único como parámetro. El ImapClient proporciona métodos DeleteMessage y DeleteMessages para eliminar mensajes uno por uno o múltiples. El siguiente fragmento de código muestra cómo eliminar un mensaje de correo electrónico con el ID de mensaje 1 de un servidor IMAP.
 
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-IMAP-DeleteSingleMessage-DeleteSingleMessage.py" >}}
-## **Eliminar varios mensajes**
-Se pueden eliminar varios correos electrónicos del buzón mediante la API IMAPClient de Aspose.Email. El método DeleteMessages proporciona varias opciones para eliminar varios mensajes del servidor mediante identificadores únicos, números de secuencia o elementos de IMAPMessageInfoCollection. En el siguiente fragmento de código, se muestra cómo eliminar varios mensajes.
+## **Eliminando Múltiples Mensajes**
+Se pueden eliminar múltiples correos electrónicos de la bandeja de entrada utilizando el ImapClient de la API Aspose.Email. El método DeleteMessages proporciona una serie de opciones para eliminar múltiples mensajes del servidor utilizando IDs únicos, números de secuencia o elementos de ImapMessageInfoCollection. El siguiente fragmento de código muestra cómo eliminar múltiples mensajes.
 
 
 

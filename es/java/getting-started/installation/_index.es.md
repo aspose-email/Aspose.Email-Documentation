@@ -1,14 +1,14 @@
 ---
-title: "Installation"
+title: "Instalación"
 url: /es/java/installation/
 weight: 50
 type: docs
 ---
 
-## **Instalación de Aspose.Email para Java desde el repositorio de Maven**
-Aspose aloja todas las API de Java en [Apose Artifactory](https://releases.aspose.com/). Puedes usar fácilmente [Aspose.Email para Java](https://releases.aspose.com/java/repo/com/aspose/aspose-email/) API directamente en sus proyectos de Maven con configuraciones simples.
-### **Especificar la configuración del repositorio de Maven**
-En primer lugar, debe especificar la configuración/ubicación del repositorio Aspose Maven en su Maven pom.xml de la siguiente manera:
+## **Instalación de Aspose.Email para Java desde el Repositorio de Maven**
+Aspose aloja todas las API de Java en [Aspose Artifactory](https://releases.aspose.com/). Puedes utilizar fácilmente la API de [Aspose.Email para Java](https://releases.aspose.com/java/repo/com/aspose/aspose-email/) directamente en tus proyectos Maven con configuraciones simples.
+### **Especificar la Configuración del Repositorio de Maven**
+Primero, necesitas especificar la configuración/ubicación del Repositorio Maven de Aspose en tu archivo pom.xml de la siguiente manera:
 
 ``` java
 
@@ -18,7 +18,7 @@ En primer lugar, debe especificar la configuración/ubicación del repositorio A
 
         <id>AsposeJavaAPI</id>
 
-        <name>Aspose Java API</name>
+        <name>API de Aspose Java</name>
 
         <url>https://releases.aspose.com/java/repo/</url>
 
@@ -27,8 +27,8 @@ En primer lugar, debe especificar la configuración/ubicación del repositorio A
 </repositories>
 
 ```
-### **Definir Aspose.Email para la dependencia de la API de Java**
-A continuación, defina Aspose.Email para la dependencia de la API de Java en su pom.xml de la siguiente manera:
+### **Definir la Dependencia de la API de Aspose.Email para Java**
+Luego define la dependencia de la API de Aspose.Email para Java en tu pom.xml de la siguiente manera:
 
 ``` java
 
@@ -50,4 +50,4 @@ A continuación, defina Aspose.Email para la dependencia de la API de Java en su
 
 ```
 
-Después de realizar los pasos anteriores, la dependencia de Aspose.Email para Java finalmente se definirá en su proyecto Maven.
+Después de realizar los pasos anteriores, la dependencia de Aspose.Email para Java estará finalmente definida en tu proyecto Maven.

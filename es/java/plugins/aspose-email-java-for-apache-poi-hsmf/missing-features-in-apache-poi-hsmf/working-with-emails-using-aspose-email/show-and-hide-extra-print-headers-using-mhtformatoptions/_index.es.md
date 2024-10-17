@@ -1,12 +1,12 @@
 ---
-title: "Mostrar y ocultar encabezados de impresión adicionales mediante MhtFormatOptions"
+title: "Mostrar y Ocultar Encabezados de Impresión Extra usando MHTFormatOptions"
 url: /es/java/show-and-hide-extra-print-headers-using-mhtformatoptions/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email: muestra y oculta los encabezados de impresión adicionales usando MhtFormatOptions**
-Los encabezados de impresión adicionales se pueden mostrar u ocultar con mhtFormatOptions y MailMessageSaveOptions. MhtFormatOptions es un enumerador que contiene dos miembros: WriteCompleteEmailAddressToMht y HideExtraPrintHeader. MhtFormatOptions se usa con MhtMessageFormatter como método público. MhtMessageFormatter.format con el argumento writeCompleteEmailAddress ya está obsoleto.
+## **Aspose.Email - Mostrar y Ocultar Encabezados de Impresión Extra usando MHTFormatOptions**
+Los encabezados de impresión extra se pueden mostrar u ocultar con MhtFormatOptions y MailMessageSaveOptions. MhtFormatOptions es un enumerador que contiene dos miembros: WriteCompleteEmailAddressToMht y HideExtraPrintHeader. MhtFormatOptions se utiliza con MhtMessageFormatter ya que el método público MhtMessageFormatter.Format con el argumento writeCompleteEmailAddress está obsoleto ahora.
 
 **Java**
 
@@ -33,8 +33,8 @@ else
 	System.out.println("False");
 
 ```
-## **Descargar Running Code**
-Download **Mostrar y ocultar encabezados de impresión adicionales mediante MhtFormatOptions** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Mostrar y Ocultar Encabezados de Impresión Extra usando MHTFormatOptions** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [CodePlex](https://asposeapachepoi.codeplex.com/releases)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases)

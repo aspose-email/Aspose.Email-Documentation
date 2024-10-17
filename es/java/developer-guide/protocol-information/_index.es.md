@@ -1,6 +1,6 @@
 ---
-title: "Información de protocolo"
-url: /es/java/protocol-information/
+title: "Información del Protocolo"
+url: /es/java/informacion-del-protocolo/
 weight: 170
 type: docs
 ---

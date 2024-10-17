@@ -1,8 +1,6 @@
 ---
-title: "Cómo empezar"
-url: /es/python-net/getting-started/
+title: "Introducción"
+url: /es/python-net/introduccion/
 weight: 10
 type: docs
 ---
-
-

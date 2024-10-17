@@ -1,42 +1,42 @@
 ---
-title: "Soporte de productos"
+title: "Soporte de Producto"
 url: /es/androidjava/product-support/
 weight: 80
 type: docs
 ---
 
-## **Soporte técnico**
+## **Soporte Técnico**
 
-Aspose ofrece soporte técnico gratuito e ilimitado para todos sus productos. El soporte está disponible para todos los usuarios, incluidos los que están en ejecución y los que están evaluando.
+Aspose proporciona soporte técnico gratuito e ilimitado para todos sus productos. El soporte está disponible para todos los usuarios, incluidos aquellos que están en evaluación.
 
-Si necesitas ayuda, [**visita los foros de Aspose.**](https://forum.aspose.com/c/email). Publique su pregunta en el foro de Aspose.Email para Java y será respondida en unas horas.
+Si necesita ayuda, [**visite los Foros de Aspose**](https://forum.aspose.com/c/email). Publique su pregunta en el foro de Aspose.Email para Java y será respondida dentro de pocas horas.
 
-Si esperas una respuesta en los foros, ten en cuenta las diferencias horarias.
-#### **Reportar un problema**
-Si tienes un problema, sigue estos sencillos pasos para asegurarte de que se resuelva de manera eficiente:
+Al esperar una respuesta en los foros, por favor tenga en cuenta las diferencias de zona horaria.
+#### **Reportar un Problema**
+Si tiene un problema, siga estos simples pasos para asegurarse de que se resuelva de manera eficiente:
 
-- Asegúrate de usar la versión más reciente del producto antes de informar del problema. Consulte el [Página de descarga de Aspose.Email para Android a través de Java](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-email/) para obtener información sobre la versión más reciente.
-- Eche un vistazo a la [forums](http://www.aspose.com/community/forums/default.aspx), esta Wiki de documentación y el [Referencia de API](https://apireference.aspose.com/java/email) antes de informar de un problema. Es posible que su pregunta ya tenga una respuesta.
-- Cuando denuncies un problema, incluye el documento original y, posiblemente, un fragmento del código que cause el problema. Si necesitas adjuntar varios archivos, comprímelos en uno solo. Adjuntar tus documentos en los foros es seguro, ya que solo tú y los desarrolladores de Aspose tenéis acceso a los archivos adjuntos.
-- Intenta informar de un problema por hilo. Si tienes otro problema, repórtalo en otro hilo.
+- Asegúrese de usar la última versión del producto antes de reportar el problema. Consulte la [página de descarga de Aspose.Email para Android a través de Java](http://maven.aspose.com/repository/simple/ext-release-local/com/aspose/aspose-email/) para obtener información sobre la última versión.
+- Revise los [foros](http://www.aspose.com/community/forums/default.aspx), esta documentación Wiki y la [Referencia de API](https://apireference.aspose.com/java/email) antes de reportar un problema. Su pregunta puede ya tener una respuesta.
+- Al reportar un problema, incluya el documento original y posiblemente un fragmento de su código que cause el problema. Si necesita adjuntar múltiples archivos, comprímalos en uno solo. Es seguro adjuntar sus documentos en los foros, ya que solo usted y los desarrolladores de Aspose tienen acceso a los archivos adjuntos.
+- Intente reportar un problema por hilo. Si tiene otro problema, repórtelo en un hilo separado.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose no proporciona asistencia técnica por teléfono. La asistencia telefónica solo está disponible para preguntas sobre ventas y compras.
+Aspose no proporciona soporte técnico por teléfono. El soporte telefónico está disponible solo para preguntas de ventas y compras.
 
 {{% /alert %}}
 
-## **Resources**
+## **Recursos**
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-En esta tabla se enumeran los recursos técnicos importantes de Aspose.Email para Android a través de Java.
+Esta tabla enumera importantes recursos técnicos de Aspose.Email para Android a través de Java.
 
-|**Resource**|**Description**|
-|: - |: - |
-|[Página de inicio de Aspose.Email para Android a través de Java](https://products.aspose.com/email/es/android-java)|Página de inicio del producto. |
-|[Blog de Aspose.Email](https://blog.aspose.com/category/aspose-products/aspose-email-product-family/)|Compruébelo con frecuencia para obtener información sobre las nuevas versiones y consejos útiles sobre Aspose.Email. |
-|[Descarga de Aspose.Email para Android a través de Java](https://downloads.aspose.com/email/androidjava)|Descargue la última versión de Aspose.Email para Android a través de Java desde aquí. |
-|[Foro de soporte de Aspose.Email](https://forum.aspose.com/c/email)|Publique sus preguntas y problemas aquí para una resolución rápida. |
-|[Documentación del producto Aspose.Email para Java](/email/java/)|Documentación completa en línea que incluye esta documentación y la referencia de la API Aspose.Email. |
+|**Recurso**|**Descripción**|
+| :- | :- |
+|[Página principal de Aspose.Email para Android a través de Java](https://products.aspose.com/email/es/android-java)|Página principal del producto.|
+|[Blog de Aspose.Email](https://blog.aspose.com/category/aspose-products/aspose-email-product-family/)|Consulte esto a menudo para información sobre nuevas versiones y consejos útiles sobre Aspose.Email.|
+|[Descarga de Aspose.Email para Android a través de Java](https://downloads.aspose.com/email/androidjava)|Descargue la última versión de Aspose.Email para Android a través de Java desde aquí.|
+|[Foro de soporte de Aspose.Email](https://forum.aspose.com/c/email)|Publique sus preguntas y problemas aquí para una resolución rápida.|
+|[Documentación del producto Aspose.Email para Java](/email/java/)|Documentación completa en línea que incluye esta documentación así como la Referencia de API de Aspose.Email.|
 {{% /alert %}}

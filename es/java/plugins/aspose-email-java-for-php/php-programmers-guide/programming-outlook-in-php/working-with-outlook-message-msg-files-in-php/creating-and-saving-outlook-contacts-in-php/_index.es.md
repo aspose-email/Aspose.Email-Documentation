@@ -1,12 +1,12 @@
 ---
-title: "Crear y guardar contactos de Outlook en PHP"
-url: /es/java/creating-and-saving-outlook-contacts-in-php/
+title: "Creando y Guardando Contactos de Outlook en PHP"
+url: /es/java/creando-y-guardando-contactos-de-outlook-en-php/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Creación y almacenamiento de contactos de Outlook**
-Para crear contactos de Outlook mediante **Aspose.Email Java para PHP**, simplemente invoca **CreateOutlookContact** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Creando y Guardando Contactos de Outlook**
+Para crear contactos de Outlook usando **Aspose.Email Java para PHP**, simplemente invoca el módulo **CreateOutlookContact**. Aquí puedes ver un código de ejemplo.
 
 **Código PHP**
 
@@ -14,9 +14,9 @@ Para crear contactos de Outlook mediante **Aspose.Email Java para PHP**, simplem
 
  $contact = new MapiContact();
 
-\# Set different properties of this Contact Item.
+\# Establecer diferentes propiedades de este elemento de contacto.
 
-\# Set Name properties using MapiContactNamePropertySet
+\# Establecer propiedades de nombre usando MapiContactNamePropertySet
 
 $name_prop_set = new MapiContactNamePropertySet();
 
@@ -26,11 +26,11 @@ $name_prop_set->setGivenName("MacBeth");
 
 $contact->setNameInfo($name_prop_set);
 
-\# Set professional properties using MapiContactProfessionalPropertySet
+\# Establecer propiedades profesionales usando MapiContactProfessionalPropertySet
 
 $prof_prop_set = new MapiContactProfessionalPropertySet();
 
-$prof_prop_set->setTitle("Account Representative");
+$prof_prop_set->setTitle("Representante de Cuenta");
 
 $prof_prop_set->setCompanyName("Contoso Ltd.");
 
@@ -38,7 +38,7 @@ $prof_prop_set->setOfficeLocation("36/2529");
 
 $contact->setProfessionalInfo($prof_prop_set);
 
-\# Telephones
+\# Teléfonos
 
 $telephone = new MapiContactTelephonePropertySet();
 
@@ -48,7 +48,7 @@ $telephone->setBusiness2TelephoneNumber("(831) 759-2518");
 
 $telephone->setBusinessTelephoneNumber("(831) 758-7285");
 
-$telephone->setCallbackTelephoneNumber("(831) 758-7321 (After hours");
+$telephone->setCallbackTelephoneNumber("(831) 758-7321 (Después de horas)");
 
 $telephone->setCarTelephoneNumber("(831) 758-7201");
 
@@ -76,7 +76,7 @@ $telephone->setTtyTddPhoneNumber("(800) 806-4474");
 
 $contact->setTelephones($telephone);
 
-\# Set Physical Address using MapiContactPhysicalAddress and MapiContactPhysicalAddressPropertySet
+\# Establecer dirección física usando MapiContactPhysicalAddress y MapiContactPhysicalAddressPropertySet
 
 $phys_addrss = new MapiContactPhysicalAddress();
 
@@ -88,7 +88,7 @@ $phys_addr_prop_set->setWorkAddress($phys_addrss);
 
 $contact->setPhysicalAddresses($phys_addr_prop_set);
 
-\# Set email information using MapiContactElectronicAddress and MapiContactElectronicAddressPropertySet
+\# Establecer información de correo electrónico usando MapiContactElectronicAddress y MapiContactElectronicAddressPropertySet
 
 $email = new MapiContactElectronicAddress();
 
@@ -108,11 +108,11 @@ $contactSaveFormat=new ContactSaveFormat();
 
 $contact->save($dataDir . "OutlookContact.vcf", $contactSaveFormat->VCard);
 
-print "Created outlook contact successfully.".PHP_EOL;
+print "Contacto de Outlook creado exitosamente.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Creación y almacenamiento de contactos de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Creando y Guardando Contactos de Outlook (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookMessageFiles/CreateOutlookContact.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookMessageFiles/CreateOutlookContact.php)

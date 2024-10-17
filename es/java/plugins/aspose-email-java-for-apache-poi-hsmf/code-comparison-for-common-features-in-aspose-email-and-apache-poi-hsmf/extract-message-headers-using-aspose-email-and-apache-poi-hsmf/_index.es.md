@@ -1,32 +1,32 @@
 ---
-title: "Extraiga los encabezados de los mensajes con Aspose.Email y Apache POI HSMF"
+title: "Extraer Encabezados de Mensajes utilizando Aspose.Email y Apache POI HSMF"
 url: /es/java/extract-message-headers-using-aspose-email-and-apache-poi-hsmf/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Extraer los encabezados de los mensajes**
-El encabezado del correo electrónico representa un conjunto estándar de campos de encabezado definido por Internet y RFC que se incluye en los mensajes de correo electrónico de Internet. Se puede especificar un encabezado de correo electrónico mediante la clase MailMessage. Los tipos de encabezados comunes se definen en la clase HeaderType. Es una clase sellada que funciona como una enumeración normal.
+## **Aspose.Email - Extraer Encabezados de Mensajes**
+El encabezado de correo electrónico representa un conjunto estándar de campos de encabezado definidos por Internet y RFC incluidos en mensajes de correo electrónico de Internet. Un encabezado de correo electrónico puede ser especificado usando la clase MailMessage. Los tipos de encabezados comunes están definidos en la clase HeaderType. Es una clase sellada que funciona como una enumeración normal.
 
 **Java**
 
 ```java
 
- //Gets Email Headers
+ //Obtiene los Encabezados de Email
 
-System.out.println("From: " 	+ message.getFrom());
+System.out.println("De: " 	+ message.getFrom());
 
-System.out.println("To: " 	+ message.getTo());
+System.out.println("Para: " 	+ message.getTo());
 
 System.out.println("CC: " 	+ message.getCC());
 
-System.out.println("Bcc: " 	+ message.getBcc());
+System.out.println("Cco: " 	+ message.getBcc());
 
-System.out.println("Subject: " 	+ message.getSubject());
+System.out.println("Asunto: " 	+ message.getSubject());
 
 ```
-## **Apache POI HSMF - Extraer encabezados de mensajes**
-La clase MapiMessage proporciona los métodos para acceder a los encabezados de los mensajes de correo electrónico.
+## **Apache POI HSMF - Extraer Encabezados de Mensajes**
+La clase MAPIMessage proporciona los métodos para acceder a los encabezados de los mensajes de correo electrónico.
 
 **Java**
 
@@ -34,26 +34,26 @@ La clase MapiMessage proporciona los métodos para acceder a los encabezados de 
 
  MAPIMessage msg = new MAPIMessage(dataDir + "message.msg");
 
-System.out.println("From: " + msg.getDisplayFrom());
+System.out.println("De: " + msg.getDisplayFrom());
 
-System.out.println("To: " + msg.getDisplayTo());
+System.out.println("Para: " + msg.getDisplayTo());
 
 System.out.println("CC: " + msg.getDisplayCC());
 
-System.out.println("BCC: " + msg.getDisplayBCC());
+System.out.println("CCO: " + msg.getDisplayBCC());
 
-System.out.println("Subject: " + msg.getSubject());
+System.out.println("Asunto: " + msg.getSubject());
 
 ```
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/releases/view/618811)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/SourceControl/latest#src/main/java/com/aspose/email/examples/featurescomparison/extractor/)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/featurescomparison/extractor)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Extracción de encabezados de correo electrónico](/email/java/extracting-message-contents-from-emails/).
+Para más detalles, visita [Extracción de Encabezados de Email](/email/java/extracting-message-contents-from-emails/).
 
 {{% /alert %}}

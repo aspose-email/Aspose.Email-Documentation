@@ -1,19 +1,18 @@
 ---
-title: "Extracción del archivo adjunto"
+title: "Extracción de Adjunto"
 url: /es/net/extracting-attachment/
 weight: 120
 type: docs
 ---
 
-
 ## **VSTO**
-A continuación se muestra el código para extraer el archivo adjunto con VSTO Outlook.
+A continuación se muestra el código para extraer un adjunto usando VSTO Outlook.
 
 ``` cs
 
   string AttachmentFilePath = @"E:\Aspose\Aspose VS VSTO\Sample Files\";
 
- // Create Application class and get namespace
+ // Crear la clase Application y obtener el espacio de nombres
 
  Outlook.Application outlook = new Outlook.Application();
 
@@ -23,7 +22,7 @@ A continuación se muestra el código para extraer el archivo adjunto con VSTO O
 
  ns.Logon(_missing, _missing, false, true);
 
- // Get Inbox information in objec of type MAPIFolder
+ // Obtener información de la Bandeja de entrada en un objeto de tipo MAPIFolder
 
  Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
@@ -39,7 +38,7 @@ A continuación se muestra el código para extraer el archivo adjunto con VSTO O
 
 ```
 ## **Aspose.Email**
-A continuación se muestra el código para extraer el archivo adjunto usando aspose.email para.NET.
+A continuación se muestra el código para extraer un adjunto usando aspose.email para .NET.
 
 ``` cs
 
@@ -47,7 +46,7 @@ A continuación se muestra el código para extraer el archivo adjunto usando asp
 
  string AttachmentFilePath = @"E:\Aspose\Aspose VS VSTO\Sample Files\";
 
- //Create an instance of MailMessage and load an email file
+ //Crear una instancia de MailMessage y cargar un archivo de correo electrónico
 
  MailMessage mailMsg = MailMessage.Load(FilePath, MailMessageLoadOptions.DefaultEml);
 
@@ -55,7 +54,7 @@ A continuación se muestra el código para extraer el archivo adjunto usando asp
 
  {
 
-   //To display the the attachment file name
+   //Para mostrar el nombre del archivo del adjunto
 
    attachment.Save(AttachmentFilePath+attachment.Name);
 
@@ -82,11 +81,11 @@ A continuación se muestra el código para extraer el archivo adjunto usando asp
  }
 
 ```
-## **Descargar código fuente**
+## **Descargar Código Fuente**
 - [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Extracting%20Attachment)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Descargar Running Example**
+## **Descargar Ejemplo Funcional**
 - [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)

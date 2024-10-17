@@ -1,115 +1,115 @@
 ---
-title: "Descripción general de las funciones"
+title: "Resumen de Características"
 url: /es/androidjava/features-overview/
 weight: 10
 type: docs
 ---
 
 
-Aspose.Email para Android a través de Java se divide en varios componentes separados, cada uno con características particulares. Esta es una lista de las funciones de cada uno de los paquetes principales.
+Aspose.Email para Android a través de Java se divide en varios componentes separados, cada uno con características particulares. Aquí hay una lista de las características de cada uno de los paquetes principales.
 ## **Aspose.Email.Mail**
-### **Características generales del correo electrónico**
-- Crea correos electrónicos que contengan texto sin formato
+### **Características Generales de Correo Electrónico**
+- Crear correos electrónicos que contengan texto sin formato
 - Crear correos electrónicos que contengan HTML
-- Cree cuerpos de mensajes alternativos para que sean compatibles con clientes de correo electrónico compatibles con HTML y no HTML
-- Conéctese con cualquier servidor SMTP en un puerto específico
-- Envía correos electrónicos a través de cualquier servidor SMTP
-- Conéctese a un servidor SMTP habilitado para SSL
-- Conéctese a un servidor SMTP basado en TLS
-### **Características de los archivos adjuntos**
-- Agregar archivos adjuntos a correos electrónicos
-- Eliminar los archivos adjuntos de los correos electrónicos
-- Crear archivos adjuntos a partir de rutas de archivos
-- Crear archivos adjuntos a partir de transmisiones
-- Crear archivos adjuntos a partir de matrices de bytes
-### **Características de objetos incrustados**
-- Inserta objetos (como imágenes, sonidos, etc.) en tus correos electrónicos
-- Elimine los objetos incrustados de sus correos electrónicos
-- Incrustar objetos desde rutas de archivos
-- Incrustar objetos de transmisiones
-- Incrustar objetos de matrices de bytes
-### **Funciones de importación/exportación**
-- Importe correos electrónicos con formato de mensaje de correo electrónico (MSG) de Microsoft Outlook.
-- Importar correos electrónicos HTML (MHT) de Microsoft
-- Importar correos electrónicos con formato de mensaje (EML) compatible con RFC822
-- Crear correos electrónicos a partir de contenido HTML
-- Exportación de correos electrónicos al formato HTML de Microsoft (MHT)
-- Exportación de correos electrónicos a un formato de mensaje (EML) compatible con RFC822
-- Exportación de correos electrónicos desde un archivo PST de Outlook a archivos MSG de Outlook
-### **Funciones de correo masivo**
+- Crear cuerpos de mensaje alternativos para compatibilidad con clientes de correo electrónico compatibles con HTML y no HTML
+- Conectar con cualquier servidor SMTP en un puerto especificado
+- Enviar correos electrónicos a través de cualquier servidor SMTP
+- Conectar a un servidor SMTP habilitado para SSL
+- Conectar a un servidor SMTP basado en TLS
+### **Características de Adjuntos**
+- Agregar adjuntos a correos electrónicos
+- Eliminar adjuntos de correos electrónicos
+- Crear adjuntos a partir de rutas de archivos
+- Crear adjuntos a partir de flujos
+- Crear adjuntos a partir de matrices de bytes
+### **Características de Objetos Empotrados**
+- Incrustar objetos (como imágenes, sonidos, etc.) en sus correos electrónicos
+- Eliminar objetos incrustados de sus correos electrónicos
+- Incrustar objetos a partir de rutas de archivos
+- Incrustar objetos a partir de flujos
+- Incrustar objetos a partir de matrices de bytes
+### **Características de Importación/Exportación**
+- Importar mensajes de correo electrónico en formato Microsoft Outlook Email Message (MSG).
+- Importar correos electrónicos en formato Microsoft HTML (MHT)
+- Importar mensajes en formato compatible con RFC822 (EML)
+- Crear correos electrónicos a partir de contenidos HTML
+- Exportar correos electrónicos a formato Microsoft HTML (MHT)
+- Exportar correos electrónicos a formato compatible con RFC822 (EML)
+- Exportar correos electrónicos de un archivo PST de Outlook a archivos MSG de Outlook
+### **Características de Correo Masivo**
 - Soporta el envío de correos electrónicos en lotes
-- Función integrada de subprocesos múltiples para enviar correos electrónicos masivos
-- Permite guardar mensajes de correo electrónico masivos en un grupo de mensajes
-### **Funciones de combinación de correspondencia**
-- Combinación de correspondencia basada en plantillas con diferentes fuentes de datos
+- Función de multi-hilo incorporada para enviar correos electrónicos masivos
+- Soporta guardar mensajes de correo electrónico masivos en un grupo de mensajes
+### **Características de Combinar Correo**
+- Combinar correo basado en plantillas utilizando diferentes fuentes de datos
 - Soporta DataTable como fuente de datos
 - Soporta DataRowCollection como fuente de datos
 - Soporta DataReader como fuente de datos
 - Crear plantilla de correo electrónico a partir de un archivo
-- Crear una plantilla de correo electrónico a partir de una instancia de MailMessage
-- Realice una combinación de correspondencia por filas para generar mensajes de correo electrónico
-### **Características del calendario**
-- Agregue eventos de iCalendar a los mensajes de correo electrónico.
-- Cancela los eventos de iCalendar.
-- Envíe las convocatorias de reunión por correo electrónico.
-- Envíe las solicitudes de citas por correo electrónico.
-### **Funciones de gestión de eventos**
-- Admite una variedad de eventos útiles para proporcionar más control.
-- Realice acciones cuando se envíen todos los correos electrónicos masivos.
-- Realice acciones cuando esté a punto de enviarse un mensaje.
-- Reciba una notificación a través de un evento cuando un correo electrónico se haya enviado por completo.
-### **Características de utilidad**
-- Personaliza los encabezados de correo electrónico.
-- Establece la prioridad, la fecha y la hora de los mensajes.
+- Crear plantilla de correo electrónico a partir de una instancia de MailMessage
+- Realizar la combinación de correo fila por fila para generar mensajes de correo electrónico
+### **Características de Calendario**
+- Agregar eventos de iCalendar a mensajes de correo electrónico.
+- Cancelar eventos de iCalendar.
+- Enviar solicitudes de reunión por correo electrónico.
+- Enviar solicitudes de cita por correo electrónico.
+### **Características de Manejo de Eventos**
+- Soporta una variedad de eventos útiles para proporcionar más control.
+- Realizar acciones cuando se envían todos los correos electrónicos masivos.
+- Realizar acciones cuando un mensaje está a punto de enviarse.
+- Ser notificado a través de un evento cuando un correo electrónico ha sido completamente enviado.
+### **Características de Utilidad**
+- Personalizar encabezados de correo electrónico.
+- Establecer prioridad, fecha y hora del mensaje.
 - Soporta todos los conjuntos de caracteres.
-- Solicita recibos de lectura.
-### **Funciones avanzadas**
-- Modelos de programación asincrónica y sincrónica.
+- Solicitar acuses de recibo.
+### **Características Avanzadas**
+- Modelos de programación asíncrona y síncrona.
 - Soporta el análisis de correos electrónicos en formatos MSG, MHT y EML.
-- Permite guardar correos electrónicos en formatos MSG, MHT y EML.
-- Extraiga los archivos adjuntos de los archivos de mensajes de correo electrónico (MSG) de Microsoft Outlook.
-- Lea los mensajes de los archivos PST de Outlook.
+- Soporta guardar correos electrónicos en formatos MSG, MHT y EML.
+- Extraer adjuntos de archivos Microsoft Outlook Email Message (MSG).
+- Leer mensajes de archivos PST de Outlook.
 - Soporta conexión SMTP de respaldo.
-- Especifique el número de intentos de conexiones SMTP.
+- Especificar el número de intentos para las conexiones SMTP.
 ## **Aspose.Email.Mime**
-### **Funciones generales de análisis**
-- Extraiga los encabezados y cuerpos de los mensajes de correo electrónico.
-- Recupera nombres y valores de los encabezados de los correos electrónicos.
-- Recupere las direcciones de origen, destino, cc y respuesta.
-- Recupera y guarda los archivos adjuntos.
-- Recupera y guarda objetos incrustados, como imágenes y sonidos.
-### **Funciones de importación/exportación**
-- Importe correos electrónicos con formato de mensaje de correo electrónico (MSG) de Microsoft Outlook.
-- Importe correos electrónicos en formato HTML (MHT) de Microsoft.
-- Importe correos electrónicos con formato de mensaje (EML) compatible con RFC822.
-- Exporte correos electrónicos al formato HTML de Microsoft (MHT).
-- Exporte correos electrónicos a un formato de mensaje (EML) compatible con RFC822.
-### **Características de utilidad**
+### **Características Generales de Análisis**
+- Extraer encabezados de correos electrónicos y cuerpos de mensaje.
+- Recuperar nombres y valores de los encabezados de correo electrónico.
+- Recuperar direcciones de From, To, Cc y Reply-To.
+- Recuperar y guardar adjuntos.
+- Recuperar y guardar objetos incrustados como imágenes y sonidos.
+### **Características de Importación/Exportación**
+- Importar correos electrónicos en formato Microsoft Outlook Email Message (MSG).
+- Importar correos electrónicos en formato Microsoft HTML (MHT).
+- Importar correos electrónicos en formato compatible con RFC822 (EML).
+- Exportar correos electrónicos a formato Microsoft HTML (MHT).
+- Exportar correos electrónicos a formato compatible con RFC822 (EML).
+### **Características de Utilidad**
 - Soporta múltiples encabezados.
-- Soporta múltiples piezas.
+- Soporta múltiples partes.
 - Soporta todos los conjuntos de caracteres.
-- Recupera metadatos como ContentType, MimeVersion y XMailer.
-### **Funciones de análisis avanzado**
-- Carga y analiza correos electrónicos en formatos MSG, MHT y EML.
+- Recuperar metadatos como contentType, MimeVersion y XMailer.
+### **Características Avanzadas de Análisis**
+- Cargar y analizar correos electrónicos en formatos MSG, MHT y EML.
 ## **Aspose.Email.Verify**
-### **Funciones de validación**
-- Valida las direcciones de correo electrónico.
-- Soporta la validación de la sintaxis del correo electrónico.
-- Soporta la validación de dominios de correo electrónico.
-- Soporta la validación del servidor de correo.
+### **Características de Validación**
+- Validar direcciones de correo electrónico.
+- Soporta la validación de sintaxis de correo electrónico.
+- Soporta la validación de dominio de correo electrónico.
+- Soporta la validación de servidor de correo.
 - Soporta la validación de registros MX.
-- Validación asincrónica.
+- Validación asíncrona.
 - Resultados de validación flexibles.
-### **Características de utilidad**
-- Especifique los servidores DNS.* Establezca el tiempo de espera de la solicitud.
+### **Características de Utilidad**
+- Especificar servidores DNS.* Establecer tiempo de espera de solicitud.
 ## **Aspose.iCalendar**
-- Calcule de manera fácil y confiable las fechas y horas de ocurrencia incluso para los patrones de recurrencia más complejos.
-- Consume y produce patrones de recurrencia en formato iCalendar (RFC 2445).
-- Cree patrones de recurrencia mediante programación mediante un modelo de objetos intuitivo.
-- Usa patrones de recurrencia anuales, mensuales, semanales, diarios, por hora, por minuto y por segundo.
-- Represente los patrones de recurrencia en sus ventanas, la web o una aplicación móvil.
-## **Soporte de archivos PST/OST**
-- Soporte para archivos de almacenamiento personal y sin conexión
+- Calcular fechas y horas de ocurrencia de manera fácil y confiable incluso para los patrones de recurrencia más complejos.
+- Consumir y producir patrones de recurrencia en el formato iCalendar (RFC 2445).
+- Crear patrones de recurrencia programáticamente a través de un modelo de objeto intuitivo.
+- Usar patrones de recurrencia anuales, mensuales, semanales, diarias, horarias, por minuto y por segundo.
+- Representar patrones de recurrencia en sus ventanas, aplicaciones web o móviles.
+## **Soporte para Archivos PST/OST**
+- Soporte para archivos de Personal y Offline Storage
 - Generar y leer archivos OST, PST
 - Soporta archivos PST de todos los tipos
-- Todos los tipos de OST compatibles con la lectura
+- Todos los tipos de OST soportados para lectura

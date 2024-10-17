@@ -1,5 +1,5 @@
 ---
-title: "Crear una tarea recurrente"
+title: "Crear una Tarea Recurrente"
 url: /es/net/create-a-recurring-task/
 weight: 30
 type: docs
@@ -7,7 +7,7 @@ type: docs
 
 
 ## **VSTO**
-A continuación se muestra el fragmento de código que muestra la repetición de la tarea en función de la fecha:
+A continuación se muestra el fragmento de código que muestra la recurrencia de una tarea en función de la fecha:
 
 ``` cs
 
@@ -15,7 +15,7 @@ A continuación se muestra el fragmento de código que muestra la repetición de
 
     Outlook.OlItemType.olTaskItem) as Outlook.TaskItem;
 
-    task.Subject = "Tax Preparation";
+    task.Subject = "Preparación de Impuestos";
 
     task.StartDate = DateTime.Parse("4/1/2007 8:00 AM");
 
@@ -38,13 +38,13 @@ A continuación se muestra el fragmento de código que muestra la repetición de
 
 ```
 ## **Aspose.Email**
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email para.NET permite crear tareas de Outlook y guardarlas en formato MSG. El [MapiTask](https://apireference.aspose.com/email/net/aspose.email.mapi/mapitask) La clase proporciona varias propiedades, como Percentcomplete, Estimatedeffort, ActualEffort, History, LastUpdate y otras, para acomodar y configurar la información requerida para una tarea de Outlook. Este artículo muestra cómo crear, guardar y leer un MapiTask desde un disco.
+Aspose.Email para .NET permite crear tareas de Outlook y guardarlas en formato MSG. La clase [MapiTask](https://apireference.aspose.com/email/net/aspose.email.mapi/mapitask) proporciona una serie de propiedades como Percentcomplete, Estimatedeffort, ActualEffort, History, LastUpdate, y otras, para acomodar y establecer la información necesaria para una tarea de Outlook. Este artículo muestra cómo crear, guardar y leer un MapiTask desde el disco.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Aspose.Email permite crear una tarea recurrente donde la recurrencia puede ser diaria, semanal, mensual o anual. El siguiente ejemplo de código ilustra la creación de una tarea con periodicidad semanal.
+Aspose.Email permite crear una tarea recurrente donde la recurrencia puede ser diaria, semanal, mensual o anual. El siguiente ejemplo de código ilustra la creación de una tarea con recurrencia semanal.
 
 ``` cs
 
@@ -54,7 +54,7 @@ Aspose.Email permite crear una tarea recurrente donde la recurrencia puede ser d
 
   task.State = MapiTaskState.NotAssigned;
 
-  // Set the weekly recurrence
+  // Establecer la recurrencia semanal
 
   var rec = new MapiCalendarDailyRecurrencePattern
 
@@ -78,11 +78,11 @@ Aspose.Email permite crear una tarea recurrente donde la recurrencia puede ser d
 
 
 ```
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [Codeplex](https://archive.codeplex.com/?p=asposevsto#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20a%20Recurring%20Task)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

@@ -1,14 +1,13 @@
 ---
-title: "Trabajando con IMAPClient de forma asincrónica"
-url: /es/java/working-with-imapclient-asynchronously/
+title: "Trabajando con ImapClient Asincrónicamente"
+url: /es/java/trabajando-con-imapclient-asincronicamente/
 weight: 70
 type: docs
 ---
 
+Los mensajes se pueden recuperar de la bandeja de entrada de forma asincrónica utilizando el [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) de Aspose.Email. Este artículo muestra cómo recuperar mensajes de la bandeja de entrada de forma Asincrónica. Este artículo también muestra cómo listar mensajes proporcionando criterios de búsqueda utilizando [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/).
 
-Los mensajes se pueden recuperar del buzón de forma asíncrona mediante Aspose.Email [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Este artículo muestra la recuperación de mensajes del buzón de forma asincrónica. Este artículo también muestra cómo enumerar los mensajes proporcionando criterios de búsqueda mediante [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/).
-
-## **Recuperar mensajes de forma asincrónica**
+## **Recuperar Mensajes Asincrónicamente**
 
 El siguiente fragmento de código muestra cómo recuperar mensajes de forma asincrónica.
 
@@ -23,9 +22,9 @@ try (ImapClient client = new ImapClient("host", "username", "password")) {
 }
 ~~~
 
-## **Listar mensajes de forma asincrónica con MailQuery**
+## **Listar Mensajes Asincrónicamente con MailQuery**
 
-The [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) La clase se puede usar para especificar los criterios de búsqueda para recuperar una lista específica de mensajes de forma asincrónica, como se muestra en el siguiente ejemplo de código.
+La clase [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) se puede utilizar para especificar criterios de búsqueda para recuperar una lista especificada de mensajes de forma asincrónica, como se muestra en el siguiente ejemplo de código.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

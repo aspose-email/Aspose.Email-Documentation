@@ -1,115 +1,114 @@
 ---
-title: "Filtrar mensajes del servidor mediante el cliente IMAP"
+title: "Filtrar mensajes del servidor usando cliente IMAP"
 url: /es/java/filter-messages-from-server-using-imap-client/
 weight: 40
 type: docs
 ---
 
+La [Clase ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) proporciona el [método listMessages()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) que obtiene todos los mensajes de un buzón. Para obtener solo los mensajes que coinciden con alguna condición, utiliza el [método sobrecargado listMessages()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) que toma [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) como argumento. La [clase MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) proporciona varias propiedades para especificar las condiciones, por ejemplo, fecha, asunto, remitente, destinatario, etc. El primer ejemplo ilustra cómo filtrar mensajes basados en la fecha y el asunto. También mostramos cómo filtrar por otros criterios y cómo construir consultas más complejas. La API también proporciona la capacidad de aplicar criterios de búsqueda sensibles a mayúsculas y minúsculas para coincidir con criterios de filtrado exactos. La API también permite especificar la codificación de la cadena de búsqueda para filtrar mensajes desde el buzón.
 
-The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) la clase proporciona la [listMessages()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) método que obtiene todos los mensajes de un buzón. Para recibir solo los mensajes que cumplen alguna condición, utilice el método sobrecargado [listMessages()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages--) método que toma [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) como argumento. El [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) La clase proporciona varias propiedades para especificar las condiciones, por ejemplo, fecha, asunto, remitente, destinatario, etc. El primer ejemplo ilustra cómo filtrar los mensajes en función de la fecha y el asunto. También mostramos cómo filtrar según otros criterios y cómo crear consultas más complejas. La API también ofrece la capacidad de aplicar criterios de búsqueda que distinguen mayúsculas y minúsculas para que coincidan con los criterios de filtrado exactos. La API también permite especificar la codificación de la cadena de búsqueda para filtrar los mensajes del buzón.
+## **Filtrando Mensajes desde el Buzón**
 
-## **Filtrar mensajes del buzón**
+1. [Conéctate e inicia sesión en un servidor IMAP](/email/java/connecting-to-imap-server#connecting-with-imap-server)
+1. Crea una instancia de [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) y establece las propiedades.
+1. Llama al [método ImapClient.listMessages(MailQuery query)](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages-com.aspose.email.MailQuery-) y pasa el [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) con los parámetros para obtener solo los mensajes filtrados.
 
-1. [Conectarse e iniciar sesión en un servidor IMAP](/email/java/connecting-to-imap-server#connecting-with-imap-server)
-1. Crea una instancia del [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) y establecer las propiedades
-1. Llame al [IMAPClient.ListMessages (consulta de MailQuery)](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listMessages-com.aspose.email.MailQuery-) método y pase el [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) con los parámetros para obtener solo los mensajes filtrados.
-
-El siguiente fragmento de código muestra cómo conectarse a un buzón IMAP y recibir los mensajes que llegaron hoy y que tienen la palabra «boletín» en el asunto.
+El siguiente fragmento de código te muestra cómo conectarte a un buzón IMAP y obtener mensajes que llegaron hoy y tienen la palabra "newsletter" en el asunto.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Connect and log in to IMAP
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Conectar e iniciar sesión en IMAP
 final String host = "host";
 final int port = 143;
 final String username = "user@host.com";
 final String password = "password";
 ImapClient client = new ImapClient(host, port, username, password);
 client.selectFolder("Inbox");
-// Set conditions, Subject contains "Newsletter", Emails that arrived today
+// Establecer condiciones, Asunto contiene "Newsletter", Correos que llegaron hoy
 ImapQueryBuilder builder = new ImapQueryBuilder();
 builder.getSubject().contains("Newsletter");
 builder.getInternalDate().on(new Date());
-// Build the query and Get list of messages
+// Construir la consulta y obtener la lista de mensajes
 MailQuery query = builder.getQuery();
 ImapMessageInfoCollection messages = client.listMessages(query);
-System.out.println("Imap: " + messages.size() + " message(s) found.");
-// Disconnect from IMAP
+System.out.println("Imap: " + messages.size() + " mensaje(s) encontrado(s).");
+// Desconectar de IMAP
 client.dispose();
 ~~~
 
-## **Reciba mensajes que cumplan con criterios específicos**
+## **Obtener Mensajes que Cumplen Criterios Específicos**
 
-[Los ejemplos de código anteriores](#filtering-messages-from-mailbox) filtra los mensajes según el asunto y la fecha del correo electrónico. También podemos usar otras propiedades para establecer otras condiciones compatibles. A continuación se muestran algunos ejemplos de cómo configurar las condiciones mediante [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/). Los siguientes fragmentos de código muestran cómo filtrar los correos electrónicos según:
+[Los ejemplos de código anteriores](#filtering-messages-from-mailbox) filtran mensajes basados en el asunto del correo y la fecha. También podemos usar otras propiedades para establecer otras condiciones admitidas. A continuación se presentan algunos ejemplos de establecer condiciones utilizando [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/). Los fragmentos de código que siguen muestran cómo filtrar correos en:
 
 1. La fecha de hoy.
-1. Un intervalo de fechas.
+1. Un rango de fechas.
 1. De un remitente específico.
 1. De un dominio específico.
 1. De un destinatario específico.
 
-### **Fecha de hoy**
+### **Fecha de Hoy**
 
-El siguiente fragmento de código muestra cómo filtrar los correos electrónicos en Fecha de hoy.
+El siguiente fragmento de código te muestra cómo filtrar correos en la Fecha de Hoy.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Emails that arrived today
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Correos que llegaron hoy
 MailQueryBuilder builder = new MailQueryBuilder();
 builder.getInternalDate().on(new Date());
 ~~
-### **Date Range*
-The following code snippet shows you how to filter emails on the date range.
+### **Rango de Fechas**
+El siguiente fragmento de código te muestra cómo filtrar correos en el rango de fechas.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Emails that arrived in last 7 days
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Correos que llegaron en los últimos 7 días
 Calendar cal = Calendar.getInstance();
 builder.getInternalDate().before(cal.getTime());
 cal.add(Calendar.DATE, -7);
 builder.getInternalDate().since(cal.getTime());
 ~~~
 
-### **Remitente específico**
+### **Remitente Específico**
 
-El siguiente fragmento de código muestra cómo filtrar los correos electrónicos de un remitente específico.
+El siguiente fragmento de código te muestra cómo filtrar correos de un remitente específico.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Get emails from specific sender
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Obtener correos de un remitente específico
 builder.getFrom().contains("saqib.razzaq@127.0.0.1");
 ~~~
 
-### **Dominio específico**
+### **Dominio Específico**
 
-El siguiente fragmento de código muestra cómo filtrar los correos electrónicos en un dominio específico.
+El siguiente fragmento de código te muestra cómo filtrar correos de un dominio específico.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Get emails from specific domain
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Obtener correos de un dominio específico
 builder.getFrom().contains("SpecificHost.com");
 ~~~
 
-### **Destinatario específico**
+### **Destinatario Específico**
 
-El siguiente fragmento de código muestra cómo filtrar los correos electrónicos de un destinatario específico.
+El siguiente fragmento de código te muestra cómo filtrar correos hacia un destinatario específico.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Get emails sent to specific recipient
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Obtener correos enviados a un destinatario específico
 builder.getTo().contains("recipient");
 ~~~
 
-## **Creación de consultas complejas**
+## **Construyendo Consultas Complejas**
 
-Si es diferente [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/) las propiedades se establecen en declaraciones separadas, entonces todas las condiciones coincidirían. Por ejemplo, si queremos recibir mensajes entre un intervalo de fechas y los de un anfitrión específico, necesitamos escribir tres declaraciones.
+Si diferentes propiedades de [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/) se establecen en declaraciones separadas, entonces todas las condiciones se emparejarían. Por ejemplo, si queremos obtener mensajes entre un rango de fechas y de un host específico, necesitamos escribir tres declaraciones.
 
-### **Combinación de consultas con AND**
+### **Combinando Consultas con Y**
 
-El siguiente fragmento de código muestra cómo combinar consultas con AND.
+El siguiente fragmento de código te muestra cómo combinar consultas con Y.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Emails from specific host, get all emails that arrived before today and all emails that arrived since 7 days ago
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Correos de un host específico, obtener todos los correos que llegaron antes de hoy y todos los correos que llegaron desde hace 7 días
 builder.getFrom().contains("SpecificHost.com");
 
 Calendar cal = Calendar.getInstance();
@@ -118,23 +117,23 @@ cal.add(Calendar.DATE, -7);
 builder.getInternalDate().since(cal.getTime());
 ~~~
 
-### **Combinación de consultas con OR**
+### **Combinando Consultas con O**
 
-[MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/) proporciona la [or()](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/#or-com.aspose.email.MailQuery-com.aspose.email.MailQuery-) método que requiere dos [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) instancias como parámetros. Obtiene los mensajes que cumplen cualquiera de las dos condiciones especificadas. El siguiente fragmento de código muestra cómo filtrar los mensajes que tienen la palabra «test» en el asunto o «noreply@host.com» como remitente. En el siguiente fragmento de código, se muestra cómo combinar consultas con OR.
+[MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/) proporciona el método [or()](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/#or-com.aspose.email.MailQuery-com.aspose.email.MailQuery-) que toma dos instancias de [MailQuery](https://reference.aspose.com/email/java/com.aspose.email/mailquery/) como parámetros. Obtiene los mensajes que coinciden con cualquiera de las dos condiciones especificadas. El siguiente fragmento de código muestra cómo filtrar mensajes que tienen “test” en el asunto o “noreply@host.com” como remitente. El siguiente fragmento de código te muestra cómo combinar consultas con O.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Specify OR condition
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Especificar condición O
 builder.or(builder.getSubject().contains("test"), builder.getFrom().contains("noreply@host.com"));
 ~~~
 
 ## **Filtración en InternalDate**
 
-Los mensajes se pueden extraer del servidor en función de InternalDate; sin embargo, a veces el servidor no devuelve todos los mensajes tal como aparecen en la bandeja de entrada. Su motivo puede ser la zona horaria del servidor, ya que es posible que no sea UTC para todos los servidores, como [Gmail](https://www.google.com.ua/search?client=opera&q=timezone+gmail&sourceid=opera&ie=utf-8&oe=utf-8&channel=suggest#channel=suggest&q=gmail+server+timezone++). Aspose envía comandos como 008 SEARCH EL 4 de mayo de 2014 según el [Protocolo IMAP](https://datatracker.ietf.org/doc/html/rfc1730) sin embargo, el resultado puede variar debido a la configuración de la zona horaria del servidor. Se agrega un nuevo miembro en [ImapMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/) as [InternalDate](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getInternalDate--) lo que ayuda aún más a filtrar los mensajes. El siguiente fragmento de código muestra el uso de [InternalDate](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getInternalDate--) para filtrar los mensajes.
+Los mensajes se pueden extraer del servidor en base a la InternalDate; sin embargo, a veces el servidor no devuelve todos los mensajes como se puede ver en la bandeja de entrada. Su razón puede ser la zona horaria del servidor, ya que puede no ser UTC para todos los servidores como [Gmail](https://www.google.com.ua/search?client=opera&q=timezone+gmail&sourceid=opera&ie=utf-8&oe=utf-8&channel=suggest#channel=suggest&q=gmail+server+timezone++). Aspose envía comandos como 008 SEARCH ON 4-May-2014 de acuerdo con el [protocolo IMAP](https://datatracker.ietf.org/doc/html/rfc1730); sin embargo, el resultado puede diferir debido a la configuración de la zona horaria del servidor. Se ha añadido un nuevo miembro en [ImapMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/) como [InternalDate](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getInternalDate--) que ayuda además en la filtración de mensajes. El siguiente fragmento de código muestra el uso de [InternalDate](https://reference.aspose.com/email/java/com.aspose.email/imapmessageinfo/#getInternalDate--) para filtrar mensajes.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Connect and log in to IMAP
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Conectar e iniciar sesión en IMAP
 final String host = "host";
 final int port = 143;
 final String username = "user@host.com";
@@ -142,61 +141,61 @@ final String password = "password";
 ImapClient client = new ImapClient(host, port, username, password);
 client.selectFolder("Inbox");
 
-// Set conditions, Subject contains "Newsletter", Emails that arrived today
+// Establecer condiciones, Asunto contiene "Newsletter", Correos que llegaron hoy
 ImapQueryBuilder builder = new ImapQueryBuilder();
 builder.getSubject().contains("Newsletter");
 builder.getInternalDate().on(new Date());
 
-// Build the query and Get list of messages
+// Construir la consulta y obtener la lista de mensajes
 MailQuery query = builder.getQuery();
 ImapMessageInfoCollection messages = client.listMessages(query);
 for (ImapMessageInfo info : messages) {
-    System.out.println("Internal Date: " + info.getInternalDate());
+    System.out.println("Fecha Interna: " + info.getInternalDate());
 }
 
-// Disconnect from IMAP
+// Desconectar de IMAP
 client.dispose();
 ~~~
 
-### **Filtrado de correos electrónicos sensibles a mayúsculas**
+### **Filtrado de Correos con Sensibilidad a Mayúsculas y Minúsculas**
 
-El siguiente fragmento de código muestra cómo usar el filtrado de correos electrónicos que distingue mayúsculas y minúsculas.
+El siguiente fragmento de código te muestra cómo usar el filtrado de correos con sensibilidad a mayúsculas y minúsculas.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Set conditions, Subject contains "Newsletter", Emails that arrived today
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Establecer condiciones, Asunto contiene "Newsletter", Correos que llegaron hoy
 ImapQueryBuilder builder = new ImapQueryBuilder();
 builder.getSubject().contains("Newsletter", true);
 builder.getInternalDate().on(new Date());
 MailQuery query = builder.getQuery();
 ~~~
 
-### **Especificar la codificación para Query Builder**
+### **Especificar Codificación para el Constructor de Consultas**
 
-Las API [ImapQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/imapquerybuilder/) el constructor se puede usar para especificar la codificación de la cadena de búsqueda. Esto también se puede configurar usando el [DefaultEncoding](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/#getDefaultEncoding--) propiedad de MailQueryBuilder. El siguiente fragmento de código muestra cómo especificar la codificación del generador de consultas.
+El constructor de [ImapQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/imapquerybuilder/) de la API se puede usar para especificar la codificación para la cadena de búsqueda. Esto también se puede establecer utilizando la [propiedad DefaultEncoding](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/#getDefaultEncoding--) del MailQueryBuilder. El siguiente fragmento de código te muestra cómo especificar la codificación para el constructor de consultas.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Set conditions
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// Establecer condiciones
 ImapQueryBuilder builder = new ImapQueryBuilder(Charset.forName("utf-8"));
 builder.getSubject().contains("ğüşıöç", true);
 MailQuery query = builder.getQuery();
 ~~~
 
-### **Filtrar mensajes con soporte de paginación**
+### **Filtrar Mensajes con Soporte de Paginación**
 
-The [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) brinda la capacidad de buscar mensajes en el buzón y enumerarlos con soporte de paginación. El siguiente fragmento de código muestra cómo filtrar los mensajes que admiten la paginación.
+El [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) proporciona la capacidad de buscar mensajes del buzón y listarlos con soporte de paginación. El siguiente fragmento de código te muestra cómo filtrar mensajes con soporte de paginación.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
 /// <summary>
-/// This example shows how to search for messages using ImapClient of the API with paging support
-/// Introduced in Aspose.Email for .NET 6.4.0
+/// Este ejemplo muestra cómo buscar mensajes utilizando ImapClient de la API con soporte de paginación
+/// Introducido en Aspose.Email para .NET 6.4.0
 /// </summary>
 final ImapClient client = new ImapClient("host.domain.com", 84, "username", "password");
 try {
     try {
-        // Append some test messages
+        // Agregar algunos mensajes de prueba
         int messagesNum = 12;
         int itemsPerPage = 5;
         MailMessage message = null;
@@ -234,7 +233,7 @@ try {
             pages.add(pageInfo);
         }
         int retrievedItems = 0;
-        // foreach to while statements conversion
+        // conversión de foreach a while
         for (ImapPageInfo folderCol : pages) {
             retrievedItems += folderCol.getItems().size();
         }
@@ -246,10 +245,10 @@ try {
 }
 ~~~
 
-## **Filtrar mensajes con bandera personalizada**
+## **Filtrar Mensajes con Marca Personalizada**
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
 ImapQueryBuilder queryBuilder = new ImapQueryBuilder();
 
 queryBuilder.hasFlags(ImapMessageFlags.keyword("custom1"));
@@ -257,11 +256,11 @@ queryBuilder.hasFlags(ImapMessageFlags.keyword("custom1"));
 queryBuilder.hasNoFlags(ImapMessageFlags.keyword("custom2"));
 ~~~
 
-## **Filtrar mensajes mediante la búsqueda personalizada**
+## **Filtrar Mensajes usando Búsqueda Personalizada**
 
-Por ejemplo, el estándar RFC 3501 no permite una búsqueda de mensajes basada en la existencia de archivos adjuntos en los mensajes. Pero **Gmail** provides [Extensiones IMAP](https://developers.google.com/gmail/imap/imap-extensions) que permiten realizar dicha búsqueda. Aspose.Email proporciona la [customSearch](https://reference.aspose.com/email/java/com.aspose.email/imapquerybuilder/#customSearch-java.lang.String-) método del [ImapQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/imapquerybuilder/) clase para realizar la consulta correspondiente.
+Por ejemplo, el estándar RFC 3501 no permite buscar mensajes basados en la existencia de archivos adjuntos en los mensajes. Pero **Gmail** proporciona [Extensiones IMAP](https://developers.google.com/gmail/imap/imap-extensions) que permiten realizar dicha búsqueda. Aspose.Email proporciona el método [customSearch](https://reference.aspose.com/email/java/com.aspose.email/imapquerybuilder/#customSearch-java.lang.String-) de la clase [ImapQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/imapquerybuilder/) para realizar una consulta correspondiente.
 
-El ejemplo de código que aparece a continuación muestra cómo recuperar una lista de mensajes de correo electrónico del servidor que tienen archivos adjuntos, mediante el protocolo IMAP y un criterio de búsqueda personalizado:
+El ejemplo de código a continuación muestra cómo recuperar una lista de mensajes de correo electrónico del servidor que tienen archivos adjuntos, utilizando el protocolo IMAP y un criterio de búsqueda personalizado:
 
 ```java
 ImapQueryBuilder builder = new ImapQueryBuilder();

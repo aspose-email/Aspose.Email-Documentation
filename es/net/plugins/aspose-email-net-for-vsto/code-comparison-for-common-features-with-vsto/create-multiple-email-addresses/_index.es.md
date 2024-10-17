@@ -1,13 +1,13 @@
 ---
-title: "Crear varias direcciones de correo electrónico"
-url: /es/net/create-multiple-email-addresses/
+title: "Crear Múltiples Direcciones de Correo Electrónico"
+url: /es/net/crear-multiples-direcciones-de-correo-electronico/
 weight: 70
 type: docs
 ---
 
 
 ## **VSTO**
-A continuación se muestra el código para crear varias direcciones con VSTO Outlook.
+A continuación se presenta el código para crear múltiples direcciones utilizando VSTO Outlook.
 
 ``` cs
 
@@ -15,11 +15,11 @@ A continuación se muestra el código para crear varias direcciones con VSTO Out
 
  Outlook.MailItem mailItem = (Outlook.MailItem)this.Application.CreateItem(Outlook.OlItemType.olMailItem);
 
- mailItem.Subject = "This is the subject";
+ mailItem.Subject = "Este es el asunto";
 
- mailItem.To = "receiver1@receiver.com;receiver2@receiver.com";
+ mailItem.To = "destinatario1@receiver.com;destinatario2@receiver.com";
 
- mailItem.Body = "This is the message.";
+ mailItem.Body = "Este es el mensaje.";
 
  mailItem.BodyFormat = Microsoft.Office.Interop.Outlook.OlBodyFormat.olFormatRichText;
 
@@ -30,25 +30,25 @@ A continuación se muestra el código para crear varias direcciones con VSTO Out
 
 ```
 ## **Aspose.Email**
-A continuación se muestra el código para crear varias direcciones con aspose.email para.NET.
+A continuación se presenta el código para crear múltiples direcciones utilizando aspose.email para .NET.
 
 ``` cs
 
-  //Create an Instance of MailMessage class
+ //Crear una instancia de la clase MailMessage
 
  MailMessage message = new MailMessage();
 
- //From field
+ //Campo De
 
- message.From = "sender@sender.com";
+ message.From = "remitente@sender.com";
 
- //Specify the recipients' mail addresses
+ //Especificar las direcciones de correo de los destinatarios
 
- message.To.Add("receiver1@receiver.com");
+ message.To.Add("destinatario1@receiver.com");
 
- message.To.Add("receiver2@receiver.com");
+ message.To.Add("destinatario2@receiver.com");
 
- message.To.Add("receiver3@receiver.com");
+ message.To.Add("destinatario3@receiver.com");
 
  message.CC.Add("CC1@receiver.com");
 
@@ -58,23 +58,23 @@ A continuación se muestra el código para crear varias direcciones con aspose.e
 
  message.Bcc.Add("Bcc2@receiver.com");
 
- //Create an instance of SmtpClient Class
+ //Crear una instancia de la clase SmtpClient
 
  SmtpClient client = new SmtpClient();
 
- //Specify your mailing host server
+ //Especificar su servidor de correo
 
  client.Host = "smtp.server.com";
 
- //Specify your mail user name
+ //Especificar su nombre de usuario de correo
 
- client.Username = "Username";
+ client.Username = "NombreDeUsuario";
 
- //Specify your mail password
+ //Especificar su contraseña de correo
 
- client.Password = "Password";
+ client.Password = "Contraseña";
 
- //Specify your Port #
+ //Especificar su número de puerto
 
  client.Port = 25;
 
@@ -82,13 +82,13 @@ A continuación se muestra el código para crear varias direcciones con aspose.e
 
  {
 
-   //Client.Send will send this message
+   //Client.Send enviará este mensaje
 
    client.Send(message);
 
-   //Display 'Message Sent', only if message sent successfully
+   //Mostrar 'Mensaje Enviado', solo si el mensaje se envió con éxito
 
-   Console.WriteLine("Message sent");
+   Console.WriteLine("Mensaje enviado");
 
  }
 
@@ -100,16 +100,16 @@ A continuación se muestra el código para crear varias direcciones con aspose.e
 
  }
 
- Console.WriteLine("Press enter to quit");
+ Console.WriteLine("Presione enter para salir");
 
- Console.Read();      
+ Console.Read();       
 
 ```
-## **Descargar código fuente**
+## **Descargar Código Fuente**
 - [url:CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
-- [url:GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20Multiple%20Email%20Addresses)
+- [url:GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Crear%20Múltiples%20Direcciones%20de%20Correo%20Electrónico)
 - [url:Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Descargar Running Example**
+## **Descargar Ejemplo en Ejecución**
 - [url:CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [url:GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [url:Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)

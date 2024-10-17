@@ -5,31 +5,31 @@ weight: 120
 type: docs
 ---
 
-[Crear un nuevo PST, agregar subcarpetas y mensajes](/email/java/create-new-pst-add-sub-folders-and-messages/) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes agregar un [MapiDistributionList](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/) a la subcarpeta Contactos de un archivo PST que haya creado o cargado.
+[Crear nuevo PST, agregar subcarpetas y mensajes](/email/java/create-new-pst-add-sub-folders-and-messages/) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes agregar una [MapiDistributionList](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/) a la subcarpeta de Contactos de un archivo PST que has creado o cargado.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para establecer el EntryID para un [MapiDistributionListMember](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlistmember/), la cadena Base64 debe convertirse usando [Códec Apache Commons](https://commons.apache.org/proper/commons-codec/download_codec.cgi).
+Para establecer el EntryId para un [MapiDistributionListMember](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlistmember/), el base64String debe ser convertido usando [Apache Commons Codec](https://commons.apache.org/proper/commons-codec/download_codec.cgi).
 
-{{% /alert %}}
+{{% /alert %}} 
 
 ## **Cargar MapiDistributionList desde un archivo**
 
-El código siguiente carga una lista de distribución MAPI desde un archivo.
+El código a continuación carga una lista de distribución MAPI desde un archivo.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-AddMapiDistributionListToPST-LoadMapiDistributionList.java" >}}
 
-## **Cree una nueva MAPIDistributionList y agréguela a la subcarpeta Contactos**
+## **Crear una nueva MapiDistributionList y agregarla a la subcarpeta de Contactos**
 
-A continuación se muestran los pasos para agregar un [MapiDistributionList](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/) a un PST:
+A continuación se presentan los pasos para agregar una [MapiDistributionList](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/) a un PST:
 
-1. Crea un nuevo PST.
-1. Agregue la carpeta Contactos a PST.
-1. Crea contactos de muestra.
-1. Cree una lista de distribución sobre la base de los contactos creados.
-1. Agregue la lista de distribución a PST.
+1. Crear un nuevo PST.
+1. Agregar la carpeta de Contactos al PST.
+1. Crear contactos de ejemplo.
+1. Crear una lista de distribución sobre la base de los contactos creados.
+1. Agregar la lista de distribución al PST.
 
-El siguiente fragmento de código muestra cómo crear un [MapiDistributionList](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/) y, a continuación, agréguelo a la carpeta Contactos de un archivo PST recién creado.
+El fragmento de código a continuación muestra cómo crear una [MapiDistributionList](https://reference.aspose.com/email/java/com.aspose.email/mapidistributionlist/) y luego agregarla a la carpeta de Contactos de un archivo PST recién creado.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-AddMapiDistributionListToPST-AddMapiDistributionListToPST.java" >}}
 

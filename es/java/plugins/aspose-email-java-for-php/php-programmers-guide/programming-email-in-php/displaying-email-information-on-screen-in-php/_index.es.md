@@ -1,18 +1,18 @@
 ---
-title: "Mostrar información de correo electrónico en la pantalla en PHP"
-url: /es/java/displaying-email-information-on-screen-in-php/
+title: "Mostrando Información del Correo Electrónico en Pantalla en PHP"
+url: /es/java/mostrando-informacion-del-correo-electronico-en-pantalla-en-php/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Mostrar información de correo electrónico**
-Para mostrar información de correo electrónico mediante **Aspose.Email Java para PHP**, simplemente invoca **GetEmailInfo** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Mostrando Información del Correo Electrónico**
+Para mostrar información del correo electrónico utilizando **Aspose.Email Java para PHP**, simplemente invoca el módulo **GetEmailInfo**. Aquí puedes ver el código de ejemplo.
 
 **Código PHP**
 
 ``` php
 
- # Create MailMessage instance by loading an Eml file
+ # Crear una instancia de MailMessage cargando un archivo Eml
 
 $message_format = new MessageFormat();
 
@@ -20,19 +20,19 @@ $mailMessage=new MailMessage();
 
 $message = $mailMessage->load($dataDir . "Message.eml");
 
-print "From: " . (string)$message->getFrom();
+print "De: " . (string)$message->getFrom();
 
-print "To: " . (string)$message->getTo();
+print "Para: " . (string)$message->getTo();
 
-print "Subject: " . (string)$message->getSubject();
+print "Asunto: " . (string)$message->getSubject();
 
-print "HtmlBody: " . (string)$message->getHtmlBody();
+print "CuerpoHtml: " . (string)$message->getHtmlBody();
 
-print "TextBody: " . (string)$message->getTextBody();
+print "CuerpoTexto: " . (string)$message->getTextBody();
 
 ```
-## **Descargar Running Code**
-Download **Mostrar información de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Mostrando Información del Correo Electrónico (Aspose.Email)** de cualquiera de los siguientes sitios de codificación social mencionados:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/GetEmailInfo.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingEmail/GetEmailInfo.php)

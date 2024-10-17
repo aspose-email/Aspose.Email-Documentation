@@ -1,24 +1,23 @@
 ---
-title: "Trabajando con In-Place Archive"
+title: "Trabajando con el Archivo In-Place"
 url: /es/net/working-with-in-place-archive/
 weight: 150
 type: docs
 ---
 
+## **Archivos In-Place en Office 365**
 
-## **Archivos locales en Office 365**
+Los Archivos In-Place en Office 365 proporcionan a los usuarios espacio adicional de almacenamiento. Después de que los buzones de archivo estén activados, los usuarios pueden acceder y almacenar mensajes en su Buzón de Archivo utilizando Microsoft Outlook y Outlook en la Web. Cuando el buzón con la archivación In-Place activada se abre con Outlook, el buzón de archivo se muestra como un buzón separado.
 
-Los archivos locales de Office 365 proporcionan a los usuarios espacio de almacenamiento adicional. Una vez activados los buzones de archivado, los usuarios pueden acceder a los mensajes y almacenarlos en su buzón de archivado mediante Microsoft Outlook y Outlook en la Web. Cuando el buzón con el archivado local habilitado se abre con Outlook, el buzón de archivo se muestra como un buzón independiente.
+## **Mover elementos al Archivo In-Place**
 
-## **Mover elementos a un archivo local**
-
-La API Aspose.Email se puede usar para mover elementos al buzón de archivo de los usuarios mediante el [`IEWSClient.ArchiveItem`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem/) method. [`IEWSClient.ArchiveItem`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem/) El método proporciona cuatro sobrecargas que se enumeran a continuación.
+La API Aspose.Email se puede utilizar para mover elementos al buzón de archivo de los usuarios utilizando el método [`IEWSClient.ArchiveItem`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem/). El método [`IEWSClient.ArchiveItem`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem/) tiene cuatro sobrecargas que se enumeran a continuación.
 
 - [`ArchiveItem(string sourceFolderUri, Appointment appointment)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem)
 - [`ArchiveItem(string sourceFolderUri, ExchangeTask task)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem_1)
 - [`ArchiveItem(string sourceFolderUri, MapiMessageItemBase item)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem_2)
 - [`ArchiveItem(string sourceFolderUri, string uniqueId)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem_3)
 
-El ejemplo de código que se muestra a continuación demuestra el uso de [`IEWSClient.ArchiveItem`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem/) método para mover un correo electrónico al buzón de archivo mediante el UniqueURI.
+El ejemplo de código dado a continuación demuestra el uso del método [`IEWSClient.ArchiveItem`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/archiveitem/#archiveitem/) para mover un correo electrónico al Buzón de Archivo utilizando el UniqueUri.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Exchange_EWS-MoveItemsToInPlaceArchive-MoveItemsToInPlaceArchive.cs" >}}

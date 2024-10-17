@@ -1,8 +1,6 @@
 ---
-title: "Artículos técnicos"
-url: /es/net/technical-articles/
+title: "Artículos Técnicos"
+url: /es/net/articulos-tecnicos/
 weight: 180
 type: docs
 ---
-
-

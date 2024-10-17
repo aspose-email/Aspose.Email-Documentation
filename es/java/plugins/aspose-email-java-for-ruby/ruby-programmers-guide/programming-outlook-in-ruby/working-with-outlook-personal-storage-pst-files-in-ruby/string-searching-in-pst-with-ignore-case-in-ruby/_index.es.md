@@ -1,20 +1,20 @@
 ---
-title: "Búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas en Ruby"
+title: "Búsqueda de cadenas en PST sin distinción de mayúsculas en Ruby"
 url: /es/java/string-searching-in-pst-with-ignore-case-in-ruby/
 weight: 90
 type: docs
 ---
 
-## **Aspose.Email: búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas**
-Para buscar cadenas en PST con ignorar mayúsculas y minúsculas usando **Aspose.Email Java para Ruby**, simplemente invoca **StringSearchInPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Búsqueda de cadenas en PST sin distinción de mayúsculas**
+Para buscar cadenas en PST sin distinción de mayúsculas usando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **StringSearchInPST**. Aquí puedes ver un código de ejemplo.
 
-**Código Ruby**
+**Código en Ruby**
 
 ```ruby
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
-\# Load the Outlook PST file
+\# Cargar el archivo PST de Outlook
 
 pst = Rjb::import('com.aspose.email.PersonalStorage').create(data_dir + "search.pst", Rjb::import('com.aspose.email.FileFormatVersion').Unicode)
 
@@ -33,7 +33,7 @@ coll = fi.getContents(query)
 puts "Total Results:" + coll.size().to_s
 
 ```
-## **Descargar Running Code**
-Download **Búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Búsqueda de cadenas en PST sin distinción de mayúsculas (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/stringsearchinpst.rb)

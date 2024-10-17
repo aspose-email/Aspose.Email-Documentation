@@ -1,12 +1,12 @@
 ---
-title: "Crear y guardar notas de Outlook en Ruby"
-url: /es/java/creating-and-saving-outlook-notes-in-ruby/
+title: "Creación y Guardado de Notas de Outlook en Ruby"
+url: /es/java/creacion-y-guardado-de-notas-de-outlook-en-ruby/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email - Creación y almacenamiento de notas de Outlook**
-Para crear notas de Outlook usando **Aspose.Email Java para Ruby**, simplemente invoca **CreateOutlookNote** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Creación y Guardado de Notas de Outlook**
+Para crear notas de Outlook usando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **CreateOutlookNote**. Aquí puedes ver un código de ejemplo.
 
 **Código Ruby**
 
@@ -16,9 +16,9 @@ Para crear notas de Outlook usando **Aspose.Email Java para Ruby**, simplemente 
 
 note = Rjb::import('com.aspose.email.MapiNote').new
 
-note.setSubject("Blue color note")
+note.setSubject("Nota de color azul")
 
-note.setBody("This is a blue color note")
+note.setBody("Esta es una nota de color azul")
 
 note.setColor(Rjb::import('com.aspose.email.NoteColor').Blue)
 
@@ -28,10 +28,10 @@ note.setWidth(500)
 
 note.save(data_dir + "MapiNote.msg", Rjb::import('com.aspose.email.NoteSaveFormat').Msg)
 
-puts "Created outlook note successfully."
+puts "Nota de Outlook creada con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Creación y almacenamiento de notas de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Creación y Guardado de Notas de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/createoutlooknote.rb)

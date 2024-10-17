@@ -1,26 +1,26 @@
 ---
-title: "Cambios en la API pública en Aspose.Email 5.0.0"
+title: "Cambios en la API Pública en Aspose.Email 5.0.0"
 url: /es/java/public-api-changes-in-aspose-email-5-0-0/
 weight: 110
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+A continuación se presenta una lista de los cambios realizados en la API pública, como miembros añadidos, renombrados, eliminados o en desuso, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tiene preocupaciones sobre algún cambio listado, por favor, mándelo al foro de soporte de Aspose.Email.
 
 - Enum `ReminderAction.None`
 
-- Class `MessageStore`
+- Clase `MessageStore`
 
-- Property `PersonalStorage.getStore()`
+- Propiedad `PersonalStorage.getStore()`
 
-- Property `PersonalStorage.getStore().getDisplayName()`
-- Property `PersonalStorage.getStore().getProperties()`
+- Propiedad `PersonalStorage.getStore().getDisplayName()`
+- Propiedad `PersonalStorage.getStore().getProperties()`
 
-- Method `PersonalStorage.getStore().changeDisplayName(String)`
-- Method `PersonalStorage.getStore().setProperty(MapiProperty)`
+- Método `PersonalStorage.getStore().changeDisplayName(String)`
+- Método `PersonalStorage.getStore().setProperty(MapiProperty)`
 
-**Deprecated**
+**En desuso**
 
-- Property `PersonalStorage.getDisplayName()` - Utilice por favor `PersonalStorage.getStore().getDisplayName()` instead
-- Property `PersonalStorage.getMessageStoreProperties()` - Utilice por favor `PersonalStorage.getStore().getProperties()` instead
-- Method `PersonalStorage.changeDisplayName(String newName)` - Utilice por favor `PersonalStorage.getStore().changeDisplayName()` método en su lugar
+- Propiedad `PersonalStorage.getDisplayName()` - Por favor, use `PersonalStorage.getStore().getDisplayName()` en su lugar
+- Propiedad `PersonalStorage.getMessageStoreProperties()` - Por favor, use `PersonalStorage.getStore().getProperties()` en su lugar
+- Método `PersonalStorage.changeDisplayName(String newName)` - Por favor, use el método `PersonalStorage.getStore().changeDisplayName()` en su lugar

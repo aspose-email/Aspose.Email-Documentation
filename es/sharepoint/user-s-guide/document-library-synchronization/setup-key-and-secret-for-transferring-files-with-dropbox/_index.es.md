@@ -1,24 +1,24 @@
 ---
-title: "Clave de configuración y secreto para transferir archivos con Dropbox"
+title: "Configurar clave y secreto para transferir archivos con Dropbox"
 url: /es/sharepoint/setup-key-and-secret-for-transferring-files-with-dropbox/
 weight: 50
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para realizar cualquier operación con Dropbox mediante Aspose.Email para SharePoint, debes registrar una aplicación en Dropbox. Puedes encontrar más información en <https://www.dropbox.com/developers/apps>. En este artículo se explica cómo configurar la conexión en SharePoint.
+Para realizar cualquier operación con Dropbox utilizando Aspose.Email para SharePoint, necesitas registrar una aplicación con Dropbox. Más información se puede encontrar en <https://www.dropbox.com/developers/apps>. Este artículo explica cómo configurar la conexión en SharePoint.
 
-{{% /alert %}}
-## **Configurar la transferencia a Dropbox**
-1. Tras crear y registrar la aplicación en Dropbox, obtén **Key** and **Secret** valores. Estos valores deben estar registrados en Aspose.Email para SharePoint para que pueda llamar a la API de Dropbox para transferir o sincronizar archivos.
-1. Para registrar los valores con Aspose.Email para SharePoint, haga clic en **Acciones del sitio** y selecciona **Configuración del sitio** del menú.
-1. En el **Administración del sitio** categoría, haga clic **Registrar Aspose Dropbox Sync**. Se abre una página nueva.
-1. Introduzca la clave y los valores secretos.
-1. Click **OK**.
+{{% /alert %}} 
+## **Configuración de transferencia a Dropbox**
+1. Después de crear y registrar la aplicación en Dropbox, obtén los valores de **Clave** y **Secreto**. Estos valores deben registrarse con Aspose.Email para SharePoint para que pueda llamar a la API de Dropbox para transferir/sincronizar archivos. 
+1. Para registrar los valores con Aspose.Email para SharePoint, haz clic en **Acciones del sitio** y selecciona **Configuración del sitio** en el menú.
+1. En la categoría **Administración del sitio**, haz clic en **Registrar Aspose Dropbox Sync**. Se abrirá una nueva página. 
+1. Ingresa los valores de clave y secreto.
+1. Haz clic en **OK**. 
 
-   **Configurar la clave y el secreto de la aplicación para poder conectarse a Dropbox.**
+   **Configurando la clave de la aplicación y el secreto de la aplicación para poder conectarse a Dropbox.** 
 
 ![todo:image_alt_text](setup-key-and-secret-for-transferring-files-with-dropbox_1.png)
 

@@ -1,17 +1,17 @@
 ---
-title: "Filtrar citas de Exchange Server"
+title: "Filtrar Citas desde el Servidor de Exchange"
 url: /es/java/filter-appointments-from-exchange-server/
 weight: 130
 type: docs
 ---
 
 
-## **Filtrado de citas con EWS**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) proporciona la posibilidad de filtrar las citas del servidor de Exchange mediante el [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Las citas se pueden filtrar en función de:
+## **Filtrando Citas con EWS**
+El [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) proporciona la facilidad de filtrar citas desde el servidor de Exchange utilizando el [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Las citas se pueden filtrar en función de:
 
-- Dates
-- Recurrences
-### **Filtrar citas por fechas**
+- Fechas
+- Recurrencias
+### **Filtrando Citas por Fechas**
 
 
 ~~~Java
@@ -25,8 +25,8 @@ builder.getAppointment().getStart().since(startTime);
 builder.getAppointment().getEnd().beforeOrEqual(endTime);
 MailQuery query = builder.getQuery();
 Appointment[] appointments = client.listAppointments(query);
-~~~
-### **Filtrar citas por eventos recurrentes**
+~~~ 
+### **Filtrando Citas por Eventos Recurrentes**
 
 
 ~~~Java

@@ -1,12 +1,12 @@
 ---
-title: "Agregar MapiTask a PST en Ruby"
+title: "Añadiendo MapiTask a PST en Ruby"
 url: /es/java/adding-mapitask-to-pst-in-ruby/
 weight: 60
 type: docs
 ---
 
-## **Aspose.Email - Agregar MapiTask a PST**
-Para agregar MapiTask a PST usando **Aspose.Email Java para Ruby**, simplemente invoca **AddMapiTaskToPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Añadiendo MapiTask a PST**
+Para añadir MapiTask a PST usando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **AddMapiTaskToPST**. Aquí puedes ver un ejemplo de código.
 
 **Código Ruby**
 
@@ -14,7 +14,7 @@ Para agregar MapiTask a PST usando **Aspose.Email Java para Ruby**, simplemente 
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
-task = Rjb::import('com.aspose.email.MapiTask').new("To Do", "Just click and type to add new task", Rjb::import('java.util.Date').new, Rjb::import('java.util.Date').new)
+task = Rjb::import('com.aspose.email.MapiTask').new("To Do", "Solo haz clic y escribe para añadir nueva tarea", Rjb::import('java.util.Date').new, Rjb::import('java.util.Date').new)
 
 task.setPercentComplete(20)
 
@@ -40,10 +40,10 @@ task_folder = pst.createPredefinedFolder("Tasks", Rjb::import('com.aspose.email.
 
 task_folder.addMapiMessageItem(task)
 
-puts "Added MapiTask Successfully."
+puts "Añadido MapiTask con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiTask a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Añadiendo MapiTask a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/addmapitasktopst.rb)

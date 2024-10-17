@@ -1,12 +1,12 @@
 ---
-title: "Cómo formatear una cita en Aspose.Email"
-url: /es/java/formatting-an-appointment-in-aspose-email/
+title: "Formatear una Cita en Aspose.Email"
+url: /es/java/formatear-una-cita-en-aspose-email/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email - Cómo formatear una cita**
-La clase AppointmentFormattingOptions se puede usar para dar formato a la cita en formato de texto y HTML.
+## **Aspose.Email - Formatear una Cita**
+La clase AppointmentFormattingOptions se puede usar para formatear la cita en formato de texto y HTML.
 
 **Java**
 
@@ -16,24 +16,24 @@ La clase AppointmentFormattingOptions se puede usar para dar formato a la cita e
 
 AppointmentFormattingOptions formattingOptions = new AppointmentFormattingOptions();
 
-formattingOptions.setLocationFormat("Where: {0}");
+formattingOptions.setLocationFormat("Dónde: {0}");
 
-formattingOptions.setTitleFormat("Subject: {0}");
+formattingOptions.setTitleFormat("Asunto: {0}");
 
 formattingOptions.setDescriptionFormat("\r\n*~*~*~*~*~*~*~*~*~*\r\n{0}");
 
 System.out.println(appointment.getAppointmentText(formattingOptions));
 
 ```
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/appointments/formattingappointment/AsposeFormatAppointments.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/appointments/formattingappointment/AsposeFormatAppointments.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Formatear una cita](/email/java/working-with-appointments/).
+Para más detalles, visita [Formatear una Cita](/email/java/working-with-appointments/).
 
 {{% /alert %}}

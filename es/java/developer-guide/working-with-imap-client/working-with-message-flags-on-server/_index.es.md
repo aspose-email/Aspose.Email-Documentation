@@ -1,64 +1,64 @@
 ---
-title: "Trabajando con marcas de mensajes en el servidor"
+title: "Trabajando con Banderas de Mensaje en el Servidor"
 url: /es/java/working-with-message-flags-on-server/
 weight: 30
 type: docs
 ---
 
 
-## **Cambiar las banderas de los mensajes**
+## **Cambio de las Banderas de Mensaje**
 
-Puede cambiar las marcas de los mensajes mediante el [changeMessageFlags()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#changeMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-) método. Este método toma dos parámetros.
+Puedes cambiar las banderas de los mensajes utilizando el método [changeMessageFlags()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#changeMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-). Este método toma dos parámetros.
 
-1. El número de secuencia del mensaje o el identificador único.
+1. El número de secuencia del mensaje o ID único.
 1. [MessageFlag](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/).
 
-Se pueden configurar los siguientes indicadores:
+Se pueden establecer las siguientes banderas:
 
-- [Answered](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getAnswered--)
-- [Deleted](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getDeleted--)
-- [Draft](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getDraft--)
-- [Empty](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getEmpty--)
-- [Flagged](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getFlagged--)
-- [isRead](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#isRead--)
-- [Recent](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getRecent--)
- 
-### **Configuración de banderas de mensajes**
+- [Respondido](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getAnswered--)
+- [Eliminado](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getDeleted--)
+- [Borrador](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getDraft--)
+- [Vacío](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getEmpty--)
+- [Marcado](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getFlagged--)
+- [Leído](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#isRead--)
+- [Reciente](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/#getRecent--)
+  
+### **Establecer Banderas de Mensaje**
 
-El siguiente fragmento de código muestra cómo cambiar las marcas de mensajes en un servidor IMAP con Aspose.Email.
+El siguiente fragmento de código muestra cómo cambiar las banderas de mensajes en un servidor IMAP con Aspose.Email.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Mark the message as read
+// Para ejemplos completos y archivos de datos, visita https://github.com/aspose-email/Aspose.Email-for-Java
+// Marcar el mensaje como leído
 client.changeMessageFlags(1, ImapMessageFlags.isRead());
 ~~~
 
-### **Eliminar marcas de mensajes**
+### **Eliminar Banderas de Mensaje**
 
-Las marcas de mensajes también se pueden eliminar con la [removeMessageFlags()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#removeMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-) método. El uso es similar al del [changeMessageFlags()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#changeMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-) método. Toma un número de secuencia o un identificador de mensaje único y [MessageFlag](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/). En el siguiente fragmento de código, se muestra cómo eliminar las marcas de mensajes.
+Las banderas de mensaje también se pueden eliminar con el método [removeMessageFlags()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#removeMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-). Su uso es similar al del método [changeMessageFlags()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#changeMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-). Toma un número de secuencia o un ID de mensaje único y [MessageFlag](https://reference.aspose.com/email/java/com.aspose.email/imapmessageflags/). El siguiente fragmento de código muestra cómo eliminar banderas de mensaje.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Remove the message flag
+// Para ejemplos completos y archivos de datos, visita https://github.com/aspose-email/Aspose.Email-for-Java
+// Eliminar la bandera del mensaje
 client.removeMessageFlags(1, ImapMessageFlags.isRead());
 ~~~
 
-## **Configuración de banderas personalizadas**
+## **Establecer Banderas Personalizadas**
 
-También puedes configurar marcas personalizadas para un mensaje mediante el [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) de la API. El iMapClient [AddMessageFlags](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#addMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-) ofrece la posibilidad de establecer marcas personalizadas en los mensajes.
+También puedes establecer banderas personalizadas para un mensaje utilizando el [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) de la API. El ImapClient [AddMessageFlags](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#addMessageFlags-com.aspose.email.IConnection-int-com.aspose.email.ImapMessageFlags-) proporciona la capacidad de establecer banderas personalizadas en los mensajes.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Create a message
-MailMessage message = new MailMessage("user@domain1.com", "user@domain2.com", "subject", "message");
+// Para ejemplos completos y archivos de datos, visita https://github.com/aspose-email/Aspose.Email-for-Java
+// Crear un mensaje
+MailMessage message = new MailMessage("user@domain1.com", "user@domain2.com", "asunto", "mensaje");
 
-// Append the message to mailbox
+// Agregar el mensaje al buzón
 String uid = client.appendMessage(ImapFolderInfo.IN_BOX, message);
 
-// Add custom flags to the added messge
+// Agregar banderas personalizadas al mensaje agregado
 client.addMessageFlags(uid, com.aspose.email.ImapMessageFlags.op_BitwiseOr(ImapMessageFlags.keyword("custom1"), ImapMessageFlags.keyword("custom1_0")));
 
-// Retreive the messages for checking the presence of custom flag
+// Recuperar los mensajes para verificar la presencia de la bandera personalizada
 client.selectFolder(ImapFolderInfo.IN_BOX);
 
 ImapMessageInfoCollection messageInfos = client.listMessages();
@@ -66,6 +66,6 @@ for (ImapMessageInfo inf : messageInfos) {
     ImapMessageFlags[] flags = inf.getFlags().split();
 
     if (inf.containsKeyword("custom1"))
-        System.out.println("Keyword found");
+        System.out.println("Palabra clave encontrada");
 }
 ~~~

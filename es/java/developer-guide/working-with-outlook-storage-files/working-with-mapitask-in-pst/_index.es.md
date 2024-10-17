@@ -5,18 +5,18 @@ weight: 60
 type: docs
 ---
 
-## **Agregar MapiTask a PST**
+## **Añadiendo MapiTask a PST**
 
-[Crear un nuevo PST, agregar subcarpetas y mensajes](/email/java/create-new-pst-add-sub-folders-and-messages/) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes añadir MapiTask a la subcarpeta Tareas de un archivo PST que hayas creado o cargado.
+[Crear nuevo PST, agregar subcarpetas y mensajes](/email/java/create-new-pst-add-sub-folders-and-messages/) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes agregar MapiTask a la subcarpeta de Tareas de un archivo PST que hayas creado o cargado.
 
-A continuación se detallan los pasos para agregar MapiTask a un PST:
+A continuación, se presentan los pasos para agregar MapiTask a un PST:
 
-1. Crea un [MapiTask](https://reference.aspose.com/email/java/com.aspose.email/mapitask/) object.
-1. Configure el [MapiTask](https://reference.aspose.com/email/java/com.aspose.email/mapitask/) propiedades que utilizan el constructor y diferentes métodos.
-1. Cree un PST con el [PersonalStorage.create()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#create-java.io.OutputStream-int-) method.
-1. Cree una carpeta predefinida (Tareas) en la raíz del archivo PST accediendo a la carpeta raíz y, a continuación, llamando al [addMapiMessageItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMapiMessageItem-com.aspose.email.IMapiMessageItem-) method.
+1. Crear un objeto [MapiTask](https://reference.aspose.com/email/java/com.aspose.email/mapitask/).
+1. Establecer las propiedades de [MapiTask](https://reference.aspose.com/email/java/com.aspose.email/mapitask/) utilizando el constructor y diferentes métodos.
+1. Crear un PST utilizando el método [PersonalStorage.create()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#create-java.io.OutputStream-int-).
+1. Crear una carpeta predefinida (Tareas) en la raíz del archivo PST accediendo a la carpeta raíz y luego llamando al método [addMapiMessageItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMapiMessageItem-com.aspose.email.IMapiMessageItem-).
 
-El siguiente fragmento de código muestra cómo crear un [MapiTask](https://reference.aspose.com/email/java/com.aspose.email/mapitask/) y, a continuación, agréguelo a la carpeta Tareas de un archivo PST recién creado.
+El siguiente fragmento de código muestra cómo crear un [MapiTask](https://reference.aspose.com/email/java/com.aspose.email/mapitask/) y luego agregarlo a la carpeta de Tareas de un archivo PST recién creado.
 
 
 

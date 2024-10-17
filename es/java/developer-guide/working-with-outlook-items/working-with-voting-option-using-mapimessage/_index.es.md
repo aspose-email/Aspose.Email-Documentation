@@ -1,18 +1,17 @@
 ---
-title: "Trabajando con la opción de votación usando MapiMessage"
+title: "Trabajando con la Opción de Votación Usando MapiMessage"
 url: /es/java/working-with-voting-option-using-mapimessage/
 weight: 40
 type: docs
 ---
 
+## **Creando Opción de Votación Usando MapiMessage**
 
-## **Creación de una opción de votación con MapiMessage**
+Microsoft Outlook permite a los usuarios crear una encuesta al redactar un nuevo mensaje. Les permite incluir opciones de votación como Sí, No, Quizás, etc. Aspose.Email permite lo mismo al crear un nuevo mensaje de Outlook. La clase [FollowUpOptions](https://reference.aspose.com/email/java/com.aspose.email/followupoptions/) proporciona la propiedad [VotingButtons](https://reference.aspose.com/email/java/com.aspose.email/followupoptions/#getVotingButtons--) que se puede usar para establecer o obtener el valor de las opciones de votación. Este artículo proporciona un ejemplo detallado de la creación de un [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) con opciones de votación para crear una encuesta.
 
-Microsoft Outlook permite a los usuarios crear una encuesta al redactar un mensaje nuevo. Les permite incluir opciones de votación como Sí, No, Quizás, etc. Aspose.Email permite lo mismo al crear un nuevo mensaje de Outlook. El [FollowUpOptions](https://reference.aspose.com/email/java/com.aspose.email/followupoptions/) la clase proporciona la [VotingButtons](https://reference.aspose.com/email/java/com.aspose.email/followupoptions/#getVotingButtons--) propiedad que se puede usar para establecer u obtener el valor de las opciones de votación. Este artículo proporciona un ejemplo detallado de cómo crear un [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) con opciones de votación para crear una encuesta.
+### **Creando una Encuesta usando MapiMessage**
 
-### **Creación de una encuesta con MapiMessage**
-
-El siguiente fragmento de código muestra cómo crear una encuesta, el [FollowUpManager](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/) la clase se puede usar como se muestra en el siguiente fragmento de código.
+El siguiente fragmento de código muestra cómo crear una encuesta, la clase [FollowUpManager](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/) se puede utilizar como se muestra en el siguiente fragmento de código.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -26,9 +25,9 @@ options.setVotingButtons("Yes;No;Maybe;Exactly!");
 client.send(message, options);
 ~~~
 
-### **Lectura de las opciones de votación desde un mapiMessage**
+### **Leyendo Opciones de Votación de un MapiMessage**
 
-El siguiente fragmento de código muestra cómo leer las opciones de votación de un [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/).
+El siguiente fragmento de código muestra cómo leer opciones de votación de un [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/).
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -44,7 +43,7 @@ FollowUpOptions options = FollowUpManager.getOptions(message);
 String votingButtons = options.getVotingButtons();
 ~~~
 
-### **Botones de votación de solo lectura**
+### **Leyendo Solo Botones de Votación**
 
 El siguiente fragmento de código muestra cómo leer solo los botones de votación.
 
@@ -58,9 +57,9 @@ MapiMessage testMsg = MapiMessage.fromStream(ms);
 IList buttons = FollowUpManager.getVotingButtons(testMsg);
 ~~~
 
-### **Añadir un botón de votación a un mensaje existente**
+### **Agregando un botón de votación a un Mensaje Existente**
 
-El siguiente fragmento de código muestra cómo añadir un botón de votación a un mensaje existente.
+El siguiente fragmento de código muestra cómo agregar un botón de votación a un mensaje existente.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -72,9 +71,9 @@ FollowUpManager.addVotingButton(mapi, "Indeed!");
 mapi.save(dataDir + "AddVotingButtonToExistingMessage_out.msg");
 ~~~
 
-### **Eliminar un botón de votación de un mensaje**
+### **Eliminando un Botón de Votación de un Mensaje**
 
-El siguiente fragmento de código muestra cómo eliminar un botón de voto de un mensaje.
+El siguiente fragmento de código muestra cómo eliminar un botón de votación de un mensaje.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -93,9 +92,9 @@ FollowUpManager.clearVotingButtons(msg); // Deleting all buttons from a MapiMess
 msg.save(dataDir + "MapiMsgWithPoll.msg");
 ~~~
 
-### **Lea la información sobre los resultados de la votación**
+### **Leer la Información de Resultados de Votación**
 
-El siguiente fragmento de código muestra cómo leer la información de los resultados de las votaciones.
+El siguiente fragmento de código muestra cómo leer la información de los resultados de la votación.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -116,9 +115,9 @@ for (MapiRecipient recipient : msg.getRecipients()) {
 }
 ~~~
 
-### **Métodos de muestra utilizados en los ejemplos**
+### **Métodos de Muestra Usados en Ejemplos**
 
-En el siguiente fragmento de código, se muestra cómo crear un mensaje de ejemplo que se utiliza en los ejemplos.
+El siguiente fragmento de código muestra cómo crear un mensaje de muestra utilizado en ejemplos.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

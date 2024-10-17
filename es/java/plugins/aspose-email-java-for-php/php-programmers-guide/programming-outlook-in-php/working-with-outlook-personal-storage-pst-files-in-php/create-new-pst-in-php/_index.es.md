@@ -1,38 +1,38 @@
 ---
-title: "Crear un nuevo PST en PHP"
-url: /es/java/create-new-pst-in-php/
+title: "Crear nuevo PST en PHP"
+url: /es/java/crear-nuevo-pst-en-php/
 weight: 60
 type: docs
 ---
 
-## **Aspose.Email - Crear un nuevo PST**
-Para crear un nuevo PST usando **Aspose.Email Java para PHP**, simplemente invoca **CreatePST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Crear Nuevo PST**
+Para crear un nuevo PST usando **Aspose.Email Java para PHP**, simplemente invoca el módulo **CreatePST**. Aquí puedes ver un código de ejemplo.
 
 **Código PHP**
 
 ``` php
 
- # Create an instance of PersonalStorage
+ # Crear una instancia de PersonalStorage
 
 $personalStorage=new PersonalStorage();
 
 $pst = $personalStorage->create($dataDir . "sample1.pst", 0);
 
-\# Create a folder at root of pst
+\# Crear una carpeta en la raíz del pst
 
 $pst->getRootFolder()->addSubFolder("myInbox");
 
-\# Add message to newly created folder
+\# Agregar mensaje a la carpeta recién creada
 
 $mapi_message = new MapiMessage();
 
 $pst->getRootFolder()->getSubFolder("myInbox")->addMessage($mapi_message->fromFile($dataDir . "Message.msg"));
 
-print "Created PST successfully.".PHP_EOL;
+print "PST creado con éxito.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Crear un nuevo PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Crear Nuevo PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/CreatePST.php)
 - [CodePlex](https://asposeemailjavaphp.codeplex.com/SourceControl/latest#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/CreatePST.php)

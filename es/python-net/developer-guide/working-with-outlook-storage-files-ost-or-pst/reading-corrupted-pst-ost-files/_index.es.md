@@ -8,23 +8,23 @@ type: docs
 
 ## **Lectura de archivos PST/OST corruptos**
 
-A veces, puede que no sea posible abrir un archivo PST debido a algunos problemas. Uno de esos problemas es la corrupción del archivo. Si un archivo PST está dañado o dañado, es posible que no sea posible abrirlo con el cliente de correo electrónico de Outlook. Aspose.Email proporciona una API diseñada para escanear un archivo PST dañado y leer los mensajes intactos de un archivo según sus ID.
+A veces puede no ser posible abrir un archivo PST debido a algunos problemas. Uno de esos problemas es la corrupción del archivo. Si un archivo PST está dañado o corrupto, puede que no sea posible abrirlo utilizando el cliente de correo Outlook. Aspose.Email proporciona una API diseñada para escanear un archivo PST dañado y leer los mensajes no dañados dentro de un archivo por sus IDs.
 
-Los siguientes métodos del [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) las clases son esenciales para hacer frente a estas tareas:
+Los siguientes métodos de la clase [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) son esenciales para afrontar estas tareas:
 
-Para obtener la lista de identificaciones:
+Para obtener la lista de IDs:
 
-- **find_messages(parent_entry_id)** - recupera una lista de identificadores de mensajes dentro de una carpeta específica.
+- **find_messages(parent_entry_id)** - recupera una lista de IDs de mensajes dentro de una carpeta específica.
 
-- **find_subfolders(parent_entry_id)** - obtiene una lista de los ID de subcarpetas de la carpeta raíz.
+- **find_subfolders(parent_entry_id)** - obtiene una lista de IDs de subcarpetas dentro de la carpeta raíz.
 
-Para usar estos ID para obtener el contenido del archivo:
+Para usar estos IDs y obtener el contenido del archivo:
 
 - **extract_message(entry_id)** - intenta recuperar un mensaje.
 
 - **get_folder_by_id(entry_id)** - accede a cada carpeta.
 
-El siguiente ejemplo de código muestra cómo explorar y acceder al contenido de un archivo PST que podría estar dañado:
+El siguiente ejemplo de código demuestra cómo explorar y acceder al contenido de un archivo PST potencialmente corrupto:
 
 ```py
 import aspose.email as ae
@@ -37,7 +37,7 @@ def explore_corrupted_pst(pst, root_folder_id):
             msg = pst.extract_message(message_id)
             print("- " + msg.subject)
         except Exception as e:
-            print("Message reading error. Entry id: " + message_id)
+            print("Error al leer el mensaje. ID de entrada: " + message_id)
 
     folder_id_list = pst.find_subfolders(root_folder_id)
 
@@ -47,7 +47,7 @@ def explore_corrupted_pst(pst, root_folder_id):
                 subfolder = pst.get_folder_by_id(sub_folder_id)
                 print(subfolder.display_name)
             except Exception as e:
-                print("Message reading error. Entry id: " + sub_folder_id)
+                print("Error al leer el mensaje. ID de entrada: " + sub_folder_id)
 
             explore_corrupted_pst(pst, sub_folder_id)
 

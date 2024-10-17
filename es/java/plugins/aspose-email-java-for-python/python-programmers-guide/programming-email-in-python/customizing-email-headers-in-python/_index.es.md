@@ -1,46 +1,46 @@
 ---
-title: "Personalización de encabezados de correo electrónico en Python"
-url: /es/java/customizing-email-headers-in-python/
+title: "Personalizando Encabezados de Correo Electrónico en Python"
+url: /es/java/personalizando-encabezados-de-correo-electronico-en-python/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Personalización de encabezados de correo electrónico**
-Para personalizar los encabezados de correo electrónico mediante **Aspose.Email Java para Python**, Usa el siguiente código.
+## **Aspose.Email - Personalizando Encabezados de Correo Electrónico**
+Para personalizar los encabezados de correo electrónico usando **Aspose.Email Java for Python**, usa el siguiente código.
 
-**Código Python**
+**Código en Python**
 
 ``` python
 
 
 
-\# Create a instance of MailMessage class
+\# Crear una instancia de la clase MailMessage
 
 message = self.MailMessage()
 
-    # Set subject of the message
+    # Establecer el asunto del mensaje
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
-\# Set Html body
+\# Establecer el cuerpo Html
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-    "<font color=blue>This line is in blue color</font>")
+    "<font color=blue>Esta línea está en color azul</font>")
 
-\# Set sender information
+\# Establecer la información del remitente
 
-message.setFrom(self.MailAddress("from@domain.com", "Sender Name", False))
+message.setFrom(self.MailAddress("from@domain.com", "Nombre del Remitente", False))
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-message.getTo().addMailAddress(self.MailAddress("to@domain.com", "Recipient 1", False))
+message.getTo().addMailAddress(self.MailAddress("to@domain.com", "Destinatario 1", False))
 
-\# Message subject
+\# Asunto del mensaje
 
-message.setSubject("Customizing Email Headers")
+message.setSubject("Personalizando Encabezados de Correo Electrónico")
 
-\# Specify Date
+\# Especificar la fecha
 
 timeZone = self.TimeZone
 
@@ -52,27 +52,27 @@ date = calendar.getTime()
 
 message.setDate(date)
 
-\# Specify XMailer
+\# Especificar XMailer
 
 message.setXMailer("Aspose.Email")
 
-\# Specify Secret Header
+\# Especificar Encabezado Secreto
 
 message.getHeaders().add("secret-header", "mystery")
 
-\# Save message to disc
+\# Guardar mensaje en disco
 
 messageFormat= self.MessageFormat
 
 message.save(self.dataDir + "MsgHeaders.msg", messageFormat.getMsg())
 
-\# Display Status
+\# Mostrar Estado
 
-print "Customized message headers Successfully."
+print "Encabezados de mensaje personalizados con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Personalización de encabezados de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Personalizando Encabezados de Correo Electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

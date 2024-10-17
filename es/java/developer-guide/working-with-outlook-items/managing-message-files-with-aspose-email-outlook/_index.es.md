@@ -1,44 +1,43 @@
 ---
-title: "Administración de archivos de mensajes con Aspose.Email.Outlook"
+title: "Gestión de archivos de mensaje con Aspose.Email.Outlook"
 url: /es/java/managing-message-files-with-aspose-email-outlook/
 weight: 30
 type: docs
 ---
 
-
 ## **Conversión de MSG a mensaje MIME**
 
-La API Aspose.Email ofrece la capacidad de convertir archivos MSG en mensajes MIME mediante el [toMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#toMailMessage-com.aspose.email.MailConversionOptions-) method.
+La API de Aspose.Email proporciona la capacidad de convertir archivos MSG a mensajes MIME utilizando el método [toMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#toMailMessage-com.aspose.email.MailConversionOptions-).
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
 MapiMessage msg = new MapiMessage(
                             "sender@test.com",
                             "recipient1@test.com; recipient2@test.com",
-                            "Test Subject",
-                            "This is a body of message.");
+                            "Asunto de prueba",
+                            "Este es el cuerpo del mensaje.");
 MailConversionOptions options = new MailConversionOptions();
 options.setConvertAsTnef(true);
 MailMessage mail = msg.toMailMessage(options);
 ~~~
 
-## **Conversión de MSG en EML preservando el cuerpo RTF**
+## **Conversión de MSG a EML preservando el cuerpo RTF**
 
-La API proporciona los siguientes métodos para conservar el cuerpo RTF al convertir MSG en EML:
+La API proporciona los siguientes métodos para preservar el cuerpo RTF al convertir MSG a EML:
 
-- [MsgLoadOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/msgloadoptions/#setPreserveRtfContent-boolean-) - Obtiene o establece un valor que indica si se debe mantener el cuerpo rtf en MailMessage.
-- [MailConversionOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/mailconversionoptions/#setPreserveRtfContent-boolean-) - Obtiene o establece un valor que indica si se debe mantener el cuerpo rtf en MailMessage.
+- [MsgLoadOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/msgloadoptions/#setPreserveRtfContent-boolean-) - Obtiene o establece un valor que indica si se debe mantener el cuerpo RTF en MailMessage.
+- [MailConversionOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/mailconversionoptions/#setPreserveRtfContent-boolean-) - Obtiene o establece un valor que indica si se debe mantener el cuerpo RTF en MailMessage.
 
-Los siguientes ejemplos de código muestran cómo mantener el cuerpo rtf en MailMessage:
+Los siguientes fragmentos de código demuestran cómo mantener el cuerpo RTF en MailMessage:
 
-- using [MsgLoadOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/msgloadoptions/#setPreserveRtfContent-boolean-)
+- usando [MsgLoadOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/msgloadoptions/#setPreserveRtfContent-boolean-)
 
 ```java
 MsgLoadOptions options = new MsgLoadOptions();
 options.setPreserveRtfContent(true);
 MailMessage message = MailMessage.load("fileName", options);
 ```
-- using [MailConversionOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/mailconversionoptions/#setPreserveRtfContent-boolean-)
+- usando [MailConversionOptions.PreserveRtfContent](https://reference.aspose.com/email/java/com.aspose.email/mailconversionoptions/#setPreserveRtfContent-boolean-)
 
 ```java
 MapiMessage mapi = MapiMessage.load("fileName");
@@ -46,52 +45,51 @@ MailConversionOptions options = new MailConversionOptions();
 options.setPreserveRtfContent(true);
 MailMessage message = mapi.toMailMessage(options);
 ```
-## **Conversión de MSG a MHTML conservando el encabezado de la categoría**
+## **Conversión de MSG a MHTML preservando el encabezado de categoría**
 
-La API Aspose.Email ofrece la posibilidad de agregar un encabezado de categoría al convertir el mensaje a MHTML. Esta función está especificada por la [MhtSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mhtsaveoptions/) clase como una opción adicional al guardar MailMessage en formato Mhtml.
+La API de Aspose.Email proporciona la capacidad de agregar un encabezado de categoría al convertir un mensaje a MHTML. Esta característica se especifica mediante la clase [MhtSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mhtsaveoptions/) como una opción adicional al guardar MailMessage en formato Mhtml.
 
-El siguiente ejemplo de código muestra cómo crear un archivo MHT (MHTML) a partir de un objeto MapiMessage, personalizar el formato y los encabezados del archivo MHT mediante MHTSaveOptions, establecer categorías para el mensaje de correo electrónico y, a continuación, modificar las plantillas de formato y los encabezados de representación del archivo MHT antes de guardarlo.
+El siguiente fragmento de código muestra cómo crear un archivo MHT (MHTML) a partir de un objeto MapiMessage, personalizar el formato y los encabezados del archivo MHT utilizando MhtSaveOptions, establecer categorías para el mensaje de correo electrónico y luego modificar las plantillas de formato y los encabezados de representación para el archivo MHT antes de guardarlo.
 
 ```java
- MapiMessage msg = new MapiMessage("from@aaa.com", "to@aaa.com", "subj", "body");
+MapiMessage msg = new MapiMessage("from@aaa.com", "to@aaa.com", "subj", "body");
 
-msg.setCategories(new String[] { "Urgently", "Important" });
+msg.setCategories(new String[] { "Urgentemente", "Importante" });
 
 MhtSaveOptions saveOptions = new MhtSaveOptions();
 
 saveOptions.getFormatTemplates().set_Item(MhtTemplateName.CATEGORIES,
-
-    saveOptions.getFormatTemplates().get_Item(MhtTemplateName.CATEGORIES).replace("Categories", "Les catégories"));
+    saveOptions.getFormatTemplates().get_Item(MhtTemplateName.CATEGORIES).replace("Categories", "Las categorías"));
 
 saveOptions.getRenderingHeaders().add(MhtTemplateName.CATEGORIES);
 
 msg.save("fileName.mhtml", saveOptions);
 ```
 
-## **Archivo de plantilla de Outlook para lectura y escritura (.OFT)**
+## **Lectura y escritura de archivo de plantilla de Outlook (.OFT)**
 
-Las plantillas de Outlook son muy útiles cuando quieres enviar un mensaje de correo similar una y otra vez. En lugar de preparar el mensaje desde cero cada vez, primero prepare el mensaje en Outlook y guárdelo como plantilla de Outlook (OFT). Después de eso, siempre que necesite enviar el mensaje, puede crearlo a partir de la plantilla, ahorrando tiempo al escribir el mismo texto en el cuerpo o en la línea de asunto, configurar el formato, etc. Aspose.Correo electrónico [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) La clase se puede usar para cargar y leer un archivo de plantilla de Outlook (OFT). Una vez cargada la plantilla de Outlook en una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) clase, puede actualizar el remitente, el destinatario, el cuerpo, el asunto y otras propiedades. Tras actualizar las propiedades:
+Las plantillas de Outlook son muy útiles cuando quieres enviar un mensaje de correo electrónico similar una y otra vez. En lugar de preparar el mensaje desde cero cada vez, primero, prepara el mensaje en Outlook y guárdalo como una plantilla de Outlook (OFT). Después de eso, cada vez que necesites enviar el mensaje, puedes crearlo a partir de la plantilla, ahorrando tiempo escribiendo el mismo texto en el cuerpo o en la línea de asunto, configurando el formato, etc. La clase Aspose.Email [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) se puede usar para cargar y leer un archivo de plantilla de Outlook (OFT). Una vez que la plantilla de Outlook está cargada en una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/), puedes actualizar el remitente, destinatario, cuerpo, asunto y otras propiedades. Después de actualizar las propiedades:
 
-- Envía el correo electrónico mediante [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) clase o
-- Guarde el mensaje como MSG y realice más actualizaciones/validaciones con Microsoft Outlook.
+- Envía el correo electrónico usando la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) o
+- Guarda el mensaje como MSG y realiza más actualizaciones/validaciones usando Microsoft Outlook.
 
-En los ejemplos de código que aparecen a continuación, nosotros:
+En los fragmentos de código a continuación, hacemos:
 
-1. Cargue la plantilla mediante el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Actualice algunas de las propiedades.
-1. Guarda el mensaje en formato MSG.
+1. Cargamos la plantilla usando la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+2. Actualizamos algunas de las propiedades.
+3. Guardamos el mensaje en formato MSG.
 
 El siguiente fragmento de código muestra cómo cargar el archivo OFT, actualizar el mensaje y guardarlo en formato MSG.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
-// Load the Outlook template (OFT) file in MailMessage's instance
+// Cargar el archivo de plantilla de Outlook (OFT) en una instancia de MailMessage
 MailMessage message = MailMessage.load(dataDir + "sample.oft", new MsgLoadOptions());
 
-// Set the sender and recipients information
+// Establecer la información del remitente y destinatarios
 String senderDisplayName = "John";
 String senderEmailAddress = "john@abc.com";
 String recipientDisplayName = "William";
@@ -101,129 +99,129 @@ message.setSender(new MailAddress(senderEmailAddress, senderDisplayName));
 message.getTo().addMailAddress(new MailAddress(recipientEmailAddress, recipientDisplayName));
 message.setHtmlBody(message.getHtmlBody().replace("DisplayName", "<b>" + recipientDisplayName + "</b>"));
 
-// Set the name, location and time in email body
-String meetingLocation = "<u>" + "Hall 1, Convention Center, New York, USA" + "</u>";
-String meetingTime = "<u>" + "Monday, June 28, 2010" + "</u>";
+// Establecer el nombre, la ubicación y la hora en el cuerpo del correo electrónico
+String meetingLocation = "<u>" + "Salón 1, Centro de Convenciones, Nueva York, EE. UU." + "</u>";
+String meetingTime = "<u>" + "Lunes, 28 de junio de 2010" + "</u>";
 message.setHtmlBody(message.getHtmlBody().replace("MeetingPlace", meetingLocation));
 message.setHtmlBody(message.getHtmlBody().replace("MeetingTime", meetingTime));
 
-// Save the message in MSG format and open in Office Outlook
+// Guardar el mensaje en formato MSG y abrir en Office Outlook
 MapiMessage mapimessage = MapiMessage.fromMailMessage(message);
 mapimessage.setMessageFlags(MapiMessageFlags.MSGFLAG_UNSENT);
 mapimessage.save(dataDir + "ReadAndWritingOutlookTemplateFile_out.msg");
 ~~~
 
-### **Guardar el archivo MSG de Outlook como plantilla**
+### **Guardar archivo MSG de Outlook como plantilla**
 
-El siguiente fragmento de código muestra cómo guardar el archivo MSG de Outlook como plantilla.
+El siguiente fragmento de código muestra cómo guardar el archivo MSG de Outlook como una plantilla.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
-try (MapiMessage mapi = new MapiMessage("test@from.to", "test@to.to", "template subject", "Template body")) {
+try (MapiMessage mapi = new MapiMessage("test@from.to", "test@to.to", "asunto de plantilla", "Cuerpo de plantilla")) {
     mapi.saveAsTemplate(dataDir + "mapiToOft.msg");
 }
 ~~~
 
-## **Configuración de la categoría de color para los archivos MSG de Outlook**
+## **Establecer categoría de color para archivos MSG de Outlook**
 
-Una categoría de color marca un mensaje de correo electrónico con algún tipo de importancia o categoría. Microsoft Outlook permite a los usuarios asignar categorías de colores para diferenciar los correos electrónicos. Para gestionar la categoría de color, utilice el [FollowUpManager](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/). Contiene funciones como [addCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#addCategory-com.aspose.email.MapiMessage-java.lang.String-), [removeCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#removeCategory-com.aspose.email.MapiMessage-java.lang.String-), [clearCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#clearCategories-com.aspose.email.MapiMessage-) and [getCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#getCategories-com.aspose.email.MapiMessage-).
+Una categoría de color marca un mensaje de correo electrónico para algún tipo de importancia o categoría. Microsoft Outlook permite a los usuarios asignar categorías de color para diferenciar los correos electrónicos. Para manejar la categoría de color, utiliza el [FollowUpManager](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/). Contiene funciones como [addCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#addCategory-com.aspose.email.MapiMessage-java.lang.String-), [removeCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#removeCategory-com.aspose.email.MapiMessage-java.lang.String-), [clearCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#clearCategories-com.aspose.email.MapiMessage-) y [getCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#getCategories-com.aspose.email.MapiMessage-).
 
-- [addCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#addCategory-com.aspose.email.MapiMessage-java.lang.String-) takes [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) y la cadena de categoría de color, por ejemplo, «Categoría púrpura» o «Categoría roja» como argumentos.
-- [removeCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#removeCategory-com.aspose.email.MapiMessage-java.lang.String-) takes [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) y la cadena de categoría de color que se va a eliminar del mensaje.
-- [clearCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#clearCategories-com.aspose.email.MapiMessage-) se usa para eliminar todas las categorías de colores del mensaje.
-- [getCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#getCategories-com.aspose.email.MapiMessage-) se usa para recuperar todas las categorías de colores de un mensaje en particular.
+- [addCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#addCategory-com.aspose.email.MapiMessage-java.lang.String-) toma [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) y la cadena de categoría de color, por ejemplo, "Categoría Púrpura" o "Categoría Roja" como argumentos.
+- [removeCategory](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#removeCategory-com.aspose.email.MapiMessage-java.lang.String-) toma [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) y la cadena de categoría de color que se eliminará del mensaje.
+- [clearCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#clearCategories-com.aspose.email.MapiMessage-) se utiliza para eliminar todas las categorías de color del mensaje.
+- [getCategories](https://reference.aspose.com/email/java/com.aspose.email/followupmanager/#getCategories-com.aspose.email.MapiMessage-) se utiliza para recuperar todas las categorías de color de un mensaje en particular.
 
-El siguiente ejemplo realiza las tareas que se indican a continuación:
+El siguiente ejemplo realiza las tareas como se indica a continuación:
 
-1. Añade una categoría de color.
-2. Añade otra categoría de color.
-3. Recupera la lista de todas las categorías.
+1. Agregar una categoría de color.
+2. Agregar otra categoría de color.
+3. Recuperar la lista de todas las categorías.
 4. Eliminar todas las categorías.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
 MapiMessage msg = MapiMessage.fromFile(dataDir + "message.msg");
 
-// Add Two category
-FollowUpManager.addCategory(msg, "Purple Category");
-FollowUpManager.addCategory(msg, "Red Category");
+// Agregar dos categorías
+FollowUpManager.addCategory(msg, "Categoría Púrpura");
+FollowUpManager.addCategory(msg, "Categoría Roja");
 
-// Retrieve the list of available categories
+// Recuperar la lista de categorías disponibles
 IList categories = FollowUpManager.getCategories(msg);
 
-// Remove the specified category and then Clear all categories
-FollowUpManager.removeCategory(msg, "Red Category");
+// Eliminar la categoría especificada y luego limpiar todas las categorías
+FollowUpManager.removeCategory(msg, "Categoría Roja");
 FollowUpManager.clearCategories(msg);
-~~~
+~~~ 
 
-## **Acceso a la información de seguimiento desde el archivo MSG**
+## **Acceso a la información de seguimiento del archivo MSG**
 
-La API Aspose.Email ofrece la capacidad de acceder a la información de seguimiento de un mensaje enviado o recibido. Puede recuperar la información sobre la lectura, la entrega, la lectura, el recibo y los resultados de la votación de un archivo de mensajes.
+La API de Aspose.Email proporciona la capacidad de acceder a la información de seguimiento de un mensaje enviado o recibido. Puede recuperar la información de recibo de lectura, recibo de entrega y votos de un archivo de mensaje.
 
-### **Recuperación de la información de lectura y recibo de entrega**
+### **Recuperación de información de recibo de lectura y entrega**
 
-El siguiente fragmento de código muestra cómo recuperar la información de los recibos de entrega y lectura.
+El siguiente fragmento de código muestra cómo recuperar la información de recibo de lectura y entrega.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
 MapiMessage msg = MapiMessage.fromFile(dataDir + "message.msg");
 for (MapiRecipient recipient : msg.getRecipients()) {
-    System.out.println("Recipient: " + recipient.getDisplayName());
+    System.out.println("Destinatario: " + recipient.getDisplayName());
 
-    // Get the PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY property
-    System.out.println("Delivery time: " + recipient.getProperties().get_Item(MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY).getDateTime());
+    // Obtener la propiedad PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY
+    System.out.println("Hora de entrega: " + recipient.getProperties().get_Item(MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY).getDateTime());
 
-    // Get the PR_RECIPIENT_TRACKSTATUS_TIME_READ property
-    System.out.println("Read time" + recipient.getProperties().get_Item(MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_READ).getDateTime());
+    // Obtener la propiedad PR_RECIPIENT_TRACKSTATUS_TIME_READ
+    System.out.println("Hora de lectura: " + recipient.getProperties().get_Item(MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_READ).getDateTime());
 }
-~~~
+~~~ 
 
 ## **Creación de mensajes de reenvío y respuesta**
 
-La API Aspose.Email ofrece la capacidad de crear y formatear mensajes de reenvío y respuesta. La [ReplyMessageBuilder](https://reference.aspose.com/email/java/com.aspose.email/replymessagebuilder/) and [ForwardMessageBuilder](https://reference.aspose.com/email/java/com.aspose.email/forwardmessagebuilder/) las clases de la API se utilizan para crear los mensajes de respuesta y reenviar, respectivamente. Se puede especificar la creación de un mensaje de respuesta o reenvío mediante cualquiera de los modos de [OriginalMessageAdditionMode](https://reference.aspose.com/email/java/com.aspose.email/originalmessageadditionmode/) enumeración. Esta enumeración tiene los valores siguientes:
+La API de Aspose.Email proporciona la capacidad de crear y dar formato a mensajes de reenvío y respuesta. Las clases [ReplyMessageBuilder](https://reference.aspose.com/email/java/com.aspose.email/replymessagebuilder/) y [ForwardMessageBuilder](https://reference.aspose.com/email/java/com.aspose.email/forwardmessagebuilder/) de la API se utilizan para crear los mensajes de respuesta y reenvío respectivamente. Se puede especificar que un mensaje de respuesta o reenvío se cree utilizando cualquiera de los modos de la enumeración [OriginalMessageAdditionMode](https://reference.aspose.com/email/java/com.aspose.email/originalmessageadditionmode/). Esta enumeración tiene los siguientes valores:
 
 - **OriginalMessageAdditionMode.None** - El mensaje original no se incluye en el mensaje de respuesta.
-- **OriginalMessageAdditionMode.Attachment** - El mensaje original se incluye como adjunto en el mensaje de respuesta
-- **OriginalMessageAdditionMode.Textpart** - El mensaje original se incluye como texto en el cuerpo del mensaje de respuesta
+- **OriginalMessageAdditionMode.Attachment** - El mensaje original se incluye como un archivo adjunto en el mensaje de respuesta.
+- **OriginalMessageAdditionMode.Textpart** - El mensaje original se incluye como un texto en el cuerpo del mensaje de respuesta.
 
 ### **Creación de un mensaje de respuesta**
 
 El siguiente fragmento de código muestra cómo crear un mensaje de respuesta.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
 MapiMessage originalMsg = MapiMessage.fromFile(dataDir + "message1.msg");
 ReplyMessageBuilder builder = new ReplyMessageBuilder();
 
-// Set ReplyMessageBuilder Properties
+// Establecer propiedades de ReplyMessageBuilder
 builder.setReplyAll(true);
 builder.setAdditionMode(OriginalMessageAdditionMode.Textpart);
 builder.setResponseText(
-        "<p><b>Dear Friend,</b></p> I want to do is introduce my co-author and co-teacher. <p><a href=\"www.google.com\">This is a first link</a></p><p><a href=\"www.google.com\">This is a second link</a></p>");
+        "<p><b>Querido amigo,</b></p> Lo que quiero hacer es presentar a mi coautor y coprofesor. <p><a href=\"www.google.com\">Este es un primer enlace</a></p><p><a href=\"www.google.com\">Este es un segundo enlace</a></p>");
 
 MapiMessage replyMsg = builder.buildResponse(originalMsg);
 replyMsg.save(dataDir + "reply_out.msg");
-~~~
+~~~ 
 
 ### **Creación de un mensaje de reenvío**
 
 El siguiente fragmento de código muestra cómo crear un mensaje de reenvío.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
 MapiMessage originalMsg = MapiMessage.fromFile(dataDir + "message1.msg");
@@ -231,22 +229,21 @@ ForwardMessageBuilder builder = new ForwardMessageBuilder();
 builder.setAdditionMode(OriginalMessageAdditionMode.Textpart);
 MapiMessage forwardMsg = builder.buildResponse(originalMsg);
 forwardMsg.save(dataDir + "forward_out.msg");
-~~~
+~~~ 
 
-## **Conservar fechas vacías al convertir un mensaje**
+## **Preservar fechas vacías al convertir un mensaje**
 
-[MapiConversionOptions.setPreserveEmptyDates(boolean)](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#setPreserveEmptyDates-boolean-) propiedad que indica si es necesario mantener las fechas vacías al convertir un mensaje. Esta API aparece en Aspose.Email 21.5
-El siguiente fragmento de código muestra cómo conservar las fechas vacías.
+La propiedad [MapiConversionOptions.setPreserveEmptyDates(boolean)](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#setPreserveEmptyDates-boolean-) indica si es necesario mantener las fechas vacías al convertir un mensaje. Esta API aparece en Aspose.Email 21.5. El siguiente fragmento de código muestra cómo preservar fechas vacías.
 
 ~~~java
 MailMessage mailMessage = MailMessage.load("message.eml");
-System.out.println(mailMessage.getDate()); // zero date
+System.out.println(mailMessage.getDate()); // fecha cero
 MapiConversionOptions mco = MapiConversionOptions.getUnicodeFormat();
-// keep empty dates when converting a message
+// mantener fechas vacías al convertir un mensaje
 mco.setPreserveEmptyDates(true);
 MapiMessage mapiMessage = MapiMessage.fromMailMessage(mailMessage, mco);
-System.out.println(mapiMessage.getClientSubmitTime()); // zero date
-// check zero date
+System.out.println(mapiMessage.getClientSubmitTime()); // fecha cero
+// verificar la fecha cero
 if (mapiMessage.getClientSubmitTime().equals(JavaHelper.ZERO_DATE))
-    System.out.println("ZERO DATE");
+    System.out.println("FECHA CERO");
 ~~~

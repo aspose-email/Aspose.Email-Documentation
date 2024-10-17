@@ -6,26 +6,26 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Puede guardar una o más configuraciones de FTP con Aspose.Email para SharePoint. Esta configuración se puede usar al transferir archivos o al sincronizar automáticamente con un servidor FTP. En este artículo se explica cómo hacerlo.
+Puede guardar una o más configuraciones de FTP con Aspose.Email para SharePoint. Estas configuraciones se pueden usar al transferir archivos o sincronizar automáticamente con un servidor FTP. Este artículo explica cómo.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Para acceder a la configuración de FTP:
+Para acceder a la Configuración de FTP: 
 
-1. En el [**Herramientas Aspose** ribbon](/email/sharepoint/about-document-library-synchronization/), haga clic **Configuración de FTP**. Aparece el cuadro de diálogo Colecciones de configuraciones de FTP.
-1. Cree, añada o modifique una configuración de FTP.
-1. Click **Haga clic para probar los parámetros de conexión**. Si la conexión se realiza correctamente, aparece un mensaje.
-1. Click **OK** para cerrar el mensaje de éxito.
-1. Click **Save** para guardar la configuración y salir del cuadro de diálogo.
+1. En la [**cinta de herramientas de Aspose**](/email/sharepoint/about-document-library-synchronization/), haga clic en **Configuración de FTP**. Se muestra el diálogo de Colecciones de Configuración de FTP.
+1. Cree, agregue o modifique una configuración de FTP.
+1. Haga clic en **Haga clic para probar los parámetros de conexión**. Si la conexión es exitosa, aparece un mensaje.
+1. Haga clic en **Aceptar** para cerrar el mensaje de éxito.
+1. Haga clic en **Guardar** para guardar la configuración y cerrar el diálogo.
 
-El cuadro de diálogo Colecciones de configuración de FTP le permite:
+El diálogo de Colecciones de Configuración de FTP le permite:
 
 - Crear una nueva configuración de FTP
 - Modificar una configuración de FTP existente
 - Eliminar una configuración de FTP existente
 
-**Configuración especificada para conectarse a un servidor FTP con seguridad SSL.**
+**Configuraciones especificadas para conectarse a un servidor FTP asegurado con SSL.** 
 
-![todo:image_alt_text](ftp-settings_1.png)
+![todo:texto_alt_imagen](ftp-settings_1.png)

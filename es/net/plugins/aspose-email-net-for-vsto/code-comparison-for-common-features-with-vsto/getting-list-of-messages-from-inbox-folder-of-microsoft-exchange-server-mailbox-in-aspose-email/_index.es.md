@@ -1,16 +1,15 @@
 ---
-title: "Obtener la lista de mensajes de la carpeta Bandeja de entrada del buzón de Microsoft Exchange Server en Aspose.Email"
+title: "Obtener lista de mensajes de la carpeta de bandeja de entrada del buzón de Microsoft Exchange Server en Aspose.Email"
 url: /es/net/getting-list-of-messages-from-inbox-folder-of-microsoft-exchange-server-mailbox-in-aspose-email/
 weight: 150
 type: docs
 ---
 
-
-Para usar objetos de automatización de oficina para Microsoft Outlook, añada al proyecto referencias a las bibliotecas de Microsoft Office y Microsoft Office Interop for Outlook. Microsoft Office Outlook también debe estar instalado en la máquina en la que se ejecuta el código.
+Para utilizar objetos de automatización de Office para Microsoft Outlook, agregue referencias a las bibliotecas de Microsoft Office y Microsoft Office Interop para Outlook al proyecto. Microsoft Office Outlook también debe estar instalado en la máquina donde se ejecute el código.
 ## **VSTO**
 ``` cs
 
- // Create Application class and get namespace
+ // Crear clase Application y obtener namespace
 
 Outlook.Application outlook = new Outlook.Application();
 
@@ -20,15 +19,15 @@ object _missing = Type.Missing;
 
 ns.Logon(_missing, _missing, false, true);
 
-// Get Inbox information in objec of type MAPIFolder
+// Obtener información de la bandeja de entrada en objeto de tipo MAPIFolder
 
 Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
-// Unread emails
+// Correos electrónicos no leídos
 
 int unread = inbox.UnReadItemCount;
 
-// Display the subject of emails in the Inbox folder
+// Mostrar el asunto de los correos electrónicos en la carpeta de entrada
 
 foreach (Outlook.MailItem mail in inbox.Items)
 
@@ -40,35 +39,35 @@ foreach (Outlook.MailItem mail in inbox.Items)
 
 ```
 ## **Aspose.Email**
-Sin embargo, no es necesario instalar Microsoft Outlook en la máquina en la que se ejecuta el código. Consulte el archivo Aspose.Email.dll para compilar y ejecutar el proyecto correctamente.
+Sin embargo, Microsoft Outlook no necesita estar instalado en la máquina donde se ejecute el código. Referencie el Aspose.Email.dll para construir y ejecutar el proyecto con éxito.
 
 ``` cs
 
- // Create instance of ExchangeClient class by giving credentials
+ // Crear instancia de la clase ExchangeClient proporcionando credenciales
 
 ExchangeClient client = new ExchangeClient("http://MachineName/exchange/Username",
 
 				"username", "password", "domain");
 
-// Call ListMessages method to list messages info from Inbox
+// Llamar al método ListMessages para listar la información de los mensajes de la bandeja de entrada
 
 ExchangeMessageInfoCollection msgCollection = client.ListMessages(client.MailboxInfo.InboxUri);
 
-// Loop through the collection to display the basic information
+// Recorrer la colección para mostrar la información básica
 
 foreach (ExchangeMessageInfo msgInfo in msgCollection)
 
 {
 
-	Console.WriteLine("Subject: " + msgInfo.Subject);
+	Console.WriteLine("Asunto: " + msgInfo.Subject);
 
-	Console.WriteLine("From: " + msgInfo.From.ToString());
+	Console.WriteLine("De: " + msgInfo.From.ToString());
 
-	Console.WriteLine("To: " + msgInfo.To.ToString());
+	Console.WriteLine("Para: " + msgInfo.To.ToString());
 
-	Console.WriteLine("Message ID: " + msgInfo.MessageId);
+	Console.WriteLine("ID de mensaje: " + msgInfo.MessageId);
 
-	Console.WriteLine("Unique URI: " + msgInfo.UniqueUri);
+	Console.WriteLine("URI única: " + msgInfo.UniqueUri);
 
 	Console.WriteLine("==================================");
 

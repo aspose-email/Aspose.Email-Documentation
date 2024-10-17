@@ -6,17 +6,17 @@ type: docs
 ---
 
 
-## **Añadir MapiNote a PST**
-Crear un nuevo archivo PST y agregar subcarpetas mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puede agregar un MapiNote a la subcarpeta Notes de un archivo PST que haya creado o cargado. Para añadir un MapiNote a un PST:
+## **Añadiendo MapiNote a PST**
+Crear un nuevo archivo PST y agregar subcarpetas mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes agregar un MapiNote a la subcarpeta de Notas de un archivo PST que hayas creado o cargado. Para agregar un MapiNote a un PST:
 
-1. Cree una plantilla MapiNote con Microsoft Outlook y guárdela como un archivo MSG.
+1. Crea un MapiNote de plantilla utilizando Microsoft Outlook y guárdalo como un archivo MSG.
 1. Carga la nota MSG guardada en un objeto MapiMessage.
-1. Cree un objeto MapiNote y cargue la nota MSG de plantilla.
-1. Establezca las propiedades de MapiNote.
-1. Cree un PST con el método PersonalStorage.create ().
-1. Cree una carpeta predefinida (Notes) en la raíz del archivo PST accediendo a la carpeta raíz y, a continuación, llamando al método addMapIMessageItem ().
+1. Crea un objeto MapiNote y carga la nota MSG de plantilla.
+1. Establece las propiedades de MapiNote.
+1. Crea un PST utilizando el método PersonalStorage.Create().
+1. Crea una carpeta predefinida (Notas) en la raíz del archivo PST accediendo a la carpeta raíz y luego llamando al método AddMapiMessageItem().
 
-El siguiente fragmento de código muestra cómo crear un MapiNote y, a continuación, añadirlo a la carpeta de notas de un archivo PST recién creado.
+El siguiente fragmento de código te muestra cómo crear un MapiNote y luego agregarlo a la carpeta de notas de un archivo PST recién creado.
 
 
 

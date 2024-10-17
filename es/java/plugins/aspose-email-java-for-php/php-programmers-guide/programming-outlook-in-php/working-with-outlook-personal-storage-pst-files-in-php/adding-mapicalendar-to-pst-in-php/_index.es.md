@@ -6,27 +6,27 @@ type: docs
 ---
 
 ## **Aspose.Email - Agregar MapiCalendar a PST**
-Para agregar MapiCalendar a PST usando **Aspose.Email Java para PHP**, simplemente invoca **AddMapiCalendarToPST** módulo. Aquí puedes ver un ejemplo de código.
+Para agregar MapiCalendar a PST usando **Aspose.Email Java para PHP**, simplemente invoca el módulo **AddMapiCalendarToPST**. Aquí puedes ver un código de ejemplo.
 
 **Código PHP**
 
 ``` php
 
- # Create the appointment
+ # Crear la cita
 
 $appointment =new MapiCalendar(
 
 "LAKE ARGYLE WA 6743",
 
-"Appointment",
+"Cita",
 
-"This is a very important meeting :)",
+"Esta es una reunión muy importante :)",
 
 new Date(2012, 10, 2),
 
 new Date(2012, 10, 2, 14, 0, 0));
 
-\# Create the meeting
+\# Crear la reunión
 
 $attendees = new MapiRecipientCollection();
 
@@ -38,11 +38,11 @@ $attendees->add("SzllsyLiza@dayrep.com", "Szollosy Liza", $mapiRecipientType->MA
 
 $meeting = new MapiCalendar(
 
-"Meeting Room 3 at Office Headquarters",
+"Sala de reuniones 3 en la sede de la oficina",
 
-"Meeting",
+"Reunión",
 
-"Please confirm your availability.",
+"Por favor confirma tu disponibilidad.",
 
 new Date(2012, 10, 2, 13, 0, 0),
 
@@ -62,13 +62,13 @@ $standardIpmFolder=new StandardIpmFolder();
 
 $pst = $personalStorage->create($dataDir . "MapiCalendarToPST1.pst", $fileFormatVersion->Unicode);
 
-$calendar_folder = $pst->createPredefinedFolder("Calendar", $standardIpmFolder->Appointments);
+$calendar_folder = $pst->createPredefinedFolder("Calendario", $standardIpmFolder->Appointments);
 
-print "Added MapiCalendar Successfully.".PHP_EOL;
+print "MapiCalendar agregado exitosamente.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiCalendar a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Agregar MapiCalendar a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiCalendarToPST.php)
 - [CodePlex](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose.Email-for-Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiCalendarToPST.php)

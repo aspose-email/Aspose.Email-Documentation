@@ -1,63 +1,62 @@
 ---
-title: "Lea el archivo OLM de Outlook para Mac y obtenga información sobre carpetas y subcarpetas"
+title: "Leer archivo OLM de Outlook para Mac y obtener información de carpetas y subcarpetas"
 url: /es/java/read-outlook-for-mac-olm-file-and-get-folders-and-subfolders-information/
 weight: 130
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email para Java le permite leer los archivos OLM de Outlook para Mac. Puede cargar un archivo OLM desde el disco a una instancia del [OlmStorage](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/) y obtenga la información sobre su contenido, por ejemplo, carpetas, subcarpetas y mensajes.
+Aspose.Email para Java te permite leer archivos OLM de Outlook para Mac. Puedes cargar un archivo OLM desde el disco en una instancia de la clase [OlmStorage](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/) y obtener información sobre su contenido, por ejemplo, carpetas, subcarpetas y mensajes.
 
-{{% /alert %}}
+{{% /alert %}} 
 
 ## **Abrir archivos en formato OLM**
 
 Los archivos en formato OLM se pueden abrir de dos maneras:
 
-- uso del constructor
-- uso del método estático FromFile
+- utilizando el constructor
+- utilizando el método estático FromFile
 
-Hay diferencias de comportamiento entre estos métodos. Consulte la sección siguiente.
+Hay diferencias en el comportamiento entre estos métodos. Consulta la sección a continuación.
 
 ### **Abrir archivos por constructor**
 
-Para abrir un archivo, llame al constructor del [OlmStorage](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/) clase y pasarle el nombre completo del archivo o la secuencia como argumento:
+Para abrir un archivo, llama al constructor de la clase [OlmStorage](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/) y pasa el nombre completo del archivo o un flujo como argumento:
 
 ```java
 OlmStorage olm = new OlmStorage("fileName");
 ```
 
-### **Abrir archivos mediante el método estático fromFile**
+### **Abrir archivos utilizando el método estático FromFile**
 
-Para abrir un archivo, utilice el método estático [fromFile](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromFile-java.lang.String-) y pasarle el nombre completo del archivo como argumento:
+Para abrir un archivo, utiliza el método estático [fromFile](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromFile-java.lang.String-) y pasa el nombre completo del archivo como argumento:
 
 ```java
 OlmStorage olm = OlmStorage.fromFile("fileName");
 ```
-### **Abrir archivos mediante el método estático fromStream**
+### **Abrir archivos utilizando el método estático FromStream**
 
-Para abrir un archivo mediante un método estático [fromStream](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromStream-java.io.InputStream-), pásale el nombre de una secuencia como argumento:
-
+Para abrir un archivo utilizando el método estático [fromStream](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromStream-java.io.InputStream-), pasa un nombre de flujo como argumento:
 
 ## **Leer archivo OLM**
 
-El siguiente fragmento de código muestra cómo cargar el archivo OLM y obtener su contenido.
+El siguiente fragmento de código te muestra cómo cargar el archivo OLM y obtener su contenido.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-olm-LoadAndReadOLMFile.java" >}}
 
 ## **Obtener carpetas**
 
-Para recuperar carpetas de un archivo OLM (Outlook para Mac), cárguelo con el [OlmStorage](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/) clase primero y, a continuación, utilice uno de los siguientes métodos según sus necesidades:
+Para recuperar carpetas de un archivo OLM (Outlook para Mac), primero cárgalo con la clase [OlmStorage](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/) y luego utiliza uno de los siguientes métodos dependiendo de tus necesidades:
 
-- [getFolder (nombre de cadena, booleano ignoreCase)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolder-java.lang.String-boolean-) - Obtiene la carpeta por su nombre.
-- [getFolders()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolders--) - Obtiene la jerarquía de carpetas/colección de carpetas.
+- [getFolder(String name, boolean ignoreCase)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolder-java.lang.String-boolean-) - Obtiene la carpeta por nombre.
+- [getFolders()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolders--) - Obtiene la jerarquía de carpetas/colectión de carpetas.
 - [getFolderHierarchy()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolderHierarchy--) - Obtiene la jerarquía de carpetas.
 
-El ejemplo de código siguiente le mostrará cómo obtener una carpeta de un archivo OLM:
+El siguiente ejemplo de código te mostrará cómo obtener una carpeta de un archivo OLM:
 
 ```java
-// Get the folder by name
+// Obtener la carpeta por nombre
 OlmStorage olm = OlmStorage.fromFile("fileName");
 
 try {
@@ -70,39 +69,38 @@ try {
 
 }
 ```
-Al usar el [fromFile](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromFile-java.lang.String-) método para abrir un archivo OLM, el [getFolderHierarchy()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolderHierarchy--) devolverá un valor nulo. En este caso, llame al [getFolders()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolders--) método explícito para recuperar la lista de directorios del archivo OLM.
+Al usar el método [fromFile](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromFile-java.lang.String-) para abrir un archivo OLM, el método [getFolderHierarchy()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolderHierarchy--) devolverá null. En este caso, llama al método [getFolders()](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#getFolders--) explícitamente para recuperar la lista de directorios en el archivo OLM.
 
+### **Obtener ruta de la carpeta**
 
-### **Obtener la ruta de la carpeta**
-
-También puede obtener la ruta de las carpetas del archivo OML. Aspose.Email proporciona [OlmFolder.Path](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getPath--) propiedad que devuelve la ruta de la carpeta. El siguiente fragmento de código demuestra el uso de [OlmFolder.Path](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getPath--) propiedad para obtener las rutas de las carpetas en el archivo OML.
+También puedes obtener la ruta de la carpeta de las carpetas en el archivo OML. Aspose.Email proporciona la propiedad [OlmFolder.Path](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getPath--) que devuelve la ruta de la carpeta. El siguiente fragmento de código demuestra el uso de la propiedad [OlmFolder.Path](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getPath--) para obtener las rutas de las carpetas en el archivo OML.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-olm-GetFolderPathInOLM-1.java" >}}
 
-### **Cuenta el número de elementos de la carpeta**
+### **Contar el número de elementos en la carpeta**
 
-También puede contar el número de elementos de la carpeta. Aspose.Email proporciona [OlmFolder.MessageCount](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getMessageCount--) propiedad que devuelve el número de elementos de la carpeta. El siguiente fragmento de código demuestra el uso de [OlmFolder.MessageCount](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getMessageCount--) propiedad para obtener el número de elementos de las carpetas del archivo OML.
+También puedes contar el número de elementos en la carpeta. Aspose.Email proporciona la propiedad [OlmFolder.MessageCount](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getMessageCount--) que devuelve el número de elementos en la carpeta. El siguiente fragmento de código demuestra el uso de la propiedad [OlmFolder.MessageCount](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/#getMessageCount--) para obtener el número de elementos en las carpetas del archivo OML.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-olm-CountItemsInOLMFolder-1.java" >}}
 
-## **Enumerar los mensajes de una carpeta determinada**
+## **Enumerar mensajes desde una carpeta dada**
 
-Aspose.Email proporciona la API para trabajar con los almacenamientos de OLM y extraer mensajes de una carpeta determinada. El [OlmFolder](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/) and [OlmMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/) las clases representan información breve sobre una carpeta y un mensaje en el almacenamiento, respectivamente. El [OlmFolder](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/) La clase proporciona los siguientes métodos:
+Aspose.Email proporciona la API para trabajar con almacenamientos OLM y extraer mensajes de una carpeta dada. Las clases [OlmFolder](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/) y [OlmMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/) representan información breve sobre una carpeta y un mensaje en el almacenamiento, respectivamente. La clase [OlmFolder](https://reference.aspose.com/email/java/com.aspose.email/olmfolder/) proporciona los siguientes métodos:
 
-- **OlmFolder.getSubFolder**(String subfolderName, boolean ignoreCase): obtiene la subcarpeta por su nombre.
+- **OlmFolder.getSubFolder**(String subfolderName, boolean ignoreCase) - Obtiene la subcarpeta por nombre.
 
-- **OlmFolder.enumerateMapiMessages()** - Expone el enumerador, que admite una iteración de mapiMessages en la carpeta actual.
+- **OlmFolder.enumerateMapiMessages()** - Expone el enumerador, que soporta la iteración de MapiMessages en la carpeta actual.
 
-- **OlmFolder.enumerateMessages()** - Expone el enumerador, que admite una iteración de OLMMessageInfo en la carpeta actual.
+- **OlmFolder.enumerateMessages()** - Expone el enumerador, que soporta la iteración de OlmMessageInfo en la carpeta actual.
 
-- **OlmFolder.enumerateMessages**(int startIndex, int count): expone el enumerador, que admite una iteración de olmMessageInfo dentro de un rango determinado.
+- **OlmFolder.enumerateMessages**(int startIndex, int count) - Expone el enumerador, que soporta la iteración de OlmMessageInfo dentro de un rango dado.
 
-- **OlmFolder.enumerateMessages**(consulta MailQuery): expone el enumerador, que admite una iteración de OLMMessageInfo según los criterios de búsqueda.
+- **OlmFolder.enumerateMessages**(MailQuery query) - Expone el enumerador, que soporta la iteración de OlmMessageInfo por criterios de búsqueda.
 
-Los siguientes ejemplos de código demostrarán el uso de estos métodos:
+Los ejemplos de código a continuación demostrarán el uso de estos métodos:
 
 ```java
- // Enumerates all messages in a given folder
+ // Enumera todos los mensajes en una carpeta dada
 
 OlmStorage olm = OlmStorage.fromFile("fileName");
 
@@ -122,7 +120,7 @@ try {
 
 }
 
-// Enumerates a range of messages in a given folder
+// Enumera un rango de mensajes en una carpeta dada
 
 OlmStorage olm = OlmStorage.fromFile("fileName");
 
@@ -146,7 +144,7 @@ try {
 
 }
 
-// Enumerates messages by search criteria
+// Enumera mensajes por criterios de búsqueda
 
 OlmStorage olm = OlmStorage.fromFile("fileName");
 
@@ -172,7 +170,7 @@ try {
 
 }
 
-// Enumerates all messages and the extraction of some of them
+// Enumera todos los mensajes y la extracción de algunos de ellos
 
 OlmStorage olm = OlmStorage.fromFile("fileName");
 
@@ -196,46 +194,45 @@ try {
 
 }
 ```
-## **Extraer mensajes de OLM mediante identificadores**
+## **Extraer mensajes de OLM por identificadores**
 
-A veces es necesario extraer los mensajes seleccionados por identificadores. Por ejemplo, su aplicación almacena los identificadores en una base de datos y extrae un mensaje cuando lo solicita. Esta es la forma eficaz de evitar tener que recorrer todo el almacenamiento cada vez para encontrar un mensaje específico que extraer. Para implementar esta función en los archivos OLM, Aspose.Email proporciona los siguientes métodos y clases:
+A veces es necesario extraer mensajes seleccionados por identificadores. Por ejemplo, tu aplicación almacena identificadores en una base de datos y extrae un mensaje a pedido. Esta es la forma eficiente de evitar recorrer todo el almacenamiento cada vez para encontrar un mensaje específico a extraer. Para implementar esta característica para archivos OLM, Aspose.Email proporciona los siguientes métodos y clases:
 
-- [EntryId](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/#getEntryId--) propiedad del [OlmMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/) class: obtiene el identificador de entrada del mensaje.
-- overloaded [ExtractMapiMessage (identificador de cadena)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#extractMapiMessage-java.lang.String-) método del [OlmStorage]() class: obtiene el mensaje de OLM.
+- La propiedad [EntryId](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/#getEntryId--) de la clase [OlmMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/) - Obtiene el identificador de entrada del mensaje.
+- El método sobrecargado [extractMapiMessage(String id)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#extractMapiMessage-java.lang.String-) de la clase [OlmStorage]() - Obtiene el mensaje de OLM.
 
-El ejemplo de código que aparece a continuación muestra cómo extraer mensajes de OLM mediante identificadores:
+El ejemplo de código a continuación demuestra cómo extraer mensajes de OLM por identificadores:
 
 ```java
 for (OlmMessageInfo msgInfo : olmFolder.enumerateMessages()) {
     MapiMessage msg = storage.extractMapiMessage(msgInfo.getEntryId());
 }
 ```
-**Note:** El identificador del mensaje es único en el archivo de almacenamiento. Los ID los crea Aspose.Email y no se pueden usar en bibliotecas o aplicaciones de procesamiento de OLM de otros fabricantes.
-
+**Nota:** El ID del mensaje es único dentro del archivo de almacenamiento. Los IDs son creados por Aspose.Email y no pueden ser utilizados en otras bibliotecas o aplicaciones de procesamiento OLM de terceros.
 
 ## **Extraer elementos OLM de archivos corruptos**
 
-Aspose.Email proporciona una API transversal que permite extraer todos los elementos de OLM en la medida de lo posible, sin descartar excepciones, incluso si algunos datos del archivo original están dañados.
+Aspose.Email proporciona una API de recorrido que permite extraer todos los elementos OLM tanto como sea posible, sin lanzar excepciones, incluso si algunos datos del archivo original están corruptos.
 
-Usa el [OLMStorage (devolución de llamada de TraversalExceptions)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#OlmStorage-com.aspose.email.TraversalExceptionsCallback-) constructor y el [load (nombre de archivo de cadena)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#load-java.lang.String-) método en lugar del [fromFile](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromFile-java.lang.String-) method.
+Utiliza el constructor [OlmStorage(TraversalExceptionsCallback callback)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#OlmStorage-com.aspose.email.TraversalExceptionsCallback-) y el método [load(String fileName)](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#load-java.lang.String-) en lugar del método [fromFile](https://reference.aspose.com/email/java/com.aspose.email/olmstorage/#fromFile-java.lang.String-).
 
-El constructor permite definir un método de devolución de llamada.
+El constructor permite definir un método de callback.
 
 ```java
 OlmStorage olm = new OlmStorage(new TraversalExceptionsCallback() {
     public void invoke(TraversalAsposeException exception, String itemId) {
-        /* Exception handling  code. */
+        /* Código de manejo de excepciones. */
     }
 });
 ```
-Las excepciones de carga y recorrido estarán disponibles mediante el método de devolución de llamada.
+Las excepciones de carga y recorrido estarán disponibles a través del método de callback.
 
-El método load devuelve «true» si el archivo se ha cargado correctamente y es posible recorrerlo más a fondo. Si un archivo está dañado y no es posible recorrerlo, se devuelve un valor «falso».
+El método load devuelve 'true' si el archivo se ha cargado correctamente y es posible un recorrido más. Si un archivo está corrupto y no es posible el recorrido, se devuelve 'false'.
 
 ```java
 TraversalExceptionsCallback exceptionsCallback = new TraversalExceptionsCallback() {
     public void invoke(TraversalAsposeException exception, String itemId) {
-        /* Exception handling  code. */
+        /* Código de manejo de excepciones. */
     }
 };
 try (OlmStorage olm = new OlmStorage(exceptionsCallback)) {
@@ -261,9 +258,9 @@ private static void extractItems(OlmStorage olm, List<OlmFolder> folders) {
     }
 }
 ```
-## **Obtener la fecha de modificación del mensaje**
+## **Obtener fecha de modificación del mensaje**
 
-The [OlmMessageInfo.getModifiedDate](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/#getModifiedDate--) Esta propiedad le permite obtener la fecha de modificación del mensaje.
+La propiedad [OlmMessageInfo.getModifiedDate](https://reference.aspose.com/email/java/com.aspose.email/olmmessageinfo/#getModifiedDate--) te permite obtener la fecha de modificación del mensaje.
 
 ```java
 for (OlmMessageInfo messageInfo : inboxFolder.enumerateMessages()) {

@@ -1,28 +1,27 @@
 ---
-title: "Creación de un contacto de Outlook en Aspose.Email"
-url: /es/net/creating-an-outlook-contact-in-aspose-email/
+title: "Creando un contacto de Outlook en Aspose.Email"
+url: /es/net/creando-un-contacto-de-outlook-en-aspose-email/
 weight: 80
 type: docs
 ---
 
+Este consejo de migración muestra cómo crear un contacto de Microsoft Outlook utilizando Microsoft Office Automation y Aspose.Email. El ejemplo de código muestra cómo establecer diferentes informaciones de un contacto, como información personal, profesional y empresarial. Crear un contacto de Outlook consiste en los siguientes pasos:
 
-Este consejo de migración muestra cómo crear un contacto de Microsoft Outlook con Microsoft Office Automation y Aspose.Email. El ejemplo de código muestra cómo configurar diferentes datos de un contacto, como la información personal, profesional y empresarial. La creación de un contacto de Outlook consiste en los siguientes pasos:
-
-1. Creación de un objeto de contacto.
-1. Rellenar o configurar las distintas propiedades de la propiedad.
+1. Crear un objeto Contacto.
+1. Población o establecimiento de las diversas propiedades del objeto.
 1. Guardar el objeto.
 ## **VSTO**
 ``` cs
 
- //Create a new MapiContact Object
+ //Crear un nuevo objeto MapiContact
 
 MapiContact mapiContact = new MapiContact();
 
-//Set different properties of this Contact object
+//Establecer diferentes propiedades de este objeto Contacto
 
 mapiContact.NameInfo = new MapiContactNamePropertySet("Mellissa", "", "MacBeth");
 
-mapiContact.ProfessionalInfo.Title = "Account Representative";
+mapiContact.ProfessionalInfo.Title = "Representante de Cuenta";
 
 mapiContact.ProfessionalInfo.CompanyName = "Contoso Ltd.";
 
@@ -38,7 +37,7 @@ mapiContact.PhysicalAddresses.WorkAddress.StateOrProvince = "WA";
 
 mapiContact.PhysicalAddresses.WorkAddress.PostalCode = "98052";
 
-mapiContact.PhysicalAddresses.WorkAddress.Country = "United States of America";
+mapiContact.PhysicalAddresses.WorkAddress.Country = "Estados Unidos de América";
 
 mapiContact.ElectronicAddresses.Email1.EmailAddress = "milissa@contoso.com";
 
@@ -46,7 +45,7 @@ mapiContact.ElectronicAddresses.Email1.AddressType = "SMTP";
 
 mapiContact.ElectronicAddresses.Email1.DisplayName = "Melissa MacBeth (mellissa@contoso.com)";
 
-//Save the Contact object to disc
+//Guardar el objeto Contacto en disco
 
 mapiContact.Save("Contact.vcf", ContactSaveFormat.VCard);
 
@@ -54,15 +53,15 @@ mapiContact.Save("Contact.vcf", ContactSaveFormat.VCard);
 ## **Aspose.Email**
 ``` cs
 
- //Create a new MapiContact Object
+ //Crear un nuevo objeto MapiContact
 
 MapiContact mapiContact = new MapiContact();
 
-//Set different properties of this Contact object
+//Establecer diferentes propiedades de este objeto Contacto
 
 mapiContact.NameInfo = new MapiContactNamePropertySet("Mellissa", "", "MacBeth");
 
-mapiContact.ProfessionalInfo.Title = "Account Representative";
+mapiContact.ProfessionalInfo.Title = "Representante de Cuenta";
 
 mapiContact.ProfessionalInfo.CompanyName = "Contoso Ltd.";
 
@@ -78,7 +77,7 @@ mapiContact.PhysicalAddresses.WorkAddress.StateOrProvince = "WA";
 
 mapiContact.PhysicalAddresses.WorkAddress.PostalCode = "98052";
 
-mapiContact.PhysicalAddresses.WorkAddress.Country = "United States of America";
+mapiContact.PhysicalAddresses.WorkAddress.Country = "Estados Unidos de América";
 
 mapiContact.ElectronicAddresses.Email1.EmailAddress = "milissa@contoso.com";
 
@@ -86,12 +85,12 @@ mapiContact.ElectronicAddresses.Email1.AddressType = "SMTP";
 
 mapiContact.ElectronicAddresses.Email1.DisplayName = "Melissa MacBeth (mellissa@contoso.com)";
 
-//Save the Contact object to disc
+//Guardar el objeto Contacto en disco
 
 mapiContact.Save("Contact.vcf", ContactSaveFormat.VCard);
 
 ```
-## **Descargar código de muestra**
+## **Descargar código de ejemplo**
 - [Codeplex](https://asposevsto.codeplex.com/downloads/get/772939)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/download/AsposeEmailVsVSTOv1.1/Creating.an.Outlook.Contact.Aspose.Email.zip)
 - [Sourceforge](https://sourceforge.net/projects/asposevsto/files/Aspose.Email%20Vs%20VSTO%20Outlook/Creating%20an%20Outlook%20Contact%20\(Aspose.Email\).zip/download)

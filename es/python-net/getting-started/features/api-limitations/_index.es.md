@@ -6,11 +6,11 @@ type: docs
 ---
 
 
-Aspose.Email para Python a través de.NET tiene algunas limitaciones en comparación con la API estándar de Aspose.Email para .NET. Estas son las que se detallan a continuación.
+Aspose.Email para Python a través de .NET tiene algunas limitaciones en comparación con la API estándar de Aspose.Email para .NET. Estas son las detalladas a continuación.
 
-Limitaciones de Aspose.Email para Python mediante .NET
+Limitaciones de Aspose.Email para Python a través de .NET
 
-1. No puede incrustar imágenes enlazadas en el cuerpo del mensaje en formato RTF y HTML
-1. Tampoco tiene la funcionalidad de firmar o cifrar/descifrar mensajes
-1. La compatibilidad con los clientes de Exchange Server no está disponible
-1. La compatibilidad con propiedades MAPI adicionales no está disponible
+1. No puedes incrustar imágenes vinculadas en el cuerpo del mensaje tanto en formato RTF como en formato HTML.
+1. Tampoco tiene funcionalidad para firmar o cifrar/descifrar mensajes.
+1. No hay soporte para clientes de Exchange Server.
+1. No hay soporte para propiedades adicionales de MAPI.

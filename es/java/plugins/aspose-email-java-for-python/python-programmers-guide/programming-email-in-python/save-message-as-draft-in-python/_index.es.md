@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Guardar mensaje como borrador**
-Para guardar el mensaje como borrador usando **Aspose.Email Java para Python**, Usa el siguiente código.
+Para guardar un mensaje como borrador utilizando **Aspose.Email Java para Python**, utiliza el siguiente código.
 
 **Código Python**
 
@@ -14,53 +14,53 @@ Para guardar el mensaje como borrador usando **Aspose.Email Java para Python**, 
 
 
 
-\# Create a instance of MailMessage class
+\# Crear una instancia de la clase MailMessage
 
 message = self.MailMessage()
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
 mail_address = self.MailAddress
 
-\# Set Html body
+\# Establecer cuerpo Html
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-    "<font color=blue>This line is in blue color</font>")
+    "<font color=blue>Esta línea está en color azul</font>")
 
-\# Set sender information
+\# Establecer información del remitente
 
-message.setFrom(self.MailAddress("from@domain.com", "Sender Name", False))
+message.setFrom(self.MailAddress("from@domain.com", "Nombre del Remitente", False))
 
-\# Add TO recipients
+\# Agregar destinatarios a TO
 
-message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Recipient 1", False))
+message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Destinatario 1", False))
 
-message.getTo().addMailAddress(self.MailAddress("to2@domain.com", "Recipient 2", False))
+message.getTo().addMailAddress(self.MailAddress("to2@domain.com", "Destinatario 2", False))
 
-\# Create an instance of MapiMessage and load the MailMessag instance into it
+\# Crear una instancia de MapiMessage y cargar la instancia de MailMessage en ella
 
 mapiMessage = self.MapiMessage
 
 mapi_msg = mapiMessage.fromMailMessage(message)
 
-\# Set the MapiMessageFlags as UNSENT and FROMME
+\# Establecer los MapiMessageFlags como UNSENT y FROMME
 
 mapi_message_flags = self.MapiMessageFlags
 
-\# Save the MapiMessage to disk
+\# Guardar el MapiMessage en el disco
 
-mapi_msg.save(self.dataDir + "New-Draft.msg")
+mapi_msg.save(self.dataDir + "Nuevo-Borrador.msg")
 
-\# Display Status
+\# Mostrar estado
 
-print "Draft saved Successfully."
+print "Borrador guardado exitosamente."
 
 ```
-## **Descargar Running Code**
-Download **Guardar mensaje como borrador (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar código en ejecución**
+Descarga **Guardar mensaje como borrador (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

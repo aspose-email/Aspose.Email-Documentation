@@ -1,65 +1,65 @@
 ---
 title: "Crear un nuevo correo electrónico en PHP"
-url: /es/java/create-new-email-in-php/
+url: /es/java/crear-nuevo-correo-electronico-en-php/
 weight: 20
 type: docs
 ---
 
 ## **Aspose.Email - Crear nuevo correo electrónico**
-Para crear un nuevo correo electrónico usando **Aspose.Email Java para PHP**, simplemente invoca **CreateNewEmail** módulo. Aquí puedes ver un ejemplo de código.
+Para crear un nuevo correo electrónico utilizando **Aspose.Email Java para PHP**, simplemente invoca el módulo **CreateNewEmail**. Aquí puedes ver un código de ejemplo.
 
 **Código PHP**
 
 ``` php
 
- # Create a new instance of MailMessage class
+ # Crear una nueva instancia de la clase MailMessage
 
 $message = new MailMessage();
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-$message->setSubject("New message created by Aspose.Email for Java");
+$message->setSubject("Nuevo mensaje creado por Aspose.Email para Java");
 
 $mail_address = new MailAddress();
 
-\# Set Html body
+\# Establecer el cuerpo en Html
 
-$message->setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" .
+$message->setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" .
 
-"<font color=blue>This line is in blue color</font>");
+"<font color=blue>Esta línea está en color azul</font>");
 
-\# Set sender information
+\# Establecer información del remitente
 
-$message->setFrom(new MailAddress("from@domain.com", "Sender Name", false));
+$message->setFrom(new MailAddress("from@domain.com", "Nombre del Remitente", false));
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-$message->getTo()->add(new MailAddress("to1@domain.com", "Recipient 1", false));
+$message->getTo()->add(new MailAddress("to1@domain.com", "Destinatario 1", false));
 
-$message->getTo()->add(new MailAddress("to2@domain.com", "Recipient 2", false));
+$message->getTo()->add(new MailAddress("to2@domain.com", "Destinatario 2", false));
 
-\# Add CC recipients
+\# Agregar destinatarios CC
 
-$message->getCC()->add(new MailAddress("cc1@domain.com", "Recipient 3", false));
+$message->getCC()->add(new MailAddress("cc1@domain.com", "Destinatario 3", false));
 
-$message->getCC()->add(new MailAddress("cc2@domain.com", "Recipient 4", false));
+$message->getCC()->add(new MailAddress("cc2@domain.com", "Destinatario 4", false));
 
-\# Save message in EML and MSG formats
+\# Guardar el mensaje en formatos EML y MSG
 
 $mail_message_save_type = new MailMessageSaveType();
 
-$message->save($dataDir . "Message.eml", $mail_message_save_type->getEmlFormat());
+$message->save($dataDir . "Mensaje.eml", $mail_message_save_type->getEmlFormat());
 
-$message->save($dataDir . "Message.msg", $mail_message_save_type->getOutlookMessageFormat());
+$message->save($dataDir . "Mensaje.msg", $mail_message_save_type->getOutlookMessageFormat());
 
-\# Display Status
+\# Mostrar Estado
 
-print "Created email messages Successfully.".PHP_EOL;
+print "Mensajes de correo electrónico creados con éxito.".PHP_EOL;
 
 
 ```
-## **Descargar Running Code**
-Download **Crear nuevo correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar código en ejecución**
+Descarga **Crear nuevo correo electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/CreateNewEmail.php)
 - [CodePlex](https://asposeemailjavaphp.codeplex.com/SourceControl/latest#src/aspose/email/ProgrammingEmail/CreateNewEmail.php)

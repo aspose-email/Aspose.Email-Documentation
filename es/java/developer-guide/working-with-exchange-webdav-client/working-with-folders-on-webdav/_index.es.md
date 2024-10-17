@@ -1,34 +1,34 @@
 ---
-title: "Trabajando con carpetas en WebDAV"
+title: "Trabajando con Carpetas en WebDav"
 url: /es/java/working-with-folders-on-webdav/
 weight: 130
 type: docs
 ---
 
 
-## **Listar todas las carpetas del servidor**
-La API Aspose.Email ofrece la capacidad de conectarse al servidor Exchange y enumerar todas las carpetas y subcarpetas. También puede recuperar todas las subcarpetas de cada carpeta de forma recursiva. En este artículo se muestra cómo recuperar todas las subcarpetas del servidor de Exchange y cómo recuperar las carpetas con paginación.
-### **Uso de WebDAV**
-El siguiente fragmento de código muestra cómo enumerar carpetas de Exchange Server.
+## **Listando todas las Carpetas del Servidor**
+La API de Aspose.Email proporciona la capacidad de conectarse al Servidor de Exchange y listar todas las carpetas y subcarpetas. También puedes recuperar todas las subcarpetas de cada carpeta de forma recursiva. Este artículo muestra cómo recuperar todas las subcarpetas del servidor de Exchange y recuperar carpetas con paginación.
+### **Usando WebDav**
+El siguiente fragmento de código muestra cómo listar carpetas del Servidor de Exchange.
 
 
 ~~~Java
 public static void run() {
     try {
         ExchangeClient client = new ExchangeClient("http://ex07sp1/exchange/Administrator", "user", "pwd", "domain");
-        System.out.println("Downloading all messages from Inbox....");
+        System.out.println("Descargando todos los mensajes de la Bandeja de Entrada....");
 
         ExchangeMailboxInfo mailboxInfo = client.getMailboxInfo();
-        System.out.println("Mailbox URI: " + mailboxInfo.getMailboxUri());
+        System.out.println("URI del Buzón: " + mailboxInfo.getMailboxUri());
         String rootUri = client.getMailboxInfo().getRootUri();
-        // List all the folders from Exchange server
+        // Listar todas las carpetas del servidor de Exchange
         ExchangeFolderInfoCollection folderInfoCollection = client.listSubFolders(rootUri);
         for (ExchangeFolderInfo folderInfo : folderInfoCollection) {
-            // Call the recursive method to read messages and get sub-folders
+            // Llamar al método recursivo para leer mensajes y obtener subcarpetas
             listSubFolders(client, folderInfo);
         }
 
-        System.out.println("All messages downloaded.");
+        System.out.println("Todos los mensajes descargados.");
     } catch (Exception ex) {
         System.err.println(ex);
     }
@@ -37,7 +37,7 @@ public static void run() {
 private static void listSubFolders(ExchangeClient client, ExchangeFolderInfo folderInfo) {
     System.out.println(folderInfo.getDisplayName());
     try {
-        // If this folder has sub-folders, call this method recursively to get messages
+        // Si esta carpeta tiene subcarpetas, llamar a este método recursivamente para obtener mensajes
         ExchangeFolderInfoCollection folderInfoCollection = client.ListSubFolders(folderInfo.Uri);
         for (ExchangeFolderInfo subfolderInfo : folderInfoCollection) {
             listSubFolders(client, subfolderInfo);

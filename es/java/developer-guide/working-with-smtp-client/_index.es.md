@@ -1,8 +1,6 @@
 ---
-title: "Trabajando con el cliente SMTP"
-url: /es/java/working-with-smtp-client/
+title: "Trabajando con el Cliente SMTP"
+url: /es/java/trabajando-con-el-cliente-smtp/
 weight: 50
 type: docs
 ---
-
-

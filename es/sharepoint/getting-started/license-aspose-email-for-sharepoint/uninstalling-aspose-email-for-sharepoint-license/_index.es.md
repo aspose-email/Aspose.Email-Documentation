@@ -1,13 +1,13 @@
 ---
-title: "Desinstalar la licencia de Aspose.Email para SharePoint"
+title: "Desinstalación de la Licencia de Aspose.Email para SharePoint"
 url: /es/sharepoint/uninstalling-aspose-email-for-sharepoint-license/
 weight: 30
 type: docs
 ---
 
-Para desinstalar la licencia de Aspose.Email for SharePoint, utilice la consola del servidor o el Shell de administración de SharePoint 2010:
+Para desinstalar la licencia de Aspose.Email para SharePoint, utiliza la consola del servidor o el Shell de Administración de SharePoint 2010:
 
-1. Retirar la solución de licencias de la granja:
+1. Retracta la solución de licencia de la granja:
 
 ``` java
 
@@ -15,7 +15,7 @@ Para desinstalar la licencia de Aspose.Email for SharePoint, utilice la consola 
 
 ```
 
-1. Ejecute tareas de temporizador administrativo para completar la retractación de inmediato:
+1. Ejecuta trabajos de temporizador administrativos para completar la retractación inmediatamente:
 
 ``` java
 
@@ -23,9 +23,9 @@ Para desinstalar la licencia de Aspose.Email for SharePoint, utilice la consola 
 
 ```
 
-1. Espera a que se complete la retractación. Utilice la Administración Central para comprobar si la retractación se ha completado:
-   1. Under **Administración central**, selecciona **Operations** y luego **Administración de soluciones**.
-1. Elimine la solución del almacén de soluciones de SharePoint:
+1. Espera a que la retractación se complete. Usa la Administración Central para verificar si la retractación completó:
+   1. En **Administración Central**, selecciona **Operaciones** y luego **Administración de Soluciones**.
+1. Elimina la solución de la tienda de soluciones de SharePoint:
 
 ``` java
 

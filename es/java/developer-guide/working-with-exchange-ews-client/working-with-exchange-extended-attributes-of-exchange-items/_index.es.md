@@ -1,12 +1,11 @@
 ---
-title: "Cómo trabajar con los atributos ampliados de Exchange de los artículos de Exchange"
+title: "Trabajando con los Atributos Extendidos de Exchange de los Elementos de Exchange"
 url: /es/java/working-with-exchange-extended-attributes-of-exchange-items/
 weight: 140
 type: docs
 ---
 
-
-La API Aspose.Email le permite crear, recuperar y actualizar las propiedades ampliadas de los mensajes mediante el cliente de la API EWS. El siguiente ejemplo de código ilustra esto creando un atributo extendido, agregándolo al mensaje del servidor y recuperando el mensaje como [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/mapimessage) desde el servidor Exchange mediante el del cliente [fetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String,%20java.lang.Iterable\)).
+La API Aspose.Email te permite crear, recuperar y actualizar propiedades extendidas de mensajes utilizando el cliente EWS de la API. El siguiente ejemplo de código ilustra esto creando un atributo extendido, añadiéndolo al mensaje en el servidor y recuperando el mensaje como [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/mapimessage) del servidor de Exchange utilizando el método [fetchItem](https://reference.aspose.com/email/java/com.aspose.email/IEWSClient#fetchItem\(java.lang.String,%20java.lang.Iterable\)) del cliente.
 
 ~~~Java
 // Define a PidTagBodyContentId extended property

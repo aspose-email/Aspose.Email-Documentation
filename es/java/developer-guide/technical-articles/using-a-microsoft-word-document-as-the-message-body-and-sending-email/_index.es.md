@@ -1,56 +1,54 @@
 ---
-title: "Uso de un documento de Microsoft Word como cuerpo del mensaje y envío de correo electrónico"
-url: /es/java/using-a-microsoft-word-document-as-the-message-body-and-sending-email/
+title: "Usar un documento de Microsoft Word como el cuerpo del mensaje y enviar correo electrónico"
+url: /es/java/usando-un-documento-de-microsoft-word-como-el-cuerpo-del-mensaje-y-enviando-correo-electronico/
 weight: 140
 type: docs
 ---
 
 
-En este artículo se muestra cómo usar un documento de Microsoft Word como cuerpo del correo electrónico y enviarlo a los destinatarios. El documento de muestra es una factura de venta de la muestra de la base de datos Northwind, exportada al formato Microsoft Word. Aspose.Email para Java utiliza los protocolos de red y las funciones de Microsoft Outlook y no puede gestionar documentos de Microsoft Word. Para superar esto, los ejemplos de este artículo utilizan [Aspose.Words para Java](https://products.aspose.com/words/java/) para cargar el documento de Word y convertirlo a formato MHTML. Aspose.Email para Java usa el documento MHTML en el cuerpo del correo electrónico.
-## **Uso de documentos de Microsoft Word como cuerpo de correo electrónico**
-Los siguientes ejemplos de programación muestran cómo enviar un documento de Word como cuerpo de correo electrónico mediante Aspose.Words para Java y Aspose.Email para Java:
+Este artículo te muestra cómo utilizar un documento de Microsoft Word como el cuerpo del correo electrónico y enviarlo a los destinatarios. El documento de ejemplo es una factura de ventas de la base de datos de Northwind, exportada al formato de Microsoft Word. Aspose.Email para Java maneja protocolos de red y características de Microsoft Outlook y no puede gestionar documentos de Microsoft Word. Para superar esto, las muestras en este artículo utilizan [Aspose.Words para Java](https://products.aspose.com/words/java/) para cargar el documento de Word y convertirlo al formato MHTML. Aspose.Email para Java utiliza el documento MHTML en el cuerpo del correo electrónico.
+## **Usando documentos de Microsoft Word como cuerpo del correo electrónico**
+Los ejemplos de programación a continuación ilustran cómo enviar un documento de Word como cuerpo de un correo electrónico utilizando Aspose.Words para Java y Aspose.Email para Java:
 
-1. Cargue un documento de Microsoft Word usando Aspose.Word para Java [Document](https://apireference.aspose.com/words/java/com.aspose.words/Document) class.
-1. Guárdalo en formato MHTML.
-1. Cargue el documento MHTML usando Aspose.Email para Java [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) clase para configurar el cuerpo del correo electrónico.
-1. Establezca otras propiedades del mensaje utilizando diferentes [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) propiedades y métodos de clase.
-1. Envíe el correo electrónico usando Aspose.Email para Java [SMTPClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) class.
+1. Cargar un documento de Microsoft Word utilizando la clase [Document](https://apireference.aspose.com/words/java/com.aspose.words/Document) de Aspose.Word para Java.
+1. Guardarlo en formato MHTML.
+1. Cargar el documento MHTML utilizando la clase [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) de Aspose.Email para Java para establecer el cuerpo del correo electrónico.
+1. Establecer otras propiedades del mensaje utilizando diferentes propiedades y métodos de la clase [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage).
+1. Enviar el correo electrónico utilizando la clase [SMTPClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) de Aspose.Email para Java.
 
-El documento fuente, una factura de venta exportada a Microsoft Word desde la muestra de Microsoft Northwind, se puede ver a continuación.
+El documento de origen, una factura de ventas exportada a Microsoft Word desde el ejemplo de Microsoft Northwind, se puede ver a continuación. 
 
-![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_1.png)
+![todo:image_alt_text](usando-un-documento-de-microsoft-word-como-el-cuerpo-del-mensaje-y-enviando-correo-electronico_1.png)
 
-Cuando el mensaje se haya enviado y recibido en Microsoft Outlook, tendrá el mismo aspecto que el siguiente mensaje.
+Cuando el mensaje ha sido enviado y recibido en Microsoft Outlook, se ve como el mensaje a continuación. 
 
-![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_2.png)
+![todo:image_alt_text](usando-un-documento-de-microsoft-word-como-el-cuerpo-del-mensaje-y-enviando-correo-electronico_2.png)
 
-El formato HTML y las imágenes se conservan como en el documento original cuando se ven en Outlook o en un cliente de correo electrónico web como Gmail o Hotmail. A continuación se muestra una captura de pantalla del mensaje cuando se abre con Gmail en un navegador Chrome.
+El formato HTML y las imágenes se preservan como en el documento fuente original cuando se ven en Outlook o en un cliente de correo web como Gmail o Hotmail. A continuación se muestra una captura de pantalla del mensaje cuando se abre con Gmail en un navegador Chrome. 
 
-![todo:image_alt_text](using-a-microsoft-word-document-as-the-message-body-and-sending-email_3.png)
+![todo:image_alt_text](usando-un-documento-de-microsoft-word-como-el-cuerpo-del-mensaje-y-enviando-correo-electronico_3.png)
 
-El siguiente fragmento de código muestra cómo usar un documento de Microsoft Word como cuerpo del mensaje y enviar un correo electrónico mediante [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient) instancia de clase.
-
-
+El siguiente fragmento de código muestra cómo usar un documento de Microsoft Word como el cuerpo del mensaje y enviar un correo electrónico utilizando una instancia de la clase [SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/smtpclient).
 
 ~~~Java
-// The path to the File directory
+// La ruta al directorio de archivos
 String dataDir = "data/";
 
-// Load a Word document from disk and save it to stream as MHTML
+// Cargar un documento de Word desde el disco y guardarlo en un flujo como MHTML
 Document wordDocument = new Document(dataDir + "Test.doc");
 ByteArrayOutputStream mhtmlStream = new ByteArrayOutputStream();
 wordDocument.save(mhtmlStream, SaveFormat.MHTML);
 
-// Load the MHTML in a MailMessage object
+// Cargar el MHTML en un objeto MailMessage
 MailMessage message = MailMessage.load(new ByteArrayInputStream(mhtmlStream.toByteArray()), new MhtmlLoadOptions());
-message.setSubject("Sending Invoice in Email");
+message.setSubject("Enviando factura en el correo electrónico");
 message.setFrom(new MailAddress("sender@gmail.com"));
 message.setTo(MailAddressCollection.to_MailAddressCollection("recipient@gmail.com"));
 
-// Save the message in MSG format to disk
+// Guardar el mensaje en formato MSG en el disco
 message.save(dataDir + "WordDocAsEmailBody_out.msg", SaveOptions.getDefaultMsgUnicode());
 
-    // Send the email message
+    // Enviar el mensaje de correo electrónico
 try (SmtpClient client = new SmtpClient("smtp.gmail.com", 587, "sender@gmail.com", "pwd")) {
     client.setSecurityOptions(SecurityOptions.SSLExplicit);
     client.send(message);

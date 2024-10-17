@@ -1,41 +1,41 @@
 ---
-title: "Lea el archivo PST de Outlook y obtenga información sobre carpetas y subcarpetas"
+title: "Leer archivos PST de Outlook y obtener información de carpetas y subcarpetas"
 url: /es/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/
 weight: 110
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email para Java permite leer archivos PST de Microsoft Outlook. Puede cargar un archivo PST desde un disco o transmitirlo a una instancia del [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) y obtenga la información sobre su contenido, por ejemplo, carpetas, subcarpetas y mensajes.
+Aspose.Email para Java permite leer archivos PST de Microsoft Outlook. Puedes cargar un archivo PST desde el disco o transmitirlo a una instancia de la clase [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) y obtener información sobre su contenido, por ejemplo, carpetas, subcarpetas y mensajes.
 
-{{% /alert %}}
+{{% /alert %}} 
 
 ## **Cargar un archivo PST**
 
-Se puede cargar un archivo PST de Outlook en una instancia de [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) clase. A continuación se muestra un fragmento de código para cargar el archivo PST:
+Un archivo PST de Outlook puede ser cargado en una instancia de la clase [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/). A continuación se muestra un fragmento de código para cargar el archivo PST:
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-ReadOutlookPSTFile-LoadAPSTFile.java" >}}
 
-## **Visualización de la información de carpetas**
+## **Mostrar información de carpetas**
 
-Tras cargar el archivo PST en [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) clase, puede obtener la información sobre el nombre para mostrar del archivo, la carpeta raíz, las subcarpetas y el recuento de mensajes. El siguiente fragmento de código muestra el nombre de un archivo PST, las carpetas y el número de mensajes de las carpetas:
+Después de cargar el archivo PST en la clase [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/), puedes obtener información sobre el nombre para mostrar del archivo, la carpeta raíz, las subcarpetas y el recuento de mensajes. El siguiente fragmento de código muestra el nombre de un archivo PST, las carpetas y el número de mensajes en las carpetas:
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-ReadOutlookPSTFile-DisplayFolderAndMessageInformationForPSTFile.java" >}}
 
-## **Obtenga solo carpetas definidas por el usuario**
+## **Obtener solo carpetas definidas por el usuario**
 
-Los archivos PST/OST pueden contener carpetas creadas por el usuario. Aspose.Email ofrece la posibilidad de acceder únicamente a las carpetas definidas por el usuario mediante el [PersonalStorageQueryBuilder.OnlyFoldersCreatedByUser](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/#getOnlyFoldersCreatedByUser--) propiedad. Puede configurar el [PersonalStorageQueryBuilder.OnlyFoldersCreatedByUser](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/#getOnlyFoldersCreatedByUser--) propiedad a **true** para obtener solo las carpetas definidas por el usuario. El siguiente fragmento de código demuestra el uso de [PersonalStorageQueryBuilder.OnlyFoldersCreatedByUser](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/#getOnlyFoldersCreatedByUser--) para obtener carpetas definidas por el usuario.
+Un archivo PST/OST puede contener carpetas que fueron creadas por el usuario. Aspose.Email proporciona la capacidad de acceder solo a carpetas definidas por el usuario utilizando la propiedad [PersonalStorageQueryBuilder.OnlyFoldersCreatedByUser](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/#getOnlyFoldersCreatedByUser--). Puedes establecer la propiedad [PersonalStorageQueryBuilder.OnlyFoldersCreatedByUser](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/#getOnlyFoldersCreatedByUser--) en **true** para obtener solo carpetas definidas por el usuario. El siguiente fragmento de código demuestra el uso de [PersonalStorageQueryBuilder.OnlyFoldersCreatedByUser](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/#getOnlyFoldersCreatedByUser--) para obtener carpetas definidas por el usuario.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-GetFoldersCreatedByUserOnly-1.java" >}}
 
 ## **Comprobar si la carpeta está en una carpeta predefinida**
 
-Al abrir e inspeccionar las carpetas de un archivo PST (tabla de almacenamiento personal), puede comprobar si cada carpeta es un tipo de carpeta predefinido o una subcarpeta de un tipo de carpeta predefinido y obtener la información sobre cada carpeta.
+Al abrir e inspeccionar las carpetas dentro de un archivo PST (Tabla de Almacenamiento Personal), puedes verificar si cada carpeta es de un tipo de carpeta predefinida o una subcarpeta de un tipo de carpeta predefinida, y obtener información sobre cada carpeta.
 
-The [FolderInfo.getPredefinedType (booleano getForTopLevelParent)](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getPredefinedType-boolean-) el método se usa para comprobar si la carpeta es de [StandardIpmFolder](https://reference.aspose.com/email/java/com.aspose.email/standardipmfolder/).
+El método [FolderInfo.getPredefinedType(boolean getForTopLevelParent)](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getPredefinedType-boolean-) se utiliza para verificar si la carpeta es de [StandardIpmFolder](https://reference.aspose.com/email/java/com.aspose.email/standardipmfolder/). 
 
-Si el parámetro 'getForTopLevelParent' es verdadero, el método devuelve un valor de enumeración StandardIPMFolder para la carpeta principal de nivel superior. Esto determina si la carpeta actual es una subcarpeta de una carpeta predefinida. Si el parámetro 'getForTopLevelParent' es falso, devuelve un valor de enumeración StandardIPMFolder para la carpeta actual.
+Si el parámetro 'getForTopLevelParent' es verdadero, el método devuelve un valor de enumeración StandardIpmFolder para la carpeta principal de nivel superior. Esto determina si la carpeta actual es una subcarpeta de una carpeta predefinida. Si el parámetro 'getForTopLevelParent' es falso, devuelve un valor de enumeración StandardIpmFolder para la carpeta actual.
 
 ```java
 String fileName = "my.pst";
@@ -48,16 +48,16 @@ private void checkFolders(FolderInfoCollection folders) {
     for (FolderInfo folder : folders) {
         System.out.println("Display Name: " + folder.getDisplayName());
 
-        // Determines whether the current folder is a predefined folder
+        // Determina si la carpeta actual es una carpeta predefinida
         int folderType = folder.getPredefinedType(false);
-        String answer = folderType == StandardIpmFolder.Unspecified ? "No" : "Yes, " + folderType;
-        System.out.println("Is StandardIpmFolder?: " + answer);
+        String answer = folderType == StandardIpmFolder.Unspecified ? "No" : "Sí, " + folderType;
+        System.out.println("¿Es StandardIpmFolder?: " + answer);
 
-        // Determines whether the current folder is a subfolder of a predefined folder
+        // Determina si la carpeta actual es una subcarpeta de una carpeta predefinida
         if (folderType == StandardIpmFolder.Unspecified) {
             folderType = folder.getPredefinedType(true);
-            answer = folderType == StandardIpmFolder.Unspecified ? "No" : "Yes, " + folderType;
-            System.out.println("Is subfolder from StandardIpmFolder parent?: " + answer);
+            answer = folderType == StandardIpmFolder.Unspecified ? "No" : "Sí, " + folderType;
+            System.out.println("¿Es subcarpeta de la carpeta padre StandardIpmFolder?: " + answer);
         }
 
         System.out.println();
@@ -66,9 +66,9 @@ private void checkFolders(FolderInfoCollection folders) {
     }
 }
 ```
-## **Obtenga o agregue una carpeta de fuentes RSS estándar en un archivo PST**
+## **Obtener o agregar una carpeta estándar de fuentes RSS en un archivo PST**
 
-Aspose.Email permite recuperar una referencia a la carpeta predefinida que contiene las fuentes RSS. Esto puede resultar útil si desea acceder mediante programación a las fuentes RSS almacenadas en un archivo PST de Outlook y manipularlas. Asigne el valor de las fuentes RSS a [StandardIpmFolder](https://reference.aspose.com/email/java/com.aspose.email/standardipmfolder/) enum.
+Aspose.Email hace posible recuperar una referencia a la carpeta predefinida que contiene fuentes RSS. Esto puede ser útil si deseas acceder y manipular programáticamente las fuentes RSS almacenadas en un archivo PST de Outlook. Asigna el valor de RssFeeds a la enumeración [StandardIpmFolder](https://reference.aspose.com/email/java/com.aspose.email/standardipmfolder/).
 
 El siguiente ejemplo de código muestra cómo obtener una carpeta de fuentes RSS:
 
@@ -77,7 +77,7 @@ try (PersonalStorage pst = PersonalStorage.fromFile("my.pst", false)) {
     FolderInfo rssFolder = pst.getPredefinedFolder(StandardIpmFolder.RssFeeds);
 }
 ```
-Y el ejemplo de código que aparece a continuación muestra cómo añadir una carpeta de fuentes RSS:
+Y la siguiente muestra de código demuestra cómo agregar una carpeta de fuentes RSS:
 
 ```java
 try (PersonalStorage pst = PersonalStorage.create("my.pst", FileFormatVersion.Unicode)) {
@@ -85,51 +85,51 @@ try (PersonalStorage pst = PersonalStorage.create("my.pst", FileFormatVersion.Un
 }
 ```
 
-## **Analizar carpetas en las que se pueden buscar**
+## **Analizar carpetas buscables**
 
-Un PST/OST puede contener carpetas con capacidad de búsqueda además del tipo normal de carpetas. Aspose.Email proporciona [FolderKind](https://reference.aspose.com/email/java/com.aspose.email/folderkind/) enumerador para especificar los mensajes de dichas carpetas de búsqueda con [EnumerateFolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateFolders--) and [GetSubFolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getSubFolders--) methods.
+Un PST/OST puede contener carpetas buscables además del tipo normal de carpetas. Aspose.Email proporciona el enumerador [FolderKind](https://reference.aspose.com/email/java/com.aspose.email/folderkind/) para especificar los mensajes de tales carpetas de búsqueda con los métodos [EnumerateFolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateFolders--) y [GetSubFolders](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getSubFolders--).
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-ReadOutlookPSTFile-ParseSearchableFolders.java" >}}
 
-## **Recuperar la información de la carpeta principal de MessageInfo**
+## **Recuperar información de la carpeta principal desde MessageInfo**
 
-El siguiente fragmento de código muestra cómo recuperar la información de la carpeta principal de [MessageInfo](https://reference.aspose.com/email/java/com.aspose.email/messageinfo/).
+El siguiente fragmento de código te muestra cómo recuperar información de la carpeta principal de [MessageInfo](https://reference.aspose.com/email/java/com.aspose.email/messageinfo/).
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-ReadOutlookPSTFile-RetrieParentFolderInformationFromMessageInfo.java" >}}
 
 ## **API de recorrido de archivos PST**
 
-La API transversal permite extraer todos los elementos de PST en la medida de lo posible, sin descartar excepciones, incluso si algunos datos del archivo original están dañados.
-Los pasos siguientes muestran cómo usar esta API.
+La API de recorrido permite extraer todos los elementos de PST tanto como sea posible, sin lanzar excepciones, incluso si algunos datos del archivo original están corruptos.
+Los siguientes pasos muestran cómo utilizar esta API.
 
-Use [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) constructor y [load](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#load-java.io.InputStream-) método en lugar del método fromFile.
+Usa el constructor [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) y el método [load](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#load-java.io.InputStream-) en lugar del método fromFile.
 
 El constructor permite definir un método de devolución de llamada.
 
 ```java
 try (PersonalStorage currentPst = new PersonalStorage(new TraversalExceptionsCallback() {
     public void invoke(TraversalAsposeException exception, String itemId) {
-        // Exception handling code.
+        // Código de manejo de excepciones.
     }
 })) {
     //
 }
 ```
 
-Las excepciones de carga y recorrido estarán disponibles mediante el método de devolución de llamada.
+Las excepciones de carga y recorrido estarán disponibles a través del método de devolución de llamada.
 
-The [load](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#load-java.io.InputStream-) el método devuelve 'true' si el archivo se ha cargado correctamente y es posible recorrerlo más a fondo. Si un archivo está dañado y no es posible recorrerlo, se devuelve «falso».
+El método [load](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#load-java.io.InputStream-) devuelve 'true' si el archivo se ha cargado correctamente y es posible un recorrido adicional. Si un archivo está corrupto y no es posible el recorrido, se devuelve 'false'.
 
 ```java
 if (currentPst.load(inputStream))
 ```
 
-Esto permite abrir y recorrer incluso archivos PST corruptos sin descartar excepciones. Tanto las excepciones como los elementos corruptos se gestionarán mediante el método de devolución de llamada.
+Esto permite abrir y recorrer incluso archivos PST corruptos sin lanzar excepciones. Tanto las excepciones como los elementos corruptos serán manejados por el método de devolución de llamada.
 
 ```java
 try (PersonalStorage pst = new PersonalStorage(new TraversalExceptionsCallback() {
     public void invoke(TraversalAsposeException exception, String itemId) {
-        // Exception handling code.
+        // Código de manejo de excepciones.
     }
 })) {
     if (pst.load("test.pst")) {

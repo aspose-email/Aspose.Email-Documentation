@@ -1,11 +1,11 @@
 ---
-title: "Guarde el mensaje de correo electrónico con Aspose.Email y Apache POI HSMF"
+title: "Guardar Mensaje de Correo Electrónico utilizando Aspose.Email y Apache POI HSMF"
 url: /es/java/save-email-message-using-aspose-email-and-apache-poi-hsmf/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Guardar mensaje de correo electrónico**
+## **Aspose.Email - Guardar Mensaje de Correo Electrónico**
 El método MailMessage.save está disponible para guardar mensajes de correo electrónico en varios formatos.
 
 **Java**
@@ -23,7 +23,7 @@ messageMSG.save(dataDir + "AsposeMessage.emlx");
 messageMSG.save(dataDir + "AsposeMessage.mht");
 
 ```
-## **Apache POI HSMF - Guardar mensaje de correo electrónico**
+## **Apache POI HSMF - Guardar Mensaje de Correo Electrónico**
 El cuerpo del correo electrónico se puede extraer para crear un nuevo archivo.
 
 **Java**
@@ -36,20 +36,20 @@ MAPIMessage msg = new MAPIMessage(filename);
 
 PrintWriter txtOut = new PrintWriter("ApacheMessage.txt");
 
-txtOut.println("Email Body: " + msg.getTextBody());
+txtOut.println("Cuerpo del Correo Electrónico: " + msg.getTextBody());
 
 txtOut.close();
 
 ```
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/featurescomparison/loadnsave/)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/featurescomparison/loadnsave)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Actualizar y guardar un correo electrónico](/email/java/loading-and-saving-message/).
+Para más detalles, visita [Actualizar y Guardar un Correo Electrónico](/email/java/loading-and-saving-message/).
 
 {{% /alert %}}

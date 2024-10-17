@@ -5,7 +5,6 @@ weight: 40
 type: docs
 ---
 
-
 ## **VSTO**
 A continuación se muestra el fragmento de código para crear un recordatorio para una cita:
 
@@ -15,15 +14,15 @@ A continuación se muestra el fragmento de código para crear un recordatorio pa
 
    Outlook.OlItemType.olAppointmentItem) as Outlook.AppointmentItem;
 
-   appt.Subject = "Wine Tasting";
+   appt.Subject = "Cata de Vinos";
 
    appt.Location = "Napa CA";
 
    appt.Sensitivity = Outlook.OlSensitivity.olPrivate;
 
-   appt.Start = DateTime.Parse("10/21/2006 10:00 AM");
+   appt.Start = DateTime.Parse("21/10/2006 10:00 AM");
 
-   appt.End = DateTime.Parse("10/21/2006 3:00 PM");
+   appt.End = DateTime.Parse("21/10/2006 3:00 PM");
 
    appt.ReminderSet = true;
 
@@ -34,33 +33,33 @@ A continuación se muestra el fragmento de código para crear un recordatorio pa
 
 ```
 ## **Aspose.Email**
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Se puede agregar un recordatorio cuando se crea una cita. Estas alarmas pueden activarse en función de diferentes criterios, como n minutos antes de que comience la programación o repetirse n veces a intervalos de n. Se pueden usar diferentes etiquetas para crear estos activadores en el script incluido entre BEGIN:VALARM y END:VALARM dentro de una cita.
+Se puede añadir un recordatorio al crear una cita. Estas alarmas pueden activarse en base a diferentes criterios, como n minutos antes de que comience el horario, repetirse n veces en n intervalos. Se pueden usar diferentes etiquetas para crear estos desencadenantes en el script encerrado entre BEGIN:VALARM y END:VALARM dentro de una cita.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Hay varias variantes en las que se puede configurar el recordatorio en una cita. A continuación se muestra el fragmento de código:
+Existen varias variantes en las que se puede establecer el recordatorio en una cita. A continuación se muestra el fragmento de código:
 
 ``` cs
 
-   string location = "Meeting Location: Room 5";
+   string location = "Ubicación de la reunión: Sala 5";
 
   DateTime startDate = new DateTime(1997, 3, 18, 18, 30, 00),
 
   endDate = new DateTime(1997, 3, 18, 19, 30, 00);
 
-  MailAddress organizer = new MailAddress("aaa@amail.com", "Organizer");
+  MailAddress organizer = new MailAddress("aaa@amail.com", "Organizador");
 
   MailAddressCollection attendees = new MailAddressCollection();
 
-  attendees.Add(new MailAddress("bbb@bmail.com", "First attendee"));
+  attendees.Add(new MailAddress("bbb@bmail.com", "Primer asistente"));
 
   Appointment target = new Appointment(location, startDate, endDate, organizer, attendees);
 
-  //Audio alarm that will sound at a precise time and
+  //Alarma de audio que sonará a una hora precisa y
 
-  //repeat 4 more times at 15 minute intervals:
+  //se repetirá 4 veces más a intervalos de 15 minutos:
 
   AppointmentReminder audioReminder = new AppointmentReminder();
 
@@ -92,11 +91,11 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
                 END:VALARM";
 
-   //Display alarm that will trigger 30 minutes before the
+   //Alarma de visualización que se activará 30 minutos antes de la
 
-   //scheduled start of the event it is
+   //hora programada para el inicio del evento al que está
 
-   //associated with and will repeat 2 more times at 15 minute intervals:
+   //asociada y se repetirá 2 veces más a intervalos de 15 minutos:
 
    AppointmentReminder displayReminder = new AppointmentReminder();
 
@@ -110,7 +109,7 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
    displayReminder.Action = ReminderAction.Display;
 
-   displayReminder.Description = "Breakfast meeting with executive team at 8:30 AM EST";
+   displayReminder.Description = "Reunión de desayuno con el equipo ejecutivo a las 8:30 AM EST";
 
    target.Reminders.Add(displayReminder);
 
@@ -124,17 +123,17 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
                 DURATION:PT15M
 
-                DESCRIPTION:Breakfast meeting with executive team at 8:30 AM EST
+                DESCRIPTION:Reunión de desayuno con el equipo ejecutivo a las 8:30 AM EST
 
                 TRIGGER;RELATED=START:-PT30M
 
                 END:VALARM";
 
-    //Email alarm that will trigger 2 days before the
+    //Alarma de correo electrónico que se activará 2 días antes de la
 
-    //scheduled due date/time. It does not
+    //fecha/hora de vencimiento programada. No se
 
-    //repeat. The email has a subject, body and attachment link.
+    //repite. El correo electrónico tiene un asunto, cuerpo y enlace de archivo adjunto.
 
     AppointmentReminder emailReminder = new AppointmentReminder();
 
@@ -148,11 +147,11 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
     emailReminder.Action = ReminderAction.Email;
 
-    emailReminder.Summary = "REMINDER: SEND AGENDA FOR WEEKLY STAFF MEETING";
+    emailReminder.Summary = "RECORDATORIO: ENVIAR AGENDA PARA LA REUNIÓN SEMANAL DEL PERSONAL";
 
-    emailReminder.Description = @"A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the
+    emailReminder.Description = @"Se debe enviar un borrador de agenda a los asistentes de la reunión semanal de gerentes (MGR-LIST). Adjunto se encuentra un enlace al
 
-                                  document template for the agenda file.";
+                                  documento plantilla para el archivo de agenda.";
 
     ReminderAttachment attach1 = new ReminderAttachment(new Uri("http://host.com/templates/agenda.doc"));
 
@@ -166,11 +165,11 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
                 ACTION:EMAIL
 
-                DESCRIPTION:A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the document
+                DESCRIPTION:Se debe enviar un borrador de agenda a los asistentes de la reunión semanal de gerentes (MGR-LIST). Adjunto se encuentra un enlace al documento
 
-                template for the agenda file.
+                plantilla para el archivo de agenda.
 
-                SUMMARY:REMINDER: SEND AGENDA FOR WEEKLY STAFF MEETING
+                SUMMARY:RECORDATORIO: ENVIAR AGENDA PARA LA REUNIÓN SEMANAL DEL PERSONAL
 
                 TRIGGER;RELATED=START:-P2D
 
@@ -180,11 +179,11 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
                 END:VALARM";
 
-    //Procedural alarm that will trigger at a precise date/time
+    //Alarma procedimental que se activará en una fecha/hora precisas
 
-    //and will repeat 23 more times at one hour intervals. The alarm will
+    //y se repetirá 23 veces más a intervalos de una hora. La alarma
 
-    //invoke a procedure file.
+    //invocará un archivo de procedimiento.
 
     AppointmentReminder procReminder = new AppointmentReminder();
 
@@ -222,11 +221,11 @@ Hay varias variantes en las que se puede configurar el recordatorio en una cita.
 
 
 ```
-## **Descargar código de muestra**
+## **Descargar código de ejemplo**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Descargar Running Code**
+## **Descargar código en ejecución**
 - [Codeplex](https://asposevsto.codeplex.com/SourceControl/latest#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20a%20Reminder%20for%20an%20Appointment)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

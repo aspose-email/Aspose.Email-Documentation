@@ -1,47 +1,47 @@
 ---
-title: "Cómo ejecutar los ejemplos"
-url: /es/java/how-to-run-the-examples/
+title: "Cómo Ejecutar los Ejemplos"
+url: /es/java/cómo-ejecutar-los-ejemplos/
 weight: 70
 type: docs
 ---
 
 ## **Descargar desde GitHub**
-Todos los ejemplos de Aspose.Email para Java están alojados en [Github](https://github.com/aspose-email/Aspose.Email-for-Java). Puedes clonar el repositorio usando tu cliente Github favorito o descargar el archivo ZIP desde [here](https://github.com/aspose-email/Aspose.Email-for-Java/archive/master.zip).
+Todos los ejemplos de Aspose.Email para Java están alojados en [Github](https://github.com/aspose-email/Aspose.Email-for-Java). Puedes clonar el repositorio usando tu cliente de Github favorito o descargar el archivo ZIP desde [aquí](https://github.com/aspose-email/Aspose.Email-for-Java/archive/master.zip).
 
-Extraiga el contenido del archivo ZIP a cualquier carpeta de su computadora. Todos los ejemplos se encuentran en el **Examples** folder.
+Extrae el contenido del archivo ZIP en cualquier carpeta de tu computadora. Todos los ejemplos se encuentran en la carpeta **Examples**.
 
 ![todo:image_alt_text](https://i.imgur.com/WsQ2wrb.png)
 
-El proyecto utiliza el sistema de construcción Maven. Cualquier IDE moderno puede abrir o importar fácilmente el proyecto y sus dependencias. A continuación, le mostramos cómo usar los IDE más populares para crear y ejecutar los ejemplos.
+El proyecto utiliza el sistema de construcción Maven. Cualquier IDE moderno puede abrir o importar fácilmente el proyecto y sus dependencias. A continuación, te mostramos cómo usar IDEs populares para compilar y ejecutar los ejemplos.
 ## **IntelliJ IDEA**
-Haga clic en el **File** menú y elige **Open**. Navegue hasta la carpeta del proyecto y seleccione **pom.xml** file.
+Haz clic en el menú **File** y elige **Open**. Navega hasta la carpeta del proyecto y selecciona el archivo **pom.xml**.
 
 ![todo:image_alt_text](https://i.imgur.com/wlAMRKS.png)
 
-Abrirá el proyecto y descargará las dependencias automáticamente. Desde la pestaña Proyecto, explore los ejemplos en **src/main/java** carpeta. Para ejecutar un ejemplo, simplemente haga clic con el botón derecho en el archivo y seleccione «Ejecutar.. «, se ejecutará el ejemplo y el resultado se mostrará en la ventana de salida de la consola integrada.
+Esto abrirá el proyecto y descargará las dependencias automáticamente. Desde la pestaña de Proyecto, navega por los ejemplos en la carpeta **src/main/java**. Para ejecutar un ejemplo, simplemente haz clic derecho en el archivo y elige "Run ..", el ejemplo se ejecutará y la salida se mostrará en la ventana de salida de consola integrada.
 
 ![todo:image_alt_text](https://i.imgur.com/hILidzG.png)
 ## **Eclipse**
-Haga clic en **File** menú y elige **Import**. Selecciona **Maven** - Proyectos Maven existentes.
+Haz clic en el menú **File** y elige **Import**. Selecciona **Maven** - Existing Maven Projects.
 
 ![todo:image_alt_text](https://i.imgur.com/nReoOb7.png)
 
-Navega hasta la carpeta que clonaste o descargaste de GitHub y selecciona **pom.xml** file.
+Navega hasta la carpeta que clonaste o descargaste de GitHub y selecciona el archivo **pom.xml**.
 
 ![todo:image_alt_text](https://i.imgur.com/l1SQjhM.png)
 
-Abrirá el proyecto y descargará las dependencias automáticamente. Desde la pestaña del Explorador de paquetes, explore los ejemplos en **src/main/java** carpeta. Para ejecutar un ejemplo, basta con hacer clic con el botón derecho en el archivo y elegir **Ejecutar como** - **Aplicación Java**, se ejecutará el ejemplo y el resultado se mostrará en la ventana de salida de la consola integrada.
+Esto abrirá el proyecto y descargará las dependencias automáticamente. Desde la pestaña de Package Explorer, navega por los ejemplos en la carpeta **src/main/java**. Para ejecutar un ejemplo, simplemente haz clic derecho en el archivo y elige **Run As** - **Java Application**, el ejemplo se ejecutará y la salida se mostrará en la ventana de salida de consola integrada.
 
 ![todo:image_alt_text](https://i.imgur.com/StSdz5i.png)
 ## **NetBeans**
-Haga clic en el **File** menú y elige **Proyecto abierto**. Navega hasta la carpeta que clonaste o descargaste de GitHub. El icono de **Examples** la carpeta mostrará que es un proyecto de Maven. Selecciona Examples y ábrela.
+Haz clic en el menú **File** y elige **Open Project**. Navega hasta la carpeta que clonaste o descargaste de GitHub. El ícono de la carpeta **Examples** mostrará que es un proyecto Maven. Selecciona Examples y ábrelo.
 
 ![todo:image_alt_text](https://i.imgur.com/RXUgKjP.png)
 
-Abrirá el proyecto y descargará las dependencias automáticamente. Desde la pestaña Proyectos, explore los ejemplos en **paquetes fuente**. Para ejecutar un ejemplo, simplemente haga clic con el botón derecho en el archivo y elija **Ejecutar archivo**, se ejecutará el ejemplo y el resultado se mostrará en la ventana de salida de la consola integrada.
+Esto abrirá el proyecto y descargará las dependencias automáticamente. Desde la pestaña de Projects, navega por los ejemplos en **source packages**. Para ejecutar un ejemplo, simplemente haz clic derecho en el archivo y elige **Run File**, el ejemplo se ejecutará y la salida se mostrará en la ventana de salida de consola integrada.
 
 ![todo:image_alt_text](https://i.imgur.com/Gc8luWX.png)
-## **Contribute**
-Si quieres añadir o mejorar un ejemplo, te animamos a que contribuyas al proyecto. Todos los ejemplos y proyectos destacados de este repositorio son de código abierto y se pueden usar libremente en tus propias aplicaciones.
+## **Contribuir**
+Si deseas añadir o mejorar un ejemplo, te animamos a contribuir al proyecto. Todos los ejemplos y proyectos de demostración en este repositorio son de código abierto y se pueden utilizar libremente en tus propias aplicaciones.
 
-Para contribuir, puedes bifurcar el repositorio, editar el código fuente y crear una solicitud de cambios. Revisaremos los cambios y los incluiremos en el repositorio si los consideramos útiles.
+Para contribuir, puedes hacer un fork del repositorio, editar el código fuente y crear una solicitud de extracción. Revisaremos los cambios e inclusos en el repositorio si se consideran útiles.

@@ -1,42 +1,41 @@
 ---
-title: "Carga, visualización y análisis de archivos MSG"
+title: "Cargando, Visualizando y Analizando Archivos MSG"
 url: /es/java/loading-viewing-and-parsing-msg-file/
 weight: 20
 type: docs
 ---
 
+Este tema explica cómo cargar un archivo de Mensaje de Microsoft Outlook (*.msg). La clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) se utiliza para cargar archivos MSG y proporciona varias funciones de carga estáticas para diferentes escenarios. El siguiente fragmento de código muestra cómo cargar archivos MSG desde un archivo o desde un flujo.
 
-En este tema se explica cómo cargar un archivo de mensajes de Microsoft Outlook (*.msg). El [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) La clase se usa para cargar archivos MSG y proporciona varias funciones de carga estática para diferentes escenarios. El siguiente fragmento de código muestra cómo cargar archivos MSG desde un archivo o desde una transmisión.
-
-## **Carga de archivos MSG**
+## **Cargando Archivos MSG**
 
 El siguiente fragmento de código muestra cómo cargar archivos MSG.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio del archivo.
 String dataDir = RunExamples.getDataDir_Outlook();
 
-// Create an instance of MapiMessage from file
+// Crear una instancia de MapiMessage desde un archivo
 MapiMessage msg = MapiMessage.fromFile(dataDir + "message.msg");
 
-// Get subject
-System.out.println("Subject:" + msg.getSubject());
+// Obtener el asunto
+System.out.println("Asunto:" + msg.getSubject());
 
-// Get from address
-System.out.println("From:" + msg.getSenderEmailAddress());
+// Obtener la dirección del remitente
+System.out.println("De:" + msg.getSenderEmailAddress());
 
-// Get body
-System.out.println("Body" + msg.getBody());
+// Obtener el cuerpo
+System.out.println("Cuerpo" + msg.getBody());
 
-// Get recipients information
-System.out.println("Recipient: " + msg.getRecipients());
+// Obtener información de los destinatarios
+System.out.println("Destinatario: " + msg.getRecipients());
 
-// Get attachments
+// Obtener los adjuntos
 for (MapiAttachment att : msg.getAttachments())
 {
-    System.out.println("Attachment Name: " + att.getFileName());
-    System.out.println("Attachment Display Name: " + att.getDisplayName());
+    System.out.println("Nombre del adjunto: " + att.getFileName());
+    System.out.println("Nombre para mostrar del adjunto: " + att.getDisplayName());
 }
 ~~~
 
@@ -46,9 +45,9 @@ El siguiente ejemplo de código muestra cómo usar **MailMessage** para cargar u
 MailMessage eml = MailMessage.load("message.msg");
 ```
 
-Debe tenerse en cuenta que el mensaje resultante se convierte al formato EML, incluidos los archivos adjuntos de mensajes incrustados. No utilices este método de carga si quieres conservar algunas propiedades específicas del formato de mensaje del mensaje original.
+Cabe señalar que un mensaje resultante se convierte a formato EML, incluidos los adjuntos de mensajes incrustados. No utilice este método de carga si desea preservar algunas propiedades de formato específicas de msg del mensaje original.
 
-Para conservar el formato original de los archivos adjuntos de los mensajes incrustados, utilice [MsgLoadOptions.PreserveEmbeddedMessageFormat](https://reference.aspose.com/email/java/com.aspose.email/loadoptions/#getPreserveEmbeddedMessageFormat--) property.
+Para preservar el formato original de los adjuntos de mensajes incrustados, utilice la propiedad [MsgLoadOptions.PreserveEmbeddedMessageFormat](https://reference.aspose.com/email/java/com.aspose.email/loadoptions/#getPreserveEmbeddedMessageFormat--) .
 
 ```Java
 MsgLoadOptions msgLoadOptions = new MsgLoadOptions();
@@ -56,51 +55,51 @@ msgLoadOptions.setPreserveEmbeddedMessageFormat(true);
 MailMessage msg = MailMessage.load(stream, msgLoadOptions);
 ```
 
-## **Cargando desde la transmisión**
+## **Cargando Desde un Flujo**
 
-El siguiente fragmento de código muestra cómo cargar un archivo desde una transmisión.
+El siguiente fragmento de código muestra cómo cargar un archivo desde un flujo.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// Create an instance of MapiMessage from file
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// Crear una instancia de MapiMessage desde un archivo
 try (FileInputStream stream = new FileInputStream(dataDir + "message.msg"))
 {
-    // Create an instance of MapiMessage from file
+    // Crear una instancia de MapiMessage desde un archivo
     MapiMessage msg = MapiMessage.fromStream(stream);
 
-    // Get subject
-    System.out.println("Subject:" + msg.getSubject());
+    // Obtener el asunto
+    System.out.println("Asunto:" + msg.getSubject());
 
-    // Get from address
-    System.out.println("From:" + msg.getSenderEmailAddress());
+    // Obtener la dirección del remitente
+    System.out.println("De:" + msg.getSenderEmailAddress());
 
-    // Get body
-    System.out.println("Body" + msg.getBody());
+    // Obtener el cuerpo
+    System.out.println("Cuerpo" + msg.getBody());
 
 }
 ~~~
 
-## **Conversión de EML a MSG conservando el formato EML incrustado**
+## **Convirtiendo EML a MSG Preservando el Formato EML Incrustado**
 
-Los archivos EML se pueden cargar en [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) clase instanciando una [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBody()) objeto y pasarlo a [MapiMessage.fromMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#fromMailMessage-java.lang.String-) método. Si el archivo EML contiene archivos EML incrustados, utilice [MapiConversionOptions.setPreserveEmbeddedMessageFormat](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#setPreserveEmbeddedMessageFormat-boolean-) para conservar el formato de los archivos EML incrustados. El siguiente fragmento de código muestra cómo cargar archivos EML en [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) conservando el formato de los archivos EML incrustados.
+Los archivos EML se pueden cargar en la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) instanciando un objeto [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBody()) y pasándolo al método [MapiMessage.fromMailMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#fromMailMessage-java.lang.String-). Si el archivo EML contiene archivos EML incrustados, utilice [MapiConversionOptions.setPreserveEmbeddedMessageFormat](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#setPreserveEmbeddedMessageFormat-boolean-) para retener el formato de los archivos EML incrustados. El siguiente fragmento de código muestra cómo cargar archivos EML en [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) mientras se preserva el formato de los archivos EML incrustados.
 
 {{% alert %}}
 **¡Pruébalo!**
 
-Convierte correos electrónicos y archivos de mensajes en línea de forma gratuita [**Aplicación de conversión Aspose.Email**](https://products.aspose.app/email/es/Conversion).
+Convierte correos electrónicos y archivos de mensajes en línea con la gratuita [**Aplicación de Conversión Aspose.Email**](https://products.aspose.app/email/es/Conversion).
 {{% /alert %}}
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
 String dataDir = RunExamples.getDataDir_Email();
 
 MailMessage eml = MailMessage.load(dataDir + "sample.eml", new EmlLoadOptions());
 
 MapiConversionOptions options = MapiConversionOptions.getUnicodeFormat();
 
-//Preserve Embedded Message Format
+//Preservar el Formato de Mensaje Incrustado
 options.setPreserveEmbeddedMessageFormat(true);
 
-//Convert EML to MSG with Options
+//Convertir EML a MSG con Opciones
 MapiMessage msg = MapiMessage.fromMailMessage(eml, options);
 ~~~

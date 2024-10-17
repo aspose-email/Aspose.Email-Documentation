@@ -1,14 +1,14 @@
 ---
-title: "Trabajo con carpetas en un servidor IMAP"
+title: "Trabajando con Carpetas en Servidor IMAP"
 url: /es/java/working-with-folders-on-imap-server/
 weight: 60
 type: docs
 ---
 
 
-## **Obtención de información de carpetas**
+## **Obteniendo Información sobre Carpetas**
 
-Obtener información sobre las carpetas de un servidor IMAP es muy fácil con Aspose.Email. Llame al [listFolders()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listFolders--) método del [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) clase. Devuelve un objeto de [ImapFolderInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapfolderinfocollection/) tipo. Recorra esta colección y obtenga información sobre las carpetas individuales de un bucle. El método está sobrecargado. Puede pasar un nombre de carpeta como parámetro para obtener una lista de subcarpetas. El siguiente fragmento de código muestra cómo obtener información de carpetas de un servidor IMAP mediante el método Aspose.Email descrito.
+Obtener información sobre carpetas de un servidor IMAP es muy fácil con Aspose.Email. Llama al [método listFolders()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listFolders--) de la clase [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Devuelve un objeto del tipo [ImapFolderInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapfolderinfocollection/). Itera a través de esta colección y obtiene información sobre carpetas individuales en un bucle. El método está sobrecargado. Puedes pasar el nombre de una carpeta como parámetro para obtener una lista de subcarpetas. El siguiente fragmento de código muestra cómo obtener información de carpetas de un servidor IMAP utilizando el método descrito de Aspose.Email.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -26,14 +26,15 @@ for (ImapFolderInfo folderInfo : (Iterable<ImapFolderInfo>) folderInfoColl) {
 }
 ~~~
 
-## **Eliminar carpetas y cambiarles el nombre**
 
-Una carpeta de un servidor IMAP se puede eliminar o renombrar en una sola línea con Aspose.Correo electrónico:
+## **Eliminando y Renombrando Carpetas**
 
-- The [deleteFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#deleteFolder-java.lang.String-) el método acepta el nombre de la carpeta como parámetro.
-- Para el [renameFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#renameFolder-java.lang.String-java.lang.String-) método, debe pasar el nombre de la carpeta actual y el nombre de la nueva carpeta.
+Una carpeta en un servidor IMAP puede ser eliminada o renombrada en una sola línea con Aspose.Email:
 
-El siguiente fragmento de código muestra cómo eliminar una carpeta de un servidor IMAP y cómo cambiar el nombre de una carpeta. Cada operación se realiza con una línea de código.
+- El método [deleteFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#deleteFolder-java.lang.String-) acepta el nombre de la carpeta como parámetro.
+- Para el método [renameFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#renameFolder-java.lang.String-java.lang.String-), necesitas pasar el nombre actual de la carpeta y el nuevo nombre de la carpeta.
+
+El siguiente fragmento de código muestra cómo eliminar una carpeta de un servidor IMAP y cómo renombrar una carpeta. Cada operación se realiza con una línea de código.
 
 ```java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -42,9 +43,10 @@ client.deleteFolder("foldername");
 client.renameFolder("foldername", "newfoldername");
 ```
 
-## **Añadir un mensaje nuevo a una carpeta**
 
-Puede añadir un mensaje nuevo a la carpeta mediante el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) and [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) clases. Primero, crea un [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) objeta proporcionando al sujeto valores de ida y vuelta. A continuación, suscríbase a una carpeta y añada el mensaje a ella. En el siguiente fragmento de código, se muestra cómo añadir un mensaje nuevo a una carpeta.
+## **Agregando un Nuevo Mensaje en una Carpeta**
+
+Puedes agregar un nuevo mensaje a la carpeta utilizando las clases [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) y [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). Primero, crea un objeto [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) proporcionando los valores de sujeto, para y de. Luego, suscríbete a una carpeta y añade el mensaje a ella. El siguiente fragmento de código muestra cómo agregar un nuevo mensaje a una carpeta.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -57,9 +59,10 @@ client.subscribeFolder(client.getCurrentFolder().getName());
 client.appendMessage(client.getCurrentFolder().getName(), msg);
 ~~~
 
-## **Agregue varios mensajes con soporte para conexiones múltiples**
 
-Puede añadir varios mensajes mediante el [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) método proporcionado por el [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) clase. El [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) el método acepta una lista de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) y la agrega a la carpeta actual si la carpeta no se proporciona como parámetro. iMapClient también admite el modo multiconexión para operaciones con cargas pesadas. El siguiente fragmento de código muestra cómo agregar varios mensajes mediante el modo MultiConnection.
+## **Agregar Múltiples Mensajes con Soporte MultiConexión**
+
+Puedes agregar múltiples mensajes utilizando el método [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) proporcionado por la clase [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). El método [appendMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#appendMessages-com.aspose.email.IConnection-java.lang.Iterable-com.aspose.email.MailMessage--) acepta una lista de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) y la añade a la carpeta actual si la carpeta no se proporciona como parámetro. ImapClient también soporta el modo MultiConexión para operaciones de carga pesada. El siguiente fragmento de código muestra cómo agregar múltiples mensajes utilizando el modo MultiConexión.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -82,15 +85,17 @@ imapClient.setUseMultiConnection(MultiConnectionMode.Enable);
 imapClient.appendMessages(messages);
 ~~~
 
-{{% alert color="primary" %}}
 
-Tenga en cuenta que el uso del modo multiconexión no garantiza un aumento del rendimiento.
+{{% alert color="primary" %}} 
 
-{{% /alert %}}
+Por favor, ten en cuenta que el uso del modo multi-conexión no garantiza un aumento del rendimiento.
 
-## **Mover los mensajes a otra carpeta del buzón**
+{{% /alert %}} 
 
-Aspose.Email para Java permite mover un mensaje de una carpeta de buzón a otra mediante el [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) API. El [moveMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#moveMessage-int-java.lang.String-) El método utiliza el identificador único del mensaje y el nombre de la carpeta de destino para mover un mensaje a la carpeta de destino. El siguiente fragmento de código muestra cómo mover los mensajes a otra carpeta del buzón.
+
+## **Mover Mensajes a Otra Carpeta de Correo**
+
+Aspose.Email para Java permite mover un mensaje de una carpeta de correo a otra utilizando la API de [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/). El método [moveMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#moveMessage-int-java.lang.String-) utiliza el id único del mensaje y el nombre de la carpeta de destino para mover un mensaje a la carpeta de destino. El siguiente fragmento de código muestra cómo mover mensajes a otra carpeta de correo.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -142,9 +147,10 @@ try {
 }
 ~~~
 
-## **Copiar mensajes a otra carpeta de buzones**
 
-La API Aspose.Email ofrece la capacidad de copiar un mensaje de una carpeta de buzones de correo a otra. Permite copiar un solo mensaje o varios mensajes mediante el [copyMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessage-com.aspose.email.IConnection-int-java.lang.String-) and [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-) métodos. El [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-) El método proporciona la capacidad de copiar varios mensajes de la carpeta de origen de un buzón a la carpeta de buzones de destino. El siguiente fragmento de código muestra cómo copiar los mensajes a otra carpeta del buzón.
+## **Copiar Mensajes a Otra Carpeta de Correo**
+
+La API de Aspose.Email proporciona la capacidad de copiar un mensaje de una carpeta de correo a otra. Permite copiar tanto un solo mensaje como múltiples mensajes utilizando los métodos [copyMessage](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessage-com.aspose.email.IConnection-int-java.lang.String-) y [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-). El método [copyMessages](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#copyMessages-int-int-java.lang.String-) proporciona la capacidad de copiar múltiples mensajes desde la carpeta fuente de un buzón a la carpeta de buzón de destino. El siguiente fragmento de código muestra cómo copiar mensajes a otra carpeta de correo.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
@@ -189,9 +195,10 @@ try {
 }
 ~~~
 
-## **Trabajar con carpetas de buzones de correo de uso especial**
 
-Algunos almacenes de mensajes IMAP incluyen buzones de correo de uso especial, como los que se utilizan para guardar borradores de mensajes o mensajes enviados. Muchos clientes de correo permiten a los usuarios especificar dónde deben colocarse los borradores de los mensajes enviados, pero para configurarlos es necesario que el usuario sepa qué buzones ha reservado el servidor para estos fines. Aspose.Email puede identificar estos buzones de uso especial mediante el [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/) clase para que sea más fácil trabajar con ellos. En el siguiente ejemplo de código se muestra cómo acceder a estos buzones de uso especial mediante el [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/) class.
+## **Trabajando con Carpetas de Correo de Uso Especial**
+
+Algunos almacenes de mensajes IMAP incluyen buzones de uso especial, como aquellos utilizados para almacenar mensajes de borrador o mensajes enviados. Muchos clientes de correo permiten a los usuarios especificar dónde deben colocarse los mensajes de borrador o enviados, pero configurarlos requiere que el usuario sepa qué buzones ha reservado el servidor para estos propósitos. Aspose.Email puede identificar estos buzones de uso especial utilizando la clase [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/) para facilitar el trabajo con ellos. El siguiente ejemplo de código demuestra cómo acceder a estos buzones de uso especial utilizando la clase [ImapMailboxInfo](https://reference.aspose.com/email/java/com.aspose.email/imapmailboxinfo/).
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

@@ -1,21 +1,21 @@
 ---
-title: "Dividir y combinar archivos PST"
+title: "Dividir y Fusionar archivos PST"
 url: /es/cpp/splitting-and-merging-pst-files/
 weight: 40
 type: docs
 ---
 
-## **Dividir y combinar archivos PST**
-La API Aspose.Email ofrece la capacidad de dividir un único archivo PST en varios archivos PST del tamaño de archivo deseado. También puede combinar varios archivos PST en un solo archivo PST. Se puede rastrear tanto la división como la fusión de las operaciones de PST añadiendo eventos a estas operaciones.
-### **Dividir en varios PST**
-El siguiente fragmento de código muestra cómo dividir varios archivos PST.
+## **Dividir y Fusionar archivos PST**
+La API Aspose.Email proporciona la capacidad de dividir un solo archivo PST en múltiples archivos PST de tamaño deseado. También puede fusionar múltiples archivos PST en un solo archivo PST. Tanto las operaciones de división como de fusión de PSTs se pueden rastrear agregando eventos a estas operaciones.
+### **División en múltiples PSTs**
+El siguiente fragmento de código muestra cómo dividir múltiples PSTs.
 
 
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-SplitSinglePSTInToMultiplePST-SplitSinglePSTInToMultiplePST.cpp" >}}
-## **Fusión en un único PST**
-El siguiente fragmento de código muestra cómo combinar en un único PST.
+## **Fusión en un solo PST**
+El siguiente fragmento de código muestra cómo fusionar en un solo PST.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-MergeMultiplePSTsInToSinglePST-MergePSTFiles.cpp" >}}
-### **Combinar carpetas de otro PST**
-El siguiente fragmento de código muestra cómo combinar carpetas de otro PST.
+### **Fusión de Carpetas de otro PST**
+El siguiente fragmento de código muestra cómo fusionar carpetas de otro PST.

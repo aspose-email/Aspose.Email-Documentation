@@ -1,26 +1,26 @@
 ---
-title: "Obtener la lista de mensajes de la carpeta Bandeja de entrada del buzón de Microsoft Exchange Server"
-url: /es/java/getting-list-of-messages-from-inbox-folder-of-microsoft-exchange-server-mailbox/
+title: "Obtener lista de mensajes de la carpeta de Bandeja de entrada del buzón de Microsoft Exchange Server"
+url: /es/java/obtener-lista-de-mensajes-de-la-carpeta-de-bandeja-de-entrada-del-buzón-de-microsoft-exchange-server/
 weight: 50
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Nuestros consejos de migración muestran cómo se pueden usar los productos de Aspose para mejorar sus aplicaciones y liberarlo de la dependencia de la automatización tradicional.
+Nuestros consejos de migración muestran cómo los productos de Aspose pueden ser utilizados para mejorar sus aplicaciones y liberar su dependencia de la automatización tradicional.
 
-Este consejo de migración se conecta a un buzón de correo de Microsoft Exchange Server y obtiene una lista de los mensajes de la carpeta Bandeja de entrada. En los ejemplos de código que aparecen a continuación se muestra cómo utilizar [Interoperabilidad de Microsoft Office](#using-microsoft-office-interop) para obtener una lista de mensajes antes de hacer lo mismo usando las clases del [Intercambio de correo electrónico Aspose.Email](#using-asposeemail), utilizando Java.
+Este consejo de migración se conecta a un buzón de Microsoft Exchange Server y obtiene una lista de mensajes de la carpeta de Bandeja de entrada. Los ejemplos de código a continuación muestran cómo utilizar [Microsoft Office Interop](#using-microsoft-office-interop) para obtener una lista de mensajes antes de hacer lo mismo utilizando las clases en [Aspose.Email Exchange](#using-asposeemail), utilizando Java.
 
-{{% /alert %}}
-## **Uso de Interoperabilidad de Microsoft Office**
-Para usar objetos de automatización de oficina para Microsoft Outlook, añada al proyecto referencias a las bibliotecas de Microsoft Office y Interoperabilidad de Microsoft Office for Outlook. Microsoft Office Outlook también debe estar instalado en la máquina en la que se ejecuta el código.
-### **Ejemplos de programación**
+{{% /alert %}} 
+## **Usando Microsoft Office Interop**
+Para utilizar objetos de automatización de Office para Microsoft Outlook, agregue referencias a las bibliotecas de Microsoft Office y Microsoft Office Interop para Outlook al proyecto. Microsoft Office Outlook también debe estar instalado en la máquina donde se ejecuta el código.
+### **Ejemplos de Programación**
 **C#**
 
 ~~~cs
 
- // Create Application class and get namespace
+ // Crear clase Application y obtener espacio de nombres
 
 Outlook.Application outlook = new Outlook.ApplicationClass();
 
@@ -30,15 +30,15 @@ object _missing = Type.Missing;
 
 ns.Logon(_missing, _missing, false, true);
 
-// Get Inbox information in objec of type MAPIFolder
+// Obtener información de Bandeja de entrada en objeto de tipo MAPIFolder
 
 Outlook.MAPIFolder inbox = ns.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderInbox);
 
-// Unread emails
+// Correos no leídos
 
 int unread = inbox.UnReadItemCount;
 
-// Display the subject of emails in the Inbox folder
+// Mostrar el asunto de los correos en la carpeta de Bandeja de entrada
 foreach (Outlook.MailItem mail in inbox.Items)
 
 {
@@ -50,27 +50,27 @@ foreach (Outlook.MailItem mail in inbox.Items)
 
 
 ~~~
-## **Uso de Aspose.Email**
-Los siguientes fragmentos de código hacen lo mismo que [los fragmentos de arriba](#using-microsoft-office-interop) pero usa Aspose.Email.
+## **Usando Aspose.Email**
+Los siguientes fragmentos de código hacen lo mismo que [los fragmentos anteriores](#using-microsoft-office-interop) pero utilizan Aspose.Email.
 
-Sin embargo, no es necesario instalar Microsoft Outlook en la máquina en la que se ejecuta el código. Consulte el archivo Aspose.Email para crear y ejecutar el proyecto correctamente.
-### **Ejemplos de programación**
+Sin embargo, Microsoft Outlook no necesita estar instalado en la máquina donde se ejecuta el código. Haga referencia a Aspose.Email para construir y ejecutar el proyecto con éxito.
+### **Ejemplos de Programación**
 
 ~~~java
 
-// Create instance of IEWSClient class by giving credentials
+// Crear instancia de la clase IEWSClient proporcionando credenciales
 try (IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/EWS/Exchange.asmx", "username", "password", "domain")) {
-    // Call listMessages method to list messages info from Inbox
+    // Llamar al método listMessages para listar la información de los mensajes de la Bandeja de entrada
 
     ExchangeMessageInfoCollection msgCollection = client.listMessages(client.getMailboxInfo().getInboxUri());
 
-    // Loop through the collection to display the basic information
+    // Iterar a través de la colección para mostrar la información básica
     for (ExchangeMessageInfo msgInfo : msgCollection) {
-        System.out.println("Subject: " + msgInfo.getSubject());
-        System.out.println("From: " + msgInfo.getFrom().toString());
-        System.out.println("To: " + msgInfo.getTo().toString());
-        System.out.println("Message ID: " + msgInfo.getMessageId());
-        System.out.println("Unique URI: " + msgInfo.getUniqueUri());
+        System.out.println("Asunto: " + msgInfo.getSubject());
+        System.out.println("De: " + msgInfo.getFrom().toString());
+        System.out.println("Para: " + msgInfo.getTo().toString());
+        System.out.println("ID del mensaje: " + msgInfo.getMessageId());
+        System.out.println("URI único: " + msgInfo.getUniqueUri());
         System.out.println("==================================");
     }
 }

@@ -1,12 +1,12 @@
 ---
-title: "Obtenga información de carpetas del buzón IMAP"
+title: "Obtener Información de Carpetas desde el Buzón IMAP"
 url: /es/java/get-folders-information-from-imap-mailbox/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email: obtenga información de carpetas del buzón IMAP**
-Obtener información sobre las carpetas de un servidor IMAP es muy fácil con Aspose.Email. El método listFolders () de ImapClient devuelve un objeto de la colección IMAPFolderInfoCollection que contiene información sobre todas las carpetas del servidor. Recorra esta colección y obtenga información sobre las carpetas individuales de un bucle. El método está sobrecargado. Puede pasar un nombre de carpeta como parámetro para obtener una lista de subcarpetas.
+## **Aspose.Email - Obtener Información de Carpetas desde el Buzón IMAP**
+Obtener información sobre las carpetas de un servidor IMAP es muy fácil con Aspose.Email. El método listFolders() de ImapClient devuelve un objeto de ImapFolderInfoCollection que contiene información sobre todas las carpetas del servidor. Itera a través de esta colección y obtén información sobre carpetas individuales en un bucle. El método está sobrecargado. Puedes pasar un nombre de carpeta como parámetro para obtener una lista de subcarpetas.
 
 **Java**
 
@@ -26,35 +26,35 @@ client.setSecurityOptions(SecurityOptions.Auto);
 
 ImapFolderInfoCollection folderInfoColl = client.listFolders();
 
-// Iterate through the collection to get folder info one by one
+// Itera a través de la colección para obtener información de las carpetas una por una
 
 for (ImapFolderInfo folderInfo:folderInfoColl)
 
 {
 
-	// Folder name
+	// Nombre de la carpeta
 
-	System.out.println("Folder name is: " + folderInfo.getName());
+	System.out.println("El nombre de la carpeta es: " + folderInfo.getName());
 
 	ImapFolderInfo folderExtInfo = client.listFolder(folderInfo.getName());
 
-	// New messages in the folder
+	// Nuevos mensajes en la carpeta
 
-	System.out.println("New message count: " + folderExtInfo.getNewMessageCount());
+	System.out.println("Contador de nuevos mensajes: " + folderExtInfo.getNewMessageCount());
 
-	// Check whether its read only
+	// Verifica si es de solo lectura
 
-	System.out.println("Is it readonly? " + folderExtInfo.getReadOnly());
+	System.out.println("¿Es de solo lectura? " + folderExtInfo.getReadOnly());
 
-	// Total number of messages
+	// Número total de mensajes
 
-	System.out.println("Total number of messages: " + folderExtInfo.getTotalMessageCount());
+	System.out.println("Número total de mensajes: " + folderExtInfo.getTotalMessageCount());
 
 }
 
 ```
-## **Descargar Running Code**
-Download **Obtenga información de carpetas del buzón IMAP** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descargar **Obtener Información de Carpetas desde el Buzón IMAP** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [CodePlex](https://archive.codeplex.com/?p=asposeapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases)

@@ -1,16 +1,16 @@
 ---
-title: "Trabajar con contactos de Gmail"
-url: /es/java/working-with-gmail-contacts/
+title: "Trabajando con Contactos de Gmail"
+url: /es/java/trabajando-con-contactos-de-gmail/
 weight: 30
 type: docs
 ---
 
 
-Aspose.Email permite trabajar con contactos de Gmail. Utilizando el [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient) interfaz, los usuarios pueden recuperar contactos de una cuenta de Gmail, crear nuevos contactos y actualizar y eliminar los contactos existentes. Gmail permite a los desarrolladores realizar todo esto mediante su API pública para desarrolladores. La siguiente información de usuario es necesaria para trabajar con los contactos de Gmail:
-Nombre de usuario, dirección de correo electrónico, contraseña, identificador de cliente y token de actualización del secreto del cliente.
+Aspose.Email admite trabajar con contactos de Gmail. Usando la interfaz [IGmailClient](https://apireference.aspose.com/email/java/com.aspose.email/IGmailClient), los usuarios pueden recuperar contactos de una cuenta de Gmail, crear nuevos contactos y actualizar así como eliminar contactos existentes. Gmail permite a los desarrolladores realizar todas estas acciones utilizando su API pública para desarrolladores. La siguiente información del usuario es requerida para trabajar con contactos de Gmail:
+Nombre de usuario, dirección de correo electrónico, contraseña, ID de cliente, secreto del cliente, token de actualización.
 
-## **Acceder a los contactos de Gmail**
-A continuación se muestra un ejemplo de aplicación que se puede utilizar para acceder a los detalles de los contactos de todos los grupos.
+## **Acceso a Contactos de Gmail**
+A continuación se presenta una aplicación de ejemplo que se puede utilizar para acceder a los detalles de los contactos en todos los grupos.
 
 
 
@@ -38,8 +38,8 @@ A continuación se muestra un ejemplo de aplicación que se puede utilizar para 
         }
 
 ~~~
-## **Creación de un contacto**
-En el siguiente fragmento de código se muestra cómo crear un contacto.
+## **Crear Contacto**
+El siguiente fragmento de código te muestra cómo crear un contacto.
 
 
 
@@ -116,8 +116,8 @@ eAddress.setAddress("email@gmail.com");
 contact.getEmailAddresses().add(eAddress);
 String contactUri = client.createContact(contact);
 ~~~
-## **Actualización del contacto**
-Una vez que se recupera un contacto, sus atributos se pueden actualizar y el contacto se puede volver a guardar en la cuenta de Gmail. En el siguiente fragmento de código, se muestra cómo recuperar los contactos de una cuenta de Gmail y, a continuación, modificar una de ellas para guardarlos de nuevo.
+## **Actualizar Contacto**
+Una vez que se recupera un contacto, sus atributos se pueden actualizar y el contacto se puede guardar nuevamente en la cuenta de Gmail. El siguiente fragmento de código te muestra cómo recuperar contactos de una cuenta de Gmail y luego modificar uno de ellos que se guarda nuevamente.
 
 
 
@@ -133,16 +133,16 @@ try (IGmailClient client = GmailClient.getInstance(accessToken, email)) {
     client.updateContact(contact);
 }
 ~~~
-## **Eliminar contacto**
-Para eliminar un contacto de Gmail, se utiliza el método DeleteContact del cliente de Gmail, tal y como se muestra en el siguiente fragmento de ejemplo.
+## **Eliminar Contacto**
+Para eliminar un contacto de Gmail, se utiliza el método DeleteContact del cliente de Gmail, como se muestra en el siguiente fragmento de ejemplo.
 
 
 
 ~~~Java
 client.deleteContact(contact.getId().getGoogleId());
 ~~~
-## **Guardar contacto**
-Aspose.Email permite guardar el contacto en varios formatos de salida, como MSG y VCF. El método Save proporciona la capacidad de lograrlo. El siguiente fragmento de código muestra cómo guardar un contacto.
+## **Guardar Contacto**
+Aspose.Email permite guardar contactos en varios formatos de salida como MSG y VCF. El método Save proporciona la capacidad para lograr esto. El siguiente fragmento de código te muestra cómo guardar un contacto.
 
 
 

@@ -8,25 +8,25 @@ type: docs
 
 ## **Trabajando con GraphClient**
 
-[Microsoft Graph](https://learn.microsoft.com/en-us/graph/overview) es una API REST para acceder a los datos de Microsoft 365. La implementación de Graph Client en Aspose.Email para .NET, permite acceder a Microsoft Graph desde nuestra API.
-En los siguientes ejemplos, crearemos una instancia de MS Graph Client y le proporcionaremos el token. A continuación, examinaremos los principales métodos para gestionar las carpetas, actualizarlas, copiarlas y eliminarlas. También se puede acceder a los mensajes, su contenido y sus archivos adjuntos o modificarlos con nuestro cliente MS Graph. La administración de categorías, reglas, libretas y anulaciones es una función ampliada de Microsoft Graph Client de Aspose.Email, que aprenderás con facilidad.
+[Microsoft Graph](https://learn.microsoft.com/en-us/graph/overview) es una API REST para acceder a los datos de Microsoft 365. La implementación de Graph Client en Aspose.Email para .NET permite acceder a Microsoft Graph desde nuestra API. 
+En los ejemplos a continuación, crearemos una instancia de MS Graph Client, proporcionando el token en él. Luego, examinaremos los principales métodos para gestionar carpetas, actualizarlas, copiarlas y eliminarlas. Los mensajes, su contenido y los archivos adjuntos también se pueden acceder o cambiar con nuestro MS Graph Client. La gestión de categorías, reglas, bloc de notas y sobrescrituras es una función avanzada del Microsoft Graph Client por Aspose.Email, que aprenderás con facilidad.
 
 ### **Crear objeto GraphClient**
 
-Create [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/) oponerse a realizar solicitudes contra el servicio.
-Después de tener un [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/) si está autenticado, puede empezar a hacer llamadas contra el servicio.
+Crea un objeto [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/) para hacer solicitudes contra el servicio. 
+Después de tener un [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/) que esté autenticado, puedes comenzar a hacer llamadas al servicio.
 
-A [GetClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphclient/getclient/#getclient_1) el método requiere un [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/) instancia de implementación como primer parámetro.
+Un método [GetClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphclient/getclient/#getclient_1) requiere una instancia de implementación de [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/) como el primer parámetro.
 
-Para obtener el token usaremos [Biblioteca de autenticación de Microsoft (MSAL) para.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
+Para obtener el token, utilizaremos la [Microsoft Authentication Library (MSAL) para .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
 
 Los siguientes son los pasos para obtener el token de autorización.
 
- - Cree una clase AccessParameters para almacenar las credenciales.
- - Añada el [Paquete nuget Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) que contiene los archivos binarios de MSAL.NET.
- - Implemente un [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/)y cree un método que acepte los parámetros de acceso y utilice MSAL.NET para obtener un token de acceso.
+ - Crea una clase AccessParameters para almacenar las credenciales.
+ - Agrega el paquete nuget [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) que contiene los binarios de MSAL.NET.
+ - Implementa un [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/), y crea un método que acepte los parámetros de acceso y use MSAL.NET para obtener un token de acceso.
 
-Para conservar las credenciales, añada lo siguiente `AccessParameters` class:
+Para mantener las credenciales, agrega la siguiente clase `AccessParameters`:
 
 ```csharp
 public class AccessParameters
@@ -40,8 +40,8 @@ public class AccessParameters
 }
 ```
 
-Crea el `GraphTokenProvider` clase que implementa un [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/) interfaz. Usa el [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) biblioteca para obtener un token.
-Vea el ejemplo de dicha implementación:
+Crea la clase `GraphTokenProvider` que implementa la interfaz [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/). Usa la biblioteca [Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) para obtener un token.
+Ve el ejemplo de tal implementación:
 
 ```csharp
 using Microsoft.Identity.Client;
@@ -96,11 +96,11 @@ public class GraphTokenProvider : ITokenProvider
             result = await _app.AcquireTokenForClient(_scopes)
                 .ExecuteAsync();
 
-            Console.WriteLine("Token acquired");
+            Console.WriteLine("Token adquirido");
         }
         catch (MsalServiceException ex) when (ex.Message.Contains("AADSTS70011"))
         {
-            Console.WriteLine("Scope provided is not supported");
+            Console.WriteLine("El alcance proporcionado no es compatible");
             result = null;
         }
 
@@ -110,19 +110,19 @@ public class GraphTokenProvider : ITokenProvider
     }
 ```
 
-A continuación, cree un `AccessParameters` instancia de clase:
+A continuación, crea una instancia de la clase `AccessParameters`:
 
 ```csharp
 var accessParams = new AccessParameters()
 {
-    TenantId = "Your Tenant ID",
-    ClientId = "Your Client ID",
-    ClientSecret = "Your Client Secret",
-    UserId = "User's Object ID"
+    TenantId = "Tu ID de Inquilino",
+    ClientId = "Tu ID de Cliente",
+    ClientSecret = "Tu Secreto de Cliente",
+    UserId = "ID de Objeto del Usuario"
 };
 ```
 
-Por último, crea un [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/) instancia y llama a [GetClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphclient/getclient/#getclient_1) método. Pase el `tokenProvider` como primer parámetro y `accessParams.TenantId` como el segundo:
+Finalmente, crea una instancia de [ITokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/itokenprovider/) y llama al método [GetClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphclient/getclient/#getclient_1). Pasa el `tokenProvider` como su primer parámetro y `accessParams.TenantId` como el segundo:
 
 ```csharp
 var tokenProvider = new GraphTokenProvider(accessParams);
@@ -133,11 +133,11 @@ client.Resource = ResourceType.Users;
 client.ResourceId = accessParams.UserId;
 ```
 
-## **Administrar carpetas**
+## **Gestionar Carpetas**
 
-### **Listar carpetas**
+### **Listar Carpetas**
 
-Llamando [ListFolders](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listfolders/#listfolders) método de MS Graph Client, es posible obtener la lista de carpetas. Cada carpeta tiene un conjunto de parámetros como DisplayName, que se pueden leer en [FolderInfo](https://reference.aspose.com/email/net/aspose.email.clients.activesync.transportlayer/folderinfo/) type.
+Al llamar al método [ListFolders](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listfolders/#listfolders) del MS Graph Client, es posible obtener la lista de carpetas. Cada carpeta tiene un conjunto de parámetros como DisplayName, que se puede leer en el tipo [FolderInfo](https://reference.aspose.com/email/net/aspose.email.clients.activesync.transportlayer/folderinfo/).
 
 ```csharp
 var folders = client.ListFolders();
@@ -148,68 +148,68 @@ foreach (var folder in folders)
 }
 ```
 
-### **Carpeta de actualización**
+### **Actualizar Carpeta**
 
-Para crear una carpeta con MS Graph Client, utilice [CreateFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createfolder/#createfolder) método. Obtendrás un [FolderInfo](https://reference.aspose.com/email/net/aspose.email.clients.activesync.transportlayer/folderinfo/) objeto y la posibilidad de acceder a DisplayName, ItemID, HasSubfolders y otras propiedades.
+Para crear una carpeta con el MS Graph Client, utiliza el método [CreateFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createfolder/#createfolder). Obtendrás un objeto [FolderInfo](https://reference.aspose.com/email/net/aspose.email.clients.activesync.transportlayer/folderinfo/) y la posibilidad de acceder a DisplayName, ItemId, HasSubFolders y otras propiedades.
 
 ```csharp
-var folderInfo = client.CreateFolder("FolderName");
-folderInfo.DisplayName = "FolderAnotherName";
+var folderInfo = client.CreateFolder("NombreDeLaCarpeta");
+folderInfo.DisplayName = "OtroNombreDeLaCarpeta";
 client.UpdateFolder(folderInfo);
 ```
 
-### **Copiar carpeta**
+### **Copiar Carpeta**
 
-[CopyFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/copyfolder/#copyfolder) El método es el método clave para copiar el objeto de la carpeta con MS Graph.
+El método [CopyFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/copyfolder/#copyfolder) es el método clave para copiar el objeto de carpeta con MS Graph.
 
 ```csharp
-var folderInfo1 = client.CreateFolder("Folder1");
-var folderInfo2 = client.CreateFolder("Folder2");
-   
-// copy Folder2 to Folder1
+var folderInfo1 = client.CreateFolder("Carpeta1");
+var folderInfo2 = client.CreateFolder("Carpeta2");
+    
+// copiar Carpeta2 a Carpeta1
 client.CopyFolder(folderInfo1.ItemId, folderInfo2.ItemId);
 ```
 
-### **Mover y eliminar carpeta**
+### **Mover y Eliminar Carpeta**
 
-Use [MoveFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/movefolder/#movefolder) el método se usa para mover la carpeta, acepta newParentID e ItemID. [Delete](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/delete/#delete) el método se usa para eliminar un método por id.
+Usa el método [MoveFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/movefolder/#movefolder) para mover la carpeta, que acepta newParentId y itemId. El método [Delete](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/delete/#delete) se usa para eliminar un método por id.
 
 ```csharp
-var folderInfo1 = client.CreateFolder("Folder1");
-var folderInfo2 = client.CreateFolder("Folder2");
-   
-// move Folder2 to Folder1
+var folderInfo1 = client.CreateFolder("Carpeta1");
+var folderInfo2 = client.CreateFolder("Carpeta2");
+    
+// mover Carpeta2 a Carpeta1
 client.MoveFolder(folderInfo1.ItemId, folderInfo2.ItemId);
-   
-// delete Folder1
+    
+// eliminar Carpeta1
 client.Delete(folderInfo1.ItemId)
 ```
 
-## **Administrar mensajes**
+## **Gestionar Mensajes**
 
-MS Graph Client, implementado en Aspose.Email para.NET, proporciona un conjunto de métodos para administrar los mensajes y los archivos adjuntos:
-* [List](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listmessages/#listmessages) messages
-* [Fetch](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchmessage/#fetchmessage) message
-* [Create](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createmessage/#createmessage) message
-* [Send](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/send/#send) message
-* [CopyMessage](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/copymessage/#copymessage) message
-* [Move](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/movemessage/#movemessage) message
-* [CreateAttachment](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createattachment/#createattachment)
-* [FetchAttachment](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchattachment/#fetchattachment)
-* [DeleteAttachment](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/deleteattachment/#deleteattachment)
-* [ListAttachments](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listattachments/#listattachments)
+El MS Graph Client, implementado en Aspose.Email para .NET, proporciona un conjunto de métodos para gestionar mensajes y archivos adjuntos:
+* [Listar](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listmessages/#listmessages) mensajes
+* [Obtener](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchmessage/#fetchmessage) mensaje
+* [Crear](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createmessage/#createmessage) mensaje
+* [Enviar](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/send/#send) mensaje
+* [CopiarMensaje](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/copymessage/#copymessage) mensaje
+* [Mover](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/movemessage/#movemessage) mensaje
+* [CrearAdjunto](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createattachment/#createattachment)
+* [ObtenerAdjunto](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchattachment/#fetchattachment)
+* [EliminarAdjunto](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/deleteattachment/#deleteattachment)
+* [ListarAdjuntos](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listattachments/#listattachments)
 
 
-### **Listar mensajes**
+### **Listar Mensajes**
 
 ```csharp
 var folders = client.ListFolders();
 
 foreach (var folder in folders)
 {
-    if (folder.DisplayName.Equals("Inbox"))
+    if (folder.DisplayName.Equals("Bandeja de Entrada"))
     {
-        // list messages in inbox
+        // listar mensajes en bandeja de entrada
         var inboxMessages = client.ListMessages(folder.ItemId);
 
         foreach (var messageInfo in inboxMessages)
@@ -220,54 +220,54 @@ foreach (var folder in folders)
 }
 ```
 
-### **Listar los mensajes por fecha de envío**
+### **Listar Mensajes por su Fecha de Envío**
 
-The [OrderBy](https://reference.aspose.com/email/net/aspose.email.tools.search/comparisonfield/orderby/#comparisonfieldorderby-method) El método de la colección de la biblioteca le permite recuperar mensajes con diferentes órdenes de clasificación (ascendente y descendente) según la fecha en que se enviaron. El siguiente ejemplo de código muestra cómo ordenar los mensajes por fecha de envío:
+El método [OrderBy](https://reference.aspose.com/email/net/aspose.email.tools.search/comparisonfield/orderby/#comparisonfieldorderby-method) de la colección de la biblioteca te permite recuperar mensajes con diferentes órdenes de clasificación (ascendente y descendente) según la fecha en que fueron enviados. El siguiente ejemplo de código muestra cómo ordenar los mensajes por su fecha de envío:
 
 ```cs
 IGraphClient client = GraphClient.GetClient(provider, TenantId);
 
 var builder = new GraphQueryBuilder();
 
-// create orderby messages query 'DESC'
+// crear consulta de mensajes ordenados 'DESC'
 builder.SentDate.OrderBy(false);
 var messagePageInfo = client.ListMessages(KnownFolders.Inbox, new PageInfo(10), builder.GetQuery());
 var messages = messagePageInfo.Items;
 
 builder.Clear();
 
-// create orderby messages query 'ASC'
+// crear consulta de mensajes ordenados 'ASC'
 builder.SentDate.OrderBy(true);
 messagePageInfo = client.ListMessages(KnownFolders.Inbox, new PageInfo(10), builder.GetQuery());
 messages = messagePageInfo.Items;
 ```
 
-### **Enumeración de mensajes con soporte de paginación mediante Graph Client**
+### **Enumerar Mensajes con Soporte de Paginación usando Graph Client** 
 
-La API permite la paginación y el filtrado de los mensajes al enumerarlos. Es especialmente útil para los buzones con un gran volumen de mensajes, ya que ahorra tiempo al recuperar solo la información resumida necesaria.
+La API permite paginación y filtrado de los mensajes al listarlos. Es especialmente útil para buzones con un alto volumen de mensajes, ya que ahorra tiempo al recuperar solo la información resumida necesaria.
 
-El ejemplo de código y los pasos siguientes muestran cómo recuperar mensajes de la carpeta Bandeja de entrada mediante funciones de paginación y filtrado.
+El siguiente ejemplo de código y los pasos a continuación demuestran cómo recuperar mensajes de la carpeta Bandeja de Entrada utilizando las características de paginación y filtrado. 
 
-1. En primer lugar, inicie el cliente.
-2. A continuación, defina el número de elementos que se mostrarán por página, por ejemplo, 10.
-3. Cree un filtro para recuperar solo los mensajes no leídos mediante el [GraphQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphquerybuilder/#graphquerybuilder-class) clase. El builder.isRead.equals (false) establece la condición para filtrar los mensajes no leídos.
-4. Llame al [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listmessages/#listmessages_1) método en el objeto cliente, especificando la carpeta (Bandeja de entrada) y los elementos por página (PageInfo (ItemsPerPage)) como parámetros. También pasa el objeto de consulta para aplicar el filtro de mensajes no leídos.
-El objeto PageInfo (PageInfo) devuelto contiene los mensajes recuperados de la página actual en la propiedad Items.
-5. Cree un bucle que continúe hasta llegar a la última página (pageInfo.lastPage es falso). Los mensajes recuperados se agregan a la lista de mensajes existente mediante Messages.addRange (PageInfo.items).
+1. Primero, inicializa el cliente.
+2. Luego, establece el número de elementos a mostrar por página, por ejemplo, 10.
+3. Crea un filtro para recuperar solo los mensajes no leídos utilizando la clase [GraphQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphquerybuilder/#graphquerybuilder-class). El builder.IsRead.Equals(false) establece la condición para filtrar mensajes no leídos.
+4. Llama al método [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listmessages/#listmessages_1) en el objeto del cliente, especificando la carpeta (Bandeja de Entrada) y los elementos por página (PageInfo(itemsPerPage)) como parámetros. También pasa el objeto de consulta para aplicar el filtro de mensajes no leídos. 
+El objeto PageInfo devuelto (pageInfo) contiene los mensajes recuperados para la página actual en la propiedad Items.
+5. Crea un bucle que continúe hasta que se alcance la última página (pageInfo.LastPage es falso). Los mensajes recuperados se añaden a la lista de mensajes existentes usando messages.AddRange(pageInfo.Items).
 
 
 ```cs
-//  reading unread messages with paging
+//  leer mensajes no leídos con paginación
 using var client = GraphClient.GetClient(tokenProvider, config.Tenant);
 
-// paging option
+// opción de paginación
 var itemsPerPage = 10;
-// create unread messages filter
+// crear filtro de mensajes no leídos
 GraphQueryBuilder builder = new GraphQueryBuilder();
 builder.IsRead.Equals(false);
 var query = builder.GetQuery();
 
-// list messages
+// listar mensajes
 var pageInfo = client.ListMessages(KnownFolders.Inbox, new PageInfo(itemsPerPage), query);
 var  messages = pageInfo.Items;
 
@@ -277,7 +277,7 @@ while (!pageInfo.LastPage)
     messages.AddRange(pageInfo.Items);
 }
 
-// set messages state as read
+// establecer el estado de los mensajes como leídos
 foreach (var message in messages)
 {
     client.SetRead(message.ItemId);
@@ -285,201 +285,201 @@ foreach (var message in messages)
 
 ```
 
-### **Recuperar mensaje**
+### **Obtener Mensaje**
 
 ```csharp
 var folders = client.ListFolders();
 
 foreach (var folder in folders)
 {
-    if (folder.DisplayName.Equals("Inbox"))
+    if (folder.DisplayName.Equals("Bandeja de Entrada"))
     {
-        // list messages in inbox
+        // listar mensajes en bandeja de entrada
         var inboxMessages = client.ListMessages(folder.ItemId);
 
         if (inboxMessages.Count > 0)
         {
-            // fetch the first message in inbox
+            // obtener el primer mensaje en bandeja de entrada
             var msg = client.FetchMessage(inboxMessages[0].ItemId);
-           
+            
             Console.WriteLine(msg.BodyHtml);
         }
-       
+        
     }
 }
 ```
 
-### **Crear mensaje**
+### **Crear Mensaje**
 
 ```csharp
 var msg = new MapiMessage(OutlookMessageFormat.Unicode)
 {
-    Subject = "My message",
-    Body = "Hi, it is my message"
+    Subject = "Mi mensaje",
+    Body = "Hola, este es mi mensaje"
 };
 
 msg.Recipients.Add("sam@to.com", "Sam", MapiRecipientType.MAPI_TO);
 
-// create message in inbox
+// crear mensaje en bandeja de entrada
 client.CreateMessage(KnownFolders.Inbox, msg);
 
 ```
-### **Enviar mensaje**
+### **Enviar Mensaje**
 
 ```csharp
-// prepare the message
+// preparar el mensaje
 var msg = new MapiMessage(OutlookMessageFormat.Unicode)
 {
-    Subject = "My message",
-    Body = "Hi, it is my message"
+    Subject = "Mi mensaje",
+    Body = "Hola, este es mi mensaje"
 };
 
 msg.Recipients.Add("sam@to.com", "Sam", MapiRecipientType.MAPI_TO);
 msg.SetProperty(KnownPropertyList.SenderName, "John");
 msg.SetProperty(KnownPropertyList.SentRepresentingEmailAddress, "John@from.com");
 
-// send message
+// enviar mensaje
 client.Send(msg);
 ```
-### **Enviar borrador de mensaje**
+### **Enviar Mensaje Borrador**
 
 ```csharp
-// prepare the message
+// preparar el mensaje
 var msg = new MapiMessage(OutlookMessageFormat.Unicode)
 {
-    Subject = "My message",
-    Body = "Hi, it is my message"
+    Subject = "Mi mensaje",
+    Body = "Hola, este es mi mensaje"
 };
 
 msg.Recipients.Add("sam@to.com", "Sam", MapiRecipientType.MAPI_TO);
 msg.SetProperty(KnownPropertyList.SenderName, "John");
 msg.SetProperty(KnownPropertyList.SentRepresentingEmailAddress, "John@from.com");
 
-// add message to Draft folder
+// agregar mensaje a la carpeta de borradores
 var draftMessage = client.CreateMessage(KnownFolders.Drafts, msg);
 
-// send a draft message
+// enviar un mensaje borrador
 client.Send(draftMessage.ItemId);
 ```
 
-### **Enviar un mensaje EML**
+### **Enviar un Mensaje EML**
 
-Crear y enviar correos electrónicos es fácil con el objeto MailMessage. El siguiente ejemplo de código muestra cómo crear y enviar un mensaje de correo electrónico mediante la API Graph:
+Crear y enviar correos electrónicos es fácil utilizando el objeto MailMessage. El siguiente ejemplo de código demuestra cómo crear y enviar un mensaje de correo electrónico utilizando la API de Graph:
 
 ```cs
-// prepare the message
+// preparar el mensaje
 var eml = new MailMessage
 {
     From = "from@domain.com",
     To = "to1@domain.com, to2@domain.com",
-    Subject = "New message",
-    HtmlBody = "<html><body>This is the HTML body</body></html>"
+    Subject = "Nuevo mensaje",
+    HtmlBody = "<html><body>Este es el cuerpo HTML</body></html>"
 };
 
-// send the message
+// enviar el mensaje
 graphClient.Send(eml);
 graphClient.Create(KnownFolders.Inbox, eml);
 ```
 
 
-### **Copiar mensaje**
+### **Copiar Mensaje**
 
 ```csharp
 
-// copy message to Inbox folder
+// copiar mensaje a la carpeta Bandeja de Entrada
 var copiedMsg = client.CopyMessage(KnownFolders.Inbox, msg.ItemId);
 ```
-### **Mover mensaje**
+### **Mover Mensaje**
 
 ```csharp
-// move message to Inbox folder
+// mover mensaje a la carpeta Bandeja de Entrada
 var movedMsg = client.MoveMessage(KnownFolders.Inbox, msg.ItemId);
 ```
-### **Administrar archivos adjuntos**
+### **Gestionar Archivos Adjuntos**
 
 ```csharp
 
-// create an attachment
+// crear un archivo adjunto
 var attachment = new MapiAttachment();
-attachment.SetProperty(KnownPropertyList.DisplayName, "My Attachment");
+attachment.SetProperty(KnownPropertyList.DisplayName, "Mi Adjunto");
 attachment.SetProperty(KnownPropertyList.AttachDataBinary, new byte[1024]);
 
-// add an attachment to message
+// agregar un archivo adjunto al mensaje
 var createdAttachment = client.CreateAttachment(messageInfo.ItemId, attachment);
 
-// fetch a message attachment
+// obtener un archivo adjunto del mensaje
 var fetchedAttachment = client.FetchAttachment(createdAttachment.ItemId);
 
-// delete a message attachment
+// eliminar un archivo adjunto del mensaje 
 client.DeleteAttachment(createdAttachment.ItemId);
 
-// list the message attachments
-var attachments = client.ListAttachments(messageInfo.ItemId);  
+// listar los archivos adjuntos del mensaje
+var attachments = client.ListAttachments(messageInfo.ItemId);   
 ```
-## **Administrar los eventos del calendario**
+## **Gestionar Eventos de Calendario**
 
-Aspose.Email proporciona API para acceder, administrar e interactuar con los eventos del calendario. Para estos fines, ofrece los siguientes métodos en el [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/#igraphclient-interface) interface:
+Aspose.Email proporciona APIs para acceder, gestionar e interactuar con eventos de calendario. Para estos propósitos, ofrece los siguientes métodos en la interfaz [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/#igraphclient-interface):
 
-- **ListCalendars()** - Recupera una colección de información del calendario.
+- **ListCalendars()** - Recupera una colección de información de calendario.
 
-- **ListCalendarItems (identificador de cadena)** - Recupera una colección de elementos del calendario asociados al ID de calendario especificado.
+- **ListCalendarItems(string id)** - Recupera una colección de elementos de calendario asociados con el ID de calendario especificado.
 
-- **fetchCalendarItem (identificador de cadena)** - Recupera un elemento de calendario específico en función del ID proporcionado.
+- **FetchCalendarItem(string id)** - Recupera un elemento de calendario específico basado en el ID proporcionado.
 
-- **createCalendarItem (cadena calID, mapiCalendar mapiCalendar)** - Crea un nuevo elemento de calendario en el calendario especificado.
+- **CreateCalendarItem(string calId, MapiCalendar mapiCalendar)** - Crea un nuevo elemento de calendario en el calendario especificado.
 
-- **Actualizar elemento de calendario (MapiCalendar MapiCalendar)** - Actualiza un elemento de calendario existente.
+- **UpdateCalendarItem(MapiCalendar mapiCalendar)** - Actualiza un elemento de calendario existente.
 
-- **Actualizar elemento de calendario (MapiCalendar, MapiCalendar, actualizar configuración, actualizar configuración)** - Actualiza un elemento del calendario existente con la configuración de actualización especificada.
+- **UpdateCalendarItem(MapiCalendar mapiCalendar, UpdateSettings updateSettings)** - Actualiza un elemento de calendario existente con los ajustes de actualización especificados.
 
-El siguiente ejemplo de código muestra cómo interactuar con los eventos del calendario en un cliente de la API de Microsoft Graph mediante los métodos proporcionados por Aspose.Email:
+El siguiente ejemplo de código demuestra cómo interactuar con eventos de calendario en un cliente de API de Microsoft Graph utilizando los métodos proporcionados por Aspose.Email:
 
 ```cs
 
-// List Calendars
+// Listar Calendarios
 CalendarInfoCollection calendars = graphClient.ListCalendars();
 
-// List Calendar Items
+// Listar Elementos de Calendario
 MapiCalendarCollection calendarItems = graphClient.ListCalendarItems("calendarId");
 
-// Fetch Calendar Item
+// Obtener Elemento de Calendario
 MapiCalendar calendarItem = graphClient.FetchCalendarItem("calendarItemId");
 
-// Create Calendar Item
+// Crear Elemento de Calendario
 MapiCalendar newCalendarItem = new MapiCalendar(
-    location: "Conference Room",
-    summary: "Team Meeting",
-    description: "Discuss project status and updates.",
+    location: "Sala de Conferencias",
+    summary: "Reunión de Equipo",
+    description: "Discutir el estado y las actualizaciones del proyecto.",
     startDate: startDate,
     endDate: endDate
 );
 
 MapiCalendar createdCalendarItem = graphClient.CreateCalendarItem("calendarId", newCalendarItem);
 
-// Update Calendar Item
-createdCalendarItem.Location = "Zoom Meeting";
+// Actualizar Elemento de Calendario
+createdCalendarItem.Location = "Reunión por Zoom";
 MapiCalendar updatedCalendarItem = graphClient.UpdateCalendarItem(createdCalendarItem);
 ```
 
-## **Administrar categorías**
-Para administrar categorías con MS Graph de Aspose.Email para.NET, utilice los siguientes métodos:
+## **Gestionar Categorías**
+Para gestionar categorías con MS Graph por Aspose.Email para .NET, usa los siguientes métodos:
 * [CreateCategory](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createcategory/#createcategory)
 * [FetchCategory](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchcategory/#fetchcategory)
 * [ListCategories](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listcategories/#listcategories)
 * [UpdateCategory](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/updatecategory/#updatecategory)
 
 ```csharp
-// create a custom category with Orange color
-var category = client.CreateCategory("My custom category", CategoryPreset.Preset1);
+// crear una categoría personalizada con color Naranja
+var category = client.CreateCategory("Mi categoría personalizada", CategoryPreset.Preset1);
 
-// fetch a category
+// obtener una categoría
 var fetchedCategory = client.FetchCategory(category.Id);
 
-// update category (change color to brown)
+// actualizar categoría (cambiar color a marrón)
 fetchedCategory.Preset = CategoryPreset.Preset2;
 var updatedCategory = client.UpdateCategory(fetchedCategory);
 
-// list available categories
+// listar las categorías disponibles
 var categories = client.ListCategories();
 
 foreach (var cat in categories)
@@ -487,87 +487,87 @@ foreach (var cat in categories)
     Console.WriteLine(cat.DisplayName);
 }
 
-// delete a category
+// eliminar una categoría
 client.Delete(fetchedCategory.Id);
 ```
-## **Administrar contactos**
+## **Gestionar Contactos**
 
-Aspose.Email proporciona API para acceder, administrar e interactuar con los elementos de contacto. Para estos fines, ofrece los siguientes métodos en el [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/#igraphclient-interface) interface:
+Aspose.Email proporciona APIs para acceder, gestionar e interactuar con elementos de contacto. Para estos propósitos, ofrece los siguientes métodos en la interfaz [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/#igraphclient-interface):
 
-- **ListContacts (identificador de cadena)** - Recupera una colección de contactos MAPI asociados al ID de carpeta especificado.
+- **ListContacts(string id)** - Recupera una colección de contactos MAPI asociados con el ID de carpeta especificado.
 
-- **fetchContact (identificador de cadena)** - Recupera un contacto específico en función del identificador del artículo proporcionado.
+- **FetchContact(string id)** - Recupera un contacto específico basado en el ID de elemento proporcionado.
 
-- **CreateContact (string folderId, mapiContact contact)** - Crea un nuevo contacto en la carpeta especificada.
+- **CreateContact(string folderId, MapiContact contact)** - Crea un nuevo contacto en la carpeta especificada.
 
-- **UpdateContact (contacto de MapiContact)** - Actualiza un contacto existente.
+- **UpdateContact(MapiContact contact)** - Actualiza un contacto existente.
 
-El siguiente ejemplo de código muestra cómo interactuar con los contactos en un cliente de la API de Microsoft Graph mediante los métodos proporcionados por Aspose.Email:
+El siguiente ejemplo de código demuestra cómo interactuar con contactos en un cliente de API de Microsoft Graph utilizando los métodos proporcionados por Aspose.Email:
 
 ```cs
-// List Contacts
+// Listar Contactos
 MapiContactCollection contacts = graphClient.ListContacts("contactFolderId");
 
-// Fetch Contact
+// Obtener Contacto
 MapiContact contact = graphClient.FetchContact("contactId");
 
-// Create Contact
+// Crear Contacto
 MapiContact newContact = new MapiContact("Jane Smith", "jane.smith@example.com", "XYZ Corporation", "777-888-999");
 
 MapiContact createdContact = graphClient.CreateContact("contactFolderId", newContact);
 
-// Update Contact
+// Actualizar Contacto
 createdContact.Telephones.PrimaryTelephoneNumber = "888-888-999";
 
 MapiContact updatedContact = graphClient.UpdateContact(createdContact);
 ```
 
-## **Administrar anulaciones**
+## **Gestionar Sobrescrituras**
 
-Para gestionar las anulaciones con MS Graph de Aspose.Email para .NET, utilice los métodos siguientes:
-* [CreateOrUpdateOverride](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createorupdateoverride/#createorupdateoverride)
+Para gestionar sobrescrituras con MS Graph por Aspose.Email para .NET, usa los siguientes métodos:
+* [CreateOrUpdateOverride](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createorupdateoverride/#createorupdateoverride) 
 * [ListOverrides](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listoverrides/#listoverrides)
 * [UpdateOverride](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/updateoverride/#updateoverride)
 
 ```csharp
-// Create an user's override
+// Crear una sobrescritura de usuario
 var userOverride = client.CreateOrUpdateOverride
     (new MailAddress("JohnBrown@someorg.com", "JohnBrown"), ClassificationType.Focused);
 
-// list the overrides
+// listar las sobrescrituras
 var overrides = client.ListOverrides();
 
-// update override
+// actualizar sobrescritura
 userOverride.Sender.DisplayName = "John Brown";
 var updatedOverride = client.UpdateOverride(userOverride);
 
-// delete override
+// eliminar sobrescritura
 client.Delete(updatedOverride.Id);
 ```
-## **Administrar reglas**
-Para administrar las reglas con MS Graph de Aspose.Email para.NET, utilice los métodos siguientes:
+## **Gestionar Reglas**
+Para gestionar reglas con MS Graph por Aspose.Email para .NET, usa los siguientes métodos:
 * [CreateRule](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createrule/#createrule)
 * [FetchRule](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchrule/#fetchrule)
 * [UpdateRule](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/updaterule/#updaterule)
 * [ListRules](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listrules/#listrules)
 
 ```csharp
-// Create a rule
-var rule = PrepareRule("user@someorg.com", "User");
+// Crear una regla
+var rule = PrepareRule("user@someorg.com", "Usuario");
 var createdRule = client.CreateRule(rule);
 
-// List all rules defined for Inbox
+// Listar todas las reglas definidas para la Bandeja de Entrada
 var rules = client.ListRules();
 
-// Fetch a rule
+// Obtener una regla
 var fetchedRule = client.FetchRule(createdRule.RuleId);
 
-// Update a rule
-fetchedRule.DisplayName = "Renamed rule";
+// Actualizar una regla
+fetchedRule.DisplayName = "Regla Renombrada";
 fetchedRule.IsEnabled = false;
 var updatedRule = client.UpdateRule(createdRule);
 
-// Delete a rule
+// Eliminar una regla
 client.Delete(updatedRule.RuleId);
 ```
 
@@ -576,7 +576,7 @@ InboxRule PrepareRule(string email, string displayName)
 {
     var rule = new InboxRule()
     {
-        DisplayName = "My rule",
+        DisplayName = "Mi regla",
         Priority = 1,
         IsEnabled = true,
         Conditions = new RulePredicates(),
@@ -592,25 +592,25 @@ InboxRule PrepareRule(string email, string displayName)
 }
 ```
 
-## **Administrar cuadernos**
+## **Gestionar Bloc de Notas**
 
-Para administrar libretas con MS Graph de Aspose.Email para.NET, utilice los siguientes métodos:
+Para gestionar blocs de notas con MS Graph por Aspose.Email para .NET, usa los siguientes métodos:
 * [CreateNotebook](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createnotebook/#createnotebook)
 * [CopyNotebook](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/copynotebook/#copynotebook)
 * [FetchNotebook](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchnotebook/#fetchnotebook)
 * [ListNotebooks](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listnotebooks/#listnotebooks)
 
 ```csharp
-// create a OneNote notebook
+// crear un cuaderno de OneNote
 var newNotebook = new Notebook()
 {
-    DisplayName = "My Notebook"
+    DisplayName = "Mi Bloc de Notas"
 };
 var createdNotebook = client.CreateNotebook(newNotebook);
 
-// fetch a notebook
+// obtener un cuaderno
 var fetchedNotebook = client.FetchNotebook(createdNotebook.Id);
 
-// list the notebooks
+// listar los cuadernos
 var notebooks = client.ListNotebooks();
 ```

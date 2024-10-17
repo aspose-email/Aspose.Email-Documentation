@@ -1,61 +1,61 @@
 ---
-title: "Envío de una convocatoria de reunión mediante Outlook Interop y Aspose.Email para Java"
+title: "Envío de Solicitudes de Reunión Usando Outlook Interop y Aspose.Email para Java"
 url: /es/java/sending-meeting-request-using-outlook-interop-and-aspose-email-for-java/
 weight: 40
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Nuestros consejos de migración muestran cómo se pueden usar los productos de Aspose para mejorar sus aplicaciones y liberarlo de la dependencia de la automatización tradicional.
+Nuestros consejos de migración muestran cómo los productos de Aspose pueden usarse para mejorar tus aplicaciones y liberarte de la dependencia de la automatización tradicional.
 
-Este consejo de migración envía una convocatoria de reunión a un destinatario. Muestra cómo enviar una convocatoria de reunión de dos maneras:
+Este consejo de migración envía una solicitud de reunión a un destinatario. Demuestra cómo enviar solicitudes de reunión de dos maneras:
 
-- [Uso de Outlook Interop](#sending-meeting-request-with-outlook-interop).
-- [Uso de Aspose.Email para Java](#advantages-of-using-asposeemail-for-java).
+- [Usando Outlook Interop](#sending-meeting-request-with-outlook-interop).
+- [Usando Aspose.Email para Java](#advantages-of-using-asposeemail-for-java).
 
-También analizaremos las ventajas de este último enfoque.
+También discutiremos las ventajas del segundo enfoque.
 
-{{% /alert %}}
-## **Envío de una convocatoria de reunión con Outlook Interop**
-Para usar las clases de Outlook, se debe hacer referencia a Outlook.Interop en su proyecto de.NET. El siguiente fragmento de código:
+{{% /alert %}} 
+## **Envío de Solicitudes de Reunión con Outlook Interop**
+Para usar las clases de Outlook, Outlook.Interop debe ser referenciado en tu proyecto .NET. El fragmento de código a continuación:
 
-1. Crea una convocatoria de reunión.
-1. Establece propiedades como el tema, el cuerpo, la ubicación y la hora.
-1. Envía la convocatoria de reunión al destinatario.
+1. Crea una solicitud de reunión.
+1. Establece propiedades como asunto, cuerpo, ubicación y hora.
+1. Envía la solicitud de reunión al destinatario.
 
-Microsoft Outlook debe estar instalado en el sistema en el que se ejecutará esta aplicación de ejemplo.
-### **Ejemplos de programación**
+Microsoft Outlook debe estar instalado en el sistema donde se ejecutará esta aplicación de ejemplo.
+### **Ejemplos de Programación**
 **C#**
 
 ~~~cs
 
-// Create an instance of Outlook Application class
+// Crear una instancia de la clase Outlook Application
 
 Outlook.Application outlookApp = new Outlook.Application ();
 
-// Create an instance of AppointmentItem object and set the properties:
+// Crear una instancia del objeto AppointmentItem y establecer las propiedades:
 
 Outlook.AppointmentItem oAppointment = (Outlook.AppointmentItem) outlookApp.CreateItem (Outlook.OlItemType.olAppointmentItem);
 
-oAppointment.Subject = "subject of appointment";
+oAppointment.Subject = "asunto de la reunión";
 
-oAppointment.Body = "body text of appointment";
+oAppointment.Body = "texto del cuerpo de la reunión";
 
-oAppointment.Location = "Appointment location";
+oAppointment.Location = "Ubicación de la reunión";
 
-// Set the start date and end dates
+// Establecer la fecha y hora de inicio y fin
 
 oAppointment.Start = Convert.ToDateTime ("01/22/2010 10:00:00 AM");
 
 oAppointment.End = Convert.ToDateTime("01/22/2010 2:00:00 PM");
 
-// Save the appointment
+// Guardar la reunión
 
 oAppointment.Save ();
 
-// Send the appointment
+// Enviar la reunión
 
 Outlook.MailItem mailItem = oAppointment.ForwardAsVcal ();
 
@@ -65,15 +65,15 @@ mailItem.Send();
 
 
 ~~~
-## **Envío de una convocatoria de reunión mediante Aspose.Email para Java**
-El siguiente código usa Aspose.Email para Java para enviar una convocatoria de reunión. En primer lugar, cree la convocatoria de reunión mediante el [Aspose.Cita por correo electrónico](https://apireference.aspose.com/email/java/com.aspose.email/Appointment) clase. A continuación, envíe el correo electrónico, adjunte la convocatoria de reunión y envíe el correo electrónico mediante [Cliente SMTP Aspose.Email](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient) class.
+## **Envío de Solicitudes de Reunión Usando Aspose.Email para Java**
+El código a continuación utiliza Aspose.Email para Java para enviar una solicitud de reunión. Primero, crea la solicitud de reunión utilizando la clase [Aspose.Email Appointment](https://apireference.aspose.com/email/java/com.aspose.email/Appointment). Luego envía el correo electrónico, adjunta la solicitud de reunión y envía el correo electrónico utilizando la clase [Aspose.Email SmtpClient](https://apireference.aspose.com/email/java/com.aspose.email/SmtpClient).
 ### **Ventajas de usar Aspose.Email para Java**
-Outlook Interop requiere que Microsoft Outlook esté instalado en el sistema en el que se usa. Aspose.Email para Java no requiere la instalación de Microsoft Outlook y es adecuado para aplicaciones de servidor.
-### **Ejemplos de programación**
+Outlook Interop requiere que Microsoft Outlook esté instalado en el sistema donde se utiliza. Aspose.Email para Java no requiere que Microsoft Outlook esté instalado y es adecuado para aplicaciones en servidor.
+### **Ejemplos de Programación**
 
 ~~~Java
 
-// Create attendees of the meeting
+// Crear asistentes de la reunión
 MailAddressCollection attendees = new MailAddressCollection();
 attendees.add("recipient1@domain.com");
 attendees.add("recipient2@domain.com");
@@ -83,25 +83,25 @@ Date startDate = c.getTime();
 c.add(java.util.Calendar.HOUR_OF_DAY, 1);
 Date endDate = c.getTime();
 
-// Set up appointment
+// Configurar la cita
 Appointment app = new Appointment(
-    "Location", // location of meeting
-    startDate, // start date
-    endDate, // end date
-    new MailAddress("organizer@domain.com"), // organizer
-    attendees); // attendees
+    "Ubicación", // ubicación de la reunión
+    startDate, // fecha de inicio
+    endDate, // fecha de fin
+    new MailAddress("organizer@domain.com"), // organizador
+    attendees); // asistentes
 
-// Set up message that needs to be sent
+// Configurar el mensaje que necesita ser enviado
 MailMessage msg = new MailMessage();
 msg.setFrom(new MailAddress("from@domain.com"));
 msg.setTo(MailAddressCollection.to_MailAddressCollection("to@domain.com"));
-msg.setSubject("appointment request");
-msg.setBody("you are invited");
+msg.setSubject("solicitud de reunión");
+msg.setBody("estás invitado");
 
-// Add meeting request to the message
+// Agregar la solicitud de reunión al mensaje
 msg.addAlternateView(app.requestApointment());
 
-// Set up the SMTP client to send email with meeting request
+// Configurar el cliente SMTP para enviar el correo electrónico con la solicitud de reunión
 try (SmtpClient client = new SmtpClient("host", 25, "user", "password")) {
     client.send(msg);
 }

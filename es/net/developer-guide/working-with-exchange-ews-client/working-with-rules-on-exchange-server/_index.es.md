@@ -1,58 +1,58 @@
 ---
-title: "Trabajar con reglas en Exchange Server"
+title: "Trabajando con Reglas en Exchange Server"
 url: /es/net/working-with-rules-on-exchange-server/
 weight: 90
 type: docs
 ---
 
 
-## **Gestión de reglas**
+## **Gestionando Reglas**
 
-Aspose.Email para.NET se puede usar para administrar las reglas de Exchange Server mediante [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) clase. Esta clase usa los servicios web de Exchange (EWS), que están disponibles en Exchange Server 2007 y versiones posteriores. En este artículo se explica cómo administrar las reglas:
+Aspose.Email para .NET se puede utilizar para gestionar las reglas en Exchange Server utilizando la clase [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/). Esta clase utiliza los Servicios Web de Exchange (EWS), que están disponibles en Exchange Server 2007 y versiones posteriores. Este artículo explica cómo gestionar las reglas:
 
-- Lea las reglas que ya están en el servidor.
-- Crea una regla nueva.
-- Actualiza una regla existente.
+- Leer las reglas ya existentes en el servidor.
+- Crear una nueva regla.
+- Actualizar una regla existente.
 
-Se requiere el Service Pack 1 de Microsoft Exchange Server 2010 para todas las funciones descritas en este artículo.
+Se requiere Microsoft Exchange Server 2010 Service Pack 1 para todas las funciones descritas en este artículo.
 
-### **Lea las reglas**
+### **Leer Reglas**
 
-Para obtener todas las reglas del servidor Exchange:
+Para obtener todas las reglas del Exchange Server:
 
-1. Conéctese a un servidor Exchange mediante el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) class.
-1. Llame al [IEWSClient.GetInboxRules()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getinboxrules/#getinboxrules) método para obtener todas las reglas.
-1. En un bucle para cada uno, examine todas las reglas y muestre sus propiedades, como las condiciones, las acciones y el nombre.
+1. Conéctese a un Exchange Server utilizando la clase [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
+1. Llame al método [IEWSClient.GetInboxRules()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getinboxrules/#getinboxrules) para obtener todas las reglas.
+1. En un bucle foreach, recorra todas las reglas y muestre las propiedades de la regla, como condiciones, acciones y nombre.
 
-El siguiente fragmento de código muestra cómo leer las reglas.
+El siguiente fragmento de código le muestra cómo leer reglas.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ExchangeServerReadRules-ExchangeServerReadRules.cs" >}}
 
-### **Creación de una nueva regla**
+### **Creando una Nueva Regla**
 
-Para crear una nueva regla en el servidor Exchange, lleve a cabo los siguientes pasos:
+Para crear una nueva regla en el Exchange Server, realice los siguientes pasos:
 
-1. Conéctese a un servidor Exchange mediante el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) interface.
-1. Cree una nueva instancia del [InboxRule](https://reference.aspose.com/email/net/aspose.email.clients.exchange/inboxrule/) clase y establezca las siguientes propiedades obligatorias:
+1. Conéctese a un Exchange Server utilizando la interfaz [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
+1. Cree una nueva instancia de la clase [InboxRule](https://reference.aspose.com/email/net/aspose.email.clients.exchange/inboxrule/) y establezca las siguientes propiedades obligatorias:
    1. DisplayName
    1. Conditions
    1. Actions
-1. Llame al [IEWSClient.CreateInboxRule()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createinboxrule/#createinboxrule) método para crear la regla.
+1. Llame al método [IEWSClient.CreateInboxRule()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createinboxrule/#createinboxrule) para crear la regla.
 
-El siguiente fragmento de código muestra cómo crear una regla nueva.
+El siguiente fragmento de código le muestra cómo crear una nueva regla.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CreateNewRuleOntheExchangeServer-CreateNewRuleOntheExchangeServer.cs" >}}
 
-### **Actualización de una regla**
+### **Actualizando una Regla**
 
-Para actualizar una regla en Exchange Server:
+Para actualizar una regla en el Exchange Server:
 
-1. Conéctese a un servidor Exchange mediante el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) class.
-1. Llame al [IEWSClient.GetInboxRules()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getinboxrules/#getinboxrules) método para obtener todas las reglas.
-1. En un bucle de foreach, examine todas las reglas y obtenga la regla que desea cambiar haciendo coincidir el nombre de visualización de una condición.
+1. Conéctese a un Exchange Server utilizando la clase [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
+1. Llame al método [IEWSClient.GetInboxRules()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getinboxrules/#getinboxrules) para obtener todas las reglas.
+1. En un bucle foreach, recorra todas las reglas y obtenga la regla que desea cambiar, coincidiendo con el DisplayName en una condición.
 1. Actualice las propiedades de la regla.
-1. Llame al [IEWSClient.UpdateInboxRule()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateinboxrule/#updateinboxrule/) método para actualizar la regla.
+1. Llame al método [IEWSClient.UpdateInboxRule()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateinboxrule/#updateinboxrule/) para actualizar la regla.
 
-El siguiente fragmento de código muestra cómo actualizar una regla.
+El siguiente fragmento de código le muestra cómo actualizar una regla.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-UpdateRuleOntheExchangeServer-UpdateRuleOntheExchangeServer.cs" >}}

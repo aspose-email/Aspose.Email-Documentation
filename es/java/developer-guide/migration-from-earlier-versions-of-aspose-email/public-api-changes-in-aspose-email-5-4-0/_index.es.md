@@ -5,9 +5,9 @@ weight: 150
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+A continuación se presenta una lista de los cambios realizados en la API pública, tales como miembros añadidos, renombrados, eliminados o desaprobados, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tiene inquietudes sobre algún cambio listado, por favor hágalas en el foro de soporte de Aspose.Email.
 
-- Method `MailMessage.checkBouncedMethod`
+- Método `MailMessage.checkBouncedMethod`
 - `MapiMessage.checkBouncedClass`
 - `BounceResultEnum`
 - `DSNActionClass`

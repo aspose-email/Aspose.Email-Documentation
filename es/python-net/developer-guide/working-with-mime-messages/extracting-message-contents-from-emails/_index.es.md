@@ -1,41 +1,41 @@
 ---
-title: "Extraer el contenido de los mensajes de los correos electrónicos"
+title: "Extracción de Contenidos de Mensajes de Correos Electrónicos"
 url: /es/python-net/extracting-message-contents-from-emails/
 weight: 20
 type: docs
 ---
 
 
-## **Mostrar información de correo electrónico en la pantalla**
-El MailMessage representa un mensaje de correo electrónico y permite a los desarrolladores acceder a las propiedades del mensaje de correo electrónico. La información del encabezado (que se explica en Extracción de encabezados de correo electrónico) se puede extraer y manipular de diferentes maneras. En este artículo se explica cómo mostrar la información del encabezado del correo electrónico seleccionado y el cuerpo del correo electrónico en la pantalla. Para mostrar la información del correo electrónico en la pantalla, sigue estos pasos:
+## **Mostrando Información del Correo Electrónico en Pantalla**
+MailMessage representa un mensaje de correo electrónico y permite a los desarrolladores acceder a las propiedades del mensaje. La información del encabezado (discutida en Extracción de Encabezados de Correos Electrónicos) puede ser extraída y manipulada de diferentes maneras. Este artículo explica cómo mostrar la información del encabezado del correo electrónico seleccionado y el cuerpo del correo en pantalla. Para Mostrar Información del Correo Electrónico en Pantalla, siga estos pasos:
 
-- Crea una instancia de la clase MailMessage.
-- Carga un mensaje de correo electrónico en la instancia de MailMessage.
-- Muestra el contenido del correo electrónico en la pantalla.
+- Cree una instancia de la clase MailMessage.
+- Cargue un mensaje de correo electrónico en la instancia de MailMessage.
+- Muestre el contenido del correo en pantalla.
 
-El siguiente fragmento de código muestra cómo mostrar la información del correo electrónico en la pantalla.
+El siguiente fragmento de código le muestra cómo mostrar información del correo electrónico en pantalla.
 
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithMimeMessages-DisplayEmailInformation-DisplayEmailInformation.py" >}}
-## **Extracción de encabezados de correo electrónico**
-El encabezado del correo electrónico representa un conjunto estándar de campos de encabezado definido por Internet y RFC que se incluye en los mensajes de correo electrónico de Internet. Se puede especificar un encabezado de correo electrónico mediante la clase MailMessage. Los tipos de encabezados comunes se definen en la clase HeaderType. Es una clase sellada que funciona como una enumeración normal. Para extraer los encabezados de un correo electrónico, sigue estos pasos:
+## **Extracción de Encabezados de Correos Electrónicos**
+El encabezado del correo electrónico representa un conjunto estándar de campos de encabezado definidos por Internet y RFC que se incluyen en los mensajes de correo electrónico de Internet. Se puede especificar un encabezado de correo electrónico utilizando la clase MailMessage. Los tipos de encabezados comunes están definidos en la clase HeaderType. Es una clase sellada que funciona como una enumeración normal. Para extraer encabezados de un correo electrónico, siga estos pasos:
 
-1. Crea una instancia de la clase MailMessage.
-1. Carga un mensaje de correo electrónico en la instancia de la clase MailMessage.
-1. Una vez que se haya cargado un mensaje de correo electrónico, obtendremos su contenido sin procesar.
+1. Cree una instancia de la clase MailMessage.
+1. Cargue un mensaje de correo electrónico en la instancia de la clase MailMessage.
+1. Después de que se haya cargado un mensaje de correo electrónico, obtendremos su contenido en bruto.
 
-La clase MailMessage en sí contiene propiedades como From, To, Cc, Subject, etc. Estas propiedades se pueden extraer de los encabezados.
+La clase MailMessage en sí contiene propiedades como De, Para, Cc, Asunto, etc. Estas propiedades se pueden extraer de los encabezados.
 
-1. Muestra el contenido sin procesar.
+1. Muestre el contenido en bruto.
 
-El siguiente fragmento de código muestra cómo extraer los encabezados de los correos electrónicos.
+El siguiente fragmento de código le muestra cómo extraer encabezados de correos electrónicos.
 
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithMimeMessages-ExtractingEmailHeaders-ExtractingEmailHeaders.py" >}}
-## **Obtener valores de encabezado decodificados**
-El siguiente fragmento de código muestra cómo obtener valores de encabezado decodificados.
+## **Obtener Valores de Encabezados Decodificados**
+El siguiente fragmento de código le muestra cómo obtener valores de encabezados decodificados.
 
 
 

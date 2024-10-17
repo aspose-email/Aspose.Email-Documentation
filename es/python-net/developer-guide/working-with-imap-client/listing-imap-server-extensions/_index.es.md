@@ -1,13 +1,13 @@
 ---
-title: "Listado de extensiones de servidor IMAP"
+title: "Listado de Extensiones del Servidor IMAP"
 url: /es/python-net/listing-imap-server-extensions/
 weight: 40
 type: docs
 ---
 
 
-## **Listado de extensiones de servidor**
-ImapClient de Aspose.Email le permite recuperar las extensiones de servidor que admite un servidor, como IDLE, UNSELECT, QUOTA, etc. Esto ayuda a identificar la disponibilidad de una extensión antes de usar el cliente para esa funcionalidad en particular. El método getCapabilities () devuelve los tipos de extensión admitidos en forma de una matriz de cadenas. El siguiente fragmento de código muestra cómo recuperar extensiones.
+## **Listado de Extensiones del Servidor**
+El ImapClient de Aspose.Email te permite recuperar las extensiones del servidor que un servidor soporta, como IDLE, UNSELECT, QUOTA, etc. Esto ayuda a identificar la disponibilidad de una extensión antes de usar el cliente para esa funcionalidad en particular. El método GetCapabilities() devuelve los tipos de extensiones soportadas en forma de un arreglo de cadenas. El siguiente fragmento de código te muestra cómo recuperar las extensiones.
 
 
 

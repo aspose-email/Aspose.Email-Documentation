@@ -1,21 +1,21 @@
 ---
-title: "Análisis de archivos de mensajes de Microsoft Outlook"
+title: "Análisis de Archivos de Mensajes de Microsoft Outlook"
 url: /es/net/parsing-microsoft-outlook-message-files/
 weight: 80
 type: docs
 ---
 
 
-Con Aspose.Email, puede analizar los mensajes de Microsoft Outlook en unas pocas líneas de código. En este artículo se muestra cómo hacerlo. Aspose.Email tiene clases para realizar muchas tareas de programación con los mensajes de Outlook. El ejemplo de código que aparece a continuación muestra cómo:
+Con Aspose.Email, puedes analizar mensajes de Microsoft Outlook en solo unas pocas líneas de código. Este artículo muestra cómo. Aspose.Email tiene clases para realizar muchas tareas de programación con mensajes de Outlook. El ejemplo de código a continuación muestra cómo:
 
-1. Carga un mensaje de correo electrónico.
-1. Obtén el asunto del correo electrónico.
-1. Obtenga el nombre del remitente.
-1. Obtenga el cuerpo completo del mensaje.
-1. Averigüe si hay archivos adjuntos.
-1. Obtenga los nombres de los archivos adjuntos y guárdelos.
+1. Cargar un mensaje de correo electrónico.
+1. Obtener el asunto del correo electrónico.
+1. Obtener el nombre del remitente.
+1. Obtener el cuerpo completo del mensaje.
+1. Averiguar si hay archivos adjuntos.
+1. Obtener los nombres de archivo de los archivos adjuntos y guardarlos.
 
-El siguiente fragmento de código muestra cómo analizar los archivos de mensajes de Microsoft Outlook.
+El siguiente fragmento de código te muestra cómo analizar archivos de mensajes de Microsoft Outlook.
 
 
 

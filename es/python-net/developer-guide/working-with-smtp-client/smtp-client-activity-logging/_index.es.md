@@ -1,19 +1,19 @@
 ---
-title: "Registro de actividad de SMTPClient"
+title: "Registro de Actividades de SmtpClient"
 url: /es/python-net/smtpclient-activity-logging/
 weight: 30
 type: docs
 ---
 
 
-## **Habilitar el registro de actividades en el código del programa**
+## **Habilitar el Registro de Actividades en el Código del Programa**
 
-Aspose.Email permite registrar o documentar sistemáticamente actividades, eventos o transacciones durante un período de tiempo. También conocido como registro de actividades, se puede lograr con las siguientes propiedades del [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class:
+Aspose.Email hace posible registrar o documentar sistemáticamente actividades, eventos o transacciones a lo largo del tiempo. También conocido como registro de actividades, se puede lograr con las siguientes propiedades de la clase [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class):
 
 - La propiedad 'log_file_name' obtiene o establece el nombre del archivo de registro.
-- 'use_date_in_log_file_name' obtiene o establece un valor que indica si la fecha debe usarse en el nombre del archivo de registro.
+- La propiedad 'use_date_in_log_file_name' obtiene o establece un valor que indica si la fecha debe usarse en el nombre del archivo de registro.
 
-El ejemplo de código que aparece a continuación muestra cómo habilitar el registro de actividades en el código del programa:
+El siguiente ejemplo de código muestra cómo habilitar el registro de actividades en el código del programa:
 
 ```py
 import aspose.email as ae

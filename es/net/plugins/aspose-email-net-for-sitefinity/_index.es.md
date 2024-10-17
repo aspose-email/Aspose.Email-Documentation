@@ -7,5 +7,5 @@ type: docs
 
 Esta sección contiene los siguientes temas:
 
-- [Módulo de sincronización de Sitefinity Exchange](/email/net/sitefinity-exchange-sync-module/)
-- [Módulo Google Sync de Sitefinity](/email/net/sitefinity-google-sync-module/)
+- [Módulo de sincronización de Exchange para Sitefinity](/email/net/sitefinity-exchange-sync-module/)
+- [Módulo de sincronización de Google para Sitefinity](/email/net/sitefinity-google-sync-module/)

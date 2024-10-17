@@ -1,23 +1,22 @@
 ---
-title: "Uso de operaciones asincrónicas en EWSClient"
-url: /es/net/using-asynchronous-operations-in-ewsclient/
+title: "Uso de operaciones asíncronas en EWSClient"
+url: /es/net/uso-de-operaciones-asíncronas-en-ewsclient/
 weight: 42
 type: docs
 ---
 
-A diferencia de los métodos sincrónicos, los métodos asíncronos no bloquean y permiten realizar varias solicitudes simultáneamente. Los métodos asincrónicos se nombran con el sufijo asíncrono.
+A diferencia de los métodos síncronos, los métodos asíncronos son no bloqueantes y permiten realizar múltiples solicitudes simultáneamente. Los métodos asíncronos se nombran con el sufijo Async.
 
-> **_NOTE:_** Los métodos asíncronos están disponibles en las versiones orientadas a .NET Core, .NET Framework 4.5 y versiones posteriores.
+> **_NOTA:_** Los métodos Async están disponibles en versiones que apunten a .NET Core, .NET Framework 4.5 y posteriores.
 
-## Implementación de IAsyncTokenProvider para obtener tokens de OAuth de forma asíncrona
+## Implementando IAsyncTokenProvider para obtener tokens OAuth de forma asíncrona
 
-El siguiente ejemplo de código define un `SomeAsyncTokenProvider` clase, que implementa la [IAsyncTokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/) interfaz.
-La clase implementa [GetAccessTokenAsync](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/getaccesstokenasync/) método asincrónico que devuelve una tarea de tipo OAuthToken. Este método obtiene un valor válido [OAuthToken](https://reference.aspose.com/email/net/aspose.email.clients/oauthtoken/) asynchronously.
+El siguiente ejemplo de código define una clase `SomeAsyncTokenProvider`, que implementa la interfaz [IAsyncTokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/). La clase implementa el método asíncrono [GetAccessTokenAsync](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/getaccesstokenasync/) que devuelve un Task de tipo OAuthToken. Este método obtiene un [OAuthToken](https://reference.aspose.com/email/net/aspose.email.clients/oauthtoken/) válido de forma asíncrona.
 
 ```cs
 private class SomeAsyncTokenProvider : IAsyncTokenProvider
 {
-    public SomeAsyncTokenProvider( /*some parameters*/)
+    public SomeAsyncTokenProvider( /*algunos parámetros*/)
     {
         ...
     }
@@ -25,7 +24,7 @@ private class SomeAsyncTokenProvider : IAsyncTokenProvider
     public async Task<OAuthToken> GetAccessTokenAsync(bool ignoreExistingToken = false,
         CancellationToken cancellationToken = default)
     {
-        //Some asynchronous code to get a valid OAuthToken
+        //Algún código asíncrono para obtener un OAuthToken válido
         ...
     }
 
@@ -36,66 +35,66 @@ private class SomeAsyncTokenProvider : IAsyncTokenProvider
 }
 ```
 
-## Creación de la instancia de IAsyncEWSClientInstance
+## Creando la instancia IAsyncEwsClientInstance
 
-El siguiente ejemplo de código obtiene un cliente de Exchange Web Services (EWS) de forma asincrónica mediante la autenticación OAuth. El código lleva a cabo los siguientes pasos:
+El siguiente ejemplo de código obtiene un cliente de Exchange Web Services (EWS) de forma asíncrona utilizando autenticación OAuth. El código realiza los siguientes pasos:
 
-1. Crea un nuevo [CancellationToken](https://reference.aspose.com/tasks/net/aspose.tasks/loadoptions/cancellationtoken/) objeto que se puede usar para cancelar operaciones asincrónicas.
-2. Instantiates `SomeAsyncTokenProvider` clase que implementa el [IAsyncTokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/) interfaz. Esta clase se usa como parámetro para construir una nueva [OAuthNetworkCredential](https://reference.aspose.com/email/net/aspose.email.clients/oauthnetworkcredential/oauthnetworkcredential/) object.
-3. Establece el URI del buzón en el punto final de los servicios web de Exchange.
-4. Llama al [GetEwsClientAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclientasync/) método del [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) clase con el `mailboxUri` and `OAuthNetworkCredential` objeto como parámetros. Este método devuelve un objeto Task, por lo que espera el resultado antes de continuar. El `cancellationToken` el objeto se pasa como parámetro opcional al [GetEwsClientAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclientasync/) method.
+1. Crea un nuevo objeto [CancellationToken](https://reference.aspose.com/tasks/net/aspose.tasks/loadoptions/cancellationtoken/) que puede usarse para cancelar operaciones asíncronas.
+2. Instancia la clase `SomeAsyncTokenProvider` que implementa la interfaz [IAsyncTokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/). Esta clase se utiliza como un parámetro para construir un nuevo objeto [OAuthNetworkCredential](https://reference.aspose.com/email/net/aspose.email.clients/oauthnetworkcredential/oauthnetworkcredential/).
+3. Establece la URI del buzón en el extremo de Exchange Web Services.
+4. Llama al método [GetEwsClientAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclientasync/) de la clase [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) con la `mailboxUri` y el objeto `OAuthNetworkCredential` como parámetros. Este método devuelve un objeto Task, por lo que espera el resultado antes de continuar. El objeto `cancellationToken` se pasa como un parámetro opcional al método [GetEwsClientAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/getewsclientasync/).
 
 ```cs
-//The cancellationToken can be used
+//El cancellationToken puede ser usado
 var cancellationToken = new CancellationToken();
 
-//Create IAsyncEwsClientInstance
-IAsyncTokenProvider tokenProvider = new SomeAsyncTokenProvider(/*some parameters*/);
+//Crear IAsyncEwsClientInstance
+IAsyncTokenProvider tokenProvider = new SomeAsyncTokenProvider(/*algunos parámetros*/);
 const string mailboxUri = "https://outlook.office365.com/ews/exchange.asmx";
 var ewsClient = await EWSClient.GetEwsClientAsync(mailboxUri, new OAuthNetworkCredential(tokenProvider),
     cancellationToken: cancellationToken);
 ```
 
-## Enviar un mensaje
+## Enviando un mensaje
 
-El ejemplo de código siguiente intenta enviar un mensaje de correo electrónico de forma asincrónica. El código lleva a cabo los siguientes pasos:
+El siguiente ejemplo de código intenta enviar un mensaje de correo electrónico de forma asíncrona. El código realiza los siguientes pasos:
 
-1. Crea un nuevo [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) objeto con los parámetros del mensaje.
-2. Llama al [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice.sendgrid/sendgridclient/sendasync/) método del [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) objeto, pasando el MailMessage como parámetro. El método está en espera porque devuelve un objeto Task. El `cancellationToken` el objeto se pasa como parámetro opcional al [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice.sendgrid/sendgridclient/sendasync/) method.
+1. Crea un nuevo objeto [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) con los parámetros del mensaje.
+2. Llama al método [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice.sendgrid/sendgridclient/sendasync/) del objeto [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/), pasando el MailMessage como parámetro. El método se espera ya que devuelve un objeto Task. El objeto `cancellationToken` se pasa como un parámetro opcional al método [SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice.sendgrid/sendgridclient/sendasync/).
 
 ```cs
-MailMessage message = new MailMessage("from@aspose.com", "to@aspose.com", "Some subject", "Some body");
+MailMessage message = new MailMessage("from@aspose.com", "to@aspose.com", "Algun asunto", "Algun cuerpo");
 await ewsClient.SendAsync(message, cancellationToken: cancellationToken);
 ```
 
-## Obtención de un mensaje con archivos adjuntos
+## Recuperando un mensaje con archivos adjuntos
 
-Para recuperar un mensaje de correo electrónico de forma asincrónica, utilice el siguiente ejemplo de código con los pasos que se describen a continuación:
+Para recuperar un mensaje de correo electrónico de manera asíncrona, utiliza el siguiente ejemplo de código con los pasos descritos a continuación:
 
-1. Llame al [FetchItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/fetchitemasync/) método de un EWSClient. El método toma dos parámetros:
+1. Llama al método [FetchItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/fetchitemasync/) de un EWSclient. El método toma dos parámetros:
 
-   - `messageUri` es una cadena que representa el URI del mensaje que se va a buscar
-   - `cancellationToken` es un parámetro opcional que se puede usar para cancelar la operación asincrónica. El método devuelve un objeto de tarea que se resuelve en [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) objeto cuando se complete la operación asincrónica. La palabra clave «await» se usa para esperar a que finalice el objeto de la tarea antes de continuar.
+   - `messageUri` es una cadena que representa la URI del mensaje a recuperar
+   - `cancellationToken` es un parámetro opcional que se puede utilizar para cancelar la operación asíncrona. El método devuelve un objeto Task que se resuelve en un objeto [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) cuando la operación asíncrona se completa. La palabra clave "await" se utiliza para esperar que el objeto Task complete antes de proceder.
 
-2. Asignar a `fetched` variable el resultado de la tarea completada, que es una [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) objeto que contiene los datos del mensaje obtenido.
+2. Asigna a la variable `fetched` el resultado de la tarea completada, que es un objeto [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) que contiene los datos del mensaje recuperado.
 
    ```cs
       var fetched = await ewsClient.FetchItemAsync(messageUri, cancellationToken: cancellationToken);
    ```
 
-## Agregar mensajes
+## Agregando mensajes
 
-El ejemplo de código siguiente intenta anexar mensajes de correo electrónico de forma asincrónica. El código lleva a cabo los siguientes pasos:
+El siguiente ejemplo de código intenta agregar mensajes de correo electrónico de forma asíncrona. El código realiza los siguientes pasos:
 
-1. Llama al [AppendMessagesAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/) método de un [EWSclient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) objeto. El método requiere un [EwsAppendMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/) objeto que contiene parámetros: los mensajes que se van a añadir, el URI de la carpeta de destino y el token de cancelación.
-2. Crea el [EwsAppendMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/) objeto que usa el [Create](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/create/) método y lo configura con las siguientes llamadas a métodos:
+1. Llama al método [AppendMessagesAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/) del objeto [EWSclient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/). El método toma un objeto [EwsAppendMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/) que contiene parámetros: los mensajes a agregar, la URI de la carpeta de destino y el token de cancelación.
+2. Crea el objeto [EwsAppendMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/) utilizando el método [Create](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/create/) y lo configura con las siguientes llamadas de método:
 
-   - [AddMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/addmessage/) añade un mensaje a la operación de anexión.
-   - [SetFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setfolder/) establece el URI de la carpeta de destino para la operación de anexión.
-   - [SetCancellationToken](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setcancellationtoken/) establece el token de cancelación que se puede usar para cancelar la operación asincrónica.
+   - [AddMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/addmessage/) agrega un mensaje a la operación de agregar.
+   - [SetFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setfolder/) establece la URI de la carpeta de destino para la operación de agregar.
+   - [SetCancellationToken](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setcancellationtoken/) establece el token de cancelación que se puede utilizar para cancelar la operación asíncrona.
 
-3. The [AppendMessagesAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/) el método devuelve un objeto Task que se resuelve en un IEnumerable<string> objeto cuando se complete la operación asincrónica. La palabra clave «await» se usa para esperar a que finalice el objeto de la tarea antes de continuar.
-4. The `uris` a la variable se le asigna el resultado de la tarea completada, que es un IEnumerable<string> objeto que contiene los URI de los mensajes adjuntos.
+3. El método [AppendMessagesAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/) devuelve un objeto Task que se resuelve en un objeto IEnumerable<string> cuando la operación asíncrona se completa. La palabra clave "await" se usa para esperar que el objeto Task complete antes de continuar.
+4. La variable `uris` se asigna al resultado de la tarea completada, que es un objeto IEnumerable<string> que contiene las URIs de los mensajes agregados.
 
 ```cs
 IEnumerable<string> uris = await ewsClient.AppendMessagesAsync(
@@ -106,64 +105,64 @@ IEnumerable<string> uris = await ewsClient.AppendMessagesAsync(
         .SetCancellationToken(cancellationToken));
 ```
 
-## Copiar elementos
+## Copiando elementos
 
-En el ejemplo de código que aparece a continuación se muestra cómo copiar elementos y se llevan a cabo los pasos siguientes:
+El siguiente ejemplo de código muestra cómo copiar elementos y realiza los siguientes pasos:
 
-1. Llama al [CopyItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/copyitemasync/) método de un [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) objeto. El método toma tres parámetros:
+1. Llama al método [CopyItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/copyitemasync/) del objeto [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/). El método toma tres parámetros: 
 
-   - `messageUri` es una cadena que representa el URI del mensaje que se va a copiar
-   - `destinationFolderUri` es una cadena que representa el URI de la carpeta de destino
-   - `cancellationToken` es un parámetro opcional que se puede usar para cancelar la operación asincrónica.
+   - `messageUri` es una cadena que representa la URI del mensaje a copiar 
+   - `destinationFolderUri` es una cadena que representa la URI de la carpeta de destino
+   - `cancellationToken` es un parámetro opcional que se puede utilizar para cancelar la operación asíncrona. 
 
-   El método devuelve un objeto Task que se resuelve en una cadena cuando se completa la operación asincrónica. La palabra clave «await» se usa para esperar a que finalice el objeto Task antes de continuar.
+   El método devuelve un objeto Task que se resuelve en una cadena cuando la operación asíncrona se completa. La palabra clave "await" se usa para esperar que el objeto Task complete antes de continuar.
 
-2. `newItemUri` a la variable se le asigna el resultado de la tarea completada, que es una cadena que contiene el URI de la copia recién creada del mensaje.
+2. La variable `newItemUri` se asigna al resultado de la tarea completada, que es una cadena que contiene la URI de la copia recién creada del mensaje.
 
 ```cs
 string newItemUri = await ewsClient.CopyItemAsync(messageUri, destinationFolderUri, cancellationToken);
 ```
 
-## Eliminar elementos
+## Eliminando elementos
 
-El siguiente código intenta eliminar un mensaje de correo electrónico de forma asincrónica.
+El siguiente código intenta eliminar un mensaje de correo electrónico de forma asíncrona.
 
-Llama al [DeleteItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/deleteitemasync/) método de un objeto EWSClient. El método toma tres parámetros:
+Llama al método [DeleteItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/deleteitemasync/) del objeto EWSClient. El método toma tres parámetros:
 
-- `newItemUri` es una cadena que representa el URI del elemento que se va a eliminar
-- `DeletionOptions.DeletePermanently` especifica que el elemento se debe eliminar de forma permanente
-- `cancellationToken` es un parámetro opcional que se puede usar para cancelar la operación asincrónica.
+- `newItemUri` es una cadena que representa la URI del elemento a eliminar
+- `DeletionOptions.DeletePermanently` especifica que el elemento debe eliminarse permanentemente
+- `cancellationToken` es un parámetro opcional que se puede utilizar para cancelar la operación asíncrona. 
 
-El método devuelve un objeto Task que finaliza cuando finaliza la operación asincrónica. La palabra clave «await» se usa para esperar a que se complete el objeto de tarea antes de continuar.
+El método devuelve un objeto Task que se completa cuando la operación asíncrona se completa. La palabra clave "await" se usa para esperar que el objeto Task complete antes de continuar.
 
 ```cs
 await ewsClient.DeleteItemAsync(newItemUri, DeletionOptions.DeletePermanently, cancellationToken);
 ```
 
-## Eliminar carpetas
+## Eliminando carpetas
 
-El siguiente código intenta eliminar una carpeta de forma asincrónica.
+El siguiente código intenta eliminar una carpeta de forma asíncrona.
 
-Llama al [DeleteFolderAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletefolderasync/) método de un objeto EWSClient. El método toma tres parámetros:
+Llama al método [DeleteFolderAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletefolderasync/) del objeto EWSClient. El método toma tres parámetros:
 
-- `folderUri` es una cadena que representa el URI de la carpeta que se va a eliminar
-- `deletePermanently` especifica si se debe eliminar la carpeta de forma permanente o moverla a la carpeta «Elementos eliminados»
-- `cancellationToken` es un parámetro opcional que se puede usar para cancelar la operación asincrónica.
+- `folderUri` es una cadena que representa la URI de la carpeta a eliminar
+- `deletePermanently` especifica si se debe eliminar la carpeta permanentemente o moverla a la carpeta "Elementos Eliminados"
+- `cancellationToken` es un parámetro opcional que se puede utilizar para cancelar la operación asíncrona. 
 
-El método devuelve un objeto Task que finaliza cuando finaliza la operación asincrónica. La palabra clave «await» se usa para esperar a que se complete el objeto de tarea antes de continuar.
+El método devuelve un objeto Task que se completa cuando la operación asíncrona se completa. La palabra clave "await" se usa para esperar que el objeto Task complete antes de continuar.
 
 ```cs
 const bool deletePermanently = true;
 await ewsClient.DeleteFolderAsync(folderUri, deletePermanently, cancellationToken);
 ```
 
-## Actualización de elementos
+## Actualizando elementos
 
-El ejemplo de código siguiente intenta actualizar un artículo de forma asincrónica. Realiza los siguientes pasos:
+El siguiente ejemplo de código intenta actualizar un elemento de forma asíncrona. Realiza los siguientes pasos:
 
-1. Crea un [EwsUpdateItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/) objeto que usa el [Create](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/create/#create_2) método, pasando un objeto de elemento. El ewsUpdateItem representa los parámetros de una operación de actualización. El [SetCancellationToken](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setcancellationtoken/) el método se invoca en el [EwsUpdateItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/) objeto, pasando por el `cancellationToken` parámetro, que es un parámetro opcional que se puede usar para cancelar la operación asincrónica.
-2. Pasa el [EwsUpdateItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/) objeto como parámetro del [UpdateItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/updateitemasync/) método de un [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
-3. The [UpdateItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/updateitemasync/) el método devuelve un objeto Task que finaliza cuando finaliza la operación asincrónica. La palabra clave «await» se usa para esperar a que se complete el objeto de tarea antes de continuar.
+1. Crea un objeto [EwsUpdateItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/) utilizando el método [Create](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/create/#create_2), pasando un objeto de elemento. El EwsUpdateItem representa los parámetros de la operación de actualización. Se llama al método [SetCancellationToken](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setcancellationtoken/) en el objeto [EwsUpdateItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/), pasando el parámetro `cancellationToken`, que es un parámetro opcional que se puede usar para cancelar la operación asíncrona.
+2. Pasa el objeto [EwsUpdateItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsupdateitem/) como un parámetro al método [UpdateItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/updateitemasync/) de un [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+3. El método [UpdateItemAsync](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iasyncewsclient/updateitemasync/) devuelve un objeto Task que se completa cuando la operación asíncrona se completa. La palabra clave "await" se usa para esperar que el objeto Task complete antes de continuar.
 
 ```cs
 await ewsClient.UpdateItemAsync(

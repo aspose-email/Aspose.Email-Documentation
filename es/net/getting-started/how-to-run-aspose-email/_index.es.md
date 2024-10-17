@@ -1,75 +1,75 @@
 ---
-title: "Cómo ejecutar Aspose.Email"
+title: "Cómo Ejecutar Aspose.Email"
 url: /es/net/how-to-run-aspose-email/
 weight: 24
 type: docs
 ---
 
-A continuación, proporcionamos una guía paso a paso para configurar y ejecutar Aspose.Email en Linux y Windows, comenzando con un sencillo ejemplo de «Hola mundo».
+A continuación, proporcionamos una guía paso a paso para configurar y ejecutar Aspose.Email en Linux y Windows, comenzando con un ejemplo simple de "Hola Mundo".
 
-Para empezar a utilizar la biblioteca, solo tienes que seguir los pasos.
+Para comenzar a utilizar la biblioteca, simplemente siga los pasos.
 
-### **Hola mundo**
+### **Hola Mundo**
 
-1. **Crear un proyecto nuevo**
-   Abra Visual Studio y cree un nuevo proyecto de aplicación de consola.
+1. **Crear un Nuevo Proyecto** 
+   Abra Visual Studio y cree un nuevo proyecto de Aplicación de Consola.
 
-2. **Instale Aspose.Email**
-   Use NuGet Package Manager para instalar Aspose.Email. Abra la consola del administrador de paquetes y ejecute:
+2. **Instalar Aspose.Email** 
+   Use el Administrador de Paquetes NuGet para instalar Aspose.Email. Abra la Consola del Administrador de Paquetes y ejecute:
 
    ```
    Install-Package Aspose.Email
    ```
 
-3. **Escribe el código**
+3. **Escribir el Código**
 
    Agregue el siguiente código a su archivo Program.cs:
-  
+   
    ```csharp
-  
+   
    using System;
    using Aspose.Email;
-  
+   
    class Program
    {
        static void Main(string[] args)
        {
-           // Create a new email message
+           // Crear un nuevo mensaje de correo electrónico
             var eml = new MailMessage
             {
-                Subject = "Hola mundo!",
-                Body = "This is the body of the email.",
-                // Specify sender and recipient
+                Subject = "¡Hola Mundo!",
+                Body = "Este es el cuerpo del correo electrónico.",
+                // Especificar el remitente y el destinatario
                 From = "sender@example.com",
                 To = "recipient@example.com"
             };
 
-            // Display the message
-            Console.WriteLine("Subject: " + eml.Subject);
-            Console.WriteLine("Body: " + eml.Body);
+            // Mostrar el mensaje
+            Console.WriteLine("Asunto: " + eml.Subject);
+            Console.WriteLine("Cuerpo: " + eml.Body);
 
-            // Save email in EML format
+            // Guardar correo electrónico en formato EML
             eml.Save("my.eml", SaveOptions.DefaultEml);
-           
-            // Save email in MSG format
+            
+            // Guardar correo electrónico en formato MSG
             eml.Save("my.msg", SaveOptions.DefaultMsgUnicode);
        }
    }
    ```
-4. **Ejecute la aplicación**
+4. **Ejecutar la Aplicación**
 
-   Ejecute la aplicación. Deberías ver el asunto y el cuerpo del correo electrónico impresos en la consola.
+   Ejecute la aplicación. Debería ver el asunto y el cuerpo del correo electrónico impresos en la consola.
 
-### **Ejecute Aspose.Email para.NET en Linux**
+### **Ejecutar Aspose.Email para .NET en Linux**
 
-La ejecución de Aspose.Email para.NET en Linux implica configurar un entorno.NET en su máquina Linux. Siga estos pasos:
+Ejecutar Aspose.Email para .NET en Linux implica configurar un entorno .NET en su máquina Linux. Siga estos pasos:
 
-1. **Instalar el SDK de.NET**
+1. **Instalar .NET SDK**
 
-   Descargue e instale el SDK de.NET desde el sitio web oficial de Microsoft.NET.
-  
-   Por ejemplo, en Ubuntu, puedes instalar el SDK de.NET con los siguientes comandos:
-  
+   Descargue e instale el SDK de .NET desde el sitio web oficial de Microsoft .NET.
+   
+   Por ejemplo, en Ubuntu, puede instalar el SDK de .NET utilizando los siguientes comandos:
+   
    ```bash
    wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
    sudo dpkg -i packages-microsoft-prod.deb
@@ -78,31 +78,29 @@ La ejecución de Aspose.Email para.NET en Linux implica configurar un entorno.NE
    sudo apt-get update
    sudo apt-get install -y dotnet-sdk-6.0
    ```
-2. **Crear un proyecto nuevo**
+2. **Crear un Nuevo Proyecto**
 
-   Abra una terminal y cree una nueva aplicación de consola de.NET:
-  
+   Abra una terminal y cree una nueva Aplicación de Consola .NET:
+   
    ```bash
    dotnet new console -n HelloWorldAspose
    cd HelloWorldAspose
    ```
-  
-3. **Agregar paquete Aspose.Email**
+   
+3. **Agregar el Paquete Aspose.Email**
 
-   Añade Aspose.Email a tu proyecto:
-  
+   Agregue Aspose.Email a su proyecto:
+   
    ```bash
    dotnet add package Aspose.Email
    ```
 
-4. **Escribe el código**
-   Sustituya el contenido de Program.cs por el código de ejemplo «Hola mundo» proporcionado anteriormente.
+4. **Escribir el Código**
+   Reemplace el contenido de Program.cs con el código de ejemplo "Hola Mundo" proporcionado anteriormente.
 
-5. **Ejecute la aplicación:**
+5. **Ejecutar la Aplicación:**
    Ejecute la aplicación:
 
    ```bash
    dotnet run
    ```
-
-

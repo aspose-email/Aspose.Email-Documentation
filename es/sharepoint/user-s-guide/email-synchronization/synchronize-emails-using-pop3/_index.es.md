@@ -1,40 +1,40 @@
 ---
-title: "Sincronizar correos electrónicos mediante POP3"
+title: "Sincronizar correos electrónicos usando POP3"
 url: /es/sharepoint/synchronize-emails-using-pop3/
 weight: 20
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-En este artículo se muestra cómo utilizar la función de sincronización de correo electrónico de Aspose.Email para sincronizar los correos electrónicos con un servidor POP3.
+Este artículo muestra cómo usar la función de sincronización de correos electrónicos de Aspose.Email para sincronizar correos electrónicos con un servidor POP3. 
 
-{{% /alert %}}
-## **Sincronización de correos electrónicos**
-1. Haga clic en el elemento del menú «Sincronizar configuración» en la cinta «Herramientas de Aspose» para abrir la ventana emergente de configuración. Introduzca la siguiente información en esta pantalla:
-   1. Activar la sincronización: comprobar
+{{% /alert %}} 
+## **Sincronizando Correos Electrónicos**
+1. Haga clic en el elemento del menú “Configuración de Sincronización” en la cinta de “Herramientas de Aspose” para abrir la ventana emergente de configuración. Ingresa la siguiente información en esta pantalla: 
+   1. Habilitar Sincronización: marcar
    1. Protocolo: POP3
-   1. Servidor de correo: pop.host.com (la dirección de su servidor de correo POP3)
+   1. Servidor de correo: pop.host.com (la dirección de tu servidor de correo POP3)
    1. Puerto: 110 (puerto POP3)
    1. SSL: desmarcar
-   1. Dejar en el servidor: comprobar
-   1. Nombre de usuario: username@host.com (especifique la dirección de correo electrónico completa)
-   1. Contraseña: especifique la contraseña
-   1. Horario: elige «Minutamente» y «Cada 5 minutos» o lo que más te convenga
+   1. Dejar en el Servidor: marcar
+   1. Nombre de usuario: username@host.com (especificar la dirección de correo electrónico completa)
+   1. Contraseña: especificar la contraseña
+   1. Programar: elegir “Cada minuto” y “Cada 5 minutos” o lo que te convenga 
 
-      **El cuadro de diálogo Configuración de sincronización está configurado para conectarse a un servidor POP3.**
+      **El cuadro de diálogo de Configuración de Sincronización configurado para conectarse a un servidor POP3.** 
 
 ![todo:image_alt_text](synchronize-emails-using-pop3_1.png)
 
 
 
 
-1. Click **Haga clic para probar los parámetros de conexión** para verificar la conexión. Si hay algún problema con las credenciales o la dirección del host, aparecerá un mensaje de error.
-1. Click **Save** para guardar la configuración.
+1. Haga clic en **Haga clic para probar los parámetros de conexión** para verificar la conexión. Si hay algún problema con las credenciales o la dirección del host, se mostrará un mensaje de error.
+1. Haga clic en **Guardar** para guardar la configuración.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para iniciar la sincronización inmediatamente, haga clic en **Sincronizar ahora** en la cinta de Aspose Tools.
+Para iniciar la sincronización de inmediato, haga clic en **Sincronizar Ahora** en la cinta de Herramientas de Aspose. 
 
 {{% /alert %}}

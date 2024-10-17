@@ -1,97 +1,97 @@
 ---
-title: "Trabajar con carpetas en Exchange Server"
+title: "Trabajando con Carpetas en Exchange Server"
 url: /es/net/working-with-folders-on-exchange-server/
 weight: 80
 type: docs
 ---
 
 
-## **Listar todas las carpetas del servidor**
+## **Listado de todas las Carpetas del Servidor**
 
-La API Aspose.Email ofrece la capacidad de conectarse al servidor Exchange y enumerar todas las carpetas y subcarpetas. También puede recuperar todas las subcarpetas de cada carpeta de forma recursiva. También ofrece la capacidad de enumerar carpetas con paginación desde el cliente de Exchange mediante el servicio web de Exchange (EWS). En este artículo se muestra cómo recuperar todas las subcarpetas del servidor de Exchange y cómo recuperar las carpetas con paginación.
+Aspose.Email API proporciona la capacidad de conectarse al Exchange Server y listar todas las carpetas y subcarpetas. También puedes recuperar todas las subcarpetas de cada carpeta de manera recursiva. También ofrece la capacidad de enumerar carpetas con paginación desde el cliente de Exchange utilizando Exchange Web Service (EWS). Este artículo muestra cómo recuperar todas las subcarpetas del servidor Exchange y recuperar carpetas con paginación.
 
-El siguiente fragmento de código muestra cómo enumerar carpetas de Exchange Server.
+El siguiente fragmento de código muestra cómo listar carpetas desde el Exchange Server.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ListFoldersFromExchangeServer-ListFoldersFromExchangeServer.cs" >}}
 
-## **Obtenga información sobre el tipo de carpeta mediante EWS**
+## **Obtener Información del Tipo de Carpeta usando EWS**
 
-The [FolderType](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderinfo/foldertype/) propiedad proporcionada por [ExchangeFolderInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderinfo/) La clase se puede usar para obtener información sobre el tipo de carpeta. Se muestra en el ejemplo de código que aparece a continuación.
+La propiedad [FolderType](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderinfo/foldertype/) proporcionada por la clase [ExchangeFolderInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderinfo/) puede ser utilizada para obtener información sobre el tipo de carpeta. Se muestra en el siguiente ejemplo de código.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-GetFolderTypeInformationUsingEWS-GetFolderTypeInformationUsingEWS.cs" >}}
 
-## **Enumeración de carpetas con soporte de paginación mediante EWS**
+## **Enumerando Carpetas con Soporte de Paginación usando EWS**
 
-El siguiente fragmento de código muestra cómo utilizar el soporte de paginación mediante EWS.
+El siguiente fragmento de código muestra cómo usar el soporte de paginación utilizando EWS.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-EnumeratMessagesWithPaginginEWS-EnumeratMessagesWithPaginginEWS.cs" >}}
 
-## **Acceso a las carpetas o subcarpetas personalizadas del buzón**
+## **Accediendo a Carpetas o Subcarpetas Personalizadas del Buzón**
 
-[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) permite a los desarrolladores acceder a cualquier carpeta o subcarpeta personalizada desde el buzón. El [FolderExists()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/folderexists/#folderexists/) función de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) devuelve el URI de una carpeta/subcarpeta personalizada especificada, que se puede usar entonces para acceder a la carpeta de destino. En el ejemplo siguiente, se accede a una carpeta personalizada denominada «TestInbox», que se crea en INBOX, y se muestran todos los mensajes de esta carpeta personalizada. Para realizar esta tarea, realice los siguientes pasos:
+[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) permite a los desarrolladores acceder a cualquier carpeta o subcarpeta personalizada del buzón. La función [FolderExists()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/folderexists/#folderexists/) de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) devuelve el URI de una carpeta/subcarpeta personalizada especificada, que se puede usar para acceder a la carpeta de destino. En el siguiente ejemplo, se accede a una carpeta personalizada llamada "TestInbox", que se crea bajo INBOX, y se muestran todos los mensajes de esta carpeta personalizada. Para realizar esta tarea, sigue los siguientes pasos:
 
-1. Inicialice el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) objetar proporcionando credenciales válidas.
-1. Acceda al buzón predeterminado.
-1. Acceda a la carpeta principal, que en este ejemplo es INBOX. Esta carpeta principal también puede ser una carpeta personalizada en sí misma.
-1. Use [FolderExists()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/folderexists/#folderexists/) para buscar en la subcarpeta personalizada especificada, por ejemplo, «TestInbox». Devolverá el URI de «TestInbox».
-1. Usa este Uri para acceder a todos los mensajes de esa carpeta personalizada.
+1. Inicializa el objeto [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) proporcionando credenciales válidas.
+1. Accede al buzón predeterminado.
+1. Accede a la carpeta principal, que es INBOX en este ejemplo. Esta carpeta principal también puede ser una carpeta personalizada.
+1. Usa [FolderExists()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/folderexists/#folderexists/) para buscar la subcarpeta personalizada especificada, por ejemplo "TestInbox". Esto devolverá el URI de "TestInbox".
+1. Usa este URI para acceder a todos los mensajes en esa carpeta personalizada.
 
-El siguiente fragmento de código muestra cómo acceder a las carpetas o subcarpetas personalizadas de los buzones de correo con EWS.
+El siguiente fragmento de código muestra cómo acceder a carpetas o subcarpetas personalizadas del buzón con EWS.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-AccessCustomFolderUsingExchangeWebServiceClient-AccessCustomFolderUsingExchangeWebServiceClient.cs" >}}
 
-## **Listado de carpetas públicas**
+## **Listado de Carpetas Públicas**
 
-Microsoft Exchange Server permite a los usuarios crear carpetas públicas y publicar mensajes en ellas. Para hacerlo a través de su aplicación, utilice Aspose.Email [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) clase para conectarse al servidor Exchange y leer y descargar mensajes y publicaciones de carpetas públicas. En el siguiente fragmento de código se muestra cómo leer todas las carpetas y subcarpetas públicas, y cómo mostrar y descargar los mensajes que se encuentran en estas carpetas. Este ejemplo solo funciona con Microsoft Exchange Server 2007 o superior, ya que solo estos son compatibles con EWS.
+Microsoft Exchange Server permite a los usuarios crear carpetas públicas y publicar mensajes en ellas. Para hacerlo a través de tu aplicación, utiliza la clase Aspose.Email [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) para conectarte al Exchange Server y leer y descargar mensajes y publicaciones de carpetas públicas. El siguiente fragmento de código muestra cómo leer todas las carpetas públicas y subcarpetas, y listar y descargar cualquier mensaje encontrado en estas carpetas. Este ejemplo solo funciona con Microsoft Exchange Server 2007 o superior, ya que solo estos soportan EWS.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-DownloadMessagesFromPublicFolders-DownloadMessagesFromPublicFolders.cs" >}}
 
-## **Copiar un mensaje a otra carpeta**
+## **Copiar un Mensaje a Otra Carpeta**
 
-La API Aspose.Email permite copiar un mensaje de una carpeta a otra mediante el [CopyItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/copyitem/#copyitem) método. La versión sobrecargada de este método devuelve el URI único del mensaje copiado, como se muestra en este artículo.
+Aspose.Email API permite copiar un mensaje de una carpeta a otra carpeta utilizando el método [CopyItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/copyitem/#copyitem). La versión sobrecargada de este método devuelve el URI Único del mensaje copiado como se muestra en este artículo.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CopyingMessageToAnotherFolder-CopyingMessageToAnotherFolder.cs" >}}
 
-## **Sincronización de elementos de carpeta**
+## **Sincronizando Elementos de Carpeta**
 
-Aspose.Email para API.NET [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) La interfaz proporciona la función de sincronizar una carpeta de Exchange para su contenido. El [SyncFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/syncfolder/#syncfolder/) método expuesto por el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) la clase se puede usar para sincronizar la información de carpetas en una carpeta específica. El siguiente fragmento de código muestra cómo sincronizar la información de la carpeta de Exchange.
+Aspose.Email para .NET API [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) interface proporciona la funcionalidad de sincronizar una carpeta de Exchange por su contenido. El método [SyncFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/syncfolder/#syncfolder/) expuesto por la clase [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/) puede ser utilizado para realizar la sincronización de información de carpeta en una carpeta especificada. El siguiente fragmento de código muestra cómo sincronizar la información de la carpeta de Exchange.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SynchronizeFolderItems-SynchronizeFolderItems.cs" >}}
 
-## **Recuperación de permisos para carpetas de Exchange**
+## **Recuperando Permisos para Carpetas de Exchange**
 
-A los usuarios se les asignan permisos para las carpetas públicas de Exchange Server, lo que limita o determina el nivel de acceso que un usuario tiene a estas carpetas. El [ExchangeFolderPermission](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderpermission/) la clase proporciona un conjunto de propiedades de permisos para las carpetas de Exchange, como [PermissionLevel](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderpermission/permissionlevel/), si pueden [CanCreateItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangebasepermission/cancreateitems/), [DeleteItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangebasepermission/deleteitems/)y realizar otras tareas según lo especificado en las propiedades del permiso. Los permisos se pueden recuperar mediante el [GetFolderPermissions()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getfolderpermissions/#getfolderpermissions) método de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). En este artículo se muestra cómo recuperar los permisos aplicados a una carpeta pública para todos los usuarios que tienen acceso a las carpetas compartidas.
+A los usuarios se les asignan permisos a carpetas públicas en Exchange Server, lo que limita/determina el nivel de acceso que un usuario tiene a estas carpetas. La clase [ExchangeFolderPermission](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderpermission/) proporciona un conjunto de propiedades de permisos para carpetas de Exchange tales como el [PermissionLevel](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderpermission/permissionlevel/), si pueden [CanCreateItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangebasepermission/cancreateitems/), [DeleteItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangebasepermission/deleteitems/), y realizar otras tareas según lo especificado por las propiedades de permiso. Los permisos pueden ser recuperados utilizando el método [GetFolderPermissions()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getfolderpermissions/#getfolderpermissions) de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/). Este artículo muestra cómo recuperar los permisos aplicados a una carpeta pública para todos los usuarios que tienen acceso a las carpetas compartidas.
 
 Para realizar esta tarea:
 
-1. Inicialice el [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
-1. Usa el [ListPublicFolders](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listpublicfolders/#listpublicfolders) para obtener una lista de todas las carpetas públicas
-1. Recupere los permisos asociados a una carpeta mediante el [GetFolderPermisssions()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getfolderpermissions/#getfolderpermissions) method
+1. Inicializa el [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/ewsclient/).
+1. Usa el [ListPublicFolders](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/listpublicfolders/#listpublicfolders) para obtener una lista de todas las carpetas públicas.
+1. Recupera los permisos asociados con una carpeta utilizando el método [GetFolderPermisssions()](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/getfolderpermissions/#getfolderpermissions).
 
-El siguiente fragmento de código muestra cómo usar el [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) clase para recuperar los permisos aplicados a una carpeta.
+El siguiente fragmento de código muestra cómo usar la clase [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/ewsclient/) para recuperar los permisos aplicados a una carpeta.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-RetrieveFolderPermissionsUsingExchangeWebServiceClient-RetrieveFolderPermissionsUsingExchangeWebServiceClient.cs" >}}
 
-## **Creación de carpetas y subcarpetas**
+## **Creando Carpetas y Subcarpetas**
 
-La API Aspose.Email ofrece la capacidad de crear carpetas en un buzón de Exchange. La [CreateFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createfolder/#createfolder/) método de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) se puede utilizar para este propósito. Para crear una carpeta en el buzón del servidor Exchange, se pueden seguir los pasos siguientes.
+Aspose.Email API proporciona la capacidad de crear carpetas en un buzón de Exchange. El método [CreateFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createfolder/#createfolder/) de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/) puede ser utilizado para este propósito. Para crear una carpeta en el buzón del servidor Exchange, se pueden seguir los siguientes pasos.
 
 1. Crea una instancia de [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/).
-1. Configure el [UseSlashAsFolderSeparator](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/useslashasfolderseparator/) propiedad según sea necesario. Si se establece en **true**, la aplicación considerará la «barra» como separador de carpetas y la subcarpeta se creará después de la barra.
-1. Usa el [CreateFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createfolder/#createfolder/) método para crear la carpeta.
+1. Establece la propiedad [UseSlashAsFolderSeparator](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/useslashasfolderseparator/) según sea necesario. Si se establece en **true**, la aplicación considerará la "Barra" como separador de carpetas y la subcarpeta se creará después de la barra.
+1. Usa el método [CreateFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createfolder/#createfolder/) para crear la carpeta.
 
 El siguiente fragmento de código muestra cómo crear carpetas y subcarpetas.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CreateFoldersOnExchangeServerMailbox-CreateFoldersOnExchangeServerMailbox.cs" >}}
 
-## **Haga copias de seguridad de las carpetas de Exchange en PST**
+## **Respaldar Carpetas de Exchange a PST**
 
-Suele ocurrir que los usuarios deseen realizar una copia de seguridad de todas o algunas de las carpetas del buzón. Aspose.Email ofrece la posibilidad de realizar una copia de seguridad de todas las carpetas de buzones de correo de Exchange o de las especificadas en un archivo PST. En este artículo se describe cómo realizar copias de seguridad de las carpetas de Exchange en un PST con código de ejemplo. Para realizar la copia de seguridad de las carpetas del servidor Exchange, se pueden seguir los pasos siguientes.
+A menudo sucede que los usuarios pueden querer hacer una copia de seguridad de todas o algunas de las carpetas del buzón. Aspose.Email proporciona la capacidad de hacer una copia de seguridad de todas o de las carpetas de buzón de Exchange especificadas a un PST. Este artículo describe cómo hacer una copia de seguridad de carpetas de Exchange a un PST con código de muestra. Para hacer la copia de seguridad de las carpetas del servidor Exchange, se pueden seguir los siguientes pasos.
 
-1. Inicie el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) con credenciales de usuario
-1. Agregue la información de la carpeta requerida a [ExchangeFolderInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderinfocollection/)
-1. Usuario del cliente [Backup](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/backup/#backup/) método para exportar el contenido de la carpeta a PST
+1. Inicia el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) con las credenciales del usuario.
+1. Agrega la información de la carpeta requerida a [ExchangeFolderInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangefolderinfocollection/).
+1. Usa el método [Backup](https://reference.aspose.com/email/net/aspose.email.clients.exchange/webservice/iewsclient/backup/#backup/) del cliente para exportar el contenido de la carpeta a PST.
 
-El siguiente fragmento de código muestra cómo hacer copias de seguridad de las carpetas de intercambio en PST.
+El siguiente fragmento de código muestra cómo respaldar carpetas de Exchange a PST.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ExchangeFoldersBackupToPST-ExchangeFoldersBackupToPST.cs" >}}

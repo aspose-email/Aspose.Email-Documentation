@@ -1,36 +1,36 @@
 ---
-title: "Agregar MapiContact a PST en Ruby"
+title: "Añadiendo MapiContact a PST en Ruby"
 url: /es/java/adding-mapicontact-to-pst-in-ruby/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Agregar MapiContact a PST**
-Para agregar MapiContact a PST usando **Aspose.Email Java para Ruby**, simplemente invoca **AddMapiContactToPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Añadiendo MapiContact a PST**
+Para añadir MapiContact a PST usando **Aspose.Email Java for Ruby**, simplemente invoca el módulo **AddMapiContactToPST**. Aquí puedes ver un código de ejemplo.
 
-**Código Ruby**
+**Código en Ruby**
 
 ```ruby
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
-\# Create an instance of MapiContact
+\# Crear una instancia de MapiContact
 
 mapi_contact = Rjb::import('com.aspose.email.MapiContact')
 
-\# Contact #1
+\# Contacto #1
 
 contact1 = mapi_contact.new("Sebastian Wright", "SebastianWright@dayrep.com")
 
-\# Contact #2
+\# Contacto #2
 
-contact2 = mapi_contact.new("Wichert Kroos", "WichertKroos@teleworm.us", "Grade A Investment")
+contact2 = mapi_contact.new("Wichert Kroos", "WichertKroos@teleworm.us", "Inversión de Grado A")
 
-\# Contact #3
+\# Contacto #3
 
 contact3 = mapi_contact.new("Christoffer van de Meeberg", "ChristoffervandeMeeberg@teleworm.us", "Krauses Sofa Factory", "046-630-4614")
 
-\# Contact #4
+\# Contacto #4
 
 contact4 = Rjb::import('com.aspose.email.MapiContact').new
 
@@ -38,7 +38,7 @@ contact4.setNameInfo(Rjb::import('com.aspose.email.MapiContactNamePropertySet').
 
 contact4.getPersonalInfo().setGender(Rjb::import('com.aspose.email.MapiContactGender').Female)
 
-contact4.setProfessionalInfo(Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new("Adaptaz", "Recording engineer"))
+contact4.setProfessionalInfo(Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new("Adaptaz", "Ingeniero de grabación"))
 
 contact4.getPhysicalAddresses().getWorkAddress().setAddress("4 Darwinia Loop EIGHTY MILE BEACH WA 6725")
 
@@ -48,7 +48,7 @@ contact4.getTelephones().setBusinessTelephoneNumber("(08)9080-1183")
 
 contact4.getTelephones().setMobileTelephoneNumber("(925)599-3355")
 
-\# Contact #5
+\# Contacto #5
 
 contact5 = Rjb::import('com.aspose.email.MapiContact').new
 
@@ -56,7 +56,7 @@ contact5.setNameInfo(Rjb::import('com.aspose.email.MapiContactNamePropertySet').
 
 contact5.getPersonalInfo().setGender(Rjb::import('com.aspose.email.MapiContactGender').Male)
 
-contact5.setProfessionalInfo(Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new("Briazz", "Psychiatric aide"))
+contact5.setProfessionalInfo(Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new("Briazz", "Ayudante psiquiátrico"))
 
 contact5.getPhysicalAddresses().getWorkAddress().setAddress("Horner Strasse 12 4421 SAASS")
 
@@ -64,13 +64,13 @@ contact5.getTelephones().setBusinessTelephoneNumber("0650 675 73 30")
 
 contact5.getTelephones().setHomeTelephoneNumber("(661)387-5382")
 
-\# Contact #6
+\# Contacto #6
 
 contact6 = Rjb::import('com.aspose.email.MapiContact').new
 
 contact6.setNameInfo(Rjb::import('com.aspose.email.MapiContactNamePropertySet').new("Bertha", "A.", "Buell"))
 
-contact6.setProfessionalInfo(Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new("Awthentikz", "Social work assistant"))
+contact6.setProfessionalInfo(Rjb::import('com.aspose.email.MapiContactProfessionalPropertySet').new("Awthentikz", "Asistente de trabajo social"))
 
 contact6.getPersonalInfo().setPersonalHomePage("B2BTies.com")
 
@@ -82,7 +82,7 @@ contact6.setTelephones(Rjb::import('com.aspose.email.MapiContactTelephonePropert
 
 pst = Rjb::import('com.aspose.email.PersonalStorage').create(data_dir + "MapiContactToPST.pst", Rjb::import('com.aspose.email.FileFormatVersion').Unicode)
 
-contactFolder = pst.createPredefinedFolder("Contacts", Rjb::import('com.aspose.email.StandardIpmFolder').Contacts)
+contactFolder = pst.createPredefinedFolder("Contactos", Rjb::import('com.aspose.email.StandardIpmFolder').Contacts)
 
 contactFolder.addMapiMessageItem(contact1)
 
@@ -96,10 +96,10 @@ contactFolder.addMapiMessageItem(contact5)
 
 contactFolder.addMapiMessageItem(contact6)
 
-puts "Added MapiContacts Successfully."
+puts "MapiContacts añadidos con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiContact a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Añadiendo MapiContact a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/addmapicontacttopst.rb)

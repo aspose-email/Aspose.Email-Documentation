@@ -1,42 +1,42 @@
 ---
-title: "Trabajando con marcas de mensajes en el servidor"
+title: "Trabajando con las Banderas de Mensaje en el Servidor"
 url: /es/net/working-with-message-flags-on-server/
 weight: 30
 type: docs
 ---
 
 
-## **Cambiar las banderas de los mensajes**
+## **Cambio de las Banderas de Mensaje**
 
-Puede cambiar las marcas de los mensajes mediante el [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/) método. Este método toma dos parámetros.
+Puedes cambiar las banderas de mensaje utilizando el método [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/). Este método toma dos parámetros.
 
-1. El número de secuencia de un mensaje o su identificador único.
+1. El número de secuencia de un mensaje o su ID único.
 2. [MessageFlag](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/).
 
-Se pueden configurar los siguientes indicadores:
+Se pueden establecer las siguientes banderas:
 
-- [Answered](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/answered/)
-- [Deleted](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/deleted/)
-- [Draft](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/draft/)
-- [Empty](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/empty/)
-- [Flagged](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/flagged/)
-- [IsRead](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/isread/)
-- [Recent](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/recent/)
+- [Respondido](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/answered/)
+- [Eliminado](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/deleted/)
+- [Borrador](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/draft/)
+- [Vacío](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/empty/)
+- [Marcado](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/flagged/)
+- [Está leída](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/isread/)
+- [Reciente](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/recent/)
 
-### **Configuración de banderas de mensajes**
+### **Establecer Banderas de Mensaje**
 
-El siguiente fragmento de código muestra cómo cambiar las marcas de mensajes en un servidor IMAP con Aspose.Email.
+El siguiente fragmento de código te muestra cómo cambiar las banderas de mensaje en un servidor IMAP con Aspose.Email.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SettingMessageFlags-SettingMessageFlags.cs" >}}
 
-### **Eliminar marcas de mensajes**
+### **Eliminar Banderas de Mensaje**
 
-Las marcas de mensajes también se pueden eliminar con la [RemoveMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/removemessageflags/#removemessageflags/) método. El uso es similar al del [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/) método. Toma un número de secuencia o un identificador de mensaje único y [MessageFlag](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/). En el siguiente fragmento de código, se muestra cómo eliminar las marcas de mensajes.
+Las banderas de mensaje también se pueden eliminar con el método [RemoveMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/removemessageflags/#removemessageflags/). El uso es similar al del método [ChangeMessageFlags()](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/changemessageflags/#changemessageflags/). Toma un número de secuencia o un ID único de mensaje y [MessageFlag](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageflags/). El siguiente fragmento de código te muestra cómo eliminar las banderas de mensaje.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-RemovingMessageFlags-RemovingMessageFlags.cs" >}}
 
-## **Configuración de banderas personalizadas**
+## **Establecer Banderas Personalizadas**
 
-También puedes configurar marcas personalizadas para un mensaje mediante el [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) de la API. El addMessageFlags de ImapClient ofrece la posibilidad de establecer marcas personalizadas en los mensajes.
+También puedes establecer banderas personalizadas en un mensaje utilizando el [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) de la API. El método AddMessageFlags de ImapClient proporciona la capacidad de establecer banderas personalizadas en los mensajes.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SetCustomFlag-SetCustomFlag.cs" >}}

@@ -1,5 +1,5 @@
 ---
-title: "Programación de correo electrónico en Jython"
+title: "Programación de Correo en Jython"
 url: /es/java/programming-email-in-jython/
 weight: 10
 type: docs
