@@ -1,12 +1,12 @@
 ---
-title: "Personalización de encabezados de correo electrónico en Ruby"
-url: /es/java/customizing-email-headers-in-ruby/
+title: "Personalizando Encabezados de Correo Electrónico en Ruby"
+url: /es/java/personalizando-encabezados-de-correo-electronico-en-ruby/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Personalización de encabezados de correo electrónico**
-Para personalizar los encabezados de correo electrónico mediante **Aspose.Email Java para Ruby**, simplemente invoca **CustomizeEmailHeaders** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Personalizando Encabezados de Correo Electrónico**
+Para personalizar encabezados de correo electrónico usando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **CustomizeEmailHeaders**. Aquí puedes ver un ejemplo de código.
 
 **Código Ruby**
 
@@ -16,33 +16,33 @@ Para personalizar los encabezados de correo electrónico mediante **Aspose.Email
 
 
 
-\# Create a new instance of MailMessage class
+\# Crear una nueva instancia de la clase MailMessage
 
 message = Rjb::import('com.aspose.email.MailMessage').new
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
-\# Set Html body
+\# Establecer el cuerpo Html
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-        "<font color=blue>This line is in blue color</font>")
+        "<font color=blue>Esta línea está en color azul</font>")
 
-\# Set sender information
+\# Establecer información del remitente
 
-message.setFrom(Rjb::import('com.aspose.email.MailAddress').new("from@domain.com", "Sender Name", false))
+message.setFrom(Rjb::import('com.aspose.email.MailAddress').new("from@domain.com", "Nombre del Remitente", false))
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-message.getTo().add(Rjb::import('com.aspose.email.MailAddress').new("to@domain.com", "Recipient 1", false))
+message.getTo().add(Rjb::import('com.aspose.email.MailAddress').new("to@domain.com", "Destinatario 1", false))
 
-\# Message subject
+\# Asunto del mensaje
 
-message.setSubject("Customizing Email Headers")
+message.setSubject("Personalizando Encabezados de Correo Electrónico")
 
-\# Specify Date
+\# Especificar la Fecha
 
 calendar = Rjb::import('java.util.Calendar').getInstance(Rjb::import('java.util.TimeZone').getTimeZone("GMT"))
 
@@ -50,24 +50,24 @@ date = calendar.getTime()
 
 message.setDate(date)
 
-\# Specify XMailer
+\# Especificar XMailer
 
 message.setXMailer("Aspose.Email")
 
-\# Specify Secret Header
+\# Especificar Encabezado Secreto
 
-message.getHeaders().add("secret-header", "mystery")
+message.getHeaders().add("secret-header", "misterio")
 
-\# Save message to disc
+\# Guardar mensaje en disco
 
 message.save(data_dir + "MsgHeaders.msg", Rjb::import('com.aspose.email.MessageFormat').getMsg())
 
-\# Display Status
+\# Mostrar Estado
 
-puts "Customized message headers Successfully."
+puts "Encabezados de mensaje personalizados con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Personalización de encabezados de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Personalizando Encabezados de Correo Electrónico (Aspose.Email)** de cualquiera de los siguientes sitios de codificación social:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/customizeemailheaders.rb)

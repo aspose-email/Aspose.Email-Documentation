@@ -1,67 +1,67 @@
 ---
-title: "Características de Microsoft Graph Utility"
+title: "Características de Utilidad de Microsoft Graph"
 url: /es/java/microsoft-graph-utility-features/
 weight: 10
 type: docs
 ---
 
 
-## **Creación de un proyecto en el Centro de administración de Azure Active Directory**
+## **Creando Proyecto en el Centro de Administración de Azure Active Directory**
 
-Se va a crear un proyecto en el centro de administración de Azure Active Directory para un usuario que tenga una cuenta de MS Office.
-### **Pasos para crear un proyecto en el Centro de administración de Azure Active Directory**
+Se debe crear un proyecto en el centro de administración de Azure Active Directory para un usuario con cuenta de MS Office.
+### **Pasos para Crear un Proyecto en el Centro de Administración de Azure Active Directory**
 
-A continuación se muestra un tutorial paso a paso para crear un proyecto en el centro de administración de Azure Active Directory.
+A continuación se presenta un tutorial paso a paso para crear un proyecto en el centro de administración de Azure Active Directory.
 
-#### 1. Vaya a Azure Active Directory e inicie sesión con sus credenciales de MS Office.
+#### 1. Ve a Azure Active Directory e inicia sesión con tus credenciales de MS Office.
 
-**Azure Active Directory** Enlace - <https://aad.portal.azure.com/>
+**Enlace de Azure Active Directory** - <https://aad.portal.azure.com/>
 
-#### 2. Cree una aplicación Azure AD en su inquilino.
+#### 2. Crea una Aplicación de Azure AD en tu inquilino.
 
-En el panel lateral izquierdo, haga clic en la etiqueta **Azure Active Directory**. Esto abrirá la hoja para Azure Active Directory. En esa pantalla debería aparecer una etiqueta **Registros de aplicaciones**. Este es el punto de partida para registrar una aplicación Azure AD. Esta hoja le permitirá crear una nueva aplicación para Azure AD.
+En el panel del lado izquierdo, haz clic en la etiqueta **Azure Active Directory**. Esto abrirá el panel de Azure Active Directory. En esa pantalla deberías ver una etiqueta **Registro de aplicaciones**. Este es el punto de partida para registrar una Aplicación de Azure AD. Este panel te permitirá crear una nueva aplicación para Azure AD.
 
-Haga clic en el botón **Nuevo registro** para crear una nueva aplicación.
+Haz clic en el botón **Nuevo registro** para crear una nueva aplicación.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_1.png)
 
-#### 3. Ahora verá la nueva hoja de registro de aplicaciones.
+#### 3. Ahora verás el panel de registro de la nueva aplicación.
 
-- **Name** Este será el nombre de su solicitud.
-- **Tipos de cuentas compatibles** Esta sección restringirá el acceso.
+- **Nombre** Este será el nombre de tu aplicación.
+- **Tipos de cuentas admitidos** Esta sección restringirá el acceso.
 
-Click **Register** button.
+Haz clic en el botón **Registrar**.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_2.png)
 
-#### 4. Debería ver la hoja de aplicaciones recién registradas.
+#### 4. Deberías ver el panel de aplicaciones recién registradas.
 
-- **ID de aplicación (cliente)** El identificador de su solicitud.
-- **ID de directorio (inquilino)** El identificador de inquilino de Azure AD.
+- **ID de aplicación (cliente)** La id de tu aplicación.
+- **ID de directorio (inquilino)** La id del inquilino de Azure AD.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_6.png)
 
-#### 5. Permitir permisos para la API de Microsoft Graph.
+#### 5. Permitiendo permisos para la API de Microsoft Graph.
 
-Haga clic en el **Permisos de API** label.
+Haz clic en la etiqueta **Permisos de la API**.
 
-Azure ya le ha dado **User.Read** permisos delegados para su aplicación. Este permiso nos permitirá leer la información de usuario de un usuario que haya iniciado sesión. Estos son los permisos de la API de Microsoft Graph, por otro lado, podemos llamarlos como **Scopes**.
+Azure ya te ha otorgado permisos delegados **User.Read** para tu aplicación. Este permiso nos permitirá leer la información del usuario para un usuario que ha iniciado sesión. Estos son permisos de la API de Microsoft Graph, y por otro lado los podemos llamar **Scopes**.
 
-La lista completa de ámbitos de la API de Microsoft Graph - <https://docs.microsoft.com/en-us/graph/permissions-reference>.
+La lista completa de scopes para la API de Microsoft Graph - <https://docs.microsoft.com/en-us/graph/permissions-reference>.
 
-Haga clic en **+ Añadir un permiso** botón y selección **Microsoft Graph**.
+Haz clic en el botón **+ Agregar un permiso** y selecciona **Microsoft Graph**.
 
-Haga clic en **Permisos delegados**. Ahora puede ver una lista de los permisos disponibles para la API de Microsoft Graph.
+Haz clic en **Permisos delegados**. Ahora verás una lista de permisos disponibles para la API de Microsoft Graph.
 
-Seleccione los permisos necesarios y haga clic **Añadir permisos** button.
+Selecciona los permisos necesarios, haz clic en el botón **Agregar permisos**.
 
-Click **Otorgar el consentimiento del administrador** button.
+Haz clic en el botón **Conceder consentimiento de administrador**.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_3.png)
 
-#### 6. Permita los flujos de clientes públicos.
+#### 6. Permitir flujos de cliente públicos.
 
-Especifica si la aplicación es un cliente público. Apropiado para aplicaciones que utilizan flujos de concesión de tokens que no utilizan un URI de redireccionamiento.
+Especifica si la aplicación es un cliente público. Apropiado para aplicaciones que utilizan flujos de concesión de tokens que no utilizan una URI de redirección.
 
 ![todo:image_alt_text](microsoft-graph-utility-features_4.png)
 
@@ -69,13 +69,13 @@ Especifica si la aplicación es un cliente público. Apropiado para aplicaciones
 
 ![todo:image_alt_text](microsoft-graph-utility-features_5.png)
 
-## **Clases de ayuda**
+## **Clases Auxiliares**
 
-Se requieren las siguientes clases auxiliares para ejecutar los códigos de esta sección. Estas clases son solo para simplificar la demostración.
+Las siguientes clases auxiliares son necesarias para ejecutar los códigos en esta sección. Estas clases son solo para simplificación de la demostración.
 
-### **Clase AzureRopcTokenProvider**
+### **Clase AzureROPCTokenProvider**
 
-Una instancia del [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) La clase gestiona la creación de solicitudes, las envía a la API de Microsoft Graph y procesa las respuestas. Para crear una nueva instancia de esta clase, debes proporcionar una instancia de [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), que puede autenticar las solicitudes en Microsoft Graph.
+Una instancia de la clase [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) maneja la construcción de solicitudes, las envía a la API de Microsoft Graph y procesa las respuestas. Para crear una nueva instancia de esta clase, necesitas proporcionar una instancia de [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), que puede autenticar solicitudes a Microsoft Graph.
 
 ~~~Java
 import java.io.BufferedReader;
@@ -94,12 +94,12 @@ import java.util.Map;
 
 /**
  * <p>
- * Azure resource owner password credential (ROPC) token provider
+ * Proveedor de token de credenciales de propietario de recurso de Azure (ROPC)
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth-ropc
  * https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth
  * https://portal.azure.com
  * https://developer.microsoft.com/en-us/graph/graph-explorer/#
- * token parser https://jwt.io
+ * analizador de token https://jwt.io
  * </p>
  */
 class AzureROPCTokenProvider implements ITokenProvider {
@@ -182,8 +182,8 @@ class AzureROPCTokenProvider implements ITokenProvider {
             connection.connect();
 
             if (connection.getResponseCode() >= HttpURLConnection.HTTP_BAD_REQUEST) {
-                throw new IllegalAccessError("Operation failed: " + connection.getResponseCode() + "/" +
-                        connection.getResponseMessage() + "\r\nDetails:\r\n{2}"
+                throw new IllegalAccessError("Operación fallida: " + connection.getResponseCode() + "/" +
+                        connection.getResponseMessage() + "\r\nDetalles:\r\n{2}"
                         + readInputStream(connection.getErrorStream()));
             }
 
@@ -234,7 +234,7 @@ class AzureROPCTokenProvider implements ITokenProvider {
                 result.append(line);
             }
         } catch (IOException e) {
-            // ignore
+            // ignorar
         }
         return result.toString();
     }

@@ -1,12 +1,11 @@
 ---
-title: "Trabajando con IMAPClient de forma asincrónica"
+title: "Trabajando con ImapClient de forma asincrónica"
 url: /es/net/working-with-imapclient-asynchronously/
 weight: 70
 type: docs
 ---
 
-
-El trabajo con los mensajes se puede realizar de forma asincrónica mediante Aspose.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/). En este artículo se muestra la recuperación de mensajes de un buzón de forma asincrónica. En este artículo también se muestra cómo enumerar los mensajes proporcionando criterios de búsqueda mediante [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/). Se mostrará por separado cómo interrumpir una operación con mensajes de correo electrónico iniciados mediante un patrón asincrónico basado en tareas ([TAP](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)) método.
+Trabajar con mensajes se puede realizar de forma asincrónica utilizando el [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) de Aspose.Email. Este artículo muestra cómo recuperar mensajes de un buzón de forma asincrónica. Este artículo también muestra cómo listar mensajes proporcionando criterios de búsqueda utilizando [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/). Se mostrará por separado cómo interrumpir una operación con mensajes de correo electrónico iniciada por un método basado en patrones asincrónicos ([TAP](https://learn.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)).
 
 ## **Recuperar mensajes de forma asincrónica**
 
@@ -16,13 +15,13 @@ El siguiente fragmento de código muestra cómo recuperar mensajes de forma asin
 
 ## **Listar mensajes de forma asincrónica con MailQuery**
 
-The [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) La clase se puede usar para especificar los criterios de búsqueda para recuperar una lista específica de mensajes de forma asincrónica, como se muestra en el siguiente ejemplo de código.
+La clase [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) se puede usar para especificar criterios de búsqueda para recuperar una lista específica de mensajes de forma asincrónica, como se muestra en el siguiente ejemplo de código.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-ListMessagesasynchronously-ListMessagesasynchronouslyWithMailQuery.cs" >}}
 
 ## **Cómo interrumpir un método TAP**
 
-A partir de .NET Framework 4.5, puede usar métodos asincrónicos implementados de acuerdo con el modelo TAP. El siguiente fragmento de código muestra cómo agregar muchos mensajes mediante el método de patrón asincrónico basado en tareas denominado `AppendMessagesAsync` y luego interrumpir este proceso después de un tiempo.
+A partir de .NET Framework 4.5, puede utilizar métodos asincrónicos implementados de acuerdo con el modelo TAP. El siguiente fragmento de código muestra cómo agregar muchos mensajes utilizando el método de patrón asincrónico basado en tareas llamado `AppendMessagesAsync` y luego interrumpir este proceso después de un tiempo.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -73,15 +72,15 @@ using (ImapClient client = new ImapClient(host, 993, senderEmail, password, Secu
 ```
 ## **Envío de mensajes de forma asincrónica**
 
-Enviar correos electrónicos de forma asincrónica es muy cómodo, ya que el proceso no bloquea la ejecución del programa o hilo. En lugar de esperar a que se envíe el correo electrónico antes de continuar con otras tareas, el programa puede seguir ejecutándose mientras el correo electrónico se envía en segundo plano.
+Enviar correos electrónicos de forma asincrónica es muy conveniente, ya que el proceso no bloquea la ejecución del programa o del hilo. En lugar de esperar a que se envíe el correo electrónico antes de continuar con otras tareas, el programa puede seguir ejecutándose mientras se envía el correo electrónico en segundo plano.
 
-Las siguientes funciones te ayudarán a implementar el envío asincrónico en tu proyecto:
+Las siguientes características te ayudarán a implementar el envío asincrónico en tu proyecto:
 
-- [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Permite a las aplicaciones acceder a los mensajes y manipularlos mediante el Protocolo de acceso a mensajes de Internet (IMAP).
+- [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Permite a las aplicaciones acceder y manipular mensajes utilizando el Protocolo de Acceso a Mensajes de Internet (IMAP).
 
-- [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Crea una nueva instancia del `Aspose.Email.Clients.Imap.ImapClient` class
+- [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Crea una nueva instancia de la clase `Aspose.Email.Clients.Imap.ImapClient`.
 
-El ejemplo de código que se muestra a continuación muestra cómo enumerar los mensajes en segundo plano:
+El siguiente ejemplo de código demuestra cómo listar mensajes en segundo plano:
 
 ```cs
 // Authenticate the client to obtain necessary permissions
@@ -162,11 +161,11 @@ public class TokenProvider : IAsyncTokenProvider
 ```
 ## **Cancelación de operaciones asincrónicas**
 
-En ocasiones, es posible que tenga que detener las operaciones asincrónicas. Para ello, nuestra biblioteca ofrece la cancelación de operaciones asincrónicas mediante el uso del parámetro cancellationToken. Al invocar un método asincrónico que admite la cancelación, puedes pasar una instancia de CancellationToken como parámetro. El cancellationToken se usa para señalar y controlar la cancelación de la operación.
+A veces puedes enfrentar la necesidad de detener operaciones asincrónicas. Para este propósito, nuestra biblioteca ofrece la cancelación de operaciones asincrónicas a través del uso del parámetro CancellationToken. Al invocar un método asincrónico que soporta la cancelación, puedes pasar una instancia de CancellationToken como parámetro. El CancellationToken se utiliza para señalizar y controlar la cancelación de la operación.
 
-Para habilitar la cancelación, primero debes crear una instancia de CancellationTokenSource que proporcione el CancellationToken. A continuación, pasa el cancellationToken al método asíncrono, lo que le permitirá comprobar si hay solicitudes de cancelación durante la ejecución.
+Para habilitar la cancelación, primero necesitas crear una instancia de CancellationTokenSource que proporciona el CancellationToken. Luego, pasa el CancellationToken al método asincrónico, permitiendo que verifique las solicitudes de cancelación durante la ejecución.
 
-Este es un ejemplo que demuestra la cancelación con CancellationToken:
+Aquí hay un ejemplo que demuestra la cancelación utilizando CancellationToken:
 
 ```cs
 CancellationTokenSource tokenSource = new CancellationTokenSource();

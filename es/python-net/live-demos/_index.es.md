@@ -1,5 +1,5 @@
 ---
-title: "Demostraciones en vivo"
+title: "Demos en Vivo"
 url: /es/python-net/live-demos/
 weight: 100
 type: docs
@@ -10,7 +10,7 @@ type: docs
 <a href="https://products.aspose.app/email/es/conversion/eml-to-pdf">
 <div class="democard">
 <h3 style="text-align: center">
-Convertidor EML a PDF
+Convertidor de EML a PDF
 </h3>
 </div>
 </a>
@@ -20,7 +20,7 @@ Convertidor EML a PDF
 <a href="https://products.aspose.app/email/es/viewer">
 <div class="democard">
 <h3 style="text-align: center">
-Visor de correo electrónico
+Visor de Email
 </h3>
 </div>
 </a>
@@ -30,7 +30,7 @@ Visor de correo electrónico
 <a href="https://products.aspose.app/email/es/conversion/mbox-to-pst">
 <div class="democard">
 <h3 style="text-align: center">
-Conversor MBOX a PST
+Convertidor de MBOX a PST
 </h3>
 </div>
 </a>
@@ -40,7 +40,7 @@ Conversor MBOX a PST
 <a href="https://products.aspose.app/email/es/editor/eml">
 <div class="democard">
 <h3 style="text-align: center">
-Editor EML
+Editor de EML
 </h3>
 </div>
 </a>
@@ -53,7 +53,7 @@ Editor EML
 <a href="https://products.aspose.app/email/es/conversion/eml-to-jpg">
 <div class="democard">
 <h3 style="text-align: center">
-Convertidor EML a JPG
+Convertidor de EML a JPG
 </h3>
 </div>
 </a>
@@ -63,7 +63,7 @@ Convertidor EML a JPG
 <a href="https://products.aspose.app/email/es/conversion/eml-to-msg">
 <div class="democard">
 <h3 style="text-align: center">
-Conversor EML a MSG
+Convertidor de EML a MSG
 </h3>
 </div>
 </a>
@@ -73,7 +73,7 @@ Conversor EML a MSG
 <a href="https://products.aspose.app/email/es/editor">
 <div class="democard">
 <h3 style="text-align: center">
-Editor de correo electrónico
+Editor de Email
 </h3>
 </div>
 </a>
@@ -83,7 +83,7 @@ Editor de correo electrónico
 <a href="https://products.aspose.app/email/es/conversion/msg-to-pdf">
 <div class="democard">
 <h3 style="text-align: center">
-Convertidor MSG a PDF
+Convertidor de MSG a PDF
 </h3>
 </div>
 </a>
@@ -97,7 +97,7 @@ Convertidor MSG a PDF
 <a href="https://products.aspose.app/email/es/metadata/msg">
 <div class="democard">
 <h3 style="text-align: center">
-Metadatos MSG
+Metadatos de MSG
 </h3>
 </div>
 </a>
@@ -107,7 +107,7 @@ Metadatos MSG
 <a href="https://products.aspose.app/email/es/conversion/eml-to-pst">
 <div class="democard">
 <h3 style="text-align: center">
-Convertidor EML a PST
+Convertidor de EML a PST
 </h3>
 </div>
 </a>
@@ -117,7 +117,7 @@ Convertidor EML a PST
 <a href="https://products.aspose.app/email/es/conversion/eml-to-doc">
 <div class="democard">
 <h3 style="text-align: center">
-Convertidor EML a DOC
+Convertidor de EML a DOC
 </h3>
 </div>
 </a>
@@ -127,7 +127,7 @@ Convertidor EML a DOC
 <a href="https://products.aspose.app/email/es/conversion/ost-to-pst">
 <div class="democard">
 <h3 style="text-align: center">
-Convertidor OST a PST
+Convertidor de OST a PST
 </h3>
 </div>
 </a>
@@ -140,17 +140,17 @@ Convertidor OST a PST
 
 
 <style>
-.tarjeta demo {
- relleno: 20px;
- fondo: #f5f7fb;
- radio del borde: 12 px;
- altura mínima: 150 px;
- pantalla: flex;
- alinear elementos: centro;
- justificar-contenido: center;
- flex-flow: columna;
- box-shadow: 0 20px 10px -26px #333;
- borde: 1 px sólido #f2f2f2;
- margen superior: 50 px;
+.democard {
+    padding: 20px;
+    background: #f5f7fb;
+    border-radius: 12px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    box-shadow: 0 20px 10px -26px #333;
+    border: 1px solid #f2f2f2;
+    margin-top: 50px;
 }
 </style>

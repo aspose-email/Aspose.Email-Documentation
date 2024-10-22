@@ -5,1016 +5,1016 @@ weight: 200
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+La siguiente es una lista de cualquier cambio realizado en la API pública, como miembros añadidos, renombrados, eliminados o en desuso, así como cualquier cambio no compatible hacia atrás realizado en Aspose.Email para Java. Si tiene inquietudes sobre algún cambio listado, por favor, notifíquelo en el foro de soporte de Aspose.Email.
 
-- Class `MapiCalendarRecurrencePatternFactory`
+- Clase `MapiCalendarRecurrencePatternFactory`
 
-- Method `MapiCalendarRecurrencePatternFactory.fromString(String)`
+- Método `MapiCalendarRecurrencePatternFactory.fromString(String)`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_AUTORESPONSE_PROP_RESPONSE`
+- Campo `MapiPropertyTag.PR_RECIPIENT_AUTORESPONSE_PROP_RESPONSE`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME`
+- Campo `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY`
+- Campo `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_DELIVERY`
 
-- Field `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_READ`
+- Campo `MapiPropertyTag.PR_RECIPIENT_TRACKSTATUS_TIME_READ`
 
-- Method `IEWSClient.appendMessage(MailMessage)`
+- Método `IEWSClient.appendMessage(MailMessage)`
 
-- Interface `IConnection`
+- Interfaz `IConnection`
 
 **`EWSClient`:**
 
-- Method getEWSClient(ExchangeVersion, `boolean, String, String, ICredentials, WebProxy)`
+- Método getEWSClient(ExchangeVersion, `boolean, String, String, ICredentials, WebProxy)`
 
-- Method `getEWSClient(ExchangeVersion, String, ICredentials, WebProxy)`
+- Método `getEWSClient(ExchangeVersion, String, ICredentials, WebProxy)`
 
 **`ImapClient`:**
 
-- Method `addMessageFlags(IConnection, int, ImapMessageFlags)`
+- Método `addMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `addMessageFlags(IConnection, String, ImapMessageFlags)`
+- Método `addMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `appendMessage(IConnection, MailMessage)`
+- Método `appendMessage(IConnection, MailMessage)`
 
-- Method `appendMessage(IConnection, String)`
+- Método `appendMessage(IConnection, String)`
 
-- Method `appendMessage(IConnection, String, MailMessage)`
+- Método `appendMessage(IConnection, String, MailMessage)`
 
-- Method `appendMessage(IConnection, String, String)`
+- Método `appendMessage(IConnection, String, String)`
 
-- Method `appendMessage(String)`
+- Método `appendMessage(String)`
 
-- Method `backup(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
+- Método `backup(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
 
-- Method `backup(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
+- Método `backup(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
 
-- Method `beginAddMessageFlags(IConnection, int, ImapMessageFlags)`
+- Método `beginAddMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
+- Método `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginAddMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginAddMessageFlags(IConnection, String, ImapMessageFlags)`
+- Método `beginAddMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
+- Método `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginAddMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginAddMessageFlags(int, ImapMessageFlags, AsyncCallback)`
+- Método `beginAddMessageFlags(int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(String, ImapMessageFlags)`
+- Método `beginAddMessageFlags(String, ImapMessageFlags)`
 
-- Method `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback)`
+- Método `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginAddMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(IConnection, MailMessage)`
+- Método `beginAppendMessage(IConnection, MailMessage)`
 
-- Method `beginAppendMessage(IConnection, String)`
+- Método `beginAppendMessage(IConnection, String)`
 
-- Method `beginAppendMessage(IConnection, String, MailMessage)`
+- Método `beginAppendMessage(IConnection, String, MailMessage)`
 
-- Method `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback)`
+- Método `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback)`
 
-- Method `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback, Object)`
+- Método `beginAppendMessage(IConnection, String, MailMessage, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(IConnection, String, String)`
+- Método `beginAppendMessage(IConnection, String, String)`
 
-- Method `beginAppendMessage(IConnection, String, String, AsyncCallback)`
+- Método `beginAppendMessage(IConnection, String, String, AsyncCallback)`
 
-- Method `beginAppendMessage(IConnection, String, String, AsyncCallback, Object)`
+- Método `beginAppendMessage(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(MailMessage)`
+- Método `beginAppendMessage(MailMessage)`
 
-- Method `beginAppendMessage(String)`
+- Método `beginAppendMessage(String)`
 
-- Method `beginAppendMessage(String, MailMessage)`
+- Método `beginAppendMessage(String, MailMessage)`
 
-- Method `beginAppendMessage(String, MailMessage, AsyncCallback)`
+- Método `beginAppendMessage(String, MailMessage, AsyncCallback)`
 
-- Method `beginAppendMessage(String, MailMessage, AsyncCallback, Object)`
+- Método `beginAppendMessage(String, MailMessage, AsyncCallback, Object)`
 
-- Method `beginAppendMessage(String, String)`
+- Método `beginAppendMessage(String, String)`
 
-- Method `beginAppendMessage(String, String, AsyncCallback)`
+- Método `beginAppendMessage(String, String, AsyncCallback)`
 
-- Method `beginAppendMessage(String, String, AsyncCallback, Object)`
+- Método `beginAppendMessage(String, String, AsyncCallback, Object)`
 
-- Method `beginChangeMessageFlags(IConnection, int, ImapMessageFlags)`
+- Método `beginChangeMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
+- Método `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginChangeMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginChangeMessageFlags(IConnection, String, ImapMessageFlags)`
+- Método `beginChangeMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
+- Método `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginChangeMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginChangeMessageFlags(int, ImapMessageFlags, AsyncCallback)`
+- Método `beginChangeMessageFlags(int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(String, ImapMessageFlags)`
+- Método `beginChangeMessageFlags(String, ImapMessageFlags)`
 
-- Method `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback)`
+- Método `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginChangeMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes`
+- Método `beginCommitDeletes`
 
-- Method `beginCommitDeletes(IConnection)`
+- Método `beginCommitDeletes(IConnection)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback)`
+- Método `beginCommitDeletes(IConnection, AsyncCallback)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback, Object)`
+- Método `beginCommitDeletes(IConnection, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(IConnection, int)`
+- Método `beginCommitDeletes(IConnection, int)`
 
-- Method `beginCommitDeletes(IConnection, int, AsyncCallback, Object)`
+- Método `beginCommitDeletes(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(AsyncCallback)`
+- Método `beginCommitDeletes(AsyncCallback)`
 
-- Method `beginCommitDeletes(AsyncCallback, Object)`
+- Método `beginCommitDeletes(AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(int)`
+- Método `beginCommitDeletes(int)`
 
-- Method `beginCommitDeletes(int, AsyncCallback, Object)`
+- Método `beginCommitDeletes(int, AsyncCallback, Object)`
 
-- Method `beginCopyMessage(IConnection, int, String)`
+- Método `beginCopyMessage(IConnection, int, String)`
 
-- Method `beginCopyMessage(IConnection, int, String, AsyncCallback)`
+- Método `beginCopyMessage(IConnection, int, String, AsyncCallback)`
 
-- Method `beginCopyMessage(IConnection, int, String, AsyncCallback, Object)`
+- Método `beginCopyMessage(IConnection, int, String, AsyncCallback, Object)`
 
-- Method `beginCopyMessage(IConnection, String, String)`
+- Método `beginCopyMessage(IConnection, String, String)`
 
-- Method `beginCopyMessage(IConnection, String, String, AsyncCallback)`
+- Método `beginCopyMessage(IConnection, String, String, AsyncCallback)`
 
-- Method `beginCopyMessage(IConnection, String, String, AsyncCallback, Object)`
+- Método `beginCopyMessage(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginCopyMessage(int, String, AsyncCallback)`
+- Método `beginCopyMessage(int, String, AsyncCallback)`
 
-- Method `beginCopyMessage(String, String, AsyncCallback)`
+- Método `beginCopyMessage(String, String, AsyncCallback)`
 
-- Method `beginCreateFolder(IConnection, String)`
+- Método `beginCreateFolder(IConnection, String)`
 
-- Method `beginCreateFolder(IConnection, String, AsyncCallback)`
+- Método `beginCreateFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginCreateFolder(IConnection, String, AsyncCallback, Object)`
+- Método `beginCreateFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginCreateFolder(String, AsyncCallback)`
+- Método `beginCreateFolder(String, AsyncCallback)`
 
-- Method `beginDeleteFolder(IConnection, String)`
+- Método `beginDeleteFolder(IConnection, String)`
 
-- Method `beginDeleteFolder(IConnection, String, AsyncCallback)`
+- Método `beginDeleteFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginDeleteFolder(IConnection, String, AsyncCallback, Object)`
+- Método `beginDeleteFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginDeleteFolder(String, AsyncCallback)`
+- Método `beginDeleteFolder(String, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, int)`
+- Método `beginDeleteMessage(IConnection, int)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback)`
+- Método `beginDeleteMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
+- Método `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(IConnection, String)`
+- Método `beginDeleteMessage(IConnection, String)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback)`
+- Método `beginDeleteMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
+- Método `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(int, AsyncCallback)`
+- Método `beginDeleteMessage(int, AsyncCallback)`
 
-- Method `beginDeleteMessage(String, AsyncCallback)`
+- Método `beginDeleteMessage(String, AsyncCallback)`
 
-- Method `beginFetchAttachment(IConnection, int, String)`
+- Método `beginFetchAttachment(IConnection, int, String)`
 
-- Method `beginFetchAttachment(IConnection, int, String, AsyncCallback)`
+- Método `beginFetchAttachment(IConnection, int, String, AsyncCallback)`
 
-- Method `beginFetchAttachment(IConnection, int, String, AsyncCallback, Object)`
+- Método `beginFetchAttachment(IConnection, int, String, AsyncCallback, Object)`
 
-- Method `beginFetchAttachment(int, String, AsyncCallback)`
+- Método `beginFetchAttachment(int, String, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int)`
+- Método `beginFetchMessage(IConnection, int)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback)`
+- Método `beginFetchMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
+- Método `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, int, boolean)`
+- Método `beginFetchMessage(IConnection, int, boolean)`
 
-- Method `beginFetchMessage(IConnection, int, boolean, AsyncCallback)`
+- Método `beginFetchMessage(IConnection, int, boolean, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int, boolean, AsyncCallback, Object)`
+- Método `beginFetchMessage(IConnection, int, boolean, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, String)`
+- Método `beginFetchMessage(IConnection, String)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback)`
+- Método `beginFetchMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
+- Método `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(int, AsyncCallback)`
+- Método `beginFetchMessage(int, AsyncCallback)`
 
-- Method `beginFetchMessage(int, boolean)`
+- Método `beginFetchMessage(int, boolean)`
 
-- Method `beginFetchMessage(int, boolean, AsyncCallback)`
+- Método `beginFetchMessage(int, boolean, AsyncCallback)`
 
-- Method `beginFetchMessage(int, boolean, AsyncCallback, Object)`
+- Método `beginFetchMessage(int, boolean, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(String, AsyncCallback)`
+- Método `beginFetchMessage(String, AsyncCallback)`
 
-- Method `beginGetFolderInfo(IConnection, String)`
+- Método `beginGetFolderInfo(IConnection, String)`
 
-- Method `beginGetFolderInfo(IConnection, String, AsyncCallback)`
+- Método `beginGetFolderInfo(IConnection, String, AsyncCallback)`
 
-- Method `beginGetFolderInfo(IConnection, String, AsyncCallback, Object)`
+- Método `beginGetFolderInfo(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginGetFolderInfo(String)`
+- Método `beginGetFolderInfo(String)`
 
-- Method `beginGetFolderInfo(String, AsyncCallback)`
+- Método `beginGetFolderInfo(String, AsyncCallback)`
 
-- Method `beginGetFolderInfo(String, AsyncCallback, Object)`
+- Método `beginGetFolderInfo(String, AsyncCallback, Object)`
 
-- Method `beginListFolders`
+- Método `beginListFolders`
 
-- Method `beginListFolders(IConnection)`
+- Método `beginListFolders(IConnection)`
 
-- Method `beginListFolders(IConnection, AsyncCallback)`
+- Método `beginListFolders(IConnection, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, AsyncCallback, Object)`
+- Método `beginListFolders(IConnection, AsyncCallback, Object)`
 
-- Method `beginListFolders(IConnection, boolean)`
+- Método `beginListFolders(IConnection, boolean)`
 
-- Method `beginListFolders(IConnection, boolean, AsyncCallback)`
+- Método `beginListFolders(IConnection, boolean, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, boolean, AsyncCallback, Object)`
+- Método `beginListFolders(IConnection, boolean, AsyncCallback, Object)`
 
-- Method `beginListFolders(IConnection, String)`
+- Método `beginListFolders(IConnection, String)`
 
-- Method `beginListFolders(IConnection, String, AsyncCallback)`
+- Método `beginListFolders(IConnection, String, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, String, AsyncCallback, Object)`
+- Método `beginListFolders(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginListFolders(IConnection, String, boolean)`
+- Método `beginListFolders(IConnection, String, boolean)`
 
-- Method `beginListFolders(IConnection, String, boolean, AsyncCallback)`
+- Método `beginListFolders(IConnection, String, boolean, AsyncCallback)`
 
-- Method `beginListFolders(IConnection, String, boolean, AsyncCallback, Object)`
+- Método `beginListFolders(IConnection, String, boolean, AsyncCallback, Object)`
 
-- Method `beginListFolders(AsyncCallback)`
+- Método `beginListFolders(AsyncCallback)`
 
-- Method `beginListFolders(AsyncCallback, Object)`
+- Método `beginListFolders(AsyncCallback, Object)`
 
-- Method `beginListFolders(boolean)`
+- Método `beginListFolders(boolean)`
 
-- Method `beginListFolders(boolean, AsyncCallback)`
+- Método `beginListFolders(boolean, AsyncCallback)`
 
-- Method `beginListFolders(boolean, AsyncCallback, Object)`
+- Método `beginListFolders(boolean, AsyncCallback, Object)`
 
-- Method `beginListFolders(String)`
+- Método `beginListFolders(String)`
 
-- Method `beginListFolders(String, AsyncCallback)`
+- Método `beginListFolders(String, AsyncCallback)`
 
-- Method `beginListFolders(String, AsyncCallback, Object)`
+- Método `beginListFolders(String, AsyncCallback, Object)`
 
-- Method `beginListFolders(String, boolean)`
+- Método `beginListFolders(String, boolean)`
 
-- Method `beginListFolders(String, boolean, AsyncCallback)`
+- Método `beginListFolders(String, boolean, AsyncCallback)`
 
-- Method `beginListFolders(String, boolean, AsyncCallback, Object)`
+- Método `beginListFolders(String, boolean, AsyncCallback, Object)`
 
-- Method `beginListMessage(IConnection, int)`
+- Método `beginListMessage(IConnection, int)`
 
-- Method `beginListMessage(IConnection, int, AsyncCallback)`
+- Método `beginListMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginListMessage(IConnection, int, AsyncCallback, Object)`
+- Método `beginListMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginListMessage(IConnection, String)`
+- Método `beginListMessage(IConnection, String)`
 
-- Method `beginListMessage(IConnection, String, AsyncCallback)`
+- Método `beginListMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginListMessage(IConnection, String, AsyncCallback, Object)`
+- Método `beginListMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginListMessage(int, AsyncCallback)`
+- Método `beginListMessage(int, AsyncCallback)`
 
-- Method `beginListMessage(String)`
+- Método `beginListMessage(String)`
 
-- Method `beginListMessage(String, AsyncCallback)`
+- Método `beginListMessage(String, AsyncCallback)`
 
-- Method `beginListMessage(String, AsyncCallback, Object)`
+- Método `beginListMessage(String, AsyncCallback, Object)`
 
-- Method `beginListMessages(AsyncCallback)`
+- Método `beginListMessages(AsyncCallback)`
 
-- Method `beginListMessages(String, MailQuery, int, AsyncCallback)`
+- Método `beginListMessages(String, MailQuery, int, AsyncCallback)`
 
-- Method `beginListMessages(String, AsyncCallback)`
+- Método `beginListMessages(String, AsyncCallback)`
 
-- Method `beginNoop`
+- Método `beginNoop`
 
-- Method `beginNoop(IConnection)`
+- Método `beginNoop(IConnection)`
 
-- Method `beginNoop(IConnection, AsyncCallback)`
+- Método `beginNoop(IConnection, AsyncCallback)`
 
-- Method `beginNoop(IConnection, AsyncCallback, ystem.Object)`
+- Método `beginNoop(IConnection, AsyncCallback, Object)`
 
-- Method `beginNoop(AsyncCallback)`
+- Método `beginNoop(AsyncCallback)`
 
-- Method `beginNoop(AsyncCallback, Object)`
+- Método `beginNoop(AsyncCallback, Object)`
 
-- Method `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags)`
+- Método `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
+- Método `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginRemoveMessageFlags(IConnection, int, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags)`
+- Método `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
+- Método `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginRemoveMessageFlags(IConnection, String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginRemoveMessageFlags(int, ImapMessageFlags, AsyncCallback)`
+- Método `beginRemoveMessageFlags(int, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(String, ImapMessageFlags)`
+- Método `beginRemoveMessageFlags(String, ImapMessageFlags)`
 
-- Method `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback)`
+- Método `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback)`
 
-- Method `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
+- Método `beginRemoveMessageFlags(String, ImapMessageFlags, AsyncCallback, Object)`
 
-- Method `beginRenameFolder(IConnection, String, String)`
+- Método `beginRenameFolder(IConnection, String, String)`
 
-- Method `beginRenameFolder(IConnection, String, String, AsyncCallback)`
+- Método `beginRenameFolder(IConnection, String, String, AsyncCallback)`
 
-- Method `beginRenameFolder(IConnection, String, String, AsyncCallback, Object)`
+- Método `beginRenameFolder(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginRenameFolder(String, String, AsyncCallback)`
+- Método `beginRenameFolder(String, String, AsyncCallback)`
 
-- Method `beginRequestCheckpoint`
+- Método `beginRequestCheckpoint`
 
-- Method `beginRequestCheckpoint(IConnection)`
+- Método `beginRequestCheckpoint(IConnection)`
 
-- Method `beginRequestCheckpoint(IConnection, AsyncCallback)`
+- Método `beginRequestCheckpoint(IConnection, AsyncCallback)`
 
-- Method `beginRequestCheckpoint(IConnection, AsyncCallback, Object)`
+- Método `beginRequestCheckpoint(IConnection, AsyncCallback, Object)`
 
-- Method `beginRequestCheckpoint(AsyncCallback)`
+- Método `beginRequestCheckpoint(AsyncCallback)`
 
-- Method `beginRequestCheckpoint(AsyncCallback, Object)`
+- Método `beginRequestCheckpoint(AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
+- Método `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
+- Método `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
+- Método `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, PersonalStorage, RestoreOptions)`
+- Método `beginRestore(IConnection, PersonalStorage, RestoreOptions)`
 
-- Method `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, PersonalStorage, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
+- Método `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, OutputStream, RestoreOptions)`
+- Método `beginRestore(IConnection, OutputStream, RestoreOptions)`
 
-- Method `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, OutputStream, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
+- Método `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions,
+- Método `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions,
   AsyncCallback)`
 
-- Method `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(IConnection, String, RestoreOptions)`
+- Método `beginRestore(IConnection, String, RestoreOptions)`
 
-- Method `beginRestore(IConnection, String, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(IConnection, String, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(IConnection, String, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(IConnection, String, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions)`
+- Método `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions)`
 
-- Method `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
+- Método `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback,
+- Método `beginRestore(ImapFolderInfoCollection, OutputStream, BackupOptions, AsyncCallback,
   Object)`
 
-- Method `beginRestore(ImapFolderInfoCollection, String, BackupOptions)`
+- Método `beginRestore(ImapFolderInfoCollection, String, BackupOptions)`
 
-- Method `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
+- Método `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback)`
 
-- Method `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
+- Método `beginRestore(ImapFolderInfoCollection, String, BackupOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
+- Método `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(PersonalStorage, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(PersonalStorage, RestoreOptions)`
+- Método `beginRestore(PersonalStorage, RestoreOptions)`
 
-- Method `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(PersonalStorage, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions)`
+- Método `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(OutputStream, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(OutputStream, RestoreOptions)`
+- Método `beginRestore(OutputStream, RestoreOptions)`
 
-- Method `beginRestore(OutputStream, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(OutputStream, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(OutputStream, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(OutputStream, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(String, ImapFolderInfoCollection, RestoreOptions)`
+- Método `beginRestore(String, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(String, ImapFolderInfoCollection, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginRestore(String, RestoreOptions)`
+- Método `beginRestore(String, RestoreOptions)`
 
-- Method `beginRestore(String, RestoreOptions, AsyncCallback)`
+- Método `beginRestore(String, RestoreOptions, AsyncCallback)`
 
-- Method `beginRestore(String, RestoreOptions, AsyncCallback, Object)`
+- Método `beginRestore(String, RestoreOptions, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream)`
+- Método `beginSaveMessage(IConnection, int, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
+- Método `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, int, String)`
+- Método `beginSaveMessage(IConnection, int, String)`
 
-- Method `beginSaveMessage(IConnection, int, String, AsyncCallback)`
+- Método `beginSaveMessage(IConnection, int, String, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, int, String, AsyncCallback, Object)`
+- Método `beginSaveMessage(IConnection, int, String, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream)`
+- Método `beginSaveMessage(IConnection, String, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
+- Método `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, String, String)`
+- Método `beginSaveMessage(IConnection, String, String)`
 
-- Method `beginSaveMessage(IConnection, String, String, AsyncCallback)`
+- Método `beginSaveMessage(IConnection, String, String, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, String, String, AsyncCallback, Object)`
+- Método `beginSaveMessage(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(int, OutputStream)`
+- Método `beginSaveMessage(int, OutputStream)`
 
-- Method `beginSaveMessage(int, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(int, OutputStream, AsyncCallback, Object)`
+- Método `beginSaveMessage(int, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(int, String)`
+- Método `beginSaveMessage(int, String)`
 
-- Method `beginSaveMessage(int, String, AsyncCallback)`
+- Método `beginSaveMessage(int, String, AsyncCallback)`
 
-- Method `beginSaveMessage(int, String, AsyncCallback, Object)`
+- Método `beginSaveMessage(int, String, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(String, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(String, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(String, String)`
+- Método `beginSaveMessage(String, String)`
 
-- Method `beginSaveMessage(String, String, AsyncCallback)`
+- Método `beginSaveMessage(String, String, AsyncCallback)`
 
-- Method `beginSaveMessage(String, String, AsyncCallback, Object)`
+- Método `beginSaveMessage(String, String, AsyncCallback, Object)`
 
-- Method `beginSelectFolder(IConnection, String)`
+- Método `beginSelectFolder(IConnection, String)`
 
-- Method `beginSelectFolder(IConnection, String, AsyncCallback)`
+- Método `beginSelectFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginSelectFolder(IConnection, String, AsyncCallback, Object)`
+- Método `beginSelectFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginSelectFolder(IConnection, String, boolean, AsyncCallback, Object)`
+- Método `beginSelectFolder(IConnection, String, boolean, AsyncCallback, Object)`
 
-- Method `beginSelectFolder(String, AsyncCallback)`
+- Método `beginSelectFolder(String, AsyncCallback)`
 
-- Method `beginSelectFolder(String, boolean, AsyncCallback, Object)`
+- Método `beginSelectFolder(String, boolean, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(IConnection, String)`
+- Método `beginSendCustomCommand(IConnection, String)`
 
-- Method `beginSendCustomCommand(IConnection, String, AsyncCallback)`
+- Método `beginSendCustomCommand(IConnection, String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(IConnection, String, AsyncCallback, Object)`
+- Método `beginSendCustomCommand(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(IConnection, String, String)`
+- Método `beginSendCustomCommand(IConnection, String, String)`
 
-- Method `beginSendCustomCommand(IConnection, String, String, AsyncCallback)`
+- Método `beginSendCustomCommand(IConnection, String, String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(IConnection, String, String, AsyncCallback, Object)`
+- Método `beginSendCustomCommand(IConnection, String, String, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(String)`
+- Método `beginSendCustomCommand(String)`
 
-- Method `beginSendCustomCommand(String, AsyncCallback)`
+- Método `beginSendCustomCommand(String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(String, AsyncCallback, Object)`
+- Método `beginSendCustomCommand(String, AsyncCallback, Object)`
 
-- Method `beginSendCustomCommand(String, String)`
+- Método `beginSendCustomCommand(String, String)`
 
-- Method `beginSendCustomCommand(String, String, AsyncCallback)`
+- Método `beginSendCustomCommand(String, String, AsyncCallback)`
 
-- Method `beginSendCustomCommand(String, String, AsyncCallback, Object)`
+- Método `beginSendCustomCommand(String, String, AsyncCallback, Object)`
 
-- Method `beginSubscribeFolder(IConnection, String)`
+- Método `beginSubscribeFolder(IConnection, String)`
 
-- Method `beginSubscribeFolder(IConnection, String, AsyncCallback)`
+- Método `beginSubscribeFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginSubscribeFolder(IConnection, String, AsyncCallback, Object)`
+- Método `beginSubscribeFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginSubscribeFolder(String)`
+- Método `beginSubscribeFolder(String)`
 
-- Method `beginSubscribeFolder(String, AsyncCallback)`
+- Método `beginSubscribeFolder(String, AsyncCallback)`
 
-- Method `beginSubscribeFolder(String, AsyncCallback, Object)`
+- Método `beginSubscribeFolder(String, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessage(IConnection, int)`
+- Método `beginUndeleteMessage(IConnection, int)`
 
-- Method `beginUndeleteMessage(IConnection, int, AsyncCallback)`
+- Método `beginUndeleteMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginUndeleteMessage(IConnection, int, AsyncCallback, Object)`
+- Método `beginUndeleteMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessage(IConnection, String)`
+- Método `beginUndeleteMessage(IConnection, String)`
 
-- Method `beginUndeleteMessage(IConnection, String, AsyncCallback)`
+- Método `beginUndeleteMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginUndeleteMessage(IConnection, String, AsyncCallback, Object)`
+- Método `beginUndeleteMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessage(int, AsyncCallback)`
+- Método `beginUndeleteMessage(int, AsyncCallback)`
 
-- Method `beginUndeleteMessage(String)`
+- Método `beginUndeleteMessage(String)`
 
-- Method `beginUndeleteMessage(String, AsyncCallback)`
+- Método `beginUndeleteMessage(String, AsyncCallback)`
 
-- Method `beginUndeleteMessage(String, AsyncCallback, Object)`
+- Método `beginUndeleteMessage(String, AsyncCallback, Object)`
 
-- Method `beginUnselectFolder`
+- Método `beginUnselectFolder`
 
-- Method `beginUnselectFolder(IConnection)`
+- Método `beginUnselectFolder(IConnection)`
 
-- Method `beginUnselectFolder(IConnection, AsyncCallback)`
+- Método `beginUnselectFolder(IConnection, AsyncCallback)`
 
-- Method `beginUnselectFolder(IConnection, AsyncCallback, Object)`
+- Método `beginUnselectFolder(IConnection, AsyncCallback, Object)`
 
-- Method `beginUnselectFolder(AsyncCallback)`
+- Método `beginUnselectFolder(AsyncCallback)`
 
-- Method `beginUnselectFolder(AsyncCallback, Object)`
+- Método `beginUnselectFolder(AsyncCallback, Object)`
 
-- Method `beginUnsubscribeFolder(IConnection, String)`
+- Método `beginUnsubscribeFolder(IConnection, String)`
 
-- Method `beginUnsubscribeFolder(IConnection, String, AsyncCallback)`
+- Método `beginUnsubscribeFolder(IConnection, String, AsyncCallback)`
 
-- Method `beginUnsubscribeFolder(IConnection, String, AsyncCallback, Object)`
+- Método `beginUnsubscribeFolder(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginUnsubscribeFolder(String)`
+- Método `beginUnsubscribeFolder(String)`
 
-- Method `beginUnsubscribeFolder(String, AsyncCallback)`
+- Método `beginUnsubscribeFolder(String, AsyncCallback)`
 
-- Method `beginUnsubscribeFolder(String, AsyncCallback, Object)`
+- Método `beginUnsubscribeFolder(String, AsyncCallback, Object)`
 
-- Method `changeMessageFlags(IConnection, int, ImapMessageFlags)`
+- Método `changeMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `changeMessageFlags(IConnection, String, ImapMessageFlags)`
+- Método `changeMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `commitDeletes(IConnection)`
+- Método `commitDeletes(IConnection)`
 
-- Method `commitDeletes(IConnection, int)`
+- Método `commitDeletes(IConnection, int)`
 
-- Method `copyMessage(IConnection, int, String)`
+- Método `copyMessage(IConnection, int, String)`
 
-- Method `copyMessage(IConnection, String, String)`
+- Método `copyMessage(IConnection, String, String)`
 
-- Method `createFolder(IConnection, String)`
+- Método `createFolder(IConnection, String)`
 
-- Method `deleteFolder(IConnection, String)`
+- Método `deleteFolder(IConnection, String)`
 
-- Method `deleteMessage(IConnection, int)`
+- Método `deleteMessage(IConnection, int)`
 
-- Method `deleteMessage(IConnection, String)`
+- Método `deleteMessage(IConnection, String)`
 
-- Method `endAppendMessage(IAsyncResult)`
+- Método `endAppendMessage(IAsyncResult)`
 
-- Method `endBackup(IAsyncResult)`
+- Método `endBackup(IAsyncResult)`
 
-- Method `endCommitDeletes(IAsyncResult)`
+- Método `endCommitDeletes(IAsyncResult)`
 
-- Method `endExistFolder(IAsyncResult)`
+- Método `endExistFolder(IAsyncResult)`
 
-- Method `endExistFolder(IAsyncResult, ImapFolderInfo@)`
+- Método `endExistFolder(IAsyncResult, ImapFolderInfo@)`
 
-- Method `endGetFolderInfo(IAsyncResult)`
+- Método `endGetFolderInfo(IAsyncResult)`
 
-- Method `endListFolders(IAsyncResult)`
+- Método `endListFolders(IAsyncResult)`
 
-- Method `endNoop(IAsyncResult)`
+- Método `endNoop(IAsyncResult)`
 
-- Method `endRequestCheckpoint(IAsyncResult)`
+- Método `endRequestCheckpoint(IAsyncResult)`
 
-- Method `endRestore(IAsyncResult)`
+- Método `endRestore(IAsyncResult)`
 
-- Method `endSendCustomCommand(IAsyncResult)`
+- Método `endSendCustomCommand(IAsyncResult)`
 
-- Method `endSubscribeFolder(IAsyncResult)`
+- Método `endSubscribeFolder(IAsyncResult)`
 
-- Method `endUnselectFolder(IAsyncResult)`
+- Método `endUnselectFolder(IAsyncResult)`
 
-- Method `endUnsubscribeFolder(IAsyncResult)`
+- Método `endUnsubscribeFolder(IAsyncResult)`
 
-- Method `fetchAttachment(IConnection, int, String)`
+- Método `fetchAttachment(IConnection, int, String)`
 
-- Method `fetchMessage(IConnection, int)`
+- Método `fetchMessage(IConnection, int)`
 
-- Method `fetchMessage(IConnection, int, boolean)`
+- Método `fetchMessage(IConnection, int, boolean)`
 
-- Method `fetchMessage(IConnection, String)`
+- Método `fetchMessage(IConnection, String)`
 
-- Method `getFolderInfo(IConnection, String)`
+- Método `getFolderInfo(IConnection, String)`
 
-- Method `listFolders(IConnection)`
+- Método `listFolders(IConnection)`
 
-- Method `listFolders(IConnection, boolean)`
+- Método `listFolders(IConnection, boolean)`
 
-- Method `listFolders(IConnection, String)`
+- Método `listFolders(IConnection, String)`
 
-- Method `listFolders(IConnection, String, boolean)`
+- Método `listFolders(IConnection, String, boolean)`
 
-- Method `listMessage(IConnection, int)`
+- Método `listMessage(IConnection, int)`
 
-- Method `listMessage(IConnection, String)`
+- Método `listMessage(IConnection, String)`
 
-- Method `listMessages(IConnection)`
+- Método `listMessages(IConnection)`
 
-- Method `listMessages(IConnection, MailQuery)`
+- Método `listMessages(IConnection, MailQuery)`
 
-- Method `listMessages(IConnection, MailQuery, int)`
+- Método `listMessages(IConnection, MailQuery, int)`
 
-- Method `listMessages(IConnection, boolean)`
+- Método `listMessages(IConnection, boolean)`
 
-- Method `listMessages(IConnection, int)`
+- Método `listMessages(IConnection, int)`
 
-- Method `listMessages(IConnection, String)`
+- Método `listMessages(IConnection, String)`
 
-- Method `listMessages(IConnection, String, MailQuery, int)`
+- Método `listMessages(IConnection, String, MailQuery, int)`
 
-- Method `listMessages(IConnection, String, boolean)`
+- Método `listMessages(IConnection, String, boolean)`
 
-- Method `listMessages(String, MailQuery, int)`
+- Método `listMessages(String, MailQuery, int)`
 
-- Method `noop`
+- Método `noop`
 
-- Method `noop(IConnection)`
+- Método `noop(IConnection)`
 
-- Method `parseQuery(ImapMessageInfo, MailQuery)`
+- Método `parseQuery(ImapMessageInfo, MailQuery)`
 
-- Method `removeMessageFlags(IConnection, int, ImapMessageFlags)`
+- Método `removeMessageFlags(IConnection, int, ImapMessageFlags)`
 
-- Method `removeMessageFlags(IConnection, String, ImapMessageFlags)`
+- Método `removeMessageFlags(IConnection, String, ImapMessageFlags)`
 
-- Method `renameFolder(IConnection, String, String)`
+- Método `renameFolder(IConnection, String, String)`
 
-- Method `requestCheckpoint(IConnection)`
+- Método `requestCheckpoint(IConnection)`
 
-- Method `restore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
+- Método `restore(IConnection, PersonalStorage, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `restore(IConnection, PersonalStorage, RestoreOptions)`
+- Método `restore(IConnection, PersonalStorage, RestoreOptions)`
 
-- Method `restore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
+- Método `restore(IConnection, OutputStream, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `restore(IConnection, OutputStream, RestoreOptions)`
+- Método `restore(IConnection, OutputStream, RestoreOptions)`
 
-- Method `restore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
+- Método `restore(IConnection, String, ImapFolderInfoCollection, RestoreOptions)`
 
-- Method `restore(IConnection, String, RestoreOptions)`
+- Método `restore(IConnection, String, RestoreOptions)`
 
-- Method `saveMessage(IConnection, int, OutputStream)`
+- Método `saveMessage(IConnection, int, OutputStream)`
 
-- Method `saveMessage(IConnection, int, String)`
+- Método `saveMessage(IConnection, int, String)`
 
-- Method `saveMessage(IConnection, String, OutputStream)`
+- Método `saveMessage(IConnection, String, OutputStream)`
 
-- Method `saveMessage(IConnection, String, String)`
+- Método `saveMessage(IConnection, String, String)`
 
-- Method `selectFolder(IConnection, String)`
+- Método `selectFolder(IConnection, String)`
 
-- Method `selectFolder(IConnection, String, boolean)`
+- Método `selectFolder(IConnection, String, boolean)`
 
-- Method `sendCustomCommand(IConnection, String)`
+- Método `sendCustomCommand(IConnection, String)`
 
-- Method `sendCustomCommand(IConnection, String, String)`
+- Método `sendCustomCommand(IConnection, String, String)`
 
-- Method `subscribeFolder(IConnection, String)`
+- Método `subscribeFolder(IConnection, String)`
 
-- Method `undeleteMessage(IConnection, int)`
+- Método `undeleteMessage(IConnection, int)`
 
-- Method `undeleteMessage(IConnection, String)`
+- Método `undeleteMessage(IConnection, String)`
 
-- Method `unselectFolder(IConnection)`
+- Método `unselectFolder(IConnection)`
 
-- Method `unsubscribeFolder(IConnection, String)`
+- Método `unsubscribeFolder(IConnection, String)`
 
 **`SmtpClient`:**
 
-- Method `forward(String, MailAddressCollection, MailMessage)`
+- Método `forward(String, MailAddressCollection, MailMessage)`
 
-- Method `forward(String, String, MailMessage)`
+- Método `forward(String, String, MailMessage)`
 
 **`Pop3Client`:**
 
-- Method `beginCommitDeletes`
+- Método `beginCommitDeletes`
 
-- Method `beginCommitDeletes(IConnection)`
+- Método `beginCommitDeletes(IConnection)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback)`
+- Método `beginCommitDeletes(IConnection, AsyncCallback)`
 
-- Method `beginCommitDeletes(IConnection, AsyncCallback, Object)`
+- Método `beginCommitDeletes(IConnection, AsyncCallback, Object)`
 
-- Method `beginCommitDeletes(AsyncCallback)`
+- Método `beginCommitDeletes(AsyncCallback)`
 
-- Method `beginCommitDeletes(AsyncCallback, Object)`
+- Método `beginCommitDeletes(AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(IConnection, int)`
+- Método `beginDeleteMessage(IConnection, int)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback)`
+- Método `beginDeleteMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
+- Método `beginDeleteMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(IConnection, String)`
+- Método `beginDeleteMessage(IConnection, String)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback)`
+- Método `beginDeleteMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
+- Método `beginDeleteMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginDeleteMessage(int, AsyncCallback)`
+- Método `beginDeleteMessage(int, AsyncCallback)`
 
-- Method `beginDeleteMessage(String, AsyncCallback)`
+- Método `beginDeleteMessage(String, AsyncCallback)`
 
-- Method `beginDeleteMessages`
+- Método `beginDeleteMessages`
 
-- Method `beginDeleteMessages(IConnection)`
+- Método `beginDeleteMessages(IConnection)`
 
-- Method `beginDeleteMessages(IConnection, AsyncCallback)`
+- Método `beginDeleteMessages(IConnection, AsyncCallback)`
 
-- Method `beginDeleteMessages(IConnection, AsyncCallback, Object)`
+- Método `beginDeleteMessages(IConnection, AsyncCallback, Object)`
 
-- Method `beginDeleteMessages(AsyncCallback)`
+- Método `beginDeleteMessages(AsyncCallback)`
 
-- Method `beginDeleteMessages(AsyncCallback, Object)`
+- Método `beginDeleteMessages(AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, int)`
+- Método `beginFetchMessage(IConnection, int)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback)`
+- Método `beginFetchMessage(IConnection, int, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
+- Método `beginFetchMessage(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(IConnection, String)`
+- Método `beginFetchMessage(IConnection, String)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback)`
+- Método `beginFetchMessage(IConnection, String, AsyncCallback)`
 
-- Method `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
+- Método `beginFetchMessage(IConnection, String, AsyncCallback, Object)`
 
-- Method `beginFetchMessage(int, AsyncCallback)`
+- Método `beginFetchMessage(int, AsyncCallback)`
 
-- Method `beginFetchMessage(String, AsyncCallback)`
+- Método `beginFetchMessage(String, AsyncCallback)`
 
-- Method `beginGetMailboxInfo`
+- Método `beginGetMailboxInfo`
 
-- Method `beginGetMailboxInfo(IConnection)`
+- Método `beginGetMailboxInfo(IConnection)`
 
-- Method `beginGetMailboxInfo(IConnection, AsyncCallback)`
+- Método `beginGetMailboxInfo(IConnection, AsyncCallback)`
 
-- Method `beginGetMailboxInfo(IConnection, AsyncCallback, Object)`
+- Método `beginGetMailboxInfo(IConnection, AsyncCallback, Object)`
 
-- Method `beginGetMailboxInfo(AsyncCallback)`
+- Método `beginGetMailboxInfo(AsyncCallback)`
 
-- Method `beginGetMailboxInfo(AsyncCallback, Object)`
+- Método `beginGetMailboxInfo(AsyncCallback, Object)`
 
-- Method `beginGetMailboxSize(IConnection)`
+- Método `beginGetMailboxSize(IConnection)`
 
-- Method `beginGetMailboxSize(IConnection, AsyncCallback)`
+- Método `beginGetMailboxSize(IConnection, AsyncCallback)`
 
-- Method `beginGetMailboxSize(IConnection, AsyncCallback, Object)`
+- Método `beginGetMailboxSize(IConnection, AsyncCallback, Object)`
 
-- Method `beginGetMailboxSize(AsyncCallback)`
+- Método `beginGetMailboxSize(AsyncCallback)`
 
-- Method `beginGetMessageCount(IConnection)`
+- Método `beginGetMessageCount(IConnection)`
 
-- Method `beginGetMessageCount(IConnection, AsyncCallback)`
+- Método `beginGetMessageCount(IConnection, AsyncCallback)`
 
-- Method `beginGetMessageCount(IConnection, AsyncCallback, Object)`
+- Método `beginGetMessageCount(IConnection, AsyncCallback, Object)`
 
-- Method `beginGetMessageCount(IConnection, boolean)`
+- Método `beginGetMessageCount(IConnection, boolean)`
 
-- Method `beginGetMessageCount(IConnection, boolean, AsyncCallback)`
+- Método `beginGetMessageCount(IConnection, boolean, AsyncCallback)`
 
-- Method `beginGetMessageCount(IConnection, boolean, AsyncCallback, Object)`
+- Método `beginGetMessageCount(IConnection, boolean, AsyncCallback, Object)`
 
-- Method `beginGetMessageCount(AsyncCallback)`
+- Método `beginGetMessageCount(AsyncCallback)`
 
-- Method `beginGetMessageCount(boolean)`
+- Método `beginGetMessageCount(boolean)`
 
-- Method `beginGetMessageCount(boolean, AsyncCallback)`
+- Método `beginGetMessageCount(boolean, AsyncCallback)`
 
-- Method `beginGetMessageCount(boolean, AsyncCallback, Object)`
+- Método `beginGetMessageCount(boolean, AsyncCallback, Object)`
 
-- Method `beginGetMessageHeaders(IConnection, int)`
+- Método `beginGetMessageHeaders(IConnection, int)`
 
-- Method `beginGetMessageHeaders(IConnection, int, AsyncCallback)`
+- Método `beginGetMessageHeaders(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageHeaders(IConnection, int, AsyncCallback, Object)`
+- Método `beginGetMessageHeaders(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageHeaders(int, AsyncCallback)`
+- Método `beginGetMessageHeaders(int, AsyncCallback)`
 
-- Method `beginGetMessageInfo(IConnection, int)`
+- Método `beginGetMessageInfo(IConnection, int)`
 
-- Method `beginGetMessageInfo(IConnection, int, Pop3ListFields)`
+- Método `beginGetMessageInfo(IConnection, int, Pop3ListFields)`
 
-- Method `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback)`
+- Método `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback)`
 
-- Method `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback, Object)`
+- Método `beginGetMessageInfo(IConnection, int, Pop3ListFields, AsyncCallback, Object)`
 
-- Method `beginGetMessageInfo(IConnection, int, AsyncCallback)`
+- Método `beginGetMessageInfo(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageInfo(IConnection, int, AsyncCallback, Object)`
+- Método `beginGetMessageInfo(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageInfo(int)`
+- Método `beginGetMessageInfo(int)`
 
-- Method `beginGetMessageInfo(int, Pop3ListFields)`
+- Método `beginGetMessageInfo(int, Pop3ListFields)`
 
-- Method `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback)`
+- Método `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback)`
 
-- Method `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback, Object)`
+- Método `beginGetMessageInfo(int, Pop3ListFields, AsyncCallback, Object)`
 
-- Method `beginGetMessageInfo(int, AsyncCallback)`
+- Método `beginGetMessageInfo(int, AsyncCallback)`
 
-- Method `beginGetMessageInfo(int, AsyncCallback, Object)`
+- Método `beginGetMessageInfo(int, AsyncCallback, Object)`
 
-- Method `beginGetMessageSize(IConnection, int)`
+- Método `beginGetMessageSize(IConnection, int)`
 
-- Method `beginGetMessageSize(IConnection, int, AsyncCallback)`
+- Método `beginGetMessageSize(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageSize(IConnection, int, AsyncCallback, Object)`
+- Método `beginGetMessageSize(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageSize(int)`
+- Método `beginGetMessageSize(int)`
 
-- Method `beginGetMessageSize(int, AsyncCallback)`
+- Método `beginGetMessageSize(int, AsyncCallback)`
 
-- Method `beginGetMessageSize(int, AsyncCallback, Object)`
+- Método `beginGetMessageSize(int, AsyncCallback, Object)`
 
-- Method `beginGetMessageUniqueId(IConnection, int)`
+- Método `beginGetMessageUniqueId(IConnection, int)`
 
-- Method `beginGetMessageUniqueId(IConnection, int, AsyncCallback)`
+- Método `beginGetMessageUniqueId(IConnection, int, AsyncCallback)`
 
-- Method `beginGetMessageUniqueId(IConnection, int, AsyncCallback, Object)`
+- Método `beginGetMessageUniqueId(IConnection, int, AsyncCallback, Object)`
 
-- Method `beginGetMessageUniqueId(int)`
+- Método `beginGetMessageUniqueId(int)`
 
-- Method `beginGetMessageUniqueId(int, AsyncCallback)`
+- Método `beginGetMessageUniqueId(int, AsyncCallback)`
 
-- Method `beginGetMessageUniqueId(int, AsyncCallback, Object)`
+- Método `beginGetMessageUniqueId(int, AsyncCallback, Object)`
 
-- Method `beginListMessages(IConnection)`
+- Método `beginListMessages(IConnection)`
 
-- Method `beginListMessages(IConnection, MailQuery)`
+- Método `beginListMessages(IConnection, MailQuery)`
 
-- Method `beginListMessages(IConnection, MailQuery, AsyncCallback)`
+- Método `beginListMessages(IConnection, MailQuery, AsyncCallback)`
 
-- Method `beginListMessages(IConnection, MailQuery, AsyncCallback, Object)`
+- Método `beginListMessages(IConnection, MailQuery, AsyncCallback, Object)`
 
-- Method `beginListMessages(IConnection, AsyncCallback)`
+- Método `beginListMessages(IConnection, AsyncCallback)`
 
-- Method `beginListMessages(IConnection, AsyncCallback, Object)`
+- Método `beginListMessages(IConnection, AsyncCallback, Object)`
 
-- Method `beginListMessages(MailQuery, AsyncCallback)`
+- Método `beginListMessages(MailQuery, AsyncCallback)`
 
-- Method `beginListMessages(AsyncCallback)`
+- Método `beginListMessages(AsyncCallback)`
 
-- Method `beginNoop`
+- Método `beginNoop`
 
-- Method `beginNoop(IConnection)`
+- Método `beginNoop(IConnection)`
 
-- Method `beginNoop(IConnection, AsyncCallback)`
+- Método `beginNoop(IConnection, AsyncCallback)`
 
-- Method `beginNoop(IConnection, AsyncCallback, Object)`
+- Método `beginNoop(IConnection, AsyncCallback, Object)`
 
-- Method `beginNoop(AsyncCallback)`
+- Método `beginNoop(AsyncCallback)`
 
-- Method `beginNoop(AsyncCallback, Object)`
+- Método `beginNoop(AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream)`
+- Método `beginSaveMessage(IConnection, int, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
+- Método `beginSaveMessage(IConnection, int, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream)`
+- Método `beginSaveMessage(IConnection, String, OutputStream)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
+- Método `beginSaveMessage(IConnection, String, OutputStream, AsyncCallback, Object)`
 
-- Method `beginSaveMessage(int, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(int, OutputStream, AsyncCallback)`
 
-- Method `beginSaveMessage(String, OutputStream, AsyncCallback)`
+- Método `beginSaveMessage(String, OutputStream, AsyncCallback)`
 
-- Method `beginUndeleteMessages(IConnection)`
+- Método `beginUndeleteMessages(IConnection)`
 
-- Method `beginUndeleteMessages(IConnection, AsyncCallback)`
+- Método `beginUndeleteMessages(IConnection, AsyncCallback)`
 
-- Method `beginUndeleteMessages(IConnection, AsyncCallback, Object)`
+- Método `beginUndeleteMessages(IConnection, AsyncCallback, Object)`
 
-- Method `beginUndeleteMessages(AsyncCallback)`
+- Método `beginUndeleteMessages(AsyncCallback)`
 
-- Method `commitDeletes(IConnection)`
+- Método `commitDeletes(IConnection)`
 
-- Method `deleteMessage(IConnection, int)`
+- Método `deleteMessage(IConnection, int)`
 
-- Method `deleteMessage(IConnection, String)`
+- Método `deleteMessage(IConnection, String)`
 
-- Method `deleteMessages`
+- Método `deleteMessages`
 
-- Method `deleteMessages(IConnection)`
+- Método `deleteMessages(IConnection)`
 
-- Method `endCommitDeletes(IAsyncResult)`
+- Método `endCommitDeletes(IAsyncResult)`
 
-- Method `endDeleteMessages(IAsyncResult)`
+- Método `endDeleteMessages(IAsyncResult)`
 
-- Method `endGetMailboxInfo(IAsyncResult)`
+- Método `endGetMailboxInfo(IAsyncResult)`
 
-- Method `endGetMessageInfo(IAsyncResult)`
+- Método `endGetMessageInfo(IAsyncResult)`
 
-- Method `endGetMessageSize(IAsyncResult)`
+- Método `endGetMessageSize(IAsyncResult)`
 
-- Method `endGetMessageUniqueId(IAsyncResult)`
+- Método `endGetMessageUniqueId(IAsyncResult)`
 
-- Method `endNoop(IAsyncResult)`
+- Método `endNoop(IAsyncResult)`
 
-- Method `fetchMessage(IConnection, int)`
+- Método `fetchMessage(IConnection, int)`
 
-- Method `fetchMessage(IConnection, String)`
+- Método `fetchMessage(IConnection, String)`
 
-- Method `getMailboxInfo(IConnection)`
+- Método `getMailboxInfo(IConnection)`
 
-- Method `getMailboxInfo(IConnection, boolean)`
+- Método `getMailboxInfo(IConnection, boolean)`
 
-- Method `getMailboxInfo(boolean)`
+- Método `getMailboxInfo(boolean)`
 
-- Method `getMailboxSize(IConnection)`
+- Método `getMailboxSize(IConnection)`
 
-- Method `getMessageCount(IConnection)`
+- Método `getMessageCount(IConnection)`
 
-- Method `getMessageCount(IConnection, boolean)`
+- Método `getMessageCount(IConnection, boolean)`
 
-- Method `getMessageHeaders(IConnection, int)`
+- Método `getMessageHeaders(IConnection, int)`
 
-- Method `getMessageInfo(IConnection, int)`
+- Método `getMessageInfo(IConnection, int)`
 
-- Method `getMessageInfo(IConnection, int, Pop3ListFields)`
+- Método `getMessageInfo(IConnection, int, Pop3ListFields)`
 
-- Method `getMessageInfo(int)`
+- Método `getMessageInfo(int)`
 
-- Method `getMessageInfo(int, Pop3ListFields)`
+- Método `getMessageInfo(int, Pop3ListFields)`
 
-- Method `getMessageSize(IConnection, int)`
+- Método `getMessageSize(IConnection, int)`
 
-- Method `getMessageUniqueId(IConnection, int)`
+- Método `getMessageUniqueId(IConnection, int)`
 
-- Method `noop`
+- Método `noop`
 
-- Method `noop(IConnection)`
+- Método `noop(IConnection)`
 
-- Method `saveMessage(IConnection, int, OutputStream)`
+- Método `saveMessage(IConnection, int, OutputStream)`
 
-- Method `saveMessage(IConnection, int, String)`
+- Método `saveMessage(IConnection, int, String)`
 
-- Method `saveMessage(IConnection, String, OutputStream)`
+- Método `saveMessage(IConnection, String, OutputStream)`
 
-- Method `saveMessage(IConnection, String, String)`
+- Método `saveMessage(IConnection, String, String)`
 
-- Method `saveMessage(String, String)`
+- Método `saveMessage(String, String)`
 
-- Method `undeleteMessages(IConnection)`
+- Método `undeleteMessages(IConnection)`

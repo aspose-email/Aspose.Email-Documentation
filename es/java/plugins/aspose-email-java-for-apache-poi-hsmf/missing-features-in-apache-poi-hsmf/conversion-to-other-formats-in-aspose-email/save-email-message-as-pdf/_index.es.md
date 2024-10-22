@@ -5,13 +5,13 @@ weight: 30
 type: docs
 ---
 
-## **Aspose.Email: guarda el mensaje de correo electrónico como PDF**
-El siguiente código muestra la conversión de un mensaje de correo electrónico a PDF mediante Aspose.Email en combinación con Aspose.Words para Java. Esto implica los siguientes pasos:
+## **Aspose.Email - Guardar mensaje de correo electrónico como PDF**
+El siguiente código muestra cómo convertir un mensaje de correo electrónico a PDF utilizando Aspose.Email en combinación con Aspose.Words para Java. Esto implica los siguientes pasos:
 
-1. Cargue el mensaje de correo electrónico con MailMessage
-1. Guarde el mensaje de correo electrónico en MemoryStream como MHTML
-1. Carga la transmisión con Aspose.Words
-1. Guarda el mensaje como PDF
+1. Cargar el mensaje de correo electrónico usando MailMessage
+1. Guardar el mensaje de correo electrónico en MemoryStream como MHTML
+1. Cargar el flujo usando Aspose.Words
+1. Guardar el mensaje como PDF
 
 **Java**
 
@@ -21,13 +21,13 @@ El siguiente código muestra la conversión de un mensaje de correo electrónico
 
 MailMessage eml = MailMessage.load(fstream);
 
-// Save the Message to output stream in MHTML format
+// Guardar el mensaje en el flujo de salida en formato MHTML
 
 ByteArrayOutputStream emlStream = new ByteArrayOutputStream();
 
 eml.save(emlStream, SaveOptions.getDefaultMhtml());
 
-// Load the stream in Word document
+// Cargar el flujo en el documento de Word
 
 LoadOptions lo = new LoadOptions();
 
@@ -37,11 +37,11 @@ Document doc = new Document(new ByteArrayInputStream(
 
 		emlStream.toByteArray()), lo);
 
-// Save to disc
+// Guardar en disco
 
 doc.save(dataDir + "About Aspose.Pdf", SaveFormat.PDF);
 
-// or Save to stream
+// o guardar en el flujo
 
 ByteArrayOutputStream foStream = new ByteArrayOutputStream();
 
@@ -49,15 +49,15 @@ doc.save(foStream, SaveFormat.PDF);
 
 
 ```
-## **Descargar Running Code**
+## **Descargar código en funcionamiento**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
 ## **Descargar código de muestra**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/conversion/savemessageaspdf/AsposeSaveMessageAsPDF.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/conversion/savemessageaspdf/AsposeSaveMessageAsPDF.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Guardar un MSG como PDF](/email/java/creating-and-saving-msg-files/).
+Para más detalles, visite [Guardar un MSG como PDF](/email/java/creating-and-saving-msg-files/).
 
 {{% /alert %}}

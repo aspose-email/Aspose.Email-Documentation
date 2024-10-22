@@ -1,12 +1,12 @@
 ---
-title: "Compruebe la protección con contraseña PST"
+title: "Comprobar la Protección por Contraseña de PST"
 url: /es/java/check-pst-password-protection/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Compruebe la protección con contraseña PST**
-Microsoft Outlook permite a los usuarios proteger con contraseña los archivos PST para restringir el acceso a ellos. Aspose.Email puede detectar la protección con contraseña en un archivo PST. Esta página muestra cómo comprobar la contraseña de un PST y también cómo comprobar si la contraseña que se le ha aplicado es correcta.
+## **Aspose.Email - Comprobar la Protección por Contraseña de PST**
+Microsoft Outlook permite a los usuarios proteger con contraseña los archivos PST para restringir el acceso a ellos. Aspose.Email puede detectar la protección por contraseña en un archivo PST. Esta página muestra cómo comprobar un PST para una contraseña y también cómo comprobar si la contraseña aplicada en él es correcta.
 
 **Java**
 
@@ -23,15 +23,15 @@ Microsoft Outlook permite a los usuarios proteger con contraseña los archivos P
 }
 
 ```
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/checkprotection/AsposeCheckProtection.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/checkprotection/AsposeCheckProtection.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Trabajando con las propiedades de protección con contraseña de PST](/email/java/working-with-calendar-items-in-pst-file/).
+Para más detalles, visita [Trabajando con las Propiedades de Protección por Contraseña de PST](/email/java/working-with-calendar-items-in-pst-file/).
 
 {{% /alert %}}

@@ -1,17 +1,17 @@
 ---
 title: "Primera aplicación con Aspose.Email Outlook"
-url: /es/java/first-application-with-aspose-email-outlook/
+url: /es/java/primera-aplicacion-con-aspose-email-outlook/
 weight: 280
 type: docs
 ---
 
 
-En esta sección se muestra cómo usar Aspose.Email Mapi. Creamos una pequeña aplicación que carga un archivo de mensajes de Outlook (TestMessage.msg) y muestra el asunto, las direcciones de origen y destino y el contenido del mensaje. Sigue estos pasos para crear tu primera aplicación con Aspose.Email Outlook.
+Esta sección demuestra cómo usar Aspose.Email Mapi. Creamos una pequeña aplicación que carga un archivo de mensaje de Outlook (TestMessage.msg) y muestra el asunto, las direcciones de correo del remitente y del destinatario, y el contenido del cuerpo. Siga estos pasos para crear su primera aplicación utilizando Aspose.Email Outlook.
 
-1. Crea una instancia del [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) clase dando la ruta del archivo de mensajes.
-1. Usa las propiedades públicas para mostrar el sujeto, el origen, el destino y el cuerpo.
+1. Cree una instancia de la clase [MapiMessage](https://apireference.aspose.com/email/java/com.aspose.email/MapiMessage) proporcionando la ruta del archivo de mensaje.
+1. Utilice las propiedades públicas para mostrar el asunto, de, para y cuerpo.
 
-La implementación de los pasos anteriores se muestra a continuación en el siguiente fragmento de código.
+La implementación de los pasos anteriores se demuestra a continuación en el siguiente fragmento de código.
 
 
 

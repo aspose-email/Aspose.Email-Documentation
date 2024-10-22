@@ -6,6 +6,6 @@ type: docs
 ---
 
 
-APIs de Aspoe.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) ofrece la posibilidad de abrir una conexión con el servidor y esperar la llegada de un mensaje de correo electrónico. Esto permite evitar sondear el servidor una y otra vez para detectar cualquier correo electrónico entrante. El siguiente fragmento de código muestra cómo utilizar el comando IMAP Idle.
+La API Aspoe.Email [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) proporciona la capacidad de abrir una conexión con el servidor y esperar la llegada de un mensaje de correo electrónico. Esto permite evitar consultar al servidor una y otra vez por cualquier correo electrónico entrante. El siguiente fragmento de código muestra cómo proporcionar soporte para el comando IMAP IDLE.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-IMAP-SupportIMAPIdleCommand-SupportIMAPIdleCommand.cs" >}}

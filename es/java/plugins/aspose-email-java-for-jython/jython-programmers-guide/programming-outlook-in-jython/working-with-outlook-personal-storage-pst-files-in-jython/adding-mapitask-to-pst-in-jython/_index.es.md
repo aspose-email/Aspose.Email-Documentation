@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Agregar MapiTask a PST**
-Para agregar MapiTask a PST usando **Aspose.Email Java para Jython**, simplemente invoca **AddMapiTaskToPST** módulo. Aquí puedes ver un ejemplo de código.
+Para agregar MapiTask a PST usando **Aspose.Email Java para Jython**, simplemente invoca el módulo **AddMapiTaskToPST**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -34,11 +34,7 @@ class AddMapiTaskToPST:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiTaskToPST/'
-
-
 
         task = MapiTask("To Do", "Just click and type to add task", Date(), Date())
 
@@ -78,17 +74,13 @@ class AddMapiTaskToPST:
 
         print "Added MapiTask Successfully."
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddMapiTaskToPST()
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiTask a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Agregar MapiTask a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

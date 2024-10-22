@@ -1,21 +1,21 @@
 ---
-title: "Extraer el contenido de los mensajes de los correos electrónicos"
+title: "Extrayendo Contenidos de Mensajes de Correos Electrónicos"
 url: /es/net/extracting-message-contents-from-emails/
 weight: 30
 type: docs
 ---
 
-# Extraer el contenido de los mensajes de los correos electrónicos
+# Extrayendo Contenidos de Mensajes de Correos Electrónicos
 
-## **Mostrar información de correo electrónico en la pantalla**
+## **Mostrando Información del Correo Electrónico en Pantalla**
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) representa un mensaje de correo electrónico y permite a los desarrolladores acceder a las propiedades de los mensajes de correo electrónico. La información del encabezado (que se explica en [Extracción de encabezados de correo electrónico](https://docs.aspose.com/email/es/net/extracting-message-contents-from-emails/#extracting-email-headers)) pueden extraerse y manipularse de diferentes maneras. En este artículo se explica cómo mostrar la información del encabezado del correo electrónico seleccionado y el cuerpo del correo electrónico en la pantalla. Para mostrar la información del correo electrónico en la pantalla, sigue estos pasos:
+El [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) representa un mensaje de correo electrónico y permite a los desarrolladores acceder a las propiedades del mensaje de correo electrónico. La información de encabezado (discutida en [Extrayendo Encabezados de Correo Electrónico](https://docs.aspose.com/email/es/net/extracting-message-contents-from-emails/#extracting-email-headers)) se puede extraer y manipular de diferentes maneras. Este artículo explica cómo mostrar información seleccionada del encabezado del correo electrónico y el cuerpo del correo en pantalla. Para mostrar información del correo electrónico en pantalla, sigue estos pasos:
 
-- Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Cargue un mensaje de correo electrónico en [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-- Muestra el contenido del correo electrónico en la pantalla.
+- Crea una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Carga un mensaje de correo electrónico en la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Muestra el contenido del correo en la pantalla.
 
-El siguiente fragmento de código muestra cómo mostrar la información del correo electrónico en la pantalla.
+El siguiente fragmento de código te muestra cómo mostrar información del correo electrónico en la pantalla.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -38,21 +38,21 @@ Console.WriteLine("TextBody");
 Console.WriteLine(message.Body);
 ```
 
-## **Extracción de encabezados de correo electrónico**
+## **Extrayendo Encabezados de Correo Electrónico**
 
-El encabezado del correo electrónico representa un conjunto estándar de campos de encabezado definido por Internet y RFC que se incluye en los mensajes de correo electrónico de Internet. Se puede especificar un encabezado de correo electrónico mediante el [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) clase. Los tipos de encabezados más comunes se definen en [HeaderType](https://reference.aspose.com/email/net/aspose.email/headertype/) clase. Es una clase sellada que funciona como una enumeración normal. Para extraer los encabezados de un correo electrónico, sigue estos pasos:
+El encabezado de un correo electrónico representa un conjunto estándar de campos de encabezado definido por Internet y por la RFC incluido en los mensajes de correo electrónico de Internet. Un encabezado de correo electrónico se puede especificar utilizando la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Los tipos de encabezado comunes están definidos en la clase [HeaderType](https://reference.aspose.com/email/net/aspose.email/headertype/). Es una clase sellada que funciona como una enumeración normal. Para extraer encabezados de un correo electrónico, sigue estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Cargue un mensaje de correo electrónico en la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Una vez que se haya cargado un mensaje de correo electrónico, obtendremos su contenido sin procesar.
+1. Crea una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Carga un mensaje de correo electrónico en la instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Después de que se haya cargado un mensaje de correo electrónico, obtendremos su contenido en bruto.
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) la clase en sí contiene propiedades como From, To, Cc, Subject, etc. Estas propiedades se pueden extraer de los encabezados.
+La clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) en sí misma contiene propiedades como De, Para, Cc, Asunto, etc. Estas propiedades se pueden extraer de los encabezados.
 
-El siguiente fragmento de código muestra cómo extraer los encabezados de los correos electrónicos.
+El siguiente fragmento de código te muestra cómo extraer encabezados de correo electrónico.
 
-## **Obtener valores de encabezado decodificados**
+## **Obtener Valores de Encabezado Decodificados**
 
-El siguiente fragmento de código muestra cómo obtener valores de encabezado decodificados.
+El siguiente fragmento de código te muestra cómo obtener valores de encabezado decodificados.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -61,21 +61,21 @@ string decodedValue = mailMessage.Headers.GetDecodedValue("Thread-Topic");
 Console.WriteLine(decodedValue);
 ```
 
-## **Obtenga el cuerpo del texto sin formato**
+## **Obtener Cuerpo de Texto Plano**
 
-The [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) La propiedad devuelve una representación en texto plano del cuerpo de un mensaje.
+La propiedad [Body](https://reference.aspose.com/email/net/aspose.email/mailmessage/body/) devuelve una representación en texto plano del cuerpo de un mensaje.
 
 ```csharp
 string plainTextBody = mailMessage.Body;
 ```
 
-Nota: Si la parte MIME texto/simple está presente en un mensaje, la propiedad devuelve sus datos de texto. De lo contrario, devuelve el contenido de texto separado del [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) propiedad sin marcado html.
+Nota: Si la parte MIME de texto/plano está presente en un mensaje, la propiedad devuelve sus datos de texto. De lo contrario, devuelve el contenido de texto separado de la propiedad [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) sin marcado html.
 
-## **Obtener el cuerpo del HTML como texto sin formato**
+## **Obtener Cuerpo HTML como Texto Plano**
 
-The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) La clase proporciona la función para extraer el cuerpo HTML del mensaje como texto sin formato. El [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) la clase proporciona una [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) método que devuelve el cuerpo HTML en texto plano. Este método analiza el [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) propiedad y devuelve contenido de texto plano separado ignorando el marcado html. El [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) El método acepta un parámetro booleano que indica si el cuerpo debe contener URL o no. Si se pasa el parámetro como verdadero, se indica que el cuerpo del HTML debe contener direcciones URL.
+La clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) proporciona la función para extraer el cuerpo HTML del mensaje como texto plano. La clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) proporciona un método [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) que devuelve el cuerpo HTML en texto plano. Este método analiza la propiedad [HtmlBody](https://reference.aspose.com/email/net/aspose.email/mailmessage/htmlbody/) y devuelve contenido de texto plano separado ignorando el marcado html. El método [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) acepta un parámetro booleano que indica si el cuerpo debe contener URLs o no. Pasar el parámetro como verdadero indica que el cuerpo HTML debe contener URLs.
 
-El siguiente fragmento de código demuestra el uso de [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) método para extraer el cuerpo HTML del correo electrónico como texto sin formato.
+El siguiente fragmento de código demuestra el uso del método [GetHtmlBodyText](https://reference.aspose.com/email/net/aspose.email/mailmessage/gethtmlbodytext/#gethtmlbodytext) para extraer el cuerpo HTML del correo electrónico como texto plano.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

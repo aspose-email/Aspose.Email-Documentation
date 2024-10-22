@@ -1,59 +1,59 @@
 ---
-title: "Creación de una aplicación sencilla"
-url: /es/androidjava/creating-simple-application/
+title: "Creando una Aplicación Simple"
+url: /es/androidjava/creando-aplicacion-simple/
 weight: 10
 type: docs
 ---
 
-## **Cómo usar Aspose.Emil para Android a través de Java**
-Este tema te guiará a través de los pasos necesarios para configurar Aspose.Email para Android a través de Java en el IDE de Android Studio, suponiendo que ya tienes la versión más reciente de Android Studio instalada en tu máquina y que también has adquirido la última versión de Aspose.Email para Android a través del paquete Java.
+## **Cómo usar Aspose.Email para Android a través de Java**
+Este tema te guiará a través de los pasos necesarios para configurar Aspose.Email para Android a través de Java en el IDE de Android Studio, asumiendo que ya tienes instalada la última versión de Android Studio en tu máquina y que también has adquirido la última versión del paquete Aspose.Email para Android a través de Java.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Si aún no has instalado Android Studio, primero tienes que adquirir la configuración de Android Studio e instalarla en tu máquina. Puedes descargar la versión más reciente de Android Studio desde [here ](https://developer.android.com/studio/index.html#win-bundle)mientras que los detalles sobre cómo instalar el IDE están disponibles [here](https://developer.android.com/studio/install.html).
+Si aún no has instalado Android Studio, primero debes adquirir el instalador de Android Studio e instalarlo en tu máquina. Puedes descargar la última versión de Android Studio desde [este enlace](https://developer.android.com/studio/index.html#win-bundle) mientras que los detalles sobre cómo instalar el IDE están disponibles [aquí](https://developer.android.com/studio/install.html).
 
-{{% /alert %}} {{% alert color="primary" %}}
+{{% /alert %}} {{% alert color="primary" %}} 
 
-El paquete Aspose.Email para Android a través de Java se puede descargar desde [here](https://downloads.aspose.com/email/androidjava). Tenga en cuenta que cada paquete de lanzamiento de Aspose.Email para Android a través de Java consta principalmente de 2 archivos, como se detalla a continuación.
+El paquete Aspose.Email para Android a través de Java se puede descargar desde [este enlace](https://downloads.aspose.com/email/androidjava). Ten en cuenta que cada paquete de lanzamiento de Aspose.Email para Android a través de Java consiste principalmente en 2 archivos como se detalla a continuación.
 
-- aspose-email-x.x.x.jar es el archivo de biblioteca principal que contiene todos los espacios de nombres de Aspose.Email para Android a través de la API de Java.
-- aspose-email-x.x.x-libs.apk es el APK que contiene el archivo bcprov-jdk15-146.jar de terceros que se utiliza para las funciones de cifrado y descifrado que ofrece Aspose.Email para Android a través de la API de Java.
+- aspose-email-x.x.x.jar es el archivo de biblioteca principal que contiene todos los espacios de nombres de la API Aspose.Email para Android a través de Java.
+- aspose-email-x.x.x-libs.apk es el APK que contiene el bcprov-jdk15-146.jar de terceros utilizado para las funciones de cifrado y descifrado ofrecidas por la API Aspose.Email para Android a través de Java.
 
-{{% /alert %}}
-## **Primeros pasos con Aspose.Email para Android a través de Java en Android Studio**
-Una vez que se cargue el IDE de Android Studio, haz clic en Archivo > Nuevo > Nuevo proyecto, como se muestra a continuación.
+{{% /alert %}} 
+## **Comenzando con Aspose.Email para Android a través de Java en Android Studio**
+Una vez que se carga el IDE de Android Studio, haz clic en Archivo > Nuevo > Nuevo Proyecto como se muestra a continuación.
 
 ![todo:image_alt_text](run_examples_1.png)
 
-También puedes crear un nuevo proyecto desde la pantalla de bienvenida de Android Studio, como se muestra a continuación.
+También puedes crear un nuevo proyecto desde la Pantalla de Bienvenida de Android Studio, como se muestra a continuación.
 
 ![todo:image_alt_text](run_examples_2.png)
 
-A continuación, se le pedirá que especifique el nombre de la aplicación, el dominio y la ubicación para almacenar los archivos del proyecto. Puede elegir cambiar los valores predeterminados según su elección o dejarlos como están y hacer clic en Siguiente.
+A continuación, se te pedirá que especifiques el nombre de la aplicación, el dominio y la ubicación para almacenar los archivos del proyecto. Puedes elegir cambiar los valores predeterminados según tu elección o dejarlos como están, y hacer clic en Siguiente.
 
 ![todo:image_alt_text](run_examples_3.png)
 
-En el siguiente paso, debe especificar el dispositivo Android en el que desea alojar/ejecutar su aplicación. Una vez seleccionado, haga clic en el botón Siguiente.
+En el siguiente paso, deberás especificar el Dispositivo Android en el que deseas alojar/ejecutar tu aplicación. Una vez seleccionado, haz clic en el botón Siguiente.
 
 ![todo:image_alt_text](run_examples_4.png)
 
-Ahora tiene que seleccionar la actividad de una lista predefinida de plantillas. Para que la demostración sea sencilla, hemos seleccionado la plantilla de actividad vacía como se muestra a continuación.
+Ahora necesitas seleccionar la Actividad de una lista de plantillas predefinidas. Para mantener la demostración simple, hemos seleccionado la plantilla de Actividad Vacía como se muestra a continuación.
 
 ![todo:image_alt_text](run_examples_5.png)
 
-Haga clic en el botón Finalizar en el cuadro de diálogo Personalizar la actividad, ya que mantendremos todos los ajustes predeterminados tal como están.
+Haz clic en el botón Terminar en el cuadro de diálogo Personalizar la Actividad ya que mantendremos todas las configuraciones predeterminadas tal como están.
 
 ![todo:image_alt_text](run_examples_6.png)
 
-Tan pronto como hagas clic en el botón Finalizar del paso anterior, el IDE comenzará a crear el proyecto como se muestra a continuación. Deja que termine o haz clic en el botón Cancelar.
+Tan pronto como hagas clic en el botón Terminar en el paso anterior, el IDE comenzará a construir el proyecto como se muestra a continuación. Deja que termine o haz clic en el botón Cancelar.
 
 ![todo:image_alt_text](run_examples_7.png)
 
-Ahora que el proyecto se ha cargado en el IDE, sin embargo, es posible que desee cambiar la vista a Project para poder ver la jerarquía completa de los archivos del proyecto. Para cambiar la vista, compruebe la siguiente instantánea.
+Ahora el proyecto se ha cargado en el IDE, sin embargo, es posible que desees cambiar la vista a Proyecto para que puedas ver la jerarquía completa de los archivos del proyecto. Para cambiar la vista, consulta la siguiente captura de pantalla.
 
 ![todo:image_alt_text](run_examples_8.png)
 
-Tras cambiar la vista a Project, busca y carga el archivo build.gradle en el editor y pega el siguiente fragmento como se muestra a continuación.
+Después de cambiar la vista a Proyecto, encuentra y carga el archivo build.gradle en el editor y pega el siguiente fragmento como se muestra a continuación.
 
 
 ~~~Java
@@ -68,24 +68,24 @@ Tras cambiar la vista a Project, busca y carga el archivo build.gradle en el edi
 
 ![todo:image_alt_text](run_examples_9.png)
 
-A continuación, agregaremos Aspose.Email para Android a través de Java Jar al proyecto. Hay 2 pasos importantes que se detallan a continuación.
+A continuación, agregaremos el Jar de Aspose.Email para Android a través de Java al proyecto. Hay 2 pasos importantes como se detalla a continuación.
 
-- Copie manualmente el archivo Aspose.Email para Android a través de Java Jar a la carpeta\ app\ libs.
-- Agregue Aspose.Email para Android a través de Java Jar como biblioteca al módulo como se muestra a continuación.
+- Copia manualmente el Jar de Aspose.Email para Android a través de Java a la carpeta \app\libs.
+- Agrega el Jar de Aspose.Email para Android a través de Java como biblioteca al módulo como se muestra a continuación.
 
 ![todo:image_alt_text](run_examples_10.png)
 
-Se le pedirá que seleccione el módulo al que desea agregar Aspose.Email for Java.Android Jar como biblioteca. Elija la opción adecuada y haga clic en Aceptar.
+Se te pedirá que selecciones el módulo al que deseas agregar el Jar de Aspose.Email para Java.Android como biblioteca. Por favor, elige apropiadamente y haz clic en Aceptar.
 
 ![todo:image_alt_text](run_examples_11.png)
 
-También tienes que añadir el archivo APK al proyecto. Tienes que copiar el APK a la carpeta\ app\ src\ main\ assets. Si no tiene la carpeta de activos en la carpeta principal, puede crear una haciendo clic con el botón derecho en el nodo principal de la vista de proyecto. Seleccione Nuevo > Carpeta > Carpeta de activos.
+También necesitas agregar el archivo APK al proyecto. Debes copiar el APK a la carpeta \app\src\main\assets. Si no tienes la carpeta assets bajo la carpeta principal, puedes crear una haciendo clic derecho en el nodo principal en la vista del Proyecto. Selecciona Nuevo > Carpeta > Carpeta de Activos.
 
 ![todo:image_alt_text](run_examples_12.png)
 
-Una vez que se haya agregado el APK al proyecto, el proyecto debe cargarlo. Hay dos formas de cargar el APK de la siguiente manera.
+Una vez que el APK ha sido agregado al proyecto, debe ser cargado por el proyecto. Hay 2 maneras de cargar el APK como sigue.
 
-- Cargue el APK en una clase de aplicación personalizada mediante el fragmento que se proporciona a continuación y registre la clase de aplicación personalizada en el archivo AndroidManifest.xml.
+- Cargar el APK en una clase de aplicación personalizada utilizando el fragmento proporcionado a continuación, y registrar la clase de aplicación personalizada en el AndroidManifest.xml.
 
 
 ~~~Java
@@ -94,7 +94,7 @@ Una vez que se haya agregado el APK al proyecto, el proyecto debe cargarlo. Hay 
 
 ~~~
 
-- Carga el APK en el método onCreate de MainActivity.
+- Cargar el APK en el método OnCreate de MainActivity.
 
 
 ~~~Java
@@ -103,42 +103,42 @@ Una vez que se haya agregado el APK al proyecto, el proyecto debe cargarlo. Hay 
 
 ~~~
 
-Ahora estamos listos para escribir el código. Para que la demostración sea fácil de entender, hemos añadido un widget de botones al diseño y vamos a gestionar su evento de clic de la siguiente manera.
+Ahora estamos listos para escribir el código. Para mantener la demostración fácil de entender, hemos agregado un widget de Botón al diseño y vamos a manejar su evento de clic como sigue.
 
 
 ~~~Java
 
-private class TestEmail extends AsyncTask<Void, String, Boolean>
+private class TestEmail extends AsyncTask<Void, String, Boolean> 
 
 {
 
     @Override
 
-    protected Boolean doInBackground(Void... params)
+    protected Boolean doInBackground(Void... params) 
 
     {
 
         Boolean result = false;
 
-        try
+        try 
 
         {
 
-            //Create an instance of PersonalStorage
+            //Crear una instancia de PersonalStorage
 
             com.aspose.email.PersonalStorage pst = com.aspose.email.PersonalStorage.create("newSample_out.pst", 0);
 
-            //Create a folder at root of PST
+            //Crear una carpeta en la raíz del PST
 
             pst.getRootFolder().addSubFolder("myInbox");
 
-            //Add message to newly created folder
+            //Agregar mensaje a la carpeta recién creada
 
             pst.getRootFolder().getSubFolder("myInbox").addMessage(com.aspose.email.MapiMessage.fromFile("message.msg"));
 
-        }
+        } 
 
-        catch (Exception e)
+        catch (Exception e) 
 
         {
 
@@ -154,8 +154,8 @@ private class TestEmail extends AsyncTask<Void, String, Boolean>
 
 ~~~
 
-Cuando ejecutas la aplicación con el botón de reproducción de la interfaz IDE (o con SHIFT + F10), el emulador cargará la aplicación como se muestra a continuación.
+Cuando ejecutes la aplicación utilizando el botón de reproducción en la interfaz del IDE (o usando SHIFT + F10), el emulador cargará la aplicación como se muestra a continuación.
 
 ![todo:image_alt_text](run_examples_13.png)
 
-Al hacer clic en el botón del emulador, se ejecutará el código.
+Hacer clic en el botón en el emulador ejecutará el código.

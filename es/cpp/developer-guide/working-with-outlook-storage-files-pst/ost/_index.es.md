@@ -4,5 +4,3 @@ url: /es/cpp/working-with-outlook-storage-files-pst/ost/
 weight: 30
 type: docs
 ---
-
-

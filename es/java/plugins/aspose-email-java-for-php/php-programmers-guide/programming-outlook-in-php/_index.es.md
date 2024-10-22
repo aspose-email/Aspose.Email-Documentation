@@ -1,6 +1,6 @@
 ---
-title: "Programación de Outlook en PHP"
-url: /es/java/programming-outlook-in-php/
+title: "Perspectiva de Programación en PHP"
+url: /es/java/perspectiva-de-programacion-en-php/
 weight: 20
 type: docs
 ---

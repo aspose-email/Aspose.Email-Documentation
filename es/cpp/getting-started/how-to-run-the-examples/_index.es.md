@@ -1,28 +1,28 @@
 ---
-title: "Cómo ejecutar los ejemplos"
-description: "En esta sección se explica cómo ejecutar los ejemplos de la biblioteca analizadora de correo electrónico de C++ desde GitHub."
+title: "Cómo Ejecutar los Ejemplos"
+description: "Esta sección explica cómo ejecutar los ejemplos de la Biblioteca de Parser de Email en C++ desde GitHub."
 url: /es/cpp/how-to-run-the-examples/
 weight: 70
 type: docs
 ---
 
-## **Requisitos de software**
-Asegúrese de cumplir los siguientes requisitos antes de descargar y ejecutar los ejemplos.
+## **Requerimientos de Software**
+Asegúrate de cumplir con los siguientes requisitos antes de descargar y ejecutar los ejemplos.
 
 1. Visual Studio 2015 o superior
 ## **Descargar desde GitHub**
 Todos los ejemplos de Aspose.Email para C++ están alojados en [GitHub](https://github.com/aspose-email/Aspose.Email-for-C/).
 
-- Puedes clonar el repositorio con tu cliente de GitHub favorito o descargar el archivo ZIP del repositorio de Github.
-- Extrae el contenido del archivo ZIP a cualquier carpeta de tu ordenador. Todos los ejemplos se encuentran en el **Examples** folder.
-- Abra el archivo de la solución en Visual Studio y cree el proyecto.
+- Puedes clonar el repositorio utilizando tu cliente de GitHub favorito o descargar el archivo ZIP desde el repositorio de Github.
+- Extrae el contenido del archivo ZIP en cualquier carpeta de tu computadora. Todos los ejemplos se encuentran en la carpeta **Examples**.
+- Abre el archivo de solución en Visual Studio y compila el proyecto.
 - En la primera ejecución, las dependencias se descargarán automáticamente a través de NuGet.
-- **Data** carpeta en la carpeta raíz de **Examples** contiene archivos de entrada. Es obligatorio que descargue el **Data** carpeta junto con el proyecto de ejemplos.
-- Abra Examples.cpp, todos los ejemplos se invocan desde aquí.
-- Descomente los ejemplos que quiera ejecutar desde el proyecto.
+- La carpeta **Data** en la carpeta raíz de **Examples** contiene archivos de entrada. Es obligatorio que descargues la carpeta **Data** junto con el proyecto de ejemplos.
+- Abre Examples.cpp, todos los ejemplos se llaman desde aquí.
+- Descomenta los ejemplos que quieres ejecutar dentro del proyecto.
 
-No dudes en ponerte en contacto con nosotros a través de nuestros foros si tienes problemas para configurar o ejecutar los ejemplos.
-## **Contribute**
-Si quieres añadir o mejorar un ejemplo, te animamos a que contribuyas al proyecto. Todos los ejemplos y proyectos destacados de este repositorio son de código abierto y se pueden usar libremente en tus propias aplicaciones.
+No dudes en contactarnos a través de nuestros Foros si tienes algún problema configurando o ejecutando los ejemplos.
+## **Contribuir**
+Si deseas añadir o mejorar un ejemplo, te animamos a contribuir al proyecto. Todos los ejemplos y proyectos de demostración en este repositorio son de código abierto y se pueden utilizar libremente en tus propias aplicaciones.
 
-Para contribuir, puedes bifurcar el repositorio, editar el código fuente y crear una solicitud de cambios. Revisaremos los cambios y los incluiremos en el repositorio si los consideramos útiles.
+Para contribuir, puedes bifurcar el repositorio, editar el código fuente y crear una solicitud de extracción. Revisaremos los cambios e incluirlos en el repositorio si se considera útil.

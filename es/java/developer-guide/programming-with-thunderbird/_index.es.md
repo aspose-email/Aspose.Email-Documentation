@@ -5,18 +5,18 @@ weight: 100
 type: docs
 ---
 
-## **Leer mensajes de MBOX**
-[Mozilla Thunderbird](https://www.thunderbird.net/en-US/) es un cliente de correo electrónico multiplataforma de código abierto, desarrollado por la Fundación Mozilla. Almacena los correos electrónicos en su propia estructura de archivos, administrando los índices y subcarpetas de los mensajes a través de formatos de archivo patentados. Aspose.Email puede funcionar con las estructuras de almacenamiento de correo de Thunderbird. El [MboxrdStorageReader](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader) La clase permite a los desarrolladores leer los mensajes del archivo de almacenamiento de correo de Mozilla Thunderbird. Este artículo muestra cómo leer los mensajes del almacenamiento de correo electrónico de Thunderbird:
+## **Leer Mensajes desde MBOX**
+[Mozilla Thunderbird](https://www.thunderbird.net/en-US/) es un cliente de correo electrónico de código abierto y multiplataforma, desarrollado por la Fundación Mozilla. Almacena correos electrónicos en su propia estructura de archivos, gestionando índices de mensajes y subcarpetas a través de formatos de archivo propietarios. Aspose.Email puede trabajar con estructuras de almacenamiento de correo de Thunderbird. La clase [MboxrdStorageReader](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader) permite a los desarrolladores leer mensajes del archivo de almacenamiento de correo de Mozilla Thunderbird. Este artículo muestra cómo leer los mensajes del almacenamiento de correo de Thunderbird:
 
 1. Abre el archivo de almacenamiento de Thunderbird en *FileStream*.
-1. Crea una instancia del [MboxrdStorageReader](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader) clase y pasa la secuencia anterior al constructor.
-1. Call [ReadNextMessage()](https://apireference.aspose.com/email/java/com.aspose.email/MboxrdStorageReader#readNextMessage\(\)) para recibir el primer mensaje.
-1. Usa lo mismo [ReadNextMessage()](https://apireference.aspose.com/email/java/com.aspose.email/MboxrdStorageReader#readNextMessage\(\)) en un bucle de tiempo para leer todos los mensajes.
-1. Cierra todos los canales.
+1. Crea una instancia de la clase [MboxrdStorageReader](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader) y pasa el flujo anterior al constructor.
+1. Llama a [ReadNextMessage()](https://apireference.aspose.com/email/java/com.aspose.email/MboxrdStorageReader#readNextMessage\(\)) para obtener el primer mensaje.
+1. Utiliza el mismo [ReadNextMessage()](https://apireference.aspose.com/email/java/com.aspose.email/MboxrdStorageReader#readNextMessage\(\)) en un bucle while para leer todos los mensajes.
+1. Cierra todos los flujos.
 
-El siguiente fragmento de código muestra cómo leer todos los mensajes de un almacenamiento de correo de Thunderbird.
+El siguiente fragmento de código te muestra cómo leer todos los mensajes de un almacenamiento de correo de Thunderbird.
 ~~~Java
-//Getting Marker information while reading messages from Mbox storage file
+//Obteniendo información del marcador mientras se leen mensajes del archivo de almacenamiento Mbox
 try (FileInputStream stream = new FileInputStream(dataDir + "Outlook.pst")) {
     MboxLoadOptions lo = new MboxLoadOptions();
     lo.setLeaveOpen(false);
@@ -30,53 +30,53 @@ try (FileInputStream stream = new FileInputStream(dataDir + "Outlook.pst")) {
 }
 ~~~
 
-### **Configurar las opciones de carga al leer mensajes de MBOX**
+### **Configurar Opciones de Carga al Leer Mensajes desde MBOX**
 
-La API Aspose.Email permite las siguientes manipulaciones con los mensajes al leerlos desde un archivo MBOX:
+La API Aspose.Email permite las siguientes manipulaciones con mensajes al leerlos desde un archivo MBOX:
 
-**Convierte mensajes de MBOX a PST conservando los archivos adjuntos TNEF**
+**Convertir Mensajes de MBOX a PST Preservando Adjuntos TNEF**
 
 ```java
 EmlLoadOptions emlLoadOptions = new EmlLoadOptions();
 emlLoadOptions.setPreserveTnefAttachments(true);
 MailStorageConverter.setMboxMessageOptions(emlLoadOptions);
-// Convert messages from mbox to pst preserving tnef attachments.
+// Convertir mensajes de mbox a pst preservando adjuntos tnef.
 PersonalStorage storage = MailStorageConverter.mboxToPst("Input.mbox", "Output.pst");
 ```
-[MailStorageConverter.MboxMessageOptions()](https://reference.aspose.com/email/java/com.aspose.email/mailstorageconverter/) propiedad: obtiene o establece las opciones de carga de correo electrónico al analizar un almacenamiento de Mbox.
+La propiedad [MailStorageConverter.MboxMessageOptions()](https://reference.aspose.com/email/java/com.aspose.email/mailstorageconverter/) - Obtiene o establece las opciones de carga de correo al analizar un almacenamiento Mbox.
 
-**Lea los mensajes que conservan los archivos adjuntos de TNEF**
+**Leer Mensajes Preservando Adjuntos TNEF**
 
 ```java
 MboxrdStorageReader reader = new MboxrdStorageReader("Input.mbox", new MboxLoadOptions());
-// Read messages preserving tnef attachments.
+// Leer mensajes preservando adjuntos tnef.
 EmlLoadOptions emlLoadOptions = new EmlLoadOptions();
 emlLoadOptions.setPreserveTnefAttachments(true);
 MailMessage eml = reader.readNextMessage(emlLoadOptions);
 ```
-[mboxRDStorageReader.readNextMessage (opciones de EmllOdOptions)](https://reference.aspose.com/email/java/com.aspose.email/emlloadoptions/#getPreserveTnefAttachments--) método: el parámetro emlloAdOptions especifica las opciones al leer un mensaje del almacenamiento de Mbox.
+El método [MboxrdStorageReader.readNextMessage(EmlLoadOptions options)](https://reference.aspose.com/email/java/com.aspose.email/emlloadoptions/#getPreserveTnefAttachments--) - El parámetro EmlLoadOptions especifica opciones al leer un mensaje del almacenamiento Mbox.
 
-**Enumerar los mensajes que conservan los archivos adjuntos de TNEF**
+**Enumerar Mensajes Preservando Adjuntos TNEF**
 
 ```java
 EmlLoadOptions emlLoadOptions = new EmlLoadOptions();
 emlLoadOptions.setPreserveTnefAttachments(true);
-// Enumerate messages preserving tnef attachments.
+// Enumerar mensajes preservando adjuntos tnef.
 for (MailMessage message : reader.enumerateMessages(emlLoadOptions)) {
-    // do something
+    // hacer algo
 }
 ```
-[mboxRDStorageReader.enumerateMessages (opciones de EmllOdOptions)](https://reference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader/#enumerateMessages--) método: especifica emllodOptions al leer un mensaje del almacenamiento de Mbox.
+El método [MboxrdStorageReader.enumerateMessages(EmlLoadOptions options)](https://reference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader/#enumerateMessages--) - Especifica EmlLoadOptions al leer un mensaje del almacenamiento Mbox.
 
-## **Extraer mensajes de MBOX mediante identificadores**
+## **Extraer Mensajes de MBOX por Identificadores**
 
-A veces es necesario extraer los mensajes seleccionados por identificadores. Por ejemplo, su aplicación almacena los identificadores en una base de datos y extrae un mensaje cuando lo solicita. Esta es la forma eficaz de evitar tener que recorrer todo el almacenamiento cada vez para encontrar un mensaje específico que extraer. Para implementar esta función en los archivos MBOX, Aspose.Email proporciona los siguientes métodos y clases:
+A veces es necesario extraer mensajes seleccionados por identificadores. Por ejemplo, tu aplicación almacena identificadores en una base de datos y extrae un mensaje a pedido. Esta es la manera eficiente de evitar recorrer todo el almacenamiento cada vez para encontrar un mensaje específico para extraer. Para implementar esta función para archivos MBOX, Aspose.Email proporciona los siguientes métodos y clases:
 
-- [MboxMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/mboxmessageinfo/) clase con el [EntryId](https://reference.aspose.com/email/java/com.aspose.email/mboxmessageinfo/#getEntryId--) propiedad: obtiene el identificador de entrada.
-- [enumerateMessageInfo()](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/#enumerateMessageInfo--) método del [MboxStorageReader](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/) class: expone el enumerador, que admite una iteración de los mensajes almacenados.
-- [ExtractMessage (identificador de cadena)](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/#extractMessage-java.lang.String-com.aspose.email.EmlLoadOptions-) método del [MboxStorageReader](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/) class: obtiene el mensaje de MBOX.
+- La clase [MboxMessageInfo](https://reference.aspose.com/email/java/com.aspose.email/mboxmessageinfo/) con la propiedad [EntryId](https://reference.aspose.com/email/java/com.aspose.email/mboxmessageinfo/#getEntryId--) - Obtiene el identificador de entrada. 
+- El método [enumerateMessageInfo()](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/#enumerateMessageInfo--) de la clase [MboxStorageReader](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/) - Expone el enumerador, que soporta la iteración de mensajes en el almacenamiento.
+- El método [extractMessage(String id)](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/#extractMessage-java.lang.String-com.aspose.email.EmlLoadOptions-) de la clase [MboxStorageReader](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/) - Obtiene el mensaje de MBOX.
 
-El ejemplo de código que aparece a continuación muestra cómo extraer mensajes de MBOX mediante identificadores:
+El siguiente ejemplo de código demuestra cómo extraer mensajes de MBOX por identificadores:
 
 ```java
 MboxStorageReader reader = MboxStorageReader.createReader("my.mbox", new MboxLoadOptions());
@@ -85,20 +85,20 @@ for (MboxMessageInfo msgInfo : reader.enumerateMessageInfo()) {
     MailMessage eml = reader.extractMessage(msgInfo.getEntryId(), new EmlLoadOptions());
 }
 ```
-**Note:** El identificador del mensaje es único en el archivo de almacenamiento. Los ID los crea Aspose.Email y no se pueden usar en bibliotecas o aplicaciones de procesamiento de MBOX de terceros.
+**Nota:** El ID del mensaje es único dentro del archivo de almacenamiento. Los ID son creados por Aspose.Email y no pueden ser utilizados en otras bibliotecas o aplicaciones de procesamiento de MBOX de terceros.
 
-## **Redacción de mensajes**
-The [MboxrdStorageWriter](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragewriter) La clase ofrece la posibilidad de escribir nuevos mensajes en el archivo de almacenamiento de correo de Thunderbird. Para escribir mensajes:
+## **Escribir Mensajes**
+La clase [MboxrdStorageWriter](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragewriter) proporciona la facilidad de escribir nuevos mensajes en el archivo de almacenamiento de correo de Thunderbird. Para escribir mensajes:
 
 1. Abre el archivo de almacenamiento de Thunderbird en *FileStream*.
-1. Crea una instancia del [MboxrdStorageWriter](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragewriter) clase y pasa la secuencia anterior al constructor.
-1. Prepare un mensaje nuevo mediante el [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) class.
-1. Llame al [WriteMessage()](https://apireference.aspose.com/email/java/com.aspose.email/MboxrdStorageWriter#writeMessage\(com.aspose.email.MailMessage\)) método y pase lo anterior [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) instancia para añadir el mensaje al almacenamiento de Thunderbird.
-1. Cierra todas las transmisiones.
+1. Crea una instancia de la clase [MboxrdStorageWriter](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragewriter) y pasa el flujo anterior al constructor.
+1. Prepara un nuevo mensaje utilizando la clase [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage).
+1. Llama al método [WriteMessage()](https://apireference.aspose.com/email/java/com.aspose.email/MboxrdStorageWriter#writeMessage\(com.aspose.email.MailMessage\)) y pasa la instancia de [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/mailmessage) anterior para agregar el mensaje al almacenamiento de Thunderbird.
+1. Cierra todos los flujos.
 
-El siguiente fragmento de código muestra cómo escribir mensajes en el almacenamiento de correo de Thunderbird.
+El siguiente fragmento de código te muestra cómo escribir mensajes en el almacenamiento de correo de Thunderbird.
 ~~~Java
-//Getting marker information while writing messages to Mbox storage file
+//Obteniendo información del marcador mientras se escriben mensajes en el archivo de almacenamiento Mbox
 try (FileOutputStream writeStream = new FileOutputStream(dataDir + "inbox")) {
     try (MboxrdStorageWriter writer = new MboxrdStorageWriter(writeStream, false)) {
         MailMessage msg = MailMessage.load(dataDir + "Message.msg");
@@ -109,100 +109,100 @@ try (FileOutputStream writeStream = new FileOutputStream(dataDir + "inbox")) {
 }
 ~~~
 
-## **Obtener el número total de mensajes del archivo MBox**
-The [MboxrdStorageReader](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader) La clase proporciona la capacidad de leer la cantidad de elementos disponibles en un archivo MBox. Esto se puede usar para desarrollar aplicaciones que muestren el progreso de la actividad mientras se procesa dicho archivo.
+## **Obteniendo el Número Total de Mensajes desde el Archivo MBox**
+La clase [MboxrdStorageReader](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragereader) proporciona la capacidad de leer el número de elementos disponibles en un archivo MBox. Esto puede ser utilizado para desarrollar aplicaciones que muestren el progreso de la actividad mientras se procesa dicho archivo.
 ~~~Java
 MboxLoadOptions lo = new MboxLoadOptions();
 try (MboxrdStorageReader reader = new MboxrdStorageReader("inbox.dat", lo)) {
-    System.out.println("Total number of messages in Mbox file: " + reader.getTotalItemsCount());
+    System.out.println("Número total de mensajes en el archivo Mbox: " + reader.getTotalItemsCount());
 }
-~~~
+~~~ 
 
-## **Obtener el tamaño actual del mensaje**
+## **Obtener Tamaño Actual del Mensaje**
 ~~~Java
 FileInputStream stream = new FileInputStream(dataDir + "ExampleMbox.mbox");
 MboxLoadOptions lo = new MboxLoadOptions();
 try (MboxrdStorageReader reader = new MboxrdStorageReader(stream, lo)) {
     MailMessage msg = null;
     while ((msg = reader.readNextMessage()) != null) {
-        //returns the number of bytes read
+        //devuelve el número de bytes leídos
         long currentDataSize = reader.getCurrentDataSize();
-        System.out.println("Bytes read: " + currentDataSize);
+        System.out.println("Bytes leídos: " + currentDataSize);
     }
 }
-~~~
+~~~ 
 
-## **Establecer la codificación de texto preferida al cargar archivos Mbox**
+## **Establecer Codificación de Texto Preferida al Cargar Archivos Mbox**
 
-The [setPreferredTextEncoding (valor del conjunto de caracteres)](https://reference.aspose.com/email/java/com.aspose.email/mboxloadoptions/#setPreferredTextEncoding-java.nio.charset.Charset-) método del [MboxLoadOptions](https://reference.aspose.com/email/java/com.aspose.email/mboxloadoptions/) la clase obtiene o establece la codificación preferida para los mensajes. Cree un lector para el archivo Mbox con las opciones de carga especificadas y sus mensajes con el contenido codificado se leerán y procesarán correctamente. El siguiente ejemplo de código muestra cómo implementar esta función en un proyecto:
+El método [setPreferredTextEncoding(Charset value)](https://reference.aspose.com/email/java/com.aspose.email/mboxloadoptions/#setPreferredTextEncoding-java.nio.charset.Charset-) de la clase [MboxLoadOptions](https://reference.aspose.com/email/java/com.aspose.email/mboxloadoptions/) obtiene o establece la codificación preferida para los mensajes. Crea un lector para el archivo Mbox con las opciones de carga especificadas y tus mensajes con el contenido codificado serán correctamente leídos y procesados. El siguiente ejemplo de código muestra cómo implementar esta función en un proyecto:
 
 ~~~Java
 MboxLoadOptions lo = new MboxLoadOptions();
 lo.setPreferredTextEncoding(Charset.forName("utf-8"));
 MboxrdStorageReader reader = new MboxrdStorageReader("sample.mbox", lo);
 MailMessage message = reader.readNextMessage();
-~~~
+~~~ 
 
-## **Divida el almacenamiento de Mbox en partes más pequeñas**
+## **Dividir Almacenamiento Mbox en Partes Más Pequeñas**
 
-Aspose.Email proporciona los siguientes componentes diseñados para tener un mayor control sobre el procesamiento del almacenamiento de Mbox, lo que le permite dividir archivos grandes en partes manejables e implementar acciones personalizadas durante el proceso:
+Aspose.Email proporciona los siguientes componentes diseñados para tener más control sobre el procesamiento de almacenamiento Mbox, permitiéndote dividir archivos grandes en partes manejables e implementar acciones personalizadas durante el proceso:
 
-- [mboxStorageReader.splitInto (tamaño de fragmento largo, ruta de salida de cadena)](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/#splitInto-long-java.lang.String-) método: permite dividir el almacenamiento de Mbox en partes más pequeñas, lo que facilita la administración y el procesamiento de archivos Mbox de gran tamaño.
+- El método [MboxStorageReader.SplitInto(long chunkSize, String outputPath)](https://reference.aspose.com/email/java/com.aspose.email/mboxstoragereader/#splitInto-long-java.lang.String-) - Te permite dividir el almacenamiento Mbox en partes más pequeñas, facilitando la gestión y el procesamiento de archivos Mbox grandes.
 
-mboxStorageReader.splitInto (long ChunkSize, String outputPath, String PartFilenamePrefix) Este método es una variante del método anterior y también permite especificar un prefijo personalizado para los nombres de los archivos de Mbox divididos.
+MboxStorageReader.SplitInto(long chunkSize, String outputPath, String partFileNamePrefix) Una variación del método anterior, este también te permite especificar un prefijo personalizado para los nombres de archivos Mbox divididos.
 
-Evento mboxStorageReader.setEmlCoptingEventHandler Este evento se produce antes de que un correo electrónico se copie en un nuevo archivo de Mbox. Puede personalizar las acciones antes de procesar los correos electrónicos.
+MboxStorageReader.setEmlCopyingEventHandler Evento Este evento ocurre antes de que un correo electrónico sea copiado a un nuevo archivo Mbox. Puedes personalizar acciones antes de que los correos sean procesados.
 
-Evento mboxStorageReader.setEmlCopiedEventHandler Este evento se produce después de copiar un correo electrónico en un archivo Mbox nuevo. Puede realizar acciones de posprocesamiento en los correos electrónicos.
+MboxStorageReader.setEmlCopiedEventHandler Evento Este evento ocurre después de que un correo electrónico es copiado a un nuevo archivo Mbox. Puedes realizar acciones de post-procesamiento en los correos.
 
-Evento mboxStorageReader.setMboxFileCreateEventHandler Este evento se produce cuando se crea un archivo Mbox nuevo. Puede gestionar este evento para reaccionar a la creación de un archivo.
+MboxStorageReader.setMboxFileCreatedEventHandler Evento Este evento ocurre cuando se crea un nuevo archivo Mbox. Puedes manejar este evento para reaccionar a la creación del archivo.
 
-Evento mboxStorageReader.setMboxFileFilledEventHandler Este evento se produce cuando un nuevo archivo Mbox se llena de correos electrónicos. Puede responder a que el archivo se esté rellenando con correos electrónicos.
+MboxStorageReader.setMboxFileFilledEventHandler Evento Este evento ocurre cuando un nuevo archivo Mbox se llena con correos electrónicos. Puedes responder al archivo siendo poblado con correos.
 
-NewStorageEventHandler (Object sender, newStorageEventArgs e) Representa un delegado para gestionar los eventos que se producen después de crear o procesar un nuevo archivo de almacenamiento.
+NewStorageEventHandler(Object sender, NewStorageEventArgs e) Representa un delegado para manejar eventos que ocurren después de que se crea o procesa un nuevo archivo de almacenamiento.
 
-mimeItemCopyEventHandler (remitente del objeto, mimeItemCopyEventArgs e) Representa un delegado para gestionar los eventos relacionados con la copia de elementos Mime, que normalmente se usa en situaciones en las que un objeto MailMessage se copia de un almacenamiento a otro.
+MimeItemCopyEventHandler(Object sender, MimeItemCopyEventArgs e) Representa un delegado para manejar eventos relacionados con la copia de elementos Mime, típicamente usado en escenarios donde un objeto MailMessage es copiado de un almacenamiento a otro.
 
-NewStorageEventArgs Representa los argumentos utilizados en los eventos que se generan después de crear o procesar un nuevo archivo de almacenamiento.
+NewStorageEventArgs Representa argumentos usados en eventos que se generan después de que se crea un nuevo archivo de almacenamiento o después de que es procesado.
 
-mimeItemCopyEventArgs Representa los argumentos de eventos relacionados con la copia de un objeto MailMessage de un almacenamiento a otro, antes de que comience la copia o una vez finalizada.
+MimeItemCopyEventArgs Representa argumentos de evento relacionados con la copia de un objeto MailMessage de un almacenamiento a otro, ya sea antes de que comience la copia o después de que se complete.
 
-El ejemplo de código que aparece a continuación muestra cómo interactuar con los archivos Mbox, gestionar los eventos relacionados con estos archivos y realizar operaciones como dividir el almacenamiento de Mbox en partes más pequeñas y, al mismo tiempo, realizar un seguimiento del recuento de mensajes y el recuento de partes:
+El siguiente ejemplo de código demuestra cómo interactuar con archivos Mbox, manejar eventos relacionados con estos archivos y realizar operaciones como dividir el almacenamiento Mbox en partes más pequeñas mientras se lleva un seguimiento del conteo de mensajes y partes:
 
 ```java
 messageCount = 0;
 partCount = 0;
 
-// Create an instance of MboxrdStorageReader
+// Crear una instancia de MboxrdStorageReader
 MboxLoadOptions lo = new MboxLoadOptions();
 lo.setLeaveOpen(false);
 MboxrdStorageReader mbox = new MboxrdStorageReader("my.mbox", lo);
 
-// Subscribe to events
+// Suscribirse a eventos
 mbox.setMboxFileCreatedEventHandler(new NewStorageEventHandler() {
     public void invoke(Object sender, NewStorageEventArgs e) {
-        System.out.println("New Mbox file created: " + e.getFileName());
+        System.out.println("Nuevo archivo Mbox creado: " + e.getFileName());
         partCount++;
     }
 });
 
 mbox.setMboxFileFilledEventHandler(new NewStorageEventHandler() {
     public void invoke(Object sender, NewStorageEventArgs e) {
-        System.out.println("Mbox file filled with messages: " + e.getFileName());
+        System.out.println("Archivo Mbox lleno de mensajes: " + e.getFileName());
     }
 });
 
 mbox.setEmlCopiedEventHandler(new MimeItemCopyEventHandler() {
     public void invoke(Object sender, MimeItemCopyEventArgs e) {
-        System.out.println("Message added to new Mbox file. Subject: " + e.getItem().getSubject());
+        System.out.println("Mensaje añadido al nuevo archivo Mbox. Asunto: " + e.getItem().getSubject());
         messageCount++;
     }
 });
 
-// Split the Mbox storage into smaller parts
+// Dividir el almacenamiento Mbox en partes más pequeñas
 mbox.splitInto(10000000, testOutPath, "Prefix");
 
-// Output the final messageCount and partCount
-System.out.println("Total messages added: " + messageCount);
-System.out.println("Total parts created: " + partCount);
+// Salida del conteo final de mensajes y partes
+System.out.println("Total de mensajes añadidos: " + messageCount);
+System.out.println("Total de partes creadas: " + partCount);
 ```

@@ -1,6 +1,6 @@
 ---
-title: "Features"
-url: /es/sharepoint/features/
+title: "Características"
+url: /es/sharepoint/caracteristicas/
 weight: 30
 type: docs
 ---

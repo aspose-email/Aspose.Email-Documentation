@@ -1,49 +1,49 @@
 ---
-title: "Cómo ignorar las excepciones"
+title: "Cómo Ignorar Excepciones"
 url: /es/java/how-to-ignore-exceptions/
 weight: 290
 type: docs
 ---
 
 
-## **Ignorar el soporte de excepciones**
-[ExceptionManager](https://apireference.aspose.com/email/java/com.aspose.email/ExceptionManager) la clase proporciona la capacidad de ignorar excepciones:
+## **Soporte para Ignorar Excepciones**
+La clase [ExceptionManager](https://apireference.aspose.com/email/java/com.aspose.email/ExceptionManager) proporciona la capacidad de ignorar excepciones:
 
 ### **Ejemplos de código:**
 
-Configure una devolución de llamada para gestionar las excepciones:
+Establecer un callback para manejar excepciones:
 ~~~java
 ExceptionManager.setIgnoreExceptionsHandler(new IgnoreExceptionsCallback() {
-    //exception path: {Module}\{Method}\{Action}\{GUID}
-    //example: MailMessage\Load\DecodeTnefAttachment\64149867-679e-4645-9af0-d46566cae598
+    //ruta de la excepción: {Módulo}\{Método}\{Acción}\{GUID}
+    //ejemplo: MailMessage\Load\DecodeTnefAttachment\64149867-679e-4645-9af0-d46566cae598
     public boolean invoke(AsposeException ex, String path) {
-        //Ignore all exceptions on MailMessage.Load
+        //Ignorar todas las excepciones en MailMessage.Load
         return path.equals("MailMessage\\Load");
     }
 });
 ~~~
 
-O usa un **alternative**:
+O usar una **alternativa**:
 ~~~java
-//Ignore all exceptions
+//Ignorar todas las excepciones
 ExceptionManager.setIgnoreAll(true);
 ~~~
 
-Además, puede configurar una devolución de llamada para ignorados **registro de excepciones**:
+Además, puedes establecer un callback para el **registro de excepciones ignoradas**:
 ~~~java
 ExceptionManager.setIgnoreExceptionsLogHandler(new IgnoreExceptionsLogCallback() {
     public void invoke(String message) {
-        System.out.println("=== EXCEPTION IGNORED === " + message);
+        System.out.println("=== EXCEPCIÓN IGNORADA === " + message);
     }
 });
 ~~~
 
-Se notificará al usuario que la excepción puede ignorarse mediante un mensaje de error. Por ejemplo:
+El usuario será notificado de que la excepción se puede ignorar mediante un mensaje de error. Por ejemplo:
 ~~~
-Exceptioin message:
+Mensaje de excepción:
 
-AsposeArgumentException: properties should not be empty.
-If you want to ignore an exception and want to proceed further then you can use:
+AsposeArgumentException: las propiedades no deben estar vacías.
+Si quieres ignorar una excepción y continuar, entonces puedes usar:
 ExceptionManager.getIgnoreList().add("MailMessage\\Load\\DecodeTnefAttachment\\64149867-679e-4645-9af0-d46566cae598")
-Invalid TNEF Attachment will be interpreted as regular attachment.
+El archivo adjunto TNEF no válido se interpretará como un archivo adjunto regular.
 ~~~

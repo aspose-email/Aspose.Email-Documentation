@@ -1,17 +1,17 @@
 ---
-title: "Trabajando con listas de distribución en un archivo PST"
+title: "Trabajar con Listas de Distribución en Archivos PST"
 url: /es/python-net/working-with-distribution-lists/
 weight: 90
 type: docs
 ---
 
-Una lista de distribución es un grupo de contactos que puede manipularse mediante un software automatizado que permite al usuario enviar correos electrónicos a varios destinatarios simultáneamente.
+Una lista de distribución es un grupo de contactos que puede ser manipulado por software automatizado, permitiendo al usuario enviar correos electrónicos a múltiples destinatarios simultáneamente.
 
-El software Aspose.Email permite a los usuarios crear, administrar y manipular listas de distribución. Esto incluye crear y guardar miembros de la lista, leer las listas de distribución, actualizar las propiedades de las listas y otras operaciones relacionadas.
+El software Aspose.Email permite a los usuarios crear, gestionar y manipular listas de distribución. Esto incluye crear y guardar miembros de la lista, leer listas de distribución, actualizar propiedades de la lista y otras operaciones relacionadas.
 
-## **Creación y almacenamiento de listas de distribución**
+## **Creando y Guardando Listas de Distribución**
 
-Crea y guarda una lista de distribución como se muestra en el ejemplo de código siguiente:
+Crea y guarda una lista de distribución como se muestra en el ejemplo de código a continuación:
 
 ```py
 import aspose.email as ae
@@ -41,10 +41,10 @@ members = ae.mapi.MapiDistributionListMemberCollection()
 members.append(member1)
 members.append(member2)
 
-distributionList = ae.mapi.MapiDistributionList("Contact list", members)
-distributionList.body = "Distribution List Body"
-distributionList.subject = "Sample Distribution List using Aspose.Email"
-# Add distribution list to PST
+distributionList = ae.mapi.MapiDistributionList("Lista de contactos", members)
+distributionList.body = "Cuerpo de la lista de distribución"
+distributionList.subject = "Lista de distribución de muestra utilizando Aspose.Email"
+# Agregar lista de distribución a PST
 contactFolder.add_mapi_message_item(distributionList)
 ```
 
@@ -65,13 +65,13 @@ one_off_members = ae.mapi.MapiDistributionListMemberCollection()
 one_off_members.append(ae.mapi.MapiDistributionListMember("John R. Patrick", "JohnRPatrick@armyspy.com"))
 one_off_members.append(ae.mapi.MapiDistributionListMember("Tilly Bates", "TillyBates@armyspy.com"))
 
-one_off_members_list = ae.mapi.MapiDistributionList("Simple list", one_off_members)
+one_off_members_list = ae.mapi.MapiDistributionList("Lista simple", one_off_members)
 contact_folder.add_mapi_message_item(one_off_members_list)
 ```
 
-## **Lectura de listas de distribución de PST**
+## **Leyendo Listas de Distribución desde PST**
 
-Para leer una lista de distribución de un PST, utilice el siguiente ejemplo de código:
+Para leer una lista de distribución de un PST, utiliza el siguiente ejemplo de código:
 
 ```py
 import aspose.email as ae
@@ -81,18 +81,18 @@ pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.CONTACTS)
 
 for msg in folder.enumerate_messages():
-    # Check if the message has the "IPM.DistList" message class
+    # Verificar si el mensaje tiene la clase de mensaje "IPM.DistList"
     if msg.message_class == "IPM.DistList":
         dist_list = pst.extract_message(msg).to_mapi_message_item()
-        # Now, you can work with the distribution list
-        # (e.g., access its members, display its properties, or make modifications)
+        # Ahora, puedes trabajar con la lista de distribución
+        # (por ejemplo, acceder a sus miembros, mostrar sus propiedades o hacer modificaciones)
         for member in dist_list.members:
             print(f"{member.display_name}")
 ```
 
-## **Actualización de listas de distribución en PST**
+## **Actualizando Listas de Distribución en PST**
 
-Para actualizar una lista de distribución en un archivo PST, por ejemplo, para agregar un nuevo miembro, usa el siguiente ejemplo de código:
+Para actualizar una lista de distribución en un archivo PST, por ejemplo, para agregar un nuevo miembro, utiliza el siguiente ejemplo de código:
 
 ```py
 import aspose.email as ae
@@ -101,14 +101,14 @@ pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
 
 folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.CONTACTS)
 
-# add a new member to each distribution list in pst
+# agregar un nuevo miembro a cada lista de distribución en pst
 for msg in folder.enumerate_messages():
-    # Check if the message has the "IPM.DistList" message class
+    # Verificar si el mensaje tiene la clase de mensaje "IPM.DistList"
     if msg.message_class == "IPM.DistList":
         dist_list = pst.extract_message(msg).to_mapi_message_item()
-        # Create new member to add
+        # Crear nuevo miembro para agregar
         member = ae.mapi.MapiDistributionListMember("Edward R. Manuel", "EdwardRManuel@example.com")
         dist_list.members.append(member)
-        # update DL in PST
+        # actualizar DL en PST
         folder.update_message(msg.entry_id_string, dist_list)
 ```

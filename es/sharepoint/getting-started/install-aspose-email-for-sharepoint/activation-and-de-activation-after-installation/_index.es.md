@@ -1,27 +1,26 @@
 ---
 title: "Activación y desactivación después de la instalación"
-url: /es/sharepoint/activation-and-de-activation-after-installation/
+url: /es/sharepoint/activacion-y-desactivacion-despues-de-la-instalacion/
 weight: 30
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-After [instalar Aspose.Email para SharePoint](/email/sharepoint/installing-aspose-email-for-sharepoint/), active las funciones en el sitio web raíz.
+Después de [instalar Aspose.Email para SharePoint](/email/sharepoint/installing-aspose-email-for-sharepoint/), activa las características en el sitio raíz. 
 
-{{% /alert %}}
-## **Activación y desactivación de Aspose.Email**
-Para activar o desactivar funciones:
+{{% /alert %}} 
+## **Activando y desactivando Aspose.Email**
+Para activar o desactivar características: 
 
-1. Haga clic en el **Acciones del sitio** menú y selección **Configuración del sitio**.
+1. Haz clic en el menú **Acciones del sitio** y selecciona **Configuración del sitio**. 
 
 ![todo:image_alt_text](activation-and-de-activation-after-installation_1.png)
 
 
 
-
-1. En el **Administración de colecciones de sitios** categoría, haga clic **Características de la colección de sitios** para abrir la página de activación y desactivación de funciones.
+1. En la categoría **Administración de la colección de sitios**, haz clic en **Características de la colección de sitios** para abrir la página para activar y desactivar características. 
 
 ![todo:image_alt_text](activation-and-de-activation-after-installation_2.png)
 
@@ -33,6 +32,6 @@ Para activar o desactivar funciones:
 
 
 
-Cuando se hayan activado las funciones, el **Herramientas Aspose** la cinta está disponible en la biblioteca de documentos de SharePoint.
+Cuando las características hayan sido activadas, la cinta de **Herramientas Aspose** estará disponible en la biblioteca de documentos de SharePoint. 
 
 ![todo:image_alt_text](activation-and-de-activation-after-installation_4.png)

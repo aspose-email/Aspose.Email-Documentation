@@ -1,16 +1,16 @@
 ---
-title: "Clase contenedora para cargar mensajes de correo electrónico de forma asíncrona usando Aspose.Email"
-url: /es/net/wrapper-class-for-loading-email-messages-async-using-aspose-email/
+title: "Clase Wrapper para cargar mensajes de correo electrónico de forma asíncrona usando Aspose.Email"
+url: /es/net/clase-wrapper-para-cargar-mensajes-de-correo-electronico-de-forma-asinc-using-aspose-email/
 weight: 170
 type: docs
 ---
 
 
-## **Clase contenedora para cargar mensajes de correo electrónico**
-Hay una serie de casos en los que es deseable tener la funcionalidad de tiempo de espera para abortar una acción que lleva un tiempo innecesario. En este artículo se proporciona una clase de ejemplo para utilizar la función de tiempo de espera al cargar archivos EML/MSG, lo que podría provocar retrasos muy prolongados o no cargarse. Dado que el tiempo de espera no está directamente relacionado con las operaciones de lectura/escritura del disco o la red, no sirve de mucho implementar esta función en la API que implementarla por parte del usuario escribiendo una clase contenedora en torno a Aspose.
+## **Clase Wrapper para cargar mensajes de correo electrónico**
+Hay varias ocasiones en las que es deseable tener funcionalidad de tiempo de espera para abortar una acción que está consumiendo un tiempo innecesario. Este artículo proporciona una clase de ejemplo para lograr la funcionalidad de tiempo de espera mientras se cargan archivos EML/MSG que podrían llevar a demoras muy largas o fallar al cargar. Dado que el tiempo de espera no está relacionado directamente con la operación de lectura/escritura en disco o red, es poco útil implementar esta característica dentro de la API que tenerla implementada en el lado del usuario escribiendo una clase wrapper alrededor de Aspose.
 
-La cancelación de un subproceso de larga ejecución se puede lograr con el uso de un delegado empaquetado que pasa el subproceso, para eliminarlo, en una variable local dentro del método que lo inició. El subproceso de larga ejecución se cancela abortándolo y el control se devuelve a la aplicación principal. El siguiente ejemplo de código proporciona un ejemplo de clase contenedora sobre la biblioteca Aspose.Email. El código también sigue un ejemplo de uso de la clase contenedora.
-### **Ejemplo de programación con .NET 3.5 y versiones posteriores**
+Cancelar un hilo que se está ejecutando por mucho tiempo se puede lograr con el uso de un delegado envuelto que pasa el hilo, que debe ser terminado, en una variable local dentro del método que lo inició. El hilo de larga ejecución se cancela abortándolo y el control se devuelve a la aplicación principal. El siguiente ejemplo de código proporciona una clase wrapper de ejemplo alrededor de la biblioteca Aspose.Email. El código también sigue un ejemplo de uso de la clase wrapper.
+### **Ejemplo de programación con .NET 3.5 y superior**
 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Knowledge-Base-WrapperMailMessage-WrapperMailMessage.cs" >}}

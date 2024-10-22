@@ -1,17 +1,17 @@
 ---
-title: "Installation"
+title: "Instalación"
 url: /es/androidjava/installation/
 weight: 50
 type: docs
 ---
 
-## **Instale Aspose.Email para Android a través de Java desde Maven Repository**
-1. Agrega el repositorio maven a tu build.gradle
-1. Agregue el JAR 'Aspose.Email para Android a través de Java' como dependencia
+## **Instalar Aspose.Email para Android a través de Java desde el Repositorio de Maven**
+1. Agregar el repositorio de maven en tu build.gradle
+1. Agregar el JAR 'Aspose.Email para Android a través de Java' como dependencia
 
 ~~~Java
 
-// 1. Agrega el repositorio maven a tu build.gradle
+// 1. Agregar el repositorio de maven en tu build.gradle 
 
 repositories {
 
@@ -23,7 +23,7 @@ repositories {
 
 
 
-// 2. Agregue el JAR 'Aspose.Email para Android a través de Java' como dependencia
+// 2. Agregar el JAR 'Aspose.Email para Android a través de Java' como dependencia
 
 dependencies {
 
@@ -33,11 +33,11 @@ dependencies {
 
     compile (
 
-		group: 'com.aspose',
+		group: 'com.aspose', 
 
-		name: 'aspose-email',
+		name: 'aspose-email', 
 
-		version: '18.4',
+		version: '18.4', 
 
 		classifier: 'android.via.java'
 

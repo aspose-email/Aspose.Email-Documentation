@@ -1,32 +1,32 @@
 ---
-title: "Lea PST de Outlook y obtenga información sobre carpetas y subcarpetas"
+title: "Leer archivos PST de Outlook y obtener información de carpetas y subcarpetas"
 url: /es/java/read-outlook-pst-and-get-folders-and-subfolders-information/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email: lea el PST de Outlook y obtenga información sobre carpetas y subcarpetas**
-Aspose.Email para Java permite leer archivos PST de Microsoft Outlook. Puede cargar un archivo PST desde un disco o transmitirlo a una instancia del [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) clase y obtenga la información sobre su contenido, por ejemplo, carpetas, subcarpetas y mensajes.
+## **Aspose.Email - Leer archivos PST de Outlook y obtener información de carpetas y subcarpetas**
+Aspose.Email para Java te permite leer archivos PST de Microsoft Outlook. Puedes cargar un archivo PST desde el disco o como un flujo en una instancia de la clase [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) y obtener la información sobre su contenido, por ejemplo, carpetas, subcarpetas y mensajes.
 
-Tras cargar el archivo PST en [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage) clase, puede obtener la información sobre el nombre para mostrar del archivo, la carpeta raíz, las subcarpetas y el recuento de mensajes.
+Después de cargar el archivo PST en la clase [PersonalStorage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/PersonalStorage), puedes obtener la información sobre el nombre de visualización del archivo, la carpeta raíz, las subcarpetas y el conteo de mensajes.
 
 **Java**
 
 ```java
 
- // Load the Outlook PST file
+ // Cargar el archivo PST de Outlook
 
 PersonalStorage pst = PersonalStorage.fromFile(dataDir + "personalStorage.pst");
+  
+// Obtener el nombre de visualización del archivo PST
 
-// Get the Display Name of the PST file
-
-System.out.println("Display Name: " + pst.getDisplayName());
-
-// Get the folders information
+System.out.println("Nombre de visualización: " + pst.getDisplayName());
+  
+// Obtener la información de las carpetas
 
 FolderInfoCollection folderInfoCollection = pst.getRootFolder().getSubFolders();
-
-// Browse through each folder to display folder name and number of messages
+  
+// Recorrer cada carpeta para mostrar el nombre de la carpeta y el número de mensajes
 
 for (int i = 0; i < folderInfoCollection.size(); i++)
 
@@ -34,26 +34,26 @@ for (int i = 0; i < folderInfoCollection.size(); i++)
 
     FolderInfo folderInfo = (FolderInfo) folderInfoCollection.get_Item(i);
 
-    System.out.println("Folder: " + folderInfo.getDisplayName());
+    System.out.println("Carpeta: " + folderInfo.getDisplayName());
 
-    System.out.println("Total items: " + folderInfo.getContentCount());
+    System.out.println("Total de elementos: " + folderInfo.getContentCount());
 
-    System.out.println("Total unread items: " + folderInfo.getContentUnreadCount());
+    System.out.println("Total de elementos no leídos: " + folderInfo.getContentUnreadCount());
 
     System.out.println("-----------------------------------");
 
 }
 
 ```
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/releases/view/618811)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/SourceControl/latest#src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/readpstfoldernsubfolders/AsposeReadFoldersSubFoldersOfPST.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/readpstfoldernsubfolders/AsposeReadFoldersSubFoldersOfPST.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Lea el archivo PST de Outlook y obtenga información sobre carpetas y subcarpetas](/email/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/).
+Para más detalles, visita [Leer Archivo PST de Outlook y Obtener Información de Carpetas y Subcarpetas](/email/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/).
 
 {{% /alert %}}

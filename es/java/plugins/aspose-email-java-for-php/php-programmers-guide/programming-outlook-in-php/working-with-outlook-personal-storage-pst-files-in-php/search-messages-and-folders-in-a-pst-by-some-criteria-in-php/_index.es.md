@@ -1,18 +1,18 @@
 ---
-title: "Buscar mensajes y carpetas en un PST según algunos criterios en PHP"
+title: "Buscar Mensajes y Carpetas en un PST según Algunos Criterios en PHP"
 url: /es/java/search-messages-and-folders-in-a-pst-by-some-criteria-in-php/
 weight: 70
 type: docs
 ---
 
-## **Aspose.Email: busca mensajes y carpetas en un PST**
-Para buscar mensajes y carpetas en un PST mediante **Aspose.Email Java para PHP**, simplemente invoca **SearchMessagesAndFoldersInPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Buscar Mensajes y Carpetas en un PST**
+Para buscar mensajes y carpetas en un PST utilizando **Aspose.Email Java para PHP**, simplemente invoque el módulo **SearchMessagesAndFoldersInPST**. Aquí puede ver un ejemplo de código.
 
 **Código PHP**
 
 ```php
 
- # Load the Outlook PST file
+ # Cargar el archivo PST de Outlook
 
 $personalStorage=new PersonalStorage();
 
@@ -22,7 +22,7 @@ $folder = $pst->getRootFolder()->getSubFolder("myInbox");
 
 $builder = new PersonalStorageQueryBuilder();
 
-\# High importance messages
+\# Mensajes de alta importancia
 
 $mapiImportance=new MapiImportance();
 
@@ -30,7 +30,7 @@ $builder->getImportance()->equals($mapiImportance->High);
 
 $messages = $folder->getContents($builder->getQuery());
 
-print "Messages with High Imp:" . (string)$messages->size();
+print "Mensajes con alta imp: " . (string)$messages->size();
 
 #builder = new PersonalStorageQueryBuilder();
 
@@ -38,9 +38,9 @@ $builder->getMessageClass()->equals("IPM.Note");
 
 $messages = $folder->getContents($builder->getQuery());
 
-print "Messages with IPM.Note:" . (string)$messages->size();
+print "Mensajes con IPM.Note: " . (string)$messages->size();
 
-\# Messages with attachments AND high importance
+\# Mensajes con archivos adjuntos Y alta importancia
 
 $builder->getImportance()->equals($mapiImportance->High);
 
@@ -50,25 +50,25 @@ $builder->hasFlags($mapiMessageFlags->MSGFLAG_HASATTACH);
 
 $messages = $folder->getContents($builder->getQuery());
 
-print "Messages with atts: " . (string)$messages->size();
+print "Mensajes con adjuntos: " . (string)$messages->size();
 
-\# Messages with size > 15 KB
+\# Mensajes con tamaño > 15 KB
 
 $builder->getMessageSize()->greater(15000);
 
 $messages = $folder->getContents($builder->getQuery());
 
-print "messags size > 15Kb:" . (string)$messages->size();
+print "mensajes tamaño > 15Kb: " . (string)$messages->size();
 
-\# Unread messages
+\# Mensajes no leídos
 
 $builder->hasNoFlags($mapiMessageFlags->MSGFLAG_READ);
 
 $messages = $folder->getContents($builder->getQuery());
 
-print "Unread:" . (string)$messages->size();//.to_s
+print "No leídos: " . (string)$messages->size();//.to_s
 
-\# Unread messages with attachments
+\# Mensajes no leídos con archivos adjuntos
 
 $builder->hasNoFlags($mapiMessageFlags->MSGFLAG_READ);
 
@@ -76,11 +76,11 @@ $builder->hasFlags($mapiMessageFlags->MSGFLAG_HASATTACH);
 
 $messages = $folder->getContents($builder->getQuery());
 
-print "Unread msgs with atts: " . (string)$messages->size();
+print "Mensajes no leídos con adjuntos: " . (string)$messages->size();
 
 ```
-## **Descargar Running Code**
-Download **Buscar mensajes y carpetas en un PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descargue **Buscar Mensajes y Carpetas en un PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/SearchMessagesAndFoldersInPST.php)
 - [CodePlex](https://asposeemailjavaphp.codeplex.com/SourceControl/latest#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/SearchMessagesAndFoldersInPST.php)

@@ -1,8 +1,6 @@
 ---
-title: "Guía para desarrolladores"
-url: /es/python-net/developer-guide/
+title: "Guía del Desarrollador"
+url: /es/python-net/guia-del-desarrollador/
 weight: 20
 type: docs
 ---
-
-

@@ -1,12 +1,12 @@
 ---
-title: "Conversión de mensajes de correo electrónico en Jython"
+title: "Conversión de Mensajes de Correo en Jython"
 url: /es/java/converting-email-messages-in-jython/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Conversión de mensajes de correo electrónico**
-Para convertir mensajes de correo electrónico mediante **Aspose.Email Java para Jython**, llama **convert_eml_to_msg** método de **Converter** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Conversión de Mensajes de Correo**
+Para convertir mensajes de correo utilizando **Aspose.Email Java para Jython**, llama al método **convert_eml_to_msg** del módulo **Converter**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -22,47 +22,37 @@ class Converter:
 
     def __init__(self):
 
-
-
-        # Loading EML, Saving to MSG
+        # Cargando EML, guardando en MSG
 
         self.convert_eml_to_msg()
 
-
-
     def convert_eml_to_msg(dataDir):
-
-
 
         dataDir = Settings.dataDir + 'ProgrammingEmail/Converter/'
 
-
-
-        # Initialize and Load an existing EML file by specifying the MessageFormat
+        # Inicializar y cargar un archivo EML existente especificando el MessageFormat
 
         mailMessage = MailMessage()
 
         eml = mailMessage.load(dataDir + "Message.eml")
 
-        # Save the Email message to disk in Unicode format
+        # Guardar el mensaje de correo en disco en formato Unicode
 
         saveOptions= SaveOptions
 
         eml.save(dataDir + "AnEmail.msg", saveOptions.getDefaultMsgUnicode())
 
-        # Display Status
+        # Mostrar estado
 
-        print "Converted email to msg successfully."
+        print "Correo convertido a msg con éxito."
 
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     Converter()
 
 ```
-## **Descargar Running Code**
-Download **Conversión de mensajes de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Conversión de Mensajes de Correo (Aspose.Email)** de cualquiera de los siguientes sitios de codificación social mencionados:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

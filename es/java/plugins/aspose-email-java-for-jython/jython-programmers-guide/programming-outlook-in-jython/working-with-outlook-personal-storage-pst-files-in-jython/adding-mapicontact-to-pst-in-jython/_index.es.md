@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Agregar MapiContact a PST**
-Para agregar MapiContact a PST usando **Aspose.Email Java para Jython**, simplemente invoca **AddMapiContactToPST** módulo. Aquí puedes ver un ejemplo de código.
+Para agregar MapiContact a PST usando **Aspose.Email Java para Jython**, simplemente invoque el módulo **AddMapiContactToPST**. Aquí puede ver un ejemplo de código.
 
 **Código Jython**
 
@@ -36,29 +36,25 @@ class AddMapiContactToPST:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiContactToPST/'
 
-
-
-        # Create an instance of MapiContact
+        # Crear una instancia de MapiContact
 
         mapi_contact = MapiContact()
 
-        # Contact #1
+        # Contacto #1
 
         contact1 = MapiContact("Sebastian Wright", "SebastianWright@dayrep.com")
 
-        # Contact #2
+        # Contacto #2
 
         contact2 = MapiContact("Wichert Kroos", "WichertKroos@teleworm.us", "Grade A Investment")
 
-        # Contact #3
+        # Contacto #3
 
         contact3 = MapiContact("Christoffer van de Meeberg", "ChristoffervandeMeeberg@teleworm.us", "Krauses Sofa Factory", "046-630-4614")
 
-        # Contact #4
+        # Contacto #4
 
         contact4 = MapiContact()
 
@@ -78,7 +74,7 @@ class AddMapiContactToPST:
 
         contact4.getTelephones().setMobileTelephoneNumber("(925)599-3355")
 
-        # Contact #5
+        # Contacto #5
 
         contact5 = MapiContact()
 
@@ -94,7 +90,7 @@ class AddMapiContactToPST:
 
         contact5.getTelephones().setHomeTelephoneNumber("(661)387-5382")
 
-        # Contact #6
+        # Contacto #6
 
         contact6 = MapiContact()
 
@@ -118,7 +114,7 @@ class AddMapiContactToPST:
 
         pst = personalStorage.create(dataDir + "MapiContactToPST1.pst", fileFormatVersion.Unicode)
 
-        contactFolder = pst.createPredefinedFolder("Contacts", standardIpmFolder.Contacts)
+        contactFolder = pst.createPredefinedFolder("Contactos", standardIpmFolder.Contacts)
 
         contactFolder.addMapiMessageItem(contact1)
 
@@ -132,19 +128,15 @@ class AddMapiContactToPST:
 
         contactFolder.addMapiMessageItem(contact6)
 
-        print "Added MapiContacts Successfully."
+        print "MapiContacts agregados exitosamente."
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddMapiContactToPST()
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiContact a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código Funcionando**
+Descargue **Agregando MapiContact a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

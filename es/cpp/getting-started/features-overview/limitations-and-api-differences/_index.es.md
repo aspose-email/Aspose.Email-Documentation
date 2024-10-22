@@ -1,30 +1,30 @@
 ---
-title: "Limitaciones y diferencias de API"
-description: "La biblioteca de analizadores de correo electrónico de C++ tiene algunas diferencias en comparación con su versión de.NET equivalente. Esta página contiene información sobre todas estas funciones que no están disponibles en la API."
+title: "Limitaciones y Diferencias en la API"
+description: "La biblioteca de análisis de correos electrónicos de C++ tiene algunas diferencias en comparación con su versión equivalente en .NET. Esta página contiene información sobre toda la funcionalidad que no está disponible en la API."
 url: /es/cpp/limitations-and-api-differences/
 weight: 10
 type: docs
 ---
 
-Aspose.Email para C++ presenta algunas diferencias en comparación con la versión .NET equivalente de la API. Esta página contiene información sobre todas estas funciones que no están disponibles en la API.
+Aspose.Email para C++ tiene algunas diferencias en comparación con su versión equivalente en .NET de la API. Esta página contiene información sobre toda la funcionalidad que no está disponible en la API.
 ## **Limitaciones de la API**
-Aspose.Email para C++ tiene las siguientes limitaciones que la diferencian de otras API de la familia de productos Aspose.Email. Estas son:
+Aspose.Email para C++ tiene las siguientes limitaciones que lo hacen diferente de otras APIs de la familia de productos Aspose.Email. Estas son:
 
-- Por el momento, la API admite los siguientes protocolos de comunicación:
+- En este momento, la API soporta los siguientes protocolos de comunicación:
   - SMTP
   - POP3
   - IMAP
-- La API no es compatible con Exchange (WebDAV y EWS)
-- No hay soporte para los formatos de archivo MBox de Thunderbird
-- No admite el cifrado/descifrado de mensajes
-- El soporte para la conversión de mapiMessage a MailMessage tampoco está presente.
-- Recibir notificaciones y leer recibos
-- Creación de correos electrónicos TNEF a partir de archivos MSG
-- Tampoco se admite la detección del tipo de mensaje
-- Trabajando con recurrencias, incluidas EndAfterOccurrences, WeeklyEndAfterOccurrences, EndAfterNoccurrenceSeleccione varios días de la semana y MonthlyEndAfterOccurrences
-- Detección de mensaje como TNEF
-- Detección de mensajes incrustados mediante el indicador incorporado
-- Eliminar los recursos enlazados en una ubicación específica
-- Representación de eventos de calendario en función de plantillas de formato
-- Eliminar elementos infantiles de las carpetas del archivo PST
-- Cambiar las propiedades de los mensajes en la carpeta de PST mediante ChangeMessages
+- La API no soporta Exchange (WebDav así como EWS)
+- Sin soporte para formatos de archivo MBox de Thunderbird
+- No soporta Encriptación/Desencriptación de Mensajes
+- Soporte para la conversión de MapiMessage a MailMessage tampoco está presente
+- Recibir notificaciones y Acuses de recibo
+- Crear correos electrónicos TNEF a partir de archivos MSG
+- Detectar tipo de mensaje tampoco es soportado
+- Trabajar con recurrencias que incluyen EndAfterNoccurrences, WeeklyEndAfterNoccurrences, EndAfterNoccurrenceSelectMultipleDaysInweek, MonthlyEndAfterNoccurrences
+- Detectar Mensaje como TNEF
+- Detectar mensaje incrustado utilizando la bandera Embedded
+- Eliminar Recursos vinculados en una ubicación específica
+- Renderizar eventos de calendario basados en plantillas de formato
+- Eliminar elementos secundarios de las carpetas de archivos PST
+- Cambiar propiedades del mensaje en la carpeta de PST utilizando ChangeMessages

@@ -1,55 +1,55 @@
 ---
-title: "Protocolo de extensiones de correo de Internet multipropósito"
-url: /es/java/multipurpose-internet-mail-extensions-protocol/
+title: "Protocolo de Extensiones de Correo de Internet Multicuerpo"
+url: /es/java/protocolo-de-extensiones-de-correo-de-internet-multicuerpo/
 weight: 20
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Las extensiones multipropósito de correo de Internet (MIME) son un estándar de Internet que amplía el formato del correo electrónico para admitir:
+Las Extensiones de Correo de Internet Multicuerpo (MIME) son un estándar de Internet que extiende el formato de correo electrónico para admitir:
 
-- texto en conjuntos de caracteres distintos de US-ASCII;
-- archivos adjuntos que no sean de texto;
-- cuerpos de mensajes de varias partes; y
+- texto en conjuntos de caracteres distintos a US-ASCII;
+- archivos adjuntos no textuales;
+- cuerpos de mensajes multipartes; y
 - información de encabezado en conjuntos de caracteres no ASCII.
 
-SMTP solo admite caracteres ASCII de 7 bits, lo que significa que solo admite una pequeña cantidad de idiomas. Los idiomas basados en el alfabeto latino funcionan bien en SMTP; otros idiomas no se muestran correctamente cuando se entrega el correo electrónico. Sin embargo, MIME amplía la compatibilidad con caracteres ASCII de SMPT para que se puedan enviar y mostrar correos electrónicos que utilicen otros conjuntos de caracteres, imágenes y sonidos. En general, todos los clientes de correo electrónico y servidores SMTP asignan correctamente los mensajes en formato MIME.
+SMTP solo admite caracteres ASCII de 7 bits, lo que significa que solo admite un número reducido de idiomas. Los idiomas basados en el alfabeto latino funcionan bien en SMTP; otros idiomas no se muestran correctamente cuando se entrega el correo electrónico. Sin embargo, MIME amplía el soporte de caracteres ASCII de SMTP para que se puedan enviar y mostrar correos electrónicos utilizando otros conjuntos de caracteres, imágenes y sonidos. Generalmente, todos los clientes de correo electrónico y servidores SMTP mapean correctamente los mensajes en formato MIME. 
 
-{{% /alert %}}
-## **Descripción de los encabezados MIME**
+{{% /alert %}} 
+## **Comprendiendo los Encabezados MIME**
 Los encabezados MIME contienen información sobre el protocolo.
 ### **MIME-Version**
-Esto indica que el mensaje tiene formato MIME. Aparece como:
+Esto indica que el mensaje está en formato MIME. Aparece como:
 
-Versión MIME: 1.0
+MIME-Version: 1.0
 ### **Content-Type**
-Esto indica el tipo de contenido del mensaje, dado como un par de tipos y subtipos: text/plain, text/html, por ejemplo. El tipo de contenido multiparte puede contener texto, HTML, archivos adjuntos, imágenes, audio, vídeo, etc.
+Esto indica el tipo de contenido del mensaje, dado como un par de tipo y subtipo: text/plain, text/html, por ejemplo. El tipo de contenido multipart puede contener texto, HTML, archivos adjuntos, imágenes, audio, video, etc. 
 
-Tipo de contenido: multiparte
+Content-Type: multipart
 ### **Content-Transfer-Encoding**
-Indica si se utiliza un esquema de codificación de binario a texto encima de la codificación especificada por el tipo de contenido. Si lo ha hecho, indica cuál. Aquí podemos especificar el tipo de codificación binaria, de 7 bits y de 8 bits.
+Indica si se utiliza un esquema de codificación de texto a binario por encima de la codificación especificada por el tipo de contenido. Si lo tiene, indica cuál. Aquí podemos especificar tipos de codificación de 7 bits, 8 bits y binaria. 
 ### **Encoded-Word**
-Los encabezados de los mensajes SMTP normalmente utilizan caracteres ASCII. Los caracteres que no sean ASCII deben utilizar la sintaxis de palabras codificadas en MIME en lugar de una cadena literal. El formato es:
+Los encabezados de mensajes SMTP normalmente utilizan caracteres ASCII. Los caracteres no ASCII deben utilizar la sintaxis de palabra codificada MIME en lugar de una cadena literal. El formato es: 
 
-"=? *charset* ? *encoding* ? *texto codificado* ?=".
+"=? *charset* ? *encoding* ? *texto codificado* ?=". 
 ### **Multipart-Messages**
-Un mensaje MIME de varias partes contiene un límite en el encabezado del tipo de contenido. Este límite, que no debe aparecer en ninguna de las partes, se coloca entre las partes y al principio y al final del cuerpo del mensaje, de la siguiente manera:
+Un mensaje multipart MIME contiene un límite en el encabezado del tipo de contenido. Este límite, que no debe aparecer en ninguna de las partes, se coloca entre las partes, y al principio y al final del cuerpo del mensaje, como sigue:
 
-**Versión MIME: 1.0**
+**MIME-version: 1.0**
 
 ~~~Java
 
  Content-type: multipart/mixed; boundary="frontier"
 
-This is a multi-part message in MIME format.
+Este es un mensaje multipart en formato MIME.
 
 --frontier
 
 Content-type: text/plain
 
-This is the body of the message.
+Este es el cuerpo del mensaje.
 
 --frontier
 
@@ -65,22 +65,22 @@ Ym9keSBvZiB0aGUgbWVzc2FnZS48L3A+CiAgPC9ib2R5Pgo8L2h0bWw+Cg==
 
 ~~~
 
-Cada parte consta de su propio encabezado de contenido y un cuerpo.
-### **Subtipos multiparte**
-El estándar MIME define varios subtipos de mensajes multiparte. El subtipo se especifica en el encabezado «Tipo de contenido» del mensaje general.
+Cada parte consiste en su propio encabezado de contenido y un cuerpo. 
+### **Subtipos Multipart**
+El estándar MIME define varios subtipos de mensajes multipart. El subtipo se especifica en el encabezado "Content-Type" del mensaje general.
 
-La siguiente es una lista de los subtipos más utilizados.
+La siguiente es una lista de los subtipos más comúnmente utilizados.
 
-- Mixto: Multipart/Mixed se usa para enviar archivos con diferentes encabezados «Content-Type» en línea. Si envías imágenes u otros archivos de fácil lectura, la mayoría de los clientes de correo los mostrarán en línea.
-- Mensaje: una parte del mensaje contiene un mensaje de correo electrónico.
-- Resumen: resumen es una forma sencilla de enviar varios mensajes de texto. El tipo de contenido predeterminado para cada parte es «message/rfc822\".
-- Alternativa: el subtipo alternativo indica que cada parte es una versión «alternativa» del mismo contenido (o similar), cada una en un formato diferente indicado por su encabezado «Tipo de contenido».
+- Mezclado: Multipart/mixed se utiliza para enviar archivos con diferentes encabezados de "Content-Type" en línea. Si se envían imágenes u otros archivos fácilmente legibles, la mayoría de los clientes de correo los mostrarán en línea.
+- Mensaje: Una parte de mensaje contiene un mensaje de correo electrónico.
+- Digest: el digest es una forma simple de enviar múltiples mensajes de texto. El tipo de contenido predeterminado para cada parte es "message/rfc822".
+- Alternativa: El subtipo alternativo indica que cada parte es una versión "alternativa" del mismo contenido (o similar), cada una en un formato diferente denotado por su encabezado "Content-Type".
 
-La mayoría de las veces se usa multipart/alternative para el correo electrónico con dos partes, una de texto plano (text/plain) y una HTML (text/html). La parte de texto sin formato proporciona compatibilidad con versiones anteriores, mientras que la parte HTML permite el uso de formatos e hipervínculos. La mayoría de los clientes de correo electrónico ofrecen al usuario la opción de preferir el texto sin formato en lugar del HTML; este es un ejemplo de cómo los factores locales pueden afectar a la forma en que una aplicación elige qué parte del mensaje es la «mejor» para mostrar.
+El multipart/alternative se utiliza comúnmente para correos electrónicos con dos partes, una de texto plano (text/plain) y una HTML (text/html). La parte de texto plano proporciona compatibilidad hacia atrás, mientras que la parte HTML permite el uso de formato y hipervínculos. La mayoría de los clientes de correo electrónico ofrecen una opción al usuario para preferir texto plano sobre HTML; este es un ejemplo de cómo los factores locales pueden afectar cómo una aplicación elige qué parte "mejor" del mensaje mostrar. 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, siga estos enlaces a los archivos de RFC.
+Para más información, siga estos enlaces a los archivos de RFC.
 
 - [RFC2045](https://www.rfc-archive.org/getrfc.php?rfc=2045#gsc.tab=0)
 - [RFC131](https://www.rfc-archive.org/getrfc.php?rfc=131#gsc.tab=0)

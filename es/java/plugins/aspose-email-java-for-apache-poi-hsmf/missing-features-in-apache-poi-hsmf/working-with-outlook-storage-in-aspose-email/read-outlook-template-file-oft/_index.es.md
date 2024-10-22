@@ -1,22 +1,22 @@
 ---
-title: "Lea el archivo de plantilla de Outlook OFT"
+title: "Leer archivo de plantilla de Outlook OFT"
 url: /es/java/read-outlook-template-file-oft/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - Lea la plantilla de Outlook OFT**
-Aspose.Email's [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) la clase se puede usar para cargar un archivo de plantilla de Microsoft Outlook (OFT). Una vez cargada la plantilla de Outlook en una instancia de la clase MailMessage, puede actualizar el remitente, el destinatario, el cuerpo, el asunto y otras propiedades.
+## **Aspose.Email - Leer plantilla de Outlook OFT**
+La clase [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email.class-use/MailMessage) de Aspose.Email se puede utilizar para cargar un archivo de plantilla de Microsoft Outlook (OFT). Una vez que la plantilla de Outlook está cargada en una instancia de la clase MailMessage, puede actualizar el remitente, el destinatario, el cuerpo, el asunto y otras propiedades.
 
 **Java**
 
 ``` java
 
- // Load the Outlook template (OFT) file in MailMessage's instance
+ // Cargar el archivo de plantilla de Outlook (OFT) en la instancia de MailMessage
 
 MailMessage message = MailMessage.load(dataDir + "sample.oft");
 
-// Set the sender and recipients information
+// Establecer la información del remitente y de los destinatarios
 
 String senderDisplayName = "John";
 
@@ -32,17 +32,17 @@ message.getTo().addMailAddress(new MailAddress(recipientEmailAddress, recipientD
 
 message.setHtmlBody(message.getHtmlBody().replace("DisplayName", "<b>" + recipientDisplayName + "</b>"));
 
-// Set the name, location and time in email body
+// Establecer el nombre, la ubicación y la hora en el cuerpo del correo electrónico
 
-String meetingLocation = "<u>" + "Hall 1, Convention Center, New York, USA" + "</u>";
+String meetingLocation = "<u>" + "Sala 1, Centro de Convenciones, Nueva York, EE. UU." + "</u>";
 
-String meetingTime = "<u>" + "Monday, June 28, 2010" + "</u>";
+String meetingTime = "<u>" + "Lunes, 28 de junio de 2010" + "</u>";
 
 message.setHtmlBody(message.getHtmlBody().replace("MeetingPlace", meetingLocation));
 
 message.setHtmlBody(message.getHtmlBody().replace("MeetingTime", meetingTime));
 
-// Save the message in MSG format and open in Office Outlook
+// Guardar el mensaje en formato MSG y abrir en Office Outlook
 
 MapiMessage mapimessage = new MapiMessage().fromMailMessage(message);
 
@@ -51,15 +51,15 @@ mapimessage.setMessageFlags(MapiMessageFlags.MSGFLAG_UNSENT);
 mapimessage.save(dataDir + "AsposeInvitation.msg");
 
 ```
-## **Descargar Running Code**
+## **Descargar código en ejecución**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)
-## **Descargar código de muestra**
+## **Descargar código de ejemplo**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi#src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/readoft/AsposeReadOFT.java)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_for_Apache_POI/src/main/java/com/aspose/email/examples/asposefeatures/outlookstorage/readoft/AsposeReadOFT.java)
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para obtener más información, visite [Lea el archivo de plantilla de Outlook (OFT)](/email/java/managing-message-files-with-aspose-email-outlook/).
+Para más detalles, visita [Leer archivo de plantilla de Outlook (OFT)](/email/java/managing-message-files-with-aspose-email-outlook/).
 
 {{% /alert %}}

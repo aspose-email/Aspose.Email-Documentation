@@ -1,12 +1,12 @@
 ---
-title: "Crear y guardar contactos de Outlook en Jython"
-url: /es/java/creating-and-saving-outlook-contacts-in-jython/
+title: "Creación y Guardado de Contactos de Outlook en Jython"
+url: /es/java/creacion-y-guardado-de-contactos-de-outlook-en-jython/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Creación y almacenamiento de contactos de Outlook**
-Para crear contactos de Outlook mediante **Aspose.Email Java para Jython**, simplemente invoca **CreateOutlookContact** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Creación y Guardado de Contactos de Outlook**
+Para crear contactos de Outlook usando **Aspose.Email Java para Jython**, simplemente invoca el módulo **CreateOutlookContact**. Aquí puedes ver un ejemplo de código.
 
 **Código Jython**
 
@@ -36,17 +36,13 @@ class CreateOutlookContact:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingOutlook/WorkingWithOutlookMessageFiles/CreateOutlookContact/'
-
-
 
         contact = MapiContact()
 
-        # Set different properties of this Contact Item.
+        # Establecer diferentes propiedades de este elemento de contacto.
 
-        # Set Name properties using MapiContactNamePropertySet
+        # Establecer propiedades del nombre usando MapiContactNamePropertySet
 
         name_prop_set = MapiContactNamePropertySet()
 
@@ -56,11 +52,11 @@ class CreateOutlookContact:
 
         contact.setNameInfo(name_prop_set)
 
-        # Set professional properties using MapiContactProfessionalPropertySet
+        # Establecer propiedades profesionales usando MapiContactProfessionalPropertySet
 
         prof_prop_set = MapiContactProfessionalPropertySet()
 
-        prof_prop_set.setTitle("Account Representative")
+        prof_prop_set.setTitle("Representante de Cuentas")
 
         prof_prop_set.setCompanyName("Contoso Ltd.")
 
@@ -68,7 +64,7 @@ class CreateOutlookContact:
 
         contact.setProfessionalInfo(prof_prop_set)
 
-        # Telephones
+        # Teléfonos
 
         telephone = MapiContactTelephonePropertySet()
 
@@ -78,7 +74,7 @@ class CreateOutlookContact:
 
         telephone.setBusinessTelephoneNumber("(831) 758-7285")
 
-        telephone.setCallbackTelephoneNumber("(831) 758-7321 (After hours")
+        telephone.setCallbackTelephoneNumber("(831) 758-7321 (Después de horas")
 
         telephone.setCarTelephoneNumber("(831) 758-7201")
 
@@ -106,7 +102,7 @@ class CreateOutlookContact:
 
         contact.setTelephones(telephone)
 
-        # Set Physical Address using MapiContactPhysicalAddress and MapiContactPhysicalAddressPropertySet
+        # Establecer dirección física usando MapiContactPhysicalAddress y MapiContactPhysicalAddressPropertySet
 
         phys_addrss = MapiContactPhysicalAddress()
 
@@ -118,7 +114,7 @@ class CreateOutlookContact:
 
         contact.setPhysicalAddresses(phys_addr_prop_set)
 
-        # Set email information using MapiContactElectronicAddress and MapiContactElectronicAddressPropertySet
+        # Establecer información de correo electrónico usando MapiContactElectronicAddress y MapiContactElectronicAddressPropertySet
 
         email = MapiContactElectronicAddress()
 
@@ -138,19 +134,15 @@ class CreateOutlookContact:
 
         contact.save(dataDir + "OutlookContact.vcf", contactSaveFormat.VCard)
 
-        print "Created outlook contact successfully."
+        print "Contacto de Outlook creado con éxito."
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     CreateOutlookContact()
 
 ```
-## **Descargar Running Code**
-Download **Creación y almacenamiento de contactos de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Creación y Guardado de Contactos de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

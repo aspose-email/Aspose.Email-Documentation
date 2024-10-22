@@ -1,11 +1,11 @@
 ---
-title: "Cambios en la API pública en Aspose.Email 4.8.0"
+title: "Cambios en la API Pública en Aspose.Email 4.8.0"
 url: /es/java/public-api-changes-in-aspose-email-4-8-0/
 weight: 100
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+La siguiente es una lista de cualquier cambio realizado en la API pública, como miembros añadidos, renombrados, eliminados o en desuso, así como cualquier cambio no compatible hacia atrás realizado en Aspose.Email para Java. Si tiene inquietudes sobre algún cambio listado, por favor, planteelo en el foro de soporte de Aspose.Email.
 
 **Nuevas clases:**
 
@@ -13,7 +13,7 @@ La siguiente es una lista de todos los cambios realizados en la API pública, co
 - `MapiContactOtherPropertySet`
 - `MapiMessageItemBase`
 
-Se agregaron la clase base SaveOptions y las clases particulares EMLSaveOptions, MsgSaveOptions, MhtSaveOptions, HTMLSaveOptions para configuraciones adicionales para guardar MailMessage:
+Se añadieron la clase base SaveOptions y las clases particulares EmlSaveOptions, MsgSaveOptions, MhtSaveOptions, HtmlSaveOptions para configuraciones adicionales de guardado de MailMessage:
 
 - `SaveOptions`
 - `EmlSaveOptions`
@@ -21,7 +21,7 @@ Se agregaron la clase base SaveOptions y las clases particulares EMLSaveOptions,
 - `MhtSaveOptions`
 - `MsgSaveOptions`
 
-Las siguientes clases están en `aspose-email-4.8.0.0-jdk17.jar` only:
+Las siguientes clases están solo en `aspose-email-4.8.0.0-jdk17.jar`:
 
 - `ValidationResult`
 - `ValidationResponseCode`
@@ -131,10 +131,10 @@ Las siguientes clases están en `aspose-email-4.8.0.0-jdk17.jar` only:
 - `checkSignature(java.io.InputStream)`
 - `removeSignature()`
 
-**Métodos obsoletos en la clase MailMessage:**
+**Métodos en desuso en la clase MailMessage:**
 
-- `public boolean getPreserveOriginalBoundaries(), public void setPreserveOriginalBoundaries(boolean value)` - Método de uso `save(Stream stream, SaveOptions options)` con configuración `EmlSaveOptions.PreserveOriginalBoundaries` en lugar de esta propiedad.
-- `public boolean getPreserveOriginalDates(), public void setPreserveOriginalDates(boolean value)` - Método de uso `save(Stream stream, SaveOptions options)` con configuración `MsgSaveOptions.PreserveOriginalDates` en lugar de esta propiedad.
+- `public boolean getPreserveOriginalBoundaries(), public void setPreserveOriginalBoundaries(boolean value)` - Use el método `save(Stream stream, SaveOptions options)` con la configuración `EmlSaveOptions.PreserveOriginalBoundaries` en lugar de esta propiedad.
+- `public boolean getPreserveOriginalDates(), public void setPreserveOriginalDates(boolean value)` - Use el método `save(Stream stream, SaveOptions options)` con la configuración `MsgSaveOptions.PreserveOriginalDates` en lugar de esta propiedad.
 - `void save(String fileName, MailMessageSaveType savetype)`
 - `void save(String fileName, MailMessageSaveType savetype, int saveOptions)`
 - `void save(String fileName, MessageFormat format)`

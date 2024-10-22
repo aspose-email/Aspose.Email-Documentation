@@ -5,40 +5,40 @@ weight: 120
 type: docs
 ---
 
-[OLM](https://docs.fileformat.com/email/olm/) es un formato de archivo de base de datos utilizado por Microsoft Outlook para sistemas Mac. Los archivos OLM almacenan los mensajes de correo electrónico, los datos del calendario, los datos de contacto y la configuración de las aplicaciones. Outlook para Windows no admite ningún archivo OLM. Por lo tanto, no es posible abrir un archivo de Outlook para Mac (OLM) en Outlook para Windows. Si desea migrar su buzón de Outlook para Mac a Outlook para Windows, es necesario convertir el archivo OLM de Outlook para Mac al formato de archivo PST de Outlook.
+[OLM](https://docs.fileformat.com/email/olm/) es un formato de archivo de base de datos utilizado por Microsoft Outlook para sistemas Mac. Los archivos OLM almacenan mensajes de correo electrónico, datos de calendario, datos de contactos y configuraciones de aplicación. Un archivo OLM no es compatible con Outlook para Windows. Por lo tanto, no es posible abrir un archivo de Outlook para Mac (OLM) en Outlook para Windows. Si desea migrar su buzón de Outlook para Mac a Outlook para Windows, es necesario convertir el archivo OLM de Outlook para Mac al formato de archivo PST de Outlook.
 
 ## **Pasos para convertir un archivo OLM a PST**
 
 Para convertir un archivo OLM a PST, siga los pasos que se indican a continuación:
 
-1. Crea una instancia de [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) de clase a OLM de código abierto.
+1. Cree una instancia de la clase [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) para abrir el OLM de origen.
 2. Abra un archivo OLM de origen.
-3. Cree un nuevo archivo PST usando [Create](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create_4) method.
-4. Cree un método getContainerClass para asignar la clase de mensaje a una clase de carpeta.
-5. Cree un método AddToPST que lea de forma recursiva cada carpeta y sus mensajes desde OLM mediante el método EnumerateMapiMessages y los agregue al PST en el mismo orden mediante los métodos AddSubFolder y AddMessage.
+3. Cree un nuevo archivo PST utilizando el método [Create](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create_4).
+4. Cree un método GetContainerClass para mapear la clase de mensaje a una clase de carpeta.
+5. Cree un método AddToPst que lea recursivamente cada carpeta y sus mensajes del OLM utilizando el método EnumerateMapiMessages y los agregue al PST en el mismo orden utilizando los métodos AddSubFolder y AddMessage.
 
 ## **Ejemplo de código**
 
-El siguiente ejemplo de código muestra cómo convertir un OLM en un PST.
+El siguiente ejemplo de código muestra cómo convertir un OLM a un PST.
 
-**Main** method:
+**Método** Main:
 
 ```cs
-// create an instance of OlmStorage class to open source OLM
+// crear una instancia de la clase OlmStorage para abrir el OLM de origen
 using (var olm = new OlmStorage("my.olm"))
-// create a new PST file
+// crear un nuevo archivo PST
 using (var pst = PersonalStorage.Create("my.pst", FileFormatVersion.Unicode))
 {
-    // recursively reads each folder and its messages
-    // and adds them to the PST in the same order
+    // lee recursivamente cada carpeta y sus mensajes 
+    // y los agrega al PST en el mismo orden
     foreach (var olmFolder in olm.FolderHierarchy)
     {
         AddToPst(pst.RootFolder, olmFolder);
     }
-}
+} 
 ```
 
-**GetContainerClass** implementación del método:
+**Implementación del método** GetContainerClass:
 
 ```cs
 public string GetContainerClass(string messageClass)
@@ -72,7 +72,7 @@ public string GetContainerClass(string messageClass)
 }
 ```
 
-**AddToPst** implementación del método:
+**Implementación del método** AddToPst:
 
 ```cs
 public void AddToPst(FolderInfo pstFolder, OlmFolder olmFolder)

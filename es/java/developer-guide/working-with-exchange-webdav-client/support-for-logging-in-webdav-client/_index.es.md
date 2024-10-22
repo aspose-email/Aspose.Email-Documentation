@@ -1,13 +1,13 @@
 ---
-title: "Soporte para iniciar sesión en el cliente WebDAV"
+title: "Soporte para el Registro en el Cliente WebDav"
 url: /es/java/support-for-logging-in-webdav-client/
 weight: 140
 type: docs
 ---
 
 
-La API Aspose.Email ofrece la capacidad de proporcionar la función de registro del cliente WebDAV de Exchange Protocols.
-## **Registro para el cliente WebDAV**
+Aspose.Email API proporciona la capacidad de ofrecer la instalación de registro del cliente de protocolos de Exchange WebDav. 
+## **Registro para el Cliente WebDav**
 
 
 ~~~Java

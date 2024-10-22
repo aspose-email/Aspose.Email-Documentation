@@ -1,43 +1,42 @@
 ---
-title: "Trabajo con archivos adjuntos y objetos incrustados"
+title: "Trabajando con Archivos Adjuntos y Objetos Embebidos"
 url: /es/java/working-with-attachments-and-embedded-objects/
 weight: 20
 type: docs
 ---
 
+## **Gestionando Archivos Adjuntos en Email**
 
-## **Administración de archivos adjuntos de correo electrónico**
-
-Un archivo adjunto de correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje independiente o como parte del mensaje al que está adjunto. El [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//) la clase se usa con [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage//) clase. Todos los mensajes incluyen un cuerpo. Además del cuerpo, es posible que desee enviar archivos adicionales. Se envían como archivos adjuntos y se representan como una instancia del [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//) clase. Puede enviar cualquier cantidad de archivos adjuntos, pero el servidor de correo limita el tamaño de los archivos adjuntos. Gmail, por ejemplo, no admite archivos de más de 10 MB.
+Un archivo adjunto en un correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje separado así como parte del mensaje al cual está adjunto. La clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//) se utiliza con la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage//). Todos los mensajes incluyen un cuerpo. Además del cuerpo, es posible que desee enviar archivos adicionales. Estos se envían como adjuntos y se representan como una instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment//). Puede enviar cualquier número de archivos adjuntos, pero el tamaño del archivo adjunto está limitado por el servidor de correo. Gmail, por ejemplo, no admite tamaños de archivo mayores a 10MB.
 {{% alert %}}
 **¡Pruébalo!**
 
-Agregue o elimine archivos adjuntos de correo electrónico en línea con la versión gratuita [**Aplicación Aspose.Email Editor**](https://products.aspose.app/email/es/editor).
+Agrega o elimina archivos adjuntos a correos electrónicos en línea con la gratuita [**Aspose.Email Editor App**](https://products.aspose.app/email/es/editor).
 {{% /alert %}}
 
-### **Agregar un archivo adjunto**
+### **Agregando un Archivo Adjunto**
 
-Para adjuntar un archivo adjunto a un correo electrónico, sigue estos pasos:
+Para adjuntar un archivo a un correo electrónico, siga estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Crea una instancia del [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) class.
-1. Cargue el accesorio en el [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) instance.
-1. Añada el [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) instancia en el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
+1. Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Cree una instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+1. Cargue el archivo adjunto en la instancia de [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+1. Agregue la instancia de [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) a la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-El siguiente fragmento de código muestra cómo añadir un archivo adjunto a un correo electrónico.
+El siguiente fragmento de código muestra cómo agregar un archivo adjunto a un correo electrónico.
 
 ```java
-// Crea una instancia de MailMessage class
+// Crear una instancia de la clase MailMessage
 MailMessage message = new MailMessage();
 message.setFrom(new MailAddress("sender@from.com"));
 message.getTo().add("receiver@to.com");
-message.setSubject("This is message");
-message.setBody("This is body");
+message.setSubject("Este es un mensaje");
+message.setBody("Este es el cuerpo");
 
-// Load an attachment
+// Cargar un archivo adjunto
 Attachment attachment = new Attachment("1.txt");
 
-// Add Multiple Attachment in instance of MailMessage class and Save message to disk
+// Agregar múltiples archivos adjuntos en la instancia de la clase MailMessage y guardar el mensaje en disco
 message.getAttachments().addItem(attachment);
 message.addAttachment(new Attachment("1.jpg"));
 message.addAttachment(new Attachment("1.doc"));
@@ -46,40 +45,40 @@ message.addAttachment(new Attachment("1.pdf"));
 message.save("AddAttachments.eml");
 ```
 
-Anteriormente, describimos cómo agregar archivos adjuntos a su mensaje de correo electrónico con Aspose.Email. A continuación se muestra cómo eliminar los archivos adjuntos y mostrar la información sobre ellos en la pantalla.
+Arriba, describimos cómo agregar archivos adjuntos a su mensaje de correo electrónico con Aspose.Email. Lo que sigue muestra cómo eliminar archivos adjuntos y mostrar información sobre ellos en la pantalla.
 
-### **Eliminar un archivo adjunto**
+### **Eliminando un Archivo Adjunto**
 
-Para eliminar un archivo adjunto, siga los pasos que se indican a continuación:
+Para eliminar un archivo adjunto, siga los pasos a continuación:
 
-- Crea una instancia de [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) class.
-- Cargue el archivo adjunto en el caso de [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) class.
-- Agregue el archivo adjunto a la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-- Elimine los archivos adjuntos de la instancia de [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) clase que usa el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instancia de clase.
+- Cree una instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+- Cargue el archivo adjunto en la instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/).
+- Agregue el archivo adjunto a la instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Elimine los archivos adjuntos de la instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) utilizando la instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-En el siguiente fragmento de código se muestra cómo eliminar un archivo adjunto.
+El siguiente fragmento de código muestra cómo eliminar un archivo adjunto.
 
 ```java
-// Crea una instancia de MailMessage class
+// Crear una instancia de la clase MailMessage
 MailMessage eml = new MailMessage();
 eml.setFrom(new MailAddress("sender@from.com"));
 eml.getTo().add("receiver@to.com");
 
-// Load an attachment
+// Cargar un archivo adjunto
 Attachment attachment = new Attachment("1.txt");
 eml.getAttachments().addItem(attachment);
 
-// Remove attachment from your MailMessage
+// Eliminar el archivo adjunto de su MailMessage
 eml.getAttachments().removeItem(attachment);
 ```
 
-### **Mostrar el nombre del archivo adjunto**
+### **Mostrando el Nombre del Archivo Adjunto**
 
-Para mostrar el nombre del archivo adjunto, sigue estos pasos:
+Para mostrar el nombre del archivo adjunto, siga estos pasos:
 
-1. Revisa los archivos adjuntos del mensaje de correo electrónico y
-   1. Guarda cada archivo adjunto.
-   1. Muestra el nombre de cada adjunto en la pantalla.
+1. Recorra los archivos adjuntos en el mensaje de correo electrónico y
+   1. Guarde cada archivo adjunto.
+   1. Muestre cada nombre de archivo adjunto en la pantalla.
 
 El siguiente fragmento de código muestra cómo mostrar el nombre de un archivo adjunto en la pantalla.
 
@@ -87,24 +86,24 @@ El siguiente fragmento de código muestra cómo mostrar el nombre de un archivo 
 MailMessage eml = MailMessage.load("Attachments.eml");
 
 for (Attachment attachment : eml.getAttachments()) {
-    // Display the attachment file name
+    // Mostrar el nombre del archivo adjunto
     System.out.println(attachment.getName());
 }
 ```
 
-### **Extraer archivos adjuntos de correo electrónico**
+### **Extrayendo Archivos Adjuntos de Emails**
 
-En este tema se explica cómo extraer un archivo adjunto de un archivo de correo electrónico. Un archivo adjunto de correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje independiente o como parte del mensaje al que está adjunto. Todos los mensajes de correo electrónico incluyen la opción de enviar archivos adicionales. Se envían como archivos adjuntos y se representan como instancias del [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) clase. El [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) la clase se usa con [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) clase para trabajar con archivos adjuntos. Para extraer los archivos adjuntos de un mensaje de correo electrónico, sigue estos pasos:
+Este tema explica cómo extraer un archivo adjunto de un archivo de correo electrónico. Un archivo adjunto en un correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje separado así como parte del mensaje al cual está adjunto. Todos los mensajes de correo electrónico incluyen una opción para enviar archivos adicionales. Estos se envían como archivos adjuntos y se representan como instancias de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/). La clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) se utiliza con la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) para trabajar con archivos adjuntos. Para extraer archivos adjuntos de un mensaje de correo electrónico, siga estos pasos:
 
-- Crea una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-- Cargue un archivo de correo electrónico en [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-- Crea una instancia del [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) clase y úsala en bucle para extraer todos los archivos adjuntos.
+- Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Cargue un archivo de correo electrónico en la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Cree una instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) y úsela en un bucle para extraer todos los archivos adjuntos.
 - Guarde el archivo adjunto y muéstrelo en la pantalla.
 
-|**Archivos adjuntos extraídos en el correo electrónico**|
-|: - |
+|**Archivos adjuntos extraídos en email**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_1.png)|
-El siguiente fragmento de código muestra cómo extraer archivos adjuntos de correo electrónico.
+El siguiente fragmento de código muestra cómo extraer archivos adjuntos de email.
 
 ```java
 MailMessage eml = MailMessage.load("Message.eml", new MsgLoadOptions());
@@ -115,43 +114,43 @@ for (Attachment attachment : eml.getAttachments()) {
 }
 ```
 
-#### **Recuperar la descripción del contenido del archivo adjunto**
+#### **Recuperando el Content-Description del Archivo Adjunto**
 
-La API Aspose.Email ofrece la capacidad de leer la descripción del contenido del adjunto desde el encabezado del archivo adjunto. El siguiente fragmento de código muestra cómo recuperar la descripción del contenido del archivo adjunto.
+La API Aspose.Email proporciona la capacidad de leer el Content-Description del archivo adjunto desde el encabezado del archivo adjunto. El siguiente fragmento de código muestra cómo recuperar la descripción del contenido del archivo adjunto.
 
 ```java
 MailMessage eml = MailMessage.load("EmailWithAttachEmbedded.eml");
 System.out.println(eml.getAttachments().get_Item(0).getHeaders().get_Item("Content-Description"));
 ```
 
-#### **Determinar si un adjunto es un mensaje incrustado**
+#### **Determinando si un Archivo Adjunto es un Mensaje Embebido**
 
-El siguiente fragmento de código muestra cómo determinar si el adjunto es un mensaje incrustado o no.
+El siguiente fragmento de código demuestra cómo determinar si el archivo adjunto es un mensaje embebido o no.
 
 ```java
 MailMessage eml = MailMessage.load("EmailWithAttachEmbedded.eml");
 
 System.out.println(eml.getAttachments().get_Item(0).isEmbeddedMessage()
-        ? "Attachment is an embedded message."
-        : "Attachment isn't an embedded message.");
+        ? "El archivo adjunto es un mensaje embebido."
+        : "El archivo adjunto no es un mensaje embebido.");
 ```
-#### **Determine los archivos adjuntos con formato TNEF**
+#### **Determinar Archivos Adjuntos Formateados TNEF**
 
-The [Attachment.isTnef](https://reference.aspose.com/email/java/com.aspose.email/attachment/#isTnef--) La propiedad de la API Java Aspose.Email indica si el adjunto del mensaje es un mensaje con formato TNEF.
+La propiedad [Attachment.isTnef](https://reference.aspose.com/email/java/com.aspose.email/attachment/#isTnef--) de la API Aspose.Email Java indica si el archivo adjunto de mensaje es un mensaje formateado TNEF.
 
-El siguiente fragmento de código muestra cómo determinar si un adjunto tiene formato TNEF:
+El siguiente fragmento de código demuestra cómo determinar si un archivo adjunto está formateado TNEF:
 
 ```java
 MailMessage eml = MailMessage.load(fileName);
 
 for (Attachment attachment : eml.getAttachments()) {
-    System.out.println("Is Attachment TNEF?: " + attachment.isTnef());
+    System.out.println("¿Es el archivo adjunto TNEF?: " + attachment.isTnef());
 }
 ```
 
-#### **Extraer el URI del archivo adjunto si el archivo adjunto es un enlace URI**
+#### **Extrayendo URI del Archivo Adjunto si el Archivo Adjunto es URI-attachment**
 
-El siguiente fragmento de código muestra cómo extraer el URI del adjunto.
+El siguiente fragmento de código demuestra cómo extraer el URI del archivo adjunto.
 
 ~~~Java
 MailMessage eml = MailMessage.load("fileName");
@@ -160,24 +159,24 @@ Attachment attachment = eml.getAttachments().get_Item(0);
 if (attachment.isUri()) {
     InputStream inputStream = attachment.getContentStream();
     String uri = new String(IOUtils.toByteArray(inputStream), Charset.forName("utf-8"));
-    System.out.println("Attachment URI: " + uri);
+    System.out.println("URI del archivo adjunto: " + uri);
 }
 ~~~
 
-### **Añadir adjuntos de referencia**
+### **Agregando Archivos Adjuntos de Referencia**
 
-Un archivo adjunto de referencia es una alternativa al archivo adjunto local. En algunos casos, los archivos adjuntos de referencia pueden ser preferibles, por ejemplo, si desea administrar su acceso. Las siguientes clases se utilizan para gestionar y manipular los mensajes de correo electrónico y sus archivos adjuntos:
+Un archivo adjunto de referencia es una alternativa al archivo adjunto local. En algunos casos, los archivos adjuntos de referencia pueden ser preferibles, por ejemplo, si desea gestionar su acceso. Las clases a continuación se utilizan para gestionar y manipular mensajes de correo electrónico y sus archivos adjuntos:
 
-- [ReferenceAttachment](https://reference.aspose.com/email/java/com.aspose.email/referenceattachment/) - Representa un adjunto de referencia.
-- [AttachmentPermissionType](https://reference.aspose.com/email/java/com.aspose.email/attachmentpermissiontype/) - Los datos del tipo de permiso asociados a un adjunto de referencia web.
-- [AttachmentProviderType](https://reference.aspose.com/email/java/com.aspose.email/attachmentprovidertype/) - El tipo de servicio web que manipula el archivo adjunto.
+- [ReferenceAttachment](https://reference.aspose.com/email/java/com.aspose.email/referenceattachment/) - Representa un archivo adjunto de referencia. 
+- [AttachmentPermissionType](https://reference.aspose.com/email/java/com.aspose.email/attachmentpermissiontype/) - Tipo de datos de permiso asociado con un archivo adjunto de referencia web. 
+- [AttachmentProviderType](https://reference.aspose.com/email/java/com.aspose.email/attachmentprovidertype/) - Tipo de servicio web que manipula el archivo adjunto.
 
-El siguiente ejemplo de código muestra cómo cargar un mensaje de correo electrónico desde un archivo, crear un adjunto de referencia con propiedades específicas y agregar el archivo adjunto al mensaje de correo electrónico:
+El siguiente ejemplo de código demuestra cómo cargar un mensaje de correo electrónico desde un archivo, crear un archivo adjunto de referencia con propiedades específicas, y agregar el archivo adjunto al mensaje de correo electrónico:
 
 ```java
 MailMessage eml = MailMessage.load("fileName");
 
-ReferenceAttachment refAttach = new ReferenceAttachment("https://[attach_uri]")
+ReferenceAttachment refAttach = new ReferenceAttachment("https://[attach_uri]");
 refAttach.setName("Document.docx");
 refAttach.setProviderType(AttachmentProviderType.OneDrivePro);
 refAttach.setPermissionType(AttachmentPermissionType.AnyoneCanEdit);
@@ -185,45 +184,45 @@ refAttach.setPermissionType(AttachmentPermissionType.AnyoneCanEdit);
 eml.getAttachments().addItem(refAttach);
 ```
 
-## **Trabajo con objetos incrustados**
+## **Trabajando con Objetos Embebidos**
 
-Un objeto incrustado es un objeto que se creó con una aplicación y se incluyó en un documento o archivo creado por otra aplicación. Por ejemplo, una hoja de cálculo de Microsoft Excel se puede incrustar en un informe de Microsoft Word o se puede incrustar un archivo de vídeo en una presentación de Microsoft PowerPoint. Cuando un archivo se incrusta, en lugar de insertarlo o pegarlo en otro documento, conserva su formato original. El documento incrustado se puede abrir en la aplicación original y modificarlo.
+Un objeto embebido es un objeto que fue creado con una aplicación y encerrado dentro de un documento o archivo creado por otra aplicación. Por ejemplo, una hoja de cálculo de Microsoft Excel puede ser embebida en un informe de Microsoft Word, o un archivo de video puede ser embebido en una presentación de Microsoft PowerPoint. Cuando un archivo está embebido, en lugar de ser insertado o pegado en otro documento, conserva su formato original. El documento embebido puede ser abierto en la aplicación original y modificado.
 
-### **Incrustar objetos en un correo electrónico**
+### **Embeber Objetos en un Email**
 
-The [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) la clase se usa con [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) clase para incrustar objetos en tus mensajes de correo electrónico. Para añadir un objeto incrustado, sigue estos pasos
+La clase [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) se utiliza con la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) para embeber objetos en sus mensajes de correo electrónico. Para agregar un objeto embebido, siga estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Especifique los valores de origen, destino y asunto en [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Crea una instancia del [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) class.
-1. Crea una instancia del [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) class.
-1. Cargue un objeto incrustado en [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/).
-1. Agregue el objeto incrustado cargado al [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instancia de clase.
-1. Añada el [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) instancia a la [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instancia de clase.
+1. Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Especifique los valores de de, para y asunto en la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Cree una instancia de la clase [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/).
+1. Cree una instancia de la clase [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/).
+1. Cargue un objeto embebido en la [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/).
+1. Agregue el objeto embebido cargado a la instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Agregue la instancia de [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) a la instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-Los fragmentos de código siguientes producen un mensaje de correo electrónico con texto sin formato y cuerpos HTML y una imagen incrustada en el HTML.
+Los fragmentos de código a continuación producen un mensaje de correo electrónico con un cuerpo de texto plano y HTML y una imagen embebida en el HTML.
 
-|**Imagen incrustada en el correo electrónico**|
-|: - |
+|**Imagen embebida en el email**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_2.png)|
-Puede enviar cualquier cantidad de objetos incrustados. El servidor de correo limita el tamaño del archivo adjunto. Gmail, por ejemplo, no admite archivos de más de 10 MB. Los fragmentos de código que aparecen a continuación muestran cómo incrustar objetos en un correo electrónico.
+Puede enviar cualquier número de objetos embebidos. El tamaño del archivo adjunto está limitado por el servidor de correo. Gmail, por ejemplo, no admite tamaños de archivo mayores a 10MB. Los fragmentos de código a continuación demuestran cómo embeber objetos en un Email.
 
 ```java
-// Crea una instancia del MailMessage class and Set the addresses and Set the content
+// Crear una instancia de la clase MailMessage y establecer las direcciones y contenido
 MailMessage mail = new MailMessage();
 mail.setFrom(new MailAddress("sender@from.com"));
 mail.getTo().add("receiver@to.com");
-mail.setSubject("This is an email");
+mail.setSubject("Este es un correo electrónico");
 
-// Create the plain text part It is viewable by those clients that don't support HTML
-AlternateView plainView = AlternateView.createAlternateViewFromString("This is my plain text content", null, "text/plain");
+// Crear la parte de texto plano que es visible para aquellos clientes que no soportan HTML
+AlternateView plainView = AlternateView.createAlternateViewFromString("Este es mi contenido de texto plano", null, "text/plain");
 
-// Create the HTML part.To embed images, we need to use the prefix 'cid' in the img src value.
-// The cid value will map to the Content-Id of a Linked resource.
-// Thus <img src='cid:barcode'> will map to a LinkedResource with a ContentId of //'barcode'.
-AlternateView htmlView = AlternateView.createAlternateViewFromString("Here is an embedded image.<img src=cid:barcode>", null, "text/html");
+// Crear la parte HTML. Para embeber imágenes, necesitamos usar el prefijo 'cid' en el valor src de img. 
+// El valor cid se mapeará al Content-Id de un recurso enlazado. 
+// Así, <img src='cid:barcode'> se mapeará a un LinkedResource con un ContentId de 'barcode'.
+AlternateView htmlView = AlternateView.createAlternateViewFromString("Aquí hay una imagen embebida.<img src=cid:barcode>", null, "text/html");
 
-// Create the LinkedResource (embedded image) and Añada el LinkedResource to the appropriate view
+// Crear el LinkedResource (imagen embebida) y agregar el LinkedResource a la vista adecuada
 LinkedResource barcode = new LinkedResource("1.jpg", MediaTypeNames.Image.JPEG);
 barcode.setContentId("barcode");
 
@@ -233,40 +232,40 @@ mail.getAlternateViews().addItem(htmlView);
 mail.save("EmbeddedImage_out.msg", SaveOptions.getDefaultMsgUnicode());
 ```
 
-### **Eliminar objetos incrustados del correo electrónico**
+### **Eliminando Objetos Embebidos de un Email**
 
-[LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) accedido a través de [MailMessage.LinkedResources](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getLinkedResources--) propiedad. El [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) La colección proporciona un método para eliminar por completo los objetos incrustados agregados a un mensaje de correo electrónico. Utilice la versión sobrecargada de [LinkedResourceCollection.removeAt](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/#removeAt-int-boolean-) método para eliminar todos los rastros de un objeto incrustado de un mensaje de correo electrónico.
+La [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) se accede a través de la propiedad [MailMessage.LinkedResources](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getLinkedResources--). La colección [LinkedResourceCollection](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/) proporciona un método para eliminar completamente objetos embebidos agregados en un mensaje de correo electrónico. Utilice la versión sobrecargada del método [LinkedResourceCollection.removeAt](https://reference.aspose.com/email/java/com.aspose.email/linkedresourcecollection/#removeAt-int-boolean-) para eliminar todos los rastros de un objeto embebido de un mensaje de correo electrónico.
 
-El código de ejemplo que aparece a continuación muestra cómo eliminar objetos incrustados de un mensaje de correo electrónico.
+El código de ejemplo a continuación muestra cómo eliminar objetos embebidos de un mensaje de correo electrónico.
 
 ```java
-// Load the test message with Linked Resources
+// Cargar el mensaje de prueba con Recursos Enlazados
 MailMessage msg = MailMessage.load("EmlWithLinkedResources.eml");
 
-// Remove a LinkedResource
+// Eliminar un LinkedResource
 msg.getLinkedResources().removeAt(0, true);
 
-// Now clear the Alternate View for linked Resources
+// Ahora limpie la Vista Alternativa para Recursos Enlazados
 msg.getAlternateViews().get_Item(0).getLinkedResources().clear(true);
 ```
 
-### **Extracción de objetos incrustados**
+### **Extrayendo Objetos Embebidos**
 
-En este tema se explica cómo extraer objetos incrustados de un archivo de correo electrónico. Un objeto incrustado es un objeto que se creó con una aplicación y se incluyó en un documento o archivo creado por otra aplicación. Por ejemplo, una hoja de cálculo de Microsoft Excel se puede incrustar en un informe de Microsoft Word o se puede incrustar un archivo de vídeo en una presentación de Microsoft PowerPoint. Cuando un archivo se incrusta, en lugar de insertarlo o pegarlo en otro documento, conserva su formato original. El documento incrustado se puede abrir en la aplicación original y modificarlo. Para extraer un objeto incrustado de un mensaje de correo electrónico, sigue estos pasos:
+Este tema explica cómo extraer objetos embebidos de un archivo de correo electrónico. Un objeto embebido es un objeto que fue creado con una aplicación y encerrado dentro de un documento o archivo creado por otra aplicación. Por ejemplo, una hoja de cálculo de Microsoft Excel puede ser embebida en un informe de Microsoft Word, o un archivo de video puede ser embebido en una presentación de Microsoft PowerPoint. Cuando un archivo está embebido, en lugar de ser insertado o pegado en otro documento, conserva su formato original. El documento embebido puede ser abierto en la aplicación original y ser modificado. Para extraer un objeto embebido de un mensaje de correo electrónico, siga estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Cargue un archivo de correo electrónico en [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Cree un bucle y cree una instancia del [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) clase en él.
-1. Guarde el archivo adjunto y muéstrelo en la pantalla.
-1. Especifique la dirección del remitente y del destinatario en el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Enviar un correo electrónico mediante [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) class.
+1. Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Cargue un archivo de correo electrónico en la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Cree un bucle y cree una instancia de la clase [Attachment](https://reference.aspose.com/email/java/com.aspose.email/attachment/) dentro de él.
+1. Guarde el archivo adjunto y muéstrelo en pantalla.
+1. Especifique la dirección del remitente y el destinatario en la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+1. Envíe el correo electrónico utilizando la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/).
 
-El siguiente fragmento de código extrae los objetos incrustados de un correo electrónico.
+El siguiente fragmento de código extrae objetos embebidos de un correo electrónico.
 
-|**Objetos incrustados extraídos en el correo electrónico**|
-|: - |
+|**Objetos embebidos extraídos en email**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_3.png)|
-El siguiente fragmento de código muestra cómo extraer objetos incrustados.
+El siguiente fragmento de código muestra cómo extraer objetos embebidos.
 
 ```java
 MailMessage mailMsg = MailMessage.load("Message.msg", new MsgLoadOptions());
@@ -277,9 +276,9 @@ for (Attachment attachment : mailMsg.getAttachments()) {
 }
 ```
 
-#### **Identificar y extraer un archivo adjunto incrustado de un MSG formateado como RTF**
+#### **Identificar y Extraer un Archivo Adjunto Embebido desde MSG Formateado como RTF**
 
-El siguiente código se puede usar para mensajes formateados como RTF para diferenciar y extraer los archivos adjuntos que están en línea o que aparecen como un icono en el cuerpo del mensaje. En el siguiente fragmento de código, se muestra cómo identificar y extraer un archivo adjunto incrustado de un mensaje con formato RTF.
+El siguiente código puede ser utilizado para mensajes formateados como RTF para diferenciar y extraer archivos adjuntos que son Inline o que aparecen como iconos en el cuerpo del mensaje. El siguiente fragmento de código muestra cómo identificar y extraer un archivo adjunto embebido desde MSG formateado como RTF.
 
 ```java
 public static void extractInlineAttachments() {
@@ -318,49 +317,49 @@ static void saveAttachment(MapiAttachment attachment, String fileName) throws IO
 }
 ```
 
-## **Recuperar archivos adjuntos de un correo electrónico firmado**
+## **Recuperando Archivos Adjuntos de Correos Electrónicos Firmados**
 
-Los correos electrónicos firmados contienen una **smime.p7m** adjunto. Significa que el correo electrónico está encriptado por SMIME.
-**Smime.p7m** el formato del archivo es la firma digital.
-Para ver el contenido de este correo electrónico, utilice el [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/) método. El método devuelve un [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) objeto sin firma digital.
+Los correos electrónicos firmados contienen un único archivo adjunto **smime.p7m**. Esto significa que el correo electrónico está cifrado por SMIME. 
+El formato de archivo **Smime.p7m** es la firma digital. 
+Para ver el contenido de este correo electrónico utilice el método [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/). El método devuelve un objeto [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) sin una firma digital.
 
 ```java
 MailMessage signedEml = MailMessage.load("signed.eml");
 
 if (signedEml.isSigned()) {
     for (int i = 0; i < signedEml.getAttachments().size(); i++) {
-        System.out.println("Signed email attachment" + i + ": " + signedEml.getAttachments().get_Item(i).getName());
+        System.out.println("Archivo adjunto de email firmado " + i + ": " + signedEml.getAttachments().get_Item(i).getName());
     }
 
-    // The email is signed. Remove a signature.
+    // El correo electrónico está firmado. Eliminar la firma.
     MailMessage eml = signedEml.removeSignature();
 
-    System.out.println("Signature removed.");
+    System.out.println("Firma eliminada.");
 
     for (int i = 0; i < eml.getAttachments().size(); i++) {
-        System.out.println("Email attachment" + i + ": " + eml.getAttachments().get_Item(i).getName());
+        System.out.println("Archivo adjunto de email " + i + ": " + eml.getAttachments().get_Item(i).getName());
     }
 }
 ```
 
-### **Trabajando con el tipo de contenido y la disposición del contenido**
+### **Trabajando con Content-Type y Content-Disposition**
 
-La API Aspose.Email brinda la capacidad de trabajar con el archivo adjunto [Content-Type](https://datatracker.ietf.org/doc/html/rfc2045#section-5) and [Content-Disposition](https://datatracker.ietf.org/doc/html/rfc2183) desde el encabezado del archivo adjunto. El siguiente fragmento de código muestra cómo obtener y cambiar la descripción del contenido del archivo adjunto.
+La API Aspose.Email proporciona la capacidad de trabajar con el [Content-Type](https://datatracker.ietf.org/doc/html/rfc2045#section-5) y [Content-Disposition](https://datatracker.ietf.org/doc/html/rfc2183) del encabezado del archivo adjunto. El siguiente fragmento de código muestra cómo obtener y cambiar la descripción del contenido del archivo adjunto.
 
-#### **Visualización de los parámetros de tipo y disposición del contenido**
+#### **Mostrando Parámetros de Content-Type y Content-Disposition**
 
-El siguiente fragmento de código muestra cómo mostrar los parámetros de tipo de contenido y disposición del contenido en la pantalla:
+El siguiente fragmento de código muestra cómo mostrar parámetros de Content-Type y Content-Disposition en la pantalla:
 
 ~~~Java
 void run(MailMessage message) {
-    // Attachments
+    // Archivos adjuntos
     for (Attachment attachment : message.getAttachments()) {
         ContentDisposition contentDisposition = attachment.getContentDisposition();
         printContentDisposition(contentDisposition);
         ContentType contentType = attachment.getContentType();
         printContentType(contentType);
     }
-    // Linked Resources
+    // Recursos enlazados
     for (LinkedResource attachment : message.getLinkedResources()) {
         ContentDisposition contentDisposition = attachment.getContentDisposition();
         printContentDisposition(contentDisposition);
@@ -384,11 +383,11 @@ void printContentDisposition(ContentDisposition contentDisposition) {
     System.out.println("read-date: " + contentDisposition.getReadDate());
     System.out.println("size: " + contentDisposition.getSize());
 }
-~~~
+~~~ 
 
-#### **Uso de los parámetros de tipo y disposición del contenido con archivos adjuntos**
+#### **Utilizando Parámetros de Content-Type y Content-Disposition con Archivos Adjuntos**
 
-En el siguiente fragmento de código, se muestra cómo usar los parámetros Content-Type y Content-Disposition con un archivo adjunto:
+El siguiente fragmento de código muestra cómo utilizar los parámetros Content-Type y Content-Disposition con un archivo adjunto:
 
 ~~~Java
 MailMessage eml = MailMessage.load(fileName);

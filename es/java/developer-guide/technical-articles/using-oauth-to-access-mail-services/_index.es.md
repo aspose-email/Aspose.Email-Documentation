@@ -1,31 +1,31 @@
 ---
-title: "Uso de OAuth para acceder a los servicios de correo"
+title: "Usando OAuth para acceder a los servicios de correo"
 url: /es/java/using-oauth-to-access-mail-services/
 weight: 192
 type: docs
 ---
 
 
-Se ha agregado la compatibilidad con OAuth 2.0 a Aspose.Email y se puede usar para acceder **SMTP**, **POP3**, **IMAP** and **EWS** servidores.
-En general, todos los servidores compatibles **OAuth 2.0** Los tokens portadores se pueden usar con Aspose.Email, pero nuestros clientes de correo electrónico se han probado con los servidores de correo de Google y Microsoft Office 365.
-Acceso al servidor desde [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient), [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client), [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) and [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) con OAuth se puede implementar de 2 maneras.
+El soporte para OAuth 2.0 se ha añadido a Aspose.Email y puede usarse para acceder a **SMTP**, **POP3**, **IMAP** y **EWS** servidores.
+En general, todos los servidores que soportan tokens de portador de **OAuth 2.0** pueden utilizarse con Aspose.Email, pero nuestros clientes de correo han sido probados con servidores de correo de Google y servidores de Microsoft Office 365.
+El acceso al servidor desde el [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/SmtpClient), [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/Pop3Client), [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/ImapClient) y [EWSClient](https://reference.aspose.com/email/java/com.aspose.email/EWSClient) con OAuth puede implementarse de 2 maneras.
 
-1. Proporcione el token de acceso directamente al constructor del cliente de correo electrónico. En este caso, el usuario debe entender que la vida útil de los tokens de acceso es limitada. Cuando el token caduca, el cliente de correo electrónico no se puede usar para acceder al servidor.
-2. Proporcione una implementación personalizada del proveedor de tokens basada en [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) interfaz en el constructor del cliente de correo electrónico. En este caso, el cliente comprueba la fecha de caducidad del token y las solicitudes [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) para un nuevo token de acceso cuando el anterior haya caducado. De esta forma, el cliente actualiza los tokens periódicamente y puede trabajar con el servidor durante un tiempo ilimitado. A menudo, los servicios admiten una forma sencilla de actualizar los tokens de acceso. Por ejemplo, el uso de tokens de actualización en los servicios de Google o el flujo de autenticación ROPC en la plataforma de identidad de Microsoft se puede usar para implementar el proveedor de tokens.
+1. Proporcionar el token de acceso directamente en el constructor del cliente de correo. En este caso, el usuario debe entender que la duración de los tokens de acceso es limitada. Cuando el token ha expirado, no se puede utilizar el cliente de correo para acceder al servidor.
+2. Proporcionar una implementación personalizada del proveedor de tokens basada en la interfaz [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) en el constructor del cliente de correo. En este caso, el cliente verifica el tiempo de expiración del token y solicita a [ITokenProvider](https://reference.aspose.com/email/java/com.aspose.email/itokenprovider) un nuevo token de acceso cuando el anterior ha expirado. De esta manera, el cliente refresca los tokens periódicamente y puede trabajar con el servidor por tiempo ilimitado. A menudo, los servicios soportan una forma simple de refrescar los tokens de acceso. Por ejemplo, utilizar tokens de refresco en los servicios de Google o el flujo de autenticación ROPC en la plataforma de identidad de Microsoft puede usarse para implementar el proveedor de tokens.
 
-## **Configurar una cuenta en el servidor apropiado**
+## **Configurar una cuenta en el servidor correspondiente**
 
-Los siguientes artículos le ayudan a configurar cuentas para acceder a los servicios de correo.
+Los siguientes artículos te ayudan a configurar cuentas para acceder a los servicios de correo.
 
-- For [Office 365](https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth)
-- For [Gmail](https://developers.google.com/gmail/imap/imap-smtp)
+- Para [Office 365](https://docs.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth)
+- Para [Gmail](https://developers.google.com/gmail/imap/imap-smtp)
 
-## **Acceda a los servicios de correo con los tokens de acceso**
+## **Acceder a los servicios de correo con los tokens de acceso**
 
-Los siguientes ejemplos de código muestran cómo conectarse a los servicios de correo mediante tokens de acceso.
+Los siguientes ejemplos de código te muestran cómo conectarte a los servicios de correo utilizando tokens de acceso.
 
 ```java
-// Connecting to SMTP server
+// Conectando al servidor SMTP
 try (SmtpClient client = new SmtpClient(
         "smtp.gmail.com",
         587,
@@ -36,7 +36,7 @@ try (SmtpClient client = new SmtpClient(
 
 }
 
-// Connecting to IMAP server
+// Conectando al servidor IMAP
 try (ImapClient client = new ImapClient(
         "imap.gmail.com",
         993,
@@ -47,7 +47,7 @@ try (ImapClient client = new ImapClient(
 
 }
 
-// Connecting to POP3 server
+// Conectando al servidor POP3
 try (Pop3Client client = new Pop3Client(
         "pop.gmail.com",
         995,
@@ -59,9 +59,9 @@ try (Pop3Client client = new Pop3Client(
 }
 ```
 
-## **Acceda a los servicios de correo con los proveedores de tokens**
+## **Acceder a los servicios de correo con los proveedores de tokens**
 
-Los siguientes ejemplos de código muestran cómo conectarse a los servicios de correo mediante un proveedor de tokens.
+Los siguientes ejemplos de código te muestran cómo conectarte a los servicios de correo utilizando un proveedor de tokens.
 
 ```java
 ITokenProvider tokenProvider = TokenProvider.Google.getInstance(
@@ -69,7 +69,7 @@ ITokenProvider tokenProvider = TokenProvider.Google.getInstance(
         "ClientSecret",
         "RefreshToken");
 
-// Connecting to SMTP server
+// Conectando al servidor SMTP
 try (SmtpClient client = new SmtpClient(
         "smtp.gmail.com",
         587,
@@ -79,7 +79,7 @@ try (SmtpClient client = new SmtpClient(
 
 }
 
-// Connecting to IMAP server
+// Conectando al servidor IMAP
 try (ImapClient client = new ImapClient(
         "imap.gmail.com",
         993,
@@ -89,7 +89,7 @@ try (ImapClient client = new ImapClient(
 
 }
 
-// Connecting to POP3 server
+// Conectando al servidor POP3
 try (Pop3Client client = new Pop3Client(
         "pop.gmail.com",
         995,
@@ -100,9 +100,9 @@ try (Pop3Client client = new Pop3Client(
 }
 ```
 
-## **Implementación de iTokenProvider personalizado para Office 365**
+## **Implementación de ITokenProvider personalizado para Office 365**
 
-Puede usar la implementación del proveedor de tokens que aparece a continuación para acceder a los servicios de correo de Office 365.
+Puedes utilizar la implementación del proveedor de tokens a continuación para acceder a los servicios de correo de Office 365.
 
 ```java
 import java.io.BufferedReader;
@@ -209,8 +209,8 @@ class AzureROPCTokenProvider implements ITokenProvider {
             connection.connect();
 
             if (connection.getResponseCode() >= HttpURLConnection.HTTP_BAD_REQUEST) {
-                throw new IllegalAccessError("Operation failed: " + connection.getResponseCode() + "/" +
-                        connection.getResponseMessage() + "\r\nDetails:\r\n{2}"
+                throw new IllegalAccessError("Operación fallida: " + connection.getResponseCode() + "/" +
+                        connection.getResponseMessage() + "\r\nDetalles:\r\n{2}"
                         + readInputStream(connection.getErrorStream()));
             }
 
@@ -261,7 +261,7 @@ class AzureROPCTokenProvider implements ITokenProvider {
                 result.append(line);
             }
         } catch (IOException e) {
-            // ignore
+            // ignorar
         }
         return result.toString();
     }
@@ -278,7 +278,7 @@ class AzureROPCTokenProvider implements ITokenProvider {
 }
 ```
 
-Los siguientes ejemplos de código muestran cómo conectarse a los servicios de Office 365 mediante el proveedor de token personalizado.
+Los siguientes ejemplos de código te muestran cómo conectarte a los servicios de Office 365 utilizando el proveedor de tokens personalizado. 
 
 ```java
 ITokenProvider tokenProvider = new AzureROPCTokenProvider(
@@ -289,7 +289,7 @@ ITokenProvider tokenProvider = new AzureROPCTokenProvider(
         "Password",
         scopes);
 
-// Connecting to SMTP server
+// Conectando al servidor SMTP
 try (SmtpClient client = new SmtpClient(
         "smtp.office365.com",
         587,
@@ -299,7 +299,7 @@ try (SmtpClient client = new SmtpClient(
 
 }
 
-// Connecting to IMAP server
+// Conectando al servidor IMAP
 try (ImapClient client = new ImapClient(
         "outlook.office365.com",
         993,
@@ -309,7 +309,7 @@ try (ImapClient client = new ImapClient(
 
 }
 
-// Connecting to POP3 server
+// Conectando al servidor POP3
 try (Pop3Client client = new Pop3Client(
         "outlook.office365.com",
         995,
@@ -319,7 +319,7 @@ try (Pop3Client client = new Pop3Client(
 
 }
 
-// Connecting to EWS server
+// Conectando al servidor EWS
 final String mailboxUri = "https://outlook.office365.com/ews/exchange.asmx";
 ICredentials credentials = new OAuthNetworkCredential(tokenProvider);
 try (IEWSClient ewsClient = EWSClient.getEWSClient(mailboxUri, credentials)) {
@@ -327,13 +327,13 @@ try (IEWSClient ewsClient = EWSClient.getEWSClient(mailboxUri, credentials)) {
 }
 ```
 
-## **Permisos para acceder a Office 365 mediante IMAP, POP3 o SMTP**
+## **Permisos para acceder a Office 365 a través de IMAP, POP3 o SMTP**
 
-Tenemos que aplicar los permisos de API correctos y conceder el consentimiento del administrador para acceder a los servicios de correo de Office 365:
+Necesitamos aplicar los permisos API correctos y otorgar el consentimiento de administrador para acceder a los servicios de correo de Office 365:
 
 ![todo:image_alt_text](perm_conf.png)
 
-En el asistente Permisos de la API/Agregar un permiso, seleccione Microsoft Graph y, a continuación, Permisos delegados para ver los siguientes ámbitos de permisos en la lista:
+En el asistente de permisos de API / Agregar un permiso, selecciona Microsoft Graph y luego permisos delegados para encontrar los siguientes alcances de permisos enumerados:
 
 ```
 offline_access
@@ -348,8 +348,8 @@ Ejemplo de proveedor de tokens:
 ITokenProvider tokenProvider = new AzureROPCTokenProvider(OAuth.Tenant, OAuth.ClientId, OAuth.ClientSecret, User.EMail, User.Password,
         new String[] {
                 "offline_access",
-                "https://outlook.office.com/IMAP.AccessAsUser.All", // IMAP scope
-                "https://outlook.office.com/POP.AccessAsUser.All",  // POP3 scope
-                "https://outlook.office.com/SMTP.Send"              // SMTP scope
+                "https://outlook.office.com/IMAP.AccessAsUser.All", // Alcance IMAP
+                "https://outlook.office.com/POP.AccessAsUser.All",  // Alcance POP3
+                "https://outlook.office.com/SMTP.Send"              // Alcance SMTP
         });
 ```

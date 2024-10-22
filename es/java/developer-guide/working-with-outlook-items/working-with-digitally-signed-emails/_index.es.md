@@ -1,19 +1,19 @@
 ---
-title: "Administración de mensajes firmados digitalmente"
+title: "Gestionando Mensajes Firmados Digitalmente"
 url: /es/java/working-with-outlook-notes/
 weight: 100
 type: docs
 ---
 
-Aspose.Email implementa el algoritmo completo de objetos de correo electrónico S/MIME. Esto le da a la API el poder total para agregar firmas digitales a los mensajes de correo electrónico, conservarlas mientras convierte los mensajes de un formato a otro, eliminarlos, etc.
+Aspose.Email implementa el algoritmo completo del objeto de correo S/MIME. Esto le da a la API el poder completo para agregar firmas digitales a los mensajes de correo electrónico, preservarlas al convertir mensajes entre formatos, eliminarlas, etc.
 
-## **Adjuntar una firma a un correo electrónico**
+## **Adjuntar una Firma a un Correo Electrónico**
 
-The [SecureEmailManager.attachSignature](https://reference.aspose.com/email/java/com.aspose.email/secureemailmanager/#attachSignature-com.aspose.email.MapiMessage-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-com.aspose.email.SignatureOptions-) El método le permite adjuntar firmas digitales a los mensajes de correo electrónico. Después de adjuntar la firma, verifique los resultados mediante propiedades como [IsSigned](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#isSigned--), [MessageClass](https://reference.aspose.com/email/java/com.aspose.email/knownpropertylist/#MESSAGE-CLASS), y detalles de los archivos adjuntos.
+El método [SecureEmailManager.attachSignature](https://reference.aspose.com/email/java/com.aspose.email/secureemailmanager/#attachSignature-com.aspose.email.MapiMessage-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-com.aspose.email.SignatureOptions-) permite adjuntar firmas digitales a mensajes de correo electrónico. Después de adjuntar la firma, verifique los resultados a través de propiedades como [IsSigned](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#isSigned--), [MessageClass](https://reference.aspose.com/email/java/com.aspose.email/knownpropertylist/#MESSAGE-CLASS) y detalles del adjunto.
 
-Puedes proporcionar un MailMessage o un mapiMessage, un certificado privado y opciones de firma para personalizar el proceso de adjuntar firmas con el [SignatureOptions](https://reference.aspose.com/email/java/com.aspose.email/signatureoptions/) clase que permite a los usuarios especificar varias opciones para el adjunto de la firma, incluidas las firmas separadas o no separadas.
+Puede proporcionar un MailMessage o MapiMessage, un certificado privado y opciones de firma para personalizar el proceso de adjuntar la firma con la clase [SignatureOptions](https://reference.aspose.com/email/java/com.aspose.email/signatureoptions/) que permite a los usuarios especificar varias opciones para la adjunta de firma, incluyendo firmas separadas o no separadas.
 
-El siguiente ejemplo de código le mostrará cómo cargar un mensaje desde un archivo, adjuntar una firma digital separada y no separada mediante un certificado privado y, a continuación, comprobar si las firmas se adjuntaron correctamente.
+El siguiente ejemplo de código te mostrará cómo cargar un mensaje desde un archivo, adjuntar una firma digital separada y no separada usando un certificado privado, y luego verificar si las firmas se adjuntaron con éxito.
 
 ```java
 String fileName = "message.msg";
@@ -27,36 +27,37 @@ opt.setDetached(true);
 MapiMessage signedDetached = new SecureEmailManager().attachSignature(msg, privateCert, opt);
 
 if (signedDetached.isSigned()) {
-    System.out.println("Detached Signature Attached Successfully.");
+    System.out.println("Firma Separada Adjunta Correctamente.");
 }
 
 opt.setDetached(false);
 MapiMessage signedNonDetached = new SecureEmailManager().attachSignature(msg, privateCert, opt);
 
 if (signedNonDetached.isSigned()) {
-    System.out.println("Non-Detached Signature Attached Successfully.");
+    System.out.println("Firma No Separada Adjunta Correctamente.");
 }
 ```
 
-## **Preservar la firma al convertir de EML a MSG**
+## **Preservar la Firma al Convertir de EML a MSG**
 
-Aspose.Email conserva la firma digital al convertir de EML a MSG. El siguiente fragmento de código muestra cómo convertir de EML a MSG.
+Aspose.Email preserva la firma digital al convertir de EML a MSG. El siguiente fragmento de código te muestra cómo convertir de EML a MSG.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
-// Load mail message
+// Cargar mensaje de correo
 MailMessage message = MailMessage.load(dataDir + "Message.eml", new EmlLoadOptions());
-// Save as MSG
+// Guardar como MSG
 message.save(dataDir + "ConvertEMLToMSG_out.msg", SaveOptions.getDefaultMsgUnicode());
 ~~~
-## **Eliminar la firma de un archivo de mensajes de Outlook**
 
-Si tienes que eliminar la firma de un mensaje en formato MAPI, por ejemplo por motivos de compatibilidad, Aspose.Email ofrece la [MapiMessage.removeSignature](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#removeSignature--) método y el [MapiMessage.isSigned](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#isSigned--) property.
+## **Eliminar Firma de un Archivo de Mensaje de Outlook**
 
-El siguiente fragmento de código muestra cómo cargar un mensaje MAPI desde un archivo, comprobar si está firmado digitalmente y, de ser así, crear un mensaje nuevo sin la firma digital:
+Si te enfrentas a la necesidad de eliminar la firma de un mensaje en formato MAPI, por ejemplo, por motivos de compatibilidad, Aspose.Email ofrece el método [MapiMessage.removeSignature](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#removeSignature--) y la propiedad [MapiMessage.isSigned](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#isSigned--). 
+
+El siguiente fragmento de código muestra cómo cargar un mensaje MAPI desde un archivo, verificar si está firmado digitalmente y, si es así, crear un nuevo mensaje sin la firma digital: 
 
 ```java
 MapiMessage msg = MapiMessage.load(fileName);
@@ -65,28 +66,29 @@ if (msg.isSigned()) {
     MapiMessage unsignedMsg = msg.removeSignature();
 }
 ```
-## **Conversión de mensajes S/MIME de MSG a EML**
 
-Aspose.Email conserva la firma digital al convertir de MSG a EML, como se muestra en el siguiente fragmento de código.
+## **Convertir Mensajes S/MIME de MSG a EML**
+
+Aspose.Email preserva la firma digital al convertir de MSG a EML como se muestra en el siguiente fragmento de código.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor ve a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "outlook/";
 
 MailMessage msg = MailMessage.load(dataDir + "message.eml");
 MapiMessage mapi = MapiMessage.fromMailMessage(msg, new MapiConversionOptions(OutlookMessageFormat.Unicode));
-// Save File to disk
+// Guardar archivo en disco
 mapi.save(dataDir + "ConvertMIMEMessagesFromMSGToEML_out.msg");
 ~~~
 
-## **Descifrar un archivo MSG con certificado**
+## **Descifrar un Archivo MSG con Certificado**
 
-Si tiene mensajes MAPI cifrados y necesita descifrarlos con la clave privada almacenada en un certificado, las siguientes funciones de Aspose.Email pueden resultar útiles:
+Si tienes mensajes MAPI cifrados y necesitas descifrarlos usando la clave privada almacenada en un certificado, las siguientes características de Aspose.Email pueden ser útiles:
 
 - [MapiMessage.isEncrypted](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#isEncrypted--) - Obtiene un valor que indica si el mensaje está cifrado.
-- [MapiMessage.decrypt()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#decrypt--) - Descifra este mensaje (el método busca en el usuario y la computadora actuales de My stores el certificado y la clave privada apropiados).
-- [MapiMessage.decrypt (certificado X509 Certificate2)](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#decrypt-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-) - Descifra este mensaje con un certificado.
+- [MapiMessage.decrypt()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#decrypt--) - Descifra este mensaje (el método busca en las tiendas de certificados del usuario y computadora actuales el certificado y clave privada apropiados).
+- [MapiMessage.decrypt(X509Certificate2 certificate)](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#decrypt-com.aspose.ms.System.Security.Cryptography.X509Certificates.X509Certificate2-) - Descifra este mensaje con el certificado.
 
 El siguiente fragmento de código muestra cómo trabajar con mensajes MAPI cifrados:
 

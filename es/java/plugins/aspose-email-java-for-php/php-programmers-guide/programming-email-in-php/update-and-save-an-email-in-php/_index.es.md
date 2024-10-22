@@ -1,88 +1,88 @@
 ---
-title: "Actualizar y guardar un correo electrónico en PHP"
+title: "Actualizar y Guardar un Correo Electrónico en PHP"
 url: /es/java/update-and-save-an-email-in-php/
 weight: 70
 type: docs
 ---
 
-## **Aspose.Email - Actualizar y guardar un correo electrónico**
-Para actualizar y guardar un correo electrónico usando **Aspose.Email Java para PHP**, simplemente invoca **UpdateEmail** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Actualizar y Guardar un Correo Electrónico**
+Para actualizar y guardar un correo electrónico utilizando **Aspose.Email Java para PHP**, simplemente invoca el módulo **UpdateEmail**. Aquí puedes ver un ejemplo de código.
 
 **Código PHP**
 
 ``` php
 
- # Initialize and Load an existing MSG file by specifying the MessageFormat
+ # Inicializar y cargar un archivo MSG existente especificando el MessageFormat
 
 $mailMessage=new MailMessage();
 
 $email = $mailMessage->load($dataDir . "Message.msg");
 
-\# Initialize a String variable to get the Email Subject
+\# Inicializar una variable String para obtener el Asunto del Correo Electrónico
 
 $subject = $email->getSubject();
 
-\# Set the Email Subject
+\# Establecer el Asunto del Correo Electrónico
 
-$email->setSubject('This text is added to the existing subject');
+$email->setSubject('Este texto se añade al asunto existente');
 
-\# Initialize a String variable to get the Email's HTML Body
+\# Inicializar una variable String para obtener el Cuerpo HTML del Correo Electrónico
 
 $body = $email->getHtmlBody();
 
-\# Apppend some more information to the Body variable
+\# Agregar más información a la variable Body
 
-$body = $body . "<br> This text is added to the existing body".PHP_EOL;
+$body = $body . "<br> Este texto se añade al cuerpo existente".PHP_EOL;
 
-\# Set the Email Body
+\# Establecer el Cuerpo del Correo Electrónico
 
 $email->setHtmlBody($body);
 
-\# Initialize MailAddressCollection object
+\# Inicializar el objeto MailAddressCollection
 
 $contacts = new MailAddressCollection();
 
-\# Retrieve Email's TO list
+\# Recuperar la lista TO del Correo Electrónico
 
 $contacts = $email->getTo();
 
-\# Add another email address to collection
+\# Agregar otra dirección de correo electrónico a la colección
 
 $contacts->add("to1@domain.com");
 
-\# Set the collection as Email's TO list
+\# Establecer la colección como la lista TO del Correo Electrónico
 
 $email->setTo($contacts);
 
-\# Initialize MailAddressCollection
+\# Inicializar MailAddressCollection
 
 $contacts = new MailAddressCollection();
 
-\# Retrieve Email's CC list
+\# Recuperar la lista CC del Correo Electrónico
 
 $contacts = $email->getCC();
 
-\# Add another email address to collection
+\# Agregar otra dirección de correo electrónico a la colección
 
 $contacts->add("cc2@domain.com");
 
-\# Set the collection as Email's CC list
+\# Establecer la colección como la lista CC del Correo Electrónico
 
 $email->setCC($contacts);
 
-\# Save the Email message to disk by specifying the MessageFormat
+\# Guardar el mensaje de correo electrónico en disco especificando el MessageFormat
 
 $mailMessageSaveType=new MailMessageSaveType();
 
 $email->save($dataDir . "UpdateMessage.msg", $mailMessageSaveType->getOutlookMessageFormat());
 
-\# Display Status
+\# Mostrar Estado
 
-print "Updated email message Successfully.".PHP_EOL;
+print "Mensaje de correo electrónico actualizado con éxito.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Actualizar y guardar un correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Actualizar y Guardar un Correo Electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/UpdateEmail.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingEmail/UpdateEmail.php)

@@ -1,16 +1,16 @@
 ---
-title: "Generar ocurrencias a partir de un patrón de recurrencia"
+title: "Generar Ocurrencias a Partir de un Patrón de Recurrencia"
 url: /es/java/generate-occurrences-from-a-recurrence-pattern/
 weight: 180
 type: docs
 ---
 
 
-Con Aspose.Email, es posible generar ocurrencias utilizando un patrón de recurrencia. Este artículo explica cómo, cómo [generar la próxima aparición](#calculate-the-next-occurrence-or-n-next-occurrences) and [obtener descripciones de artículos fáciles de usar](#get-user-friendly-text-for-a-recurrence). Las ocurrencias a partir de un patrón de periodicidad del calendario MAPI se pueden generar mediante Aspose.Email. El siguiente fragmento de código muestra cómo generar ocurrencias a partir de patrones de periodicidad.
+Con Aspose.Email, es posible generar ocurrencias utilizando un patrón de recurrencia. Este artículo explica cómo, cómo [generar la siguiente ocurrencia](#calculate-the-next-occurrence-or-n-next-occurrences) y [obtener descripciones de elementos amigables para el usuario](#get-user-friendly-text-for-a-recurrence). Las ocurrencias de un patrón de recurrencia en un calendario MAPI pueden generarse utilizando Aspose.Email. El siguiente fragmento de código muestra cómo generar ocurrencias a partir de patrones de recurrencia.
 
 
-## **Calcular la siguiente aparición o n siguientes apariciones**
-Para obtener la «siguiente» aparición, utilice el método GenerateOccurrences con el parámetro nNextOccurrences = 1. En el siguiente fragmento de código, se muestra cómo generar 20 ocurrencias mediante nNextOccurrences = 20. El resultado del código siguiente es el siguiente:
+## **Calcular la Siguiente Ocurrencia o n Siguientes Ocurrencias**
+Para obtener la ocurrencia "siguiente", utiliza el método GenerateOccurrences con el parámetro nNextOccurrences = 1. El siguiente fragmento de código muestra cómo generar 20 ocurrencias utilizando nNextOccurrences = 20. La salida del código a continuación es la siguiente:
 
 ![todo:image_alt_text](generate-occurrences-from-a-recurrence-pattern_1.png)
 
@@ -32,8 +32,8 @@ for (int i = 0; i < expectedDates.size(); i++) {
     System.out.println("DateTime = " + sdf.format(expectedDates.getItem(i)));
 }
 ~~~
-## **Obtenga texto fácil de usar para una recurrencia**
-El texto fácil de usar para una regla se puede obtener mediante la propiedad FriendlyText, como se muestra a continuación. El resultado del código será: «Se repite cada mes los días 1 y 1 a partir de los días finales del mes, hasta un máximo de 2 veces». En el siguiente fragmento de código, se muestra cómo obtener texto fácil de usar para una repetición.
+## **Obtener Texto Amigable para el Usuario para una Recurrencia**
+El texto amigable para una regla se puede obtener utilizando la propiedad FriendlyText como se muestra a continuación. La salida del código será: "Recurre cada mes el día 1 y el 1 desde el final de los días del mes para un máximo de 2 ocurrencias.". El siguiente fragmento de código muestra cómo obtener texto amigable para el usuario para una recurrencia.
 
 
 ~~~Java

@@ -1,12 +1,12 @@
 ---
-title: "Análisis de archivos de mensajes de Outlook en Jython"
-url: /es/java/parsing-outlook-message-files-in-jython/
+title: "Analizando Archivos de Mensajes de Outlook en Jython"
+url: /es/java/analizando-archivos-de-mensajes-de-outlook-en-jython/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Análisis de archivos de mensajes de Outlook**
-Para analizar el archivo de mensajes de Outlook usando **Aspose.Email Java para Jython**, simplemente invoca **ParseOutlookMessageFile** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Analizando Archivos de Mensajes de Outlook**
+Para analizar un archivo de mensaje de Outlook usando **Aspose.Email Java para Jython**, simplemente invoca el módulo **ParseOutlookMessageFile**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -30,21 +30,21 @@ class ParseOutlookMessageFile:
 
         outlook_message_file = mapiMessage.fromFile(dataDir + "Message.msg")
 
-        # Display sender's name
+        # Mostrar el nombre del remitente
 
-        print "Sender Name : "
+        print "Nombre del Remitente : " 
 
         print outlook_message_file.getSenderName()
 
-        #Display Subject
+        #Mostrar Asunto
 
-        print "Subject : "
+        print "Asunto : " 
 
         print outlook_message_file.getSubject()
 
-        # Display Body
+        # Mostrar Cuerpo
 
-        print "Body : "
+        print "Cuerpo : " 
 
         print outlook_message_file.getBody()
 
@@ -52,13 +52,13 @@ class ParseOutlookMessageFile:
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     ParseOutlookMessageFile()
 
 ```
-## **Descargar Running Code**
-Download **Análisis de archivos de mensajes de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Analizando Archivos de Mensajes de Outlook (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

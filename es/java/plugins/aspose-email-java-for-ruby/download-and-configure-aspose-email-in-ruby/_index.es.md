@@ -1,23 +1,23 @@
 ---
-title: "Descargar y configurar Aspose.Email en Ruby"
+title: "Descargar y Configurar Aspose.Email en Ruby"
 url: /es/java/download-and-configure-aspose-email-in-ruby/
 weight: 10
 type: docs
 ---
 
 
-## **Descargar las bibliotecas necesarias**
-Descargue las bibliotecas necesarias que se mencionan a continuación. Estas son las necesarias para ejecutar los ejemplos de Java for Ruby de Aspose.Email.
+## **Descargar Bibliotecas Requeridas**
+Descargue las bibliotecas requeridas mencionadas a continuación. Estas son necesarias para ejecutar ejemplos de Aspose.Email Java para Ruby.
 
-- [Componente Aspose.Email para Java](https://downloads.aspose.com/total)
-## **Descargar ejemplos de sitios de codificación social**
-Las siguientes versiones de ejemplos de ejecución están disponibles para descargar en los sitios de codificación social que se mencionan a continuación:
+- [Aspose.Email para Java Component](https://downloads.aspose.com/total)
+## **Descargar Ejemplos de Sitios de Codificación Social**
+Siguiendo lanzamientos de ejemplos en ejecución, están disponibles para descargar en los sitios de codificación social mencionados a continuación:
 
 **GitHub**
 
 - [Aspose.Email Java para Ruby](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Plugins/Aspose_Email_Java_for_Ruby)
-## **Installing**
-La gema Aspose.Email Java para Ruby es muy simple y fácil de instalar. Siga estos sencillos pasos:
+## **Instalación**
+Es muy simple y fácil instalar el gem de Aspose.Email Java para Ruby, por favor siga estos simples pasos:
 
 1. Ejecute el siguiente comando.
 
@@ -27,11 +27,11 @@ La gema Aspose.Email Java para Ruby es muy simple y fácil de instalar. Siga est
 
 ```
 
-1. Descargue el componente Aspose.Email para Java requerido desde el siguiente enlace.
+1. Descargue el componente requerido de Aspose.Email para Java desde el siguiente enlace.
    <https://downloads.aspose.com/total>
-1. Cree la carpeta «jars» en la raíz de la gema Java for Ruby de Aspose.Email y copie en ella el componente descargado.
-## **Using**
-Incluya los archivos necesarios para trabajar con **createnewemail** example.
+1. Cree una carpeta "jars" en la raíz del gem de Aspose.Email Java para Ruby y copie el componente descargado en ella.
+## **Uso**
+Incluya los archivos requeridos para trabajar con el ejemplo **createnewemail**.
 
 ``` java
 
@@ -45,8 +45,8 @@ initialize_aspose_email
 
 ```
 
-Vamos a entender el código anterior.
+Entendamos el código anterior.
 
-1. La primera línea asegura que el correo electrónico de aspose esté cargado y disponible.
-1. Incluya los archivos necesarios para acceder al correo electrónico de aspose.
-1. Inicialice las bibliotecas. Las clases JAVA de aspose se cargan desde la ruta proporcionada en el archivo aspose.yml
+1. La primera línea asegura que el aspose email esté cargado y disponible.
+1. Incluya los archivos que son necesarios para acceder al aspose email.
+1. Inicialice las bibliotecas. Las clases JAVA de aspose se cargan desde la ruta proporcionada en el archivo aspose.yml.

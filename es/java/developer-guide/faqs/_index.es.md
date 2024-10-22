@@ -1,11 +1,11 @@
 ---
-title: "FAQs"
+title: "Preguntas Frecuentes"
 url: /es/java/faqs/
 weight: 220
 type: docs
 ---
 
-**Question**
+**Pregunta**
 
 ¡Hola! para el siguiente código:
 
@@ -23,19 +23,19 @@ System.out.println(att.getContentType().getName());
 
 ~~~
 
-att.getContentType () .getName () devuelve el nombre del documento adjunto. ¿Es este un comportamiento esperado?
+att.getContentType().getName() devuelve el nombre del documento adjunto. ¿Es este un comportamiento esperado?
 
-**Answer**:
-Sí, es un comportamiento esperado. Si getContentType () .getName () no se establece explícitamente, el valor del nombre del archivo se tomará como nombre.
+**Respuesta**: 
+Sí, es un comportamiento esperado. Si getContentType().getName() no se establece explícitamente, se tomará el valor del nombre del archivo como nombre.
 
-**Question:**
-¿Cómo extraigo los datos del archivo adjunto «OLEData.mso» que obtengo como resultado de leer un MAPIMessage que tiene un objeto OLE incrustado?
+**Pregunta:** 
+¿Cómo extraigo datos del archivo adjunto "oleData.mso" que obtengo como resultado de leer un MapiMessage que tiene un objeto OLE incrustado en él?
 
-**Answer**:
-Los archivos como «OLEData.mso» hacen referencia al formato de archivo de documentos compuestos (MCDF) de Microsoft y, lamentablemente, Aspose.Email no admite dichos archivos. Sin embargo, hay ciertas librerías.NET de código abierto, como OpenMCDF, que se pueden usar para leer el contenido de dichos archivos y guardarlos en un disco.
+**Respuesta**: 
+Archivos como "oleData.mso" se refieren al formato de archivo Microsoft Compound Document (MCDF) y, desafortunadamente, el soporte para tales archivos está más allá de la ocupación de Aspose.Email. Sin embargo, hay ciertas bibliotecas de .NET de código abierto, por ejemplo OpenMCDF, que se pueden usar para leer el contenido de tales archivos para guardar en disco.
 
-**Question:**
-¿Podemos escribir en el mismo archivo PST en hilos paralelos usando los mismos objetos?
+**Pregunta:** 
+¿Podemos escribir en el mismo archivo PST en hilos paralelos utilizando los mismos objetos?
 
-**Answer:**
-No, la seguridad de la rosca no está garantizada en este caso. La escritura de los mensajes debe hacerse en un solo hilo. Sin embargo, el producto debe funcionar correctamente con diferentes objetos de diferentes hilos.
+**Respuesta:** 
+No, la seguridad en hilos no está garantizada en tal caso. La escritura de mensajes debe hacerse en un solo hilo. Sin embargo, el producto debe funcionar correctamente con diferentes objetos de diferentes hilos.

@@ -1,10 +1,8 @@
 ---
-title: "Trabaje con mensajes MIME mediante la API de analizador de correo electrónico de C++"
-description: "En esta sección se explica cómo trabajar con los mensajes MIME mediante la API de análisis de correo electrónico de C++, por ejemplo, la creación y configuración del contenido de los correos electrónicos."
+title: "Trabajar con mensajes MIME utilizando la API de análisis de correo electrónico en C++"
+description: "Esta sección explica cómo trabajar con mensajes MIME utilizando la API de análisis de correo electrónico en C++, por ejemplo, creando y configurando el contenido de correos electrónicos."
 url: /es/cpp/working-with-mime-messages/
 weight: 10
 type: docs
 linktitle: "Trabajando con mensajes MIME"
 ---
-
-

@@ -1,14 +1,14 @@
 ---
-title: "Funciones de impresión de Aspose.Email"
+title: "Características de Impresión de Aspose.Email"
 url: /es/java/aspose-email-printing-features/
 weight: 150
 type: docs
 ---
 
-## **Funciones de impresión**
+## **Características de Impresión**
 
 {{% alert color="primary" %}}
 
-The **Funciones de impresión** no es compatible con Aspose.Email para Java.
+Las **Características de Impresión** no son compatibles con Aspose.Email para Java.
 
 {{% /alert %}}

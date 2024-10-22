@@ -5,13 +5,13 @@ weight: 10
 type: docs
 ---
 
-## **Envío de mensajes con MailGun y SendGrid**
+## **Envío de mensajes utilizando MailGun y SendGrid**
 
-Aspose.Email ofrece la posibilidad de enviar mensajes de correo electrónico mediante los servicios MailGun o SendGrid. Su API unificada le permite inicializar un cliente, preparar y enviar el mensaje de correo electrónico.
+Aspose.Email proporciona la capacidad de enviar mensajes de correo electrónico utilizando los servicios de MailGun o SendGrid. Su API unificada te permite inicializar un cliente, preparar y enviar el mensaje de correo electrónico.
 
-En primer lugar, es importante configurar las opciones según el servicio que se vaya a utilizar para enviar mensajes. [DeliveryServiceOptions](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice/deliveryserviceoptions/) la clase te ayudará con eso. El siguiente ejemplo de código muestra cómo configurar las opciones de los servicios.
+Primero, es importante configurar las opciones dependiendo de qué servicio se va a utilizar para enviar los mensajes. La clase [DeliveryServiceOptions](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice/deliveryserviceoptions/) te ayudará con eso. El siguiente ejemplo de código muestra cómo configurar opciones para los servicios.
 
-*MailGun* opciones de cliente:
+Opciones del cliente *MailGun*:
 
 ```cs
 string domain = "YOUR_MAILGUN_DOMEN";
@@ -19,18 +19,18 @@ string privApiKey = "YOUR_MAILGUN_PRIVATE_API_KEY";
 var opt = new MailgunClientOptions { Domain = domain, ApiKey = privApiKey };
 ```
 
-*SendGrid* opciones de cliente:
+Opciones del cliente *SendGrid*:
 
 ```cs
 string privApiKey = "YOUR_SENDGRID_PRIVATE_API_KEY";
 var opt = new SendGridClientOptions { ApiKey = privApiKey };
 ```
-Para preparar y enviar un mensaje, sigue los pasos y ejemplos de código siguientes:
+Para preparar y enviar un mensaje, utiliza el siguiente ejemplo de código y pasos:
 
-1. Crea una instancia del [IDeliveryServiceClient](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice/ideliveryserviceclient/) interface.
-2. Crea un nuevo mensaje de eml usando el [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) clase. Especifique sus propiedades.
-3. Usa el [Send](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice/ideliveryserviceclient/send/#ideliveryserviceclientsend-method) método del objeto cliente para enviar el correo electrónico. El resultado de la operación de envío se almacena en la variable resp.
-4. Si la operación de envío no se realizó correctamente (resp.Successful es falso), el código introduce un bucle foreach para iterar sobre la colección ErrorMessages del objeto resp. Cada mensaje de error se imprime en la consola mediante Console.WriteLine.
+1. Crea una instancia de la interfaz [IDeliveryServiceClient](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice/ideliveryserviceclient/).
+2. Crea un nuevo mensaje eml usando la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Especifica sus propiedades.
+3. Utiliza el método [Send](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice/ideliveryserviceclient/send/#ideliveryserviceclientsend-method) del objeto cliente para enviar el correo electrónico. El resultado de la operación de envío se almacena en la variable resp.
+4. Si la operación de envío no fue exitosa (resp.Successful es false), el código entra en un bucle foreach para iterar sobre la colección ErrorMessages del objeto resp. Cada mensaje de error se imprime en la consola utilizando Console.WriteLine.
 
 ```cs
 IDeliveryServiceClient client = DeliveryServiceClientFactory.Get(opt);
@@ -47,7 +47,7 @@ if (!resp.Successful)
     }
 }
 ```
-## **Envío de mensajes de forma asincrónica**
+## **Envío de mensajes de forma asíncrona**
 
 ```cs
 MailMessage eml = new MailMessage(fromAddress, toAddress, subject, body);
@@ -63,4 +63,3 @@ if (!sendTask.Result.Successful)
     }
 }
 ```
-

@@ -1,49 +1,48 @@
 ---
-title: "Trabajar con mensajes en un archivo PST"
+title: "Trabajando con Mensajes en un Archivo PST"
 url: /es/java/working-with-messages-in-a-pst-file/
 weight: 30
 type: docs
 ---
 
+## **Agregar Mensajes a Archivos PST**
 
-## **Agregar mensajes a archivos PST**
+[Crear un Nuevo Archivo PST y Agregar Subcarpetas](/email/java/create-new-pst-add-sub-folders-and-messages) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email, puedes agregar mensajes a las subcarpetas de un archivo PST que hayas creado o cargado. Este artículo agrega dos mensajes desde el disco a la subcarpeta Bandeja de entrada de un PST. Utiliza las clases [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) y [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) para agregar mensajes a archivos PST. Para agregar mensajes a la carpeta Bandeja de entrada de un archivo PST:
 
-[Crear un nuevo archivo PST y agregar subcarpetas](/email/java/create-new-pst-add-sub-folders-and-messages) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes añadir mensajes a las subcarpetas de un archivo PST que hayas creado o cargado. Este artículo agrega dos mensajes del disco a la subcarpeta Bandeja de entrada de un PST. Utilice el [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) and [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) clases para añadir mensajes a archivos PST. Para añadir mensajes a la carpeta Bandeja de entrada de un archivo PST:
+1. Crea una instancia de la clase **FolderInfo** y cárgala con el contenido de la carpeta Bandeja de entrada.
+1. Agrega mensajes desde el disco a la carpeta Bandeja de entrada llamando al método [FolderInfo.addMessage()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessage-com.aspose.email.MapiMessage-). La clase [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) expone el método [addMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) que permite agregar una gran cantidad de mensajes a la carpeta, reduciendo las operaciones de E/S en disco y mejorando el rendimiento. Un ejemplo completo se encuentra a continuación, en [Agregando Mensajes en Masa](#adding-bulk-messages).
 
-1. Crea una instancia del **FolderInfo** clase y cárguela con el contenido de la carpeta Bandeja de entrada.
-1. Para agregar mensajes del disco a la carpeta Bandeja de entrada, llame al [FolderInfo.addMessage()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessage-com.aspose.email.MapiMessage-) método. El [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) la clase expone el [addMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) método que permite agregar una gran cantidad de mensajes a la carpeta, lo que reduce las operaciones de E/S en el disco y mejora el rendimiento. Puede encontrar un ejemplo completo a continuación, en [Añadir mensajes masivos](#adding-bulk-messages).
-
-Los fragmentos de código que aparecen a continuación muestran cómo agregar mensajes a una subcarpeta de PST llamada Bandeja de entrada.
+Los fragmentos de código a continuación muestran cómo agregar mensajes a una subcarpeta PST llamada Bandeja de entrada.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 
-// Create new PST
+// Crear nuevo PST
 PersonalStorage personalStorage = PersonalStorage.create(dataDir, FileFormatVersion.Unicode);
 
-// Add new folder "Inbox"
-personalStorage.getRootFolder().addSubFolder("Inbox");
+// Agregar nueva carpeta "Bandeja de entrada"
+personalStorage.getRootFolder().addSubFolder("Bandeja de entrada");
 
-// Select the "Inbox" folder
-FolderInfo inboxFolder = personalStorage.getRootFolder().getSubFolder("Inbox");
+// Seleccionar la carpeta "Bandeja de entrada"
+FolderInfo inboxFolder = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
 
-// Add some messages to "Inbox" folder
+// Agregar algunos mensajes a la carpeta "Bandeja de entrada"
 inboxFolder.addMessage(MapiMessage.fromFile(dataDir + "MapiMsgWithPoll.msg"));
 ~~~
 
-### **Añadir mensajes masivos**
+### **Agregando Mensajes en Masa**
 
-Agregar mensajes individuales a un PST implica más operaciones de E/S en el disco y, por lo tanto, puede ralentizar el rendimiento. Para mejorar el rendimiento, los mensajes se pueden agregar al PST de forma masiva para minimizar las operaciones de E/S. El [addMessages(Iterable<MapiMessage> messages)](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) El método le permite definir un rango de mensajes que se agregarán al PST para mejorar el rendimiento y se puede usar en los siguientes escenarios. Además, el evento MessageAdded se produce cuando se agrega un mensaje a la carpeta.
+Agregar mensajes individuales a un PST implica más operaciones de E/S en disco y, por lo tanto, puede ralentizar el rendimiento. Para mejorar el rendimiento, los mensajes pueden agregarse al PST en modo masivo para minimizar las operaciones de E/S. El método [addMessages(Iterable<MapiMessage> messages)](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMessages-java.lang.Iterable-com.aspose.email.MapiMessage--) permite definir un rango de mensajes que se agregarán al PST para mejorar el rendimiento y puede utilizarse en los siguientes escenarios. Además, el evento MessageAdded ocurre cuando se agrega un mensaje a la carpeta.
 
-### **Carga de mensajes desde un disco**
+### **Cargando Mensajes desde Disco**
 
-El siguiente fragmento de código muestra cómo cargar mensajes desde un disco.
+El siguiente fragmento de código te muestra cómo cargar mensajes desde el disco.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 private static void addMessagesInBulkMode(String fileName, String msgFolderName) {
     try (PersonalStorage personalStorage = PersonalStorage.fromFile(fileName)) {
-        FolderInfo folder = personalStorage.getRootFolder().getSubFolder("myInbox");
+        FolderInfo folder = personalStorage.getRootFolder().getSubFolder("miBandejaDeEntrada");
         folder.MessageAdded.add(new MessageAddedEventHandler() {
             public void invoke(Object sender, MessageAddedEventArgs e) {
                 onMessageAdded(sender, e);
@@ -59,12 +58,12 @@ static void onMessageAdded(Object sender, MessageAddedEventArgs e) {
 }
 ~~~
 
-### **Implementación iterable**
+### **Implementación Iterable**
 
-El siguiente fragmento de código muestra cómo crear una implementación iterable.
+El siguiente fragmento de código muestra cómo crear una implementación Iterable.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 public class MapiMessageCollection implements Iterable<MapiMessage> {
 
     private final File folder;
@@ -98,91 +97,91 @@ public class MapiMessageIterator implements Iterator<MapiMessage> {
 }
 ~~~
 
-### **Agregar mensajes de otro PST**
+### **Agregando Mensajes desde Otro PST**
 
-Para agregar mensajes de otro PST, utilice el [FolderInfo.enumerateMapiMessages()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) método que devuelve Iterable<MapiMessage>. El siguiente fragmento de código muestra cómo agregar mensajes desde otro PST.
+Para agregar mensajes desde otro PST, utiliza el método [FolderInfo.enumerateMapiMessages()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) que devuelve Iterable<MapiMessage>. El siguiente fragmento de código te muestra cómo agregar mensajes desde otro PST.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 private static void bulkAddFromAnotherPst(String source) {
-    // The path to the File directory.
+    // La ruta al directorio de archivos.
     String dataDir = "data/";
 
     try (PersonalStorage pst = PersonalStorage.fromFile(source, false)) {
         try (PersonalStorage pstDest = PersonalStorage.fromFile(dataDir + "PersonalStorageFile1.pst")) {
-            // Get the folder by name
-            FolderInfo folderInfo = pst.getRootFolder().getSubFolder("Contacts");
+            // Obtener la carpeta por nombre
+            FolderInfo folderInfo = pst.getRootFolder().getSubFolder("Contactos");
             MessageInfoCollection ms = folderInfo.getContents();
 
-            // Get the folder by name
-            FolderInfo f = pstDest.getRootFolder().getSubFolder("myInbox");
+            // Obtener la carpeta por nombre
+            FolderInfo f = pstDest.getRootFolder().getSubFolder("miBandejaDeEntrada");
             f.MessageAdded.add(new MessageAddedEventHandler() {
                 public void invoke(Object sender, MessageAddedEventArgs e) {
                     onMessageAdded(sender, e);
                 }
             });
             f.addMessages(folderInfo.enumerateMapiMessages());
-            FolderInfo fi = pstDest.getRootFolder().getSubFolder("myInbox");
+            FolderInfo fi = pstDest.getRootFolder().getSubFolder("miBandejaDeEntrada");
             MessageInfoCollection msgs = fi.getContents();
         }
     }
 }
 
-// Handles the MessageAdded event.
+// Maneja el evento MessageAdded.
 static void onMessageAdded(Object sender, MessageAddedEventArgs e) {
     System.out.println(e.getEntryId());
     System.out.println(e.getMessage().getSubject());
 }
 ~~~
 
-## **Obtener información de mensajes de un archivo PST de Outlook**
+## **Obtener Información de Mensajes de un Archivo PST de Outlook**
 
-In [Lea el archivo PST de Outlook y obtenga información sobre carpetas y subcarpetas](/email/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/), hablamos de cargar un archivo PST de Outlook y examinar sus carpetas para obtener los nombres de las carpetas y el número de mensajes que contienen. En este artículo se explica cómo leer todas las carpetas y subcarpetas del archivo PST y cómo mostrar la información sobre los mensajes, por ejemplo, el asunto, el remitente y los destinatarios. El [FolderInfo.getContents()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents--) el método se usa para mostrar [información breve del mensaje](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) como el asunto, el remitente y los destinatarios.
-En términos de rendimiento, esta es la opción más adecuada para obtener información primaria sobre los mensajes. Para [extract](#extracting-messages-form-pst-files) datos completos del mensaje, el [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-) se proporciona el método.
-El archivo PST de Outlook puede contener carpetas anidadas. Para obtener información sobre los mensajes de estas carpetas, así como de las carpetas de nivel superior, utilice un método recursivo para leer todas las carpetas. El siguiente fragmento de código muestra cómo leer un archivo PST de Outlook y mostrar el contenido de la carpeta y el mensaje de forma recursiva.
+En [Leer Archivo PST de Outlook y Obtener Información de Carpetas y Subcarpetas](/email/java/read-outlook-pst-file-and-get-folders-and-subfolders-information/), discutimos la carga de un archivo PST de Outlook y la navegación por sus carpetas para obtener los nombres de las carpetas y el número de mensajes en ellas. Este artículo explica cómo leer todas las carpetas y subcarpetas en el archivo PST y mostrar la información sobre los mensajes, por ejemplo, asunto, remitente y destinatarios. El método [FolderInfo.getContents()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents--) se utiliza para mostrar [información breve sobre mensajes](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#enumerateMapiMessages--) como asunto, remitente, destinatarios.
+En términos de rendimiento, esta es la opción más adecuada para obtener información primaria sobre los mensajes. Para [extraer](#extracting-messages-form-pst-files) los datos completos del mensaje, se proporciona el método [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-).
+El archivo PST de Outlook puede contener carpetas anidadas. Para obtener información de los mensajes de estas, así como de las carpetas de nivel superior, utiliza un método recursivo para leer todas las carpetas. El siguiente fragmento de código te muestra cómo leer un archivo PST de Outlook y mostrar el contenido de las carpetas y los mensajes de manera recursiva.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 public static void run() {
-    // The path to the File directory.
+    // La ruta al directorio de archivos.
     String dataDir = "data/";
 
-    // Load the Outlook file
+    // Cargar el archivo de Outlook
     String path = dataDir + "PersonalStorage.pst";
 
     try {
 
-        // Load the Outlook PST file
+        // Cargar el archivo PST de Outlook
         PersonalStorage personalStorage = PersonalStorage.fromFile(path);
 
-        // Get the Display Format of the PST file
-        System.out.println("Display Format: " + personalStorage.getFormat());
+        // Obtener el formato de visualización del archivo PST
+        System.out.println("Formato de visualización: " + personalStorage.getFormat());
 
-        // Get the folders and messages information
+        // Obtener la información de carpetas y mensajes
         FolderInfo folderInfo = personalStorage.getRootFolder();
 
-        // Call the recursive method to display the folder contents
+        // Llamar al método recursivo para mostrar el contenido de las carpetas
         displayFolderContents(folderInfo, personalStorage);
     } catch (Exception ex) {
         System.out.println(ex.getMessage());
     }
 }
 
-// This is a recursive method to display contents of a folder
+// Este es un método recursivo para mostrar el contenido de una carpeta
 private static void displayFolderContents(FolderInfo folderInfo, PersonalStorage pst) {
-    // Display the folder name
-    System.out.println("Folder: " + folderInfo.getDisplayName());
+    // Mostrar el nombre de la carpeta
+    System.out.println("Carpeta: " + folderInfo.getDisplayName());
     System.out.println("==================================");
-    // Display information about messages inside this folder
+    // Mostrar información sobre los mensajes dentro de esta carpeta
     MessageInfoCollection messageInfoCollection = folderInfo.getContents();
     for (MessageInfo messageInfo : messageInfoCollection) {
-        System.out.println("Subject: " + messageInfo.getSubject());
-        System.out.println("Sender: " + messageInfo.getSenderRepresentativeName());
-        System.out.println("Recipients: " + messageInfo.getDisplayTo());
+        System.out.println("Asunto: " + messageInfo.getSubject());
+        System.out.println("Remitente: " + messageInfo.getSenderRepresentativeName());
+        System.out.println("Destinatarios: " + messageInfo.getDisplayTo());
         System.out.println("------------------------------");
     }
 
-    // Call this method recursively for each subfolder
+    // Llamar a este método recursivamente para cada subcarpeta
     if (folderInfo.hasSubFolders() == true) {
         for (FolderInfo subfolderInfo : folderInfo.getSubFolders()) {
             displayFolderContents(subfolderInfo, pst);
@@ -191,55 +190,55 @@ private static void displayFolderContents(FolderInfo folderInfo, PersonalStorage
 }
 ~~~
 
-## **Extracción de mensajes de archivos PST**
+## **Extrayendo Mensajes de Archivos PST**
 
-Este artículo muestra cómo leer archivos PST de Microsoft Outlook y [extraer mensajes](#extracting-messages-form-pst-files). Luego, los mensajes se guardan en el disco en formato MSG. El artículo también muestra cómo [extraer un número específico de mensajes](#extracting-n-number-of-messages-from-a-pst-file) desde un archivo PST. Utilice un método recursivo para examinar todas las carpetas (incluidas las carpetas anidadas) y llame al [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-) método para llevar los mensajes de Outlook a una instancia del [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) clase. Después de eso, llama al [MapiMessage.save()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#save-java.lang.String-) método para guardar el mensaje en el disco o en la transmisión en formato MSG. El siguiente fragmento de código muestra cómo extraer mensajes de un archivo PST.
+Este artículo muestra cómo leer archivos PST de Microsoft Outlook y [extraer mensajes](#extracting-messages-form-pst-files). Los mensajes se guardan en disco en formato MSG. El artículo también muestra cómo [extraer un número específico de mensajes](#extracting-n-number-of-messages-from-a-pst-file) de un archivo PST. Utiliza un método recursivo para navegar por todas las carpetas (incluidas las carpetas anidadas) y llama al método [PersonalStorage.extractMessage()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractMessage-com.aspose.email.MessageInfo-) para obtener los mensajes de Outlook en una instancia de la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/). Después de eso, llama al método [MapiMessage.save()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#save-java.lang.String-) para guardar el mensaje en disco o en un flujo en formato MSG. El siguiente fragmento de código te muestra cómo extraer mensajes de un archivo PST.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 public static void run() {
-    // The path to the File directory.
+    // La ruta al directorio de archivos.
     String dataDir = "data/";
 
-    // Load the Outlook file
+    // Cargar el archivo de Outlook
     String path = dataDir + "PersonalStorage.pst";
 
     try {
-        // load the Outlook PST file
+        // cargar el archivo PST de Outlook
         PersonalStorage pst = PersonalStorage.fromFile(path);
 
-        // get the Display Format of the PST file
-        System.out.println("Display Format: " + pst.getFormat());
+        // obtener el formato de visualización del archivo PST
+        System.out.println("Formato de visualización: " + pst.getFormat());
 
-        // get the folders and messages information
+        // obtener la información de carpetas y mensajes
         FolderInfo folderInfo = pst.getRootFolder();
 
-        // Call the recursive method to extract msg files from each folder
+        // Llamar al método recursivo para extraer archivos msg de cada carpeta
         extractMsgFiles(folderInfo, pst);
     } catch (Exception ex) {
         System.out.println(ex.getMessage());
     }
 }
 
-// This is a recursive method to display contents of a folder
+// Este es un método recursivo para mostrar el contenido de una carpeta
 private static void extractMsgFiles(FolderInfo folderInfo, PersonalStorage pst) {
-    // display the folder name
-    System.out.println("Folder: " + folderInfo.getDisplayName());
+    // mostrar el nombre de la carpeta
+    System.out.println("Carpeta: " + folderInfo.getDisplayName());
     System.out.println("==================================");
-    // loop through all the messages in this folder
+    // loop a través de todos los mensajes en esta carpeta
     MessageInfoCollection messageInfoCollection = folderInfo.getContents();
     for (MessageInfo messageInfo : messageInfoCollection) {
-        System.out.println("Saving message {0} ...." + messageInfo.getSubject());
-        // get the message in MapiMessage instance
+        System.out.println("Guardando mensaje {0} ...." + messageInfo.getSubject());
+        // obtener el mensaje en una instancia de MapiMessage
         MapiMessage message = pst.extractMessage(messageInfo);
-        // save this message to disk in msg format
+        // guardar este mensaje en disco en formato msg
         message.save(message.getSubject().replace(":", " ") + ".msg");
-        // save this message to stream in msg format
+        // guardar este mensaje en flujo en formato msg
         ByteArrayOutputStream messageStream = new ByteArrayOutputStream();
         message.save(messageStream);
     }
 
-    // Call this method recursively for each subfolder
+    // Llamar a este método recursivamente para cada subcarpeta
     if (folderInfo.hasSubFolders() == true) {
         for (FolderInfo subfolderInfo : folderInfo.getSubFolders()) {
             extractMsgFiles(subfolderInfo, pst);
@@ -248,21 +247,21 @@ private static void extractMsgFiles(FolderInfo folderInfo, PersonalStorage pst) 
 }
 ~~~
 
-### **Guardar mensajes directamente desde PST para transmitirlos**
+### **Guardar Mensajes Directamente de PST a Flujo**
 
-Para guardar los mensajes de un archivo PST directamente para transmitirlos, sin extraer la información de MSG de los mensajes, utilice el [saveMessageToStream()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#saveMessageToStream-java.lang.String-java.io.OutputStream-) método. El siguiente fragmento de código muestra cómo guardar mensajes directamente desde PST para transmitirlos.
+Para guardar mensajes de un archivo PST directamente en flujo, sin extraer el MsgInfo para los mensajes, utiliza el método [saveMessageToStream()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#saveMessageToStream-java.lang.String-java.io.OutputStream-). El siguiente fragmento de código te muestra cómo guardar mensajes directamente de PST a flujo.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/";
 
-// Load the Outlook file
+// Cargar el archivo de Outlook
 String path = dataDir + "PersonalStorage.pst";
 
-// Save message to MemoryStream
+// Guardar mensaje en MemoryStream
 try (PersonalStorage personalStorage = PersonalStorage.fromFile(path)) {
-    FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Inbox");
+    FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
     for (MessageInfo messageInfo : inbox.enumerateMessages()) {
         try (ByteArrayOutputStream memeorystream = new ByteArrayOutputStream()) {
             personalStorage.saveMessageToStream(messageInfo.getEntryIdString(), memeorystream);
@@ -270,9 +269,9 @@ try (PersonalStorage personalStorage = PersonalStorage.fromFile(path)) {
     }
 }
 
-// Save message to file
+// Guardar mensaje en archivo
 try (PersonalStorage pst = PersonalStorage.fromFile(path)) {
-    FolderInfo inbox = pst.getRootFolder().getSubFolder("Inbox");
+    FolderInfo inbox = pst.getRootFolder().getSubFolder("Bandeja de entrada");
     for (MessageInfo messageInfo : inbox.enumerateMessages()) {
         try (FileOutputStream fs = new FileOutputStream(new File(dataDir + messageInfo.getSubject() + ".msg"))) {
             pst.saveMessageToStream(messageInfo.getEntryIdString(), fs);
@@ -281,34 +280,34 @@ try (PersonalStorage pst = PersonalStorage.fromFile(path)) {
 }
 
 try (PersonalStorage pst = PersonalStorage.fromFile(path)) {
-    FolderInfo inbox = pst.getRootFolder().getSubFolder("Inbox");
+    FolderInfo inbox = pst.getRootFolder().getSubFolder("Bandeja de entrada");
 
-    // To enumerate entryId of messages you may use FolderInfo.EnumerateMessagesEntryId() method:
+    // Para enumerar el entryId de los mensajes, puedes usar el método FolderInfo.EnumerateMessagesEntryId():
     for (String entryId : inbox.enumerateMessagesEntryId()) {
         try (ByteArrayOutputStream ms = new ByteArrayOutputStream()) {
             pst.saveMessageToStream(entryId, ms);
         }
     }
 }
-~~~
+~~~ 
 
-### **Extraer un número n de mensajes de un archivo PST**
+### **Extrayendo n Número de Mensajes de un Archivo PST**
 
-El siguiente fragmento de código muestra cómo extraer un número determinado de mensajes de un PST. Simplemente proporcione el índice del primer mensaje y el número total de mensajes que se van a extraer.
+El siguiente fragmento de código te muestra cómo extraer un número dado de mensajes de un PST. Simplemente proporciona el índice del primer mensaje y el número total de mensajes a extraer.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Inbox");
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
 
-// Extracts messages starting from 10th index top and extract total 100 messages
+// Extrae mensajes comenzando desde el índice 10 y extrae un total de 100 mensajes
 MessageInfoCollection messages = inbox.getContents(10, 100);
 ~~~
 
-### **Obtener el número total de elementos de un archivo PST**
+### **Obtener el Total de Elementos de un Archivo PST**
 
-Aspose.Email proporciona la [GetTotalItemsCount()](https://reference.aspose.com/email/java/com.aspose.email/messagestore/#getTotalItemsCount--) método del [PersonalStorage.Store](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#getStore--) propiedad. Devuelve el número total de elementos de mensaje contenidos en el PST.
+Aspose.Email proporciona el método [GetTotalItemsCount()](https://reference.aspose.com/email/java/com.aspose.email/messagestore/#getTotalItemsCount--) de la propiedad [PersonalStorage.Store](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#getStore--). Devuelve el número total de elementos de mensajes contenidos en el PST.
 
-El siguiente ejemplo de código muestra cómo recuperar el recuento total de elementos (mensajes, citas, contactos, etc.) almacenados en el archivo PST:
+El siguiente ejemplo de código muestra cómo recuperar el recuento total de elementos (mensajes, citas, contactos, etc.) almacenados dentro del archivo PST:
 
 ```java
 try (PersonalStorage pst = PersonalStorage.fromFile("my.pst", false)) {
@@ -316,88 +315,84 @@ try (PersonalStorage pst = PersonalStorage.fromFile("my.pst", false)) {
 }
 ```
 
-## **Eliminar elementos de archivos PST**
+## **Eliminar Elementos de Archivos PST**
 
-[Agregar mensajes a archivos PST](#adding-messages-to-pst-files) mostró cómo agregar mensajes a archivos PST. Por supuesto, también es posible eliminar elementos (contenidos) de un archivo PST y también puede ser conveniente eliminar los mensajes de forma masiva. Los elementos de un archivo PST se pueden eliminar mediante el [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---) método. La API también proporciona [FolderInfo.deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) método para eliminar elementos de forma masiva del archivo PST.
+[Agregar Mensajes a Archivos PST](#adding-messages-to-pst-files) mostró cómo agregar mensajes a archivos PST. Por supuesto, también es posible eliminar elementos (contenidos) de un archivo PST y también puede ser deseable eliminar mensajes en masa. Se pueden eliminar elementos de un archivo PST utilizando el método [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---). La API también proporciona el método [FolderInfo.deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) para eliminar elementos en masa del archivo PST.
 
-### **Eliminar mensajes de archivos PST**
+### **Eliminando Mensajes de Archivos PST**
 
-En este artículo se muestra cómo utilizar el [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) clase para acceder a carpetas específicas de un archivo PST. Para eliminar mensajes de la subcarpeta Enviados de un archivo PST previamente cargado o creado:
+Este artículo muestra cómo usar la clase [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) para acceder a carpetas específicas en un archivo PST. Para eliminar mensajes de la subcarpeta Enviados de un archivo PST que se ha cargado o creado anteriormente:
 
-1. Crea una instancia del [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) clase y cárguela con el contenido de la subcarpeta enviada.
-1. Para eliminar los mensajes de la carpeta Enviados, llame al [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---) método y pasar el [MessageInfo.EntryId](https://reference.aspose.com/email/java/com.aspose.email/messageinfo/#getEntryId--) como parámetro. El siguiente fragmento de código muestra cómo eliminar mensajes de la subcarpeta Enviados de un archivo PST.
+1. Crea una instancia de la clase [FolderInfo](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/) y cárgala con el contenido de la subcarpeta Enviados.
+2. Elimina mensajes de la carpeta Enviados llamando al método [FolderInfo.deleteChildItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItem-byte---) y pasando el [MessageInfo.EntryId](https://reference.aspose.com/email/java/com.aspose.email/messageinfo/#getEntryId--) como parámetro. El siguiente fragmento de código muestra cómo eliminar mensajes de la subcarpeta Enviados de un archivo PST.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/" + "Sub.pst";
 
-// Load the Outlook PST file
+// Cargar el archivo PST de Outlook
 PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir);
 
-// Get the Sent items folder
+// Obtener la carpeta de elementos enviados
 FolderInfo folderInfo = personalStorage.getPredefinedFolder(StandardIpmFolder.SentItems);
 
 MessageInfoCollection msgInfoColl = folderInfo.getContents();
 for (MessageInfo msgInfo : msgInfoColl) {
     System.out.println(msgInfo.getSubject() + ": " + msgInfo.getEntryIdString());
-    if (msgInfo.getSubject().equals("some delete condition")) {
-        // Delete this item
+    if (msgInfo.getSubject().equals("alguna condición de eliminación")) {
+        // Eliminar este elemento
         folderInfo.deleteChildItem(msgInfo.getEntryId());
-        System.out.println("Deleted this message");
+        System.out.println("Mensaje eliminado");
     }
 }
 ~~~
 
-### **Eliminar carpetas de archivos PST**
+### **Eliminando Carpetas de Archivos PST**
 
-Puede eliminar una carpeta PST moviéndola a la carpeta Elementos eliminados.
+Puedes eliminar una carpeta PST moviéndola a la carpeta de Elementos eliminados.
 
 ~~~Java
 try (PersonalStorage pst = PersonalStorage.fromFile("test.pst")) {
     FolderInfo deletedItemsFolder = pst.getPredefinedFolder(StandardIpmFolder.DeletedItems);
-    FolderInfo emptyFolder = pst.getRootFolder().getSubFolder("Empty folder");
-    FolderInfo someFolder = pst.getRootFolder().getSubFolder("Some folder");
+    FolderInfo emptyFolder = pst.getRootFolder().getSubFolder("Carpeta vacía");
+    FolderInfo someFolder = pst.getRootFolder().getSubFolder("Alguna carpeta");
     pst.moveItem(emptyFolder, deletedItemsFolder);
     pst.moveItem(someFolder, deletedItemsFolder);
 }
-~~~
-La ventaja de este método es que la carpeta eliminada se puede recuperar fácilmente.
-
+~~~ 
+La ventaja de este método es que la carpeta eliminada puede recuperarse fácilmente.
 
 ~~~Java
-FolderInfo someFolder = deletedItemsFolder.getSubFolder("Some folder");
+FolderInfo someFolder = deletedItemsFolder.getSubFolder("Alguna carpeta");
 pst.moveItem(someFolder, pst.getRootFolder());
-~~~
-También puede eliminar permanentemente una carpeta de la carpeta Elementos eliminados, si es necesario.
-
+~~~ 
+También puedes eliminar permanentemente una carpeta de la carpeta de Elementos eliminados, si es necesario.
 
 ~~~Java
 deletedItemsFolder.deleteChildItem(emptyFolder.getEntryId());
-~~~
-The [deleteChildItem()](https://apireference.aspose.com/email/java/com.aspose.email/FolderInfo#deleteChildItem\(byte[]\)) el método se puede usar para cualquier carpeta si desea eliminar la subcarpeta de forma inmediata y permanente, sin pasar por la carpeta Elementos eliminados.
-
+~~~ 
+El método [deleteChildItem()](https://apireference.aspose.com/email/java/com.aspose.email/FolderInfo#deleteChildItem\(byte[]\)) se puede utilizar para cualquier carpeta si deseas eliminar de inmediato y permanentemente la subcarpeta, eludiendo la carpeta de Elementos eliminados.
 
 ~~~Java
-FolderInfo someFolder = pst.getRootFolder().getSubFolder("Some folder");
+FolderInfo someFolder = pst.getRootFolder().getSubFolder("Alguna carpeta");
 pst.getRootFolder().deleteChildItem(someFolder.getEntryId());
-~~~
+~~~ 
 
-### **Eliminar artículos de forma masiva del archivo PST**
+### **Eliminar Elementos en Masa de un Archivo PST**
 
-La API Aspose.Email se puede usar para eliminar elementos de forma masiva de un archivo PST. Esto se logra mediante el [deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) método que acepta una lista de elementos de ID de entrada que hacen referencia a los elementos que se eliminarán. El siguiente fragmento de código muestra cómo eliminar elementos de forma masiva del archivo PST.
-
+La API de Aspose.Email se puede utilizar para eliminar elementos en masa de un archivo PST. Esto se logra utilizando el método [deleteChildItems()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#deleteChildItems-java.lang.Iterable-java.lang.String--) que acepta una lista de elementos de ID de entrada que hacen referencia a los elementos a eliminar. El siguiente fragmento de código muestra cómo eliminar elementos en masa de un archivo PST.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/" + "Sub.pst";
 
 try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir)) {
-    // Get Inbox SubFolder from Outlook file
-    FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Inbox");
+    // Obtener la subcarpeta Bandeja de entrada del archivo de Outlook
+    FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
 
-    // Create instance of PersonalStorageQueryBuilder
+    // Crear una instancia de PersonalStorageQueryBuilder
     PersonalStorageQueryBuilder queryBuilder = new PersonalStorageQueryBuilder();
 
     queryBuilder.getFrom().contains("someuser@domain.com");
@@ -407,145 +402,144 @@ try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir)) {
         deleteList.add(messageInfo.getEntryIdString());
     }
 
-    // delete messages having From = "someuser@domain.com"
+    // eliminar mensajes cuyo Remitente = "someuser@domain.com"
     inbox.deleteChildItems(deleteList);
 }
-~~~
+~~~ 
 
-## **Buscar mensajes y carpetas en un PST por criterio**
+## **Buscar Mensajes y Carpetas en un PST por Criterio**
 
-Los archivos de almacenamiento personal (PST) pueden contener una gran cantidad de datos y la búsqueda de datos que cumplan un criterio específico en archivos tan grandes debe incluir varios puntos de control en el código para filtrar la información. Con el [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) La clase Aspose.Email permite buscar registros específicos en un PST en función de un criterio de búsqueda específico. Se pueden buscar mensajes en un PST en función de parámetros de búsqueda como el remitente, el destinatario, el asunto, la importancia del mensaje, la presencia de archivos adjuntos, el tamaño del mensaje e incluso el identificador del mensaje. El [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) también se puede usar para buscar subcarpetas.
+Los archivos de Almacenamiento Personal (PST) pueden contener una gran cantidad de datos y buscar información que cumpla con un criterio específico en archivos tan grandes requiere incluir múltiples puntos de control en el código para filtrar la información. Con la clase [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/), Aspose.Email hace posible buscar registros específicos en un PST en base a un criterio de búsqueda especificado. Se puede buscar en un PST mensajes basados en parámetros de búsqueda como remitente, receptor, asunto, importancia del mensaje, presencia de archivos adjuntos, tamaño del mensaje e incluso ID del mensaje. La [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) también se puede utilizar para buscar subcarpetas.
 
-### **Búsqueda de mensajes y carpetas en PST**
+### **Buscando Mensajes y Carpetas en PST**
 
-El siguiente fragmento de código muestra cómo usar el [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) clase para buscar contenido en un PST en función de diferentes criterios de búsqueda. Por ejemplo, muestra la búsqueda de un PST basada en:
+El siguiente fragmento de código muestra cómo utilizar la clase [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) para buscar contenidos en un PST basándose en diferentes criterios de búsqueda. Por ejemplo, muestra la búsqueda en un PST basándose en:
 
 - Importancia del mensaje.
-- Clase de mensajes.
+- Clase del mensaje.
 - Presencia de archivos adjuntos.
 - Tamaño del mensaje.
 - Fecha del mensaje.
 - Mensajes no leídos.
-- Mensajes no leídos con archivos adjuntos y
+- Mensajes no leídos con archivos adjuntos, y
 - carpetas con un nombre de subcarpeta específico.
 
-
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/";
 
 try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir + "Outlook.pst")) {
-    FolderInfo folder = personalStorage.getRootFolder().getSubFolder("Inbox");
+    FolderInfo folder = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
     PersonalStorageQueryBuilder builder = new PersonalStorageQueryBuilder();
 
-    // High importance messages
+    // Mensajes de alta importancia
     builder.getImportance().equals((int) MapiImportance.High);
     MessageInfoCollection messages = folder.getContents(builder.getQuery());
-    System.out.println("Messages with High Imp:" + messages.size());
+    System.out.println("Mensajes con alta importancia: " + messages.size());
 
     builder = new PersonalStorageQueryBuilder();
     builder.getMessageClass().equals("IPM.Note");
     messages = folder.getContents(builder.getQuery());
-    System.out.println("Messages with IPM.Note:" + messages.size());
+    System.out.println("Mensajes con IPM.Note: " + messages.size());
 
     builder = new PersonalStorageQueryBuilder();
-    // Messages with attachments AND high importance
+    // Mensajes con archivos adjuntos Y alta importancia
     builder.getImportance().equals((int) MapiImportance.High);
     builder.hasFlags(MapiMessageFlags.MSGFLAG_HASATTACH);
     messages = folder.getContents(builder.getQuery());
-    System.out.println("Messages with atts: " + messages.size());
+    System.out.println("Mensajes con archivos adjuntos: " + messages.size());
 
     builder = new PersonalStorageQueryBuilder();
-    // Messages with size > 15 KB
+    // Mensajes con tamaño > 15 KB
     builder.getMessageSize().greater(15000);
     messages = folder.getContents(builder.getQuery());
-    System.out.println("messags size > 15Kb:" + messages.size());
+    System.out.println("Mensajes de tamaño > 15Kb: " + messages.size());
 
     java.util.Calendar c = java.util.Calendar.getInstance();
 
     builder = new PersonalStorageQueryBuilder();
-    // Messages by Current Date
-    // (Note that queries by date are not supported for Calendar Items in the Appointments folder)
+    // Mensajes por la fecha actual
+    // (Ten en cuenta que las consultas por fecha no son compatibles con los elementos del calendario en la carpeta Citas)
     builder.getSentDate().on(c.getTime(), DateComparisonType.ByDate);
     messages = folder.getContents(builder.getQuery());
-    System.out.println("Messages by Current Date: " + messages.size());
+    System.out.println("Mensajes por la fecha actual: " + messages.size());
 
     builder = new PersonalStorageQueryBuilder();
-    // Messages between Dates
-    // (Note that queries by date are not supported for Calendar Items in the Appointments folder)
+    // Mensajes entre fechas
+    // (Ten en cuenta que las consultas por fecha no son compatibles con los elementos del calendario en la carpeta Citas)
     c.set(2020,  0, 1, 0, 0, 0);
     builder.getSentDate().since(c.getTime());
     c.set(2021,  0, 1, 0, 0, 0);
     builder.getSentDate().before(c.getTime());
     messages = folder.getContents(builder.getQuery());
-    System.out.println("Messages between Dates: " + messages.size());
+    System.out.println("Mensajes entre fechas: " + messages.size());
 
     builder = new PersonalStorageQueryBuilder();
-    // Unread messages
+    // Mensajes no leídos
     builder.hasNoFlags(MapiMessageFlags.MSGFLAG_READ);
     messages = folder.getContents(builder.getQuery());
-    System.out.println("Unread:" + messages.size());
+    System.out.println("No leídos: " + messages.size());
 
     builder = new PersonalStorageQueryBuilder();
-    // Unread messages with attachments
+    // Mensajes no leídos con archivos adjuntos
     builder.hasNoFlags(MapiMessageFlags.MSGFLAG_READ);
     builder.hasFlags(MapiMessageFlags.MSGFLAG_HASATTACH);
     messages = folder.getContents(builder.getQuery());
-    System.out.println("Unread msgs with atts: " + messages.size());
+    System.out.println("Mensajes no leídos con archivos adjuntos: " + messages.size());
 
-    // Folder with name of 'SubInbox'
+    // Carpeta con nombre 'SubBandejaDeEntrada'
     builder = new PersonalStorageQueryBuilder();
-    builder.getFolderName().equals("SubInbox");
+    builder.getFolderName().equals("SubBandejaDeEntrada");
     FolderInfoCollection folders = folder.getSubFolders(builder.getQuery());
-    System.out.println("Folder having subfolder: " + folders.size());
+    System.out.println("Carpeta con subcarpeta: " + folders.size());
 
     builder = new PersonalStorageQueryBuilder();
-    // Folders with subfolders
+    // Carpetas con subcarpetas
     builder.hasSubfolders();
     folders = folder.getSubFolders(builder.getQuery());
     System.out.println(folders.size());
 }
-~~~
+~~~ 
 
-### **Búsqueda de una cadena en PST con el parámetro Ignorar mayúsculas y minúsculas**
+### **Buscar una Cadena en PST con el Parámetro Ignorar Mayúsculas**
 
-El siguiente fragmento de código muestra cómo buscar una cadena en PST con el parámetro ignore mayúsculas y minúsculas.
+El siguiente fragmento de código te muestra cómo buscar una cadena en un PST con el parámetro ignorar mayúsculas.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/";
 
 try (PersonalStorage personalStorage = PersonalStorage.create(dataDir + "CaseSensitivity.pst", FileFormatVersion.Unicode)) {
-    FolderInfo folderinfo = personalStorage.createPredefinedFolder("Inbox", StandardIpmFolder.Inbox);
+    FolderInfo folderinfo = personalStorage.createPredefinedFolder("Bandeja de entrada", StandardIpmFolder.Inbox);
     folderinfo.addMessage(MapiMessage.fromMailMessage(MailMessage.load("Sample.eml")));
     PersonalStorageQueryBuilder builder = new PersonalStorageQueryBuilder();
-    // IgnoreCase is True
+    // IgnoreCase es verdadero
     builder.getFrom().contains("automated", true);
     MailQuery query = builder.getQuery();
     MessageInfoCollection coll = folderinfo.getContents(query);
     System.out.println(coll.size());
 }
-~~~
+~~~ 
 
-### **Búsqueda de asuntos de mensajes por varias palabras clave en un archivo PST**
+### **Buscar Asuntos de Mensajes por Múltiples Palabras Clave en un Archivo PST**
 
-Puedes usar [MailQueryBuilder.or](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) método para buscar mensajes con un asunto que contenga al menos una de las palabras especificadas, como se muestra a continuación:
+Puedes utilizar el método [MailQueryBuilder.or](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) para encontrar mensajes con un asunto que contenga al menos una de las palabras especificadas como se muestra a continuación:
 
 ~~~java
 PersonalStorageQueryBuilder builder1 = new PersonalStorageQueryBuilder();
-builder1.getSubject().contains("Review"); // 'Review' is key word for the search
+builder1.getSubject().contains("Revisión"); // 'Revisión' es la palabra clave para la búsqueda
 
 PersonalStorageQueryBuilder builder2 = new PersonalStorageQueryBuilder();
-builder2.getSubject().contains("Error"); // 'Error' is also key word for the search
+builder2.getSubject().contains("Error"); // 'Error' también es la palabra clave para la búsqueda
 
 PersonalStorageQueryBuilder queryBuilder = new PersonalStorageQueryBuilder();
-queryBuilder.or(builder1.getQuery(), builder2.getQuery()); // message subjects must contain 'Review' or 'Error' words
+queryBuilder.or(builder1.getQuery(), builder2.getQuery()); // los asuntos de los mensajes deben contener las palabras 'Revisión' o 'Error'
 
 try (PersonalStorage storage = PersonalStorage.fromFile("example.pst"))
 {
-    FolderInfo folderInfo = storage.getRootFolder().getSubFolder("Inbox");
+    FolderInfo folderInfo = storage.getRootFolder().getSubFolder("Bandeja de entrada");
     MessageInfoCollection messageInfos = folderInfo.getContents(queryBuilder.getQuery());
 
     for (MessageInfo messageInfo : messageInfos)
@@ -553,96 +547,96 @@ try (PersonalStorage storage = PersonalStorage.fromFile("example.pst"))
         System.out.println(messageInfo.getSubject());
     }
 }
-~~~
+~~~ 
 
-## **Mover elementos a otras carpetas del archivo PST**
+## **Mover Elementos a Otras Carpetas del Archivo PST**
 
-Aspose.Email permite mover elementos de una carpeta de origen a otra carpeta del mismo archivo de almacenamiento personal (PST). Esto incluye:
+Aspose.Email permite mover elementos de una carpeta de origen a otra carpeta en el mismo archivo de Almacenamiento Personal (PST). Esto incluye:
 
-- Mover una carpeta especificada a una nueva carpeta principal.
-- Mover un mensaje especificado a una nueva carpeta.
+- Mover una carpeta específica a una nueva carpeta principal.
+- Mover un mensaje específico a una nueva carpeta.
 - Mover el contenido a una nueva carpeta.
 - Mover subcarpetas a una nueva carpeta principal.
 
-El siguiente fragmento de código muestra cómo mover elementos como mensajes y carpetas de una carpeta de origen a otra carpeta del mismo archivo PST.
+El siguiente fragmento de código muestra cómo mover elementos como mensajes y carpetas de una carpeta de origen a otra carpeta en el mismo archivo PST.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 try (PersonalStorage personalStorage = PersonalStorage.fromFile("test.pst")) {
     FolderInfo inbox = personalStorage.getPredefinedFolder(StandardIpmFolder.Inbox);
     FolderInfo deleted = personalStorage.getPredefinedFolder(StandardIpmFolder.DeletedItems);
-    FolderInfo subfolder = inbox.getSubFolder("Subfolder");
+    FolderInfo subfolder = inbox.getSubFolder("Subcarpeta");
 
-    // Move folder and message to the Deleted Items
+    // Mover carpeta y mensaje a Elementos eliminados
     personalStorage.moveItem(subfolder, deleted);
     MessageInfoCollection contents = subfolder.getContents();
     personalStorage.moveItem(contents.get(0), deleted);
 
-    // Move all inbox subfolders and subfolder contents to the Deleted Items
+    // Mover todas las subcarpetas de bandeja de entrada y contenidos de subcarpeta a Elementos eliminados
     inbox.moveSubfolders(deleted);
     subfolder.moveContents(deleted);
 }
-~~~
+~~~ 
 
-## **Actualización de las propiedades de los mensajes en un archivo PST**
+## **Actualizar Propiedades de Mensajes en un Archivo PST**
 
-A veces es necesario actualizar ciertas propiedades de los mensajes, como cambiar el asunto, marcar la importancia del mensaje y otras similares. La actualización de un mensaje en un archivo PST, con estos cambios en las propiedades del mensaje, se puede realizar mediante el [FolderInfo.changeMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#changeMessages-com.aspose.email.MapiPropertyCollection-) método. En este artículo se muestra cómo actualizar los mensajes de forma masiva en un archivo PST para modificar las propiedades. En el siguiente fragmento de código, se muestra cómo actualizar las propiedades de los mensajes de forma masiva para varios mensajes de un archivo PST.
+A veces es necesario actualizar ciertas propiedades de los mensajes, como cambiar el asunto, marcar la importancia del mensaje y otras similares. Actualizar un mensaje en un archivo PST, con dichos cambios en las propiedades del mensaje, se puede lograr utilizando el método [FolderInfo.changeMessages](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#changeMessages-com.aspose.email.MapiPropertyCollection-). Este artículo muestra cómo actualizar mensajes en masa en un archivo PST para cambios en las propiedades. El siguiente fragmento de código muestra cómo actualizar propiedades de mensajes en modo masivo para múltiples mensajes en un archivo PST.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/" + "Sub.pst";
 
-// Load the Outlook PST file
+// Cargar el archivo PST de Outlook
 PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir);
 
-// Get Requierd Subfolder
-FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Inbox");
+// Obtener la subcarpeta requerida
+FolderInfo inbox = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
 
-// find messages having From = "someuser@domain.com"
+// encontrar mensajes cuyo Remitente = "someuser@domain.com"
 PersonalStorageQueryBuilder queryBuilder = new PersonalStorageQueryBuilder();
 queryBuilder.getFrom().contains("someuser@domain.com");
 
-// Get Contents from Query
+// Obtener Contenidos desde la Consulta
 MessageInfoCollection messages = inbox.getContents(queryBuilder.getQuery());
 
-// Save (MessageInfo,EntryIdString) in List
+// Guardar (MessageInfo,EntryIdString) en la Lista
 List<String> changeList = new ArrayList<String>();
 for (MessageInfo messageInfo : messages) {
     changeList.add(messageInfo.getEntryIdString());
 }
 
-// Compose the new properties
+// Componer las nuevas propiedades
 MapiPropertyCollection updatedProperties = new MapiPropertyCollection();
-updatedProperties.add(MapiPropertyTag.PR_SUBJECT_W, new MapiProperty(MapiPropertyTag.PR_SUBJECT_W, "New Subject".getBytes(Charset.forName("utf-16le"))));
+updatedProperties.add(MapiPropertyTag.PR_SUBJECT_W, new MapiProperty(MapiPropertyTag.PR_SUBJECT_W, "Nuevo Asunto".getBytes(Charset.forName("utf-16le"))));
 updatedProperties.add(MapiPropertyTag.PR_IMPORTANCE, new MapiProperty(MapiPropertyTag.PR_IMPORTANCE, BitConverter.getBytesInt64(2)));
 
-// update messages having From = "someuser@domain.com" with new properties
+// actualizar mensajes cuyo Remitente = "someuser@domain.com" con nuevas propiedades
 inbox.changeMessages(changeList, updatedProperties);
 ~~~
 
-## **Actualización de propiedades personalizadas en un archivo PST**
+## **Actualizar Propiedades Personalizadas en un Archivo PST**
 
-A veces es necesario marcar los elementos que se procesan en el archivo PST. La API Aspose.Email permite lograr esto utilizando MapiProperty y MapInAmedProperty. Los siguientes métodos son útiles para lograrlo.
+A veces es necesario marcar elementos que han sido procesados dentro del archivo PST. La API de Aspose.Email permite lograr esto utilizando MapiProperty y MapiNamedProperty. Los siguientes métodos son útiles para conseguir esto.
 
 - `constructor MapiNamedProperty(long propertyTag, String nameIdentifier, UUID propertyGuid, byte[] propertyValue)`
 - `constructor MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, byte[] propertyValue)`
-- `FolderInfo.changeMessages(MapiPropertyCollection updatedProperties)` - cambia todos los mensajes de la carpeta
-- `PersonalStorage.changeMessage(String entryId, MapiPropertyCollection updatedProperties)` - cambiar las propiedades de los mensajes
+- `FolderInfo.changeMessages(MapiPropertyCollection updatedProperties)` - cambia todos los mensajes en la carpeta
+- `PersonalStorage.changeMessage(String entryId, MapiPropertyCollection updatedProperties)` - cambia las propiedades del mensaje
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
 public static void run() {
-    // The path to the File directory.
+    // La ruta al directorio de archivos.
     String dataDir = "data/" + "Sub.pst";
 
     try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir)) {
-        FolderInfo testFolder = personalStorage.getRootFolder().getSubFolder("Inbox");
+        FolderInfo testFolder = personalStorage.getRootFolder().getSubFolder("Bandeja de entrada");
 
-        // Create the collection of message properties for adding or updating
+        // Crear la colección de propiedades del mensaje para agregar o actualizar
         MapiPropertyCollection newProperties = new MapiPropertyCollection();
 
-        // Normal, Custom and PidLidLogFlags named property
+        // Propiedad nombrada Normal, Custom y PidLidLogFlags
         MapiProperty property = new MapiProperty(MapiPropertyTag.PR_ORG_EMAIL_ADDR_W, "test_address@org.com".getBytes(Charset.forName("utf-16le")));
         MapiProperty namedProperty1 = new MapiNamedProperty(generateNamedPropertyTag(0L, MapiPropertyType.PT_LONG), "ITEM_ID", UUID.randomUUID(),
                 BitConverter.getBytesInt64(123));
@@ -658,19 +652,19 @@ public static void run() {
 private static long generateNamedPropertyTag(long index, int dataType) {
     return (((0x8000 | index) << 16) | (long) dataType) & 0x00000000FFFFFFFFL;
 }
-~~~
+~~~ 
 
-## **Extraer archivos adjuntos sin extraer el mensaje completo**
+## **Extraer Archivos Adjuntos Sin Extraer el Mensaje Completo**
 
-La API Aspose.Email se puede usar para extraer archivos adjuntos de mensajes PST sin extraer primero el mensaje completo. El [ExtractAttachments](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractAttachments-com.aspose.email.MessageInfo-) método de [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) se puede usar para hacer esto. El siguiente fragmento de código muestra cómo extraer los archivos adjuntos sin extraer el mensaje completo.
+La API de Aspose.Email se puede utilizar para extraer archivos adjuntos de los mensajes PST sin extraer primero el mensaje completo. El método [ExtractAttachments](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#extractAttachments-com.aspose.email.MessageInfo-) de [PersonalStorage](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/) puede ser utilizado para hacer esto. El siguiente fragmento de código muestra cómo extraer archivos adjuntos sin extraer el mensaje completo.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/";
 
 try (PersonalStorage personalstorage = PersonalStorage.fromFile(dataDir + "Outlook.pst")) {
-    FolderInfo folder = personalstorage.getRootFolder().getSubFolder("Inbox");
+    FolderInfo folder = personalstorage.getRootFolder().getSubFolder("Bandeja de entrada");
 
     for (String messageInfo : folder.enumerateMessagesEntryId()) {
         MapiAttachmentCollection attachments = personalstorage.extractAttachments(messageInfo);
@@ -681,28 +675,28 @@ try (PersonalStorage personalstorage = PersonalStorage.fromFile(dataDir + "Outlo
                     if (attachment.getLongFileName().contains(".msg")) {
                         continue;
                     } else {
-                        attachment.save(dataDir + "Attachments/" + attachment.getLongFileName());
+                        attachment.save(dataDir + "Adjuntos/" + attachment.getLongFileName());
                     }
                 }
             }
         }
     }
 }
-~~~
+~~~ 
 
-## **Agregar archivos a PST**
+## **Agregar Archivos a PST**
 
-La funcionalidad clave de Microsoft Outlook es administrar correos electrónicos, calendarios, tareas, contactos y entradas del diario. Además, los archivos también se pueden agregar a una carpeta PST y el PST resultante guarda un registro de los documentos agregados. Aspose.Email ofrece la posibilidad de agregar archivos a una carpeta de la misma manera, además de agregar mensajes, contactos, tareas y entradas de diario a PST. El siguiente fragmento de código muestra cómo agregar documentos a una carpeta PST mediante Aspose.Email.
+La funcionalidad clave de Microsoft Outlook es gestionar correos electrónicos, calendarios, tareas, contactos y entradas de diario. Además, también se pueden agregar archivos a una carpeta PST y el PST resultante registra los documentos agregados. Aspose.Email proporciona la facilidad de agregar archivos a una carpeta de la misma manera además de agregar mensajes, contactos, tareas y entradas de diario a PST. El siguiente fragmento de código muestra cómo agregar documentos a una carpeta PST usando Aspose.Email.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, dirígete a https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de archivos.
 String dataDir = "data/";
 
 try (PersonalStorage personalStorage = PersonalStorage.create(dataDir + "Ps1_out.pst", FileFormatVersion.Unicode)) {
-    FolderInfo folder = personalStorage.getRootFolder().addSubFolder("Files");
+    FolderInfo folder = personalStorage.getRootFolder().addSubFolder("Archivos");
 
-    // Add Document.doc file with the "IPM.Document" message class by default.
+    // Agregar el archivo Document.doc con la clase de mensaje "IPM.Document" de forma predeterminada.
     folder.addFile(dataDir + "attachment_1.doc", null);
 }
 ~~~

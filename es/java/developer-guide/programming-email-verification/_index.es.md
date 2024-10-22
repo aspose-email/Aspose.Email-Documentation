@@ -1,5 +1,5 @@
 ---
-title: "Programación y verificación de correo electrónico"
+title: "Programación de Verificación de Correo Electrónico"
 url: /es/java/programming-email-verification/
 weight: 125
 type: docs
@@ -7,14 +7,14 @@ type: docs
 
 
 ## **Uso de EmailValidator**
-[EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) proporciona soporte completo para la validación de direcciones de correo electrónico. Con la ayuda del [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) clase, se pueden realizar diferentes tipos de validación, incluida la comprobación de la sintaxis del correo electrónico, la comprobación del dominio del correo electrónico y la comprobación de las cuentas de usuario con los servidores de correo. El [ValidationPolicy](https://apireference.aspose.com/email/java/com.aspose.email/ValidationPolicy) la enumeración se usa para establecer el nivel de la política de validación:
+[EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) proporciona soporte completo para validar direcciones de correo electrónico. Con la ayuda de la clase [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator), se pueden realizar diferentes tipos de validaciones, incluyendo la verificación de la sintaxis del correo electrónico, la verificación del dominio del correo electrónico y la verificación de cuentas de usuario con servidores de correo. La enumeración [ValidationPolicy](https://apireference.aspose.com/email/java/com.aspose.email/ValidationPolicy) se utiliza para establecer el nivel de política de validación:
 
 - SyntaxOnly valida la sintaxis de la dirección de correo electrónico.
-- SyntaxAndDomain valida la sintaxis de la dirección de correo electrónico y, a continuación, valida el dominio.
-## **Funcionalidad básica de validación**
-Use [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) para verificar la validez de las direcciones de correo electrónico.
-### **Validación de correos electrónicos**
-La funcionalidad de validación de Aspose.Email se puede utilizar para validar direcciones de correo electrónico, nombres de dominio y servidores de correo. El siguiente fragmento de código muestra cómo usar [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) para validar una dirección de correo electrónico.
+- SyntaxAndDomain valida la sintaxis de la dirección de correo electrónico, y luego valida el dominio.
+## **Funcionalidad Básica de Validación**
+Utilice [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) para verificar la validez de las direcciones de correo electrónico.
+### **Validando Correos Electrónicos**
+La funcionalidad de validación de Aspose.Email se puede utilizar para validar direcciones de correo electrónico, nombres de dominio y servidores de correo. El siguiente fragmento de código muestra cómo utilizar [EmailValidator](https://apireference.aspose.com/email/java/com.aspose.email/EmailValidator) para validar una dirección de correo electrónico.
 
 
 ~~~Java
@@ -23,48 +23,48 @@ ValidationResult[] result = new ValidationResult[] { null };
 ev.validate("user@domain.com", result);
 if (result[0].getReturnCode() == ValidationResponseCode.ValidationSuccess)
 {
-    System.out.println("the email address is valid.");
+    System.out.println("la dirección de correo electrónico es válida.");
 }
 else
 {
-    System.out.println("the mail address is invalid,for the " + result[0].getMessage());
+    System.out.println("la dirección de correo es inválida, por: " + result[0].getMessage());
 }
 ~~~
-## **Validar mensajes de correo electrónico**
+## **Validar Mensajes de Correo Electrónico**
 
-Esta funcionalidad permite a los usuarios validar los archivos de mensajes, garantizando el cumplimiento de los formatos y estructuras especificados. Admite la validación de archivos o transmisiones en los siguientes formatos:
+Esta funcionalidad permite a los usuarios validar archivos de mensajes, asegurando la adherencia a formatos y estructuras especificados. Soporta validación para archivos/stream en los siguientes formatos:
 
-- **Formatos MIME:** eml, emlx, mth
-- **Formatos MAPI:** mensaje, a menudo
+- **Formatos MIME:** eml, emlx, mht
+- **Formatos MAPI:** msg, oft
 
-Aspose.Email proporciona las siguientes herramientas para realizar la tarea:
+Aspose.Email proporciona las siguientes herramientas para llevar a cabo la tarea:
 
-- [MessageValidator.validate](https://reference.aspose.com/email/java/com.aspose.email/messagevalidator/#validate-java.lang.String-) método: valida los mensajes con este método, proporcionando una ruta de archivo o una secuencia como entrada.
-- [MessageValidationResult](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationresult/) class: encapsula los resultados del proceso de validación de mensajes. Proporciona información sobre el éxito de la validación, el tipo de formato y cualquier error encontrado.
-- [MessageValidationErrorType](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationerrortype/) Enum: enumera los diferentes tipos de errores de validación.
+- Método [MessageValidator.validate](https://reference.aspose.com/email/java/com.aspose.email/messagevalidator/#validate-java.lang.String-) - valida mensajes utilizando este método, proporcionando una ruta de archivo o stream como entrada.
+- Clase [MessageValidationResult](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationresult/) - encapsula los resultados del proceso de validación de mensajes. Proporciona información sobre el éxito de la validación, tipo de formato y cualquier error encontrado.
+- Enum [MessageValidationErrorType](https://reference.aspose.com/email/java/com.aspose.email/messagevalidationerrortype/) - Enumera diferentes tipos de errores de validación.
 
-El ejemplo de código que aparece a continuación muestra cómo usar estas herramientas para la validación de mensajes:
+El siguiente ejemplo de código demuestra cómo usar estas herramientas para la validación de mensajes:
 
 ```java
 MessageValidationResult result = MessageValidator.validate(fileName);
 
-// Check if validation is successful
+// Verificar si la validación fue exitosa
 if (!result.isSuccess()) {
-    System.out.println("Validation failed.");
+    System.out.println("La validación falló.");
 
-    // Check the format type
+    // Verificar el tipo de formato
     if (result.getFormatType() == FileFormatType.Mht) {
-        System.out.println("Format type is Mht.");
+        System.out.println("El tipo de formato es Mht.");
     }
 
-    // Check and display errors
-    System.out.println("Number of errors: " + result.getErrors().size());
+    // Verificar y mostrar errores
+    System.out.println("Número de errores: " + result.getErrors().size());
 
     for (MessageValidationError error : result.getErrors()) {
-        System.out.println("Error Type: " + error.getErrorType());
-        System.out.println("Description: " + error.getDescription());
+        System.out.println("Tipo de Error: " + error.getErrorType());
+        System.out.println("Descripción: " + error.getDescription());
     }
 } else {
-    System.out.println("Validation successful.");
+    System.out.println("Validación exitosa.");
 }
 ```

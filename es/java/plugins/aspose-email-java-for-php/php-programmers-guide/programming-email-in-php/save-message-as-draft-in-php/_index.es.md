@@ -6,59 +6,59 @@ type: docs
 ---
 
 ## **Aspose.Email - Guardar mensaje como borrador**
-Para guardar el mensaje como borrador usando **Aspose.Email Java para PHP**, simplemente invoca **SaveMessageAsDraft** módulo. Aquí puedes ver un ejemplo de código.
+Para guardar un mensaje como borrador utilizando **Aspose.Email Java para PHP**, simplemente invoque el módulo **SaveMessageAsDraft**. Aquí puede ver un código de ejemplo.
 
 **Código PHP**
 
 ``` php
 
- # Create a new instance of MailMessage class
+ # Crear una nueva instancia de la clase MailMessage
 
 $message = new MailMessage();
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-$message->setSubject("New message created by Aspose.Email for Java");
+$message->setSubject("Nuevo mensaje creado por Aspose.Email para Java");
 
 $mail_address = new MailAddress();
 
-\# Set Html body
+\# Establecer el cuerpo Html
 
-$message->setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" .
+$message->setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" .
 
-"<font color=blue>This line is in blue color</font>");
+"<font color=blue>Esta línea está en color azul</font>");
 
-\# Set sender information
+\# Establecer la información del remitente
 
-$message->setFrom(new MailAddress("from@domain.com", "Sender Name", false));
+$message->setFrom(new MailAddress("from@domain.com", "Nombre del Remitente", false));
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-$message->getTo()->add(new MailAddress("to1@domain.com", "Recipient 1", false));
+$message->getTo()->add(new MailAddress("to1@domain.com", "Destinatario 1", false));
 
-$message->getTo()->add(new MailAddress("to2@domain.com", "Recipient 2", false));
+$message->getTo()->add(new MailAddress("to2@domain.com", "Destinatario 2", false));
 
-\# Create an instance of MapiMessage and load the MailMessag instance into it
+\# Crear una instancia de MapiMessage y cargar la instancia de MailMessage en ella
 
 $mapiMessage=new MapiMessage();
 
 $mapi_msg = $mapiMessage->fromMailMessage($message);
 
-\# Set the MapiMessageFlags as UNSENT and FROMME
+\# Establecer las MapiMessageFlags como UNSENT y FROMME
 
 $mapi_message_flags = new MapiMessageFlags();
 
-\# Save the MapiMessage to disk
+\# Guardar el MapiMessage en el disco
 
 $mapi_msg->save($dataDir . "New-Draft.msg");
 
-\# Display Status
+\# Mostrar Estado
 
-print "Draft saved Successfully.".PHP_EOL;
+print "Borrador guardado con éxito.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Guardar mensaje como borrador (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descargue **Guardar mensaje como borrador (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/SaveMessageAsDraft.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingEmail/SaveMessageAsDraft.php)

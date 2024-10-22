@@ -1,48 +1,48 @@
 ---
 title: "Diferenciar entre archivos adjuntos en línea y regulares"
-url: /es/java/differentiate-between-inline-and-regular-attachments/
+url: /es/java/diferentiate-between-inline-and-regular-attachments/
 weight: 10
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Los mensajes de correo electrónico pueden contener imágenes en línea y archivos adjuntos. Utilizando [MailMessage](http://www.aspose.com/api/java/email/com.aspose.email/classes/MailMessage), los archivos adjuntos en línea se pueden extraer del [LinkedResourceCollection](https://apireference.aspose.com/email//java/com.aspose.email/linkedresourcecollection) colección, mientras que se puede acceder a los archivos adjuntos normales y extraerlos con un mensaje [AttachmentCollection](https://apireference.aspose.com/email//java/com.aspose.email/attachmentcollection) colección. Sin embargo, esto es diferente cuando el mensaje se carga usando [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage), ya que el usuario puede acceder a todas las imágenes en línea y los archivos adjuntos normales en el mismo [MapiAttachmentCollection](https://apireference.aspose.com/email//java/com.aspose.email/mapiattachmentcollection). Por lo tanto, es un método que puede diferenciar entre un archivo adjunto en línea y uno normal cuando [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage) se usa si es necesario.
+Los mensajes de correo electrónico pueden contener imágenes en línea así como archivos adjuntos. Usando [MailMessage](http://www.aspose.com/api/java/email/com.aspose.email/classes/MailMessage), los archivos adjuntos en línea pueden ser extraídos de la colección [LinkedResourceCollection](https://apireference.aspose.com/email//java/com.aspose.email/linkedresourcecollection), mientras que los archivos adjuntos regulares pueden ser accedidos y extraídos con la colección [AttachmentCollection](https://apireference.aspose.com/email//java/com.aspose.email/attachmentcollection) de un mensaje. Sin embargo, esto es diferente cuando el mensaje se carga usando [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage), ya que todas las imágenes en línea y los archivos adjuntos regulares son accesibles para el usuario en la misma colección [MapiAttachmentCollection](https://apireference.aspose.com/email//java/com.aspose.email/mapiattachmentcollection). Por lo tanto, se necesita un método que pueda diferenciar entre un archivo adjunto en línea y uno regular cuando se utiliza [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage).
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Este artículo explica cómo diferenciar los archivos adjuntos en línea de los normales mediante [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage). A la hora de decidir, el tipo de cuerpo de [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage) se tiene en cuenta de la siguiente manera:
+Este artículo explica cómo diferenciar los archivos adjuntos en línea de los regulares usando [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage). Al decidir, se toma en cuenta el tipo de cuerpo de [MapiMessage](https://apireference.aspose.com/email//java/com.aspose.email/mapimessage) de la siguiente manera:
 
-- **Cuerpo de texto plano**: No es necesario comprobar los mensajes de correo electrónico con texto plano como texto principal, ya que todos los archivos adjuntos de dichos mensajes son siempre archivos adjuntos normales.
-- **Cuerpo HTML**: Para los mensajes con un cuerpo HTML, el archivo adjunto no solo debe contener la propiedad PR_ATTACH_FLAGS (0x37140003), sino que su valor debe ser igual a 0x00000004 para los archivos adjuntos en línea. Si se cumple esta condición, la naturaleza del archivo adjunto dependerá además de las etiquetas PR_ATTACH_CONTENT_LOCATION y PR_ATTACH_CONTENT_ID. Sin embargo, en ausencia de la etiqueta MAPI PR_ATTACH_FLAGS, se comprueba la propiedad PR_ATTACH_DISPOSITION (0x3716001F o 0x3716001E) del adjunto para determinar el tipo de adjunto.
-- **Cuerpo RTF**: Si el cuerpo es RTF, todos los adjuntos OLE son adjuntos en línea. El valor de PR_ATTACH_METHOD para todos los archivos adjuntos OLE es igual a 0x00000006.
+- **Cuerpo de texto simple**: Los mensajes de correo electrónico con tipo de cuerpo de texto simple no necesitan ser verificados, ya que todos los archivos adjuntos en tales mensajes son siempre archivos adjuntos regulares.
+- **Cuerpo HTML**: Para los mensajes con un cuerpo HTML, el archivo adjunto no solo debe contener la propiedad PR_ATTACH_FLAGS (0x37140003), sino que su valor debe ser igual a 0x00000004 para archivos adjuntos en línea. Si se cumple esta condición, entonces depende además de las etiquetas PR_ATTACH_CONTENT_LOCATION y PR_ATTACH_CONTENT_ID para determinar la naturaleza del archivo adjunto. Sin embargo, en ausencia de la etiqueta MAPI PR_ATTACH_FLAGS, se verifica el archivo adjunto por la propiedad PR_ATTACH_DISPOSITION (0x3716001F o 0x3716001E) para determinar el tipo de archivo adjunto.
+- **Cuerpo RTF**: Si el cuerpo es RTF, entonces todos los archivos adjuntos OLE son archivos adjuntos en línea. El valor de PR_ATTACH_METHOD para todos los archivos adjuntos OLE es igual a 0x00000006.
 
-El siguiente ejemplo de código demuestra cómo diferenciar mediante programación entre los archivos adjuntos en línea y los archivos adjuntos normales. La función isInlineAttachment toma un archivo adjunto y mapiMessage como parámetros de entrada y devuelve el valor true si el archivo adjunto es un archivo adjunto en línea.
+El siguiente ejemplo de código demuestra cómo diferenciar programáticamente entre archivos adjuntos en línea y regulares. La función isInlineAttachment toma un archivo adjunto y MapiMessage como parámetros de entrada y devuelve verdadero si el archivo adjunto es un archivo adjunto en línea.
 
 ~~~java
 public static boolean isInlineAttachment(MapiAttachment att, MapiMessage msg) {
     if (msg.getBodyType() == BodyContentType.PlainText)
-        // ignore indications for plain text messages
+        // ignorar indicaciones para mensajes de texto simple
         return false;
     else if (msg.getBodyType() == BodyContentType.Html) {
-        // check the PidTagAttachFlags property
+        // verificar la propiedad PidTagAttachFlags
         if (att.getProperties().containsKey(0x37140003)) {
             Long attachFlagsValue = att.getPropertyLong(0x37140003);
             if (attachFlagsValue != null && (attachFlagsValue > 3 || attachFlagsValue < 1)) {
-                // check PidTagAttachContentId property
-                if (att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID)
+                // verificar la propiedad PidTagAttachContentId
+                if (att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID) 
                         || att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID_W)) {
-                    String contentId = att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID)
+                    String contentId = att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID) 
                             ? att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_ID)
                             : att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_ID_W);
                     if (!contentId.isEmpty() && msg.getBodyHtml().contains(contentId)) {
                         return true;
                     }
                 }
-                // check PidTagAttachContentLocation property
-                if (att.getProperties().containsKey(0x3713001E)
+                // verificar la propiedad PidTagAttachContentLocation
+                if (att.getProperties().containsKey(0x3713001E) 
                         || att.getProperties().containsKey(0x3713001F)) {
-                    String contentLocation = att.getProperties().containsKey(0x3713001E)
+                    String contentLocation = att.getProperties().containsKey(0x3713001E) 
                             ? att.getPropertyString(0x3713001E) : att.getPropertyString(0x3713001F);
                     if (!contentLocation.isEmpty() && msg.getBodyHtml().contains(contentLocation)) {
                         return true;
@@ -58,8 +58,8 @@ public static boolean isInlineAttachment(MapiAttachment att, MapiMessage msg) {
         }
         return false;
     } else if (msg.getBodyType() == BodyContentType.Rtf) {
-        // If the body is RTF, then all OLE attachments are inline attachments.
-        // OLE attachments have 0x00000006 for the value of the PidTagAttachMethod property
+        // Si el cuerpo es RTF, entonces todos los archivos adjuntos OLE son archivos adjuntos en línea.
+        // Los archivos adjuntos OLE tienen 0x00000006 para el valor de la propiedad PidTagAttachMethod
         if (att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_METHOD)) {
             return att.getPropertyLong(MapiPropertyTag.PR_ATTACH_METHOD) == 0x00000006;
         }
@@ -71,7 +71,7 @@ public static boolean isInlineAttachment(MapiAttachment att, MapiMessage msg) {
 
 
 
-Este fragmento de código usa la función isInlineAttachment () para evaluar los archivos adjuntos.
+Este fragmento de código utiliza la función isInlineAttachment() para evaluar archivos adjuntos.
 
 **Java**
 
@@ -82,9 +82,9 @@ MapiAttachmentCollection attachments = message.getAttachments();
 for (int i = 0; i < attachments.size(); i++) {
     MapiAttachment attachment = (MapiAttachment) attachments.get(i);
     if (isInlineAttachment(attachment, message)) {
-        System.out.println(attachment.getLongFileName() + " is inline attachment");
+        System.out.println(attachment.getLongFileName() + " es archivo adjunto en línea");
     } else {
-        System.out.println(attachment.getLongFileName() + " is regular attachment");
+        System.out.println(attachment.getLongFileName() + " es archivo adjunto regular");
     }
 }
 ~~~

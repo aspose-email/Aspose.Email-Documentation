@@ -1,40 +1,40 @@
 ---
-title: "Dividir y combinar archivos PST"
+title: "Dividir y Combinar Archivos PST"
 url: /es/java/splitting-and-merging-pst-files/
 weight: 90
 type: docs
 ---
 
-La API Aspose.Email ofrece la capacidad de dividir un único archivo PST en varios archivos PST del tamaño de archivo deseado. También puede combinar varios archivos PST en un solo archivo PST. Se puede rastrear tanto la división como la fusión de las operaciones de PST añadiendo eventos a estas operaciones.
+La API de Aspose.Email proporciona la capacidad de dividir un solo archivo PST en múltiples archivos PST de tamaño deseado. También puede combinar múltiples archivos PST en un solo archivo PST. Tanto las operaciones de división como de combinación de PST se pueden rastrear agregando eventos a estas operaciones.
 
-## **Dividir y combinar archivos PST**
+## **Dividir y Combinar Archivos PST**
 
-Los siguientes ejemplos de código muestran cómo dividir un archivo PST grande en varios fragmentos pequeños de archivos PST.
+Los siguientes ejemplos de código ilustran cómo dividir un archivo PST grande en múltiples fragmentos pequeños de archivos PST.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-SplitAndMergePSTFile-SplitPSTIntoMultiplePSTFiles.java" >}}
 
-## **Fusión de varios PST en un solo PST**
+## **Combinando Múltiples PST en un Solo PST**
 
-El siguiente ejemplo de código muestra cómo se pueden combinar varios archivos PST en un único archivo PST grande.
+El siguiente ejemplo de código muestra cómo múltiples PST se pueden combinar en un solo archivo PST grande.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-SplitAndMergePSTFile-MergeMultiplePSTsIntoASinglePST.java" >}}
 
 {{% alert %}}
 **¡Pruébalo!**
 
-Combine y combine varios archivos de correo electrónico en uno solo con la función gratuita [**Aplicación Aspose.Email Merger**](https://products.aspose.app/email/es/merger).
+Combina y combina múltiples archivos de correo electrónico en uno solo con la gratuita [**Aplicación de Combina de Aspose.Email**](https://products.aspose.app/email/es/merger).
 {{% /alert %}}
 
-## **Combinar carpetas de otro PST**
+## **Combinar Carpetas de Otro PST**
 
-La API Aspose.Email permite fusionar carpetas completas de otro PST a un PST de destino, lo que da como resultado un PST de gran tamaño.
+La API de Aspose.Email permite combinar carpetas completas de otro PST a un PST de destino, resultando en un archivo PST de gran tamaño.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-SplitAndMergePSTFile-MergeFoldersFromAnotherPST.java" >}}
 
-## **Dividir el PST según un criterio definido**
+## **Dividir PST Basado en Criterio Definido**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-SplitAndMergePSTFile-SplitPSTBasedOnDefinedCriterion.java" >}}
 
-## **Métodos de ayuda**
+## **Métodos de Ayuda**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-SplitAndMergePSTFile-HelpingMethods.java" >}}

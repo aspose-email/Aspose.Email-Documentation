@@ -1,7 +1,6 @@
 ---
-title: "Trabajando con archivos de almacenamiento personal (PST) de Outlook en Ruby"
-url: /es/java/working-with-outlook-personal-storage-pst-files-in-ruby/
+title: "Trabajando con archivos de almacenamiento personal de Outlook (PST) en Ruby"
+url: /es/java/trabajando-con-archivos-de-almacenamiento-personal-de-outlook-pst-en-ruby/
 weight: 20
 type: docs
 ---
-

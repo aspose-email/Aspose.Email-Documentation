@@ -1,29 +1,29 @@
 ---
-title: "Cambios en la API pública en Aspose.Email 4.0.0"
+title: "Cambios en la API Pública en Aspose.Email 4.0.0"
 url: /es/java/public-api-changes-in-aspose-email-4-0-0/
 weight: 10
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-La siguiente es una lista de los cambios realizados en la API pública, como [added](/email/java/public-api-changes-in-aspose-email-4-0-0/), miembros renombrados, eliminados o desaprobados, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+La siguiente es una lista de los cambios realizados en la API pública, como miembros [agregados](/email/java/public-api-changes-in-aspose-email-4-0-0/), renombrados, eliminados o en desuso, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tiene inquietudes sobre algún cambio listado, comuníquese en el foro de soporte de Aspose.Email.
 
-## **Métodos y opciones de enumeración añadidos**
-**`MapiTask.getReminderFileParameter()`, `MapiTask.getReminderSet()`, `MapiTask.getReminderTime()`, `MapiTask.setReminderFileParameter(java.lang.String)`, `MapiTask.setReminderSet(Boolean)` and `MapiTask.setReminderTime(java.util.Date)`**
+## **Métodos Agregados y Opciones de Enumeración**
+**`MapiTask.getReminderFileParameter()`, `MapiTask.getReminderSet()`, `MapiTask.getReminderTime()`, `MapiTask.setReminderFileParameter(java.lang.String)`, `MapiTask.setReminderSet(Boolean)` y `MapiTask.setReminderTime(java.util.Date)`**
 
-Estas propiedades obtienen o configuran información de recordatorio para un [`MapiTask`](https://apireference.aspose.com/email/java/com.aspose.email.class-use/mapitask).
+Estas propiedades obtienen o establecen información de recordatorio para un [`MapiTask`](https://apireference.aspose.com/email/java/com.aspose.email.class-use/mapitask).
 
-**`MailMessageSaveOptions.NoEncodeCharactersToMht` Option**
+**Opción `MailMessageSaveOptions.NoEncodeCharactersToMht`**
 
-Permite guardar en formato MHT sin codificar caracteres.
+Le permite guardar en formato MHT sin codificar caracteres.
 
 **`FolderInfo.addFile(java.lang.String,java.lang.String)`**
 
-Añade un archivo a una carpeta PST.
+Agrega un archivo en una carpeta PST.
 
-**`FolderInfo.getContents(com.aspose.email.MailQuery)` and `FolderInfo.getSubFolders(com.aspose.email.MailQuery)` Methods**
+**Métodos `FolderInfo.getContents(com.aspose.email.MailQuery)` y `FolderInfo.getSubFolders(com.aspose.email.MailQuery)`**
 
-Obtiene los mensajes de una carpeta PST con criterios de búsqueda.
+Obtiene mensajes en una carpeta PST con criterios de búsqueda.
 
 {{% /alert %}}

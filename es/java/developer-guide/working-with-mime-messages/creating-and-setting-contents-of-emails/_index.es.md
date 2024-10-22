@@ -1,158 +1,158 @@
 ---
-title: "Creación y configuración del contenido de los correos electrónicos"
+title: "Creación y Configuración del Contenido de Correos Electrónicos"
 url: /es/java/creating-and-setting-contents-of-emails/
 weight: 10
 type: docs
 ---
 
-## **Crear nuevo mensaje de correo electrónico**
+## **Crear Nuevo Mensaje de Correo Electrónico**
 
-Aspose.Email para Java permite a los desarrolladores crear mensajes MIME (extensiones de correo de Internet multipropósito) desde cero. La clase principal para este propósito en la API Aspose.Email para Java es la [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) clase.
-En este tema se explican los pasos necesarios para crear mensajes de correo electrónico en formatos de archivo EML, MSG y MTH con Aspose.Email para Java.
+Aspose.Email para Java permite a los desarrolladores crear mensajes MIME (Extensiones de Correo de Internet Multipropósito) desde cero. La clase principal para este propósito en la API de Aspose.Email para Java es la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+Este tema explica los pasos necesarios para crear mensajes de correo electrónico en formatos de archivo EML, MSG y MTH utilizando Aspose.Email para Java.
 
 Para crear un mensaje de correo electrónico desde cero:
 
 1. Crea una instancia de la clase MailMessage.
-2. Establezca el asunto del mensaje mediante el [setSubject()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setSubject-java.lang.String-) method.
-3. Configure el cuerpo del mensaje mediante el [setHtmlBody()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setHtmlBody-java.lang.String-) method.
-4. Configure el remitente del correo electrónico mediante el [setFrom()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setFrom-com.aspose.email.MailAddress-) method.
-5. Defina el destinatario en **TO** campo mediante el uso del [getTo().add()](https://reference.aspose.com/email/java/com.aspose.email/mailaddresscollection/#add-java.lang.String-) method.
-6. Defina el destinatario en **CC** campo mediante el uso del [getCC().add()](https://reference.aspose.com/email/java/com.aspose.email/mailaddresscollection/#add-java.lang.String-) method.
-7. Llame al [Save()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.io.OutputStream-) método para guardar el archivo del mensaje en un disco en formatos MSG, EML y MHT.
- 
+2. Establece el asunto del mensaje usando el método [setSubject()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setSubject-java.lang.String-) .
+3. Establece el cuerpo del mensaje usando el método [setHtmlBody()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setHtmlBody-java.lang.String-) .
+4. Establece el remitente del correo electrónico usando el método [setFrom()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setFrom-com.aspose.email.MailAddress-) .
+5. Establece el destinatario en el campo **TO** utilizando el método [getTo().add()](https://reference.aspose.com/email/java/com.aspose.email/mailaddresscollection/#add-java.lang.String-) .
+6. Establece el destinatario en el campo **CC** utilizando el método [getCC().add()](https://reference.aspose.com/email/java/com.aspose.email/mailaddresscollection/#add-java.lang.String-) .
+7. Llama al método [Save()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#save-java.io.OutputStream-) para guardar el archivo del mensaje en un disco en formatos MSG, EML y MHT.
+
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-CreateNewEmail-.java" >}}
 
-## **Especificación de varios destinatarios**
+## **Especificando Múltiples Destinatarios**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) representa un mensaje de correo electrónico. Las instancias de la clase MailMessage se utilizan para crear mensajes de correo electrónico que se transmiten a un servidor SMTP mediante el [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) clase. En este tema se muestra cómo especificar más de una dirección de correo electrónico. Las direcciones de correo electrónico se pueden especificar mediante la clase MailMessage. Las direcciones de correo electrónico utilizadas en la clase MailMessage son:
+La [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) representa un mensaje de correo electrónico. Las instancias de la clase MailMessage se utilizan para construir mensajes de correo electrónico que se transmiten a un servidor SMTP usando la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/). Este tema demuestra cómo especificar más de una dirección de correo electrónico. Las direcciones de correo electrónico se pueden especificar utilizando la clase MailMessage. Las direcciones de correo electrónico utilizadas en la clase MailMessage son:
 
-- **To** - Las direcciones de los destinatarios se pueden especificar en el campo «Para». Los destinatarios del campo «Para» son la audiencia principal del mensaje. Puede haber más de una dirección de destinatario
-- **Cc** - CC son las siglas de «copia exacta» o «copia de cortesía» y permiten añadir destinatarios de correo electrónico que necesitan ver el correo electrónico, pero no necesariamente se espera que actúen en consecuencia. Los gerentes, por ejemplo, o los miembros de tu equipo que necesitan estar al tanto de una conversación. Con Aspose.Email, puedes especificar las direcciones CC en tu código. De esta forma, los correos electrónicos automatizados, o todos los correos electrónicos a una dirección específica, se pueden copiar al personal correspondiente.
-- **Bcc** - Bcc, copia ciega, te permite enviar un correo electrónico a un destinatario que está oculto para otros destinatarios. Si aparece un CC en la información del correo electrónico que ven los destinatarios principales, no aparece un Bcc. Está diseñado para enviar notificaciones ocultas. 
+- **To** - Las direcciones de destinatarios se pueden especificar en el campo 'To'. Los destinatarios del campo 'To' son la audiencia principal del mensaje. Puede haber más de una dirección de destinatario.
+- **Cc** - CC significa "copia de carbón", o "copia de cortesía", y te permite agregar destinatarios de correo electrónico que necesitan ver el correo electrónico, pero no se espera necesariamente que actúen al respecto. Gerentes, por ejemplo, o miembros de tu equipo que deben estar al tanto de una conversación. Con Aspose.Email, las direcciones CC se pueden especificar en tu código. De esta manera, los correos electrónicos automatizados o todos los correos electrónicos a una dirección específica se pueden copiar al personal relevante.
+- **Bcc** - Bcc, copia de carbón oculta, te permite enviar un correo electrónico a un destinatario que está oculto de otros destinatarios. Mientras que un CC aparece en la información del correo electrónico que ven los destinatarios principales, un Bcc no. Está destinado a notificaciones ocultas.
 
-Para especificar varias direcciones de correo electrónico en un mensaje de correo electrónico, sigue estos pasos:
+Para especificar múltiples direcciones de correo electrónico en un mensaje de correo electrónico, sigue estos pasos:
 
 1. Crea una instancia de la clase MailMessage.
-2. Especifique las direcciones de origen y varias direcciones de destino, CC y Bcc mediante la instancia de MailMessage.
-3. Cree una instancia de la clase SmtpClient y envíe el correo electrónico mediante el método Send.
+2. Especifica el From y múltiples direcciones To, Cc y Bcc utilizando la instancia de MailMessage.
+3. Crea una instancia de la clase SmtpClient y envía el correo electrónico utilizando el método Send.
 
-El ejemplo de código que aparece a continuación muestra cómo se pueden especificar varias direcciones To, CC y BCC.
+El siguiente ejemplo de código muestra cómo se pueden especificar múltiples direcciones To, CC y BCC.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-SpecifyRecipientAddresses-SpecifyRecipientAddresses.java" >}}
 
-## **Cambiar las direcciones de correo electrónico por un nombre descriptivo**
+## **Cambio de direcciones de correo electrónico a un nombre amigable**
 
-Los siguientes ejemplos de programación muestran cómo cambiar las direcciones de correo electrónico por nombres descriptivos en un mensaje de correo electrónico. Un nombre descriptivo es un nombre que es más fácil de entender para los humanos que la dirección de correo electrónico, por ejemplo, John Smith en lugar de js346@domain.com. Al enviar un correo electrónico, podemos asociar un nombre descriptivo a una dirección de correo electrónico en el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) constructor de clases.
+Los ejemplos de programación a continuación demuestran cómo cambiar direcciones de correo electrónico a nombres amigables en un mensaje de correo electrónico. Un nombre amigable es un nombre que es más amigable para los humanos que la dirección de correo electrónico, por ejemplo, John Smith en lugar de js346@domain.com. Al enviar un correo electrónico, podemos asociar un nombre amigable con una dirección de correo electrónico en el constructor de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
 
-Para cambiar las direcciones de correo electrónico por nombres descriptivos en un mensaje de correo electrónico, sigue estos pasos:
+Para cambiar direcciones de correo electrónico a nombres amigables en un mensaje de correo electrónico, sigue estos pasos:
 
-- Cree una instancia de la clase MailMessage y especifique las direcciones de correo electrónico en **To** and **From** campos junto con nombres descriptivos.
-- Especifique las direcciones de correo electrónico Cc y Bcc junto con nombres descriptivos llamando al constructor de la clase MailMessage en la instancia de MailMessage.
-- Cree una instancia de la clase SmtpClient y envíe el correo electrónico mediante el método Send.
+- Crea una instancia de la clase MailMessage y especifica direcciones de correo electrónico en los campos **To** y **From** junto con nombres amigables.
+- Especifica las direcciones de correo electrónico Cc y Bcc junto con nombres amigables llamando al constructor de la clase MailMessage en la instancia de MailMessage.
+- Crea una instancia de la clase SmtpClient y envía el correo electrónico utilizando el método Send.
 
-El siguiente fragmento de código muestra cómo mostrar los nombres de las direcciones de correo electrónico.
+El siguiente fragmento de código te muestra cómo mostrar nombres para direcciones de correo electrónico.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-ChangeEmailAddress-ChangeEmailAddress.java" >}}
 
-## **Establecer el cuerpo del correo**
+## **Establecer Cuerpo del Correo**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) la clase representa un mensaje de correo electrónico. Las instancias de la clase MailMessage se utilizan para crear mensajes de correo electrónico que se transmiten a un servidor SMTP para su entrega mediante el [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) clase. El cuerpo de un correo se puede especificar mediante la clase MailMessage. El cuerpo de un correo electrónico se puede especificar mediante [setHtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setHtmlBody-java.lang.String-) método en MailMessage.
+La clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) representa un mensaje de correo electrónico. Las instancias de la clase MailMessage se utilizan para construir mensajes de correo electrónico que se transmiten a un servidor SMTP para entrega utilizando la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/). Se puede especificar un cuerpo de correo utilizando la clase MailMessage. Un cuerpo de correo puede ser especificado utilizando el método [setHtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setHtmlBody-java.lang.String-) en MailMessage.
 
 Además de [HtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBody--), Aspose.Email tiene otro método relacionado con el cuerpo del correo:
 
 - [isBodyHtml](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#isBodyHtml--): indica al usuario si el cuerpo es HTML o texto sin formato.
 
-En este tema se muestra cómo definir el cuerpo del texto HTML y establecer texto alternativo.
+Este tema muestra cómo definir texto del cuerpo HTML y establecer texto alternativo.
 
-### **Configuración del cuerpo HTML**
+### **Estableciendo Cuerpo HTML**
 
-[HtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBody--) se usa para especificar el contenido HTML del cuerpo de un mensaje. HTMLBody debe estar entre <html> </html> etiquetas. El siguiente fragmento de código muestra cómo configurar el cuerpo del HTML.
+[HtmlBody](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBody--) se utiliza para especificar el contenido HTML de un cuerpo de mensaje. HtmlBody debe estar encerrado entre etiquetas <html> </html>. El siguiente fragmento de código te muestra cómo establecer el cuerpo HTML.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-SetHTMLBody-SetHTMLBody.java" >}}
 
-### **Configuración de texto alternativo**
+### **Estableciendo Texto Alternativo**
 
-Usa el [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) clase para especificar copias de un mensaje de correo electrónico en un formato diferente. Por ejemplo, si envía un mensaje en HTML, es posible que también desee proporcionar una versión de texto sin formato en caso de que algunos de los destinatarios utilicen lectores de correo electrónico que no puedan mostrar contenido HTML. Esta clase tiene dos propiedades: [LinkedResources](https://reference.aspose.com/email/java/com.aspose.email/alternateview/#getLinkedResources--) and [BaseUri](https://reference.aspose.com/email/java/com.aspose.email/alternateview/#getBaseUri--), que se utilizan para resolver las URL incluidas en el contenido del correo electrónico.
+Utiliza la clase [AlternateView](https://reference.aspose.com/email/java/com.aspose.email/alternateview/) para especificar copias de un mensaje de correo electrónico en diferentes formatos. Por ejemplo, si envías un mensaje en HTML, también podrías querer proporcionar una versión en texto sin formato en caso de que algunos de los destinatarios usen lectores de correo electrónico que no puedan mostrar contenido HTML. Esta clase tiene dos propiedades, [LinkedResources](https://reference.aspose.com/email/java/com.aspose.email/alternateview/#getLinkedResources--) y [BaseUri](https://reference.aspose.com/email/java/com.aspose.email/alternateview/#getBaseUri--), que se utilizan para resolver URLs dentro del contenido del correo.
 
-- LinkedResources es una colección de objetos LinkedResources. Cuando se representan, las URL del contenido del correo electrónico se comparan primero con las URL del enlace de contenido de cada objeto de LinkedResources de la colección LinkedResources y se resuelven.
-- El lector de correo utiliza BaseURI para resolver las URL relativas dentro del cuerpo y también para resolver las URL de enlaces de contenido relativas de la colección LinkedResources.
+- LinkedResources es una colección de objetos LinkedResources. Cuando se renderiza, las URLs dentro del contenido del correo se comparan primero con las URLs en el Enlace de Contenido de cada objeto LinkedResources en la colección LinkedResources y se resuelven.
+- BaseUri es utilizado por el lector de correo para resolver URLs relativas dentro del cuerpo, y también para resolver URLs de Enlace de Contenido relativas, en la colección LinkedResources.
 
-El siguiente fragmento de código muestra cómo configurar texto alternativo.
+El siguiente fragmento de código muestra cómo establecer texto alternativo.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-SetAlternateText-SetAlternateText.java" >}}
 
-## **Especificación de la codificación del cuerpo del correo**
+## **Especificando la Codificación del Cuerpo del Correo**
 
-El tipo de contenido define el formato del contenido del correo electrónico: el conjunto de caracteres. Por ejemplo, algunos conjuntos de caracteres comunes que se proporcionan en java.nio.Charset son:
+El tipo de contenido define el formato de contenido del correo electrónico: el conjunto de caracteres. Por ejemplo, algunos conjuntos de caracteres comunes proporcionados en java.nio.Charset son:
 
-- US-ASCII: ASCII de siete bits, también conocido como ISO646-US, también conocido como el bloque latino básico del conjunto de caracteres Unicode
-- ISO-8859-1 - Alfabeto latino ISO n.º 1, también conocido como ISO-LATIN-1
-- UTF-8: formato de transformación UCS de ocho bits
-- UTF-16BE: formato de transformación UCS de dieciséis bits, orden de bytes de gran endiano
-- UTF-16LE: formato de transformación UCS de dieciséis bits, orden de bytes mendiano
-- UTF-16: formato de transformación UCS de dieciséis bits, orden de bytes identificado mediante una marca de orden de bytes opcional
+- US-ASCII - ASCII de siete bits, también conocido como ISO646-US, también conocido como el bloque Latino Básico del conjunto de caracteres Unicode
+- ISO-8859-1 - ISO Latin Alphabet No. 1, también conocido como ISO-LATIN-1
+- UTF-8 - Formato de Transformación de UCS de ocho bits
+- UTF-16BE - Formato de Transformación de UCS de dieciséis bits, orden de bytes big-endian
+- UTF-16LE - Formato de Transformación de UCS de dieciséis bits, orden de bytes little-endian
+- UTF-16 - Formato de Transformación de UCS de dieciséis bits, orden de bytes identificado por una marca de orden de bytes opcional
 
-Aspose.Email usa el [BodyEncoding](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getBodyEncoding--) propiedad de la clase MailMessage para especificar la codificación del cuerpo del correo electrónico. Para codificar el cuerpo de un mensaje de correo electrónico, siga los pasos que se indican a continuación:
+Aspose.Email utiliza la propiedad [BodyEncoding](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getBodyEncoding--) de la clase MailMessage para especificar la codificación del cuerpo del correo. Para codificar el cuerpo de un mensaje de correo electrónico, sigue los pasos dados a continuación:
 
 1. Crea una instancia de la clase MailMessage.
-1. Especifique el remitente, el destinatario y el cuerpo del correo electrónico HTML en la instancia de MailMessage.
-1. Especifique el valor de la propiedad BodyEncoding.
-1. Crea una instancia del [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) clase y envía el correo electrónico mediante el método Send.
+2. Especifica el remitente, receptor y cuerpo HTML en la instancia de MailMessage.
+3. Especifica el valor de la propiedad BodyEncoding.
+4. Crea una instancia de la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) y envía el correo electrónico utilizando el método Send.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-SpecifyMailBodyEncoding-SpecifyMailBodyEncoding.java" >}}
 
 ## **Características de MailMessage**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) La clase representa el contenido de un mensaje de correo electrónico. Las instancias de la clase MailMessage se utilizan para crear un mensaje de correo electrónico que se transmite a un servidor SMTP para su entrega mediante el [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) clase. En este artículo se muestra cómo utilizar las funciones de la utilidad de la clase MailMessage para controlar las siguientes funciones del correo electrónico:
+La clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) representa el contenido de un mensaje de correo electrónico. Las instancias de la clase MailMessage se utilizan para construir un mensaje de correo electrónico que se transmite a un servidor SMTP para su entrega utilizando la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/). Este artículo muestra cómo utilizar las características utilitarias de la clase MailMessage para controlar las siguientes características del correo electrónico:
 
-- **Fecha y hora** - A través de la clase MailMessage [setDate](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setDate-java.util.Date-) método en el que configuramos la fecha y la hora de un correo electrónico.
-- **Prioridad de mensajes** - El [MailPriority](https://reference.aspose.com/email/java/com.aspose.email/mailpriority/) La clase especifica los niveles de prioridad para enviar un mensaje de correo electrónico. Puede ser bajo, normal o alto. La prioridad influye en la velocidad de transmisión y en la entrega.
-- **Sensibilidad de los mensajes** - El [MailSensitivity](https://reference.aspose.com/email/java/com.aspose.email/mailsensitivity/) La clase especifica cinco niveles de sensibilidad.
-- **Notificación de entrega** - Las notificaciones de entrega permiten a los remitentes saber que el correo electrónico que han enviado ha llegado a la bandeja de entrada del destinatario.
+- **Fecha y hora** - A través del método [setDate](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#setDate-java.util.Date-) de la clase MailMessage establecemos la fecha y la hora de un correo electrónico.
+- **Prioridad del mensaje** - La clase [MailPriority](https://reference.aspose.com/email/java/com.aspose.email/mailpriority/) especifica niveles de prioridad para el envío de un mensaje de correo electrónico. Puede ser baja, normal o alta. La prioridad influye en la velocidad de transmisión y entrega.
+- **Sensibilidad del mensaje** - La clase [MailSensitivity](https://reference.aspose.com/email/java/com.aspose.email/mailsensitivity/) especifica cinco niveles de sensibilidad.
+- **Notificación de entrega** - Las notificaciones de entrega permiten a los remitentes saber que el correo electrónico que enviaron ha sido entregado en la bandeja de entrada del destinatario.
 
-De forma predeterminada, la fecha es la fecha real en la que se envió el mensaje y la hora es la hora en que se envió, tal y como muestra Microsoft Outlook. Sin embargo, el tiempo real de entrega del correo electrónico lo añade el propio servidor SMTP en el encabezado del correo. Por ejemplo, a continuación se muestra un encabezado de correo común, en el que el campo Fecha se estableció mediante MailMessage.setDate.
+Por defecto, la fecha es la fecha real en que se envió el mensaje, y la hora es la hora en que se envió, como la muestra Microsoft Outlook. Sin embargo, el tiempo real de entrega del correo es añadido por el servidor SMTP en el encabezado del correo. Por ejemplo, a continuación se muestra un encabezado de correo común, donde el campo Fecha fue establecido usando MailMessage.setDate.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Email-DateAndTime-DateAndTime.cs" >}}
 
-El siguiente fragmento de código ilustra cómo se puede usar cada una de las funciones descritas anteriormente.
+El siguiente fragmento de código ilustra cómo se puede utilizar cada una de las características discutidas anteriormente.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-UseMailMessageFeatures-MailMessageFeatures.java" >}}
 
-## **Solicitud de un acuse de recibo de lectura**
+## **Solicitando una Confirmación de Lectura**
 
-Los ejemplos de programación que aparecen a continuación muestran cómo puede solicitar un acuse de recibo de lectura. La clase MailMessage [DeliveryNotificationOptions](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getDeliveryNotificationOptions--) La propiedad de enumeración describe la [opciones de notificación de entrega](https://reference.aspose.com/email/java/com.aspose.email/deliverynotificationoptions/) para un correo electrónico. Para solicitar un acuse de recibo de lectura después de enviar un correo electrónico, sigue estos pasos:
+Los ejemplos de programación a continuación muestran cómo puedes solicitar una confirmación de lectura. La propiedad de enumeración [DeliveryNotificationOptions](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getDeliveryNotificationOptions--) de la clase MailMessage describe las [opciones de notificación de entrega](https://reference.aspose.com/email/java/com.aspose.email/deliverynotificationoptions/) para un correo electrónico. Para solicitar una confirmación de lectura después de enviar un correo electrónico, sigue estos pasos:
 
 1. Crea una instancia de la clase MailMessage.
-1. Especifique el remitente, el destinatario y el cuerpo HTML del correo electrónico en la instancia de MailMessage.
-1. Especifique las opciones de notificación de entrega en otras instancias de MailMessage.
-2. Cree una instancia de la clase SmtpClient y envíe el correo electrónico mediante el método Send.
+2. Especifica el remitente, receptor y cuerpo HTML para el correo electrónico en la instancia de MailMessage.
+3. Especifica las DeliveryNotificationOptions en otras instancias de MailMessage.
+4. Crea una instancia de la clase SmtpClient y envía el correo electrónico utilizando el método Send.
 
-Es posible que las solicitudes de acuse de recibo de lectura no siempre se cumplan porque:
+Las solicitudes de confirmación de lectura pueden no ser siempre honradas debido a:
 
-- Es posible que un cliente de correo no implemente esa funcionalidad.
-- Es posible que el usuario final tenga desactivada esa funcionalidad.
-- El usuario final puede optar por no enviar uno.
+- Un cliente de correo puede no implementar esa funcionalidad.
+- El usuario final puede tener esa funcionalidad desactivada.
+- El usuario final puede elegir no enviar una.
 
-El siguiente fragmento de código muestra cómo solicitar un acuse de recibo de lectura.
+El siguiente fragmento de código te muestra cómo solicitar una confirmación de lectura.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-RequestReadReceipt-RequestReadReceipt.java" >}}
 
-## **Establecer encabezados de correo electrónico**
+## **Establecer Encabezados del Correo Electrónico**
 
-Los encabezados de correo electrónico representan un estándar de Internet y el RFC define los campos de encabezado que se incluyen en los mensajes de correo electrónico de Internet. Se puede especificar un encabezado de correo electrónico mediante el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) clase. Los tipos de encabezados más comunes se definen en [HeaderType](https://reference.aspose.com/email/java/com.aspose.email/headertype/) clase. Es una clase sellada que funciona como una enumeración normal.
+Los encabezados de correo electrónico representan un estándar de Internet y el RFC define los campos de encabezado que se incluyen en los mensajes de correo electrónico de Internet. Un encabezado de correo electrónico puede especificarse utilizando la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Los tipos de encabezados comunes se definen en la clase [HeaderType](https://reference.aspose.com/email/java/com.aspose.email/headertype/). Es una clase sellada que funciona como una enumeración normal.
 
-Normalmente, el encabezado de un correo electrónico contiene los siguientes campos:
+Normalmente, un encabezado de correo electrónico contiene estos campos:
 
-- Para: Las direcciones de los destinatarios se pueden especificar en el **To** campo. El **To** los destinatarios de los campos son la audiencia principal del mensaje. Puede haber más de una dirección de destinatario.
-- De: este campo presenta la dirección de correo electrónico del remitente del mensaje.
-- Cc: Permite a los usuarios enviar un mensaje como «copia exacta» o «copia de cortesía». Es decir, no se espera que el receptor responda o actúe. Por lo general, el personal de supervisión recibe una notificación mediante un CC.
-- Bcc: Son las siglas de Blind Carbon Copy, se refiere a la práctica de enviar un mensaje a varios destinatarios de tal manera que lo que reciben no contenga la lista completa de destinatarios. Está diseñado para enviar notificaciones ocultas.
-- Responder a: este campo de encabezado está destinado a indicar a dónde quiere que vayan las respuestas el remitente.
-- Asunto: Título, encabezamiento, asunto. Se utiliza a menudo como indicador de hilo para los mensajes que responden o comentan otros mensajes.
-- Fecha: este encabezado especifica una fecha (y una hora). Normalmente es la fecha en la que se redactó y envió el mensaje.
-- XMailer: información sobre el software cliente del creador. Ejemplo: X-Mailer: Aspose.Email. Los clientes de correo utilizan XMailer. Los distintos clientes de correo tendrán diferentes valores de XMailer. El valor de XMailer de MS Outlook es Microsoft Office Outlook, versión 11.0.5510. El receptor o el lector de correo electrónico lo ignoran.
+- To: Las direcciones de destinatarios se pueden especificar en el campo **To**. Los destinatarios del campo **To** son la audiencia principal del mensaje. Puede haber más de una dirección de destinatario.
+- From: Este campo presenta la dirección de correo electrónico del remitente del mensaje.
+- Cc: Permite a los usuarios enviar un mensaje como "Copia de Carbón" o "Copia de Cortesía". Es decir, no se espera que el receptor responda o actúe. Normalmente, el personal de supervisión es notificado con CC.
+- Bcc: Se refiere a la práctica de enviar un mensaje a múltiples destinatarios de tal manera que lo que reciben no contiene la lista completa de destinatarios. Está destinado a notificaciones ocultas.
+- ReplyTo: Este campo de encabezado está destinado a indicar dónde quiere el remitente que se envíen las respuestas.
+- Subject: Título, encabezado, asunto. A menudo se utiliza como indicador de hilo para mensajes que responden o comentan sobre otros mensajes.
+- Date: Este encabezado especifica una fecha (y hora). Normalmente esta es la fecha en la que se compuso y envió el mensaje.
+- XMailer: Información sobre el software cliente del originador. Ejemplo: X-Mailer: Aspose.Email. XMailer es utilizado por clientes de correo. Diferentes clientes de correo tendrán diferentes valores de XMailer. El valor de XMailer de MS Outlook es Microsoft Office Outlook, Build 11.0.5510. Es ignorado por el receptor del correo electrónico o el lector de correo electrónico.
 
-Normalmente, el encabezado de un correo electrónico tiene un aspecto similar al siguiente:
+Normalmente, un encabezado de correo electrónico se ve algo así:
 
 ``` cs
 
@@ -162,7 +162,7 @@ From: sender@sender.com
 
 To: guangzhou@guangzhoo.com
 
-Subject: test mail
+Subject: correo de prueba
 
 Date: 6 Mar 2006 8:2:2 +0800
 
@@ -170,18 +170,18 @@ X-Mailer: Aspose.Email
 
 ```
 
-Para personalizar el encabezado de un correo electrónico, sigue estos pasos:
+Para personalizar un encabezado de correo electrónico, sigue estos pasos:
 
-- Crea una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-- Especifique To, From, CC, Bcc, ReplyTo, Subject, Date y XMailer mediante una instancia de la clase MailMessage.
-- Crea una instancia del [MimeHeader](https://reference.aspose.com/email/java/com.aspose.email/mimeheader/) clase y especifique el encabezado secreto.
-- Añade el encabezado secreto a la instancia de MailMessage.
+- Crea una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/).
+- Especifica To, From, CC, Bcc, ReplyTo, Subject, Date y XMailer usando una instancia de la clase MailMessage.
+- Crea una instancia de la clase [MimeHeader](https://reference.aspose.com/email/java/com.aspose.email/mimeheader/) y especifica el encabezado secreto.
+- Agrega el encabezado secreto a la instancia de MailMessage.
 
-En el código que se muestra a continuación, hemos personalizado un encabezado de correo electrónico.
+En el código dado a continuación, hemos personalizado un encabezado de correo electrónico.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-EmailHeaders-SetEmailHeaders.java" >}}
 
-El fragmento de código anterior produce un encabezado de correo electrónico en el siguiente formato. Esto se puede observar abriendo el archivo msgHeaders.msg en Microsoft Outlook y, a continuación, viendo sus propiedades.
+El fragmento de código anterior produce un encabezado de correo electrónico en el siguiente formato. Esto se puede observar abriendo el archivo MsgHeaders.msg en Microsoft Outlook y luego viendo sus propiedades.
 
 ``` cs
 
@@ -195,23 +195,23 @@ CC: receiver2@receiver.com
 
 BCC: receiver3@receiver.com
 
-Subject: test mail
+Subject: correo de prueba
 
 Date: 6 Mar 2006 8:2:2 +0800
 
 X-Mailer: Aspose.Email
 
-secret-header: mystery
+secret-header: misterio
 
 ```
 
-### **Insertar encabezado en una ubicación específica**
+### **Insertar Encabezado en una Ubicación Específica**
 
-The [Add](https://reference.aspose.com/email/java/com.aspose.email/headercollection/#add-com.aspose.email.HeaderCollection-) El método de HeadersCollection inserta el encabezado al final de la colección. Sin embargo, a veces puede ser necesario insertar un encabezado en una ubicación específica. En tal caso, el método Add no será de ayuda. Para lograr esto, usa el [Insert](https://reference.aspose.com/email/java/com.aspose.email/headercollection/#insert-java.lang.String-java.lang.String-) método de HeadersCollection. Si la colección contiene encabezados con el mismo nombre, este encabezado se insertará antes que otros encabezados con el mismo nombre. A continuación se muestra la firma del método Insert y el código de ejemplo para su uso.
+El método [Add](https://reference.aspose.com/email/java/com.aspose.email/headercollection/#add-com.aspose.email.HeaderCollection-) de HeadersCollection inserta el encabezado al final de la colección. Sin embargo, a veces puede ser necesario insertar un encabezado en una ubicación específica. En tal caso, el método Add no te ayudará. Para lograr esto, utiliza el método [Insert](https://reference.aspose.com/email/java/com.aspose.email/headercollection/#insert-java.lang.String-java.lang.String-) de HeadersCollection. Si la colección contiene encabezados con el mismo nombre, este encabezado se insertará antes de otros encabezados con el mismo nombre. A continuación se muestra la firma del método Insert y un código de ejemplo de uso.
 
 ``` java
 
- Method Signature
+ Firma del Método
 
 HeaderCollection.insert(String name, String value)
 
@@ -219,50 +219,50 @@ HeaderCollection.insert(String name, String value)
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-EmailHeaders-InsertHeaderAtSpecificLocation.java" >}}
 
-### **Agregar encabezados personalizados al correo electrónico**
+### **Agregar Encabezados Personalizados al Correo Electrónico**
 
-Los siguientes ejemplos de programación muestran cómo especificar un encabezado personalizado en un mensaje de correo electrónico. Se puede especificar un encabezado de correo electrónico mediante la clase MailMessage. Para especificar un encabezado personalizado en un mensaje de correo electrónico, sigue estos pasos:
+Los ejemplos de programación a continuación demuestran cómo especificar un encabezado personalizado en un mensaje de correo electrónico. Un encabezado de correo electrónico puede especificarse utilizando la clase MailMessage. Para especificar un encabezado personalizado en un mensaje de correo electrónico, sigue estos pasos:
 
 1. Crea una instancia de la clase MailMessage.
-1. Especifique los valores de destino, origen y asunto mediante la instancia de MailMessage.
-1. Añade el encabezado secreto a la instancia de MailMessage.
-1. Cree una instancia de la clase SmtpClient y envíe el correo electrónico mediante el método Send.
+2. Especifica los valores de To, From y Subject usando la instancia de MailMessage.
+3. Agrega el encabezado secreto a la instancia de MailMessage.
+4. Crea una instancia de la clase SmtpClient y envía el correo electrónico utilizando el método Send.
 
-El siguiente fragmento de código muestra cómo agregar encabezados personalizados al correo electrónico.
+El siguiente fragmento de código te muestra cómo agregar encabezados personalizados al correo electrónico.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-SpecifyCustomHeader-SpecifyCustomHeader.java" >}}
 
-## **Firma correos electrónicos con DKIM**
+## **Firmar Correos Electrónicos con DKIM**
 
-Aspose.Email permite firmar correos electrónicos con DKIM (DomainKeys Identified Mail). Esto permite a una organización asumir la responsabilidad de un mensaje que está en tránsito ([acerca de DKIM](https://www.dkim.org/)). DKIM añade una firma digital a los encabezados de los mensajes de correo electrónico que los destinatarios pueden validar. La clave pública del remitente permite al receptor verificar que la firma coincide con el contenido del mensaje. La clase MailMessage [dKIMSign](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#dKIMSign-com.aspose.ms.System.Security.Cryptography.RSACryptoServiceProvider-com.aspose.email.DKIMSignatureInfo-) El método se utiliza para establecer la información criptográfica y de firma para firmar el mensaje. El siguiente fragmento de código muestra cómo firmar correos electrónicos con DKIM.
+Aspose.Email permite firmar correos electrónicos con DKIM (DomainKeys Identified Mail). Esto permite a una organización asumir la responsabilidad de un mensaje que está en tránsito ([acerca de DKIM](https://www.dkim.org/)). DKIM agrega una firma digital a los encabezados del mensaje de correo electrónico que puede ser validada por los receptores. La clave pública del remitente permite al receptor verificar que la firma coincide con el contenido del mensaje. El método [dKIMSign](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#dKIMSign-com.aspose.ms.System.Security.Cryptography.RSACryptoServiceProvider-com.aspose.email.DKIMSignatureInfo-) de la clase MailMessage se utiliza para establecer la información criptográfica y de firma para firmar el mensaje. El siguiente fragmento de código te muestra cómo firmar correos electrónicos con DKIM.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-SignEmailsWithDKIM-SignEmailsWithDKIM.java" >}}
 
-## **Realizar una combinación de correspondencia**
+## **Realizando una Combinación de Correos**
 
-Las combinaciones de correspondencia le ayudan a crear y enviar un lote de mensajes de correo electrónico similares. El núcleo de los correos electrónicos es el mismo, pero el contenido se puede personalizar. Por lo general, los datos de contacto del destinatario (nombre, segundo nombre, empresa, etc.) se utilizan para personalizar el correo electrónico.
+Las combinaciones de correos te ayudan a crear y enviar un lote de mensajes de correo electrónico similares. El núcleo de los correos electrónicos es el mismo, pero el contenido puede ser personalizado. Típicamente, los detalles de contacto de un destinatario (nombre, segundo nombre, empresa, etc.) se utilizan para personalizar el correo.
 
 |![todo:image_alt_text](https://i.imgur.com/D7WSp90.png)|
-|: - |
-|**Figura: Ilustración de cómo funciona una combinación de correspondencia**|
+| :- |
+|**Figura: Ilustración de cómo funciona una combinación de correos**|
 
-Para realizar una combinación de correspondencia con Aspose.Email, siga estos pasos:
+Para realizar una combinación de correos con Aspose.Email, sigue los siguientes pasos:
 
-1. Crear una función con firma de nombre
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) class.
-1. Especifique el remitente, el destinatario, el asunto y el cuerpo.
-1. Crea una firma para el final del correo electrónico.
-1. Crea una instancia del [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine/) clase y apruebalo el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) instance.
-1. Firme en el [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine/) instance.
-1. Crea una instancia del [DataTable](https://reference.aspose.com/email/java/com.aspose.email/datatable/) class.
-1. Agregue las columnas Receipt, FirstName y LastName como fuentes de datos en la clase DataTable
-1. Crea una instancia del [DataRow](https://reference.aspose.com/email/java/com.aspose.email/datarow/) class
-1. Especifique la dirección de recepción, el nombre y los apellidos en el objeto DataRow
-1. Crea una instancia del [MailMessageCollection](https://reference.aspose.com/email/java/com.aspose.email/mailmessagecollection/) class
-1. Especifique el [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine/) e instancias de DataTable en [MailMessageCollection](https://reference.aspose.com/email/java/com.aspose.email/mailmessagecollection/) instance.
-2. Crea una instancia del [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) clase y especifique el servidor, el puerto, el nombre de usuario y la contraseña
-3. Envía correos electrónicos mediante el [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) método class bulkSendAsync
+1. Crea una función con nombre de firma
+2. Crea una instancia de la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) .
+3. Especifica el remitente, receptor, asunto y cuerpo.
+4. Crea una firma para el final del correo electrónico.
+5. Crea una instancia de la clase [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine/) y pásale la instancia de [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) .
+6. Toma la firma en la instancia de [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine/) .
+7. Crea una instancia de la clase [DataTable](https://reference.aspose.com/email/java/com.aspose.email/datatable/) .
+8. Agrega las columnas Receipt, FirstName y LastName como fuentes de datos en la clase DataTable.
+9. Crea una instancia de la clase [DataRow](https://reference.aspose.com/email/java/com.aspose.email/datarow/) .
+10. Especifica la dirección de recepción, el nombre y el apellido en el objeto DataRow.
+11. Crea una instancia de la clase [MailMessageCollection](https://reference.aspose.com/email/java/com.aspose.email/mailmessagecollection/) .
+12. Especifica las instancias de [TemplateRoutine](https://reference.aspose.com/email/java/com.aspose.email/templateroutine/) y DataTable en la instancia de [MailMessageCollection](https://reference.aspose.com/email/java/com.aspose.email/mailmessagecollection/) .
+13. Crea una instancia de la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) y especifica el servidor, puerto, nombre de usuario y contraseña.
+14. Envía los correos electrónicos utilizando el método BulkSendAsync de la clase [SmtpClient](https://reference.aspose.com/email/java/com.aspose.email/smtpclient/) .
 
-El siguiente código envía un correo electrónico a una persona de otras tres personas.
+El siguiente código envía un correo electrónico a una persona desde tres otras.
 
 {{< gist "" "e3443fa9baa07df6d929fc4a408add67" "Examples-src-main-java-com-aspose-email-examples-email-PerformMailMerge-.java" >}}

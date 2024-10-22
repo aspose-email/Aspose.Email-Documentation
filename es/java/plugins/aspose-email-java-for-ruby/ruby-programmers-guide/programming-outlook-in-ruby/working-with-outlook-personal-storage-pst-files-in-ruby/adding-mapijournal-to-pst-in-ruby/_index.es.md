@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Agregar MapiJournal a PST**
-Para agregar MapiJournal a PST usando **Aspose.Email Java para Ruby**, simplemente invoca **AddMapiJournalToPST** módulo. Aquí puedes ver un ejemplo de código.
+Para agregar MapiJournal a PST usando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **AddMapiJournalToPST**. Aquí puedes ver un código de ejemplo.
 
 **Código Ruby**
 
@@ -24,7 +24,7 @@ cl.add(Rjb::import('java.util.Calendar').HOUR, 1)
 
 d2 = cl.getTime()
 
-journal = Rjb::import('com.aspose.email.MapiJournal').new("daily record", "called out in the dark", "Phone call", "Phone call")
+journal = Rjb::import('com.aspose.email.MapiJournal').new("registro diario", "llamado en la oscuridad", "Llamada telefónica", "Llamada telefónica")
 
 journal.setStartTime(d1)
 
@@ -36,10 +36,10 @@ journal_folder = pst.createPredefinedFolder("Journal", Rjb::import('com.aspose.e
 
 journal_folder.addMapiMessageItem(journal)
 
-puts "Added MapiJournal Successfully."
+puts "MapiJournal agregado exitosamente."
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiJournal a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Agregar MapiJournal a PST (Aspose.Email)** de cualquiera de los siguientes sitios de codificación social:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/addmapijournaltopst.rb)

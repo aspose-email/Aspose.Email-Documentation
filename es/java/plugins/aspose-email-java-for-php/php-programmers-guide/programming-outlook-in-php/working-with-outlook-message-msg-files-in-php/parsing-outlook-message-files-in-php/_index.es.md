@@ -1,12 +1,12 @@
 ---
-title: "Análisis de archivos de mensajes de Outlook en PHP"
+title: "Análisis de Archivos de Mensajes de Outlook en PHP"
 url: /es/java/parsing-outlook-message-files-in-php/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Análisis de archivos de mensajes de Outlook**
-Para analizar el archivo de mensajes de Outlook usando **Aspose.Email Java para PHP**, simplemente invoca **ParseOutlookMessageFile** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Análisis de Archivos de Mensajes de Outlook**
+Para analizar un archivo de mensaje de Outlook usando **Aspose.Email Java para PHP**, simplemente invoca el módulo **ParseOutlookMessageFile**. Aquí puedes ver un código de ejemplo.
 
 **Código PHP**
 
@@ -16,21 +16,21 @@ Para analizar el archivo de mensajes de Outlook usando **Aspose.Email Java para 
 
 $outlook_message_file = $mapiMessage->fromFile($dataDir . "Message.msg");
 
-\# Display sender's name
+\# Mostrar el nombre del remitente
 
-print "Sender Name : " . $outlook_message_file->getSenderName();
+print "Nombre del Remitente : " . $outlook_message_file->getSenderName();
 
-#Display Subject
+#Mostrar Asunto
 
-print "Subject : " . $outlook_message_file->getSubject();
+print "Asunto : " . $outlook_message_file->getSubject();
 
-\# Display Body
+\# Mostrar Cuerpo
 
-print "Body : " . $outlook_message_file->getBody();
+print "Cuerpo : " . $outlook_message_file->getBody();
 
 ```
-## **Descargar Running Code**
-Download **Análisis de archivos de mensajes de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Análisis de Archivos de Mensajes de Outlook (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookMessageFiles/ParseOutlookMessageFile.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookMessageFiles/ParseOutlookMessageFile.php)

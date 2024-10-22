@@ -1,50 +1,50 @@
 ---
-title: "Creación de un archivo de mensajes de Outlook (MSG)"
-url: /es/java/creating-an-outlook-message-msg-file/
+title: "Creando un Archivo de Mensaje de Outlook (MSG)"
+url: /es/java/creando-un-archivo-de-mensaje-de-outlook-msg/
 weight: 20
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Nuestros consejos de migración muestran cómo se pueden usar los productos de Aspose para mejorar sus aplicaciones y liberarlo de la dependencia de la automatización tradicional.
+Nuestros consejos de migración muestran cómo los productos Aspose pueden ser utilizados para mejorar tus aplicaciones y liberarte de la dependencia de la automatización tradicional.
 
-Este consejo de migración muestra cómo crear un archivo de mensajes de Outlook (MSG) usando [Automatización de Microsoft Office](#office-automation) and [Aspose.Email](#asposeemail-for-java). Los ejemplos de código establecen las propiedades básicas del archivo MSG (To, Cc, Subject y HTML body) antes de guardar el archivo en el disco.
+Este consejo de migración muestra cómo crear un archivo de mensaje de Outlook (MSG) utilizando [Microsoft Office Automation](#office-automation) y [Aspose.Email](#asposeemail-for-java). Las muestras de código establecen las propiedades básicas del archivo MSG - Para, Cc, Asunto y cuerpo HTML - antes de guardar el archivo en el disco.
 
-{{% /alert %}}
-## **Automatización de oficinas**
-Para usar Automatización de oficinas, Microsoft Outlook debe estar instalado en la máquina en la que se ejecuta el código. También es necesaria una referencia a Outlook.Interop.dll.
-### **Ejemplos de programación**
-Los siguientes fragmentos de código crean un archivo MSG mediante Automatización de oficinas.
+{{% /alert %}} 
+## **Automatización de Office**
+Para usar la Automatización de Office, Microsoft Outlook debe estar instalado en la máquina donde se ejecuta el código. También se requiere una referencia a Outlook.interop.dll.
+### **Muestras de Programación**
+Las siguientes muestras de código crean un archivo MSG utilizando la Automatización de Office.
 
 **C#**
 
 ~~~cs
 
- // Creates a new Outlook Application instance
+ // Crea una nueva instancia de la Aplicación de Outlook
 
 Outlook.Application objOutlook = new Outlook.Application();
 
-// Creating a new Outlook message from the Outlook Application instance
+// Creando un nuevo mensaje de Outlook desde la instancia de la Aplicación de Outlook
 
 Outlook.MailItem msgInterop = (Outlook.MailItem)(objOutlook.CreateItem(Outlook.OlItemType.olMailItem));
 
-// Set recipient information
+// Establecer la información del destinatario
 
 msgInterop.To = "to@domain.com";
 
 msgInterop.CC = "cc@domain.com";
 
-// Set the message subject
+// Establecer el asunto del mensaje
 
-msgInterop.Subject = "Subject";
+msgInterop.Subject = "Asunto";
 
-// Set some HTML text in the HTML body
+// Establecer un texto HTML en el cuerpo HTML
 
-msgInterop.HTMLBody = "<h3>HTML Heading 3</h3> <u>This is underlined text</u>";
+msgInterop.HTMLBody = "<h3>Encabezado HTML 3</h3> <u>Este es un texto subrayado</u>";
 
-// Save the MSG file in local disk
+// Guardar el archivo MSG en el disco local
 
 string strMsg = @"c:\\temp\TestInterop.msg";
 
@@ -54,27 +54,27 @@ msgInterop.SaveAs(strMsg, Outlook.OlSaveAsType.olMSG);
 
 ~~~
 ## **Aspose.Email para Java**
-Los ejemplos siguientes utilizan Aspose.Email para crear el archivo MSG de Outlook. Está escrito en Java puro y no utiliza COM Interop. No se requiere la instalación de Outlook para crear el archivo msg de esta manera.
+Las muestras a continuación utilizan Aspose.Email para crear el archivo MSG de Outlook. Está escrito en Java puro y no utiliza COM Interop. No se requiere la instalación de Outlook para crear el archivo msg de esta manera.
 
 ~~~Java
 
-// Create an instance of the Aspose.Email.MailMessage class
+// Crear una instancia de la clase Aspose.Email.MailMessage
 MailMessage msg = new MailMessage();
 
-// Set recipients information
+// Establecer la información de los destinatarios
 msg.setTo(MailAddressCollection.to_MailAddressCollection("to@domain.com"));
 msg.setCC(MailAddressCollection.to_MailAddressCollection("cc@domain.com"));
 
-// Set the subject
-msg.setSubject("Subject");
+// Establecer el asunto
+msg.setSubject("Asunto");
 
-// Set HTML body
-msg.setHtmlBody("<h3>HTML Heading 3</h3> <u>This is underlined text</u>");
+// Establecer el cuerpo HTML
+msg.setHtmlBody("<h3>Encabezado HTML 3</h3> <u>Este es un texto subrayado</u>");
 
-// Add an attachment
+// Agregar un archivo adjunto
 msg.getAttachments().addItem(new Attachment("test.txt"));
 
-// Save it in local disk
+// Guardarlo en el disco local
 String strMsg = "c:\\ TestAspose.msg";
 msg.save(strMsg, SaveOptions.getDefaultMsgUnicode());
 

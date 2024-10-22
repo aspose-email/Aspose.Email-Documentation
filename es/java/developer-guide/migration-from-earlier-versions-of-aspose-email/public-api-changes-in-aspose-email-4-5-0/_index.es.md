@@ -5,17 +5,17 @@ weight: 70
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
-## **API añadidas**
-- Field/Enum `MapiPropertyTag.PR_IN_REPLY_TO_ID`
-- Field/Enum `MapiPropertyTag.PR_IN_REPLY_TO_ID_A`
-- Field/Enum `MapiPropertyTag.PR_IN_REPLY_TO_ID_W`
+A continuación se presenta una lista de los cambios realizados en la API pública, como miembros añadidos, renombrados, eliminados o en desuso, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tiene alguna inquietud sobre algún cambio listado, por favor plantee su inquietud en el foro de soporte de Aspose.Email.
+## **APIs añadidas**
+- Campo/Enum `MapiPropertyTag.PR_IN_REPLY_TO_ID`
+- Campo/Enum `MapiPropertyTag.PR_IN_REPLY_TO_ID_A`
+- Campo/Enum `MapiPropertyTag.PR_IN_REPLY_TO_ID_W`
 
-- Method `MapiAttachmentCollection.add(String, MapiMessage)`
+- Método `MapiAttachmentCollection.add(String, MapiMessage)`
 
-- Method `StringComparisonField.contains(String, boolean)`
-- Method `StringComparisonField.equals(String, boolean)`
-- Method `StringComparisonField.notContains(String, boolean)`
-- Method `StringComparisonField.notEquals(String, boolean)`
-## **API eliminadas**
-- none
+- Método `StringComparisonField.contains(String, boolean)`
+- Método `StringComparisonField.equals(String, boolean)`
+- Método `StringComparisonField.notContains(String, boolean)`
+- Método `StringComparisonField.notEquals(String, boolean)`
+## **APIs eliminadas**
+- ninguno

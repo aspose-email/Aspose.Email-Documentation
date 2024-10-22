@@ -1,5 +1,5 @@
 ---
-title: "Crear una tarea"
+title: "Crear una Tarea"
 url: /es/net/create-a-task/
 weight: 50
 type: docs
@@ -7,11 +7,11 @@ type: docs
 
 
 ## **VSTO**
-A continuación se muestra el código para crear y guardar tareas en Outlook:
+A continuación se muestra el código para crear y guardar una tarea en Outlook:
 
 ``` cs
 
-   // Date operations
+   // Operaciones de fecha
 
   DateTime today = DateTime.Parse("10:00 AM");
 
@@ -36,16 +36,16 @@ A continuación se muestra el código para crear y guardar tareas en Outlook:
 
 ```
 ## **Aspose.Email**
-#### **Creación y almacenamiento de tareas de Outlook**
-Para crear y guardar una tarea en un disco:
+#### **Creando y Guardando Tareas de Outlook**
+Para crear y guardar una tarea en el disco:
 
-1. Crea una instancia de un nuevo objeto de la clase MapiTask.
-2. Introduzca la información de las propiedades de la tarea.
-3. Guarda la tarea en un disco en formato MSG.
+1. Instanciar un nuevo objeto de la clase MapiTask.
+2. Ingresar la información de las propiedades de la tarea.
+3. Guardar la tarea en el disco en formato MSG.
 
 ``` cs
 
-   MapiTask task = new MapiTask("To Do", "Just click and type to add new task", DateTime.Now, DateTime.Now.AddDays(3));
+   MapiTask task = new MapiTask("Por Hacer", "Simplemente haz clic y escribe para agregar una nueva tarea", DateTime.Now, DateTime.Now.AddDays(3));
 
   task.PercentComplete = 20;
 
@@ -65,15 +65,15 @@ Para crear y guardar una tarea en un disco:
 
   task.Users.Ownership = MapiTaskOwnership.AssignersCopy;
 
-  task.Companies = new string[] { "company1", "company2", "company3" };
+  task.Companies = new string[] { "empresa1", "empresa2", "empresa3" };
 
-  task.Categories = new string[] { "category1", "category2", "category3" };
+  task.Categories = new string[] { "categoría1", "categoría2", "categoría3" };
 
-  task.Mileage = "Some test mileage";
+  task.Mileage = "Algún kilometraje de prueba";
 
-  task.Billing = "Test billing information";
+  task.Billing = "Información de facturación de prueba";
 
-  task.Users.Delegator = "Test Delegator";
+  task.Users.Delegator = "Delegador de prueba";
 
   task.Sensitivity = MapiSensitivity.Personal;
 
@@ -85,11 +85,11 @@ Para crear y guardar una tarea en un disco:
 
 
 ```
-## **Descargar código de muestra**
+## **Descargar Código de Ejemplo**
 - [Codeplex](https://asposevsto.codeplex.com/releases/view/616980)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.1)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977)
-## **Descargar Running Code**
+## **Descargar Código en Ejecución**
 - [Codeplex](https://asposevsto.codeplex.com/SourceControl/latest#Aspose.Email)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Create%20a%20Task)
 - [Code.MSDN](https://code.msdn.microsoft.com/AsposeEmail-Vs-VSTO-fa535977/view/SourceCode#content)

@@ -5,10 +5,9 @@ weight: 160
 type: docs
 ---
 
+Aspose.Email admite el acceso a mensajes desde el buzón compartido. Para lograr esto, te conectas a tu buzón principal utilizando la clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient). Para acceder a los mensajes del buzón compartido, pasas el buzón compartido como un parámetro de cadena al método [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20java.lang.String,%20boolean\)) o [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)).
 
-Aspose.Email admite el acceso a los mensajes del buzón compartido. Para ello, debe conectarse a su buzón de correo principal mediante el [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) clase. Para acceder a los mensajes del buzón compartido, se pasa el buzón compartido como parámetro de cadena al [listMessages](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20java.lang.String,%20boolean\)) or [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)) method.
-
-En el siguiente ejemplo de código se muestra cómo acceder a los mensajes del buzón compartido mediante [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)) method.
+El siguiente ejemplo de código muestra cómo acceder a mensajes del buzón compartido utilizando el método [listItems](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listItems\(java.lang.String,%20java.lang.String\)).
 
 ~~~Java
 final String mailboxUri = "<HOST>";

@@ -1,26 +1,26 @@
 ---
-title: "Obtención de información de buzones mediante el cliente WebDAV"
+title: "Obteniendo información de la bandeja de entrada utilizando el cliente WebDav"
 url: /es/java/getting-mailbox-information-using-webdav-client/
 weight: 50
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-The [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient) la clase tiene miembros que se pueden usar para obtener información de buzones de un servidor de Exchange llamando al [ExchangeClient.getMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#getMailboxInfo\(\)) método. Devuelve una instancia de tipo [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo). Obtenga información sobre los buzones de correo de propiedades como [MailboxUri](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo#getMailboxUri\(\)), [InboxUri](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo#getInboxUri\(\)) , y [DraftsUri](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo#getDraftsUri\(\)).
+La clase [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient) tiene miembros que se pueden usar para obtener información de la bandeja de entrada desde un servidor Exchange llamando al método [ExchangeClient.getMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#getMailboxInfo\(\)). Devuelve una instancia del tipo [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo). Obtenga información de la bandeja de entrada de propiedades como [MailboxUri](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo#getMailboxUri\(\)), [InboxUri](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo#getInboxUri\(\)) , y [DraftsUri](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo#getDraftsUri\(\)).
 
-En este artículo se muestra cómo acceder a la información de los buzones directamente desde un servidor Exchange.
+Este artículo muestra cómo acceder a la información de la bandeja de entrada directamente desde un servidor Exchange.
 
-{{% /alert %}}
-## **Obtenga información de buzones de correo de un servidor Exchange**
-Para obtener la información del buzón de Exchange:
+{{% /alert %}} 
+## **Obtener información de la bandeja de entrada desde un servidor Exchange**
+Para obtener la información de la bandeja de entrada de Exchange:
 
-1. Crea una instancia del [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient) class.
-1. Especifique el servidor Exchange, el nombre de usuario, la contraseña y el dominio en el constructor ExchangeClient.
-1. Llame al [ExchangeClient.getMailboxSize()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#getMailboxSize\(\)) método para obtener el tamaño del buzón.
-1. Llame al [ExchangeClient.getMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#getMailboxInfo\(\)) método para obtener una instancia del [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo) class.
-1. Obtenga la información del buzón de correo mediante el [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo) diferentes propiedades de la clase.
+1. Cree una instancia de la [ExchangeClient](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient) class.
+1. Especifique el servidor Exchange, el nombre de usuario, la contraseña y el dominio en el constructor de ExchangeClient.
+1. Llame al método [ExchangeClient.getMailboxSize()](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#getMailboxSize\(\)) para obtener el tamaño de la bandeja de entrada.
+1. Llame al método [ExchangeClient.getMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangeclient#getMailboxInfo\(\)) para obtener una instancia de la [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo) class.
+1. Obtenga la información de la bandeja de entrada utilizando las diferentes propiedades de la [ExchangeMailboxInfo](https://apireference.aspose.com/email/java/com.aspose.email/exchangemailboxinfo) class.
 
-Los códigos de ejemplo que aparecen a continuación proporcionan información sobre los buzones de correo de Exchange.
+Los códigos de muestra a continuación obtienen información de la bandeja de entrada de Exchange.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-exchange-GetMailboxInformationFromExchangeServer-GetMailboxInformationFromAnExchangeServer.java" >}}

@@ -1,48 +1,48 @@
 ---
-title: "Descripción general del producto"
+title: "Descripción del Producto"
 url: /es/java/product-overview/
 weight: 10
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-![todo:image_alt_text](product-overview_1.png)
+![todo:texto_alternativo_imagen](product-overview_1.png)
 ## **¡Bienvenido a Aspose.Email para Java!**
-Aspose.Email para Java es una API de Java que permite a las aplicaciones Java leer y escribir documentos de Microsoft Outlook® sin usar Microsoft Outlook®. Aspose.Email para Java proporciona una serie de funciones clave, como la administración de los destinatarios, el asunto, el cuerpo y los archivos adjuntos en los documentos MSG de Microsoft Outlook® y la lectura de la información de contactos, mensajes y carpetas de los documentos PST de Microsoft Outlook®. También se puede usar para crear, modificar y convertir mensajes de correo electrónico en formatos EML, MSG y MHT.
+Aspose.Email para Java es una API de Java que permite a las aplicaciones Java leer y escribir documentos de Microsoft Outlook® sin utilizar Microsoft Outlook®. Aspose.Email para Java ofrece una serie de características clave, como la gestión de destinatarios, asunto, cuerpo, archivos adjuntos en documentos MSG de Microsoft Outlook® y la lectura de contactos, mensajes e información de carpetas de documentos PST de Microsoft Outlook®. También se puede utilizar para crear, modificar y convertir mensajes de correo electrónico en formatos EML, MSG y MHT.
 
-{{% /alert %}}
-## **Descripción del producto**
-Aspose.Email para Java se puede usar con cualquier tipo de aplicación, ya sea una aplicación web o de escritorio. Aspose.Email para Java también proporciona ejemplos prácticos para que los desarrolladores comprendan mejor Aspose.Email para Java.
+{{% /alert %}} 
+## **Descripción del Producto**
+Aspose.Email para Java se puede utilizar con cualquier tipo de aplicación, ya sea una aplicación web o de escritorio. Aspose.Email para Java también proporciona ejemplos de trabajo para dar a los desarrolladores una mejor comprensión de Aspose.Email para Java.
 
-Aspose.Email para Java no admite archivos MSG (formato de mensaje de Outlook) y permite guardar archivos MSG después de aplicar cambios al contenido original. También puede analizar los archivos adjuntos y guardarlos en el disco.
+Aspose.Email para Java no puede leer archivos MSG (formato de mensaje de Outlook) y permite guardar archivos MSG después de aplicar cambios al contenido original. También puede analizar archivos adjuntos y guardarlos en disco.
 
-También se admite la lectura de archivos PST de Outlook. Obtenga las carpetas, las subcarpetas, el recuento de mensajes, la información de los mensajes (asunto, remitente, destinatarios, etc.) y la información de contacto de los archivos PST. Extraiga los mensajes de un archivo PST y guárdelos en el disco en formato MSG.
+La lectura de archivos PST de Outlook también es compatible. Obtenga las carpetas, subcarpetas, recuento de mensajes, información de mensajes (asunto, remitente, destinatarios, etc.) e información de contactos de archivos PST. Extraiga mensajes de un archivo PST y guárdelos en disco en formato MSG.
 
-Los desarrolladores utilizan Aspose.Email para Java para realizar una variedad de tareas en sus aplicaciones. Por ejemplo, abrir o guardar correos electrónicos en forma de archivos EML o MHT, analizarlos o leerlos y guardar los mensajes de Microsoft Outlook y los archivos PST de Outlook, tratar los mensajes MIME e incrustar objetos en los mensajes de correo electrónico.
-## **Features**
-### **Características del formato de archivo de mensajes de correo electrónico**
+Aspose.Email para Java es utilizado por desarrolladores para realizar una variedad de tareas en sus aplicaciones. Por ejemplo, abrir o guardar correos electrónicos en forma de archivos EML o MHT, analizar o leer y guardar mensajes de Microsoft Outlook y archivos PST de Outlook, manejar mensajes MIME, incrustar objetos en los mensajes de correo electrónico.
+## **Características**
+### **Características del Formato de Archivo de Mensaje de Correo Electrónico**
 - Soporta mensajes de correo electrónico en formatos EML, MSG y MHTML.
-- Crea un mensaje nuevo.
-- Modifique el mensaje existente y actualice el contenido, como el asunto, el remitente, los destinatarios, el cuerpo, los archivos adjuntos, etc.
-- Cargue el mensaje existente y obtenga el contenido del mensaje, como el asunto, los archivos adjuntos, el remitente, los destinatarios, etc.
-- Gestione (añada o elimine) los archivos adjuntos en los mensajes de correo electrónico.
-- Crea un mensaje de correo electrónico con formato HTML.
-- Crea un mensaje en modo borrador (solo MSG).
-- Lee los archivos adjuntos de los mensajes de correo electrónico anidados.
-- Convierte mensajes desde/hacia cualquiera de los formatos compatibles.
-### **Características del archivo MSG**
-- Crea nuevos documentos MSG desde cero.
-- Abra los documentos MSG existentes.
-- Acceda al contenido de MSG.
-- Modifique los documentos MSG existentes.
-- Recupera varios destinatarios.
-- Acceda a las propiedades de MAPI asociadas a los documentos MSG.
-- Analice el archivo adjunto del documento MSG.
-- Guarde el archivo adjunto en el disco.
-### **Características de los archivos PST/OST**
-- Cargue el archivo PST de Outlook desde el disco y obtenga información sobre todas sus carpetas (solo se admiten los formatos Unicode).
-- Obtenga la información de los mensajes de cualquier carpeta del archivo PST, por ejemplo, asunto, remitente, archivos adjuntos, etc.
-- Extraiga los mensajes del archivo PST y guárdelos en el disco en formato MSG.
-- Lea la información de contactos del archivo PST y guárdela en el disco en formato MSG.
-- Soporte para leer/manipular formatos de archivo OST (por el momento no se admite la creación de formatos OST)
+- Crear nuevo mensaje.
+- Modificar mensaje existente y actualizar contenidos como asunto, remitente, destinatarios, cuerpo, archivos adjuntos, etc.
+- Cargar mensaje existente y obtener contenidos del mensaje como asunto, archivos adjuntos, remitente, destinatarios, etc.
+- Gestionar (agregar/quitar) archivos adjuntos en el mensaje de correo electrónico.
+- Crear mensaje de correo electrónico en formato HTML.
+- Crear mensaje en modo borrador (solo MSG).
+- Leer archivos adjuntos de mensajes de correo electrónico anidados.
+- Convertir mensajes de/a cualquiera de los formatos soportados.
+### **Características del Archivo MSG**
+- Crear nuevos documentos MSG desde cero.
+- Abrir documentos MSG existentes.
+- Acceder a los contenidos de MSG.
+- Modificar documentos MSG existentes.
+- Recuperar múltiples destinatarios.
+- Acceder a las propiedades MAPI asociadas con los documentos MSG.
+- Analizar archivos adjuntos del documento MSG.
+- Guardar archivos adjuntos en el disco.
+### **Características del Archivo PST/OST**
+- Cargar archivo PST de Outlook desde el disco y obtener información sobre todas sus carpetas (solo se admiten formatos Unicode).
+- Obtener la información de los mensajes de cualquier carpeta en el archivo PST, por ejemplo, asunto, remitente, archivos adjuntos, etc.
+- Extraer mensajes de un archivo PST y guardarlos en disco en formato MSG.
+- Leer información de contactos de un archivo PST y guardarla en disco en formato MSG.
+- Soporte para leer/manipular formatos de archivo OST (no se soporta en este momento la creación de formatos OST).

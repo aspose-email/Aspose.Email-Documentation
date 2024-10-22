@@ -5,13 +5,13 @@ weight: 10
 type: docs
 ---
 
-## **Envío de mensajes con MailGun y SendGrid**
+## **Enviando mensajes usando MailGun y SendGrid**
 
-Aspose.Email proporciona una API unificada para enviar mensajes de correo electrónico mediante los servicios MailGun o SendGrid. La API le permite inicializar un cliente, preparar y enviar el mensaje de correo electrónico.
+Aspose.Email proporciona una API unificada para enviar mensajes de correo electrónico utilizando los servicios de MailGun o SendGrid. La API te permite inicializar un cliente, preparar y enviar el mensaje de correo electrónico.
 
-En primer lugar, es importante configurar las opciones según el servicio que se vaya a utilizar para enviar mensajes. Con el [DeliveryServiceOptions](https://reference.aspose.com/email/java/com.aspose.email/deliveryserviceoptions/) clase, establezca los parámetros de DeliveryServiceClient. El siguiente ejemplo de código le mostrará cómo configurar las opciones de los servicios.
+Primero, es importante configurar las opciones dependiendo de qué servicio se va a utilizar para enviar mensajes. Con la clase [DeliveryServiceOptions](https://reference.aspose.com/email/java/com.aspose.email/deliveryserviceoptions/), establece los parámetros del DeliveryServiceClient. El siguiente ejemplo de código te mostrará cómo configurar las opciones para los servicios.
 
-**Cliente MailGun** options:
+**Opciones del cliente de MailGun**:
 
 ```java
 String domain = "YOUR_MAILGUN_DOMEN";
@@ -21,19 +21,19 @@ opt.setDomain(domain);
 opt.setApiKey(privApiKey);
 ```
 
-**Cliente SendGrid** options:
+**Opciones del cliente de SendGrid**:
 
 ```java
 String privApiKey = "YOUR_SENDGRID_PRIVATE_API_KEY";
 SendGridClientOptions opt = new SendGridClientOptions();
 opt.setApiKey(privApiKey);
 ```
-A continuación, llame a la instancia de cliente requerida mediante el generador.
+Luego, llama a la instancia del cliente requerida utilizando el constructor.
 
 ```java
 IDeliveryServiceClient client = DeliveryServiceClientFactory.get(opt);
 ```
-Por último, prepare y envíe un mensaje de correo electrónico.
+Finalmente, prepara y envía un mensaje de correo electrónico.
 
 ```java
 MailMessage eml = new MailMessage("fromAddress", "toAddress", "subject", "body");
@@ -46,5 +46,3 @@ if (!resp.isSuccessful()) {
     }
 }
 ```
-
-

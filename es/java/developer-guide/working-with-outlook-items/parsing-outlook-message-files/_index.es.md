@@ -1,54 +1,52 @@
 ---
-title: "Análisis de archivos de mensajes de Outlook"
+title: "Analizando Archivos de Mensaje de Outlook"
 url: /es/java/parsing-outlook-message-files/
 weight: 40
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Con Aspose.Email para Java, los desarrolladores no solo pueden cargar sino también analizar el contenido de los archivos de mensajes de Outlook.
+Usando Aspose.Email para Java, los desarrolladores no solo pueden cargar sino también analizar el contenido de los archivos de mensaje de Outlook.
 
-- Para cargar archivos MSG desde el disco, utilice el [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) clase estática [Load](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#load-java.lang.String-) method.
-- Para analizar el contenido del archivo MSG, [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) expone una serie de métodos.
+- Para cargar archivos MSG desde el disco, use el método estático [Load](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#load-java.lang.String-) de la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/).
+- Para analizar el contenido del archivo MSG, la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) expone varios métodos.
 
-En este tema se muestra cómo cargar y, a continuación, analizar un archivo MSG para mostrar su contenido.
+Este tema muestra cómo cargar y luego analizar un archivo MSG para mostrar su contenido.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Aspose.Email para Java proporciona la [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) clase que se usa para abrir y analizar un archivo MSG. Como puede haber muchos destinatarios en un archivo MSG, [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) la clase expone el [getRecipients()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getRecipients--) método que devuelve un [MapiRecipientCollection](https://reference.aspose.com/email/java/com.aspose.email/mapirecipientcollection/) que representa una colección de [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) objetos. El [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) El objeto expone además los métodos para trabajar con los atributos del destinatario.
+Aspose.Email para Java proporciona la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) que se utiliza para abrir y analizar un archivo MSG. Dado que puede haber muchos destinatarios en un archivo MSG, la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) expone el método [getRecipients()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getRecipients--) que devuelve una [MapiRecipientCollection](https://reference.aspose.com/email/java/com.aspose.email/mapirecipientcollection/) que representa una colección de objetos [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/). El objeto [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) expone además métodos para trabajar con atributos del destinatario.
 
-La siguiente secuencia de pasos cumple este propósito:
+La siguiente secuencia de pasos sirve a este propósito:
 
-1. Crea una instancia del [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) clase para cargar un archivo MSG desde [Load](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#load-java.lang.String-) método estático.
-2. Muestre el nombre, el asunto y el cuerpo del remitente del archivo MSG mediante [getSenderName()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getSenderName--), [getSubject()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getSubject--) and [getBody()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getBody--) methods.
-3. Llame al [getRecipients()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getRecipients--) método expuesto por el [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) clase para obtener una referencia a la colección de [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) objetos asociados al archivo MSG.
-4. Recorre el [MapiRecipientCollection](https://reference.aspose.com/email/java/com.aspose.email/mapirecipientcollection/) colección para mostrar el contenido de cada [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) objetar a través de sus métodos públicos.
+1. Cree una instancia de la clase [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) para cargar un archivo MSG desde el método estático [Load](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#load-java.lang.String-).
+2. Muestre el nombre del remitente, el asunto y el cuerpo del archivo MSG utilizando los métodos [getSenderName()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getSenderName--), [getSubject()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getSubject--) y [getBody()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getBody--).
+3. Llame al método [getRecipients()](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/#getRecipients--) expuesto por la clase [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) para obtener una referencia a la colección de objetos [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) asociados con el archivo MSG.
+4. Recorra la colección [MapiRecipientCollection](https://reference.aspose.com/email/java/com.aspose.email/mapirecipientcollection/) para mostrar el contenido de cada objeto [MapiRecipient](https://reference.aspose.com/email/java/com.aspose.email/mapirecipient/) a través de sus métodos públicos.
 
 ```java
-// The path to the resource directory.
+// La ruta al directorio de recursos.
 String dataDir = Utils.getSharedDataDir(ParsingOutlookMessageFiles.class) + "outlook/";
-
-//Instantiate an MSG file to load an MSG file from disk
+//Instanciar un archivo MSG para cargar un archivo MSG del disco
 MapiMessage outlookMessageFile = MapiMessage.fromFile(dataDir + "message.msg");
-//Display sender's name
+//Mostrar el nombre del remitente
 System.out.println("Sender Name : " + outlookMessageFile.getSenderName());
-//Display Subject
+//Mostrar Asunto
 System.out.println("Subject : " + outlookMessageFile.getSubject());
-//Display Body
+//Mostrar Cuerpo
 System.out.println("Body : " + outlookMessageFile.getBody());
-//Display Recipient's info
+//Mostrar información del Destinatario
 System.out.println("Recipients : \n");
-
-//Recorre el recipients collection associated with the MapiMessage object
+//Recorrer la colección de destinatarios asociada con el objeto MapiMessage
 for (int i = 0; i < outlookMessageFile.getRecipients().size(); i++) {
-	//Set a reference to the MapiRecipient object
+	//Establecer una referencia al objeto MapiRecipient
 	MapiRecipient rcp = (MapiRecipient) outlookMessageFile.getRecipients().get_Item(i);
-	//Display recipient email address
+	//Mostrar la dirección de correo electrónico del destinatario
 	System.out.println("Email : " + rcp.getEmailAddress());
-	//Display recipient name
+	//Mostrar el nombre del destinatario
 	System.out.println("Name : " + rcp.getDisplayName());
-	//Display recipient type
+	//Mostrar el tipo de destinatario
 	System.out.println("Recipient Type : " + rcp.getRecipientType());
 }
 ```
@@ -56,52 +54,51 @@ for (int i = 0; i < outlookMessageFile.getRecipients().size(); i++) {
 {{% alert %}}
 **¡Pruébalo!**
 
-Analice archivos de correo electrónico en línea con la versión gratuita [**Aplicación de análisis Aspose.Email**](https://products.aspose.app/email/es/parser).
+Analiza archivos de correo electrónico en línea con el **[Aplicación Aspose.Email Parser](https://products.aspose.app/email/es/parser)** gratuita.
 {{% /alert %}}
 
-## **Obtener un tipo de elemento de un mensaje MAPI**
+## **Obtener un Tipo de Elemento de un Mensaje MAPI**
 
-Aspose.Email ofrece una [MapiItemType](https://reference.aspose.com/email/java/com.aspose.email/mapiitemtype/) enumeración que representa un tipo de elemento. Se puede usar para convertir mensajes en un objeto de una clase correspondiente derivada del [IMapiMessageItem](https://reference.aspose.com/email/java/com.aspose.email/imapimessageitem) interfaz. Esto evita que los usuarios comprueben el valor de la propiedad MessageClass antes de la conversión del mensaje.
+Aspose.Email ofrece un enum [MapiItemType](https://reference.aspose.com/email/java/com.aspose.email/mapiitemtype/) que representa un tipo de elemento. Se puede usar para la conversión de un mensaje en un objeto de una clase correspondiente derivada de la interfaz [IMapiMessageItem](https://reference.aspose.com/email/java/com.aspose.email/imapimessageitem). Esto evita que los usuarios verifiquen el valor de la propiedad MessageClass antes de la conversión del mensaje.
 
-El siguiente ejemplo de código muestra cómo recorrer en iteración los mensajes de una carpeta y convertir cada mensaje MAPI en el tipo de elemento MAPI correspondiente, según el tipo de mensaje:
+El siguiente ejemplo de código demuestra cómo iterar a través de los mensajes en una carpeta y convertir cada mensaje MAPI en un tipo de elemento MAPI correspondiente, dependiendo del tipo del mensaje:
 
 ```java
 for (MessageInfo messageInfo : folder.enumerateMessages()) {
     MapiMessage msg = pst.extractMessage(messageInfo);
 
     switch (msg.getSupportedType()) {
-        // Non-supported type. MapiMessage cannot be converted to an appropriate item type.
-        // Just use in MSG format.
+        // Tipo no soportado. MapiMessage no se puede convertir en un tipo de elemento apropiado.
+        // Solo usar en formato MSG.
         case MapiItemType.None:
             break;
-        // An email message. Conversion isn't required.
+        // Un mensaje de correo electrónico. No se requiere conversión.
         case MapiItemType.Message:
             break;
-        // A contact item. Can be converted to MapiContact.
+        // Un elemento de contacto. Se puede convertir a MapiContact.
         case MapiItemType.Contact:
             MapiContact contact = (MapiContact) msg.toMapiMessageItem();
             break;
-        // A calendar item. Can be converted to MapiCalendar.
+        // Un elemento de calendario. Se puede convertir a MapiCalendar.
         case MapiItemType.Calendar:
             MapiCalendar calendar = (MapiCalendar) msg.toMapiMessageItem();
             break;
-        // A distribution list. Can be converted to MapiDistributionList.
+        // Una lista de distribución. Se puede convertir a MapiDistributionList.
         case MapiItemType.DistList:
             MapiDistributionList dl = (MapiDistributionList) msg.toMapiMessageItem();
             break;
-        // A Journal entry. Can be converted to MapiJournal.
+        // Una entrada de diario. Se puede convertir a MapiJournal.
         case MapiItemType.Journal:
             MapiJournal journal = (MapiJournal) msg.toMapiMessageItem();
             break;
-        // A StickyNote. Can be converted to MapiNote.
+        // Una nota adhesiva. Se puede convertir a MapiNote.
         case MapiItemType.Note:
             MapiNote note = (MapiNote) msg.toMapiMessageItem();
             break;
-        // A Task item. Can be converted to MapiTask.
+        // Un elemento de tarea. Se puede convertir a MapiTask.
         case MapiItemType.Task:
             MapiTask task = (MapiTask) msg.toMapiMessageItem();
             break;
     }
 }
 ```
-

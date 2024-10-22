@@ -1,12 +1,12 @@
 ---
-title: "Recepción de notificaciones de mensajes enviados correctamente y con errores"
-url: /es/java/receiving-notifications-for-successfully-sent-and-failed-messages/
+title: "Recibir Notificaciones de Mensajes Enviados con Éxito y Fallidos"
+url: /es/java/recibiendo-notificaciones-para-mensajes-enviados-con-exito-y-fallidos/
 weight: 90
 type: docs
 ---
 
 
-Si desea recibir la notificación de entrega de los mensajes enviados correctamente y de los mensajes fallidos, puede utilizar el operador pipe (|) para [DeliveryNotificationOptions](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#getDeliveryNotificationOptions\(\)) propiedad del [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage) clase. En el siguiente fragmento de código, se muestra cómo recibir notificaciones de mensajes enviados correctamente y mensajes fallidos.
+Cuando deseas recibir la notificación de entrega tanto para mensajes enviados con éxito como para los fallidos, puedes usar el operador de pipe (|) para la propiedad [DeliveryNotificationOptions](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#getDeliveryNotificationOptions\(\)) de la clase [MailMessage](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage). El siguiente fragmento de código te muestra cómo recibir notificaciones para mensajes enviados con éxito y fallidos.
 
 
 

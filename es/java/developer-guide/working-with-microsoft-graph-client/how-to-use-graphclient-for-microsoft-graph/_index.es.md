@@ -7,9 +7,9 @@ type: docs
 
 
 ## **Trabajando con GraphClient**
-Una instancia del [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) La clase gestiona la creación de solicitudes, las envía a la API de Microsoft Graph y procesa las respuestas.
+Una instancia de la clase [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) se encarga de construir solicitudes, enviarlas a la API de Microsoft Graph y procesar las respuestas.
 ### **Crear un objeto ITokenProvider**
-Para crear una nueva instancia de [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) clase, necesitas proporcionar una instancia de [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), que puede autenticar las solicitudes en Microsoft Graph.
+Para crear una nueva instancia de la clase [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient), necesitas proporcionar una instancia de [ITokenProvider](https://apireference.aspose.com/email/java/com.aspose.email/ITokenProvider), que puede autenticar solicitudes a Microsoft Graph.
 
 
 ~~~Java
@@ -22,29 +22,29 @@ ITokenProvider tokenProvider = new ITokenProvider() {
 
     @Override
     public OAuthToken getAccessToken(boolean ignoreExistingToken) {
-        // Gets oAuth access token.
-        // If ignoreExistingToken is true, requests new token from a server. Otherwise behavior is depended on whether token exists or not.
-        // If token exists and its expiration date is not expired returns current token, otherwise requests new token from a server.
+        // Obtiene el token de acceso oAuth.
+        // Si ignoreExistingToken es verdadero, solicita un nuevo token desde el servidor. De lo contrario, el comportamiento depende de si el token existe o no.
+        // Si el token existe y su fecha de expiración no ha caducado, devuelve el token actual; de lo contrario, solicita un nuevo token desde el servidor.
         return null;
     }
 
     @Override
     public OAuthToken getAccessToken() {
-        // Gets oAuth access token.
-        // If token exists and its expiration date is not expired returns current token, otherwise requests new token from a server.
+        // Obtiene el token de acceso oAuth.
+        // Si el token existe y su fecha de expiración no ha caducado, devuelve el token actual; de lo contrario, solicita un nuevo token desde el servidor.
         return new OAuthToken("token", expirationDate);
     }
 };
 ~~~
 ### **Obtener un objeto GraphClient**
-Después de configurar el TokenProvider, debe obtener un [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) oponerse a realizar solicitudes contra el servicio.
-Después de tener un [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) si está autenticado, puede empezar a hacer llamadas contra el servicio.
+Después de haber configurado el TokenProvider, debes obtener un objeto [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) para hacer solicitudes al servicio.
+Después de tener un [IGraphClient](https://apireference.aspose.com/email/java/com.aspose.email/IGraphClient) que esté autenticado, puedes comenzar a hacer llamadas al servicio.
 
 
 ~~~Java
 IGraphClient client = GraphClient.getClient(tokenProvider);
 ~~~
-## **Trabaje con carpetas mediante Microsoft Graph**
+## **Trabajar con carpetas usando Microsoft Graph**
 
 ### **Listar carpetas**
 
@@ -57,7 +57,7 @@ for (GraphFolderInfo folderInfo : folders) {
     }
 }
 ~~~
-### **Listar subcarpetas de la carpeta Bandeja de entrada**
+### **Listar subcarpetas de la carpeta de entrada**
 
 
 ~~~Java
@@ -82,7 +82,7 @@ GraphFolderInfo inboxTestSubFolder2 = client.createFolder(newFolder.getItemId(),
 ~~~Java
 GraphFolderInfo sentItemsFolder = client.getFolder(GraphKnownFolders.SentItems);
 ~~~
-### **Carpeta de actualización**
+### **Actualizar carpeta**
 
 
 ~~~Java
@@ -120,7 +120,7 @@ GraphMessageInfoCollection listMessages = client.listMessages(folderColl.get(0).
 // Test subject
 System.out.println(listMessages.get(0).getSubject());
 ~~~
-### **Mover la carpeta y el contenido**
+### **Mover carpeta y contenido**
 
 
 ~~~Java
@@ -132,7 +132,7 @@ GraphFolderInfo folder = client.moveFolder(parentFolder.getItemId(), testFolder.
 ~~~Java
 client.delete(testFolder.getItemId());
 ~~~
-## **Listar mensajes con Microsoft Graph**
+## **Listar mensajes usando Microsoft Graph**
 
 ~~~Java
 GraphMessageInfoCollection messageInfoColl = client.listMessages(GraphKnownFolders.Inbox);
@@ -143,12 +143,12 @@ for (GraphMessageInfo messageInfo : messageInfoColl) {
 
 ### **Listar mensajes por fecha de envío**
 
-The [OrderBy](https://reference.aspose.com/email/java/com.aspose.email/comparisonfield/#orderBy-boolean-) La función se usa para indicar que los mensajes deben ordenarse en orden ascendente según la fecha de envío. Esto permite al cliente recuperar la lista de mensajes del [GraphKnownFolders.Inbox](https://reference.aspose.com/email/java/com.aspose.email/graphknownfolders/#Inbox) carpeta en un orden específico, en este caso, según la fecha de envío.
+La función [OrderBy](https://reference.aspose.com/email/java/com.aspose.email/comparisonfield/#orderBy-boolean-) se usa para indicar que los mensajes deben ordenarse en orden ascendente por su fecha de envío. Esto permite al cliente recuperar la lista de mensajes de la carpeta [GraphKnownFolders.Inbox](https://reference.aspose.com/email/java/com.aspose.email/graphknownfolders/#Inbox) en un orden específico, en este caso, basado en la fecha de envío.
 
-El siguiente ejemplo de código muestra cómo crear una consulta que especifique el orden de los mensajes por fecha de envío y, a continuación, usar esta consulta para obtener una página de mensajes de la carpeta Bandeja de entrada mediante la API Graph:
+El siguiente ejemplo de código muestra cómo crear una consulta que especifica el orden de los mensajes por fecha de envío, y luego usar esta consulta para recuperar una página de mensajes de la carpeta de entrada usando la API de Graph:
 
 ```java
-// create orderby messages query 'ASC'
+// crear consulta de mensajes ordenada 'ASC'
 GraphQueryBuilder builder = new GraphQueryBuilder();
 builder.getSentDate().orderBy(true);
 MailQuery query = builder.getQuery();
@@ -166,35 +166,35 @@ MapiMessage fetchedMessage = client.fetchMessage(messageInfo.getItemId());
 
 ### **Paginación en la lista de mensajes**
 
-La API proporciona soporte de paginación y filtrado para los mensajes de listado. Esto resulta muy útil cuando un buzón tiene un gran número de mensajes y se necesita mucho tiempo para recuperar la información resumida sobre ellos. En el ejemplo de código que aparece a continuación se muestra cómo usar la paginación para conjuntos de mensajes de gran tamaño al enumerar los mensajes de Exchange Server con iGraphClient:
+La API proporciona soporte de paginación y filtrado para listar mensajes. Esto es muy útil cuando un buzón tiene un gran número de mensajes y requiere mucho tiempo para recuperar la información resumida sobre ellos. El siguiente ejemplo de código te mostrará cómo usar la paginación para conjuntos de mensajes grandes al listar mensajes desde Exchange Server usando IGraphClient:
 
 ```java
-// send ping test messages
+// enviar mensajes de prueba de ping
 for (int i = 0; i < 5; i++) {
-    MailMessage eml = new MailMessage(user.EMail, user.EMail, "ping" + i, "test body");
+    MailMessage eml = new MailMessage(user.EMail, user.EMail, "ping" + i, "cuerpo de prueba");
     client.send(MapiMessage.fromMailMessage(eml));
 }
-// waiting for inbox
+// esperando por la bandeja de entrada
 Thread.sleep(10000);
 
-// paging option
+// opción de paginación
 int itemsPerPage = 2;
-// create unread messages filter
+// crear filtro de mensajes no leídos
 GraphQueryBuilder builder = new GraphQueryBuilder();
 builder.isRead().equals(false);
 MailQuery query = builder.getQuery();
 
-// list messages
+// listar mensajes
 GraphMessagePageInfo pageInfo = client.listMessages(GraphKnownFolders.Inbox, new PageInfo(itemsPerPage), query);
 GraphMessageInfoCollection messages = pageInfo.getItems();
 while (!pageInfo.getLastPage())
 {
     pageInfo = client.listMessages(GraphKnownFolders.Inbox, pageInfo.getNextPage(), query);
-    // add next page items to common collection
+    // agregar elementos de la siguiente página a la colección común
     messages.addRange(pageInfo.getItems());
 }
 
-// set messages state as read
+// establecer el estado de los mensajes como leídos
 for (GraphMessageInfo message : messages) {
     client.setRead(message.getItemId());
 }
@@ -205,19 +205,19 @@ for (GraphMessageInfo message : messages) {
 
 ~~~Java
 MapiMessage message = new MapiMessage();
-message.setSubject("Subject");
-message.setBody("Body");
+message.setSubject("Asunto");
+message.setBody("Cuerpo");
 message.setProperty(KnownPropertyList.DISPLAY_TO, "to@host.com");
 message.setProperty(KnownPropertyList.SENDER_NAME, "from");
 message.setProperty(KnownPropertyList.SENT_REPRESENTING_EMAIL_ADDRESS, "from@host.com");
 
 MapiMessage createdMessage = client.createMessage(GraphKnownFolders.Inbox, message);
 ~~~
-### **Mensaje de actualización**
+### **Actualizar mensaje**
 
 
 ~~~Java
-fetchedMessage.setSubject("Update message");
+fetchedMessage.setSubject("Actualizar mensaje");
 MapiMessage updatedMessage = client.updateMessage(fetchedMessage);
 ~~~
 ### **Enviar mensaje**
@@ -226,7 +226,7 @@ MapiMessage updatedMessage = client.updateMessage(fetchedMessage);
 ~~~Java
 client.send(message);
 ~~~
-### **Enviar borrador de mensaje**
+### **Enviar mensaje borrador**
 
 
 ~~~Java
@@ -245,7 +245,7 @@ MapiMessage copiedMessage = client.copyMessage(GraphKnownFolders.Inbox, draftMes
 ~~~Java
 MapiMessage movedMessage = client.moveMessage(GraphKnownFolders.Inbox, draftMessage.getItemId());
 ~~~
-### **Adjuntos de mensajes**
+### **Adjuntos de mensaje**
 
 
 ~~~Java
@@ -260,24 +260,24 @@ for (MapiAttachment att : attachments) {
 ~~~Java
 client.delete(message.getItemId());
 ~~~
-## **Categorías Api**
+## **API de categorías**
 
 
 ~~~Java
-String categoryName = "Test Category";
+String categoryName = "Categoría de prueba";
 int preset = CategoryPreset.Preset10;
 OutlookCategory category = client.createCategory(categoryName, preset);
 OutlookCategory fetchedCategory = client.fetchCategory(category.getId());
 
 List<OutlookCategory> categories = client.listCategories();
 
-fetchedCategory.setDisplayName("Update Category");
+fetchedCategory.setDisplayName("Actualizar categoría");
 fetchedCategory.setPreset(CategoryPreset.Preset11);
 OutlookCategory updatedCategory = client.updateCategory(fetchedCategory);
 
 client.delete(category.getId());
 ~~~
-## **Anula la API**
+## **API de sobrescrituras**
 
 
 ~~~Java
@@ -304,7 +304,7 @@ client.delete(updatedOverride.getId());
 
 ~~~Java
 InboxRule rule = new InboxRule();
-rule.setDisplayName("Test rule");
+rule.setDisplayName("Regla de prueba");
 rule.setPriority(1);
 rule.setEnabled(true);
 rule.setConditions(new RulePredicates());
@@ -323,19 +323,19 @@ for (InboxRule item : listedRules)
 
 InboxRule fetchedRule = client.fetchRule(createdRule.getRuleId());
 
-createdRule.setDisplayName("Test rule 1");
+createdRule.setDisplayName("Regla de prueba 1");
 createdRule.setEnabled(false);
 InboxRule updatedRule = client.updateRule(createdRule);
 
 client.delete(createdRule.getRuleId());
 ~~~
-## **Uso de recursos para admitir varios buzones**
+## **Usando recurso para soportar múltiples buzones**
 
 
 ~~~Java
 сlient.setResource(ResourceType.Users);
 сlient.setResourceId("mailbox");
 сlient.listMessages("mailfolder")
-// back to the current mailbox
+// volver al buzón actual
 сlient.setResource(ResourceType.Me);
 ~~~

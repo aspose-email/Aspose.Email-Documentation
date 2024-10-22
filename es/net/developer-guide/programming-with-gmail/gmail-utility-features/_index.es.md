@@ -1,134 +1,134 @@
 ---
-title: "Funciones de la utilidad Gmail"
+title: "Características de la utilería de Gmail"
 url: /es/net/gmail-utility-features/
 weight: 10
 type: docs
 ---
 
 
-## **Trabajando con FreeBusy Query**
+## **Trabajando con la consulta FreeBusy**
 
-Aspose.Email proporciona un mecanismo de consulta para comprobar si alguna cita vence o no según los criterios. La clase FreeBusyQuery se proporciona para este propósito, que permite preparar una consulta para un calendario en particular.
+Aspose.Email proporciona un mecanismo de consulta para verificar si alguna cita está pendiente o no de acuerdo con los criterios. Se proporciona la clase FreebusyQuery para este propósito, que permite preparar una consulta para un calendario particular.
 
-### **Consulta de un calendario**
+### **Consultando un calendario**
 
-En este ejemplo de código se muestra la función de consultar un calendario. En este ejemplo se realizan las siguientes tareas:
+Este ejemplo de código demuestra la función de consultar un calendario. Las siguientes tareas se realizan en este ejemplo:
 
 1. Crear e insertar un calendario
-1. Crea una cita
-1. Insertar cita
-1. Prepare un BusyQuery gratuito
-1. Obtenga la respuesta gratuita de BusyResponse
+1. Crear una cita
+1. Insertar la cita
+1. Preparar una FreeBusyQuery
+1. Obtener la FreebusyResponse
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-.NET
 
-// Use the GoogleUser and GoogleOAuthHelper classes below to receive an access token
+// Usa las clases GoogleUser y GoogleOAuthHelper a continuación para recibir un token de acceso
 using (IGmailClient client = GmailClient.GetInstance(accessToken, user.Email))
 {
-    // Initialize calendar item
-    Aspose.Email.Clients.Google.Calendar calendar1 = new Aspose.Email.Clients.Google.Calendar("summary - " + Guid.NewGuid().ToString(), null, null, "Europe/Kiev");
+    // Inicializar el ítem del calendario
+    Aspose.Email.Clients.Google.Calendar calendar1 = new Aspose.Email.Clients.Google.Calendar("resumen - " + Guid.NewGuid().ToString(), null, null, "Europe/Kiev");
 
-    // Insert calendar and get back id of newly inserted calendar and Fetch the same calendar using calendar id
+    // Insertar el calendario y recuperar el id del calendario recién insertado y obtener el mismo calendario usando el id del calendario
     string id = client.CreateCalendar(calendar1);
     Aspose.Email.Clients.Google.Calendar cal1 = client.FetchCalendar(id);
     string calendarId1 = cal1.Id;
     try
     {
-        // Get list of appointments in newly inserted calendar. It should be zero
+        // Obtener la lista de citas en el calendario recién insertado. Debería ser cero
         Appointment[] appointments = client.ListAppointments(calendarId1);
         if (appointments.Length != 0)
         {
-            Console.WriteLine("Wrong number of appointments");
+            Console.WriteLine("Número incorrecto de citas");
             return;
         }
 
-        // Create a new appointment and Calculate appointment start and finish time
+        // Crear una nueva cita y calcular la hora de inicio y fin de la cita
         DateTime startDate = DateTime.Now;
         DateTime endDate = startDate.AddHours(1);
 
-        // Create attendees list for appointment
+        // Crear lista de asistentes para la cita
         MailAddressCollection attendees = new MailAddressCollection();
         attendees.Add("user1@domain.com");
         attendees.Add("user2@domain.com");
 
-        // Create appointment
-        Appointment app1 = new Appointment("Location - " + Guid.NewGuid().ToString(), startDate, endDate, "user2@domain.com", attendees);
-        app1.Summary = "Summary - " + Guid.NewGuid().ToString();
-        app1.Description = "Description - " + Guid.NewGuid().ToString();
+        // Crear cita
+        Appointment app1 = new Appointment("Ubicación - " + Guid.NewGuid().ToString(), startDate, endDate, "user2@domain.com", attendees);
+        app1.Summary = "Resumen - " + Guid.NewGuid().ToString();
+        app1.Description = "Descripción - " + Guid.NewGuid().ToString();
         app1.StartTimeZone = "Europe/Kiev";
         app1.EndTimeZone = "Europe/Kiev";
 
-        // Insert the newly created appointment and get back the same in case of successful insertion
+        // Insertar la cita recién creada y obtener la misma en caso de inserción exitosa
         Appointment app2 = client.CreateAppointment(calendarId1, app1);
 
-        // Create Freebusy query by setting min/max timeand time zone
+        // Crear consulta Freebusy configurando tiempo mínimo/máximo y zona horaria
         FreebusyQuery query = new FreebusyQuery();
         query.TimeMin = DateTime.Now.AddDays(-1);
         query.TimeMax = DateTime.Now.AddDays(1);
         query.TimeZone = "Europe/Kiev";
 
-        // Set calendar item to search and Get the reponse of query containing
+        // Establecer el ítem del calendario a buscar y obtener la respuesta de la consulta conteniendo 
         query.Items.Add(cal1.Id);
         FreebusyResponse resp = client.GetFreebusyInfo(query);
-        // Delete the appointment
+        // Eliminar la cita
         client.DeleteAppointment(calendarId1, app2.UniqueId);
     }
     finally
     {
-        // Delete the calendar
+        // Eliminar el calendario
         client.DeleteCalendar(cal1.Id);
     }
 }
 ```
 
-## **Creación de un proyecto en Google Developer Console**
+## **Creando un proyecto en Google Developer Console**
 
-Se va a crear un proyecto en Google Developer Console para un usuario que tenga una cuenta de Gmail. En la página API y autenticación -> Credenciales del proyecto de Google, debe indicarse información como el ID del cliente y el secreto del cliente. Esta información, junto con el nombre de usuario y la contraseña de la cuenta de Gmail, serán necesarios para ejecutar el código, por ejemplo, el calendario de Google, las listas de control de acceso, las citas, los contactos, la configuración, etc. de esta sección.
+Se debe crear un proyecto en Google Developer Console para un usuario que tenga cuenta de Gmail. En la página API & auth -> Credenciales del proyecto de Google, se debe anotar información como el ID de cliente y el secreto de cliente. Esta información junto con el nombre de usuario y la contraseña de la cuenta de Gmail será necesaria para ejecutar el código, por ejemplo, calendario de Google, listas de control de acceso, citas, contactos, configuraciones, etc. en esta sección.
 
 ### **Pasos para crear un proyecto en Google Developer Console**
 
-A continuación se muestra un tutorial paso a paso para crear un proyecto en Google Developer Console.
+A continuación se presenta un tutorial paso a paso para crear un proyecto en Google Developer Console.
 
-1. Ir al enlace <https://cloud.google.com/console/project> e inicie sesión con sus credenciales de Gmail
+1. Ve al enlace <https://cloud.google.com/console/project> e inicia sesión utilizando tus credenciales de Gmail
 
 |![todo:image_alt_text](gmail-utility-features_1.png)|
-|: - |
-2. Selecciona la casilla «He leído y acepto todas las condiciones de servicio de los productos de Google Cloud Platform» y pulsa el botón Crear
+| :- |
+2. Selecciona la casilla "He leído y acepto todos los Términos de Servicio de los productos de Google Cloud Platform." y presiona el botón Crear
 
 |![todo:image_alt_text](gmail-utility-features_2.png)|
-|: - |
-3. Se solicitará la «verificación por SMS». Pulsa el botón de continuar:
+| :- |
+3. Se solicitará "Verificación por SMS". Presiona el botón continuar:
 
 |![todo:image_alt_text](gmail-utility-features_3.png)|
-|: - |
-4. Introduzca el nombre de su país e introduzca el número de teléfono móvil. Presiona el botón: Enviar código de verificación
+| :- |
+4. Ingresa el nombre de tu país y tu número de móvil. Presiona el botón: Enviar Código de Verificación
 
 |![todo:image_alt_text](gmail-utility-features_4.png)|
-|: - |
-5. Introduce el código de verificación recibido en tu móvil.
+| :- |
+5. Ingresa el código de verificación recibido en tu móvil.
 
 |![todo:image_alt_text](gmail-utility-features_5.png)|
-|: - |
-6. En la lista API & auth\ APIs, active el estado de la API de calendario y la API de contactos. Desactiva todos los demás.
+| :- |
+6. En la lista de APIs & auth \ APIs, activa el estado del Calendar API y Contacts API. Apaga todas las demás.
 
 |![todo:image_alt_text](gmail-utility-features_6.png)|
-|: - |
-7. En las API y la autenticación -> Credenciales, pulse el botón «CREAR UN NUEVO ID DE CLIENTE» en la sección «OAuth». Selecciona «Aplicación instalada» y «Otra» entre las opciones disponibles y pulsa el botón «Crear ID de cliente». Anote aquí el ID de cliente y el secreto del cliente que se utilizarán en los códigos de muestra de esta sección.
+| :- |
+7. En APIs & auth -> Credenciales, presiona el botón "CREAR NUEVO ID DE CLIENTE" en la sección "OAuth". Selecciona "Aplicación instalada" y "Otro" de las opciones dadas, y presiona el botón "Crear ID de cliente". Anota el ID de cliente y el secreto de cliente aquí que se usarán en los códigos de muestra en esta sección.
 
 |![todo:image_alt_text](gmail-utility-features_7.png)|
-|: - |
+| :- |
 
-## **Clases de ayuda**
+## **Clases de Ayuda**
 
-Se requieren las siguientes clases auxiliares para ejecutar los ejemplos de código de esta sección. Estas clases `GoogleOAuthHelper` and `GoogleUser` son solo para simplificar la demostración. Los métodos de estas clases utilizan una estructura no pública de páginas web que puede cambiar en cualquier momento.
+Las siguientes clases de ayuda son necesarias para ejecutar los ejemplos de código en esta sección. Estas clases `GoogleOAuthHelper` y `GoogleUser` son solo para simplificar la demostración. Los métodos en estas clases utilizan estructuras no públicas de las páginas web que pueden cambiar en cualquier momento.
 
 ### **Clase GoogleOAuthHelper**
 
-El siguiente fragmento de código muestra cómo implementar `GoogleOAuthHelper` class.
+El siguiente fragmento de código te muestra cómo implementar la clase `GoogleOAuthHelper`.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-.NET
 
 using Newtonsoft.Json;
 using System;
@@ -139,9 +139,9 @@ using System.Security.Cryptography;
 using System.Text;
 
 /// <summary>
-/// Developer console:
+/// Consola del desarrollador:
 /// https://console.cloud.google.com/projectselector2
-/// Documentation:
+/// Documentación:
 /// https://developers.google.com/identity/protocols/oauth2/native-app
 /// </summary>
 internal class GoogleOAuthHelper
@@ -158,11 +158,11 @@ internal class GoogleOAuthHelper
     public static CodeChallengeMethod codeChallengeMethod = CodeChallengeMethod.S256;
 
     public const string SCOPE =
-        "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar" + // Calendar
+        "https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar" + // Calendario
         "+" +
-        "https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds%2F" + // Contacts
+        "https%3A%2F%2Fwww.google.com%2Fm8%2Ffeeds%2F" + // Contactos
         "+" +
-        "https%3A%2F%2Fmail.google.com%2F"; // IMAP & SMTP
+        "https%3A%2F%2Fmail.google.com%2F"; // IMAP y SMTP
 
     static GoogleOAuthHelper()
     {
@@ -294,43 +294,43 @@ internal class GoogleOAuthHelper
 }
 ```
 
-**Ayudante de Google OAuth** debe usarse de la siguiente manera:
+**Ayudante de Google OAuth** debe utilizarse de la siguiente manera:
 
 1. Primero se debe generar una URL de código de autorización.
-1. Abre la URL en un navegador y completa todas las operaciones. Como resultado, recibirá un código de autorización.
+1. Abre la URL en un navegador y completa todas las operaciones. Como resultado, recibirás un código de autorización.
 1. Usa el código de autorización para recibir un token de actualización.
-1. Cuando exista el token de actualización, puede usarlo para recuperar los tokens de acceso.
+1. Cuando el token de actualización existe, puedes usarlo para recuperar tokens de acceso.
 
 ```csharp
 GoogleUser user = new GoogleUser(email, password, clientId, clientSecret);
 
 string authUrl = GoogleOAuthHelper.GetAuthorizationCodeUrl(user);
 
-Console.WriteLine("Go to the following URL and get your authorization code:");
+Console.WriteLine("Ve a la siguiente URL y obtén tu código de autorización:");
 Console.WriteLine(authUrl);
 Console.WriteLine();
 
-Console.WriteLine("Enter the authorization code:");
+Console.WriteLine("Ingresa el código de autorización:");
 string authorizationCode = Console.ReadLine();
 Console.WriteLine();
 
 TokenResponse tokenInfo = GoogleOAuthHelper.GetAccessTokenByAuthCode(authorizationCode, user);
-Console.WriteLine("The refresh token has been received:");
+Console.WriteLine("El token de actualización ha sido recibido:");
 Console.WriteLine(tokenInfo.RefreshToken);
 Console.WriteLine();
 
 user.RefreshToken = tokenInfo.RefreshToken;
 tokenInfo = GoogleOAuthHelper.GetAccessTokenByRefreshToken(user);
-Console.WriteLine("The new access token has been received:");
+Console.WriteLine("El nuevo token de acceso ha sido recibido:");
 Console.WriteLine(tokenInfo.AccessToken);
 Console.WriteLine();
 ```
 
 ### **Clase GoogleUser**
-El siguiente fragmento de código muestra cómo implementar `GoogleUser` class.
+El siguiente fragmento de código muestra cómo implementar la clase `GoogleUser`.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-.NET
 
 public class GoogleUser
 {
@@ -359,10 +359,10 @@ public class GoogleUser
 
 ### **Clase TokenResponse**
 
-El siguiente fragmento de código muestra cómo implementar `TokenResponse` class.
+El siguiente fragmento de código muestra cómo implementar la clase `TokenResponse`.
 
 ```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
+// Para ejemplos completos y archivos de datos, por favor visita https://github.com/aspose-email/Aspose.Email-for-.NET
 
 using Newtonsoft.Json;
 

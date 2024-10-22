@@ -5,22 +5,22 @@ weight: 112
 type: docs
 ---
 
-A veces puede que no sea posible leer el PST/OST debido a algunos problemas. Por ejemplo, algunos bloques de datos pueden estar dañados. En tales casos, suelen surgir excepciones al llamar al [EnumerateFolders](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratefolders/), [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/), [GetContents](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getcontents/), [GetSubfolders](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getsubfolders/), etc. métodos. Sin embargo, es posible que los mensajes o carpetas individuales permanezcan intactos en el almacenamiento.
+A veces puede no ser posible leer el PST/OST debido a algunos problemas. Por ejemplo, algunos bloques de datos pueden estar corruptos. En tales casos, generalmente surgen excepciones al llamar a los métodos [EnumerateFolders](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratefolders/), [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/), [GetContents](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getcontents/), [GetSubfolders](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getsubfolders/), etc. Pero mensajes o carpetas individuales pueden permanecer intactos en el almacenamiento.
 
-## **Métodos para encontrar los identificadores de los artículos**
+## **Métodos para encontrar los identificadores de los elementos**
 
-Los siguientes métodos permiten encontrar los identificadores de los artículos de forma jerárquica.
+Los siguientes métodos permiten encontrar identificadores de elementos de manera jerárquica.
 
-- [FindMessages (cadena parentEntryID)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/findmessages/) - busca los identificadores de los mensajes de la carpeta.
-- [FindSubfolders (cadena ParentEntryID)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/findsubfolders/) - busca los identificadores de las subcarpetas de la carpeta.
+- [FindMessages(string parentEntryId)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/findmessages/) - encuentra los identificadores de mensajes para la carpeta.
+- [FindSubfolders(string parentEntryId)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/findsubfolders/) - encuentra los identificadores de subcarpetas para la carpeta.
 
-Los identificadores obtenidos mediante los métodos se pueden utilizar para recuperar mensajes y carpetas.
+Los identificadores obtenidos mediante los métodos pueden ser utilizados para recuperar mensajes y carpetas.
 
-> **_NOTE:_** Cabe señalar que, a pesar de sus ventajas, existen almacenamientos corruptos que no se pueden leer ni siquiera con estos métodos.
+> **_NOTA:_** Se debe tener en cuenta que a pesar de sus ventajas, existen almacenamientos corruptos que no se pueden leer incluso utilizando estos métodos.
 
 ## **Recorrido de archivos PST**
 
-El siguiente ejemplo de código muestra cómo un archivo PST recorre y extrae carpetas y mensajes. Para obtener la lista de identificadores, utilice los métodos FindMessages y FindSubFolders. Luego, el identificador se pasa al [ExtractMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/extractmessage/) or [GetFolderById](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/getfolderbyid/) método para extraer elementos.
+El siguiente ejemplo de código muestra el recorrido de un archivo PST y la extracción de carpetas y mensajes. Para obtener la lista de identificadores, utiliza los métodos FindMessages y FindSubfolders. Luego, el identificador se pasa al método [ExtractMessage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/extractmessage/) o [GetFolderById](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/getfolderbyid/) para extraer elementos.
 
 ```csharp
 using (var pst = PersonalStorage.FromFile(fileName))
@@ -41,7 +41,7 @@ public static void ExploreCorruptedPst(PersonalStorage pst, string rootFolderId)
         }
         catch
         {
-            Console.WriteLine("Message reading error. Entry id: " + messageId);
+            Console.WriteLine("Error al leer el mensaje. ID de entrada: " + messageId);
         }
     }
 
@@ -58,7 +58,7 @@ public static void ExploreCorruptedPst(PersonalStorage pst, string rootFolderId)
             }
             catch
             {
-                Console.WriteLine("Message reading error. Entry id: " + subFolderId);
+                Console.WriteLine("Error al leer el mensaje. ID de entrada: " + subFolderId);
             }
 
             ExplodeCorruptedPst(pst, subFolderId);

@@ -1,14 +1,14 @@
 ---
-title: "Registro de actividades de IMAPClient en Python"
+title: "Registro de Actividad de ImapClient en Python"
 url: /es/python-net/imapclient-activity-logging/
 weight: 40
 type: docs
 ---
 
 
-## **Habilitar el registro de actividades**
+## **Habilitar el Registro de Actividad**
 
-El registro de actividades implica registrar las conexiones del servidor, los detalles de transmisión de los mensajes enviados y recibidos, los mensajes de error durante el procesamiento del correo electrónico y cualquier otra acción realizada por el cliente o el servidor. Para realizar un seguimiento de la actividad del cliente IMAP y las interacciones con el servidor, utilice el siguiente ejemplo de código, en el que se utiliza la propiedad «log_file_name» del [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) clase para registrar la información en el archivo de registro especificado:
+El registro de actividad implica la grabación de conexiones al servidor, detalles de transmisión de los mensajes enviados y recibidos, mensajes de error durante el procesamiento de correos electrónicos y cualquier otra acción realizada por el cliente o el servidor. Para rastrear la actividad del cliente IMAP y las interacciones con el servidor, utiliza el siguiente ejemplo de código que usa la propiedad 'log_file_name' de la clase [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) para registrar la información en el archivo de registro especificado:
 
 ```py
 import aspose.email as ae

@@ -1,72 +1,72 @@
 ---
-title: "Trabajar con contactos en Exchange Server"
+title: "Trabajando con Contactos en Exchange Server"
 url: /es/java/working-with-contacts-on-exchange-server/
 weight: 60
 type: docs
 ---
 
 
-{{% alert color="primary" %}} Las cuentas de Exchange Server contienen más que solo mensajes de correo electrónico. Además de [fetching](/email/java/working-with-exchange-mailbox-and-messages/#fetch-messages-from-an-exchange-server-mailbox), [moving](/email/java/working-with-exchange-mailbox-and-messages/#moving-messages), [sending](/email/java/working-with-exchange-mailbox-and-messages/#sending-email-messages) and [eliminar mensajes de correo electrónico](/email/java/working-with-exchange-mailbox-and-messages/#deleting-messages) desde los servidores Exchange, Aspose.Email le permite trabajar con contactos. En este artículo se explica cómo recuperar la información de contacto mediante los servicios web de Exchange. Este artículo también muestra cómo puede enumerar los contactos de la carpeta Contactos o resolver los contactos en función del nombre del contacto. {{% /alert %}}
-## **Cómo obtener contactos con EWS**
-Aspose.Email proporciona la [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) clase para conectarse a Microsoft Exchange Server mediante los servicios web de Exchange. Los fragmentos de código que aparecen a continuación utilizan los servicios web de Exchange para leer todos los contactos. El siguiente fragmento de código muestra cómo obtener contactos con EWS.
+{{% alert color="primary" %}} Las cuentas de Exchange Server contienen más que solo mensajes de correo electrónico. Además de [recuperar](/email/java/working-with-exchange-mailbox-and-messages/#fetch-messages-from-an-exchange-server-mailbox), [mover](/email/java/working-with-exchange-mailbox-and-messages/#moving-messages), [enviar](/email/java/working-with-exchange-mailbox-and-messages/#sending-email-messages) y [eliminar mensajes de correo electrónico](/email/java/working-with-exchange-mailbox-and-messages/#deleting-messages) de Exchange Servers, Aspose.Email te permite trabajar con contactos. Este artículo explica cómo recuperar información de contactos utilizando Exchange Web Services. Este artículo también muestra cómo puedes listar contactos de la carpeta de Contactos o resolver contactos según el nombre del contacto. {{% /alert %}} 
+## **Obteniendo Contactos con EWS**
+Aspose.Email proporciona la clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) para conectarse a Microsoft Exchange Server utilizando Exchange Web Services. Los fragmentos de código que siguen utilizan Exchange Web Services para leer todos los contactos. El siguiente fragmento de código muestra cómo obtener Contactos con EWS.
 
 
 
 ~~~Java
-// Create instance of IEWSClient class by giving credentials
+// Crear instancia de la clase IEWSClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// List all the contacts
+// Listar todos los contactos
 Contact[] contacts = client.getContacts(client.getMailboxInfo().getContactsUri());
 for (Contact contact : contacts) {
     MapiContact mapiContact = Contact.to_MapiContact(contact);
-    // Display name and email address
-    System.out.println("Name: " + mapiContact.getNameInfo().getDisplayName() + "+ Email Address: " + mapiContact.getElectronicAddresses().getEmail1());
+    // Mostrar nombre y dirección de correo electrónico
+    System.out.println("Nombre: " + mapiContact.getNameInfo().getDisplayName() + "+ Dirección de correo electrónico: " + mapiContact.getElectronicAddresses().getEmail1());
 }
 ~~~
-## **Resolver contactos usando el nombre del contacto**
-El siguiente fragmento de código muestra cómo usar get contacts con EWS
+## **Resolver Contactos usando el Nombre del Contacto**
+El siguiente fragmento de código muestra cómo usar obtener contactos con EWS
 
 
 
 ~~~Java
-// Create instance of IEWSClient class by giving credentials
+// Crear instancia de la clase IEWSClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// List all the contacts
-Contact[] contacts = client.resolveContacts("Changed Name", ExchangeListContactsOptions.FetchPhoto);
+// Listar todos los contactos
+Contact[] contacts = client.resolveContacts("Nombre Cambiado", ExchangeListContactsOptions.FetchPhoto);
 for (Contact c : contacts) {
     MapiContact contact = Contact.to_MapiContact(c);
-    // Display name and email address
-    System.out.println("Name: " + contact.getNameInfo().getDisplayName() + "+ Email Address: " + contact.getElectronicAddresses().getEmail1());
+    // Mostrar nombre y dirección de correo electrónico
+    System.out.println("Nombre: " + contact.getNameInfo().getDisplayName() + "+ Dirección de correo electrónico: " + contact.getElectronicAddresses().getEmail1());
 }
 ~~~
-## **Determinación del formato de las notas de contacto**
-El NotesFormat especifica el tipo de formato de texto de las notas de los contactos definido por el enumerador TextFormat.
+## **Determinando el Formato de Notas de Contacto**
+El NotesFormat especifica el tipo de formato del texto de notas de los contactos definido por el enumerador TextFormat.
 
-## **Obtener un contacto usando el ID**
-Un contacto concreto se puede recuperar del servidor mediante su identificador de contacto, tal y como se muestra en el siguiente ejemplo de código.
+## **Recuperar Contacto usando Id**
+Un contacto en particular puede ser recuperado del servidor usando su ID de contacto, como se muestra en el siguiente ejemplo de código.
 
 
 
 ~~~Java
 Contact fetchedContact = client.getContact(id);
 ~~~
-## **Agregar contactos**
-The [EWSClient](https://apireference.aspose.com/email//java/com.aspose.email/iewsclient) class [createContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) el método se puede usar para agregar información de contacto a un servidor Exchange. El [createContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) el método toma un [Contact](https://apireference.aspose.com/email/java/com.aspose.email/Contact) objeto como parámetro de entrada.
+## **Añadiendo Contactos**
+La clase [EWSClient](https://apireference.aspose.com/email//java/com.aspose.email/iewsclient) puede utilizar el método [createContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) para agregar información de Contacto a un Exchange Server. El método [createContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createContact\(com.aspose.email.Contact\)) toma un objeto [Contact](https://apireference.aspose.com/email/java/com.aspose.email/Contact) como parámetro de entrada.
 
-Para agregar contactos a un servidor Exchange:
+Para agregar contactos a un Exchange Server:
 
-1. Inicialice el EWSClient con la dirección y las credenciales.
-1. Inicialice el objeto Contact con las propiedades deseadas.
-1. Llame al método CreateContact para agregar el contacto al servidor Exchange.
+1. Inicializa el EWSClient con dirección y credenciales.
+1. Inicializa el objeto Contact con las propiedades deseadas.
+1. Llama al método CreateContact para agregar el contacto al Exchange Server.
 
-Aspose.Email proporciona la [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) clase para conectarse a Microsoft Exchange Server mediante los servicios web de Exchange. Los fragmentos de código muestran cómo usar los servicios web de Exchange para agregar contactos a un servidor de Exchange.
+Aspose.Email proporciona la clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) para conectarse a Microsoft Exchange Server utilizando Exchange Web Services. Los fragmentos de código muestran cómo usar Exchange Web Services para agregar contactos a un Exchange Server.
 
 
 
 ~~~Java
-// Set mailboxURI, Username, password, domain information
+// Establecer mailboxURI, Nombre de usuario, contraseña, información del dominio
 String mailboxUri = "https://ex2010/ews/exchange.asmx";
 String username = "test.exchange";
 String password = "pwd";
@@ -74,25 +74,25 @@ String domain = "ex2010.local";
 NetworkCredential credentials = new NetworkCredential(username, password, domain);
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
 
-// Create New Contact
+// Crear Nuevo Contacto
 Contact contact = new Contact();
 
-// Set general info
+// Establecer información general
 contact.setGender(Gender.Male);
 contact.setDisplayName("Frank Lin");
 contact.setCompanyName("ABC Co.");
-contact.setJobTitle("Executive Manager");
+contact.setJobTitle("Gerente Ejecutivo");
 PhoneNumber tmp0 = new PhoneNumber();
 tmp0.setNumber("123456789");
 tmp0.setCategory(PhoneNumberCategory.getHome());
 
-// Add Phone numbers
+// Agregar números de teléfono
 contact.getPhoneNumbers().add(tmp0);
 AssociatedPerson tmp1 = new AssociatedPerson();
 tmp1.setName("Catherine");
 tmp1.setCategory(AssociatedPersonCategory.getSpouse());
 
-// contact's associated persons
+// personas asociadas al contacto
 contact.getAssociatedPersons().add(tmp1);
 AssociatedPerson tmp2 = new AssociatedPerson();
 tmp2.setName("Bob");
@@ -117,7 +117,7 @@ tmp6.setAddress("Frank.Lin@Abc.com");
 tmp6.setDisplayName("Frank Lin");
 tmp6.setCategory(EmailAddressCategory.getEmail1());
 
-// Set contact's Email address
+// Establecer la dirección de correo electrónico del contacto
 contact.getEmailAddresses().add(tmp6);
 
 try {
@@ -126,30 +126,30 @@ try {
     System.out.println(ex.getMessage());
 }
 ~~~
-## **Actualización de contactos**
-La información de contacto se puede actualizar mediante Microsoft Outlook. Aspose.Email también puede actualizar la información de contacto en Exchange Server mediante el servicio web de Exchange (EWS). El [IEWSClient's](https://apireference.aspose.com/email//java/com.aspose.email/iewsclient) [updateContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateContact\(com.aspose.email.Contact\)) el método puede actualizar la información de contacto en Exchange Server.
+## **Actualizando Contactos**
+La información de contacto puede actualizarse usando Microsoft Outlook. Aspose.Email también puede actualizar la información de contacto en Exchange Server utilizando los servicios web de Exchange (EWS). El método [updateContact()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateContact\(com.aspose.email.Contact\)) de [IEWSClient](https://apireference.aspose.com/email//java/com.aspose.email/iewsclient) puede actualizar la información de contacto en Exchange Server.
 
 
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
 
-// List all the contacts and Loop through all contacts
+// Listar todos los contactos y recorrer todos los contactos
 Contact[] contacts = client.getContacts(client.getMailboxInfo().getContactsUri());
 Contact contact = contacts[0];
-System.out.println("Name: " + contact.getDisplayName());
+System.out.println("Nombre: " + contact.getDisplayName());
 contact.setDisplayName("David Ch");
 client.updateContact(contact);
 ~~~
-## **Eliminar contactos**
-The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/iewsclient) la clase proporciona la [deleteItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteItem\(java.lang.String,%20com.aspose.email.DeletionOptions\)) para acceder a los contactos de la carpeta de contactos de un servidor Exchange y eliminarlos. Este método toma el identificador de contacto como parámetro de entrada.
+## **Eliminando Contactos**
+La clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/iewsclient) proporciona el método [deleteItem](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteItem\(java.lang.String,%20com.aspose.email.DeletionOptions\)) para acceder y eliminar contactos de la carpeta de contactos de un Exchange Server. Este método toma el ID del contacto como parámetro de entrada.
 
-Para eliminar contactos de un servidor Exchange:
+Para eliminar contactos de un Exchange Server:
 
-1. Inicialice el ExchangeWebServiceClient con la dirección y las credenciales.
-1. Elimina un contacto con su ID.
+1. Inicializa el ExchangeWebServiceClient con dirección y credenciales.
+1. Elimina un contacto usando su ID.
 
-Los siguientes fragmentos de código muestran cómo eliminar contactos de un servidor de Exchange mediante el servicio web de Exchange.
+Los siguientes fragmentos de código te muestran cómo eliminar contactos de un servidor de exchange usando el servicio web de exchange.
 
 
 

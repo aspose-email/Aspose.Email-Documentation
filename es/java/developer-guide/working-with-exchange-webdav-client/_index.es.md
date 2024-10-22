@@ -1,8 +1,6 @@
 ---
-title: "Trabajando con el cliente WebDAV de Exchange"
-url: /es/java/working-with-exchange-webdav-client/
+title: "Trabajando con el cliente Exchange WebDav"
+url: /es/java/trabajando-con-el-cliente-exchange-webdav/
 weight: 90
 type: docs
 ---
-
-

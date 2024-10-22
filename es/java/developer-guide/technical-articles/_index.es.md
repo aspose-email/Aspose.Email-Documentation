@@ -1,6 +1,6 @@
 ---
-title: "Artículos técnicos"
-url: /es/java/technical-articles/
+title: "Artículos Técnicos"
+url: /es/java/articulos-tecnicos/
 weight: 180
 type: docs
 ---

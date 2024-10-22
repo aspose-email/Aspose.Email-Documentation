@@ -1,36 +1,36 @@
 ---
-title: "Trabajar con contactos de Outlook mediante la biblioteca de analizadores de correo electrónico de C++"
-description: "La biblioteca de analizadores de correo electrónico de C++ le permite crear, guardar y leer contactos de Outlook e importar contactos desde formatos de archivo MSG y vCard."
+title: "Trabajando con Contactos de Outlook usando la Biblioteca de Análisis de Correo C++"
+description: "La Biblioteca de Análisis de Correo C++ te permite crear, guardar y leer contactos de Outlook e importar contactos de los formatos de archivo MSG y VCard."
 url: /es/cpp/working-with-outlook-contacts/
 weight: 90
 type: docs
-linktitle: "Trabajar con contactos de Outlook"
+linktitle: "Trabajando con Contactos de Outlook"
 ---
 
-## **Crear, guardar y leer contactos**
-Al igual que MapiMessage, Aspose.Email te permite crear contactos de Outlook. La clase MapiContact proporciona todas las propiedades relacionadas con los contactos necesarias para crear un contacto de Outlook. En este artículo se muestra cómo crear, guardar y leer un contacto de Outlook mediante la clase MapiContact.
+## **Crear, Guardar y Leer Contactos**
+Al igual que MapiMessage, Aspose.Email te permite crear contactos de Outlook. La clase MapiContact proporciona todas las propiedades relacionadas con el contacto necesarias para crear un contacto de Outlook. Este artículo muestra cómo crear, guardar y leer un contacto de Outlook usando la clase MapiContact.
 
-### **Crear y guardar contactos de Outlook**
-Para crear un contacto y guardarlo en un disco:
+### **Crear y Guardar un Contacto de Outlook**
+Para crear un contacto y guardarlo en disco:
 
-1. Cree una instancia de un objeto nuevo de la clase MapiContact.
-1. Introduzca la información de contacto de la propiedad.
-1. Agregue datos fotográficos (si los hay).
-1. Guarda el contacto en formato MSG o vCard.
+1. Instancia un nuevo objeto de la clase MapiContact.
+2. Ingresa la información de las propiedades del contacto.
+3. Agrega datos de foto (si los hay).
+4. Guarda el contacto en formato MSG o VCard.
 
-El siguiente fragmento de código muestra cómo crear y guardar contactos de Outlook con la biblioteca o API del analizador de correo electrónico de C++.
+El siguiente fragmento de código te muestra cómo crear y guardar un contacto de Outlook con la Biblioteca de Análisis de Correo C++ o API.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-CreateAndSaveOutlookContact-CreateAndSaveOutlookContact.cpp" >}}
 
-### **Lectura de un MapiContact**
-La clase MapiContact se puede usar para cargar contactos en formato MSG y vCard de Outlook. El siguiente fragmento de código muestra cómo cargar los contactos de Outlook guardados como MSG y VCF en un MapiContact.
+### **Leyendo un MapiContact**
+La clase MapiContact puede ser utilizada para cargar contactos de formato MSG y VCard de Outlook. El siguiente fragmento de código te muestra cómo cargar contactos de Outlook guardados como MSG y VCF en un MapiContact.
 
-#### **Cargar un contacto desde MSG**
-El siguiente fragmento de código muestra cómo cargar un contacto desde MSG.
+#### **Cargando un Contacto desde MSG**
+El siguiente fragmento de código te muestra cómo cargar un contacto desde MSG.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-LoadingContactFromMSG-LoadingContactFromMSG.cpp" >}}
 
-#### **Cargar un contacto desde vCard**
-El siguiente fragmento de código muestra cómo cargar un contacto desde vCard.
+#### **Cargando un Contacto desde VCard**
+El siguiente fragmento de código te muestra cómo cargar un contacto desde vCard.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-LoadingContactFromVCard-LoadingContactFromVCard.cpp" >}}

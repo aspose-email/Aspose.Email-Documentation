@@ -1,57 +1,56 @@
 ---
-title: "Conexión a Exchange Server mediante autenticación moderna"
-url: /es/net/connecting-to-exchange-server-using-modern-authentication/
+title: "Conectarse a Exchange Server utilizando Autenticación Moderna"
+url: /es/net/conectarse-a-exchange-server-utilizando-autenticacion-moderna/
 weight: 5
 type: docs
 ---
 
-La autenticación moderna ahora está habilitada de forma predeterminada para todos los nuevos inquilinos de Microsoft 365/Azure porque este protocolo es más seguro que la autenticación básica obsoleta.
-La autenticación moderna se basa en la biblioteca de autenticación de Active Directory y en OAuth 2.0. Utiliza tokens de tiempo limitado y las aplicaciones no almacenan las credenciales de usuario.
+La Autenticación Moderna ahora está habilitada de forma predeterminada para todos los nuevos inquilinos de Microsoft 365/Azure porque este protocolo es más seguro que la Autenticación Básica, que está en desuso.
+La Autenticación Moderna se basa en la Biblioteca de Autenticación de Active Directory y OAuth 2.0. Utiliza tokens con tiempo limitado, y las aplicaciones no almacenan las credenciales del usuario.
 
-## **Ajustes de requisitos previos**
+## **Configuraciones Previas**
 
-Para usar la autenticación moderna, asegúrese de que esté habilitada. Sin embargo, para los arrendatarios creados antes del 1 de agosto de 2017, la autenticación moderna está desactivada de forma predeterminada.
-En el [Centro de administración de Microsoft 365](https://admin.microsoft.com/), vaya **Configuración > Configuración de la organización > Autenticación moderna**. En el **Flecha desplegable de autenticación moderna** cuando aparezca, puede identificar los protocolos que ya no requieren autenticación básica.
-Para los nuevos usuarios de Microsoft 365 en Azure, la autenticación básica está deshabilitada de forma predeterminada en todas las aplicaciones. Por lo tanto, el texto se mostrará en esta sección.
+Para usar la Autenticación Moderna, asegúrate de que esté habilitada. Sin embargo, para los inquilinos creados antes del 1 de agosto de 2017, la autenticación moderna está desactivada de forma predeterminada.
+En el [centro de administración de Microsoft 365](https://admin.microsoft.com/), ve a **Configuraciones > Configuraciones de la organización > Autenticación moderna**. En el **desplegable de autenticación moderna** que aparece, puedes identificar los protocolos que ya no requieren autenticación básica.
+Para los nuevos inquilinos de Microsoft365 en Azure, la Autenticación Básica está deshabilitada de forma predeterminada para todas las aplicaciones. Por lo tanto, el texto se mostrará en esta sección.
 
-> Su organización tiene habilitados los valores predeterminados de seguridad, lo que significa que se requiere una autenticación moderna en Exchange Online y que las conexiones de autenticación básica están bloqueadas. Debe desactivar los valores predeterminados de seguridad en el portal de Azure antes de poder cambiar cualquier configuración aquí.
+> Su organización tiene habilitados los valores predeterminados de seguridad, lo que significa que se requiere la autenticación moderna para Exchange Online, y las conexiones de autenticación básica están bloqueadas. Debe desactivar los valores predeterminados de seguridad en el portal de Azure antes de poder cambiar cualquier configuración aquí.
 
+Puedes habilitar el soporte de Autenticación Básica para el inquilino desde el portal de [Azure](https://aad.portal.azure.com/), ve a **Azure Active Directory > Propiedades > Administrar valores predeterminados de seguridad > Habilitar valores predeterminados de seguridad > No**.
+Para más información, consulta el [Artículo de Documentación de Microsoft](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online).
 
-Puede habilitar la compatibilidad con la autenticación básica para el inquilino desde [Azure](https://aad.portal.azure.com/) portal, vaya **Azure Active Directory > Propiedades > Administrar los valores predeterminados de seguridad > Habilitar los valores predeterminados de seguridad > No**.
-Para obtener más información, consulte el [Artículo de documentación de Microsoft](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online).
-
-## **Registro de aplicaciones con Azure Active Directory**
+## **Registro de Aplicaciones con Azure Active Directory**
 
 Es necesario realizar el registro de la aplicación con Azure Active Directory.
-Hay dos tipos de permisos que se pueden usar para acceder a los buzones con la aplicación. Elige un tipo de permiso específico, según la aplicación que estés creando:
+Existen dos tipos de permisos que se pueden usar para acceder a los buzones con tu aplicación. Elige un tipo específico de permiso, dependiendo de la aplicación que estés creando:
 
-- Aplicaciones que usan **Permisos delegados** tener presente un usuario que haya iniciado sesión. En otras palabras, cuando se conecta al servicio, aparece una ventana de diálogo con un nombre de usuario y una contraseña. La aplicación nunca puede tener más privilegios que los de un usuario que ha iniciado sesión.
-- Aplicaciones que usan **Permisos de aplicación** se ejecuta sin la presencia de un usuario que haya iniciado sesión. Por ejemplo, se trata de aplicaciones que se ejecutan como servicios o demonios en segundo plano. Solo un administrador puede dar su consentimiento a los permisos de la aplicación.
+- Las aplicaciones que usan **permisos delegados** tienen un usuario conectado presente. En otras palabras, cuando te conectas al servicio, aparece una ventana de diálogo para un nombre de usuario y una contraseña. La aplicación nunca puede tener más privilegios que el usuario conectado.
+- Las aplicaciones que utilizan **permisos de aplicación** funcionan sin un usuario conectado presente. Por ejemplo, estas son aplicaciones que se ejecutan como servicios en segundo plano o demonios. Solo un administrador puede consentir permisos de aplicación.
 
-Además, consulte la [Artículo de documentación de Microsoft](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth) para obtener más información.
+Además, consulta el [Artículo de Documentación de Microsoft](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth) para más información.
 
-El procedimiento de registro depende del tipo de permiso seleccionado. Para registrar su aplicación, consulte la [Artículo de documentación de Microsoft](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth#register-your-application).
+El procedimiento de registro depende del tipo de permiso seleccionado. Para registrar tu aplicación, consulta el [Artículo de Documentación de Microsoft](https://docs.microsoft.com/en-us/exchange/client-developer/exchange-web-services/how-to-authenticate-an-ews-application-by-using-oauth#register-your-application).
 
-## **Utilice la autenticación moderna con EWSClient**
+## **Usar Autenticación Moderna con EwsClient**
 
-Tras registrar la aplicación, podemos centrarnos en escribir el código, que constará de las siguientes partes:
+Después de registrar la aplicación, podemos centrarnos en escribir el código, que constará de las siguientes partes:
 
- - Obtenga el token de autorización.
- - Usa el token para autenticarte.
+ - Obtener el token de autorización.
+ - Usar el token para autenticar.
 
-### Obtener el token de autorización
+### Obtener el Token de Autorización
 
-Para obtener el token usaremos [Biblioteca de autenticación de Microsoft (MSAL) para.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
+Para obtener el token, usaremos [Microsoft Authentication Library (MSAL) para .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
 
 Los siguientes son los pasos para obtener el token de autorización.
 
- - Añada el [Paquete nuget Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) que contiene los archivos binarios de MSAL.NET.
- - Cree una clase AccessParameters para almacenar las credenciales.
- - Cree un método que acepte los parámetros de acceso y utilice MSAL.NET para obtener un token de acceso.
+ - Agrega el [paquete nuget Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) que contiene los binarios de MSAL.NET.
+ - Crea una clase AccessParameters para almacenar las credenciales.
+ - Crea un método que acepte parámetros de acceso y use MSAL.NET para obtener un token de acceso.
 
-Los siguientes ejemplos de código dependerán del tipo de autenticación elegido.
+Los siguientes ejemplos de código dependerán del tipo de autenticación elegida.
 
-**Obtenga un token con autenticación delegada**
+**Obtener un token con autenticación delegada**
 
 ```csharp
 public class AccessParameters
@@ -67,7 +66,7 @@ public static async Task<string> GetAccessToken(AccessParameters accessParameter
     var pca = PublicClientApplicationBuilder
                             .Create(accessParameters.ClientId)
                             .WithTenantId(accessParameters.TenantId)
-                            .WithRedirectUri(ccessParameters.RedirectUri)
+                            .WithRedirectUri(accessParameters.RedirectUri)
                             .Build();
 
     var result = await pca.AcquireTokenInteractive(accessParameters.Scopes)
@@ -78,7 +77,7 @@ public static async Task<string> GetAccessToken(AccessParameters accessParameter
 }
 
 ```
-**Obtenga un token con la autenticación de la aplicación**
+**Obtener un token con autenticación de aplicación**
 
 ```csharp
 public class AccessParameters
@@ -104,11 +103,11 @@ public static async Task<string> GetAccessToken(AccessParameters accessParameter
 
 ```
 
-### Uso del token para autenticarse
+### Usar el Token para Autenticar
 
-Después de eso, cuando hayamos obtenido con éxito un token, inicialicemos el [EwsClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+Después de eso, cuando hayamos obtenido exitosamente un token, inicialicemos el [EwsClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
 
-**Uso del token con autenticación delegada**
+**Usar el token con autenticación delegada**
 
 ```csharp
 NetworkCredential credentials = new OAuthNetworkCredential(accessToken);
@@ -119,13 +118,13 @@ using var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Exc
 
 {{% alert %}}
 **¡Pruébalo!**
-Ejecute el [EWSModernAuthenticationDelegated](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/EWSModernAuthenticationDelegated) proyecto de aplicación simple, conéctese a Microsoft 365 con autenticación delegada y lea su bandeja de entrada.
+Ejecuta el proyecto simple [EWSModernAuthenticationDelegated](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/EWSModernAuthenticationDelegated), Conéctate a Microsoft 365 con autenticación delegada y lee tu Bandeja de entrada.
 {{% /alert %}}
 
-**Uso del token con la autenticación de la aplicación**
+**Usar el token con autenticación de aplicación**
 
 ```csharp
-// Use Microsoft365 username and access token
+// Usa el nombre de usuario de Microsoft365 y el token de acceso
 NetworkCredential credentials = new OAuthNetworkCredential(username, accessToken);
 
 using var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Exchange.asmx", credentials);
@@ -134,38 +133,38 @@ using var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Exc
 
 {{% alert %}}
 **¡Pruébalo!**
-Ejecute el [EWSModernAuthenticationApp](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/EWSModernAuthenticationApp) proyecto de aplicación simple, conéctese a Microsoft 365 con la autenticación de aplicaciones y lea su bandeja de entrada.
+Ejecuta el proyecto simple [EWSModernAuthenticationApp](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/EWSModernAuthenticationApp), conéctate a Microsoft 365 con autenticación de aplicación y lee tu Bandeja de entrada.
 {{% /alert %}}
 
-## **Utilice la autenticación moderna con clientes IMAP, POP o SMTP**
+## **Usar Autenticación Moderna con Clientes IMAP, POP o SMTP**
 
-No se admite el acceso IMAP, POP ni SMTP mediante permisos de aplicaciones. En otras palabras, solo se admite la autenticación delegada.
+El acceso IMAP, POP, SMTP a través de permisos de aplicación no está soportado. En otras palabras, sólo se admite la autenticación delegada.
 
-El procedimiento de registro de la aplicación con Azure Active Directory está definido [above](https://blog.aspose.com/email/connect-to-microsoft365-mailbox-using-modern-authentication-in-c-.net/#App-registration-with-Azure-Active-Directory).
+El procedimiento de registro de aplicaciones con Azure Active Directory está definido [arriba](https://blog.aspose.com/email/connect-to-microsoft365-mailbox-using-modern-authentication-in-c-.net/#App-registration-with-Azure-Active-Directory).
 
-### Use el centro de administración de Microsoft 365 para habilitar o deshabilitar IMAP, POP y SMTP AUTH en buzones específicos
+### Usar el centro de administración de Microsoft 365 para habilitar o deshabilitar IMAP, POP, SMTP AUTH en buzones específicos
 
- - Abra el [Centro de administración de Microsoft 365](https://admin.microsoft.com/) y vaya a **Usuarios > Usuarios activos**.
- - Seleccione el usuario y, en el menú desplegable que aparece, haga clic en **Mail**.
- - En el **Aplicaciones de correo electrónico** sección, haga clic **Administrar aplicaciones de correo electrónico**.
- - Verifique el **IMAP, POP, SMTP autenticado** configuración: desmarcada = deshabilitada, marcada = habilitada.
- - Click **Guardar cambios**.
+ - Abre el [centro de administración de Microsoft 365](https://admin.microsoft.com/) y ve a **Usuarios > Usuarios Activos**.
+ - Selecciona el usuario y en el desplegable que aparece, haz clic en **Correo**.
+ - En la sección **Aplicaciones de correo**, haz clic en **Administrar aplicaciones de correo**.
+ - Verifica la configuración de **IMAP, POP, SMTP autenticado**: desmarcado = deshabilitado, marcado = habilitado.
+ - Haz clic en **Guardar cambios**.
 
 ### Agregar código para obtener un token de autenticación de un servidor de tokens
 
-Asegúrese de especificar los ámbitos completos, incluidas las URL de los recursos de Outlook.
+Asegúrate de especificar los alcances completos, incluyendo las URL de recursos de Outlook.
 
-IMAP: https://outlook.office.com/IMAP.AccessAsUser.All
-POP: https://outlook.office.com/POP.AccessAsUser.All
+IMAP: https://outlook.office.com/IMAP.AccessAsUser.All  
+POP: https://outlook.office.com/POP.AccessAsUser.All  
 SMTP: https://outlook.office.com/SMTP.Send
 
-Para obtener el token usaremos [Biblioteca de autenticación de Microsoft (MSAL) para.NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
+Para obtener el token usaremos [Microsoft Authentication Library (MSAL) para .NET](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet).
 
 Los siguientes son los pasos para obtener el token de autorización.
 
-- Añada el [Paquete nuget Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) que contiene los archivos binarios de MSAL.NET.
-- Cree una clase AccessParameters para almacenar las credenciales.
-- Cree un método que acepte los parámetros de acceso y utilice MSAL.NET para obtener un token de acceso.
+- Agrega el [paquete nuget Microsoft.Identity.Client](https://www.nuget.org/packages/Microsoft.Identity.Client) que contiene los binarios de MSAL.NET.
+- Crea una clase AccessParameters para almacenar las credenciales.
+- Crea un método que acepte parámetros de acceso y use MSAL.NET para obtener un token de acceso.
 
 ```csharp
 public class AccessParameters
@@ -173,8 +172,8 @@ public class AccessParameters
     public string TenantId { get; set; }
     public string ClientId { get; set; }
     public string RedirectUri { get; set; } = "http://localhost";
-    public string[] Scopes { get; set; } = {
-        "https://outlook.office.com/IMAP.AccessAsUser.All",
+    public string[] Scopes { get; set; } = { 
+        "https://outlook.office.com/IMAP.AccessAsUser.All", 
         "https://outlook.office.com/SMTP.Send" };
 }
 
@@ -183,7 +182,7 @@ public static async Task<string> GetAccessToken(AccessParameters accessParameter
     var pca = PublicClientApplicationBuilder
                             .Create(accessParameters.ClientId)
                             .WithTenantId(accessParameters.TenantId)
-                            .WithRedirectUri(ccessParameters.RedirectUri)
+                            .WithRedirectUri(accessParameters.RedirectUri)
                             .Build();
 
     var result = await pca.AcquireTokenInteractive(accessParameters.Scopes)
@@ -195,50 +194,50 @@ public static async Task<string> GetAccessToken(AccessParameters accessParameter
 
 ```
 
-### Uso del token para autenticarse
+### Usar el Token para Autenticar
 
-Después de eso, cuando hayamos obtenido con éxito un token, inicialicemos el [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/).
+Después de eso, cuando hayamos obtenido exitosamente un token, inicialicemos el [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/).
 
 ```csharp
 var imapClient = new ImapClient(
-    "outlook.office365.com",
-    993,
-    username,
-    accessToken,
+    "outlook.office365.com", 
+    993, 
+    username, 
+    accessToken, 
     true);
 
 ```
-Del mismo modo, el [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) la inicialización tendrá el siguiente aspecto.
+De forma similar, la inicialización del [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) será la siguiente.
 
 ```csharp
 var smtpClient = new SmtpClient(
     "smtp.office365.com",
-    587,
+    587, 
     username,
-    accessToken,
+    accessToken, 
     true);
 
 ```
 
 {{% alert %}}
 **¡Pruébalo!**
-Ejecute el [EWSModernAuthenticationImapSmtp](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/EWSModernAuthenticationImapSmtp) proyecto de aplicación simple, conéctese a Microsoft 365 a través de IMAP y SMTP y lea su bandeja de entrada.
+Ejecuta el proyecto simple [EWSModernAuthenticationImapSmtp](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Sample%20Apps/EWSModernAuthenticationImapSmtp), conéctate a Microsoft 365 a través de IMAP y SMTP, y lee tu Bandeja de entrada.
 {{% /alert %}}
 
-## **Devolver el ID de solicitud del cliente**
+## **Devolver el ID de Solicitud del Cliente**
 
- The [ReturnClientRequestId](https://reference.aspose.com/email/net/aspose.email.clients.exchange/autodiscoverservicebase/returnclientrequestid/) La propiedad se agregó a EWSClient para que pueda especificar si el ID de solicitud del cliente debe devolverse en la respuesta de las llamadas de Exchange Web Services (EWS). El identificador de solicitud del cliente es un identificador único que puede establecer para cada solicitud de EWS enviada desde su aplicación. Al configurar el [ReturnClientRequestId](https://reference.aspose.com/email/net/aspose.email.clients.exchange/autodiscoverservicebase/returnclientrequestid/) propiedad a *true*, indica que desea que el identificador de solicitud del cliente se incluya en la respuesta del servidor EWS. Esto puede resultar útil para rastrear y correlacionar las solicitudes y respuestas en situaciones en las que se realizan y procesan varias solicitudes de forma asincrónica.
+La propiedad [ReturnClientRequestId](https://reference.aspose.com/email/net/aspose.email.clients.exchange/autodiscoverservicebase/returnclientrequestid/) fue añadida a EWSClient para tu conveniencia para especificar si el ID de solicitud del cliente debe ser devuelto en la respuesta de las llamadas a Exchange Web Services (EWS). El ID de solicitud del cliente es un identificador único que puedes establecer para cada solicitud EWS enviada desde tu aplicación. Al establecer la propiedad [ReturnClientRequestId](https://reference.aspose.com/email/net/aspose.email.clients.exchange/autodiscoverservicebase/returnclientrequestid/) en *true*, indicas que quieres que el ID de solicitud del cliente se incluya en la respuesta del servidor EWS. Esto puede ser útil para rastrear y correlacionar solicitudes y respuestas en escenarios donde se realizan y procesan múltiples solicitudes de manera asíncrona.
 
- El siguiente fragmento de código muestra cómo se puede utilizar la propiedad:
+El siguiente fragmento de código muestra cómo se puede utilizar la propiedad:
 
- ```cs
- using (IEWSClient client = TestUtil.CreateEWSClient(user))
+```cs
+using (IEWSClient client = TestUtil.CreateEWSClient(user))
 {
-    // Client will create random id and pass it to the server.
-	// The server should include this id in request-id header of all responses.
+    // El cliente creará un ID aleatorio y lo pasará al servidor.
+    // El servidor debería incluir este ID en el encabezado request-id de todas las respuestas.
     client.ReturnClientRequestId = true;
-   
-	client.LogFileName = "ews.log";
+    
+    client.LogFileName = "ews.log";
     client.GetMailboxInfo();
 }
- ```
+```

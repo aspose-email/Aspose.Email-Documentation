@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Guardar mensaje como borrador**
-Para guardar el mensaje como borrador usando **Aspose.Email Java para Ruby**, simplemente invoca **SaveMessageAsDraft** módulo. Aquí puedes ver un ejemplo de código.
+Para guardar un mensaje como borrador utilizando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **SaveMessageAsDraft**. Aquí puedes ver un código de ejemplo.
 
 **Código Ruby**
 
@@ -16,52 +16,52 @@ Para guardar el mensaje como borrador usando **Aspose.Email Java para Ruby**, si
 
 
 
-\# Create a new instance of MailMessage class
+\# Crear una nueva instancia de la clase MailMessage
 
 message = Rjb::import('com.aspose.email.MailMessage').new
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
 mail_address = Rjb::import('com.aspose.email.MailAddress')
 
-\# Set Html body
+\# Establecer el cuerpo en Html
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-        "<font color=blue>This line is in blue color</font>")
+        "<font color=blue>Esta línea está en color azul</font>")
 
-\# Set sender information
+\# Establecer información del remitente
 
-message.setFrom(mail_address.new("from@domain.com", "Sender Name", false))
+message.setFrom(mail_address.new("from@domain.com", "Nombre del Remitente", false))
 
-\# Add TO recipients
+\# Agregar destinatarios a TO
 
-message.getTo().add(mail_address.new("to1@domain.com", "Recipient 1", false))
+message.getTo().add(mail_address.new("to1@domain.com", "Destinatario 1", false))
 
-message.getTo().add(mail_address.new("to2@domain.com", "Recipient 2", false))
+message.getTo().add(mail_address.new("to2@domain.com", "Destinatario 2", false))
 
-\# Create an instance of MapiMessage and load the MailMessag instance into it
+\# Crear una instancia de MapiMessage y cargar la instancia de MailMessage en ella
 
 mapi_msg = Rjb::import('com.aspose.email.MapiMessage').fromMailMessage(message)
 
-\# Set the MapiMessageFlags as UNSENT and FROMME
+\# Establecer los MapiMessageFlags como UNSENT y FROMME
 
 mapi_message_flags = Rjb::import('com.aspose.email.MapiMessageFlags')
 
 mapi_msg.setMessageFlags(mapi_message_flags.MSGFLAG_UNSENT || mapi_message_flags.MSGFLAG_FROMME)
 
-\# Save the MapiMessage to disk
+\# Guardar el MapiMessage en disco
 
-mapi_msg.save(data_dir + "New-Draft.msg")
+mapi_msg.save(data_dir + "Nuevo-Borrador.msg")
 
-\# Display Status
+\# Mostrar estado
 
-puts "Draft saved Successfully."
+puts "Borrador guardado con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Guardar mensaje como borrador (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar código en ejecución**
+Descarga **Guardar mensaje como borrador (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/savemessageasdraft.rb)
