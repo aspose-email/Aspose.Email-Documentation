@@ -1,12 +1,12 @@
 ---
-title: "Añadir archivos a PST en Ruby"
+title: "Agregar Archivos a PST en Ruby"
 url: /es/java/adding-files-to-pst-in-ruby/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Agregar archivos a PST**
-Para agregar un archivo a PST usando **Aspose.Email Java para Ruby**, simplemente invoca **AddFileToPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Agregar Archivos a PST**
+Para agregar un archivo a PST usando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **AddFileToPST**. Aquí puedes ver un código de ejemplo.
 
 **Código Ruby**
 
@@ -22,10 +22,10 @@ fi.addFile(data_dir + "Report.xlsx", "IPM.Document.Excel.Sheet.8")
 
 pst.dispose()
 
-puts "Added file to PST"
+puts "Archivo agregado a PST"
 
 ```
-## **Descargar Running Code**
-Download **Agregar archivos a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Agregar Archivos a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/addfiletopst.rb)

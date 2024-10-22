@@ -1,31 +1,30 @@
 ---
-title: "Enviar archivos seleccionados a Dropbox"
-url: /es/sharepoint/send-selected-files-to-dropbox/
+title: "Enviar Archivos Seleccionados a Dropbox"
+url: /es/sharepoint/enviar-archivos-seleccionados-a-dropbox/
 weight: 60
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Con Aspose.Email para SharePoint, puedes seleccionar cualquier archivo para enviarlo a Dropbox. En este artículo se explica cómo hacerlo.
+Con Aspose.Email para SharePoint, puedes seleccionar cualquier archivo para enviar a Dropbox. Este artículo explica cómo hacerlo.
 
-{{% /alert %}}
+{{% /alert %}} 
 
 Para enviar archivos a Dropbox:
 
-1. En la biblioteca de documentos, seleccione un archivo.
-1. Click **Enviar a Dropbox** de la **Herramientas Aspose** ribbon.
+1. En la biblioteca de documentos, selecciona un archivo.
+1. Haz clic en **Enviar a Dropbox** en la cinta de **Aspose Tools**. 
 
-   **Iniciar sesión para enviar archivos a Dropbox.**
+   **Iniciando sesión para enviar archivos a Dropbox.** 
 
 ![todo:image_alt_text](send-selected-files-to-dropbox_1.png)
 
 
 
-
 1. Especifica las credenciales de Dropbox y el nombre del directorio (opcional) al que se deben transferir los archivos.
-1. Click **Send** para transferir los archivos. Una vez que la transferencia se haya realizado correctamente, los archivos estarán disponibles en Dropbox.
+1. Haz clic en **Enviar** para transferir los archivos. Después de una transferencia exitosa, los archivos estarán disponibles en Dropbox. 
 
-   **Los archivos transferidos en Dropbox.**
+   **Los archivos transferidos en Dropbox.** 
 
 ![todo:image_alt_text](send-selected-files-to-dropbox_2.png)

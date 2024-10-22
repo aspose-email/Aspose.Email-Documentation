@@ -1,20 +1,20 @@
 ---
-title: "Trabajar con archivos adjuntos de mensajes mediante IMAP"
-url: /es/java/working-with-message-attachments-using-imap/
+title: "Trabajando con Archivos Adjunto usando IMAP"
+url: /es/java/trabajando-con-archivos-adjunto-usando-imap/
 weight: 30
 type: docs
 ---
 
 
-## **Listar los archivos adjuntos de los mensajes mediante el cliente IMAP**
+## **Listar Archivos Adjunto usando el Cliente IMAP**
 
-Para obtener información sobre los archivos adjuntos, como el nombre y el tamaño, sin obtener los datos del archivo adjunto, utilice las siguientes funciones de la API:
+Para obtener información sobre los archivos adjuntos como el nombre, tamaño sin recuperar los datos del archivo adjunto, utiliza las siguientes características de la API:
 
-- [ImapAttachmentInfo](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfo/) - Representa la información de un adjunto.
-- [ImapAttachmentInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfocollection/) - Representa una colección de IMAPAttachmentInfo.
-- [ListAttachments (int SequenceNumber)](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listAttachments-int-) - Obtiene la información de cada adjunto de un mensaje.
+- [ImapAttachmentInfo](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfo/) - Representa la información de un archivo adjunto. 
+- [ImapAttachmentInfoCollection](https://reference.aspose.com/email/java/com.aspose.email/imapattachmentinfocollection/) - Representa una colección de ImapAttachmentInfo. 
+- [listAttachments(int sequenceNumber)](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#listAttachments-int-) - Obtiene información de cada archivo adjunto en un mensaje.
 
-El siguiente ejemplo de código muestra cómo usar el cliente IMAP para recuperar información sobre los mensajes de correo electrónico y sus archivos adjuntos de un servidor y, a continuación, mostrar los detalles de los archivos adjuntos de cada mensaje. Permite acceder a los archivos adjuntos de los mensajes de correo electrónico y procesarlos mediante el protocolo IMAP.
+El siguiente ejemplo de código muestra cómo usar el cliente IMAP para recuperar información sobre mensajes de correo electrónico y sus archivos adjuntos de un servidor y luego mostrar los detalles del archivo adjunto para cada mensaje. Permite acceder y procesar archivos adjuntos de mensajes de correo electrónico utilizando el protocolo IMAP.
 
 ```java
 ImapMessageInfoCollection messageInfoCollection = imapClient.listMessages();
@@ -25,9 +25,7 @@ for (ImapMessageInfo message : messageInfoCollection) {
 
     for (ImapAttachmentInfo attachmentInfo : attachmentInfoCollection) {
         System.out.println(
-                "Attachment: " + attachmentInfo.getName() + " (size: " + attachmentInfo.getSize() + ")");
+                "Archivo Adjunto: " + attachmentInfo.getName() + " (tamaño: " + attachmentInfo.getSize() + ")");
     }
 }
 ```
-
-

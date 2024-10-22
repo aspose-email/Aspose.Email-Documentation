@@ -1,45 +1,45 @@
 ---
-title: "Trabajo con archivos adjuntos y objetos incrustados"
+title: "Trabajando con Archivos Adjuntos y Objetos Insertados"
 url: /es/net/working-with-attachments-and-embedded-objects/
 weight: 20
 type: docs
 ---
 
 
-## **Administración de archivos adjuntos de correo electrónico**
+## **Gestionando Archivos Adjuntos de Email**
 
-Un archivo adjunto de correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje independiente o como parte del mensaje al que está adjunto. El [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) la clase se usa con [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) clase. Todos los mensajes incluyen un cuerpo. Además del cuerpo, es posible que desee enviar archivos adicionales. Se envían como archivos adjuntos y se representan como una instancia del [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) clase. Puede enviar cualquier cantidad de archivos adjuntos, pero el servidor de correo limita el tamaño de los archivos adjuntos. Gmail, por ejemplo, no admite archivos de más de 10 MB.
+Un archivo adjunto de correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje separado, así como parte del mensaje al que está adjunto. La clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) se utiliza con la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). Todos los mensajes incluyen un cuerpo. Además del cuerpo, quizás desee enviar archivos adicionales. Estos se envían como archivos adjuntos y se representan como una instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/). Puede enviar cualquier número de archivos adjuntos, pero el tamaño del archivo adjunto está limitado por el servidor de correo. Gmail, por ejemplo, no admite tamaños de archivos superiores a 10MB.
 {{% alert %}}
 **¡Pruébalo!**
 
-Agregue o elimine archivos adjuntos de correo electrónico en línea con la versión gratuita [**Aplicación Aspose.Email Editor**](https://products.aspose.app/email/es/editor).
+Agrega o elimina archivos adjuntos de email en línea con la gratuita [**Aspose.Email Editor App**](https://products.aspose.app/email/es/editor).
 {{% /alert %}}
 
-### **Agregar un archivo adjunto**
+### **Agregar un Archivo Adjunto**
 
-Para añadir un archivo adjunto a un correo electrónico, sigue estos pasos:
+Para agregar un archivo adjunto a un correo electrónico, siga estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Crea una instancia del [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) class.
-1. Cargue el accesorio en el [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) instance.
-1. Añada el [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) instancia en el [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
+1. Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Cree una instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+1. Cargue el archivo adjunto en la instancia de [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+1. Agregue la instancia de [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) a la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-El siguiente fragmento de código muestra cómo añadir un archivo adjunto a un correo electrónico.
+El siguiente fragmento de código muestra cómo agregar un archivo adjunto a un correo electrónico.
 
 ```csharp
-// Crea una instancia de MailMessage class
+// Crear una instancia de la clase MailMessage
 var eml = new MailMessage
 {
     From = "sender@from.com",
     To = "receiver@to.com",
-    Subject = "This is message",
-    Body = "This is body"
+    Subject = "Este es un mensaje",
+    Body = "Este es el cuerpo"
 };
 
-// Load an attachment
+// Cargar un archivo adjunto
 var attachment = new Attachment("1.txt");
 
-// Add Multiple Attachment in instance of MailMessage class and Save message to disk
+// Agregar múltiples archivos adjuntos a la instancia de la clase MailMessage y guardar el mensaje en disco
 eml.Attachments.Add(attachment);
 
 eml.AddAttachment(new Attachment("1.jpg"));
@@ -49,22 +49,20 @@ eml.AddAttachment(new Attachment("1.pdf"));
 eml.Save("AddAttachments.eml");
 ```
 
-Anteriormente, describimos cómo agregar archivos adjuntos a su mensaje de correo electrónico con Aspose.Email. A continuación se muestra cómo eliminar los archivos adjuntos y mostrar la información sobre ellos en la pantalla.
+Arriba, describimos cómo agregar archivos adjuntos a su mensaje de correo electrónico con Aspose.Email. Lo que sigue muestra cómo eliminar archivos adjuntos y mostrar información sobre ellos en la pantalla.
 
-### **Añadir un adjunto de referencia**
+### **Agregar un Archivo Adjunto de Referencia**
 
-Un adjunto de referencia es un tipo de archivo adjunto que incluye un enlace o una referencia a un archivo o elemento, en lugar de incluir el propio archivo o elemento en el mensaje de correo electrónico.
-Cuando los destinatarios del correo electrónico hagan clic en el archivo adjunto de referencia, podrán acceder al archivo vinculado si tienen los permisos adecuados para hacerlo.
-Al usar un archivo adjunto de referencia, puede enviar un mensaje de correo electrónico más pequeño y asegurarse de que todos tengan acceso a la versión más actualizada del archivo o elemento.
+Un archivo adjunto de referencia es un tipo de archivo adjunto que incluye un enlace o una referencia a un archivo o ítem, en lugar de incluir el archivo o ítem en sí en el mensaje de correo electrónico. Cuando los destinatarios del correo electrónico hacen clic en el archivo adjunto de referencia, podrán acceder al archivo vinculado si tienen los permisos apropiados para hacerlo. Al utilizar un archivo adjunto de referencia, puede enviar un mensaje de correo electrónico más pequeño y asegurarse de que todos tengan acceso a la versión más actualizada del archivo o ítem.
 
-El siguiente fragmento de código muestra cómo añadir un adjunto de referencia a un correo electrónico. El código lleva a cabo los siguientes pasos:
+El siguiente fragmento de código muestra cómo agregar un archivo adjunto de referencia a un correo electrónico. El código realiza los siguientes pasos:
 
-1. Carga el archivo del mensaje de correo electrónico mediante [MailMessage.Load()](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2) method.
-2. Crea un nuevo objeto ReferenceAttachment denominado RefAttach y pasa la URL del adjunto \"https://[attach_uri]» como parámetro a su constructor.
-3. Establece el nombre del archivo adjunto en \"Document.docx\" mediante el [Name](https://reference.aspose.com/email/net/aspose.email/attachment/name/) propiedad del objeto RefAttach.
-4. Establece el tipo de proveedor del adjunto en [AttachmentProviderType.OneDrivePro](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) utilizando el [ProviderType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/providertype/) propiedad del objeto RefAttach.
-5. Establece el tipo de permiso del adjunto en [AttachmentPermissionType.AnyoneCanEdit](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) utilizando el [PermissionType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/permissiontype/) propiedad del objeto RefAttach.
-6. Añade el objeto RefAttach al [Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/) colección del objeto eml utilizando el [Add()](https://reference.aspose.com/email/net/aspose.email/attachmentcollection/) method.
+1. Carga el archivo del mensaje de correo electrónico usando el método [MailMessage.Load()](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_2).
+2. Crea un nuevo objeto ReferenceAttachment llamado refAttach, pasando la URL del archivo adjunto "https://[attach_uri]" como parámetro a su constructor.
+3. Establece el nombre del archivo adjunto como "Document.docx" utilizando la propiedad [Name](https://reference.aspose.com/email/net/aspose.email/attachment/name/) del objeto refAttach.
+4. Establece el tipo de proveedor del archivo adjunto como [AttachmentProviderType.OneDrivePro](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) utilizando la propiedad [ProviderType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/providertype/) del objeto refAttach.
+5. Establece el tipo de permiso del archivo adjunto como [AttachmentPermissionType.AnyoneCanEdit](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) utilizando la propiedad [PermissionType](https://reference.aspose.com/email/net/aspose.email/referenceattachment/permissiontype/) del objeto refAttach.
+6. Agrega el objeto refAttach a la colección [Attachments](https://reference.aspose.com/email/net/aspose.email/mailmessage/attachments/) del objeto eml utilizando el método [Add()](https://reference.aspose.com/email/net/aspose.email/attachmentcollection/).
 
 ```cs
 var eml = MailMessage.Load("fileName");
@@ -79,61 +77,61 @@ var refAttach = new ReferenceAttachment("https://[attach_uri]")
 eml.Attachments.Add(refAttach);
 ```
 
-### **Eliminar un archivo adjunto**
+### **Eliminar un Archivo Adjunto**
 
 Para eliminar un archivo adjunto, siga los pasos que se indican a continuación:
 
-- Crea una instancia de [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) class.
-- Cargue el archivo adjunto en el caso de [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) class.
-- Agregue el archivo adjunto a la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Elimine los archivos adjuntos de la instancia de [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) clase que usa el [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instancia de clase.
+- Cree una instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+- Cargue el archivo adjunto en la instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/).
+- Agregue el archivo adjunto a la instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Elimine los archivos adjuntos de la instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) utilizando la instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-En el siguiente fragmento de código se muestra cómo eliminar un archivo adjunto.
+El siguiente fragmento de código muestra cómo eliminar un archivo adjunto.
 
 ```csharp
-// Crea una instancia de MailMessage class
+// Crear una instancia de la clase MailMessage
 var eml = new MailMessage {From = "sender@sender.com", To = "receiver@gmail.com"};
 
-// Load an attachment
+// Cargar un archivo adjunto
 var attachment = new Attachment("1.txt");
 eml.Attachments.Add(attachment);
 
-// Remove attachment from your MailMessage
+// Eliminar el archivo adjunto de su MailMessage
 eml.Attachments.Remove(attachment);
 ```
 
-### **Mostrar el nombre del archivo adjunto**
+### **Mostrar el Nombre del Archivo Adjunto**
 
-Para mostrar el nombre de un archivo adjunto, sigue estos pasos:
+Para mostrar el nombre de un archivo adjunto, siga estos pasos:
 
-1. Revisa los archivos adjuntos del mensaje de correo electrónico y guarda cada uno de ellos.
-2. Muestra el nombre de cada adjunto en la pantalla.
+1. Recorrer los archivos adjuntos en el mensaje de correo electrónico y guardar cada archivo adjunto.
+2. Mostrar cada nombre de archivo adjunto en la pantalla.
 
-El siguiente fragmento de código muestra cómo mostrar el nombre de un archivo adjunto en la pantalla.
+El siguiente fragmento de código muestra cómo mostrar un nombre de archivo adjunto en la pantalla.
 
 ```csharp
 var eml = MailMessage.Load("Attachments.eml");
 
 foreach (var attachment in eml.Attachments)
 {
-    // Display the the attachment file name
+    // Mostrar el nombre del archivo adjunto
     Console.WriteLine(attachment.Name);
 }
 ```
 
-### **Extraer archivos adjuntos de correo electrónico**
+### **Extraer Archivos Adjuntos de Email**
 
-En este tema se explica cómo extraer un archivo adjunto de un archivo de correo electrónico. Un archivo adjunto de correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje independiente o como parte del mensaje al que está adjunto. Todos los mensajes de correo electrónico incluyen la opción de enviar archivos adicionales. Se envían como archivos adjuntos y se representan como instancias del [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) clase. El [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) la clase se usa con [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) clase para trabajar con archivos adjuntos. Para extraer los archivos adjuntos de un mensaje de correo electrónico, sigue estos pasos:
+Este tema explica cómo extraer un archivo adjunto de un archivo de correo electrónico. Un archivo adjunto de correo electrónico es un archivo que se envía junto con un mensaje de correo electrónico. El archivo puede enviarse como un mensaje separado, así como parte del mensaje al que está adjunto. Todos los mensajes de correo electrónico incluyen una opción para enviar archivos adicionales. Estos se envían como archivos adjuntos y se representan como instancias de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/). La clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) se utiliza con la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) para trabajar con archivos adjuntos. Para extraer archivos adjuntos de un mensaje de correo electrónico, siga estos pasos:
 
-- Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-- Cargue un archivo de correo electrónico en [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-- Crea una instancia del [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) clase y úsala en bucle para extraer todos los archivos adjuntos.
+- Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Cargue un archivo de correo electrónico en la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+- Cree una instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) y utilícela en un bucle para extraer todos los archivos adjuntos.
 - Guarde el archivo adjunto y muéstrelo en la pantalla.
 
 |**Archivos adjuntos extraídos en el correo electrónico**|
-|: - |
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_1.png)|
-El siguiente fragmento de código muestra cómo extraer los archivos adjuntos de un correo electrónico.
+El siguiente fragmento de código muestra cómo extraer archivos adjuntos de correo electrónico.
 
 ```csharp
 var eml = MailMessage.Load("Message.eml", new MsgLoadOptions());
@@ -145,68 +143,68 @@ foreach (var attachment in eml.Attachments)
 }
 ```
 
-#### **Recuperar la descripción del contenido del archivo adjunto**
+#### **Recuperar Content-Description de un Archivo Adjunto**
 
-La API Aspose.Email ofrece la capacidad de leer la descripción del contenido de un archivo adjunto desde el encabezado del archivo adjunto. El siguiente fragmento de código muestra cómo recuperar la descripción del contenido del archivo adjunto.
+Aspose.Email API proporciona la capacidad de leer la Content-Description de un archivo adjunto desde un encabezado de archivo adjunto. El siguiente fragmento de código muestra cómo recuperar la descripción del contenido del archivo adjunto.
 
 ```csharp
 var eml = MailMessage.Load("EmailWithAttachEmbedded.eml");
 Console.WriteLine(eml.Attachments[0].Headers["Content-Description"]);
 ```
 
-#### **Determinar si el adjunto es un mensaje incrustado**
+#### **Determinar si el Archivo Adjunto es un Mensaje Insertado**
 
-El siguiente fragmento de código muestra cómo determinar si el adjunto es un mensaje incrustado o no.
+El siguiente fragmento de código demuestra cómo determinar si el archivo adjunto es un mensaje insertado o no.
 
 ```csharp
 var eml = MailMessage.Load("EmailWithAttachEmbedded.eml");
 
 Console.WriteLine(eml.Attachments[0].IsEmbeddedMessage
-    ? "Attachment is an embedded message."
-    : "Attachment isn't an embedded message.");
+    ? "El archivo adjunto es un mensaje insertado."
+    : "El archivo adjunto no es un mensaje insertado.");
 ```
 
-## **Trabajar con imágenes en línea**
+## **Trabajando con imágenes en línea**
 
 ### **Agregar imagen en línea al cuerpo del correo electrónico**
 
-The [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/) la clase se usa con [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) clase para incrustar objetos en tu mensaje de correo electrónico. Para añadir un objeto incrustado, sigue estos pasos
+La clase [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/) se utiliza con la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) para insertar objetos en su mensaje de correo electrónico. Para agregar un objeto incrustado, siga estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Especifique los valores de origen, destino y asunto en [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Crea una instancia del [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) class.
-1. Crea una instancia del [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/) class.
-1. Cargue un objeto incrustado en [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/).
-1. Agregue el objeto incrustado cargado al [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instancia de clase.
-1. Añada el [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) instancia a la [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instancia de clase.
+1. Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Especifique los valores de de, para y asunto en la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Cree una instancia de la clase [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview).
+1. Cree una instancia de la clase [LinkedResource](https://reference.aspose.com/email/net/aspose.email/linkedresource/).
+1. Cargue un objeto incrustado en la [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/).
+1. Agregue el objeto incrustado cargado en la instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Agregue la instancia de [AlternateView](https://apireference.aspose.com/email/net/aspose.email/alternateview) a la instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
 
-Los fragmentos de código siguientes producen un mensaje de correo electrónico con texto sin formato y cuerpos HTML y una imagen incrustada en el HTML.
+Los fragmentos de código a continuación producen un mensaje de correo electrónico con cuerpo de texto plano y HTML y una imagen incrustada en el HTML.
 
-|**Imagen incrustada en el correo electrónico**|
-|: - |
+|**Imagen incrustada en el email**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_2.png)|
-Puede enviar cualquier cantidad de objetos incrustados. El servidor de correo limita el tamaño del archivo adjunto. Gmail, por ejemplo, no admite archivos de más de 10 MB. Los fragmentos de código que aparecen a continuación muestran cómo incrustar objetos en un correo electrónico.
+Puede enviar cualquier número de objetos incrustados. El tamaño del archivo adjunto está limitado por el servidor de correo. Gmail, por ejemplo, no admite tamaños de archivos superiores a 10MB. Los fragmentos de código a continuación demuestran cómo incrustar objetos en un email.
 
 ```csharp
 var eml = new MailMessage
 {
     From = "AndrewIrwin@from.com",
     To = "SusanMarc@to.com",
-    Subject = "This is an email"
+    Subject = "Este es un correo electrónico"
 };
 
-// Create the plain text part It is viewable by those clients that don't support HTML
+// Crear la parte de texto plano. Es visible para aquellos clientes que no soportan HTML
 var plainView =
-    AlternateView.CreateAlternateViewFromString("This is my plain text content", null, "text/plain");
+    AlternateView.CreateAlternateViewFromString("Este es mi contenido de texto plano", null, "text/plain");
 
-// Create the HTML part.To embed images, we need to use the prefix 'cid' in the img src value.
-// The cid value will map to the Content-Id of a Linked resource. Thus <img src='cid:barcode'>
-// will map to a LinkedResource with a ContentId of 'barcode'.
+// Crear la parte HTML. Para incrustar imágenes, necesitamos usar el prefijo 'cid' en el valor src de la imagen.
+// El valor cid se mapeará al Content-Id de un recurso vinculado. Así <img src='cid:barcode'>
+// se mapeará a un LinkedResource con un ContentId de 'barcode'.
 var htmlView =
-    AlternateView.CreateAlternateViewFromString("Here is an embedded image.<img src=cid:barcode>", null,
+    AlternateView.CreateAlternateViewFromString("Aquí hay una imagen incrustada.<img src=cid:barcode>", null,
         "text/html");
 
-// Create the LinkedResource (embedded image) and Añada el LinkedResource to the appropriate view
+// Crear el LinkedResource (imagen incrustada) y agregar el LinkedResource a la vista apropiada
 var barcode = new LinkedResource("1.jpg", MediaTypeNames.Image.Jpeg)
 {
     ContentId = "barcode"
@@ -219,41 +217,41 @@ eml.AlternateViews.Add(htmlView);
 eml.Save("EmbeddedImage_out.msg", SaveOptions.DefaultMsgUnicode);
 ```
 
-### **Eliminar la imagen en línea del cuerpo del correo electrónico**
+### **Eliminar imagen en línea del cuerpo del correo electrónico**
 
-[LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) accedido a través de [MailMessage.LinkedResources](https://reference.aspose.com/email/net/aspose.email/mailmessage/linkedresources/) propiedad. El [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) La colección proporciona un método para eliminar por completo los objetos incrustados agregados a un mensaje de correo electrónico. Utilice la versión sobrecargada de [LinkedResourceCollection.RemoveAt](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/removeat/#removeat/) método para eliminar todos los rastros de un objeto incrustado de un mensaje de correo electrónico.
+[LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) accesible a través de la propiedad [MailMessage.LinkedResources](https://reference.aspose.com/email/net/aspose.email/mailmessage/linkedresources/). La colección [LinkedResourceCollection](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/) proporciona un método para eliminar completamente objetos incrustados agregados en un mensaje de correo electrónico. Utilice la versión sobrecargada del método [LinkedResourceCollection.RemoveAt](https://reference.aspose.com/email/net/aspose.email/linkedresourcecollection/removeat/#removeat/) para eliminar todas las huellas de un objeto incrustado de un mensaje de correo electrónico.
 
-El código de ejemplo que aparece a continuación muestra cómo eliminar objetos incrustados de un mensaje de correo electrónico.
+El código de muestra a continuación muestra cómo eliminar objetos incrustados de un mensaje de correo electrónico.
 
 ```csharp
-//Load the test message with Linked Resources
+// Cargar el mensaje de prueba con recursos vinculados
 var eml = MailMessage.Load("EmlWithLinkedResources.eml");
 
-//Remove a LinkedResource
+// Eliminar un LinkedResource
 eml.LinkedResources.RemoveAt(0, true);
 
-//Now clear the Alternate View for linked Resources
+// Ahora limpiar la Vista Alternativa para recursos vinculados
 eml.AlternateViews[0].LinkedResources.Clear(true);
 ```
-## **Trabajo con objetos incrustados**
+## **Trabajando con Objetos Insertados**
 
-Un objeto incrustado es un objeto que se creó con una aplicación y se incluyó en un documento o un archivo creado por otra aplicación. Por ejemplo, una hoja de cálculo de Microsoft Excel se puede incrustar en un informe de Microsoft Word o se puede incrustar un archivo de vídeo en una presentación de Microsoft PowerPoint. Cuando un archivo se incrusta, en lugar de insertarlo o pegarlo en otro documento, conserva su formato original. El documento incrustado se puede abrir en la aplicación original y modificarlo.
+Un objeto incrustado es un objeto que fue creado con una aplicación y está encerrado dentro de un documento o archivo creado por otra aplicación. Por ejemplo, una hoja de cálculo de Microsoft Excel puede estar incrustada en un informe de Microsoft Word, o un archivo de video puede estar incrustado en una presentación de Microsoft PowerPoint. Cuando un archivo está incrustado, en lugar de insertarse o pegarse en otro documento, mantiene su formato original. El documento incrustado se puede abrir en la aplicación original y modificarse.
 
-### **Extracción de objetos incrustados**
+### **Extracción de Objetos Insertados**
 
-En este tema se explica cómo extraer objetos incrustados de un archivo de correo electrónico. El documento incrustado se puede abrir en la aplicación original y modificarlo. Para extraer un objeto incrustado de un mensaje de correo electrónico, sigue estos pasos:
+Este tema explica cómo extraer objetos incrustados de un archivo de correo electrónico. El documento incrustado se puede abrir en la aplicación original y ser modificado. Para extraer un objeto incrustado de un mensaje de correo electrónico, siga estos pasos:
 
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class.
-1. Cargue un archivo de correo electrónico en [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Cree un bucle y cree una instancia del [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) clase en él.
+1. Cree una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Cargue un archivo de correo electrónico en la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Cree un bucle y cree una instancia de la clase [Attachment](https://reference.aspose.com/email/net/aspose.email/attachment/) en él.
 1. Guarde el archivo adjunto y muéstrelo en la pantalla.
-1. Especifique la dirección del remitente y del destinatario en el [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance.
-1. Enviar un correo electrónico mediante [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/) class.
+1. Especifique la dirección del remitente y del destinatario en la instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/).
+1. Envíe el correo electrónico utilizando la clase [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/).
 
-El siguiente fragmento de código extrae los objetos incrustados de un correo electrónico.
+El siguiente fragmento de código extrae objetos incrustados de un correo electrónico.
 
-|**Objetos incrustados extraídos en el correo electrónico**|
-|: - |
+|**Objetos incrustados extraídos en el email**|
+| :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_3.png)|
 El siguiente fragmento de código muestra cómo extraer objetos incrustados.
 
@@ -267,9 +265,9 @@ foreach (var attachment in eml.Attachments)
 }
 ```
 
-#### **Identificar y extraer un archivo adjunto incrustado de un MSG formateado como RTF**
+#### **Identificar y Extraer un archivo adjunto incrustado de MSG formateado como RTF**
 
-Para los mensajes formateados como RTF, se puede usar el siguiente código para diferenciar y extraer los archivos adjuntos que están en línea o que aparecen como un icono en el cuerpo del mensaje. En el siguiente fragmento de código, se muestra cómo identificar y extraer un archivo adjunto incrustado de un mensaje con formato RTF.
+Para mensajes formateados como RTF, se puede utilizar el siguiente código para diferenciar y extraer archivos adjuntos que son ya sea en línea o aparecen como un ícono en el cuerpo del mensaje. El siguiente fragmento de código muestra cómo identificar y extraer un archivo adjunto incrustado de MSG formateado como RTF.
 
 ```csharp
 
@@ -316,29 +314,28 @@ static void SaveAttachment(MapiAttachment attachment, string fileName)
 }
 ```
 
-## **Recuperar archivos adjuntos de un correo electrónico firmado**
+## **Recuperar Archivos Adjuntos de Email Firmado**
 
-Los correos electrónicos firmados contienen una **smime.p7m** adjunto. Significa que el correo electrónico está encriptado por SMIME. **Smime.p7m** el formato del archivo es la firma digital.
-Para ver el contenido de este correo electrónico, utilice el [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/) método. El método devuelve un [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) objeto sin firma digital.
+Los correos electrónicos firmados contienen un único archivo adjunto **smime.p7m**. Esto significa que el correo electrónico está encriptado por SMIME. El formato de archivo **Smime.p7m** es la firma digital. Para ver los contenidos de este correo electrónico, use el método [RemoveSignature](https://reference.aspose.com/email/net/aspose.email/mailmessage/removesignature/). El método devuelve un objeto [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) sin una firma digital.
 
 ```csharp
 var signedEml = MailMessage.Load("signed.eml");
-       
+        
 if (signedEml.IsSigned)
 {
     for (var i = 0; i < signedEml.Attachments.Count; i++)
     {
-        Console.WriteLine($@"Signed email attachment{i}: {signedEml.Attachments[i].Name}");
+        Console.WriteLine($@"Archivo adjunto de email firmado{i}: {signedEml.Attachments[i].Name}");
     }
-   
-    // The email is signed. Remove a signature.
+    
+    // El correo electrónico está firmado. Eliminar la firma.
     var eml = signedEml.RemoveSignature();
-   
-    Console.WriteLine(@"Signature removed.");
+    
+    Console.WriteLine(@"Firma eliminada.");
 
     for (var i = 0; i < eml.Attachments.Count; i++)
     {
-        Console.WriteLine($@"Email attachment{i}: {eml.Attachments[i].Name}");
+        Console.WriteLine($@"Archivo adjunto de email{i}: {eml.Attachments[i].Name}");
     }
 }
 ```

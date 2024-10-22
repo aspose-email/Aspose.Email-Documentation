@@ -1,12 +1,12 @@
 ---
-title: "Crear un nuevo correo electrónico en Jython"
-url: /es/java/create-new-email-in-jython/
+title: "Crear Nuevo Correo Electrónico en Jython"
+url: /es/java/crear-nuevo-correo-electronico-en-jython/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email - Crear nuevo correo electrónico**
-Para crear un nuevo correo electrónico usando **Aspose.Email Java para Jython**, simplemente invoca **CreateNewEmail** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Crear Nuevo Correo Electrónico**
+Para crear un nuevo correo electrónico usando **Aspose.Email Java para Jython**, simplemente invoca el módulo **CreateNewEmail**. Aquí puedes ver el código de ejemplo.
 
 **Código Jython**
 
@@ -30,39 +30,39 @@ class CreateNewEmail:
 
 
 
-        # Create a instance of MailMessage class
+        # Crear una instancia de la clase MailMessage
 
         message = MailMessage()
 
-        # Set subject of the message
+        # Establecer el asunto del mensaje
 
-        message.setSubject("New message created by Aspose.Email for Java")
+        message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
         mail_address = MailAddress
 
-        # Set Html body
+        # Establecer el cuerpo en Html
 
-        message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+        message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-            "<font color=blue>This line is in blue color</font>")
+            "<font color=blue>Esta línea está en color azul</font>")
 
-        # Set sender information
+        # Establecer información del remitente
 
-        message.setFrom(MailAddress("from@domain.com", "Sender Name", False))
+        message.setFrom(MailAddress("from@domain.com", "Nombre del Remitente", False))
 
-        # Add TO recipients
+        # Agregar destinatarios TO
 
-        message.getTo().add(MailAddress("to1@domain.com", "Recipient 1", False))
+        message.getTo().add(MailAddress("to1@domain.com", "Destinatario 1", False))
 
-        message.getTo().add(MailAddress("to2@domain.com", "Recipient 2", False))
+        message.getTo().add(MailAddress("to2@domain.com", "Destinatario 2", False))
 
-        # Add CC recipients
+        # Agregar destinatarios CC
 
-        message.getCC().add(MailAddress("cc1@domain.com", "Recipient 3", False))
+        message.getCC().add(MailAddress("cc1@domain.com", "Destinatario 3", False))
 
-        message.getCC().add(MailAddress("cc2@domain.com", "Recipient 4", False))
+        message.getCC().add(MailAddress("cc2@domain.com", "Destinatario 4", False))
 
-        # Save message in EML and MSG formats
+        # Guardar el mensaje en formatos EML y MSG
 
         mail_message_save_type = MailMessageSaveType()
 
@@ -70,19 +70,19 @@ class CreateNewEmail:
 
         message.save(dataDir + "Message.msg", mail_message_save_type.getOutlookMessageFormat())
 
-        # Display Status
+        # Mostrar el estado
 
-        print "Created email messages Successfully."
+        print "Correo electrónico creado con éxito."
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     CreateNewEmail()
 
 ```
-## **Descargar Running Code**
-Download **Crear nuevo correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Crear Nuevo Correo Electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

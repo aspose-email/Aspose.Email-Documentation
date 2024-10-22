@@ -1,17 +1,16 @@
 ---
-title: "Busque mensajes y carpetas en un PST según algunos criterios en Jython"
+title: "Buscar mensajes y carpetas en un PST según algunos criterios en Jython"
 url: /es/java/search-messages-and-folders-in-a-pst-by-some-criteria-in-jython/
 weight: 70
 type: docs
 ---
 
-## **Aspose.Email: busca mensajes y carpetas en un PST**
-Para buscar mensajes y carpetas en un PST mediante **Aspose.Email Java para Jython**, simplemente invoca **SearchMessagesAndFoldersInPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Buscar mensajes y carpetas en un PST**
+Para buscar mensajes y carpetas en un PST utilizando **Aspose.Email Java para Jython**, simplemente invoca el módulo **SearchMessagesAndFoldersInPST**. Aquí puedes ver un ejemplo de código.
 
 **Código Jython**
 
 ```python
-
  from aspose-email import Settings
 
 from com.aspose.email import PersonalStorage
@@ -26,13 +25,9 @@ class SearchMessagesAndFoldersInPST:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingOutlook/WorkingWithOutlookPersonalStorage/SearchMessagesAndFoldersInPST/'
 
-
-
-        # Load the Outlook PST file
+        # Cargar el archivo PST de Outlook
 
         personalStorage=PersonalStorage()
 
@@ -42,7 +37,7 @@ class SearchMessagesAndFoldersInPST:
 
         builder = PersonalStorageQueryBuilder()
 
-            # High importance messages
+            # Mensajes de alta importancia
 
         mapiImportance=MapiImportance
 
@@ -50,7 +45,7 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Messages with High Imp:"
+        print "Mensajes con alta imp:"
 
         print messages.size()
 
@@ -60,11 +55,11 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Messages with IPM.Note:"
+        print "Mensajes con IPM.Note:"
 
         print messages.size()
 
-        # Messages with attachments AND high importance
+        # Mensajes con adjuntos Y alta importancia
 
         builder.getImportance().equals(mapiImportance.High)
 
@@ -74,31 +69,31 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Messages with atts: "
+        print "Mensajes con adjuntos:"
 
         print messages.size()
 
-        # Messages with size > 15 KB
+        # Mensajes con tamaño > 15 KB
 
         builder.getMessageSize().greater(15000)
 
         messages = folder.getContents(builder.getQuery())
 
-        print "messags size > 15Kb:"
+        print "Mensajes tamaño > 15Kb:"
 
         print messages.size()
 
-        # Unread messages
+        # Mensajes no leídos
 
         builder.hasNoFlags(mapiMessageFlags.MSGFLAG_READ)
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Unread:"
+        print "No leídos:"
 
         print messages.size()
 
-        # Unread messages with attachments
+        # Mensajes no leídos con adjuntos
 
         builder.hasNoFlags(mapiMessageFlags.MSGFLAG_READ)
 
@@ -106,21 +101,16 @@ class SearchMessagesAndFoldersInPST:
 
         messages = folder.getContents(builder.getQuery())
 
-        print "Unread msgs with atts: "
+        print "Mensajes no leídos con adjuntos:"
 
         print messages.size()
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     SearchMessagesAndFoldersInPST()
-
 ```
-## **Descargar Running Code**
-Download **Buscar mensajes y carpetas en un PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Buscar mensajes y carpetas en un PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

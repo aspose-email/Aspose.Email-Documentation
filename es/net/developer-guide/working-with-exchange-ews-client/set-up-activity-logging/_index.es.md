@@ -1,17 +1,17 @@
 ---
-title: "Configurar el registro de actividades"
-url: /es/net/set-up-activity-logging/
+title: "Configurar Registro de Actividades"
+url: /es/net/configurar-registro-de-actividades/
 weight: 41
 type: docs
 ---
 
-El registro se usa para depurar, así como para recopilar y analizar información de trabajo sobre la aplicación. Los archivos de registro contienen información del sistema sobre el funcionamiento de la aplicación cliente.
+El registro se utiliza para la depuración, así como para recopilar y analizar información de trabajo sobre la aplicación. Los archivos de registro contienen información del sistema sobre la operación de la aplicación cliente.
 
-## **Habilitar el registro de actividades mediante el archivo appsettings.json**
+## **Habilitar el Registro de Actividades usando el Archivo appsettings.json**
 
-> **_NOTE:_** Esta opción es la preferida para las aplicaciones.NET Core.
+> **_NOTA:_** Esta opción es preferida para aplicaciones .NET Core.
 
-Los siguientes son los pasos para habilitar el inicio de sesión [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+Los siguientes son los pasos para habilitar el registro en [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
 
 - Agregue un archivo de configuración appsettings.json a un proyecto de C#, si no se ha agregado antes. Asegúrese de que el archivo del proyecto contenga las siguientes líneas en la sección ItemGroup:
 
@@ -21,7 +21,7 @@ Los siguientes son los pasos para habilitar el inicio de sesión [EWSClient](htt
   </Content>
   ```
 
-- A continuación, añada el siguiente contenido al archivo appsettings.json.
+- Luego, agregue el siguiente contenido al archivo appsettings.json.
 
   ```json
   {
@@ -33,19 +33,19 @@ Los siguientes son los pasos para habilitar el inicio de sesión [EWSClient](htt
 Hay dos propiedades:
 
 - `EWSDiagnosticLog` - Especifica la ruta relativa o absoluta al archivo de registro.
-- `EWSDiagnosticLog_UseDate` - especifica si se debe añadir una representación en cadena de la fecha actual al nombre del archivo de registro.
+- `EWSDiagnosticLog_UseDate` - especifica si se debe agregar una representación en cadena de la fecha actual al nombre del archivo de registro.
 
-## **Habilitar el registro de actividades en el código del programa**
+## **Habilitar el Registro de Actividades en el Código del Programa**
 
-También puede activar el registro de forma inmediata en el código.
+También puede habilitar el registro inmediatamente en el código.
 
-> **_NOTE:_** aunque ya haya habilitado el registro mediante archivos de configuración, se aplicará esta opción.
+> **_NOTA:_** incluso si ya ha habilitado el registro mediante archivos de configuración, esta opción se aplicará.
 
-Los siguientes son los pasos para habilitar el inicio de sesión en EWSClient.
+Los siguientes son los pasos para habilitar el registro en EWSClient.
 
-- Crea un [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
-- Establezca la ruta al archivo de registro mediante el [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/logfilename/) property.
-- Configure el [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/usedateinlogfilename/) propiedad si es necesario.
+- Cree un [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+- Establezca la ruta al archivo de registro usando la propiedad [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/logfilename/).
+- Establezca la propiedad [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangeclientbase/usedateinlogfilename/) si es necesario.
 
 ```csharp
 using (var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Exchange.asmx", credentials))
@@ -55,13 +55,13 @@ using (var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Ex
 }
 ```
 
-## **Habilitar el registro de actividades mediante el archivo App.config**
+## **Habilitar el Registro de Actividades usando el Archivo App.config**
 
-Esta opción es adecuada para aplicaciones en las que `app.config` es la forma preferida de mantener la configuración de la aplicación.
+Esta opción es adecuada para aplicaciones donde `app.config` es la forma preferida de mantener la configuración de la aplicación.
 
-Los siguientes son los pasos para habilitar el inicio de sesión [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
+Los siguientes son los pasos para habilitar el registro en [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/).
 
-- Agregue un archivo de configuración de la aplicación a un proyecto de C#, si no se ha agregado antes.
+- Agregue un archivo de configuración de aplicación a un proyecto de C#, si no se ha agregado antes.
 - Agregue el siguiente contenido al archivo de configuración.
 
 ```xml
@@ -88,4 +88,4 @@ Los siguientes son los pasos para habilitar el inicio de sesión [EWSClient](htt
 Hay dos secciones de configuración:
 
 - `EWSDiagnosticLog` - Especifica la ruta relativa o absoluta al archivo de registro.
-- `EWSDiagnosticLog_UseDate` - especifica si se debe añadir una representación en cadena de la fecha actual al nombre del archivo de registro.
+- `EWSDiagnosticLog_UseDate` - especifica si se debe agregar una representación en cadena de la fecha actual al nombre del archivo de registro.

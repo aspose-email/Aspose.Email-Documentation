@@ -1,195 +1,195 @@
 ---
-title: "Trabajando con recurrencias"
-url: /es/net/working-with-recurrences/
+title: "Trabajando con Recurrencias"
+url: /es/net/trabajando-con-recurrencias/
 weight: 140
 type: docs
 ---
 
 
-## **Trabajando con recurrencias diarias**
+## **Trabajando con Recurrencias Diarias**
 
-Aspose.Email admite la creación de recurrencias diarias mediante MapiCalendarDailyRecurrencePattern. Se pueden usar tres tipos diferentes de finales de recurrencia del calendario Mapi, incluidos EndAfterNoccurrences, EndAfterDate y NeverEnd. En esta sección se muestra la creación de diferentes patrones de recurrencia diarios.
+Aspose.Email soporta la creación de recurrencias diarias utilizando MapiCalendarDailyRecurrencePattern. Se pueden usar tres tipos diferentes de fin de recurrencia del calendario Mapi, incluyendo EndAfterNOccurrences, EndAfterDate y NeverEnd. Esta sección demuestra la creación de diferentes patrones de recurrencia diaria.
 
-### **Recurrencias diarias: tipo de recurrencia EndAfterNoccurrence**
+### **Recurrencias Diarias: Tipo de Recurrencia EndAfterNOccurrence**
 
-En este tipo de recurrencia, el número de recurrencias se establecerá junto con otra información de la siguiente manera:
+En este tipo de recurrencia, se debe establecer el número de recurrencias junto con otra información de la siguiente manera:
 
-1. Establezca la fecha de inicio, finalización y vencimiento.
-1. Crea una MapiTask.
-1. Establece el estado de la tarea en NotAssigned.
-1. Crea el objeto de periodicidad diaria estableciendo propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
-1. Establezca la propiedad mapitask.Recurrence en este objeto de recurrencia diaria.
-1. Guarde este mensaje en el disco.
+1. Establecer la fecha de inicio, fin y fecha de vencimiento.
+1. Crear una MapiTask.
+1. Establecer el estado de la tarea a NotAssigned.
+1. Crear el objeto de recurrencia diaria configurando propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
+1. Establecer la propiedad MapiTask.Recurrence a este objeto de recurrencia diaria.
+1. Guardar este mensaje en disco.
 
-En el siguiente fragmento de código, se muestra cómo crear una tarea con un tipo de final recurrente como endAfternOcurrence.
+El siguiente fragmento de código te muestra cómo crear una tarea con el tipo de fin de recurrencia como EndAfterNOccurrence.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-EndAfterNoccurrences-EndAfterNoccurrences.cs" >}}
 
-La siguiente función se puede utilizar para calcular el número de eventos entre las dos fechas:
+La siguiente función se puede usar para calcular el número de eventos entre las dos fechas:
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-GetOccurrenceCount-GetOccurrenceCount.cs" >}}
 
-#### **Configuración del valor del recuento de ocurrencias**
+#### **Estableciendo el valor de cuenta de ocurrencias**
 
-El siguiente fragmento de código muestra cómo establecer el valor del recuento de ocurrencias.
+El siguiente fragmento de código te muestra cómo establecer el valor de cuenta de ocurrencias.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetDailyOccurrenceCount-SetDailyOccurrenceCount.cs" >}}
 
-### **Recurrencias diarias: tipo de recurrencia EndAfterDate**
+### **Recurrencias Diarias: Tipo de Recurrencia EndAfterDate**
 
-La opción «Finalizar por» de la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función getOccurrenceCount (). Esta función toma la fecha de inicio, la fecha de finalización y la cadena RRULE.
+La opción "End By" en la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función GetOccurrenceCount(). Esta función toma la fecha de inicio, la fecha de fin y la cadena RRULE.
 
-#### **Recurrencias diarias: configuración del valor diario**
+#### **Recurrencias Diarias: Estableciendo el valor de Every Day**
 
-En el siguiente fragmento de código, también se muestra cómo establecer el valor del período en 1 y el valor INTERVAL en 1 en la cadena RRULE.
+El siguiente fragmento de código te muestra cómo establecer el valor del período a 1 y el valor de INTERVAL a 1 en la cadena RRULE también.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetRecurrenceEveryDay-SetRecurrenceEveryDay.cs" >}}
 
-El valor de cada día se puede establecer en cualquier valor apropiado, como se muestra en el siguiente ejemplo:
+El valor de Every Day se puede establecer en cualquier valor apropiado como se muestra en el siguiente ejemplo:
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-DailyRecurrences-SetEveryDayValueInterval.cs" >}}
 
-### **Recurrencias diarias: tipo de recurrencia sin fin**
+### **Recurrencias Diarias: Tipo de Recurrencia NeverEnd**
 
-El tipo de final se puede establecer mediante MapiCalendarRecurrenceEndType.NeverEnd. El período o el INTERVALO se pueden establecer en el valor requerido, por ejemplo, 1 en el siguiente ejemplo.
+El tipo de fin se puede establecer utilizando MapiCalendarRecurrenceEndType.NeverEnd. El período o INTERVAL se puede establecer en el valor requerido, digamos 1 en el siguiente ejemplo.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetDailyNeverEndRecurrence-SetDailyNeverEndRecurrence.cs" >}}
 
-## **Trabajando con recurrencias semanales**
+## **Trabajando con Recurrencias Semanales**
 
-Aspose.Email proporciona funciones completas para la creación de recurrencias semanales mediante MapiCalendarWeeklyRecurrencePattern. Se pueden usar tres tipos diferentes de finales de recurrencia del calendario Mapi, incluidos EndAfternOccurrences, EndAfterDate y NeverEnd. En esta sección se muestra la creación de diferentes patrones de recurrencia semanales.
+Aspose.Email proporciona características ricas para la creación de recurrencias semanales utilizando MapiCalendarWeeklyRecurrencePattern. Se pueden usar tres tipos diferentes de fin de recurrencia del calendario Mapi, incluyendo EndAfterNOccurrences, EndAfterDate y NeverEnd. Esta sección demuestra la creación de diferentes patrones de recurrencia semanal.
 
-### **Recurrencias semanales: tipo de recurrencia EndAfterNoccurrences**
+### **Recurrencias Semanales: Tipo de Recurrencia EndAfterNOccurrences**
 
-En este tipo de recurrencia, el número de recurrencias se establecerá junto con otra información de la siguiente manera:
+En este tipo de recurrencia, se debe establecer el número de recurrencias junto con otra información de la siguiente manera:
 
-1. Establezca la fecha de inicio, finalización y vencimiento.
-1. Crea una MapiTask.
-1. Establece el estado de la tarea en NotAssigned.
-1. Crea el objeto de periodicidad semanal estableciendo propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
-1. Establezca la propiedad mapitask.Recurrence en este objeto de periodicidad semanal.
-1. Guarde este mensaje en el disco.
+1. Establecer la fecha de inicio, fin y fecha de vencimiento.
+1. Crear una MapiTask.
+1. Establecer el estado de la tarea a NotAssigned.
+1. Crear el objeto de recurrencia semanal configurando propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
+1. Establecer la propiedad MapiTask.Recurrence a este objeto de recurrencia semanal.
+1. Guardar este mensaje en disco.
 
-En el siguiente fragmento de código, se muestra cómo crear una tarea con un tipo de final recurrente como endAfternOcurrence.
+El siguiente fragmento de código te muestra cómo crear una tarea con el tipo de fin de recurrencia como EndAfterNOccurrence.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-WeeklyEndAfterNoccurrences-WeeklyEndAfterNoccurrences.cs" >}}
 
-La siguiente función se puede utilizar para calcular el número de eventos entre las dos fechas:
+La siguiente función se puede usar para calcular el número de eventos entre las dos fechas:
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-WeeklyEndAfterNoccurrences-EventsBetweenTheTwoDates.cs" >}}
 
-#### **Selección de varios días en una semana**
+#### **Seleccionando múltiples días en una semana**
 
-En el siguiente fragmento de código, se muestra cómo seleccionar varios días de la semana.
+El siguiente fragmento de código te muestra cómo seleccionar múltiples días en una semana.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-EndAfterNoccurrenceSelectMultipleDaysInweek-EndAfterNoccurrenceSelectMultipleDaysInweek.cs" >}}
 
-#### **Selección de varios días en una semana y configuración de intervalos**
+#### **Seleccionando múltiples días en una semana y estableciendo intervalos**
 
-El siguiente fragmento de código muestra cómo seleccionar varios días de una semana y establecer intervalos.
+El siguiente fragmento de código te muestra cómo seleccionar múltiples días en una semana y establecer intervalos.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetWeeklyRecurrenceMultipleDaysInWeekWithInterval-SetWeeklyRecurrenceMultipleDaysInWeekWithInterval.cs" >}}
 
-### **Recurrencias semanales: tipo de recurrencia EndAfterDate**
+### **Recurrencias Semanales: Tipo de Recurrencia EndAfterDate**
 
-La opción «Finalizar por» de la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función getOccurrenceCount (). Esta función toma la fecha de inicio, la fecha de finalización y la cadena RRULE.
+La opción "End By" en la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función GetOccurrenceCount(). Esta función toma la fecha de inicio, la fecha de fin y la cadena RRULE.
 
-#### **Recurrencias semanales: configuración del valor diario**
+#### **Recurrencias Semanales: Estableciendo el valor de Every Day**
 
-En el siguiente fragmento de código, también se muestra cómo establecer el valor del período en 1 y el valor INTERVAL en 1 en la cadena RRULE.
+El siguiente fragmento de código te muestra cómo establecer el valor del período a 1 y el valor de INTERVAL a 1 en la cadena RRULE también.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetWeeklyEndAfterDateRecurrence-SetWeeklyEndAfterDateEveryDayRecurrence.cs" >}}
 
-El valor de cada día se puede establecer en cualquier valor apropiado y se pueden seleccionar varios días como se muestra en el siguiente ejemplo:
+El valor de Every Day se puede establecer en cualquier valor apropiado y se pueden seleccionar múltiples días como se muestra en el siguiente ejemplo:
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetWeeklyEndAfterDateRecurrence-SetWeeklyEndAfterDateMultipleDaysRecurrence.cs" >}}
 
-### **Recurrencias semanales: tipo de recurrencia sin fin**
+### **Recurrencias Semanales: Tipo de Recurrencia NeverEnd**
 
-El tipo de final se puede establecer mediante MapiCalendarRecurrenceEndType.NeverEnd. El período o el INTERVALO se pueden establecer en el valor requerido, por ejemplo, 1 en el siguiente ejemplo.
+El tipo de fin se puede establecer utilizando MapiCalendarRecurrenceEndType.NeverEnd. El período o INTERVAL se puede establecer en el valor requerido, digamos 1 en el siguiente ejemplo.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetWeeklyNeverEndRecurrence-SetWeeklyNeverEndRecurrence.cs" >}}
 
-## **Trabajando con recurrencias mensuales**
+## **Trabajando con Recurrencias Mensuales**
 
-Aspose.Email admite la creación de recurrencias mensuales mediante MapiCalendarMonthlyRecurrencePattern. Se pueden usar tres tipos diferentes de finales de recurrencia del calendario Mapi, incluidos EndAfterNoccurrences, EndAfterDate y NeverEnd. En esta sección se muestra la creación de diferentes patrones de recurrencia mensual.
+Aspose.Email soporta la creación de recurrencias mensuales utilizando MapiCalendarMonthlyRecurrencePattern. Se pueden usar tres tipos diferentes de fin de recurrencia del calendario Mapi, incluyendo EndAfterNOccurrences, EndAfterDate y NeverEnd. Esta sección demuestra la creación de diferentes patrones de recurrencia mensual.
 
-### **Recurrencias mensuales: tipo de recurrencia de EndAfternoCurrences**
+### **Recurrencias Mensuales: Tipo de Recurrencia EndAfterNOccurrences**
 
-En este tipo de recurrencia, el número de recurrencias se establecerá junto con otra información de la siguiente manera:
+En este tipo de recurrencia, se debe establecer el número de recurrencias junto con otra información de la siguiente manera:
 
-1. Establezca la fecha de inicio, finalización y vencimiento.
-1. Crea una MapiTask.
-1. Establece el estado de la tarea en NotAssigned.
-1. Crea el objeto de periodicidad mensual estableciendo propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
-1. Establezca la propiedad mapitask.Recurrence en este objeto de periodicidad mensual.
-1. Guarde este mensaje en el disco.
+1. Establecer la fecha de inicio, fin y fecha de vencimiento.
+1. Crear una MapiTask.
+1. Establecer el estado de la tarea a NotAssigned.
+1. Crear el objeto de recurrencia mensual configurando propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
+1. Establecer la propiedad MapiTask.Recurrence a este objeto de recurrencia mensual.
+1. Guardar este mensaje en disco.
 
-En el siguiente fragmento de código, se muestra cómo crear una tarea con un tipo de final recurrente como endAfternOcurrence.
+El siguiente fragmento de código te muestra cómo crear una tarea con el tipo de fin de recurrencia como EndAfterNOccurrence.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-MonthlyEndAfterNoccurrences-MonthlyEndAfterNoccurrences.cs" >}}
 
-La siguiente función se puede utilizar para calcular el número de eventos entre las dos fechas:
+La siguiente función se puede usar para calcular el número de eventos entre las dos fechas:
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-MonthlyEndAfterNoccurrences-EventsBetweenTheTwoDates.cs" >}}
 
-#### **Establecer el número fijo de ocurrencias**
+#### **Establecer un número fijo de ocurrencias**
 
-El siguiente fragmento de código muestra cómo establecer el número fijo de ocurrencias.
+El siguiente fragmento de código te muestra cómo establecer un número fijo de ocurrencias.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-MonthlyEndAfterNoccurrences-SetFixNumberOfOccurrences.cs" >}}
 
-### **Recurrencias mensuales: tipo de recurrencia EndAfterDate**
+### **Recurrencias Mensuales: Tipo de Recurrencia EndAfterDate**
 
-La opción «Finalizar por» de la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función getOccurrenceCount (). Esta función toma la fecha de inicio, la fecha de finalización y la cadena RRULE. El siguiente fragmento de código muestra cómo crear una repetición el 15 de cada mes entre la fecha de inicio y la fecha de finalización.
+La opción "End By" en la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función GetOccurrenceCount(). Esta función toma la fecha de inicio, la fecha de fin y la cadena RRULE. El siguiente fragmento de código te muestra cómo crear una recurrencia el día 15 de cada mes entre la fecha de inicio y la fecha de fin.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetMonthlyEndAfterDateRecurrence-SetMonthlyEndAfterDateRecurrence.cs" >}}
 
-### **Recurrencias mensuales: tipo de recurrencia sin fin**
+### **Recurrencias Mensuales: Tipo de Recurrencia NeverEnd**
 
-En el siguiente fragmento de código, se muestra cómo establecer el tipo de finalización mediante MapiCalendarRecurrenceEndType.NeverEnd.
+El siguiente fragmento de código te muestra cómo establecer el tipo de fin utilizando MapiCalendarRecurrenceEndType.NeverEnd.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetMonthlyNeverEndRecurrence-SetMonthlyNeverEndRecurrence.cs" >}}
 
-## **Trabajando con recurrencias anuales**
+## **Trabajando con Recurrencias Anuales**
 
-Aspose.Email admite la creación de recurrencias anuales mediante MapiCalendarMonthlyRecurrencePattern. Al establecer la propiedad del período en 12, podemos lograr el patrón de recurrencia anual. Se pueden usar tres tipos diferentes de finales de recurrencia del calendario Mapi, incluidos EndAfterNoccurrences, EndAfterDate y NeverEnd. En esta sección se muestra la creación de diferentes patrones de recurrencia anual.
+Aspose.Email soporta la creación de recurrencias anuales utilizando MapiCalendarMonthlyRecurrencePattern. Al establecer la propiedad de período en 12, podemos lograr el patrón de recurrencia anual. Se pueden usar tres tipos diferentes de fin de recurrencia del calendario Mapi, incluyendo EndAfterNOccurrences, EndAfterDate y NeverEnd. Esta sección demuestra la creación de diferentes patrones de recurrencia anual.
 
-### **Recurrencias anuales: tipo de recurrencia EndAfterNoccurrences**
+### **Recurrencias Anuales: Tipo de Recurrencia EndAfterNOccurrences**
 
-En este tipo de recurrencia, el número de recurrencias se establecerá junto con otra información de la siguiente manera:
+En este tipo de recurrencia, se debe establecer el número de recurrencias junto con otra información de la siguiente manera:
 
-1. Establezca la fecha de inicio, finalización y vencimiento.
-1. Crea una MapiTask.
-1. Establece el estado de la tarea en NotAssigned.
-1. Crea el objeto de periodicidad mensual estableciendo propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
-1. Establezca la propiedad mapitask.Recurrence en este objeto de periodicidad mensual para lograr la periodicidad anual.
-1. Guarde este mensaje en el disco.
+1. Establecer la fecha de inicio, fin y fecha de vencimiento.
+1. Crear una MapiTask.
+1. Establecer el estado de la tarea a NotAssigned.
+1. Crear el objeto de recurrencia mensual configurando propiedades como PatternType, Period, WeekStartDay, EndType y OccurenceCount.
+1. Establecer la propiedad MapiTask.Recurrence a este objeto de recurrencia mensual para lograr la recurrencia anual.
+1. Guardar este mensaje en disco.
 
-En el siguiente fragmento de código, se muestra cómo crear una tarea con un tipo de final recurrente como endAfternOcurrence.
+El siguiente fragmento de código te muestra cómo crear una tarea con el tipo de fin de recurrencia como EndAfterNOccurrence.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-YearlyRecurrences-EndAfterNOccurrences.cs" >}}
 
-### **Recurrencias anuales: tipo de recurrencia EndAfterDate**
+### **Recurrencias Anuales: Tipo de Recurrencia EndAfterDate**
 
-La opción «Finalizar por» de la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función getOccurrenceCount (). Esta función toma la fecha de inicio, la fecha de finalización y la cadena RRULE. El siguiente fragmento de código muestra cómo crear una repetición el 15 de cada séptimo mes entre la fecha de inicio y la fecha de caducidad.
+La opción "End By" en la tarea Mapi se logra estableciendo la propiedad OccurrenceCount calculada por la función GetOccurrenceCount(). Esta función toma la fecha de inicio, la fecha de fin y la cadena RRULE. El siguiente fragmento de código te muestra cómo crear una recurrencia el día 15 de cada 7º mes entre la fecha de inicio y la fecha de fin.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-YearlyEndAfterDate-YearlyEndAfterDate.cs" >}}
 
-### **Recurrencias anuales: tipo de recurrencia sin fin**
+### **Recurrencias Anuales: Tipo de Recurrencia NeverEnd**
 
-En el siguiente fragmento de código, se muestra cómo establecer el tipo de finalización mediante MapiCalendarRecurrenceEndType.NeverEnd.
+El siguiente fragmento de código te muestra cómo establecer el tipo de fin utilizando MapiCalendarRecurrenceEndType.NeverEnd.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-SetYearlyNeverEndRecurrence-SetYearlyNeverEndRecurrence.cs" >}}
 
-## **Generar repetición a partir de la regla de recurrencia**
+## **Generar Recurrencia a partir de Regla de Recurrencia**
 
-La API Aspose.Email brinda la capacidad de generar un patrón de recurrencia a partir de la regla de recurrencia (RRULE). Analiza la información de la RRULE según las especificaciones de iCal en el RFC 5545 y genera el patrón de recurrencia mediante el método MapiCalendarRecurrencePatternFactory.fromString. El siguiente fragmento de código muestra cómo generar un patrón de recurrencia a partir de la regla de recurrencia.
+La API Aspose.Email proporciona la capacidad de generar un Patrón de Recurrencia a partir de una Regla de Recurrencia (RRULE). Analiza la información de la RRULE según las especificaciones iCal de RFC 5545 y genera el patrón de recurrencia utilizando el método MapiCalendarRecurrencePatternFactory.FromString. El siguiente fragmento de código te muestra cómo generar el patrón de recurrencia a partir de la regla de recurrencia.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-GenerateRecurrenceFromRecurrenceRule-GenerateRecurrenceFromRecurrenceRule.cs" >}}
 
-## **Agregar un archivo adjunto a los eventos periódicos del calendario**
+## **Añadir un Archivo Adjunto a Eventos de Calendario Recurrentes**
 
-La API Aspose.Email ofrece la capacidad de agregar archivos adjuntos a los eventos periódicos del calendario.
+La API Aspose.Email proporciona la capacidad de agregar archivos adjuntos a eventos de calendario recurrentes.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-AddAttachmentToMapiExceptionInfo-AddAttachmentToMapiExceptionInfo.cs" >}}

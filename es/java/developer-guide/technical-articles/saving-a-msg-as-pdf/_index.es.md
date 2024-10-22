@@ -5,33 +5,33 @@ weight: 30
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Este artículo muestra cómo convertir un mensaje de correo electrónico a PDF con Aspose.Email.
-Aspose.Email para Java ofrece las funciones de Microsoft Outlook y no puede gestionar la conversión directa a PDF. Para solucionar este problema, los ejemplos de este artículo utilizan Aspose.Email para convertir el mensaje de correo electrónico en una secuencia MHTML y, a continuación, utilizan Aspose.Words para Java para cargar la secuencia MHTML y, a continuación, guardarla como PDF.
+Este artículo muestra cómo convertir un mensaje de correo electrónico a PDF utilizando Aspose.Email.
+Aspose.Email para Java maneja características de Microsoft Outlook y no puede realizar conversiones directas a PDF. Para superar esto, las muestras en este artículo utilizan Aspose.Email para convertir el mensaje de correo electrónico a un flujo MHTML y luego utilizan Aspose.Words para Java para cargar el flujo MHTML y luego guardarlo como PDF.
 
-{{% /alert %}} {{% alert color="primary" %}}
+{{% /alert %}} {{% alert color="primary" %}} 
 
-Un mensaje de correo electrónico también puede contener archivos adjuntos. Como cada archivo adjunto puede tener un tipo de soporte diferente, Aspose.Email ignora estos archivos adjuntos al convertirlos a MHTML, es decir, solo las imágenes en línea de un mensaje formarán parte de MHTML y se ignorarán los archivos adjuntos normales.
+Un mensaje de correo electrónico también puede contener archivos adjuntos. Dado que cada archivo adjunto puede ser de diferente tipo de medio, Aspose.Email ignora estos archivos adjuntos al convertir a MHTML, es decir, solo las imágenes en línea en un mensaje serán parte de MHTML y cualquier archivo adjunto regular será ignorado.
 
-{{% /alert %}}
+{{% /alert %}} 
 ## **Convertir mensaje de correo electrónico a PDF**
-El siguiente código muestra la conversión de un mensaje de correo electrónico a PDF mediante Aspose.Email en combinación con Aspose.Words para Java. Esto implica los siguientes pasos:
+El siguiente código muestra cómo convertir un mensaje de correo electrónico a PDF utilizando Aspose.Email en combinación con Aspose.Words para Java. Esto implica los siguientes pasos:
 
-1. Cargue el mensaje de correo electrónico con MailMessage
-1. Guarde el mensaje de correo electrónico en MemoryStream como MHTML
-1. Carga la transmisión con Aspose.Words
-1. Guarda el mensaje como PDF
+1. Cargar el mensaje de correo electrónico usando MailMessage
+1. Guardar el mensaje de correo electrónico en MemoryStream como MHTML
+1. Cargar el flujo usando Aspose.Words
+1. Guardar el mensaje como PDF
 
-El mensaje de correo electrónico de origen se puede ver de la siguiente manera:
+El mensaje de correo electrónico fuente se puede ver como sigue:
 
 |![todo:image_alt_text](saving-a-msg-as-pdf_1.png)|
-|: - |
-|**Figura: Archivo MSG de origen** |
+| :- |
+|**Figura: Archivo MSG fuente** |
 
 
 |![todo:image_alt_text](saving-a-msg-as-pdf_2.png)|
-|: - |
+| :- |
 |**Figura: Archivo PDF convertido** |
 **Java**
 
@@ -45,13 +45,13 @@ El mensaje de correo electrónico de origen se puede ver de la siguiente manera:
 
        MailMessage eml = MailMessage.load(fstream);
 
-       //Save the Message to output stream in MHTML format
+       //Guardar el mensaje en el flujo de salida en formato MHTML
 
        ByteArrayOutputStream emlStream = new ByteArrayOutputStream();
 
        eml.save(emlStream, SaveOptions.getDefaultMhtml());
 
-       //Load the stream in Word document
+       //Cargar el flujo en el documento de Word
 
        LoadOptions lo = new LoadOptions();
 
@@ -59,11 +59,11 @@ El mensaje de correo electrónico de origen se puede ver de la siguiente manera:
 
        Document doc = new Document(new ByteArrayInputStream(emlStream.toByteArray()), lo);
 
-       //Save to disc
+       //Guardar en disco
 
        doc.save("About Aspose.Pdf", SaveFormat.PDF);
 
-       //or Save to stream
+       //o guardar en el flujo
 
        ByteArrayOutputStream foStream = new ByteArrayOutputStream();
 

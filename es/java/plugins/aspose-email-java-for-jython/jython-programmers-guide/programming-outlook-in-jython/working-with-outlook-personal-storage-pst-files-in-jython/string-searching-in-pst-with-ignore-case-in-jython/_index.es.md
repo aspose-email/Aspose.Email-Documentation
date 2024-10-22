@@ -1,12 +1,12 @@
 ---
-title: "Búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas en Jython"
+title: "Búsqueda de Cadenas en PST con Ignorar Mayúsculas en Jython"
 url: /es/java/string-searching-in-pst-with-ignore-case-in-jython/
 weight: 80
 type: docs
 ---
 
-## **Aspose.Email: búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas**
-Para buscar cadenas en PST con ignorar mayúsculas y minúsculas usando **Aspose.Email Java para Jython**, simplemente invoca **StringSearchInPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Búsqueda de Cadenas en PST con Ignorar Mayúsculas**
+Para realizar una búsqueda de cadenas en PST con ignorar mayúsculas usando **Aspose.Email Java para Jython**, simplemente invoca el módulo **StringSearchInPST**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -68,13 +68,13 @@ class StringSearchInPST:
 
 
 
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     StringSearchInPST()
 
 ```
-## **Descargar Running Code**
-Download **Búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código Ejecutable**
+Descarga **Búsqueda de Cadenas en PST con Ignorar Mayúsculas (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

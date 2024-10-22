@@ -1,55 +1,54 @@
 ---
-title: "Trabajando con tareas de Outlook"
+title: "Trabajando con Tareas de Outlook"
 url: /es/net/working-with-outlook-tasks/
 weight: 100
 type: docs
 ---
 
+## **Crear, Guardar y Leer Tareas**
 
-## **Creación, almacenamiento y lectura de tareas**
+Aspose.Email para .NET te permite crear tareas de Outlook y guardarlas en formato MSG. La clase [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) proporciona una serie de propiedades como [PercentComplete](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/percentcomplete/), [EstimatedEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/estimatedeffort/), [ActualEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/actualeffort/), [History](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/history/), [LastUpdate](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/lastupdate/), y otras, para acomodar y establecer la información requerida para una tarea de Outlook. Este artículo muestra cómo crear, guardar y leer un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) desde el disco. Para crear y guardar una tarea en el disco:
 
-Aspose.Email para.NET permite crear tareas de Outlook y guardarlas en formato MSG. El [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) la clase proporciona una serie de propiedades tales como [PercentComplete](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/percentcomplete/), [EstimatedEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/estimatedeffort/), [ActualEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/actualeffort/), [History](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/history/), [LastUpdate](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/lastupdate/)y otros, para incluir y configurar la información requerida para una tarea de Outlook. En este artículo se muestra cómo crear, guardar y leer un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) desde el disco. Para crear y guardar una tarea en el disco:
+1. Instancia un nuevo objeto de la clase [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/).
+1. Ingresa la información de las propiedades de la tarea.
+1. Guarda la tarea en disco en formato MSG.
 
-1. Crea una instancia de un nuevo objeto del [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) class.
-1. Introduzca la información de las propiedades de la tarea.
-1. Guarda la tarea en un disco en formato MSG.
-
-El siguiente fragmento de código muestra cómo crear, guardar y leer tareas.
+El siguiente fragmento de código te muestra cómo crear, guardar y leer Tareas.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-CreatingAndSavingOutlookTasks-CreatingAndSavingOutlookTasks.cs" >}}
 
-### **Lectura de un MapiTask**
+### **Leer un MapiTask**
 
-The [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) el objeto de clase se usa para emitir el [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) objeto que carga una tarea desde el disco en formato MSG. El siguiente fragmento de código muestra cómo leer un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+El objeto de la clase [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) se utiliza para convertir el objeto [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) que carga una tarea desde el disco en formato MSG. El siguiente fragmento de código te muestra cómo leer un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-LoadingContactFromMSG-LoadingContactFromMSG.cs" >}}
 
-### **Lectura de una tarea de vToDo**
+### **Leer una Tarea VToDo**
 
-Las tareas de Google exportadas en formato iCalendar como eventos de vTodo se pueden cargar mediante el [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) clase como se muestra en el siguiente ejemplo de código. El siguiente fragmento de código muestra cómo leer una tarea de vTodo.
+Las tareas de Google exportadas en formato iCalendar como eventos VToDo pueden ser cargadas utilizando la clase [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) como se muestra en el siguiente ejemplo de código. El siguiente fragmento de código te muestra cómo leer una Tarea VToDo.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadingVToDoTask-ReadingVToDoTask.cs" >}}
 
-### **Agregar información de recordatorio a un MapiTask**
+### **Agregar Información de Recordatorio a un MapiTask**
 
-Al igual que Microsoft Outlook, Aspose.Email puede agregar información de recordatorio a un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/). En el siguiente fragmento de código se muestra cómo añadir información de recordatorio a un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+Similar a Microsoft Outlook, Aspose.Email puede agregar información de recordatorio a un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/). El siguiente fragmento de código te muestra cómo agregar información de recordatorio a un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddReminderInformationToMapiTask-AddReminderInformationToMapiTask.cs" >}}
 
-### **Agregar archivos adjuntos a un MapiTask**
+### **Agregar Archivos Adjuntos a un MapiTask**
 
-En el siguiente fragmento de código se muestra cómo añadir archivos adjuntos a un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+El siguiente fragmento de código te muestra cómo agregar archivos adjuntos a un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddAttachmentsToMapiTask-AddAttachmentsToMapiTask.cs" >}}
 
-### **Agregar recurrencia a MapiTask**
+### **Agregar Recurrencia a MapiTask**
 
-Aspose.Email permite crear una tarea recurrente donde la recurrencia puede ser diaria, semanal, mensual o anual. En el siguiente fragmento de código, se muestra cómo crear una tarea con diferentes tipos de periodicidad.
+Aspose.Email permite crear una tarea recurrente donde la recurrencia puede ser diaria, semanal, mensual o anual. El siguiente fragmento de código te muestra cómo crear una tarea con diferentes tipos de recurrencia.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-AddRecurrenceToMapiTask-AddRecurrenceToMapiTask.cs" >}}
 
-### **Conversión de Task a MHT**
+### **Convertir Tarea a MHT**
 
-Aspose.Email puede generar [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) como salida durante la conversión de un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) a MHT.
+Aspose.Email puede generar una salida similar a [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) durante la conversión de un [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) a MHT.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ConvertMapiTaskToMHT-ConvertMapiTaskToMHT.cs" >}}

@@ -1,220 +1,220 @@
 ---
-title: "Novedades de Aspose.Email para.NET"
+title: "Novedades en Aspose.Email para .NET"
 url: /es/net/whats-new/
 weight: 5
 type: docs
 ---
 
 
-## [Aspose.Email para.NET 24.3](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-3-release-notes/)
+## [Aspose.Email para .NET 24.3](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-3-release-notes/)
 
-- **Soporte para contactos y calendario en MS Graph** - Los métodos de la interfaz de iGraphClient le permiten acceder, administrar e interactuar con los contactos y eventos del calendario de los usuarios:
-  - Recupera una colección de contactos de MAPI.
-  - Recupera un contacto específico.
-  - Crea un contacto nuevo.
-  - Actualiza un contacto existente.
-  - Recupera una colección de información del calendario.
-  - Recupera una colección de elementos del calendario.
-  - Recupera un elemento de calendario específico.
-  - Crea un nuevo elemento de calendario.
-  - Actualiza un elemento de calendario existente.
+- **Soporte para Contactos y Calendario en MS Graph** - Los métodos de la interfaz IGraphClient permiten acceder, gestionar e interactuar con los contactos y eventos del calendario de los usuarios:
+  - Recuperar una colección de contactos MAPI.
+  - Recuperar un contacto específico.
+  - Crear un nuevo contacto.
+  - Actualizar un contacto existente.
+  - Recuperar una colección de información del calendario.
+  - Recuperar una colección de elementos del calendario.
+  - Recuperar un elemento de calendario específico.
+  - Crear un nuevo elemento de calendario.
+  - Actualizar un elemento de calendario existente.
 
-## [Aspose.Email para.NET 24.2](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-2-release-notes/)
+## [Aspose.Email para .NET 24.2](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-2-release-notes/)
 
-- **Manipular las categorías de elementos de Outlook** - Aspose.Email permite recuperar y utilizar los colores de categoría asociados a las categorías de elementos de Outlook almacenadas en archivos OLM.
+- **Manipular Categorías de Elementos de Outlook** - Aspose.Email permite recuperar y utilizar colores de categoría asociados con categorías de elementos de Outlook almacenados en archivos OLM.
 
-- **Coincidencia de clases de contenedores** - un nuevo [EnforceContainerClassMatching](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/enforcecontainerclassmatching/) la propiedad se agregó al [FolderCreationOptions](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/#foldercreationoptions-class) clase que, al añadir una carpeta a un archivo PST, le permite asegurarse de que la clase de la carpeta coincide con el tipo o la categoría de carpetas esperados dentro del archivo PST.
+- **Coincidencia de Clase de Contenedor** - se agregó una nueva propiedad [EnforceContainerClassMatching](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/enforcecontainerclassmatching/) a la clase [FolderCreationOptions](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/#foldercreationoptions-class), que, al agregar una carpeta a un archivo PST, permite asegurar que la clase de la carpeta coincida con el tipo o categoría esperada de carpetas dentro del archivo PST.
 
-## [Aspose.Email para.NET 23.12](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-12-release-notes/)
+## [Aspose.Email para .NET 23.12](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-12-release-notes/)
 
-- **Establecer la ruta relativa a los recursos al guardar un mensaje de correo electrónico como HTML** - Aspose.Email introduce la posibilidad de guardar recursos de correo electrónico con rutas relativas al exportar mensajes a formato HTML, lo que ofrece una mayor flexibilidad para vincular recursos. Los usuarios pueden elegir entre rutas absolutas y relativas y definir rutas personalizadas mediante el [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/resourcehtmlrendering/#htmlsaveoptionsresourcehtmlrendering-event) evento, simplificando el intercambio y la visualización de correos electrónicos en diferentes sistemas.
+- **Establecer Ruta Relativa a Recursos al Guardar Mensajes de Correo como HTML** - Aspose.Email presenta la capacidad de guardar recursos de correo con rutas relativas al exportar mensajes al formato HTML, ofreciendo una mayor flexibilidad para el enlace de recursos. Los usuarios pueden elegir entre rutas absolutas y relativas, y definir rutas personalizadas utilizando el evento [ResourceHtmlRendering](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/resourcehtmlrendering/#htmlsaveoptionsresourcehtmlrendering-event), simplificando el intercambio y la visualización de correos electrónicos a través de diferentes sistemas.
 
-## [Aspose.Email para.NET 23.11](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-11-release-notes/)
+## [Aspose.Email para .NET 23.11](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-11-release-notes/)
 
-- **Validar mensajes de correo electrónico** - Se agregó un conjunto de componentes para permitir a los usuarios validar los archivos de mensajes, que admiten formatos como eml, emlx, mht, msg y oft. Al utilizar esta funcionalidad, los usuarios pueden validar los mensajes y obtener información sobre el proceso de validación, incluidos el tipo de formato y los errores encontrados.
+- **Validar Mensajes de Correo** - Se agregó un conjunto de componentes para permitir a los usuarios validar archivos de mensajes, soportando formatos como eml, emlx, mht, msg y oft. Al utilizar esta funcionalidad, los usuarios pueden validar mensajes y obtener información sobre el proceso de validación, incluyendo tipo de formato y errores encontrados.
 
-- **Adjunte firmas digitales a los mensajes de correo electrónico** - El *AttachSignature* método en el [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) La clase fue diseñada para agregar fácilmente una firma digital a un correo electrónico.
+- **Adjuntar Firmas Digitales a Mensajes de Correo** - El método *AttachSignature* en la clase [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/#secureemailmanager-class) fue diseñado para agregar fácilmente una firma digital a un correo electrónico.
 
-Una vez que se adjunta la firma, los usuarios pueden verificar los resultados mediante propiedades como «isSigned», «MessageClass» y los detalles del archivo adjunto.
+Una vez que se adjunta la firma, los usuarios pueden verificar los resultados a través de propiedades como 'IsSigned', 'MessageClass' y detalles del archivo adjunto.
 
-Para personalizar el proceso de adjuntar firmas, los usuarios pueden utilizar el [SignatureOptions](https://reference.aspose.com/email/net/aspose.email/signatureoptions/#signatureoptions-class) class.
+Para personalizar el proceso de adjuntar la firma, los usuarios pueden utilizar la clase [SignatureOptions](https://reference.aspose.com/email/net/aspose.email/signatureoptions/#signatureoptions-class).
 
-## [Aspose.Email para.NET 23.10](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-10-release-notes/)
+## [Aspose.Email para .NET 23.10](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-10-release-notes/)
 
-- **Divida el almacenamiento de Mbox en partes más pequeñas** - divida archivos grandes en partes manejables e implemente acciones personalizadas durante el proceso:
+- **Dividir Almacenamiento Mbox en Partes Más Pequeñas** - dividir archivos grandes en partes manejables e implementar acciones personalizadas durante el proceso:
 
-  - Especifique un prefijo personalizado para los nombres de los archivos de Mbox divididos.
-  - Personalice las acciones antes y después de copiar un correo electrónico en un nuevo archivo Mbox.
-  - Reacciona cuando se crea un nuevo archivo Mbox.
-  - Responda cuando un nuevo archivo Mbox esté lleno de correos electrónicos.
+  - Especificar un prefijo personalizado para los nombres de archivos Mbox divididos.
+  - Personalizar acciones antes y después de copiar un correo electrónico a un nuevo archivo Mbox.
+  - Reaccionar cuando se crea un nuevo archivo Mbox.
+  - Responder cuando un nuevo archivo Mbox se llena de correos electrónicos.
 
-- **Obtenga contenido alternativo Ver por tipo de medio** - recuperar el contenido como una cadena de un AlternateView específico dentro de un mensaje de correo electrónico. - El  [MailMessage.getAlternateViewContent (cadena MediaType)](https://reference.aspose.com/email/net/aspose.email/mailmessage/getalternateviewcontent/#mailmessagegetalternateviewcontent-method) El método le permite acceder al contenido desde un AlternateView que coincida con el tipo de medio especificado.
+- **Obtener Contenido AlternateView por MediaType** - recuperar el contenido como una cadena de un AlternateView específico dentro de un mensaje de correo. El método [MailMessage.GetAlternateViewContent(string mediaType)](https://reference.aspose.com/email/net/aspose.email/mailmessage/getalternateviewcontent/#mailmessagegetalternateviewcontent-method) permite acceder al contenido de un AlternateView que coincide con el tipo de medio especificado.
 
-## [Aspose.Email para.NET 23.8](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-8-release-notes/)
+## [Aspose.Email para .NET 23.8](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-8-release-notes/)
 
-- **Enviar correos electrónicos a través de Graph Client** - se agregó el soporte para métodos sobrecargados a la clase GraphClient que aceptan un objeto MailMessage para enviar correos electrónicos:
-  - [CreateMessage (string folderId, mailMessage message)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createmessage/#createmessage)
+- **Enviar Correos Electrónicos a través del Cliente Graph** - se agregó soporte para métodos sobrecargados a la clase GraphClient que aceptan un objeto MailMessage para enviar correos electrónicos:
+  - [CreateMessage(string folderId, MailMessage message)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createmessage/#createmessage)
 
-  - void [Enviar (mensaje de correo electrónico)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/send/#send)
+  - void [Send(MailMessage message)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/send/#send)
 
-- **Guarde la lista de distribución de Mapi en un único archivo VCF de múltiples contactos** - Guarde la lista de distribución de Mapi en un nombre de archivo específico mediante las opciones de almacenamiento proporcionadas. Puede proporcionar el nombre del archivo y una instancia de la clase MapiDistributionListSaveOptions como parámetros.
-  - void [Guardar (cadena FileName, opciones MapiDistributionListSaveOptions)](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/save/#save_5) se ha agregado un método para este propósito.
+- **Guardar Lista de Distribución Mapi en un Solo Archivo VCF Multi Contacto** - Guardar la Lista de Distribución Mapi en un nombre de archivo especificado utilizando las opciones de guardado proporcionadas. Puede proporcionar el nombre del archivo y una instancia de la clase MapiDistributionListSaveOptions como parámetros.
+  - void [Save(string fileName, MapiDistributionListSaveOptions options)](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/save/#save_5) se ha añadido para este propósito.
 
-## [Aspose.Email para.NET 23.7](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-7-release-notes/)
+## [Aspose.Email para .NET 23.7](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-7-release-notes/)
 
-- **Eliminar elementos de PST** - Hemos añadido un nuevo método, [deleteItem (identificador de entrada de cadena)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/deleteitem/), a la clase PersonalStorage. Este método permite eliminar elementos (carpetas o mensajes) de una tabla de almacenamiento personal (PST) mediante el identificador de entrada único asociado al elemento.
-- **Gestión de eventos y división de PST** - Funcionalidad mejorada en [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class:
-  - [StorageProcessingEventHandler](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessingeventhandler/) el evento se produce antes de que se procese el almacenamiento, específicamente antes de procesar el almacenamiento actual en los métodos MergeWith o SplitInto. Este evento brinda la oportunidad de ejecutar una lógica personalizada o gestionar determinadas operaciones antes de que se produzca el procesamiento del almacenamiento.
+- **Eliminar Elementos de PST** - Se ha añadido un nuevo método, [DeleteItem(string entryId)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/deleteitem/), a la clase PersonalStorage. Este método proporciona una forma de eliminar elementos (carpetas o mensajes) de una Tabla de Almacenamiento Personal (PST) utilizando el unique entryId asociado con el elemento.
+- **Manejo de Eventos y División de PST** - Funcionalidad Mejorada en la clase [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class):
+  - El evento [StorageProcessingEventHandler](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessingeventhandler/) ocurre antes de que se procese el almacenamiento, específicamente antes de procesar el almacenamiento actual en los métodos MergeWith o SplitInto. Este evento proporciona una oportunidad para ejecutar lógica personalizada o manejar ciertas operaciones antes de que ocurra el procesamiento del almacenamiento.
 
-  - [StorageProcessingEventArgs](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessingeventargs/) la clase proporciona datos para el evento PersonalStorage.storageProcessing.
+  - La clase [StorageProcessingEventArgs](https://reference.aspose.com/email/net/aspose.email.storage.pst/storageprocessingeventargs/) proporciona datos para el evento PersonalStorage.StorageProcessing. 
 
-  - [SplitInto (tamaño de fragmento largo, prefijo de nombre de archivo de sección de cadena, ruta de cadena)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/splitinto/#splitinto_1) El método de sobrecarga permite dividir el almacenamiento PST en partes de menor tamaño.
-- **Manejo de calendarios** - Se agregaron nuevas propiedades y un método a la clase CalendarReader:
-  - [Count](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/count/) Esta propiedad le permite recuperar el número de componentes (eventos) de Vevent presentes en el calendario, lo que facilita el seguimiento del número total de eventos.
-  - [IsMultiEvents](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/ismultievents/) La propiedad determina si el calendario contiene varios eventos.
-  - [Method](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/method/) la propiedad obtiene el tipo de método iCalendar asociado al objeto de calendario. Devuelve el tipo de método, como «REQUEST», «PUBLISH» o «CANCEL», lo que proporciona información valiosa sobre el propósito del calendario.
+  - El método sobrecargado [SplitInto(long chunkSize, string partFileNamePrefix, string path)](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/splitinto/#splitinto_1) permite dividir el almacenamiento PST en partes de tamaño más pequeño. 
+- **Manejo de Calendario** - Se agregaron nuevas propiedades y un método a la clase CalendarReader:
+  - La propiedad [Count](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/count/) permite recuperar la cantidad de componentes Vevent (eventos) presentes en el calendario, facilitando el seguimiento del número total de eventos.
+  - La propiedad [IsMultiEvents](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/ismultievents/) determina si el calendario contiene múltiples eventos.
+  - La propiedad [Method](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/method/) obtiene el tipo de método iCalendar asociado con el objeto calendario. Devuelve el tipo de método, como "REQUEST", "PUBLISH", o "CANCEL", proporcionando información valiosa sobre el propósito del calendario.
   - [Version](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/version/) obtiene la versión de iCalendar.
-  - [LoadAsMultiple()](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/loadasmultiple/) El método permite cargar una lista de eventos de un calendario que contiene varios eventos. Devuelve una lista de objetos de cita, lo que permite un fácil acceso y procesamiento de cada evento de forma individual.
+  - El método [LoadAsMultiple()](https://reference.aspose.com/email/net/aspose.email.calendar/calendarreader/loadasmultiple/) permite cargar una lista de eventos de un calendario que contiene múltiples eventos. Devuelve una lista de objetos Appointment, permitiendo un fácil acceso y procesamiento de cada evento individualmente.
 
-## [Aspose.Email para.NET 23.6](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-6-release-notes/)
+## [Aspose.Email para .NET 23.6](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-6-release-notes/)
 
-- **Conservar o eliminar la firma en la conversión de MBOX a PST** - configurar el [MboxToPstConversionOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.storage/mboxtopstconversionoptions/removesignature/#mboxtopstconversionoptionsremovesignature-property) propiedad en «true» para eliminar la firma.
-- **Eliminar la firma al cargar archivos EML** - configurar el [LoadOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email/loadoptions/removesignature/) propiedad en «true» para eliminar la firma.
-- **Verificación de firma de correo electrónico**
-  - Se ha añadido un nuevo [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/) clase para comprobar la firma de correos electrónicos seguros. Ahora puede comprobar la firma de los objetos MAPIMessage y MailMessage.
-  - Se ha añadido un nuevo [SmimeResult](https://reference.aspose.com/email/net/aspose.email/smimeresult/) clase para almacenar los resultados de la comprobación de correos electrónicos seguros.
+- **Preservar o Eliminar la Firma en la Conversión de MBOX a PST** - establecer la propiedad [MboxToPstConversionOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.storage/mboxtopstconversionoptions/removesignature/#mboxtopstconversionoptionsremovesignature-property) en 'true' para eliminar la firma.
+- **Eliminar Firma al Cargar Archivos EML** - establecer la propiedad [LoadOptions.RemoveSignature](https://reference.aspose.com/email/net/aspose.email/loadoptions/removesignature/) en 'true' para eliminar la firma.
+- **Verificación de Firma de Correo Electrónico**
+  - Se añadió una nueva clase [SecureEmailManager](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/) para verificar la firma de correos electrónicos seguros. Ahora puede verificar la firma de objetos MapiMessage y MailMessage.
+  - Se añadió una nueva clase [SmimeResult](https://reference.aspose.com/email/net/aspose.email/smimeresult/) para almacenar los resultados de la verificación de correos electrónicos seguros.
 
-  Métodos introducidos del SecureEmailManager:
+  Se introdujeron métodos del SecureEmailManager:
 
-  - [CheckSignature (mensaje de MAPIMessage)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_3)
-  - [Verificar la firma (mensaje de MapiMessage, certificado X509 Certificate 2 para descifrar)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_4)
-  - [Check Signature (mensaje de MapiMessage, certificado X509 Certificate 2 para desencriptar, X509 Store store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_5)
-  - [CheckSignature (mensaje de correo electrónico)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature)
-  - [Verificar la firma (mensaje de mensaje de correo, certificado X509 2 para descifrar)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_1)
-  - [Check Signature (mensaje de mensaje de correo, certificado X509 Certificate 2 para descifrar, X509 Store store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_5)
+  - [CheckSignature(MapiMessage msg)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_3) 
+  - [CheckSignature(MapiMessage msg, X509Certificate2 certificateForDecrypt)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_4) 
+  - [CheckSignature(MapiMessage msg, X509Certificate2 certificateForDecrypt, X509Store store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_5) 
+  - [CheckSignature(MailMessage msg)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature) 
+  - [CheckSignature(MailMessage msg, X509Certificate2 certificateForDecrypt)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_1) 
+  - [CheckSignature(MailMessage msg, X509Certificate2 certificateForDecrypt, X509Store store)](https://reference.aspose.com/email/net/aspose.email/secureemailmanager/checksignature/#checksignature_5)
 
-## [Aspose.Email para.NET 23.5](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-5-release-notes/)
+## [Aspose.Email para .NET 23.5](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-5-release-notes/)
 
-- **Determine la versión de los archivos ICS/VCS** - Usa el [Version](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/version/) propiedad del [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) clase para recuperar la versión de los archivos ICS/VCS.
-- **Personalice las opciones de almacenamiento de los archivos vCard** - Hemos añadido el nuevo [VCardSaveOptions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/) clase a nuestra API con las siguientes propiedades:
-  - [VCardVersion](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/version/) permite a los usuarios especificar la versión de vCard deseada al guardar los elementos de contacto. De forma predeterminada, la clase está configurada para usar la versión 2.1 de vCard (vCardVersion.v21).
-  - [UseExtensions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/useextensions/) - permite a los usuarios controlar si se pueden usar campos extendidos al guardar archivos vCard. Si se establece en verdadero (valor predeterminado), se permiten las extensiones, lo que proporciona compatibilidad con campos personalizados e información de contacto adicional.
-  - [PreferredTextEncoding](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/preferredtextencoding/) - la codificación que se utilizará al guardar los elementos de contacto de la vCard.
-- **Obtenga el número total de elementos de mensajes contenidos en el almacenamiento de Zimbra** con el [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/gettotalitemscount/) método del [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/) class.
-- **Recuperar una subcarpeta PST por ruta** - Recupere una subcarpeta con el nombre especificado de la carpeta PST actual mediante el [FolderInfo.getSubfolder (nombre de cadena, bool ignoreCase, bool handlePathSeparator)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getsubfolder/#getsubfolder_2) sobrecarga de métodos.
+- **Determinar la Versión de Archivos ICS/VCS** - Utilice la propiedad [Version](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/version/) de la clase [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) para recuperar la versión de archivos ICS/VCS.
+- **Personalizar Opciones de Guardado para Archivos VCard** - Se agregó la nueva clase [VCardSaveOptions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/) a nuestra API con las siguientes propiedades:
+  - [VCardVersion](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/version/) permite a los usuarios especificar la versión de vCard deseada al guardar elementos de contacto. Por defecto, la clase está configurada para utilizar la versión 2.1 de vCard (VCardVersion.V21).
+  - [UseExtensions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/useextensions/) - permite a los usuarios controlar si los campos extendidos pueden ser utilizados al guardar archivos vCard. Cuando se establece en verdadero (por defecto), se permiten extensiones, proporcionando compatibilidad con campos personalizados e información de contacto adicional.
+  - [PreferredTextEncoding](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardsaveoptions/preferredtextencoding/) - la codificación que se debe utilizar al guardar elementos de contacto vCard.
+- **Obtener el Número Total de Elementos de Mensaje Contenidos en el Almacenamiento Zimbra** con el método [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/gettotalitemscount/) de la clase [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/).
+- **Recuperar una Subcarpeta PST por ruta** - Recuperar una subcarpeta con el nombre especificado de la carpeta PST actual usando el método sobrecargado [FolderInfo.GetSubFolder(string name, bool ignoreCase, bool handlePathSeparator)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getsubfolder/#getsubfolder_2).
 
-## [Aspose.Email para.NET 23.4](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-4-release-notes/)
+## [Aspose.Email para .NET 23.4](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-4-release-notes/)
 
-- **Agregar un adjunto de referencia a un mensaje** - Hemos añadido un nuevo [Add](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/add/#add_4) método para el [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/#mapiattachmentcollection-class) clase con los siguientes parámetros:
-  - `name` - el nombre del adjunto
-  - `sharedLink` - un enlace compartido totalmente cualificado al archivo adjunto proporcionado por el servicio web que manipula el archivo adjunto
+- **Agregar un Archivo Adjunto de Referencia a un Mensaje** - Se ha añadido un nuevo método [Add](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/add/#add_4) a la clase [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/#mapiattachmentcollection-class) con los siguientes parámetros:
+  - `name` - el nombre del archivo adjunto
+  - `sharedLink` - un enlace compartido completamente calificado al archivo adjunto proporcionado por un servicio web que manipula el archivo adjunto
   - `url` - una ubicación de archivo
-  - `providerName` - el nombre del proveedor de archivos adjuntos de referencia
-- **Comprobación de varios contactos de vCard** - Compruebe si un archivo fuente contiene varios contactos con el nuevo [vCardContact.isMultiContacts (ruta de archivo de cadena)](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardcontact/ismulticontacts/#ismulticontacts_1) method.
-- **Convierta el formato ICS de calendario a formatos de mensajes** - Convierte citas en objetos de mensajes como MapiMessage y MailMessage. 
-- **Opciones adicionales para guardar mensajes en formatos HTML y MHTML**:
-  - [MapiTask.Priority](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/priority/) - Obtiene o establece la prioridad actual del objeto de tarea.
-  - [MhtSaveOptions.SaveAllHeaders](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveallheaders/) - Define si es necesario guardar todos los encabezados en la salida mhtml o no.
-  - [HtmlFormatOptions.RenderTaskFields](https://reference.aspose.com/email/net/aspose.email/htmlformatoptions/) - Indica que los campos de tareas específicos deben escribirse en el HTML de salida.
-- **Establecer el tiempo de espera para el proceso de conversión y carga de mensajes** - Limite el tiempo en milisegundos al convertir y cargar los mensajes, asegurándose de que el proceso no demore más de lo necesario. Para ello, se han introducido las siguientes funciones:
+  - `providerName` - un nombre del proveedor de archivo adjunto de referencia
+- **Verificación de Múltiples Contactos VCard** - Verifique si un archivo de origen contiene contactos múltiples con el nuevo método [VCardContact.IsMultiContacts(string filePath)](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardcontact/ismulticontacts/#ismulticontacts_1).
+- **Convertir Formato ICS del Calendario a Formatos de Mensaje** - Convertir citas a objetos de mensaje como MapiMessage y MailMessage.  
+- **Opciones Adicionales para Guardar Mensajes en Formatos HTML y MHTML**:
+  - [MapiTask.Priority](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/priority/) - Obtiene o establece la Prioridad actual del objeto Tarea.
+  - [MhtSaveOptions.SaveAllHeaders](https://reference.aspose.com/email/net/aspose.email/mhtsaveoptions/saveallheaders/) - Define si es necesario guardar todos los encabezados en el output mhtml o no.
+  - [HtmlFormatOptions.RenderTaskFields](https://reference.aspose.com/email/net/aspose.email/htmlformatoptions/) - Indica que los campos específicos de la tarea deben escribirse en html de salida.
+- **Establecer Tiempo de Espera para el Proceso de Conversión y Carga de Mensajes** - Limitar el tiempo en milisegundos durante la conversión y carga de mensajes, asegurando que el proceso no tarde más de lo necesario. Para este propósito, se introdujeron las siguientes características:
   - [MailConversionOptions.Timeout](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeout/) - Limita el tiempo en milisegundos durante la conversión de un mensaje.
-  - [MailConversionOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeoutreached/) - Se aumenta si se acaba el tiempo durante la conversión a MailMessage.
+  - [MailConversionOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email.mapi/mailconversionoptions/timeoutreached/) - Se activa si se agota el tiempo durante la conversión a MailMessage.
   - [MsgLoadOptions.Timeout](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeout/) - Limita el tiempo en milisegundos durante la conversión de un mensaje.
-  - [MsgLoadOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeoutreached/) - Se aumenta si se acaba el tiempo durante la conversión a MailMessage.
+  - [MsgLoadOptions.TimeoutReached](https://reference.aspose.com/email/net/aspose.email/msgloadoptions/timeoutreached/) - Se activa si se agota el tiempo durante la conversión a MailMessage.
 
-## [Aspose.Email para.NET 23.3](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-3-release-notes/)
+## [Aspose.Email para .NET 23.3](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-3-release-notes/)
 
-- **Obtenga el número total de elementos de mensaje contenidos en el almacenamiento de OLM** con el [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/gettotalitemscount/) método para [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#olmstorage-class) class.
-- **Determine si MapiMessage es OFT o MSG** - Determine si el mapiMessage se cargó desde un archivo OFT o MSG con el nuevo [MapiMessage.IsTemplate](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/istemplate/) property.
-- **Detectar un formato de archivo NSF**
+- **Obtener el Número Total de Elementos de Mensaje Contenidos en el Almacenamiento OLM** con el método [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/gettotalitemscount/) para la clase [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#olmstorage-class).
+- **Determinar si MapiMessage es OFT o MSG** - Determinar si el MapiMessage fue cargado desde un archivo OFT o MSG con la nueva propiedad [MapiMessage.IsTemplate](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/istemplate/).
+- **Detectar un Formato de Archivo NSF**
 
-## [Aspose.Email para.NET 23.1](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-1-release-notes/)
+## [Aspose.Email para .NET 23.1](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-1-release-notes/)
 
--**Recuperar las propiedades de los mensajes de mboxMessageInfo** - Obtenga acceso a la información sobre los mensajes individuales almacenados en un archivo mbox, como el tamaño de los mensajes, el índice de los mensajes, los encabezados de los mensajes, las marcas de los mensajes y otros metadatos relacionados con los mensajes. Hemos añadido las siguientes propiedades a [MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class) class:
+-**Recuperar propiedades del mensaje de MboxMessageInfo** - Acceder a la información sobre mensajes individuales almacenados en un archivo mbox, como tamaño del mensaje, índice del mensaje, encabezados del mensaje, banderas del mensaje, y otros metadatos relacionados con el mensaje. Se han añadido las siguientes propiedades a la clase [MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class):
 
-DateTime Date: obtiene la fecha del mensaje
-Dirección de correo de origen: obtiene la dirección del remitente
-string (asunto): obtiene el asunto del mensaje
-MailAddressCollection To: obtiene la colección de direcciones que contiene los destinatarios del mensaje
-MailAddressCollection CC: obtiene la colección de direcciones que contiene los destinatarios del CC
-MailAddressCollection Bcc: obtiene la colección de direcciones que contiene los destinatarios BCC del mensaje
+DateTime Date - Obtiene la fecha del mensaje
+MailAddress From - Obtiene la dirección del remitente
+string Subject - Obtiene el asunto del mensaje
+MailAddressCollection To - Obtiene la colección de direcciones que contiene los destinatarios del mensaje
+MailAddressCollection CC - Obtiene la colección de direcciones que contiene los destinatarios CC
+MailAddressCollection Bcc - Obtiene la colección de direcciones que contiene los destinatarios BCC del mensaje
 
-## [Aspose.Email para.NET 22.12](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-12-release-notes/)
+## [Aspose.Email para .NET 22.12](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-12-release-notes/)
 
-- **Obtenga el número total de elementos de mensaje contenidos en el PST** - Hemos añadido el [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/gettotalitemscount/) método para [PersonalStorage.Store](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/store/) property.
-- **Obtenga una carpeta de fuentes RSS estándar en Personal Storage**, **Agregar una carpeta de fuentes RSS estándar en PST** - Se ha agregado un nuevo valor de RSSFeeds a la enumeración StandardIPMFolder. Ahora, la carpeta de fuentes RSS se puede recuperar o agregar fácilmente al almacenamiento.
-- **Descifrar un mensaje de correo electrónico almacenado en formato MAPI** - Hemos añadido un método Decrypt a la clase MAPIMessage:
-  - [MapiMessage.IsEncrypted](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/isencrypted/) - Obtiene un valor que indica si el mensaje está cifrado.
-  - [MapiMessage.Decrypt()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt) - Descifra este mensaje (el método busca en el usuario y la computadora actuales de My stores el certificado y la clave privada apropiados).
-  - [MapiMessage.decrypt (certificado X509 Certificate2)](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt_1) - Descifra este mensaje con un certificado.
-- **Configuración de un identificador de producto al guardar MapiCalendar en ICS** - Hemos añadido [ProductIdentifier](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/productidentifier/) propiedad a [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/) class.
-- **Extraer mensajes por identificadores de OLM y MBOX** - Esta es la forma eficiente de evitar recorrer todo el almacenamiento cada vez para encontrar un mensaje específico para extraerlo.
-- **Determine si el archivo adjunto está en línea o es normal** con el [MapiAttachment.IsInline](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isinline/) property.
+- **Obtener el número total de elementos de mensaje contenidos en el PST** - Se ha añadido el método [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagestore/gettotalitemscount/) a la propiedad [PersonalStorage.Store](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/store/).
+- **Obtener una Carpeta de RSS Feeds Estándar en Almacenamiento Personal**, **Agregar una Carpeta de RSS Feeds Estándar en PST** - Se ha añadido un nuevo valor RssFeeds al enumerador StandardIpmFolder. Ahora la Carpeta de RSS Feeds se puede recuperar o agregar fácilmente al almacenamiento.
+- **Desencriptar un Mensaje de Correo Almacenado en el Formato MAPI** - Se ha añadido un método Decrypt a la clase MapiMessage:
+  - [MapiMessage.IsEncrypted](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/isencrypted/) - Obtiene un valor que indica si el mensaje está encriptado.
+  - [MapiMessage.Decrypt()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt) - Desencripta este mensaje (el método busca en las tiendas de certificados y claves privadas del usuario actual y computador).
+  - [MapiMessage.Decrypt(X509Certificate2 certificate)](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/decrypt/#decrypt_1) - Desencripta este mensaje con un certificado. 
+- **Establecer un ID de Producto al Guardar MapiCalendar en ICS** - Se ha añadido la propiedad [ProductIdentifier](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/productidentifier/) a la clase [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/) . 
+- **Extraer Mensajes por Identificadores de OLM y MBOX** - Esta es la forma eficiente para evitar atravesar todo el almacenamiento cada vez que se busca un mensaje específico para extraer.
+- **Determinar si el Archivo Adjunto es Inline o Regular** con la propiedad [MapiAttachment.IsInline](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isinline/).
 
-## [Aspose.Email para.NET 22.11](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-11-release-notes/)
+## [Aspose.Email para .NET 22.11](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-11-release-notes/)
 
-- **Obtenga un tipo de elemento MAPI** - Evite comprobar el valor de la propiedad MessageClass cada vez antes de la conversión del mensaje.
-- **Eliminar la firma de MapiMessage** - Para una mejor compatibilidad, el [MapiMessage.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/removesignature/) método y [MapiMessage.IsSigned](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/issigned/) se agregaron propiedades.
-- **Identificación de carpetas predefinidas** - El nuevo [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/#folderinfo-class) method, [GetPredefinedType](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getpredefinedtype/), se introdujo para determinar si una carpeta está dentro de una carpeta predefinida devolviendo el valor de enumeración StandardIPMFolder en función del valor del parámetro especificado.
-- **Verificación del formato TNEF del adjunto** - El [Attachment.IsTnef](https://reference.aspose.com/email/net/aspose.email/attachment/istnef/) La propiedad indica si el adjunto del mensaje es un mensaje con formato TNEF.
+- **Obtener un Tipo de Elemento MAPI** - Evitar la verificación del valor de la propiedad MessageClass cada vez antes de la conversión del mensaje.
+- **Eliminar la Firma de MapiMessage** - Para una mejor compatibilidad, se añadieron el método [MapiMessage.RemoveSignature](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/removesignature/) y la propiedad [MapiMessage.IsSigned](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/issigned/).
+- **Identificar Carpetas Predefinidas** - Se introdujo el nuevo método [GetPredefinedType](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getpredefinedtype/) de la clase [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/#folderinfo-class) para determinar si una carpeta está dentro de una carpeta predefinida, devolviendo el valor del enumerador StandardIpmFolder basado en el valor del parámetro especificado.
+- **Verificar el Formato TNEF del Archivo Adjunto** - La propiedad [Attachment.IsTnef](https://reference.aspose.com/email/net/aspose.email/attachment/istnef/) indica si el archivo adjunto del mensaje está en formato TNEF.
 
-## [Aspose.Email para.NET 22.10](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-10-release-notes/)
+## [Aspose.Email para .NET 22.10](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-10-release-notes/)
 
-- **Cambiar el nombre de un archivo adjunto en MapiMessage** - Ahora es posible editar el [DisplayName](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/displayname/) valor de propiedad en los archivos adjuntos de MapiMessage.
+- **Renombrar un Archivo Adjunto en MapiMessage** - Ahora es posible editar el valor de la propiedad [DisplayName](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/displayname/) en los archivos adjuntos de MapiMessage.
 
-## [Aspose.Email para.NET 22.9](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-9-release-notes/)
+## [Aspose.Email para .NET 22.9](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-9-release-notes/)
 
-- **Listar mensajes con Graph API** - El nuevo [OrderBy](https://reference.aspose.com/email/net/aspose.email.tools.search/comparisonfield/orderby/#comparisonfieldorderby-method) El método le permite controlar el orden de los mensajes recuperados según los criterios que especifique.
+- **Listar Mensajes con la API Graph** - El nuevo método [OrderBy](https://reference.aspose.com/email/net/aspose.email.tools.search/comparisonfield/orderby/#comparisonfieldorderby-method) permite controlar el orden de los mensajes recuperados basado en los criterios que especifique.
 
-## [Aspose.Email para.NET 22.8](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-8-release-notes/)
+## [Aspose.Email para .NET 22.8](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-8-release-notes/)
 
-- **Lectura de mensajes de MBOX** - Hemos introducido nuevas funciones para configurar las opciones de carga:
-  - [MailStorageConverter.MboxMessageOptions](https://reference.aspose.com/email/net/aspose.email.storage/mailstorageconverter/mboxmessageoptions/) propiedad: obtiene o establece las opciones de carga de correo electrónico al analizar un almacenamiento de Mbox.
-  - [mboxRDStorageReader.readNextMessage (opciones de EmllOdOptions)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/readnextmessage/#readnextmessage_1) método. El parámetro EmllOdOptions especifica las opciones al leer un mensaje del almacenamiento de Mbox.
+- **Leer Mensajes desde MBOX** - Hemos introducido nuevas características para configurar opciones de carga:
+  - La propiedad [MailStorageConverter.MboxMessageOptions](https://reference.aspose.com/email/net/aspose.email.storage/mailstorageconverter/mboxmessageoptions/) - Obtiene o establece opciones de carga de correo al analizar un almacenamiento Mbox.
+  - El método [MboxrdStorageReader.ReadNextMessage(EmlLoadOptions options)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/readnextmessage/#readnextmessage_1). El parámetro EmlLoadOptions especifica opciones al leer mensajes desde almacenamiento Mbox.
 
-## [Aspose.Email para.NET 22.7](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-7-release-notes/)
+## [Aspose.Email para .NET 22.7](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-7-release-notes/)
 
-- **Obtener información de identificación de mensajes** como el UID o el número de secuencia mediante las siguientes funciones:
-  - [MailboxInfo](https://reference.aspose.com/email/net/aspose.email/mailboxinfo/#mailboxinfo-class) class: representa la información de identificación de un mensaje en un buzón.
-  - [SequenceNumber](https://reference.aspose.com/email/net/aspose.email/mailboxinfo/sequencenumber/) propiedad: el número de secuencia de un mensaje.
-  - [UniqueId](https://reference.aspose.com/email/net/aspose.email/mailboxinfo/uniqueid/) propiedad: el identificador único de un mensaje.
-  - [MailMessage.ItemId](https://reference.aspose.com/email/net/aspose.email/mailmessage/itemid/) propiedad: representa la información de identificación de un mensaje en un buzón.
+- **Obtener Información de Identificación del Mensaje** como UID o número de secuencia utilizando las siguientes características:
+  - La clase [MailboxInfo](https://reference.aspose.com/email/net/aspose.email/mailboxinfo/#mailboxinfo-class) - Representa la información de identificación sobre un mensaje en un buzón.
+  - La propiedad [SequenceNumber](https://reference.aspose.com/email/net/aspose.email/mailboxinfo/sequencenumber/) - El número de secuencia de un mensaje.
+  - La propiedad [UniqueId](https://reference.aspose.com/email/net/aspose.email/mailboxinfo/uniqueid/) - El id único de un mensaje.
+  - La propiedad [MailMessage.ItemId](https://reference.aspose.com/email/net/aspose.email/mailmessage/itemid/) - Representa la información de identificación sobre un mensaje en un buzón.
 
-## [Aspose.Email para.NET 22.6](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-6-release-notes/)
+## [Aspose.Email para .NET 22.6](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-6-release-notes/)
 
-- **Preservación de la marca de tiempo original en los archivos ICS** - Extraiga los elementos del calendario de los archivos PST y guárdelos en formato ICS con la marca de tiempo original mediante las siguientes opciones:
+- **Preservar la Marca de Tiempo Original en Archivos ICS** - Extraer elementos de calendario de archivos PST y guardarlos en formato ICS con la marca de tiempo original utilizando las siguientes opciones:
   - [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/) - Permite especificar opciones adicionales al guardar MapiCalendar en formato ICS.
-  - [MapiCalendarIcsSaveOptions.KeepOriginalDateTimeStamp](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/keeporiginaldatetimestamp/) - Permite mantener el valor original de DateTimeStamp en el archivo de salida.
+  - La propiedad [MapiCalendarIcsSaveOptions.KeepOriginalDateTimeStamp](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendaricssaveoptions/keeporiginaldatetimestamp/) - Permite mantener el valor de DateTimeStamp original en el archivo de salida.
 
-## [Aspose.Email para.NET 22.5](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-5-release-notes/)
+## [Aspose.Email para .NET 22.5](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-5-release-notes/)
 
-- **Enumerar mensajes con soporte de paginación mediante Graph Client** - La API proporciona soporte de paginación y filtrado para los mensajes de listado. Esto resulta muy útil cuando el buzón contiene un gran número de mensajes y se necesita mucho tiempo para recuperar la información resumida sobre los mismos.
-- **Modo asincrónico en la gestión de clientes de correo** - Un nuevo enfoque de la tarea incluye los siguientes miembros de la API:
-  - [`IAsyncSmtpClient`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/) - Permite que las aplicaciones envíen mensajes mediante el Protocolo simple de transferencia de correo (SMTP).
-  - [`SmtpClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/#smtpclientcreateasync-method) - Crea una nueva instancia del `Aspose.Email.Clients.Smtp.SmtpClient` class.
-  - [`IAsyncSmtpClient.SendAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpSend`) conjunto de parámetros del método.
+- **Enumerar Mensajes con Soporte de Paginación a través del Cliente Graph** - La API proporciona soporte de paginación y filtrado para listar mensajes. Esto es muy útil cuando el buzón tiene un gran número de mensajes y requiere mucho tiempo para recuperar la información de resumen sobre estos.
+- **Modo Asincrónico en el Manejo de Clientes de Correo** - Un nuevo enfoque para la tarea incluye los siguientes miembros API:
+  - [`IAsyncSmtpClient`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/) - Permite que las aplicaciones envíen mensajes utilizando el Protocolo Simple de Transferencia de Correo (SMTP).
+  - [`SmtpClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/#smtpclientcreateasync-method) - Crea una nueva instancia de la clase `Aspose.Email.Clients.Smtp.SmtpClient`.
+  - [`IAsyncSmtpClient.SendAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpSend`) conjunto de parámetros.
   - [`IAsyncSmtpClient.ForwardAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpForward`) argumentos.
-  - [`IAsyncImapClient`](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Permite a las aplicaciones acceder a los mensajes y manipularlos mediante el Protocolo de acceso a mensajes de Internet (IMAP).
-  - [`ImapClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Crea una nueva instancia del `Aspose.Email.Clients.Imap.ImapClient` class.
+  - [`IAsyncImapClient`](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Permite que las aplicaciones accedan y manipulen mensajes utilizando el Protocolo de Acceso a Mensajes de Internet (IMAP).
+  - [`ImapClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Crea una nueva instancia de la clase `Aspose.Email.Clients.Imap.ImapClient`.
 
-## [Aspose.Email para.NET 22.4](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-4-release-notes/)
+## [Aspose.Email para .NET 22.4](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-4-release-notes/)
 
-- **Envía correos electrónicos con los servicios de entrega de MailGun y SendGrid** - Hemos creado una API unificada que puedes usar para inicializar las opciones según el servicio que se vaya a usar para enviar mensajes, llamar a la instancia de cliente requerida con el generador, preparar y enviar un mensaje de correo electrónico. También hay una versión asincrónica del método de envío.
-- **Establecer el encabezado X-ALT-DESC en el archivo ICS** - Introdujimos un nuevo [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) propiedad para establecer el encabezado X-ALT-DESC.
+- **Enviar Correos Electrónicos con Servicios de Entrega MailGun y SendGrid** - Hemos creado una API unificada que puede utilizar para inicializar opciones dependiendo de qué servicio se utilizará para enviar mensajes, llamar a la instancia requerida del cliente utilizando el constructor, preparar y enviar un mensaje de correo electrónico. También hay una versión asincrónica del método Send.
+- **Establecer el encabezado X-ALT-DESC en el archivo ICS** - Introdujimos una nueva propiedad [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) para establecer el encabezado X-ALT-DESC.
 
-## [Aspose.Email para.NET 22.3](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-3-release-notes/)
+## [Aspose.Email para .NET 22.3](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-3-release-notes/)
 
-- **Listar los archivos adjuntos de los mensajes mediante el cliente IMAP** - Obtenga información sobre los archivos adjuntos, como el nombre y el tamaño, sin buscar los datos del archivo adjunto. Miembros de la API que participan en la operación:
-  - [`Aspose.Email.Clients.Imap.ImapAttachmentInfo`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfo/) - Representa la información de un adjunto.
-  - [`Aspose.Email.Clients.Imap.ImapAttachmentInfoCollection`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfocollection/) - Representa una colección de IMAPAttachmentInfo.
-  - [`Aspose.Email.Clients.Imap.ListAttachments(int sequenceNumber)`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/) - Obtiene la información de cada adjunto del mensaje.
-- **Obtenga artículos con archivos adjuntos a través del cliente EWS** - Hemos añadido el [`FetchItems(EwsFetchItems options)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitems/#iewsclientfetchitems-method) método para [EwsClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/#iewsclient-interface). Acepta una instancia de [EwsFetchItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsfetchitems/#ewsfetchitems-class) clase como parámetro para controlar el comportamiento del método.
+- **Listar Archivos Adjuntos de Mensajes usando Cliente IMAP** - Obtener información sobre archivos adjuntos como nombre, tamaño sin recuperar los datos del archivo adjunto. Los miembros de la API involucrados en la operación: 
+  - [`Aspose.Email.Clients.Imap.ImapAttachmentInfo`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfo/) - Representa información sobre un archivo adjunto.
+  - [`Aspose.Email.Clients.Imap.ImapAttachmentInfoCollection`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfocollection/) - Representa una colección de ImapAttachmentInfo. 
+  - [`Aspose.Email.Clients.Imap.ListAttachments(int sequenceNumber)`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/) - Obtiene información sobre cada archivo adjunto en el mensaje.
+- **Recuperar Elementos con Archivos Adjuntos a través del Cliente EWS** - Agregamos el método [`FetchItems(EwsFetchItems options)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitems/#iewsclientfetchitems-method) a [EwsClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/#iewsclient-interface). Acepta una instancia de la clase [EwsFetchItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsfetchitems/#ewsfetchitems-class) como parámetro para controlar el comportamiento del método.
 
-## [Aspose.Email para.NET 22.2](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-2-release-notes/)
+## [Aspose.Email para .NET 22.2](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-2-release-notes/)
 
-- **Añadir adjuntos de referencia**
-    Miembros de la API introducidos:
-  - [`Aspose.Email.ReferenceAttachment`](https://reference.aspose.com/email/net/aspose.email/referenceattachment/#referenceattachment-class) - representa un adjunto de referencia.
-  - [`Aspose.Email.AttachmentPermissionType`](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) - Los datos del tipo de permiso asociados a un adjunto de referencia web.
+- **Agregar Archivos Adjuntos de Referencia**
+    Se introdujeron miembros de API:
+  - [`Aspose.Email.ReferenceAttachment`](https://reference.aspose.com/email/net/aspose.email/referenceattachment/#referenceattachment-class) - representa un archivo adjunto de referencia.
+  - [`Aspose.Email.AttachmentPermissionType`](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) - El tipo de permiso de datos asociado con un archivo adjunto de referencia web.
   - [`Aspose.Email.AttachmentProviderType`](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) - El tipo de servicio web que manipula el archivo adjunto.
-- **Recuperar clase de mensaje** - Hemos añadido [MessageClass](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/messageclass/#exchangemessageinfomessageclass-propertyм) propiedad a [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/#exchangemessageinfo-class) clase para recuperar la clase de cada mensaje de la colección de una carpeta pública, después de establecer una conexión con un cliente de EWS.
+- **Recuperar clase de mensaje** - Se ha añadido la propiedad [MessageClass](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/messageclass/#exchangemessageinfomessageclass-propertyм) a la clase [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/#exchangemessageinfo-class) para recuperar la clase de cada mensaje en la colección de una carpeta pública, después de establecer una conexión con un cliente EWS.

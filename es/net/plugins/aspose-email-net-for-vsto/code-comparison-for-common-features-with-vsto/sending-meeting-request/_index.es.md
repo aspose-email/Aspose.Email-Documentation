@@ -1,5 +1,5 @@
 ---
-title: "Envío de la solicitud de reunión"
+title: "Enviando Solicitud de Reunión"
 url: /es/net/sending-meeting-request/
 weight: 200
 type: docs
@@ -7,40 +7,40 @@ type: docs
 
 
 ## **VSTO**
-Para usar las clases de Outlook, se debe hacer referencia a Outlook.Interop en su proyecto de.NET. El siguiente fragmento de código:
+Para usar las clases de Outlook, Outlook.Interop debe ser referenciado en su proyecto .NET. El fragmento de código a continuación:
 
-1. Crea una convocatoria de reunión.
-1. Establece propiedades como el tema, el cuerpo, la ubicación y la hora.
-1. Envía la convocatoria de reunión al destinatario.
-1. Microsoft Outlook debe estar instalado en el sistema en el que se ejecutará esta aplicación de ejemplo.
+1. Crea una solicitud de reunión.
+1. Establece propiedades como asunto, cuerpo, ubicación y hora.
+1. Envía la solicitud de reunión al destinatario.
+1. Microsoft Outlook debe estar instalado en el sistema donde se ejecutará esta aplicación de muestra.
 
 ``` cs
 
- // Create an instance of Outlook Application class
+ // Crear una instancia de la clase Outlook Application
 
 Outlook.Application outlookApp = new Outlook.Application();
 
-// Create an instance of AppointmentItem object and set the properties:
+// Crear una instancia del objeto AppointmentItem y establecer las propiedades:
 
 Outlook.AppointmentItem oAppointment = (Outlook.AppointmentItem)outlookApp.CreateItem(Outlook.OlItemType.olAppointmentItem);
 
-oAppointment.Subject = "subject of appointment";
+oAppointment.Subject = "asunto de la reunión";
 
-oAppointment.Body = "body text of appointment";
+oAppointment.Body = "texto del cuerpo de la reunión";
 
-oAppointment.Location = "Appointment location";
+oAppointment.Location = "Ubicación de la reunión";
 
-// Set the start date and end dates
+// Establecer la fecha de inicio y las fechas de finalización
 
 oAppointment.Start = Convert.ToDateTime("01/22/2010 10:00:00 AM");
 
 oAppointment.End = Convert.ToDateTime("01/22/2010 2:00:00 PM");
 
-// Save the appointment
+// Guardar la cita
 
 oAppointment.Save();
 
-// Send the appointment
+// Enviar la cita
 
 Outlook.MailItem mailItem = oAppointment.ForwardAsVcal();
 
@@ -50,15 +50,15 @@ mailItem.Send();
 
 ```
 ## **Aspose.Email**
-El siguiente código usa Aspose.Email para.NET para enviar una convocatoria de reunión. En primer lugar, cree la convocatoria de reunión con la clase Aspose.Email.Appointment. A continuación, envíe el correo electrónico, adjunte la convocatoria de reunión y envíe el correo electrónico con la clase Aspose.Email.Mail.SmtpClient.
+El código a continuación utiliza Aspose.Email para .NET para enviar una solicitud de reunión. Primero, crea la solicitud de reunión utilizando la clase Aspose.Email.Appointment. Luego, envía el correo electrónico, adjunta la solicitud de reunión y envía el correo electrónico utilizando la clase Aspose.Email.Mail.SmtpClient.
 
-Ventajas de usar Aspose.Email para.NET
+Ventajas de usar Aspose.Email para .NET
 
-Outlook Interop requiere que Microsoft Outlook esté instalado en el sistema en el que se usa. Aspose.Email para.NET no requiere la instalación de Microsoft Outlook y es adecuado para aplicaciones de servidor.
+Outlook Interop requiere que Microsoft Outlook esté instalado en el sistema donde se usa. Aspose.Email para .NET no requiere que Microsoft Outlook esté instalado y es adecuado en aplicaciones de servidor.
 
 ``` cs
 
-  // Create attendees of the meeting
+  // Crear asistentes a la reunión
 
 MailAddressCollection attendees = new MailAddressCollection();
 
@@ -66,21 +66,21 @@ attendees.Add("recipient1@domain.com");
 
 attendees.Add("recipient2@domain.com");
 
-// Set up appointment
+// Configurar la cita
 
 Appointment app = new Appointment(
 
-    "Location", // location of meeting
+    "Ubicación", // ubicación de la reunión
 
-    DateTime.Now, // start date
+    DateTime.Now, // fecha de inicio
 
-    DateTime.Now.AddHours(1), // end date
+    DateTime.Now.AddHours(1), // fecha de finalización
 
-    new MailAddress("organizer@domain.com"), // organizer
+    new MailAddress("organizer@domain.com"), // organizador
 
-    attendees); // attendees
+    attendees); // asistentes
 
-// Set up message that needs to be sent
+// Configurar el mensaje que necesita ser enviado
 
 MailMessage msg = new MailMessage();
 
@@ -88,22 +88,22 @@ msg.From = "from@domain.com";
 
 msg.To = "to@domain.com";
 
-msg.Subject = "appointment request";
+msg.Subject = "solicitud de cita";
 
-msg.Body = "you are invited";
+msg.Body = "estás invitado";
 
-// Add meeting request to the message
+// Agregar solicitud de reunión al mensaje
 
 msg.AddAlternateView(app.RequestApointment());
 
-// Set up the SMTP client to send email with meeting request
+// Configurar el cliente SMTP para enviar el correo electrónico con la solicitud de reunión
 
 SmtpClient client = new SmtpClient("host", 25 ,"user", "password");
 
 client.Send(msg);
 
 ```
-##**Descargar código de muestra**
+##**Descargar Código de Muestra**
 - [Codeplex](https://asposevsto.codeplex.com/downloads/get/772944)
 - [Github](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/download/AsposeEmailVsVSTOv1.1/Sending.Meeting.Request.Aspose.Email.zip)
 - [Sourceforge](https://sourceforge.net/projects/asposevsto/files/Aspose.Email%20Vs%20VSTO%20Outlook/Sending%20Meeting%20Request%20\(Aspose.Email\).zip/download)

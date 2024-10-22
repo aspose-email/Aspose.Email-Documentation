@@ -6,28 +6,28 @@ type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-El iCalendar RFC 2445 describe un conjunto de elementos de calendario y programación interoperables que permiten que las aplicaciones de programación grupal, administración de información personal y calendario intercambien información en un formato común.
+El iCalendar RFC 2445 describe un conjunto de elementos de calendarios y programación interoperables que permiten a las aplicaciones de programación grupal, gestión de información personal y calendarios intercambiar información en un formato común.
 
-Aspose.Email implementa los elementos del RFC relacionados con la programación, ya que tienen una aplicación muy amplia. Las versiones futuras pueden implementar otros elementos del RFC 2445, según la demanda.
+Aspose.Email implementa los elementos relacionados con la programación del RFC, ya que estos tienen una aplicación muy amplia. Las versiones futuras pueden implementar otros elementos del RFC 2445, dependiendo de la demanda.
 
-En este artículo se describen los elementos del RFC relacionados con Aspose.Email. Le recomendamos que consulte con el estándar iCalendar <http://www.faqs.org/rfcs/rfc2445.html> para ver la imagen completa.
+Este artículo describe los elementos del RFC que se relacionan con Aspose.Email. Recomendamos que consulte el estándar iCalendar <http://www.faqs.org/rfcs/rfc2445.html> para una visión completa. 
 
-{{% /alert %}}
-## **Patrones de recurrencia en el mundo real**
-Un patrón de recurrencia describe las reglas cuando se produce el evento. Se necesita un motor de patrones de recurrencia como Aspose iCalendar para calcular las fechas y horas de las ocurrencias de un patrón de recurrencia determinado.
-Encontramos cronogramas o patrones de recurrencia en muchas situaciones, por ejemplo:
+{{% /alert %}} 
+## **Patrones de Recurrencia en el Mundo Real**
+Un patrón de recurrencia describe las reglas sobre cuándo ocurre el evento. Se necesita un motor de patrones de recurrencia como Aspose iCalendar para calcular las fechas y horas de las ocurrencias para un patrón de recurrencia dado.
+Encontramos horarios o patrones de recurrencia en muchas situaciones, por ejemplo:
 
-- Diez reuniones de equipo, todos los lunes a las 10 de la mañana.
-- Procese el pago del salario el último día hábil de cada mes.
-- Controle la temperatura del paciente todos los días durante dos semanas.
-- Ve al gimnasio los lunes, miércoles y viernes.
-- Realice copias de seguridad cada 4 horas los días laborables.
-- Generar informe de ventas sobre…
-- Actualice las estadísticas del sitio web cada…
+- Diez reuniones de equipo, cada lunes a las 10am.
+- Procesar el pago de salario el último día laborable de cada mes.
+- Revisar la temperatura del paciente todos los días durante dos semanas.
+- Ir al gimnasio los lunes, miércoles y viernes.
+- Ejecutar una copia de seguridad cada 4 horas en días laborables.
+- Generar informe de ventas el …
+- Actualizar estadísticas del sitio web cada …
 
-Casi cualquier evento que ocurre periódicamente se puede representar como un patrón de recurrencia. Por ejemplo, el código siguiente devolverá una matriz que contiene diez ocurrencias del ejemplo de la reunión de equipo anterior:
+Casi cualquier evento que ocurra periódicamente puede ser representado como un patrón de recurrencia. Por ejemplo, el siguiente código devolverá un array que contiene diez ocurrencias del ejemplo anterior de la reunión de equipo: 
 
 ~~~java
 CalendarRecurrence recurrencePattern = new CalendarRecurrence("DTSTART:20040301T100000\nRRULE:FREQ=WEEKLY;COUNT=10;BYDAY=MO");
@@ -38,8 +38,8 @@ for (int i = 0; i < expectedDates.size(); i++) {
 }
 ~~~
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Los patrones de recurrencia pueden volverse bastante complejos y requieren un motor de patrones de recurrencia confiable para analizar y validar la entrada y generar ocurrencias correctamente.
+Los patrones de recurrencia pueden volverse bastante complejos y requieren un motor de patrones de recurrencia confiable para analizar y validar la entrada y generar las ocurrencias correctamente. 
 
 {{% /alert %}}

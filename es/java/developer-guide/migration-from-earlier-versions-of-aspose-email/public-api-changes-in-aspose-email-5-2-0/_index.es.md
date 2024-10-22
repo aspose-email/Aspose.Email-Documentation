@@ -1,59 +1,59 @@
 ---
-title: "Cambios en la API pública en Aspose.Email 5.2.0"
+title: "Cambios en la API Pública en Aspose.Email 5.2.0"
 url: /es/java/public-api-changes-in-aspose-email-5-2-0/
 weight: 130
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email for.NET. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+La siguiente es una lista de los cambios realizados en la API pública, tales como miembros añadidos, renombrados, eliminados o desaprobados, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para .NET. Si tiene preocupaciones sobre algún cambio listado, por favor plantee su inquietud en el foro de soporte de Aspose.Email.
 
-## **API añadidas**
+## **APIs Añadidas**
 
-- Class `CanonicalizationType`
-- Class `DKIMHashAlgorithm`
-- Class `DKIMSignatureInfo`
-- Class `HeaderList`
-- Class `PemReader`
+- Clase `CanonicalizationType`
+- Clase `DKIMHashAlgorithm`
+- Clase `DKIMSignatureInfo`
+- Clase `HeaderList`
+- Clase `PemReader`
 
-- Field/Enum `CanonicalizationType.Relaxed`
-- Field/Enum `CanonicalizationType.Simple`
-- Field/Enum `DKIMHashAlgorithm.RSASha1`
-- Field/Enum `DKIMHashAlgorithm.RSASha256`
+- Campo/Enum `CanonicalizationType.Relaxed`
+- Campo/Enum `CanonicalizationType.Simple`
+- Campo/Enum `DKIMHashAlgorithm.RSASha1`
+- Campo/Enum `DKIMHashAlgorithm.RSASha256`
 
-- Method `DKIMSignatureInfo.#ctor(String publicKeyDnsSelector, String publicKeyDnsDomain)`
-- Property `DKIMSignatureInfo.getBodyCanonicalization(), setBodyCanonicalization(int value)`
-- Property `DKIMSignatureInfo.getDomain(), setDomain(String value)`
-- Property `DKIMSignatureInfo.getHashAlgorithm, setHashAlgorithm(int value)`
-- Property `DKIMSignatureInfo.getHeaderCanonicalization(), setHeaderCanonicalization(int value)`
-- Property `DKIMSignatureInfo.getHeaders()`
-- Property `DKIMSignatureInfo.getSelector(), setSelector(String value)`
-- Property `DKIMSignatureInfo.getTime(), setTime(DateTime value)`
+- Método `DKIMSignatureInfo.#ctor(String publicKeyDnsSelector, String publicKeyDnsDomain)`
+- Propiedad `DKIMSignatureInfo.getBodyCanonicalization(), setBodyCanonicalization(int value)`
+- Propiedad `DKIMSignatureInfo.getDomain(), setDomain(String value)`
+- Propiedad `DKIMSignatureInfo.getHashAlgorithm, setHashAlgorithm(int value)`
+- Propiedad `DKIMSignatureInfo.getHeaderCanonicalization(), setHeaderCanonicalization(int value)`
+- Propiedad `DKIMSignatureInfo.getHeaders()`
+- Propiedad `DKIMSignatureInfo.getSelector(), setSelector(String value)`
+- Propiedad `DKIMSignatureInfo.getTime(), setTime(DateTime value)`
 
-- Method `HeaderList.#ctor`
-- Method `PemReader.GetPrivateKey(InputStream pem)`
-- Method `PemReader.GetPrivateKey(String path)`
+- Método `HeaderList.#ctor`
+- Método `PemReader.GetPrivateKey(InputStream pem)`
+- Método `PemReader.GetPrivateKey(String path)`
 
-- Method `MailMessage.dKIMSign(RSACryptoServiceProvider rsa, DKIMSignatureInfo signatureInfo)`
+- Método `MailMessage.dKIMSign(RSACryptoServiceProvider rsa, DKIMSignatureInfo signatureInfo)`
 
-- Class `TokenProvider`
-- Class `TokenProvider.Google`
-- Class `TokenProvider.Outlook`
-- Method `BaseTokenProvider.#ctor`
-- Method `TokenProvider.dispose()`
-- Method `TokenProvider.getAccessToken()`
-- Method `TokenProvider.getAccessToken(boolean)`
-- Method `TokenProvider.getInstance(String,String,String,String)`
-- Method `TokenProvider.Google.getInstance(String,String,String)`
-- Method `TokenProvider.Outlook.getInstance(String,String,String)`
-- Property `TokenProvider.getClientId`
-- Property `TokenProvider.getClientSecret`
-- Property `TokenProvider.getExtraParameters`
-- Property `TokenProvider.getLogin`
-- Property `TokenProvider.getPassword`
-- Property `TokenProvider.getRefreshToken`
-- Property `TokenProvider.getRequestUrl`
-- Property `TokenProvider.getUseBasicAuthorization`
+- Clase `TokenProvider`
+- Clase `TokenProvider.Google`
+- Clase `TokenProvider.Outlook`
+- Método `BaseTokenProvider.#ctor`
+- Método `TokenProvider.dispose()`
+- Método `TokenProvider.getAccessToken()`
+- Método `TokenProvider.getAccessToken(boolean)`
+- Método `TokenProvider.getInstance(String,String,String,String)`
+- Método `TokenProvider.Google.getInstance(String,String,String)`
+- Método `TokenProvider.Outlook.getInstance(String,String,String)`
+- Propiedad `TokenProvider.getClientId`
+- Propiedad `TokenProvider.getClientSecret`
+- Propiedad `TokenProvider.getExtraParameters`
+- Propiedad `TokenProvider.getLogin`
+- Propiedad `TokenProvider.getPassword`
+- Propiedad `TokenProvider.getRefreshToken`
+- Propiedad `TokenProvider.getRequestUrl`
+- Propiedad `TokenProvider.getUseBasicAuthorization`
 
-- Method `ImapQueryBuilder.#ctor(Encoding)`
-- Method `MailQueryBuilder.#ctor(Encoding)`
-- Property `MailQueryBuilder.getDefaultEncoding()`
+- Método `ImapQueryBuilder.#ctor(Encoding)`
+- Método `MailQueryBuilder.#ctor(Encoding)`
+- Propiedad `MailQueryBuilder.getDefaultEncoding()`

@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Agregar MapiJournal a PST**
-Para agregar MapiJournal a PST usando **Aspose.Email Java para PHP**, simplemente invoca **AddMapiJournalToPST** módulo. Aquí puedes ver un ejemplo de código.
+Para agregar MapiJournal a PST utilizando **Aspose.Email Java para PHP**, simplemente invoque el módulo **AddMapiJournalToPST**. Aquí puede ver un ejemplo de código.
 
 **Código PHP**
 
@@ -24,7 +24,7 @@ $cl->add($calendar->HOUR, 1);
 
 $d2 = $cl->getTime();
 
-$journal = new MapiJournal("daily record", "called out in the dark", "Phone call", "Phone call");
+$journal = new MapiJournal("registro diario", "llamado en la oscuridad", "Llamada telefónica", "Llamada telefónica");
 
 $journal->setStartTime($d1);
 
@@ -38,15 +38,15 @@ $pst = $personalStorage->create($dataDir . "JournalPST.pst", $fileFormatVersion-
 
 $standardIpmFolder=new StandardIpmFolder();
 
-$journal_folder = $pst->createPredefinedFolder("Journal", $standardIpmFolder->Journal);
+$journal_folder = $pst->createPredefinedFolder("Diario", $standardIpmFolder->Journal);
 
 $journal_folder->addMapiMessageItem($journal);
 
-print "Added MapiJournal Successfully.".PHP_EOL;
+print "Se agregó MapiJournal exitosamente.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiJournal a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar código en ejecución**
+Descargue **Agregar MapiJournal a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiJournalToPST.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiJournalToPST.php)

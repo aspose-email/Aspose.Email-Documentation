@@ -1,42 +1,42 @@
 ---
-title: "Trabajar con archivos adjuntos de mensajes de Outlook mediante la API de analizador de correo electrónico de C++"
-description: "Puede administrar los archivos adjuntos de los mensajes de Outlook con la biblioteca analizadora de correo electrónico de C++, guardarlos y eliminarlos e incrustar los mensajes como archivos adjuntos."
+title: "Trabajando con Adjunto de Mensajes de Outlook usando la API de C++ Email Parser"
+description: "Puedes gestionar los adjuntos de mensajes de Outlook con la Biblioteca C++ Email Parser, guardarlos y eliminarlos, y adjuntar mensajes como un archivo adjunto."
 url: /es/cpp/working-with-message-attachments/
 weight: 70
 type: docs
-linktitle: "Trabajar con archivos adjuntos de mensajes"
+linktitle: "Trabajando con Adjuntos de Mensajes"
 ---
 
-## **Administración de archivos adjuntos con Aspose Outlook**
-Cómo crear y guardar archivos de mensajes de Outlook (MSG) se explicó cómo crear y guardar mensajes y cómo crear archivos MSG con archivos adjuntos. En este artículo se explica cómo administrar los archivos adjuntos de Microsoft Outlook con Aspose.Email. Se accede a los archivos adjuntos de un archivo de mensajes y se guardan en el disco mediante la propiedad Attachments de la clase MapiMessage. La propiedad Attachments es una colección de tipo MAPIAttachmentCollection.
+## **Gestión de Adjuntos con Aspose Outlook**
+Crear y guardar archivos de mensajes de Outlook (MSG) explicó cómo crear y guardar mensajes, y cómo crear archivos MSG con adjuntos. Este artículo explica cómo gestionar adjuntos de Microsoft Outlook con Aspose.Email. Los adjuntos de un archivo de mensaje se acceden y guardan en el disco utilizando la propiedad Attachments de la clase MapiMessage. La propiedad Attachments es una colección del tipo de la clase MapiAttachmentCollection.
 
-### **Guardar archivos adjuntos del archivo de mensajes de Outlook (MSG)**
-Para guardar los archivos adjuntos de un archivo MSG:
+### **Guardar Adjuntos de un Archivo de Mensaje de Outlook (MSG)**
+Para guardar adjuntos de un archivo MSG:
 
-1. Recorra la colección MapiAttachmentCollection y obtenga los archivos adjuntos individuales.
-1. Para guardar los archivos adjuntos, llame al método Save () de la clase MapiAttachment.
+1. Itera a través de la colección MapiAttachmentCollection y obtén los adjuntos individuales.
+1. Para guardar los adjuntos, llama al método Save() de la clase MapiAttachment.
 
-El siguiente fragmento de código muestra cómo guardar los archivos adjuntos en el disco local.
+El siguiente fragmento de código muestra cómo guardar adjuntos en el disco local.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-SaveAttachmentsFromOutlookMSGFile-SaveAttachmentsFromOutlookMSGFile.cpp" >}}
 
-### **Eliminar archivos adjuntos**
-La biblioteca Aspose Outlook proporciona la funcionalidad para eliminar los archivos adjuntos de los archivos de mensajes de Microsoft Outlook (.msg):
+### **Eliminar Adjuntos**
+La biblioteca Aspose Outlook proporciona la funcionalidad para eliminar adjuntos de archivos de Mensaje de Microsoft Outlook (.msg):
 
-- Llama al método removeAttachments (). Toma la ruta del archivo de mensajes como parámetro. Se implementa como un método estático público, por lo que no es necesario crear una instancia del objeto.
+- Llama al método RemoveAttachments(). Toma la ruta del archivo de mensaje como parámetro. Está implementado como un método estático público, por lo que no necesitas instanciar el objeto.
 
-El siguiente fragmento de código muestra cómo eliminar los archivos adjuntos mediante la biblioteca de analizadores de correo electrónico de C++.
+El siguiente fragmento de código muestra cómo eliminar adjuntos utilizando la Biblioteca C++ Email Parser.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-RemoveAttachmentsFromFile-RemoveAttachmentsFromFile.cpp" >}}
 
-También puedes llamar al método estático destoryAttachment () de la clase MapiMessage. Funciona más rápido que removeAttachment (), porque el método removeAttachment () analiza el archivo de mensajes.
+También puedes llamar al método estático DestoryAttachment() de la clase MapiMessage. Funciona más rápido que RemoveAttachment(), porque el método RemoveAttachment() analiza el archivo de mensaje.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-DestroyAttachment-DestroyAttachment.cpp" >}}
 
-### **Agregar archivos adjuntos de MSG**
-Un mensaje de Outlook puede contener otros mensajes de Microsoft Outlook en archivos adjuntos, ya sea como mensajes normales o incrustados. La colección MAPIAttachmentCollection proporciona elementos sobrecargados del método Add para crear mensajes de Outlook con ambos tipos de archivos adjuntos.
+### **Agregar Adjuntos MSG**
+Un mensaje de Outlook puede contener otros mensajes de Microsoft Outlook en adjuntos ya sea como mensajes regulares o incrustados. La MapiAttachmentCollection proporciona miembros sobrecargados del método Add para crear mensajes de Outlook con ambos tipos de adjuntos.
 
-### **Incrustar mensaje como archivo adjunto**
-El siguiente fragmento de código muestra cómo hacer que los archivos MSG de Outlook incrustados en un archivo MSG contengan un PR_ATTACH_METHOD cuyo valor es igual a 5.
+### **Incrustando Mensaje como Adjunto**
+El siguiente fragmento de código muestra cómo los archivos MSG de Outlook incrustados en un archivo MSG contienen un PR_ATTACH_METHOD cuyo valor es 5.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-EmbedMessageAsAttachment-EmbedMessageAsAttachment.cpp" >}}

@@ -1,8 +1,6 @@
 ---
-title: "Trabajando con el cliente IMAP"
+title: "Trabajando con el Cliente IMAP"
 url: /es/net/working-with-imap-client/
 weight: 70
 type: docs
 ---
-
-

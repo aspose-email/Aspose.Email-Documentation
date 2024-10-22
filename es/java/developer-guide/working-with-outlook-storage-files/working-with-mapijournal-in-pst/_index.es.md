@@ -5,21 +5,21 @@ weight: 70
 type: docs
 ---
 
-## **Agregar MapiJournal a PST**
+## **Agregando MapiJournal a PST**
 
-[Crear un nuevo PST, agregar subcarpetas y mensajes](/email/java/create-new-pst-add-sub-folders-and-messages/) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puede agregar MapiJournal a la subcarpeta Journal de un archivo PST que haya creado o cargado. A continuación se detallan los pasos para agregar MapiJournal a un PST:
+[Crear nuevo PST, agregar subcarpetas y mensajes](/email/java/create-new-pst-add-sub-folders-and-messages/) mostró cómo crear un archivo PST y agregarle una subcarpeta. Con Aspose.Email puedes agregar MapiJournal a la subcarpeta Journal de un archivo PST que has creado o cargado. A continuación se presentan los pasos para agregar MapiJournal a un PST:
 
-1. Crea un [MapiJournal](https://reference.aspose.com/email/java/com.aspose.email/mapijournal/) object.
-1. Configure el [MapiJournal](https://reference.aspose.com/email/java/com.aspose.email/mapijournal/) propiedades que utilizan un constructor y métodos.
-1. Cree un PST con el [PersonalStorage.create()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#create-java.io.OutputStream-int-) method.
-1. Cree una carpeta predefinida (Diarios) en la raíz del archivo PST accediendo a la carpeta raíz y, a continuación, llamando al [addMapiMessageItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMapiMessageItem-com.aspose.email.IMapiMessageItem-) method.
+1. Crea un objeto [MapiJournal](https://reference.aspose.com/email/java/com.aspose.email/mapijournal/).
+1. Establece las propiedades del [MapiJournal](https://reference.aspose.com/email/java/com.aspose.email/mapijournal/) usando un constructor y métodos.
+1. Crea un PST usando el método [PersonalStorage.create()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#create-java.io.OutputStream-int-).
+1. Crea una carpeta predefinida (Journals) en la raíz del archivo PST accediendo a la carpeta raíz y luego llamando al método [addMapiMessageItem()](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#addMapiMessageItem-com.aspose.email.IMapiMessageItem-).
 
-El siguiente fragmento de código muestra cómo crear un [MapiJournal](https://reference.aspose.com/email/java/com.aspose.email/mapijournal/) y, a continuación, agréguelo a la carpeta Journal de un archivo PST recién creado.
+El fragmento de código a continuación muestra cómo crear un [MapiJournal](https://reference.aspose.com/email/java/com.aspose.email/mapijournal/) y luego agregarlo a la carpeta Journal de un archivo PST recién creado.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-AddMapiJournalToPST-AddMapiJournalToPST.java" >}}
 
-## **Agregar archivos adjuntos a MapiJournal**
+## **Agregando archivos adjuntos a MapiJournal**
 
-También es posible agregar archivos adjuntos a los elementos del diario MAPI. El siguiente código muestra cómo hacerlo.
+También es posible agregar archivos adjuntos a los elementos del diario MAPI. El código a continuación muestra cómo.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-pst-AddMapiJournalToPST-AddAttachmentsToMapiJournal.java" >}}

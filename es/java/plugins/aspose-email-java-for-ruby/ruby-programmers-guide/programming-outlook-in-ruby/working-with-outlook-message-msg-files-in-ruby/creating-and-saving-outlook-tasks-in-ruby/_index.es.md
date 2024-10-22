@@ -1,12 +1,12 @@
 ---
-title: "Crear y guardar tareas de Outlook en Ruby"
-url: /es/java/creating-and-saving-outlook-tasks-in-ruby/
+title: "Creando y Guardando Tareas de Outlook en Ruby"
+url: /es/java/creando-y-guardando-tareas-de-outlook-en-ruby/
 weight: 30
 type: docs
 ---
 
-## **Aspose.Email - Creación y almacenamiento de tareas de Outlook**
-Para crear tareas de Outlook mediante **Aspose.Email Java para Ruby**, simplemente invoca **CreateOutlookTask** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Creando y Guardando Tareas de Outlook**
+Para crear tareas de Outlook utilizando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **CreateOutlookTask**. Aquí puedes ver un código de ejemplo.
 
 **Código Ruby**
 
@@ -26,7 +26,7 @@ calendar.set(2012, calendar.DECEMBER, 1)
 
 endDate = calendar.getTime()
 
-task = Rjb::import('com.aspose.email.MapiTask').new("To Do", "Just click and type to add new task", startDate, endDate)
+task = Rjb::import('com.aspose.email.MapiTask').new("Para Hacer", "Simplemente haz clic y escribe para añadir una nueva tarea", startDate, endDate)
 
 task.setPercentComplete(20)
 
@@ -44,19 +44,19 @@ task.getUsers().setLastDelegate("Harkness")
 
 task.getUsers().setOwnership(Rjb::import('com.aspose.email.MapiTaskOwnership').AssignersCopy)
 
-companies = ["company1", "company2", "company3"]
+companies = ["empresa1", "empresa2", "empresa3"]
 
 task.setCompanies(companies)
 
-categories = ["category1", "category2", "category3"]
+categories = ["categoría1", "categoría2", "categoría3"]
 
 task.setCategories(categories)
 
-task.setMileage("Some test mileage")
+task.setMileage("Algún kilometraje de prueba")
 
-task.setBilling("Test billing information")
+task.setBilling("Información de facturación de prueba")
 
-task.getUsers().setDelegator("Test Delegator")
+task.getUsers().setDelegator("Delegador de Prueba")
 
 task.setSensitivity(Rjb::import('com.aspose.email.MapiSensitivity').Personal)
 
@@ -64,10 +64,10 @@ task.setStatus(Rjb::import('com.aspose.email.MapiTaskStatus').Complete)
 
 task.save(data_dir + "MapiTask.msg", Rjb::import('com.aspose.email.TaskSaveFormat').Msg)
 
-puts "Created outlook task successfully."
+puts "Tarea de Outlook creada exitosamente."
 
 ```
-## **Descargar Running Code**
-Download **Creación y almacenamiento de tareas de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Creando y Guardando Tareas de Outlook (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Outlook/createoutlooktask.rb)

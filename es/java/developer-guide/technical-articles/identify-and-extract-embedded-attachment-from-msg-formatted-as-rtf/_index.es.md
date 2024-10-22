@@ -1,17 +1,17 @@
 ---
-title: "Identifique y extraiga el archivo adjunto incrustado de un mensaje formateado como RTF"
-url: /es/java/identify-and-extract-embedded-attachment-from-msg-formatted-as-rtf/
+title: "Identificar y extraer adjuntos incrustados de MSG formateados como RTF"
+url: /es/java/identificar-y-extraer-adjuntos-incrustados-de-msg-formateados-como-rtf/
 weight: 20
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Los mensajes de correo electrónico con un cuerpo con formato RTF pueden contener archivos adjuntos integrados que se incrustan como un objeto completo o como un icono. Para diferenciar entre estos dos tipos de archivos adjuntos, es necesario investigar primero ciertas propiedades del archivo adjunto. Tras cumplir ciertos criterios basados en las propiedades del adjunto, este se puede guardar extrayéndolo de sus ObjectData.
+Los mensajes de correo electrónico con un cuerpo formateado en RTF pueden contener adjuntos en línea que están incrustados como un objeto completo o como un ícono. Para diferenciar entre estos dos tipos de adjuntos, se deben investigar primero ciertas propiedades del adjunto. Después de cumplir con ciertos criterios basados en las propiedades del adjunto, el adjunto puede ser guardado extrayéndolo de su ObjectData.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-Este artículo identifica y extrae el archivo adjunto incrustado de un archivo MSG con formato RTF.
+Este artículo identifica y extrae adjuntos incrustados de un archivo MSG formateado como RTF.
 
 **Java**
 

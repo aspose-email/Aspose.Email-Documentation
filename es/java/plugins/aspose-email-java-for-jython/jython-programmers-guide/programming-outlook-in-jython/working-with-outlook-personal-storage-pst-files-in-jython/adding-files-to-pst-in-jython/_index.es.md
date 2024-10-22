@@ -1,12 +1,12 @@
 ---
-title: "Agregar archivos a PST en Jython"
+title: "Agregar Archivos a PST en Jython"
 url: /es/java/adding-files-to-pst-in-jython/
 weight: 10
 type: docs
 ---
 
-## **Aspose.Email - Agregar archivos a PST**
-Para agregar un archivo a PST usando **Aspose.Email Java para Jython**, simplemente invoca **AddFileToPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Agregar Archivos a PST**
+Para agregar un archivo a PST utilizando **Aspose.Email Java para Jython**, simplemente invoca el módulo **AddFileToPST**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -24,11 +24,7 @@ class AddFileToPST:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddFileToPST/'
-
-
 
         personalStorage=PersonalStorage()
 
@@ -44,19 +40,15 @@ class AddFileToPST:
 
         pst.dispose()
 
-        print "Added file to PST"
+        print "Archivo agregado a PST"
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     AddFileToPST()
 
 ```
-## **Descargar Running Code**
-Download **Agregar archivos a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Agregar Archivos a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

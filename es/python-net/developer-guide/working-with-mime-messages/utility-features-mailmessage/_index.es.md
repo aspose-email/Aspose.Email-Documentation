@@ -1,21 +1,21 @@
 ---
-title: "Características de la utilidad - MailMessage"
+title: "Características de Utilidad - MailMessage"
 url: /es/python-net/utility-features-mailmessage/
 weight: 40
 type: docs
 ---
 
 
-## **Mensajes de correo que contienen archivos adjuntos de TNEF**
-El formato de encapsulación neutral para el transporte (TNEF) es un formato patentado de archivos adjuntos de correo electrónico que utilizan Microsoft Outlook y Microsoft Exchange Server. La API Aspose.Email le permite leer los mensajes de correo electrónico que tienen archivos adjuntos en TNEF y modificar el contenido de los archivos adjuntos. Luego, el correo electrónico se puede guardar como correo electrónico normal o en el mismo formato, conservando los archivos adjuntos de TNEF. En este artículo se muestran diferentes ejemplos de código para trabajar con mensajes que contienen archivos adjuntos de TNEF. En este artículo también se muestra cómo trabajar con la creación de archivos EML de TNEF a partir de archivos MSG de Outlook.
-### **Lectura del mensaje conservando los archivos adjuntos del TNEF**
-El siguiente fragmento de código muestra cómo leer un mensaje conservando los archivos adjuntos de TNEF.
+## **MailMessages que Contienen Archivos Adjuntos TNEF**
+El Formato de Encapsulación Neutral de Transporte (TNEF) es un formato de archivo adjunto de correo electrónico propietario utilizado por Microsoft Outlook y Microsoft Exchange Server. La API Aspose.Email te permite leer mensajes de correo electrónico que tienen archivos adjuntos TNEF y modificar el contenido del archivo adjunto. El correo electrónico puede luego ser guardado como un correo electrónico normal o en el mismo formato, preservando los archivos adjuntos TNEF. Este artículo muestra diferentes ejemplos de código para trabajar con mensajes que contienen archivos adjuntos TNEF. Este artículo también muestra cómo crear archivos EML TNEF desde archivos MSG de Outlook.
+### **Leyendo Mensajes Preservando Archivos Adjuntos TNEF**
+El siguiente fragmento de código muestra cómo leer un mensaje preservando los archivos adjuntos TNEF.
 
 ```py
 from aspose.email import MailMessage, SaveOptions, EmlLoadOptions, MessageFormat, FileCompatibilityMode
 
 options = EmlLoadOptions()
-# This will Preserve the TNEF attachment as it is, file contains the TNEF attachment
+# Esto preservará el archivo adjunto TNEF tal como está, el archivo contiene el archivo adjunto TNEF
 options.preserve_tnef_attachments = True
 
 eml = MailMessage.load(data_dir + "message.eml", options)
@@ -23,8 +23,8 @@ for attachment in eml.attachments:
     print(attachment.name)
 ```
 
-### **Creación de TNEF EML a partir de MSG**
-Los mensajes de Outlook a veces contienen información, como tablas y estilos de texto, que puede resultar molesta si se convierten a EML. La creación de mensajes TNEF a partir de estos archivos MSG permite conservar el formato e incluso enviar dichos mensajes a través de los clientes de correo electrónico que conservan el formato. Para ello se utiliza la propiedad convert_as_tnef. El siguiente fragmento de código muestra cómo crear TNEF eML a partir de MSG.
+### **Creando EML TNEF desde MSG**
+Los MSG de Outlook a veces contienen información como tablas y estilos de texto que pueden verse alterados si se convierten a EML. Crear mensajes TNEF a partir de tales archivos MSG permite retener el formato e incluso enviar tales mensajes a través de los clientes de correo electrónico manteniendo el formato. La propiedad convert_as_tnef se utiliza para lograr esto. El siguiente fragmento de código muestra cómo crear EML TNEF desde MSG.
 
 ```py
 from aspose.email.mapi import MapiMessage, MailConversionOptions, OutlookMessageFormat
@@ -37,18 +37,18 @@ mail_conversion_options.convert_as_tnef = True
 message = mapi_msg.to_mail_message(mail_conversion_options)
 ```
 
-Para crear el TNEF, se puede usar el siguiente código de ejemplo.
+Para crear el TNEF, se puede utilizar el siguiente código de muestra.
 
 ```py
 from aspose.email import MailMessage, SaveOptions, MsgLoadOptions, MessageFormat, FileCompatibilityMode
 
 options = MsgLoadOptions()
-# The PreserveTnefAttachments option with MessageFormat.Msg will create the TNEF eml.
+# La opción PreserveTnefAttachments con MessageFormat.Msg creará el eml TNEF.
 options.preserve_tnef_attachments = True
 
 eml = MailMessage.load(eml_file_name, options)
 ```
-### **Detectar si un mensaje es TNEF**
+### **Detectar si un Mensaje es TNEF**
 El siguiente fragmento de código muestra cómo detectar si un mensaje es TNEF.
 
 ```py
@@ -57,8 +57,8 @@ from aspose.email import MailMessage
 mail = MailMessage.load(data_dir + "message.eml")
 is_tnef = mail.original_is_tnef
 ```
-## **Procesamiento de mensajes devueltos**
-Es muy común que un mensaje enviado a un destinatario rebote por cualquier motivo, como una dirección de destinatario no válida. La API Aspose.Email tiene la capacidad de procesar un mensaje de este tipo para comprobar si se trata de un correo electrónico devuelto o de un mensaje de correo electrónico normal. El método check_bounced de MailMessage devuelve un resultado válido si el mensaje de correo electrónico es un correo devuelto. Este artículo muestra el uso de [BounceResult](https://reference.aspose.com/email/python-net/aspose.email.bounce/bounceresult/) clase que proporciona la capacidad de comprobar si un mensaje es un correo electrónico devuelto. Además, proporciona información detallada sobre los destinatarios, las medidas adoptadas y el motivo de la notificación. El siguiente fragmento de código muestra cómo procesar los mensajes devueltos.
+## **Procesamiento de Mensajes Rebotados**
+Es muy común que un mensaje enviado a un destinatario pueda rebotar por cualquier razón, como una dirección de destinatario no válida. La API Aspose.Email tiene la capacidad de procesar dicho mensaje para verificar si es un correo electrónico rebotado o un mensaje de correo electrónico regular. El método check_bounced de MailMessage devuelve un resultado válido si el mensaje de correo electrónico es un correo electrónico rebotado. Este artículo muestra el uso de la clase [BounceResult](https://reference.aspose.com/email/python-net/aspose.email.bounce/bounceresult/) que proporciona la capacidad de verificar si un mensaje es un correo electrónico rebotado. Además, proporciona información detallada sobre los destinatarios, la acción tomada y la razón de la notificación. El siguiente fragmento de código muestra cómo procesar mensajes rebotados.
 
 ```py
 from aspose.email import MailMessage, SaveOptions, MsgLoadOptions, MessageFormat, FileCompatibilityMode
@@ -74,8 +74,8 @@ print("Reason: " + str(result.reason))
 print("Status: " + str(result.status))
 print()
 ```
-## **Analizador bayesiano de spam**
-Aspose.Email proporciona filtrado de correo electrónico mediante un analizador de spam bayesiano. Proporciona la [SpamAnalyzer](http://www.aspose.com/api/net/email/aspose.email.antispam/spamanalyzer) clase para este propósito. Este artículo muestra cómo entrenar el filtro para que distinga entre el correo basura y el correo normal basándose en una base de datos de palabras.
+## **Analizador de Spam Bayesiano**
+Aspose.Email proporciona filtrado de correo electrónico utilizando un analizador de spam bayesiano. Ofrece la clase [SpamAnalyzer](http://www.aspose.com/api/net/email/aspose.email.antispam/spamanalyzer) para este propósito. Este artículo muestra cómo entrenar el filtro para distinguir entre spam y correos electrónicos regulares basado en una base de datos de palabras.
 
 ```py
 from aspose.email import MailMessage, SaveOptions, MsgLoadOptions, MessageFormat, FileCompatibilityMode
@@ -89,10 +89,10 @@ database_file = "SpamFilterDatabase.txt"
 
 def print_result(probability):
     if probability >= 0.5:
-        print("The message is classified as spam.")
+        print("El mensaje se clasifica como spam.")
     else:
-        print("The message is classified as not spam.")
-    print("Spam Probability: " + str(probability))
+        print("El mensaje se clasifica como no spam.")
+    print("Probabilidad de Spam: " + str(probability))
     print()
 
 def teach_and_create_database(ham_folder, spam_folder, database_file):

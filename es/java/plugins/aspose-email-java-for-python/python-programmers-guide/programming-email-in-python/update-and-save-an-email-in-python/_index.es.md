@@ -1,12 +1,12 @@
 ---
-title: "Actualizar y guardar un correo electrónico en Python"
+title: "Actualizar y Guardar un Correo Electrónico en Python"
 url: /es/java/update-and-save-an-email-in-python/
 weight: 80
 type: docs
 ---
 
-## **Aspose.Email - Actualizar y guardar un correo electrónico**
-Para actualizar y guardar un correo electrónico usando **Aspose.Email Java para Python**, Usa el siguiente código.
+## **Aspose.Email - Actualizar y Guardar un Correo Electrónico**
+Para actualizar y guardar un correo electrónico usando **Aspose.Email Java para Python**, utiliza el siguiente código.
 
 **Código Python**
 
@@ -14,81 +14,81 @@ Para actualizar y guardar un correo electrónico usando **Aspose.Email Java para
 
 
 
-\# Initialize and Load an existing MSG file by specifying the MessageFormat
+\# Inicializar y cargar un archivo MSG existente especificando el MessageFormat
 
 mailMessage = self.MailMessage
 
 email = mailMessage.load(self.dataDir + "Message.msg")
 
-\# Initialize a String variable to get the Email Subject
+\# Inicializar una variable String para obtener el Asunto del Correo Electrónico
 
 subject = email.getSubject()
 
-\# Append some more information to Subject
+\# Agregar más información al Asunto
 
-subject = subject + " This text is added to the existing subject"
+subject = subject + " Este texto se añade al asunto existente"
 
-\# Set the Email Subject
+\# Establecer el Asunto del Correo Electrónico
 
-email.setSubject('This text is added to the existing subject')
+email.setSubject('Este texto se añade al asunto existente')
 
-\# Initialize a String variable to get the Email's HTML Body
+\# Inicializar una variable String para obtener el Cuerpo HTML del Correo Electrónico
 
 body = email.getHtmlBody()
 
-\# Apppend some more information to the Body variable
+\# Agregar más información a la variable Body
 
-body = body + "<br> This text is added to the existing body"
+body = body + "<br> Este texto se añade al cuerpo existente"
 
-\# Set the Email Body
+\# Establecer el Cuerpo del Correo Electrónico
 
 email.setHtmlBody(body)
 
-\# Initialize MailAddressCollection object
+\# Inicializar el objeto MailAddressCollection
 
 contacts = self.MailAddressCollection()
 
-\# Retrieve Email's TO list
+\# Recuperar la lista TO del Correo Electrónico
 
 contacts = email.getTo()
 
-\# Add another email address to collection
+\# Agregar otra dirección de correo electrónico a la colección
 
 contacts.add("to1@domain.com")
 
-\# Set the collection as Email's TO list
+\# Establecer la colección como la lista TO del Correo Electrónico
 
 email.setTo(contacts)
 
-\# Initialize MailAddressCollection
+\# Inicializar MailAddressCollection
 
 contacts = self.MailAddressCollection()
 
-\# Retrieve Email's CC list
+\# Recuperar la lista CC del Correo Electrónico
 
 contacts = email.getCC()
 
-\# Add another email address to collection
+\# Agregar otra dirección de correo electrónico a la colección
 
 contacts.add("cc2@domain.com")
 
-\# Set the collection as Email's CC list
+\# Establecer la colección como la lista CC del Correo Electrónico
 
 email.setCC(contacts)
 
-\# Save the Email message to disk by specifying the MessageFormat
+\# Guardar el mensaje de correo electrónico en disco especificando el MessageFormat
 
 mailMessageSaveType = self.MailMessageSaveType
 
 email.save(self.dataDir + "UpdateMessage.msg", mailMessageSaveType.getOutlookMessageFormat())
 
-\# Display Status
+\# Mostrar Estado
 
-print "Updated email message Successfully."
+print "Mensaje de correo electrónico actualizado con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Actualizar y guardar un correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Actualizar y Guardar un Correo Electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

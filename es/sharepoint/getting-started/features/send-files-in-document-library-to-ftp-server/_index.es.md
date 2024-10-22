@@ -1,20 +1,20 @@
 ---
-title: "Enviar archivos de la biblioteca de documentos al servidor FTP"
+title: "Enviar archivos en la biblioteca de documentos al servidor FTP"
 url: /es/sharepoint/send-files-in-document-library-to-ftp-server/
 weight: 40
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Con Aspose. El correo electrónico para SharePoint instalado y activado, la cinta «Aspose Tools» pasa a estar disponible en la biblioteca de documentos. Incluye funciones para transferir archivos al servidor FTP. Puede seleccionar cualquier archivo y enviarlo al servidor FTP.
+Con Aspose.Email para SharePoint instalado y activado, la cinta de "Herramientas de Aspose" se vuelve disponible en la biblioteca de documentos. Incluye características para transferir archivos al servidor FTP. Puedes seleccionar cualquier archivo(s) y enviar al servidor FTP. 
 
-{{% /alert %}}
+{{% /alert %}} 
 
-**Envío de archivos a FTP.**
+**Enviando archivos al FTP.** 
 
 ![todo:image_alt_text](send-files-in-document-library-to-ftp-server_1.png)
 
 
-[Más información sobre cómo enviar archivos a FTP](/email/sharepoint/send-selected-files-to-ftp-server/).
+[Descubre más sobre cómo enviar archivos al FTP](/email/sharepoint/send-selected-files-to-ftp-server/).

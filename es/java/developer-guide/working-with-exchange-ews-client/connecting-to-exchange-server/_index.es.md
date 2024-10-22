@@ -1,16 +1,13 @@
 ---
-title: "Conexión a Exchange Server"
-url: /es/java/connecting-to-exchange-server/
+title: "Conectándose al Servidor de Exchange"
+url: /es/java/conectando-al-servidor-de-exchange/
 weight: 10
 type: docs
 ---
 
-
-Para conectarse a los servidores Exchange 2007, 2010 y 2013 mediante el servicio web de Exchange, Aspose.Email proporciona [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) interfaz que implementa el [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) clase. El [EWSClient.getEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#getEWSClient\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String\)) el método crea una instancia y devuelve un [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) objeto que se utiliza además para realizar operaciones relacionadas con un buzón de Exchange y otras carpetas. En este artículo se muestra cómo crear instancias de objetos de [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
-## **Conexión a Exchange Server mediante EWS**
-El siguiente fragmento de código muestra cómo conectarse mediante Exchange Web Service (EWS).
-
-
+Para conectarse a los servidores de Exchange 2007, 2010 y 2013 utilizando Exchange Web Service, Aspose.Email proporciona la interfaz [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) que implementa la clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient). El método [EWSClient.getEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#getEWSClient\(java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String\)) instancía y devuelve un objeto [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) que se utiliza posteriormente para realizar operaciones relacionadas con un buzón de Exchange y otras carpetas. Este artículo muestra cómo instanciar objetos de [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
+## **Conectándose al Servidor de Exchange usando EWS**
+El siguiente fragmento de código muestra cómo conectarse utilizando Exchange Web Service (EWS).
 
 ~~~Java
 private static IEWSClient getExchangeEWSClient() {
@@ -23,76 +20,66 @@ private static IEWSClient getExchangeEWSClient() {
     return client;
 }
 ~~~
-## **Conexión a Exchange Server mediante IMAP**
-Microsoft Exchange Server admite el protocolo IMAP para acceder a los elementos de un buzón. Utilice los correos electrónicos de Aspose.Email [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) clase para conectarse al servidor Exchange mediante el protocolo IMAP. Para obtener más información acerca de [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) clase. En primer lugar, asegúrese de que los servicios IMAP estén habilitados para su servidor Exchange:
+## **Conectándose al Servidor de Exchange usando IMAP**
+Microsoft Exchange Server admite el protocolo IMAP para acceder a elementos en un buzón. Utilice la clase [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient) de Aspose.Email para conectarse al Servidor de Exchange utilizando el protocolo IMAP. Para más información sobre la clase [ImapClient](https://apireference.aspose.com/email/java/com.aspose.email/ImapClient). Primero, asegúrese de que los servicios IMAP estén habilitados en su Servidor de Exchange:
 
-1. Abre el panel de control.
-1. Vaya a Herramientas de administración y, a continuación, a Servicios.
-1. Compruebe el estado del servicio IMAP4 de Microsoft Exchange.
-1. Si aún no se está ejecutando, habilítelo o inícielo.
+1. Abra el Panel de Control.
+1. Vaya a Herramientas de Administrador, luego Servicios.
+1. Verifique el estado del servicio Microsoft Exchange IMAP4.
+1. Si no está en funcionamiento, habilítelo/inícielo.
 
-El siguiente fragmento de código muestra cómo conectar y enumerar los mensajes de la carpeta Bandeja de entrada del servidor Microsoft Exchange mediante el protocolo IMAP.
-
-
+El siguiente fragmento de código muestra cómo conectarse y listar mensajes de la carpeta Bandeja de entrada del servidor de Microsoft Exchange utilizando el protocolo IMAP.
 
 ~~~Java
-// Connect to Exchange Server using ImapClient class
+// Conectarse al Servidor de Exchange usando la clase ImapClient
 ImapClient imapClient = new ImapClient("ex07sp1", "Administrator", "Evaluation1");
 imapClient.setSecurityOptions(SecurityOptions.Auto);
 
-// Select the Inbox folder
+// Seleccionar la carpeta Bandeja de entrada
 imapClient.selectFolder(ImapFolderInfo.IN_BOX);
 
-// Get the list of messages
+// Obtener la lista de mensajes
 ImapMessageInfoCollection msgCollection = imapClient.listMessages();
 for (ImapMessageInfo msgInfo : (Iterable<ImapMessageInfo>) msgCollection) {
     System.out.println(msgInfo.getSubject());
 }
-// Disconnect from the server
+// Desconectarse del servidor
 imapClient.dispose();
 ~~~
 
-
-
-El siguiente fragmento de código muestra cómo usar SSL.
-
-
+El siguiente fragmento de código muestra cómo utilizar SSL.
 
 ~~~Java
 public static void run() {
-    // Connect to Exchange Server using ImapClient class
+    // Conectarse al Servidor de Exchange usando la clase ImapClient
     ImapClient imapClient = new ImapClient("ex07sp1", 993, "Administrator", "Evaluation1");
     imapClient.setSecurityOptions(SecurityOptions.SSLExplicit);
 
-    // Select the Inbox folder
+    // Seleccionar la carpeta Bandeja de entrada
     imapClient.selectFolder(ImapFolderInfo.IN_BOX);
 
-    // Get the list of messages
+    // Obtener la lista de mensajes
     ImapMessageInfoCollection msgCollection = imapClient.listMessages();
     for (ImapMessageInfo msgInfo : (Iterable<ImapMessageInfo>) msgCollection) {
         System.out.println(msgInfo.getSubject());
     }
-    // Disconnect from the server
+    // Desconectarse del servidor
     imapClient.dispose();
 }
 ~~~
 
-
-
-Tras conectarse a un servidor de Exchange mediante IMAP y obtener el [IMapMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ImapMessageInfoCollection), El siguiente fragmento de código muestra cómo usar el [MessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/MessageInfo) número de secuencia del objeto para guardar un mensaje específico.
-
-
+Después de conectarse a un servidor de Exchange utilizando IMAP y obtener la [IMapMessageInfoCollection](https://apireference.aspose.com/email/java/com.aspose.email/ImapMessageInfoCollection), el siguiente fragmento de código muestra cómo utilizar el número de secuencia del objeto [MessageInfo](https://apireference.aspose.com/email/java/com.aspose.email/MessageInfo) para guardar un mensaje específico.
 
 ~~~Java
-// Select the Inbox folder
+// Seleccionar la carpeta Bandeja de entrada
 imapClient.selectFolder(ImapFolderInfo.IN_BOX);
-// Get the list of messages
+// Obtener la lista de mensajes
 ImapMessageInfoCollection msgCollection = imapClient.listMessages();
 for (ImapMessageInfo msgInfo : (Iterable<ImapMessageInfo>) msgCollection) {
-    // Fetch the message from inbox using its SequenceNumber from msgInfo
+    // Obtener el mensaje de la bandeja de entrada usando su SequenceNumber de msgInfo
     MailMessage message = imapClient.fetchMessage(msgInfo.getSequenceNumber());
 
-    // Save the message to disc now
+    // Guardar el mensaje en disco ahora
     message.save(dataDir + msgInfo.getSequenceNumber() + "_out.msg", SaveOptions.getDefaultMsgUnicode());
 }
 ~~~

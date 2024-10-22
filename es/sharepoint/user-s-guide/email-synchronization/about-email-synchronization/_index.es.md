@@ -1,21 +1,21 @@
 ---
-title: "Acerca de la sincronización del correo electrónico"
-url: /es/sharepoint/about-email-synchronization/
+title: "Acerca de la Sincronización de Correo Electrónico"
+url: /es/sharepoint/acerca-de-la-sincronizacion-de-correo-electronico/
 weight: 10
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-El componente de sincronización de correo electrónico de Aspose.email le permite sincronizar correos electrónicos con servidores POP3, IMAP o Exchange.
+El componente de Sincronización de Correo Electrónico de ASpose.EMail permite sincronizar correos electrónicos con servidores POP3, IMAP o Exchange. 
 
-{{% /alert %}}
+{{% /alert %}} 
 
-After [installing](/email/sharepoint/installing-aspose-email-for-sharepoint/) and [activating](/email/sharepoint/activation-and-de-activation-after-installation/) el componente de sincronización de correo electrónico, un **Herramientas Aspose** La cinta está disponible en la lista personalizada de correos electrónicos de SharePoint.
+Después de [instalar](/email/sharepoint/installing-aspose-email-for-sharepoint/) y [activar](/email/sharepoint/activation-and-de-activation-after-installation/) el componente de Sincronización de Correo Electrónico, se dispone de una cinta de **Herramientas Aspose** en la lista personalizada de correos electrónicos de SharePoint. 
 
-**La cinta de Herramientas Aspose muestra las opciones de sincronización de correo electrónico.**
+**La cinta de Herramientas Aspose mostrando opciones de sincronización de correo electrónico.** 
 
 ![todo:image_alt_text](about-email-synchronization_1.png)
 
-Descubra cómo [sincronizar correos electrónicos con POP3](/email/sharepoint/synchronize-emails-using-pop3/).
+Descubre cómo [sincronizar correos electrónicos con POP3](/email/sharepoint/synchronize-emails-using-pop3/).

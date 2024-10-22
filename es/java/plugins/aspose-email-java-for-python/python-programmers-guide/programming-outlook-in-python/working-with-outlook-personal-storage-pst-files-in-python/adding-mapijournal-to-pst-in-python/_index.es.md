@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Agregar MapiJournal a PST**
-Para agregar MapiJournal a PST usando **Aspose.Email Java para Python**, Usa el siguiente código.
+Para agregar MapiJournal a PST usando **Aspose.Email Java para Python**, usa el siguiente código.
 
 **Código Python**
 
@@ -26,7 +26,7 @@ cl.add(calendar.HOUR, 1)
 
 d2 = cl.getTime()
 
-journal = self.MapiJournal("daily record", "called out in the dark", "Phone call", "Phone call")
+journal = self.MapiJournal("registro diario", "llamado en la oscuridad", "Llamada telefónica", "Llamada telefónica")
 
 journal.setStartTime(d1)
 
@@ -44,11 +44,11 @@ journal_folder = pst.createPredefinedFolder("Journal", standardIpmFolder.Journal
 
 journal_folder.addMapiMessageItem(journal)
 
-print "Added MapiJournal Successfully."
+print "MapiJournal agregado exitosamente."
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiJournal a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar código en ejecución**
+Descarga **Agregar MapiJournal a PST (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

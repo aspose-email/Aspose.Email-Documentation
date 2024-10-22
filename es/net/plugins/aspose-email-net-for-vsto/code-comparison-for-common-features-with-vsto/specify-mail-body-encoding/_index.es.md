@@ -1,23 +1,23 @@
 ---
 title: "Especificar la codificación del cuerpo del correo"
-url: /es/net/specify-mail-body-encoding/
+url: /es/net/especificar-codificacion-cuerpo-correo/
 weight: 210
 type: docs
 ---
 
 
 ## **VSTO**
-A continuación se muestra el código para especificar la codificación del cuerpo del correo con VSTO Outlook.
+A continuación se muestra el código para especificar la codificación del cuerpo del correo usando VSTO Outlook.
 
 ``` cs
 
   Outlook.MailItem mailItem = (Outlook.MailItem)this.Application.CreateItem(Outlook.OlItemType.olMailItem);
 
- mailItem.Subject = "This is the subject";
+ mailItem.Subject = "Este es el asunto";
 
- mailItem.To = "someone@example.com";
+ mailItem.To = "alguien@ejemplo.com";
 
- mailItem.Body = "This is the message.";
+ mailItem.Body = "Este es el mensaje.";
 
  mailItem.BodyFormat = Microsoft.Office.Interop.Outlook.OlBodyFormat.olFormatRichText;
 
@@ -28,47 +28,47 @@ A continuación se muestra el código para especificar la codificación del cuer
 
 ```
 ## **Aspose.Email**
-A continuación se muestra el código para especificar la codificación del cuerpo del correo mediante aspose.email para.NET.
+A continuación se muestra el código para especificar la codificación del cuerpo del correo usando aspose.email para .NET.
 
 ``` cs
 
-  //Create an Instance of MailMessage class
+  //Crear una instancia de la clase MailMessage
 
  MailMessage message = new MailMessage();
 
- //From field
+ //Campo De
 
- message.From = "sender@sender.com";
+ message.From = "remitente@remitente.com";
 
- //To field
+ //Campo Para
 
- message.To.Add("receiver@receiver.com");
+ message.To.Add("receptor@receptor.com");
 
- //Specify HtmlBody
+ //Especificar HtmlBody
 
- message.HtmlBody = "<html><body>This is the Html body</body></html>";
+ message.HtmlBody = "<html><body>Este es el cuerpo Html</body></html>";
 
- //Specify BodyEncoding as ASCII
+ //Especificar BodyEncoding como ASCII
 
  message.BodyEncoding = Encoding.ASCII;
 
- //Create an instance of SmtpClient Class
+ //Crear una instancia de la clase SmtpClient
 
  SmtpClient client = new SmtpClient();
 
- //Specify your mailing host server
+ //Especificar su servidor de correo
 
- client.Host = "smtp.server.com";
+ client.Host = "smtp.servidor.com";
 
- //Specify your mail user name
+ //Especificar su nombre de usuario de correo
 
- client.Username = "Username";
+ client.Username = "NombreDeUsuario";
 
- //Specify your mail password
+ //Especificar su contraseña de correo
 
- client.Password = "Password";
+ client.Password = "Contraseña";
 
- //Specify your Port #
+ //Especificar su # de Puerto
 
  client.Port = 25;
 
@@ -76,13 +76,13 @@ A continuación se muestra el código para especificar la codificación del cuer
 
  {
 
-   //Client.Send will send this message
+   //Client.Send enviará este mensaje
 
    client.Send(message);
 
-   //Display 'Message Sent', only if message sent successfully
+   //Mostrar 'Mensaje Enviado', solo si el mensaje se envió correctamente
 
-   Console.WriteLine("Message sent");
+   Console.WriteLine("Mensaje enviado");
 
  }
 
@@ -94,17 +94,17 @@ A continuación se muestra el código para especificar la codificación del cuer
 
  }
 
- Console.WriteLine("Press enter to quit");
+ Console.WriteLine("Presione enter para salir");
 
  Console.Read();
 
 
 ```
-## **Descargar código fuente**
+## **Descargar Código Fuente**
 - [CodePlex](https://asposeemailvsto.codeplex.com/SourceControl/latest#Code)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/tree/master/Plugins/Aspose.Email%20Vs%20VSTO%20Outlook/Code%20Comparison%20of%20Common%20Features/Specify%20Mail%20Body%20Encoding)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8/view/SourceCode#content)
-## **Descargar Running Example**
+## **Descargar Ejemplo en Ejecución**
 - [CodePlex](https://asposeemailvsto.codeplex.com/releases/view/620910)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-.NET/releases/tag/AsposeEmailVsVSTOv1.2)
 - [Code.MSDN](https://code.msdn.microsoft.com/Code-Comparison-of-common-4e0f39b8)

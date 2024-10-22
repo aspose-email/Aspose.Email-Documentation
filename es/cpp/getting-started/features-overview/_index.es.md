@@ -1,93 +1,91 @@
 ---
-title: "Descripción general de las funciones"
-description: "La biblioteca C++ de correo electrónico se divide en varios componentes separados, cada uno con características particulares. Esta es una lista de las funciones de cada uno de los paquetes principales."
+title: "Descripción general de características"
+description: "La biblioteca de correo electrónico C++ se divide en varios componentes separados, cada uno con características particulares. Aquí hay una lista de las características para cada uno de los principales paquetes."
 url: /es/cpp/features-overview/
 weight: 30
 type: docs
 ---
 
-Apose.Email para C++ se divide en varios componentes separados, cada uno con características particulares. Esta es una lista de las características de cada uno de los paquetes principales.
+Apose.Email para C++ se divide en varios componentes separados, cada uno con características particulares. Aquí hay una lista de las características para cada uno de los principales paquetes.
 ## **Aspose.Email.Mail**
-### **Características generales del correo electrónico**
-- Crea correos electrónicos que contengan texto sin formato
-- Crear correos electrónicos que contengan HTML
-- Cree cuerpos de mensajes alternativos para que sean compatibles con clientes de correo electrónico compatibles con HTML y no HTML
-### **Características de los archivos adjuntos**
-- Añade archivos adjuntos a tus correos electrónicos
-- Elimine los archivos adjuntos de sus correos electrónicos
-- Crear archivos adjuntos a partir de rutas de archivos
-- Crear archivos adjuntos a partir de transmisiones
-- Crear archivos adjuntos a partir de matrices de bytes
-### **Características de objetos incrustados**
-- Inserta objetos (como imágenes, sonidos, etc.) en tus correos electrónicos
-- Elimine los objetos incrustados de sus correos electrónicos
-- Incrustar objetos desde rutas de archivos
-- Incrustar objetos de transmisiones
-- Incrustar objetos de matrices de bytes
-### **Funciones de importación/exportación**
-- Importar correos electrónicos con formato de mensaje de correo electrónico (MSG) de Microsoft Outlook
-- Importar correos electrónicos HTML (MHT) de Microsoft
-- Importar correos electrónicos con formato de mensaje (EML) compatible con RFC822
-- Crear correos electrónicos a partir de contenido HTML
-- Exportación de correos electrónicos al formato HTML de Microsoft (MHT)
-- Exportación de correos electrónicos a un formato de mensaje (EML) compatible con RFC822
-- Exportación de correos electrónicos desde un archivo PST de Outlook a archivos MSG de Outlook
+### **Características generales de correo electrónico**
+- Crear correos electrónicos que contienen texto plano
+- Crear correos electrónicos que contienen HTML
+- Crear cuerpos de mensaje alternativos para compatibilidad con clientes de correo electrónico tanto compatibles con HTML como no compatibles con HTML
+### **Características de adjuntos**
+- Agregar adjuntos a sus correos electrónicos
+- Eliminar adjuntos de sus correos electrónicos
+- Crear adjuntos a partir de rutas de archivos
+- Crear adjuntos a partir de flujos
+- Crear adjuntos a partir de arreglos de bytes
+### **Características de objetos embebidos**
+- Incrustar objetos (como imágenes, sonidos, etc.) en sus correos electrónicos
+- Eliminar objetos embebidos de sus correos electrónicos
+- Incrustar objetos a partir de rutas de archivos
+- Incrustar objetos a partir de flujos
+- Incrustar objetos a partir de arreglos de bytes
+### **Características de importación/exportación**
+- Importar mensajes de correo electrónico en formato de mensaje de correo de Microsoft Outlook (MSG)
+- Importar correos electrónicos en formato Microsoft HTML (MHT)
+- Importar correos electrónicos en formato de mensaje compatible con RFC822 (EML)
+- Crear correos electrónicos a partir de contenidos HTML
+- Exportar correos electrónicos a formato Microsoft HTML (MHT)
+- Exportar correos electrónicos a formato de mensaje compatible con RFC822 (EML)
+- Exportar correos electrónicos de un archivo PST de Outlook a archivos MSG de Outlook
 ### **Características del calendario**
-- Agregar eventos de iCalendar a los mensajes de correo electrónico
+- Agregar eventos iCalendar a mensajes de correo electrónico
 ### **Características de utilidad**
-- Personaliza los encabezados de correo electrónico
-- Establecer la prioridad, la fecha y la hora de los mensajes
+- Personalizar los encabezados de correo electrónico
+- Establecer la prioridad del mensaje, fecha y hora
 - Soporta todos los conjuntos de caracteres
-### **Funciones avanzadas**
+### **Características avanzadas**
 - Soporta el análisis de correos electrónicos en formatos MSG, MHT y EML
 - Soporta guardar correos electrónicos en formatos MSG, MHT y EML
-- Extraer archivos adjuntos de archivos de mensajes de correo electrónico (MSG) de Microsoft Outlook
+- Extraer adjuntos de archivos de mensaje de correo de Microsoft Outlook (MSG)
 - Leer mensajes de archivos PST de Outlook
 ## **Aspose.Email.Mime**
 {{% alert %}}
 **¡Pruébalo!**
 
-Analice archivos de correo electrónico con la versión gratuita [**Aplicación de análisis Aspose.Email**](https://products.aspose.app/email/es/parser).
+Analiza archivos de correo electrónico con la gratuita [**Aplicación Aspose.Email Parser**](https://products.aspose.app/email/es/parser).
 {{% /alert %}}
-### **Funciones generales de análisis**
-- Extraiga los encabezados y cuerpos de los mensajes de correo electrónico.
-- Recupera nombres y valores de los encabezados de los correos electrónicos.
-- Recupere las direcciones de origen, destino, cc y respuesta.
-- Recupera y guarda los archivos adjuntos.
-- Recupera y guarda objetos incrustados, como imágenes y sonidos.
-### **Funciones de importación/exportación**
-- Importe correos electrónicos con formato de mensaje de correo electrónico (MSG) de Microsoft Outlook.
-- Importe correos electrónicos en formato HTML (MHT) de Microsoft.
-- Importe correos electrónicos con formato de mensaje (EML) compatible con RFC822.
-- Exporte correos electrónicos al formato HTML de Microsoft (MHT).
-- Exporte correos electrónicos a un formato de mensaje (EML) compatible con RFC822.
+### **Características generales de análisis**
+- Extraer encabezados de correo electrónico y cuerpos de mensajes.
+- Recuperar nombres y valores de los encabezados de correo electrónico.
+- Recuperar direcciones de From, To, Cc y Reply-To.
+- Recuperar y guardar adjuntos.
+- Recuperar y guardar objetos embebidos como imágenes y sonidos.
+### **Características de importación/exportación**
+- Importar correos electrónicos en formato de mensaje de correo de Microsoft Outlook (MSG).
+- Importar correos electrónicos en formato Microsoft HTML (MHT).
+- Importar correos electrónicos en formato de mensaje compatible con RFC822 (EML).
+- Exportar correos electrónicos a formato Microsoft HTML (MHT).
+- Exportar correos electrónicos a formato de mensaje compatible con RFC822 (EML).
 ### **Características de utilidad**
 - Soporta múltiples encabezados.
-- Soporta múltiples piezas.
+- Soporta múltiples partes.
 - Soporta todos los conjuntos de caracteres.
-- Recupera metadatos como ContentType, MimeVersion y XMailer.
+- Recuperar metadatos como contentType, MimeVersion y XMailer.
 
 {{% alert %}}
 **¡Pruébalo!**
 
-Use [**Aplicación de metadatos Aspose.Email**](https://products.aspose.app/email/es/metadata) para ver y editar los metadatos en línea, las propiedades integradas o las propiedades personalizadas del mensaje.
+Utiliza [**Aplicación Aspose.Email Metadata**](https://products.aspose.app/email/es/metadata) para ver y editar metadatos en línea, propiedades integradas o propiedades personalizadas del mensaje.
 {{% /alert %}}
-### **Funciones de análisis avanzado**
-- Cargue y analice correos electrónicos en formatos MSG, MHT y EML
+### **Características avanzadas de análisis**
+- Cargar y analizar correos electrónicos en formatos MSG, MHT y EML
 ## **Aspose.iCalendar**
-- Calcule de manera fácil y confiable las fechas y horas de ocurrencia incluso para los patrones de recurrencia más complejos
-- Consume y produce patrones de recurrencia en formato iCalendar (RFC 2445)
-- Cree patrones de recurrencia mediante programación a través de un modelo de objetos intuitivo
-- Usa patrones de recurrencia anuales, mensuales, semanales, diarios, por hora, por minuto y por segundo
-- Represente los patrones de recurrencia en sus ventanas, la web o una aplicación móvil
+- Calcular fechas y horas de ocurrencia de manera fácil y confiable incluso para los patrones de recurrencia más complejos
+- Consumir y producir patrones de recurrencia en el formato iCalendar (RFC 2445)
+- Crear patrones de recurrencia programáticamente a través de un modelo de objeto intuitivo
+- Usar patrones de recurrencia anuales, mensuales, semanales, diarios, horarios, por minutos y por segundos
+- Representar patrones de recurrencia en sus aplicaciones de Windows, web o móviles
 ## **Soporte de archivos PST/OST**
-- Soporte para archivos de almacenamiento personal y sin conexión
-- Generar y leer archivos OST, PST
+- Soporte para archivos de almacenamiento personal y fuera de línea
+- Generar y leer archivos OST y PST
 - Soporta archivos PST de todos los tipos
-- Todos los tipos de OST compatibles con la lectura
-## **Protocolos compatibles**
+- Todos los tipos de OST soportados para lectura
+## **Protocolos soportados**
 - SMTP
 - POP3
 - IMAP
-
-

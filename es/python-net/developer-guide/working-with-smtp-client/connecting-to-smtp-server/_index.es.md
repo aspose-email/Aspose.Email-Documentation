@@ -1,39 +1,39 @@
 ---
-title: "Conexión al servidor SMTP"
-url: /es/python-net/connecting-to-smtp-server/
+title: "Conectando al Servidor SMTP"
+url: /es/python-net/conectando-al-servidor-smtp/
 weight: 10
 type: docs
 ---
 
 
-## **Conexión de un servidor SMTP habilitado para SSL**
-Es necesario establecer las siguientes propiedades al conectarse a un servidor SMTP compatible con SSL.
+## **Conectando a un Servidor SMTP Habilitado para SSL**
+Las siguientes propiedades deben configurarse al conectarse a un servidor SMTP con soporte para SSL.
 
 - SecurityOptions
 - Port
 
-En los ejemplos siguientes mostramos cómo:
+En los ejemplos a continuación mostramos cómo:
 
-1. Establece un nombre de usuario.
-1. Establece una contraseña.
-1. Configure el puerto.
-1. Defina la opción de seguridad.
+1. Establecer un nombre de usuario.
+1. Establecer una contraseña.
+1. Establecer el puerto.
+1. Establecer la opción de seguridad.
 
-El siguiente fragmento de código muestra cómo conectar un servidor SMTP con SSL habilitado.
+El siguiente fragmento de código muestra cómo conectarse a un servidor SMTP habilitado para SSL.
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-SMTP-SSLEnabledSMTPServer-SSLEnabledSMTPServer.py" >}}
 
-### **Establezca un tiempo de espera para la respuesta de saludo del servidor**
+### **Establecer un Tiempo de Espera para la Respuesta de Saludo del Servidor**
 
-Para mejorar la eficiencia de las operaciones de los clientes de correo electrónico, los desarrolladores suelen confiar en la propiedad de tiempo de espera para limitar la duración de los procesos prolongados. Sin embargo, especificar intervalos excesivamente largos para esta propiedad puede dificultar las operaciones que requieren tiempos de procesamiento prolongados. Un escenario notable es durante el establecimiento de una conexión, en el que confiar únicamente en la propiedad Timeout puede provocar tiempos de conexión prolongados.
+Para mejorar la eficiencia de las operaciones del cliente de correo electrónico, los desarrolladores a menudo confían en la propiedad de tiempo de espera para limitar la duración de procesos prolongados. Sin embargo, especificar intervalos excesivamente largos para esta propiedad puede obstaculizar operaciones que requieren tiempos de procesamiento extendidos. Un escenario notable es durante el establecimiento de una conexión, donde depender únicamente de la propiedad de Timeout puede resultar en tiempos de conexión prolongados.
 
-En casos específicos, el cliente de correo electrónico puede emplear un modo automático para el establecimiento de la conexión, recorriendo sistemáticamente varios parámetros de conexión hasta que se establezca una conexión exitosa. Cuando la conexión se inicia correctamente, los servidores SMTP, IMAP y POP3 envían una cadena de saludo al cliente. En particular, los servidores pueden emplear métodos de inicio de conexión SSL/TLS implícitos o explícitos (START TLS).
+En casos específicos, el cliente de correo electrónico puede emplear un modo automático para el establecimiento de la conexión, ciclando sistemáticamente a través de varios parámetros de conexión hasta que se establezca una conexión exitosa. Los servidores SMTP, IMAP y POP3, al iniciar una conexión exitosa, envían una cadena de saludo al cliente. Notablemente, los servidores pueden emplear métodos de inicio de conexión SSL/TLS implícitos o explícitos (START TLS).
 
-Un posible desafío surge cuando el modo de conexión no coincide entre el servidor y el cliente. Por ejemplo, si el servidor prevé una conexión SSL implícita mientras el cliente intenta establecer una conexión SSL no segura o explícita, el servidor se abstiene de enviar una cadena de saludo. En consecuencia, los usuarios experimentan tiempos de espera prolongados hasta que se agota el tiempo de espera, lo que hace que el cliente pase a la siguiente opción de conexión.
+Un desafío potencial surge cuando el modo de conexión no coincide entre el servidor y el cliente. Por ejemplo, si el servidor espera una conexión SSL implícita mientras que el cliente intenta establecer una conexión no asegurada o explícitamente SSL, el servidor se abstiene de enviar una cadena de saludo. Como resultado, los usuarios experimentan tiempos de espera prolongados hasta que se alcanza el tiempo de espera, lo que lleva al cliente a pasar a la siguiente opción de conexión.
 
-Para solucionar este problema, los desarrolladores pueden aprovechar la propiedad 'greeting_timeout' de [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) clase. Esta propiedad permite especificar un tiempo de espera (en milisegundos) específico para la cadena de saludo, lo que minimiza el tiempo necesario para el establecimiento automático de la conexión. Al incorporar la propiedad 'greeting_timeout', los desarrolladores pueden optimizar los procesos de conexión y garantizar una experiencia de cliente de correo electrónico más eficiente y con mayor capacidad de respuesta.
+Para abordar este problema, los desarrolladores pueden aprovechar la propiedad 'greeting_timeout' de la clase [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class). Esta propiedad permite especificar un tiempo de espera (en milisegundos) específicamente para la cadena de saludo, minimizando el tiempo requerido para el establecimiento automático de la conexión. Al incorporar la propiedad 'greeting_timeout', los desarrolladores pueden optimizar los procesos de conexión y asegurar una experiencia de cliente de correo electrónico más responsiva y eficiente.
 
-El siguiente ejemplo de código muestra cómo implementar la propiedad en un proyecto:
+El siguiente ejemplo de código demuestra cómo implementar la propiedad en un proyecto:
 
 ```py
 import aspose.email as ae
@@ -41,9 +41,9 @@ import aspose.email as ae
 client = ae.clients.smtp.SmtpClient("localhost", 25, "username", "password")
 client.greeting_timeout = 4000
 ```
-## **Enviar un correo electrónico a través del servidor proxy de Socks**
+## **Enviar un Correo Electrónico a través de un Servidor Proxy Socks**
 
-Aspose.Email admite las versiones 4, 4a y 5 del protocolo de proxy SOCKS. El siguiente ejemplo de código muestra cómo enviar un correo electrónico mediante SMTP con el proxy SOCKS:
+Aspose.Email proporciona soporte para las versiones 4, 4a y 5 del protocolo proxy SOCKS. El siguiente ejemplo de código demuestra cómo enviar un correo electrónico utilizando SMTP con un proxy SOCKS: 
 
 ```py
 import aspose.email as ae
@@ -51,18 +51,18 @@ import aspose.email as ae
 client = ae.clients.smtp.SmtpClient("smtp.domain.com", "username", "password")
 
 client.security_options = ae.clients.SecurityOptions.SSL_IMPLICIT
-# proxy address
+# dirección del proxy
 proxy_address = "192.168.203.142"
-#proxy port
+# puerto del proxy
 proxy_port = 1080
 socks_proxy = ae.clients.SocksProxy(proxy_address, proxy_port, ae.clients.SocksVersion.SOCKS_V5)
 client.proxy = socks_proxy
-client.send(ae.MailMessage("sender@domain.com", "receiver@domain.com", "Sending Email via proxy", "Implement socks proxy protocol for versions 4, 4a, 5 (only Username/Password authentication)"))
+client.send(ae.MailMessage("sender@domain.com", "receiver@domain.com", "Enviando Correo Electrónico a través de proxy", "Implementar protocolo proxy socks para versiones 4, 4a, 5 (solo autenticación por Nombre de Usuario/Contraseña)"))
 ```
 
-## **Conexión al servidor mediante un servidor proxy HTTP**
+## **Conectarse al Servidor a través de un Servidor Proxy HTTP**
 
-El ejemplo de código siguiente muestra el uso de un proxy HTTP para enviar un correo electrónico a través de un servidor SMTP:
+El siguiente ejemplo de código demuestra el uso de un proxy HTTP para enviar un correo electrónico a través de un servidor SMTP: 
 
 ```py
 import aspose.email as ae
@@ -70,42 +70,42 @@ import aspose.email as ae
 http_proxy = ae.clients.HttpProxy("18.222.124.59", 8080)
 client = ae.clients.smtp.SmtpClient("host", 587, "username", "password")
 client.proxy = http_proxy
-client.send(ae.MailMessage("sender@domain.com", "receiver@domain.com", "Sending Email via proxy", "Body"))
+client.send(ae.MailMessage("sender@domain.com", "receiver@domain.com", "Enviando Correo Electrónico a través de proxy", "Cuerpo"))
 ```
 
-## **Conexión al servidor mediante el método de autenticación compatible**
+## **Conectarse al Servidor utilizando un Método de Autenticación Soportado**
 
-Para establecer una conexión segura y exitosa con el servidor para enviar correos electrónicos, el cliente puede seleccionar un método de autenticación compatible en función de las capacidades del servidor. Aspose.Email proporciona propiedades que devuelven listas de los métodos de autenticación compatibles:
+Para establecer una conexión segura y exitosa al servidor para enviar correos electrónicos, un cliente puede seleccionar un método de autenticación soportado basado en las capacidades del servidor. Aspose.Email proporciona propiedades que devuelven listas de métodos de autenticación soportados: 
 
-- La propiedad 'supported_authentication' obtiene la enumeración de los tipos de autenticación admitidos por el servidor
-- La propiedad 'allowed_authentication' obtiene o establece la enumeración de los tipos de autenticación permitidos por el usuario
+- La propiedad 'supported_authentication' obtiene la enumeración de tipos de autenticación soportados por el servidor 
+- La propiedad 'allowed_authentication' obtiene o establece la enumeración de tipos de autenticación permitidos por el usuario 
 
-Con estas propiedades, los desarrolladores pueden asegurarse de que el cliente y el servidor SMTP sean compatibles en cuanto a los métodos de autenticación admitidos y establecer una conexión con un servidor SMTP. El siguiente fragmento de código proporciona un ejemplo del uso de la propiedad 'allowed_authentication' en un proyecto:
+Usando estas propiedades, los desarrolladores pueden asegurar que el cliente SMTP y el servidor son compatibles en términos de métodos de autenticación soportados y establecer una conexión con un servidor SMTP. El siguiente fragmento de código proporciona un ejemplo de uso de la propiedad 'allowed_authentication' en un proyecto:
 
 ```py
 client.allowed_authentication = ae.clients.smtp.SmtpKnownAuthenticationType.LOGIN
 ```
 
-## **Cómo configurar el tiempo de espera para las operaciones de correo**
+## **Cómo Establecer un Tiempo de Espera para Operaciones de Correo**
 
-Establecer un tiempo de espera puede ser importante para gestionar la comunicación de red de forma eficiente. La propiedad de «tiempo de espera» del [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) La clase se usa para especificar el tiempo máximo (en milisegundos) para esperar una respuesta del servidor SMTP. Esta propiedad permite al usuario controlar el tiempo que el cliente esperará a que el servidor responda a una operación concreta, como una conexión o el envío de un comando. Si el servidor tarda más del tiempo especificado en responder, el cliente emitirá una excepción que indicará un error de tiempo de espera. Esto ayuda a gestionar el comportamiento del cliente cuando interactúa con el servidor, garantizando que el cliente no se quede indefinidamente si el servidor no responde de manera oportuna. Utilice el siguiente fragmento de código para establecer el tiempo de espera de la respuesta del servidor:
+Establecer un tiempo de espera puede ser importante para manejar la comunicación de red de manera eficiente. La propiedad 'timeout' de la clase [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) se utiliza para especificar el tiempo máximo (en milisegundos) para esperar una respuesta del servidor SMTP. Esta propiedad permite al usuario controlar la duración que el cliente esperará para que el servidor responda a una operación particular, como una conexión o el envío de un comando. Si el servidor tarda más que el tiempo especificado en responder, el cliente lanzará una excepción, indicando un error de tiempo de espera. Esto ayuda a gestionar el comportamiento del cliente al interactuar con el servidor, asegurando que el cliente no quede atascado indefinidamente si el servidor no responde de manera oportuna. Utilice el siguiente fragmento de código para establecer el tiempo de espera para la respuesta del servidor:
 
 ```py
 import aspose.email as ae
 
 client = ae.clients.smtp.SmtpClient("host", 587, "username", "password", ae.clients.SecurityOptions.SSL_EXPLICIT)
-# 60 seconds
+# 60 segundos
 client.timeout = 60000
 ```
 
-## **Uso de protocolos criptográficos con un cliente SMTP**
+## **Usando Protocolos Criptográficos con el Cliente SMTP**
 
-Aspose.Email admite los protocolos criptográficos SSL (obsoletos) y TLS para brindar seguridad en las comunicaciones. Puede habilitar el cifrado criptográfico para proteger el intercambio de datos entre la aplicación y los servidores de correo.
+Aspose.Email soporta los protocolos criptográficos SSL (obsoleto) y TLS para proporcionar seguridad en las comunicaciones. Puede habilitar la encriptación criptográfica para proteger el intercambio de datos entre su aplicación y los servidores de correo.
 
 ```
-NOTE: You should set only those versions of the protocol, which are supported by Python Framework. If some versions of the cryptographic protocol are not supported by your current version of Python Framework, they will be ignored and skipped. In this case, exceptions won't be generated. Please use 'set_supported_encryption_unsafe(value)' method of the SmtpClient class if you want to set the protocols without any compatibility checks.
+NOTA: Debe establecer solo aquellas versiones del protocolo que son soportadas por el Framework de Python. Si algunas versiones del protocolo criptográfico no son soportadas por su versión actual del Framework de Python, serán ignoradas y omitidas. En este caso, no se generarán excepciones. Utilice el método 'set_supported_encryption_unsafe(value)' de la clase SmtpClient si desea establecer los protocolos sin ninguna comprobación de compatibilidad.
 ```
-El ejemplo de código siguiente muestra cómo configurar TLS 1.3 para la instancia de clase SmtpClient.
+El siguiente ejemplo de código le muestra cómo establecer TLS 1.3 para la instancia de la clase SmtpClient.
 
 ```py
 import aspose.email as ae
@@ -114,9 +114,9 @@ client = ae.clients.smtp.SmtpClient("host", 587, "username", "password", ae.clie
 client.supported_encryption = ae.clients.base.EncryptionProtocols.TLS13
 ```
 
-## **Uso del mecanismo CRAM-MD5 para la autenticación**
+## **Usando el Mecanismo CRAM-MD5 para Autenticación**
 
-El mecanismo de autenticación CRAM-MD5 de Aspose.Email para Python proporciona una capa adicional de seguridad al acceder al servidor. El siguiente fragmento de código muestra cómo implementar esta función en su proyecto:
+El mecanismo de autenticación CRAM-MD5 de Aspose.Email para Python proporciona una capa adicional de seguridad al acceder al servidor. El siguiente fragmento de código muestra cómo implementar esta característica en su proyecto:
 
 ```py
 client.allowed_authentication = ae.clients.smtp.SmtpKnownAuthenticationType.CRAM_MD5

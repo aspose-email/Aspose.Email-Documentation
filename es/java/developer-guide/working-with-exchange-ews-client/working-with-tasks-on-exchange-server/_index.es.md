@@ -1,123 +1,111 @@
 ---
-title: "Trabajar con tareas en Exchange Server"
+title: "Trabajando con Tareas en Exchange Server"
 url: /es/java/working-with-tasks-on-exchange-server/
 weight: 100
 type: docs
 ---
 
 
-## **Trabajando con tareas**
-Aspose.Email admite el procesamiento de tareas en Exchange mediante [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask) clase. Diferentes propiedades expuestas por [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask), como [Subject](https://apireference.aspose.com/email/java/com.aspose.email/Task#getSubject\(\)), [Status](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeTask#getStatus\(\)), [DueDate](https://apireference.aspose.com/email/java/com.aspose.email/Task#getDueDate\(\)), y [Priority](https://apireference.aspose.com/email/java/com.aspose.email/Task#getPriority\(\)), se puede usar para configurar la tarea en Exchange. El [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) la clase expone funciones como [createTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createTask\(com.aspose.email.ExchangeTask\)), [updateTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateTask\(com.aspose.email.ExchangeTask\)), and [deleteTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteTask\(java.lang.String\)) que se utilizan para procesar tareas en Exchange. En este artículo se muestra cómo:
+## **Trabajando con Tareas**
+Aspose.Email admite el procesamiento de tareas en Exchange utilizando la clase [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask). Las diferentes propiedades expuestas por [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask), como [Subject](https://apireference.aspose.com/email/java/com.aspose.email/Task#getSubject\(\)), [Status](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeTask#getStatus\(\)), [DueDate](https://apireference.aspose.com/email/java/com.aspose.email/Task#getDueDate\(\)), y [Priority](https://apireference.aspose.com/email/java/com.aspose.email/Task#getPriority\(\)), pueden utilizarse para configurar la tarea en Exchange. La clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) expone funciones como [createTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createTask\(com.aspose.email.ExchangeTask\)), [updateTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateTask\(com.aspose.email.ExchangeTask\)), y [deleteTask](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#deleteTask\(java.lang.String\)) que se utilizan para procesar tareas en Exchange. Este artículo muestra cómo:
 
-- Crea una nueva tarea.
-- Establece la zona horaria de una tarea.
-- Actualiza una tarea.
+- Crear una nueva tarea.
+- Establecer la zona horaria de una tarea.
+- Actualizar una tarea.
 - Eliminar una tarea.
-- Enviar solicitud de tarea
-- Guardar tarea en disco
-### **Crear nueva tarea**
-El siguiente fragmento de código muestra cómo usar la opción Crear una nueva tarea.
-
-
+- Enviar Solicitud de Tarea
+- Guardar Tarea en Disco
+### **Crear Nueva Tarea**
+El siguiente fragmento de código te muestra cómo crear una nueva tarea.
 
 ~~~Java
-// Create instance of EWSClient class by giving credentials
+// Crear instancia de la clase EWSClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Create Exchange task object
+// Crear objeto de tarea de Exchange
 ExchangeTask task = new ExchangeTask();
 
-// Set task subject and status to In progress
-task.setSubject("New-Test");
+// Establecer el asunto y el estado de la tarea a En progreso
+task.setSubject("Nueva-Prueba");
 task.setStatus(ExchangeTaskStatus.InProgress);
 client.createTask(client.getMailboxInfo().getTasksUri(), task);
 ~~~
-### **Especificación de la zona horaria**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) interfaz y [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask) proporcione la propiedad TimeZoneID para establecer la información de la zona horaria al crear una tarea. El siguiente fragmento de código muestra cómo especificar la zona horaria.
-
-
+### **Especificando la Zona Horaria**
+La interfaz [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) y [ExchangeTask](https://apireference.aspose.com/email/java/com.aspose.email/exchangetask) proporcionan la propiedad TimeZoneId para establecer información de zona horaria al crear una tarea. El siguiente fragmento de código te muestra cómo especificar la Zona Horaria.
 
 ~~~Java
-client.setTimezoneId("Central Europe Standard Time");
+client.setTimezoneId("Hora Estándar de Europa Central");
 ~~~
-### **Tarea de actualización**
-Los siguientes fragmentos de código muestran cómo actualizar una tarea en un servidor de Exchange.
-
-
+### **Actualizar Tarea**
+Los siguientes fragmentos de código muestran cómo actualizar una tarea en un servidor Exchange.
 
 ~~~Java
-// Create instance of ExchangeClient class by giving credentials
+// Crear instancia de la clase ExchangeClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Get all tasks info collection from exchange
+// Obtener toda la colección de información de tareas del intercambio
 ExchangeMessageInfoCollection tasks = client.listMessages(client.getMailboxInfo().getTasksUri());
 
-// Parse all the tasks info in the list
+// Analizar toda la información de las tareas en la lista
 for (ExchangeMessageInfo info : (Iterable<ExchangeMessageInfo>) tasks) {
-    // Fetch task from exchange using current task info
+    // Obtener tarea del intercambio utilizando la información actual de la tarea
     ExchangeTask task = client.fetchTask(info.getUniqueUri());
 
-    // Update the task status to NotStarted
+    // Actualizar el estado de la tarea a No Comenzada
     task.setStatus(ExchangeTaskStatus.NotStarted);
 
-    // Set the task due date
+    // Establecer la fecha de vencimiento de la tarea
     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
     task.setDueDate(sdf.parse("26/02/2013 00:00:00"));
 
-    // Set task priority
+    // Establecer la prioridad de la tarea
     task.setPriority(MailPriority.Low.getValue());
 
-    // Update task on exchange
+    // Actualizar tarea en el intercambio
     client.updateTask(task);
 }
 ~~~
-### **Eliminar tarea**
-En el siguiente fragmento de código se muestra cómo eliminar una tarea en un servidor de Exchange.
-
-
+### **Eliminar Tarea**
+El siguiente fragmento de código te muestra cómo eliminar una tarea en un servidor Exchange.
 
 ~~~Java
-// Create instance of ExchangeClient class by giving credentials
+// Crear instancia de la clase ExchangeClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Get all tasks info collection from exchange
+// Obtener toda la colección de información de tareas del intercambio
 ExchangeMessageInfoCollection tasks = client.listMessages(client.getMailboxInfo().getTasksUri());
 
-// Parse all the tasks info in the list
+// Analizar toda la información de las tareas en la lista
 for (ExchangeMessageInfo info : (Iterable<ExchangeMessageInfo>) tasks) {
-    // Fetch task from exchange using current task info
+    // Obtener tarea del intercambio utilizando la información actual de la tarea
     ExchangeTask task = client.fetchTask(info.getUniqueUri());
 
-    // Check if the current task fulfills the search criteria
+    // Verificar si la tarea actual cumple con los criterios de búsqueda
     if (task.getSubject().equals("test")) {
-        // Delete task from exchange
+        // Eliminar tarea del intercambio
         client.deleteItem(task.getUniqueUri(), DeletionOptions.getDeletePermanently());
     }
 }
 ~~~
-### **Envío de solicitud de tarea**
-El servicio Aspose.Email Exchange ofrece la capacidad de enviar solicitudes de tareas similares a las de Outlook. El siguiente fragmento de código muestra cómo cargar un mensaje de solicitud de tarea desde el disco y enviarlo mediante el [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
-
-
+### **Enviando Solicitud de Tarea**
+El servicio Exchange de Aspose.Email proporciona la capacidad de enviar solicitudes de tarea similar a Outlook. El siguiente fragmento de código te muestra cómo cargar un mensaje de solicitud de tarea desde el disco y enviarlo usando el [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient).
 
 ~~~Java
-// Create instance of ExchangeClient class by giving credentials
+// Crear instancia de la clase ExchangeClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
 MsgLoadOptions options = new MsgLoadOptions();
 options.setPreserveTnefAttachments(true);
 
-// load task from .msg file
+// cargar tarea desde archivo .msg
 MailMessage eml = MailMessage.load(dataDir + "task.msg", options);
 eml.setFrom(MailAddress.to_MailAddress("firstname.lastname@domain.com"));
 eml.getTo().clear();
 eml.getTo().addMailAddress(new MailAddress("firstname.lastname@domain.com"));
 client.send(eml);
 ~~~
-### **Guardar la tarea en un disco**
-Aspose.Email también permite guardar las tareas de Exchange en un disco en formato Outlook MSG. El siguiente fragmento de código muestra cómo guardar una tarea en un disco.
-
-
+### **Guardar Tarea en Disco**
+Aspose.Email también permite guardar Tareas de Exchange en disco en formato MSG de Outlook. El siguiente fragmento de código te muestra cómo guardar una tarea en el disco.
 
 ~~~Java
 ExchangeTask task = new ExchangeTask();
@@ -130,19 +118,17 @@ cal.add(Calendar.DATE, 3);
 task.setDueDate(cal.getTime());
 task.save(dstEmail);
 ~~~
-### **Listado de tareas de Exchange Server**
-[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) proporciona la [listTasks](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listTasks\(\)) método que se puede usar para obtener tareas de un servicio web de Exchange. Tiene varias sobrecargas que se pueden utilizar para recuperar la lista de tareas de una carpeta específica o mediante algunos criterios de búsqueda. El siguiente ejemplo de código muestra cómo obtener todas las tareas o algunas de ellas de la carpeta Tareas.
-
-
+### **Listar Tareas desde el Servidor Exchange**
+[IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) proporciona el método [listTasks](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listTasks\(\)) que se puede utilizar para obtener tareas de un Servicio Web de Exchange. Tiene varias sobrecargas que se pueden usar para recuperar la lista de tareas de una carpeta específica o utilizando ciertos criterios de búsqueda. El siguiente ejemplo de código ilustra cómo obtener todas o tareas específicas de la carpeta de Tareas.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient(mailboxUri, credentials);
 
-// Listing Tasks from Server
-client.setTimezoneId("Central Europe Standard Time");
+// Listando Tareas desde el Servidor
+client.setTimezoneId("Hora Estándar de Europa Central");
 TaskCollection taskCollection = client.listTasks(client.getMailboxInfo().getTasksUri());
 
-// print retrieved tasks' details
+// imprimir detalles de las tareas recuperadas
 int iTasksCount = taskCollection.size();
 for (int i = 0; i < iTasksCount; i++) {
     ExchangeTask task = (ExchangeTask) taskCollection.get_Item(i);
@@ -151,7 +137,7 @@ for (int i = 0; i < iTasksCount; i++) {
     System.out.println(task.getDueDate());
 }
 
-// Listing Tasks from server based on Query - Completed and In-Progress
+// Listando Tareas desde el servidor basadas en Consulta - Completadas y En Progreso
 Integer[] selectedStatuses = new Integer[] { ExchangeTaskStatus.Completed, ExchangeTaskStatus.InProgress };
 ExchangeQueryBuilder queryBuilder = new ExchangeQueryBuilder();
 queryBuilder.getTaskStatus().in(Arrays.asList(selectedStatuses));
@@ -159,7 +145,7 @@ MailQuery query = queryBuilder.getQuery();
 
 taskCollection = client.listTasks(client.getMailboxInfo().getTasksUri(), query);
 
-// print retrieved tasks' details
+// imprimir detalles de las tareas recuperadas
 iTasksCount = taskCollection.size();
 for (int i = 0; i < iTasksCount; i++) {
     ExchangeTask task = (ExchangeTask) taskCollection.get_Item(i);
@@ -168,24 +154,23 @@ for (int i = 0; i < iTasksCount; i++) {
     System.out.println(task.getDueDate());
 }
 ~~~
-### **Filtrado de tareas desde Exchange Server**
-Aspose.Email ofrece la capacidad de recuperar tareas específicas del servidor en lugar de recuperar todas las tareas del servidor. La API se puede usar para recuperar las tareas según el estado de la tarea, como Completada, Aplazada, En curso, No iniciada o Esperando a otras. El [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder) la clase se puede usar para especificar el criterio deseado utilizando la propiedad Status. También permite especificar varias condiciones para recuperar las tareas deseadas de Exchange Server. Esto se demuestra en el siguiente ejemplo de código.
-
+### **Filtrando Tareas desde el Servidor Exchange**
+Aspose.Email proporciona la capacidad de recuperar tareas específicas del servidor en lugar de recuperar todas las tareas del servidor. La API se puede utilizar para recuperar tareas por estado de la tarea, como Completada, Diferida, En Progreso, No Comenzada o Esperando a otros. La clase [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder) se puede utilizar para especificar el criterio deseado utilizando la propiedad Estado. También permite especificar múltiples condiciones para recuperar las tareas deseadas del Servidor Exchange. Esto se demuestra en el siguiente ejemplo de código.
 
 ~~~Java
-// Create instance of ExchangeClient class by giving credentials
+// Crear instancia de la clase ExchangeClient dando credenciales
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
-// Set timezone for tasks
-client.setTimezoneId("Central Europe Standard Time");
+// Establecer zona horaria para las tareas
+client.setTimezoneId("Hora Estándar de Europa Central");
 
-// We use these status values for specifying in queries
+// Usamos estos valores de estado para especificar en las consultas
 Integer[] values = new Integer[] { ExchangeTaskStatus.Completed, ExchangeTaskStatus.Deferred, ExchangeTaskStatus.InProgress, ExchangeTaskStatus.NotStarted,
         ExchangeTaskStatus.WaitingOnOthers };
 
 messageInfoCol = client.listMessages(client.getMailboxInfo().getTasksUri());
 
-// Now retrieve the tasks with specific statuses
+// Ahora recuperar las tareas con estados específicos
 for (int status : values) {
     queryBuilder = new ExchangeQueryBuilder();
     queryBuilder.getTaskStatus().equals(status);
@@ -194,7 +179,7 @@ for (int status : values) {
     fetchedTask = client.fetchTask(messageInfoCol.get_Item(0).getUniqueUri());
 }
 
-// retrieve all other than specified
+// recuperar todas las demás que no sean las especificadas
 for (int status : values) {
     queryBuilder = new ExchangeQueryBuilder();
     queryBuilder.getTaskStatus().notEquals((int) status);
@@ -202,7 +187,7 @@ for (int status : values) {
     messageInfoCol = client.listMessages(client.getMailboxInfo().getTasksUri(), query);
 }
 
-// specifying multiple criterion
+// especificando múltiples criterios
 Integer[] selectedStatuses = new Integer[] { ExchangeTaskStatus.Completed, ExchangeTaskStatus.InProgress };
 
 queryBuilder = new ExchangeQueryBuilder();
@@ -210,7 +195,7 @@ queryBuilder.getTaskStatus().in(Arrays.asList(selectedStatuses));
 query = queryBuilder.getQuery();
 messageInfoCol = client.listMessages(client.getMailboxInfo().getTasksUri(), query);
 
-// list all those which are not in our specified statuses
+// listar todos aquellos que no están en nuestros estados especificados
 queryBuilder = new ExchangeQueryBuilder();
 queryBuilder.getTaskStatus().notIn(Arrays.asList(selectedStatuses));
 query = queryBuilder.getQuery();

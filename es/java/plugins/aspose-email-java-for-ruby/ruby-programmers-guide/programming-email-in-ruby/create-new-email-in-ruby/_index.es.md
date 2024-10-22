@@ -1,12 +1,12 @@
 ---
-title: "Crear un nuevo correo electrónico en Ruby"
+title: "Crear nuevo correo electrónico en Ruby"
 url: /es/java/create-new-email-in-ruby/
 weight: 20
 type: docs
 ---
 
 ## **Aspose.Email - Crear nuevo correo electrónico**
-Para crear un nuevo correo electrónico usando **Aspose.Email Java para Ruby**, simplemente invoca **CreateNewEmail** módulo. Aquí puedes ver un ejemplo de código.
+Para crear un nuevo correo electrónico utilizando **Aspose.Email Java para Ruby**, simplemente invoca el módulo **CreateNewEmail**. Aquí puedes ver un código de ejemplo.
 
 **Código Ruby**
 
@@ -16,39 +16,39 @@ Para crear un nuevo correo electrónico usando **Aspose.Email Java para Ruby**, 
 
 
 
-\# Create a new instance of MailMessage class
+\# Crear una nueva instancia de la clase MailMessage
 
 message = Rjb::import('com.aspose.email.MailMessage').new
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
 mail_address = Rjb::import('com.aspose.email.MailAddress')
 
-\# Set Html body
+\# Establecer cuerpo en Html
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-        "<font color=blue>This line is in blue color</font>")
+        "<font color=blue>Esta línea está en color azul</font>")
 
-\# Set sender information
+\# Establecer información del remitente
 
-message.setFrom(mail_address.new("from@domain.com", "Sender Name", false))
+message.setFrom(mail_address.new("from@domain.com", "Nombre del Remitente", false))
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-message.getTo().add(mail_address.new("to1@domain.com", "Recipient 1", false))
+message.getTo().add(mail_address.new("to1@domain.com", "Destinatario 1", false))
 
-message.getTo().add(mail_address.new("to2@domain.com", "Recipient 2", false))
+message.getTo().add(mail_address.new("to2@domain.com", "Destinatario 2", false))
 
-\# Add CC recipients
+\# Agregar destinatarios CC
 
-message.getCC().add(mail_address.new("cc1@domain.com", "Recipient 3", false))
+message.getCC().add(mail_address.new("cc1@domain.com", "Destinatario 3", false))
 
-message.getCC().add(mail_address.new("cc2@domain.com", "Recipient 4", false))
+message.getCC().add(mail_address.new("cc2@domain.com", "Destinatario 4", false))
 
-\# Save message in EML and MSG formats
+\# Guardar el mensaje en formatos EML y MSG
 
 mail_message_save_type = Rjb::import('com.aspose.email.MailMessageSaveType')
 
@@ -56,12 +56,12 @@ message.save(data_dir + "Message.eml", mail_message_save_type.getEmlFormat())
 
 message.save(data_dir + "Message.msg", mail_message_save_type.getOutlookMessageFormat())
 
-\# Display Status
+\# Mostrar estado
 
-puts "Created email messages Successfully."
+puts "Correos electrónicos creados con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Crear nuevo correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar código en ejecución**
+Descarga **Crear nuevo correo electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_Ruby/lib/asposeemailjava/Email/createnewemail.rb)

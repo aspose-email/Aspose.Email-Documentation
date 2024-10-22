@@ -1,25 +1,22 @@
 ---
-title: "Trabajar con elementos del calendario en Exchange Server"
+title: "Trabajando con Elementos del Calendario en Exchange Server"
 url: /es/java/working-with-calendar-items-on-exchange-server/
 weight: 50
 type: docs
 ---
 
+## **Enviando Solicitudes de Reunión**
+Este artículo muestra cómo enviar una solicitud de reunión a múltiples destinatarios utilizando Exchange Web Services y Aspose.Email.
 
-## **Envío de convocatorias de reunión**
-En este artículo se muestra cómo enviar una convocatoria de reunión a varios destinatarios mediante Exchange Web Services y Aspose.Email.
+1. Cree una solicitud de reunión usando la clase Appointment y establezca la ubicación, hora y asistentes.
+1. Cree una instancia de la clase MailMessage y establezca la cita utilizando el método MailMessage.addAlternateView().
+1. Conéctese al Exchange Server y envíe la solicitud de reunión utilizando el método send(MailMessage).
 
-1. Cree una convocatoria de reunión con la clase Appointment y establezca la ubicación, la hora y los asistentes.
-1. Crea una instancia de la clase MailMessage y establece la cita con el método MailMessage.addAlternateView ().
-1. Conéctese al servidor Exchange y envíe la convocatoria de reunión mediante el método send (MailMessage).
-
-The [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) La clase se puede usar para conectarse a un servidor Exchange con soporte para Exchange Web Services (EWS). Para que esto funcione, el servidor debe ser Exchange Server 2007 o posterior. El siguiente fragmento de código muestra cómo usar EWS para enviar las convocatorias de reunión.
-
-
+La clase [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/ewsclient) se puede usar para conectarse a servidores Exchange con soporte de Exchange Web Services (EWS). Para que esto funcione, el servidor debe ser Exchange Server 2007 o posterior. El siguiente fragmento de código muestra cómo usar EWS para enviar las solicitudes de reunión.
 
 ~~~Java
 try {
-    // Create instance of IEWSClient class by giving credentials
+    // Crear instancia de la clase IEWSClient proporcionando credenciales
     IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 
     Calendar c = Calendar.getInstance();
@@ -28,7 +25,7 @@ try {
     c.add(Calendar.MINUTE, 90);
     Date endTime = c.getTime();
 
-    // Create the meeting request
+    // Crear la solicitud de reunión
     Appointment app = new Appointment("meeting request", startTime, endTime, MailAddress.to_MailAddress("administrator@test.com"),
             MailAddressCollection.to_MailAddressCollection("bob@test.com"));
     app.setSummary("meeting request summary");
@@ -39,7 +36,7 @@ try {
     RecurrencePattern pattern = new DailyRecurrencePattern(c.getTime());
     app.setRecurrence(pattern);
 
-    // Create the message and set the meeting request
+    // Crear el mensaje y establecer la solicitud de reunión
     MailMessage msg = new MailMessage();
     msg.setFrom(MailAddress.to_MailAddress("administrator@test.com"));
     msg.setTo(MailAddressCollection.to_MailAddressCollection("bob@test.com"));
@@ -48,21 +45,19 @@ try {
     msg.setSubject("meeting request");
     msg.addAlternateView(app.requestApointment(0));
 
-    // send the appointment
+    // enviar la cita
     client.send(msg);
     System.out.println("Appointment request sent");
 } catch (java.lang.RuntimeException ex) {
     System.out.println(ex.getMessage());
 }
 ~~~
-## **Cómo trabajar con elementos del calendario mediante EWS**
-Aspose.Email ofrece la capacidad de agregar, actualizar y cancelar citas mediante el cliente Exchange Web Service (EWS). Los clientes de IEWS [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)), y [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) los métodos permiten manipular los elementos del calendario mediante EWS. Este artículo proporciona un ejemplo de código detallado sobre cómo trabajar con elementos del calendario. En el siguiente ejemplo de código se muestra cómo:
+## **Trabajando con Elementos del Calendario usando EWS**
+Aspose.Email proporciona la capacidad de agregar, actualizar y cancelar citas utilizando el cliente de Exchange Web Service (EWS). Los métodos [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)), y [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) permiten manipular elementos del calendario usando EWS. Este artículo proporciona un ejemplo de código detallado sobre cómo trabajar con elementos del calendario. El siguiente ejemplo de código muestra cómo:
 
-1. Crea una cita.
-1. Actualiza una cita.
-1. Eliminar o cancelar una cita.
-
-
+1. Crear una cita.
+1. Actualizar una cita.
+1. Eliminar/C cancelar una cita.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "your.username", "your.Password");
@@ -99,9 +94,9 @@ Appointment[] appointments2 = client.listAppointments();
 System.out.println("Total Appointments: " + appointments2.length);
 ~~~
 
-### **Devolver los elementos del calendario recurrentes dentro del rango de fechas especificado**
+### **Devolviendo los Elementos del Calendario Recurrentes Dentro del Rango de Fechas Especificado**
 
-Aspose.Email EWSClient admite la devolución de los elementos periódicos del calendario dentro del rango especificado por StartDate y EndDate. El [AppointmentQueryBuilder.setCalendarView (fecha de inicio, fecha de finalización, int maxEntriesReturned)](https://reference.aspose.com/email/java/com.aspose.email/appointmentquerybuilder/#setCalendarView-java.util.Date-java.util.Date-int-) método, si se especifica CalendarView, devuelve una lista de elementos de calendario individuales y ocurrencias de elementos de calendario recurrentes dentro del rango especificado por StartDate y EndDate. El *maxEntriesReturned* el parámetro describe el número máximo de resultados. (Valor <= 0 para todos los resultados).
+Aspose.Email EWSClient admite la devolución de elementos del calendario recurrentes dentro del rango especificado por StartDate y EndDate. El método [AppointmentQueryBuilder.setCalendarView(Date startDate, Date endDate, int maxEntriesReturned)](https://reference.aspose.com/email/java/com.aspose.email/appointmentquerybuilder/#setCalendarView-java.util.Date-java.util.Date-int-) devuelve una lista de elementos de calendario individuales y ocurrencias de elementos de calendario recurrentes dentro del rango especificado por StartDate y EndDate si se especifica el CalendarView. El parámetro *maxEntriesReturned* describe el número máximo de resultados. (Valor <= 0 para todos los resultados).
 
 ```java
 ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
@@ -109,8 +104,8 @@ builder.getAppointment().setCalendarView(startDate, endDate, -1);
 
 Appointment[] appointments = client.listAppointments(builder.getQuery());
 ```
-## **Listar citas con soporte de paginación**
-El método ListAppointments expuesto por [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) La API recupera la lista completa de citas del servidor Exchange. Esto puede llevar tiempo si hay un gran número de citas en el servidor de Exchange. La API proporciona métodos sobrecargados de [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listAppointments\(\)) método que brinda soporte de paginación a la operación. También se puede usar en diferentes combinaciones con la función de consulta. Los siguientes métodos sobrecargados están disponibles para enumerar las citas de Exchange Server con soporte de paginación.
+## **Listando Citas con Soporte de Paginación**
+El método ListAppointments expuesto por la API [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) recupera la lista completa de citas del servidor Exchange. Esto puede tardar tiempo si hay un gran número de citas en el servidor Exchange. La API proporciona métodos sobrecargados de [listAppointments](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listAppointments\(\)) que dan soporte de paginación a la operación. Esto se puede usar en diferentes combinaciones con la característica de consulta también. Los siguientes métodos sobrecargados están disponibles para listar citas desde el servidor Exchange con soporte de paginación.
 
 - `AppointmentCollection IEWSClient.listAppointments(int itemsPerPage)`.
 - `AppointmentCollection IEWSClient.listAppointments(String folderUri, int itemsPerPage)`.
@@ -121,9 +116,7 @@ El método ListAppointments expuesto por [IEWSClient](https://apireference.aspos
 - `AppointmentCollection IEWSClient.listAppointments(MailQuery query, int itemsPerPage, int itemOffset)`.
 - `AppointmentCollection IEWSClient.listAppointments(String folderUri, MailQuery query, int itemsPerPage, int itemOffset)`.
 
-En el siguiente fragmento de código, se muestra cómo enumerar las citas con soporte de paginación.
-
-
+El siguiente fragmento de código muestra cómo listar citas con soporte de paginación.
 
 ~~~Java
         IEWSClient client = EWSClient.getEWSClient("exchange.domain.com", "username", "password");
@@ -156,7 +149,7 @@ En el siguiente fragmento de código, se muestra cómo enumerar las citas con so
                 }
                 AppointmentCollection totalAppointmentCol = AppointmentCollection.to_AppointmentCollection(client.listAppointments());
 
-                ///// LISTING APPOINTMENTS WITH PAGING SUPPORT ///////
+                ///// LISTANDO CITAS CON SOPORTE DE PAGINACIÓN ///////
                 int itemsPerPage = 2;
                 List<AppointmentPageInfo> pages = new ArrayList<AppointmentPageInfo>();
                 AppointmentPageInfo pagedAppointmentCol = client.listAppointmentsByPage(itemsPerPage);
@@ -167,7 +160,7 @@ En el siguiente fragmento de código, se muestra cómo enumerar las citas con so
                     pages.add(pagedAppointmentCol);
                 }
                 int retrievedItems = 0;
-                // foreach to while statements conversion
+                // conversión de foreach a while
                 for (AppointmentPageInfo folderCol : pages) {
                     retrievedItems += folderCol.getItems().size();
                 }
@@ -176,27 +169,25 @@ En el siguiente fragmento de código, se muestra cómo enumerar las citas con so
         } finally {
             client.dispose();
         }
-~~~
-## **Agregar un evento a la carpeta de calendario secundaria en Exchange Server**
-La API Aspose.Email le permite crear una carpeta de calendario secundaria en Exchange Server mediante el [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). A continuación, se pueden añadir, actualizar o cancelar citas desde el calendario secundario mediante el [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)) and [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)) métodos. Los siguientes métodos y propiedades de la API se utilizan en los ejemplos de código que aparecen a continuación para mostrar la funcionalidad de esta función. Tenga en cuenta que esta función es compatible con Aspose.Email para Java 6.5.0 y versiones posteriores.
+~~~ 
+## **Agregando Evento a la Carpeta del Calendario Secundario en Exchange Server**
+La API de Aspose.Email le permite crear una carpeta de calendario secundaria en el servidor Exchange utilizando el [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient). Las citas se pueden agregar, actualizar o cancelar desde el calendario secundario utilizando los métodos [createAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#createAppointment\(com.aspose.email.Appointment\)), [updateAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#updateAppointment\(com.aspose.email.Appointment\)) y [cancelAppointment](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#cancelAppointment\(com.aspose.email.Appointment\)). Los siguientes métodos y propiedades de la API se utilizan en los ejemplos de código a continuación para mostrar la funcionalidad de esta característica. Tenga en cuenta que esta característica es compatible con Aspose.Email para Java 6.5.0 en adelante.
 
-- Method `IEWSClient.cancelAppointment(Appointment, String)`.
-- Method `IEWSClient.cancelAppointment(String, String)`.
-- Method `IEWSClient.createAppointment(Appointment, String)`.
-- Method `IEWSClient.createFolder(String, String, ExchangeFolderPermissionCollection, String)`.
-- Method `IEWSClient.fetchAppointment(String, String)`.
-- Method `IEWSClient.updateAppointment(Appointment, String)`.
-- Property `IEWSClient.CurrentCalendarFolderUri`.
+- Método `IEWSClient.cancelAppointment(Appointment, String)`.
+- Método `IEWSClient.cancelAppointment(String, String)`.
+- Método `IEWSClient.createAppointment(Appointment, String)`.
+- Método `IEWSClient.createFolder(String, String, ExchangeFolderPermissionCollection, String)`.
+- Método `IEWSClient.fetchAppointment(String, String)`.
+- Método `IEWSClient.updateAppointment(Appointment, String)`.
+- Propiedad `IEWSClient.CurrentCalendarFolderUri`.
 
-En el siguiente fragmento de código se muestra cómo agregar un evento a la carpeta de calendario secundaria del servidor de Exchange.
-
-
+El siguiente fragmento de código muestra cómo agregar un evento a la carpeta de calendario secundaria en el servidor de intercambio.
 
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "your.username", "your.Password");
 try {
     try {
-        // Create an appointmenta that will be added to secondary calendar folder
+        // Crear una cita que se agregará a la carpeta del calendario secundaria
 
         Calendar c = Calendar.getInstance();
         c.set(Calendar.MINUTE, 0);
@@ -215,14 +206,14 @@ try {
         appointment.setSummary("EMAILNET-35198 - " + UUID.randomUUID().toString());
         appointment.setDescription("EMAILNET-35198 Ability to add event to Secondary Calendar of Office 365");
 
-        // Verify that the new folder has been created
+        // Verificar que la nueva carpeta se ha creado
         ExchangeFolderInfoCollection calendarSubFolders = client.listSubFolders(client.getMailboxInfo().getCalendarUri());
 
         String getfolderName;
         String setFolderName = "New Calendar";
         boolean alreadyExits = false;
 
-        // Verify that the new folder has been created already exits or not
+        // Verificar que la nueva carpeta ya existe
 
         for (int i = 0; i < calendarSubFolders.size(); i++) {
             getfolderName = calendarSubFolders.get_Item(i).getDisplayName();
@@ -233,46 +224,46 @@ try {
         }
 
         if (alreadyExits) {
-            System.out.println("Folder Already Exists");
+            System.out.println("La carpeta ya existe");
         } else {
-            // Create new calendar folder
+            // Crear nueva carpeta de calendario
             client.createFolder(client.getMailboxInfo().getCalendarUri(), setFolderName, null, "IPF.Appointment");
 
             System.out.println(calendarSubFolders.size());
 
-            // Get the created folder URI
+            // Obtener la URI de la carpeta creada
             String newCalendarFolderUri = calendarSubFolders.get_Item(0).getUri();
 
-            // appointment api with calendar folder uri
-            // Create
+            // API de cita con la URI de la carpeta del calendario
+            // Crear
             client.createAppointment(appointment, newCalendarFolderUri);
             appointment.setLocation("Room 122");
-            // update
+            // actualizar
             client.updateAppointment(appointment, newCalendarFolderUri);
-            // list
+            // listar
             listAppointments = client.listAppointments(newCalendarFolderUri);
 
-            // list default calendar folder
+            // listar carpeta de calendario predeterminada
             listAppointments = client.listAppointments(client.getMailboxInfo().getCalendarUri());
 
-            // Cancel
+            // Cancelar
             client.cancelAppointment(appointment, newCalendarFolderUri);
             listAppointments = client.listAppointments(newCalendarFolderUri);
 
-            // appointment api with context current calendar folder uri
+            // API de cita con el contexto de la URI actual de la carpeta del calendario
             client.setCurrentCalendarFolderUri(newCalendarFolderUri);
-            // Create
+            // Crear
             client.createAppointment(appointment);
             appointment.setLocation("Room 122");
-            // update
+            // actualizar
             client.updateAppointment(appointment);
-            // list
+            // listar
             listAppointments = client.listAppointments();
 
-            // list default calendar folder
+            // listar carpeta de calendario predeterminada
             listAppointments = client.listAppointments(client.getMailboxInfo().getCalendarUri());
 
-            // Cancel
+            // Cancelar
             client.cancelAppointment(appointment);
             listAppointments = client.listAppointments();
 
@@ -282,21 +273,19 @@ try {
 } finally {
     client.dispose();
 }
-~~~
-## **Invitación de calendario para compartir**
-El servidor Microsoft Exchange ofrece la capacidad de compartir calendarios mediante el envío de invitaciones de calendario a otros usuarios registrados en el mismo servidor de Exchange. La API Aspose.Email ofrece la misma capacidad al permitir compartir el calendario mediante la API EWS.
-
-
+~~~ 
+## **Compartiendo Invitaciones de Calendario**
+El servidor Microsoft Exchange proporciona la capacidad de compartir calendarios enviando invitaciones de calendario a otros usuarios, registrados en el mismo servidor Exchange. La API de Aspose.Email proporciona la misma capacidad permitiendo compartir el calendario utilizando la API de EWS.
 
 ~~~Java
 final IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testUser", "pwd", "domain");
 try {
-    // delegate calendar access permission
+    // delegar permiso de acceso al calendario
     ExchangeDelegateUser delegateUser = new ExchangeDelegateUser("sharingfrom@domain.com", ExchangeDelegateFolderPermissionLevel.NotSpecified);
     delegateUser.getFolderPermissions().setCalendarFolderPermissionLevel(ExchangeDelegateFolderPermissionLevel.Reviewer);
     client.delegateAccess(delegateUser, "sharingfrom@domain.com");
 
-    // Create invitation
+    // Crear invitación
     MapiMessage mapiMessage = client.createCalendarSharingInvitationMessage("sharingfrom@domain.com");
     MailConversionOptions options = new MailConversionOptions();
     options.setConvertAsTnef(true);
@@ -305,15 +294,15 @@ try {
 } finally {
     client.dispose();
 }
-~~~
-## **Recuperación de la información de atributos extendidos de los elementos del calendario**
+~~~ 
+## **Recuperando Información de Atributos Extendidos de Elementos del Calendario**
 ~~~Java
 IEWSClient client = EWSClient.getEWSClient("https://exchange.office365.com/Exchange.asmx", "username", "password");
 
 java.util.List<String> uriList = java.util.Arrays.asList(client.listItems(client.getMailboxInfo().getCalendarUri()));
 
-// Define the Extended Attribute Property Descriptor for searching purpose
-// In this case, we have a K1 Long named property for Calendar item
+// Definir el Descriptor de Propiedad de Atributo Extendida para fines de búsqueda
+// En este caso, tenemos una propiedad larga llamada K1 para el elemento del calendario
 UUID uuid = UUID.fromString("00020329-0000-0000-C000-000000000046");
 PropertyDescriptor propertyDescriptor = new PidNamePropertyDescriptor("K1", PropertyDataType.Integer32, uuid);
 

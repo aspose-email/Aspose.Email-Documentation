@@ -5,55 +5,55 @@ weight: 10
 type: docs
 ---
 
-## **Installing**
-**Aspose.Email Java (Maven) para Eclipse** el complemento se puede instalar fácilmente desde Disponible **Plugin** pestaña en el cuadro de diálogo del complemento.
+## **Instalación**
+El plugin **Aspose.Email Java (Maven) para Eclipse** se puede instalar fácilmente desde la pestaña **Plugin** disponible en el diálogo de plugins.
 
-- Para abrirlo, selecciona **Plugins** de la **Tools** menú en Eclipse.
+- Para abrirlo, selecciona **Plugins** en el menú **Tools** de Eclipse.
 
 ![todo:image_alt_text](https://i.imgur.com/Nqb0Qul.png)
 
-- Esto añade el **Proyecto Aspose.Email Maven** en el asistente para nuevos proyectos y **Ejemplo de código de Aspose.Email** en el asistente de nuevos archivos de IDE de Eclipse.
-## **Using**
-### **Proyecto Maven de Aspose.Email (asistente)**
-Para crear **Proyecto Maven** por el asistente para usar [API Aspose.Email para Java](http://www.aspose.com/java/email-component.aspx):
+- Esto agrega el **Aspose.Email Maven Project** en el asistente de Nuevo Proyecto y **Aspose.Email Code Example** en el asistente de Nuevo Archivo del IDE de Eclipse.
+## **Uso**
+### **Aspose.Email Maven Project (asistente)**
+Para crear un **Maven Project** mediante el asistente para usar [Aspose.Email for Java API](http://www.aspose.com/java/email-component.aspx):
 
-1. Select **Nuevo proyecto**.
-1. Select **Proyecto Aspose.Email Maven** en el **Maven** category.
-1. Click **Next**.
+1. Selecciona **Nuevo Proyecto**.
+1. Selecciona **Aspose.Email Maven Project** en la categoría **Maven**.
+1. Haz clic en **Siguiente**.
 
 ![todo:image_alt_text](https://i.imgur.com/BRKq0Oc.png)
 
-1. Provide **Nombre del proyecto, ubicación, ID de grupo, ID de artefacto** and **Version** para tu proyecto Maven y haz clic **Finish.**
+1. Proporciona **Nombre del Proyecto, Ubicación, GroupId, ArtifactId** y **Versión** para tu proyecto Maven y haz clic en **Finalizar.**
 
 ![todo:image_alt_text](https://i.imgur.com/p4Ko9VB.png)
 
-1. Esto recuperará el [Aspose.Email para Java](http://www.aspose.com/java/email-component.aspx) latest [Dependencia de Maven](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo) referencia de [Repositorio Aspose Cloud Maven](https://repository.aspose.com/webapp/#/) y configúralo en **pom.xml**. Si ha optado por **Descargue también ejemplos de código,** descarga del **Ejemplos de código** también empezará desde [Repositorio de ejemplos de API de Aspose.Email para Java. ](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples)
-1. Following **Maven** El proyecto se creará en tu **IDE de Eclipse** al finalizar el asistente:
+1. Esto recuperará la última referencia de [Maven Dependency](https://repository.aspose.com/webapp/#/artifacts/browse/tree/General/repo) de [Aspose.Email for Java](http://www.aspose.com/java/email-component.aspx) del [Aspose Cloud Maven Repository](https://repository.aspose.com/webapp/#/) y la configurará en **pom.xml**. Si has optado por **También Descargar Ejemplos de Código,** la descarga de los **Ejemplos de Código** también comenzará desde el [Aspose.Email for Java API Examples Repository.](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples)
+1. El siguiente **Maven Project** se creará en tu **Eclipse IDE** al completar el asistente:
 
 ![todo:image_alt_text](/download/thumbnails/11665891/2135011380)
 
-1. El creado **Proyecto Maven** está configurado para usar **API Aspose.Email para Java** y listo para ser mejorado según los requisitos de su proyecto. Si ha optado por descargar [Ejemplos de código](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples), puedes usar **Ejemplo de código de Aspose.Email (wizard)** para la importación necesaria **Ejemplos de código** of [Aspose.Email para Java](http://www.aspose.com/java/email-component.aspx) API en tu proyecto.
-### **Ejemplo de código de Aspose.Email (wizard)**
-**Asistente de ejemplo de código de Aspose.Email** le permite probar muchas muestras proporcionadas para [Aspose.Email para Java](http://www.aspose.com/java/email-component.aspx) API.
+1. El **Maven Project** creado está configurado para usar **Aspose.Email for Java API** y listo para ser mejorado según los requisitos de tu proyecto. Si has optado por descargar [Ejemplos de Código](https://github.com/aspose-email/Aspose.Email-for-Java/tree/master/Examples), puedes usar **Aspose.Email Code Example (asistente)** para importar los **Ejemplos de Código** necesarios de [Aspose.Email for Java](http://www.aspose.com/java/email-component.aspx) API en tu proyecto.
+### **Aspose.Email Code Example (asistente)**
+El **asistente de Ejemplo de Código de Aspose.Email** te permite probar muchos ejemplos proporcionados para [Aspose.Email for Java](http://www.aspose.com/java/email-component.aspx) API.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Para poder usar **Asistente de ejemplo de código de Aspose.Email** cómodamente: se recomienda seleccionar siempre **Descargue también ejemplos de código** mientras se crea **Proyecto Maven** on **Proyecto Aspose.Email Maven** **wizard**,
+Para poder usar cómodamente el **asistente de Ejemplo de Código de Aspose.Email**: se recomienda siempre seleccionar **También Descargar Ejemplos de Código** al crear el **Maven Project** en el **asistente de Aspose.Email Maven Project**,
 
-{{% /alert %}}
+{{% /alert %}} 
 
 Para usar ejemplos, simplemente:
 
-1. Click **Archivo nuevo** in **Eclipse**.
-1. Elige tu proyecto y, a continuación, selecciona **Ejemplo de código de Aspose.Email** en el **Java** category.
-1. Click **Next**.
+1. Haz clic en **Nuevo Archivo** en **Eclipse**.
+1. Elige tu proyecto y luego selecciona **Aspose.Email Code Example** en la categoría **Java**.
+1. Haz clic en **Siguiente**.
 
 ![todo:image_alt_text](https://i.imgur.com/z4fpwBb.png)
 
-1. Amplíe el árbol para seleccionar **Ejemplo de código** categoría y clic **Finish**.
+1. Expande el árbol para seleccionar la categoría **Ejemplo de Código** y haz clic en **Finalizar**.
 
 ![todo:image_alt_text](https://i.imgur.com/8MeWhSb.png)
 
-1. Esto copiará la categoría seleccionada **Ejemplos de código** Archivos Java en el proyecto en **com.aspose.email.examples** paquete. Además, todos los recursos necesarios para los ejemplos de código se copiarán en **src/main/resources** folder
-1. Revisa el código de ejemplo, compílalo y ejecútalo.
-1. Ahora puede probar otros ejemplos y empezar a crear su propia aplicación usando [API Aspose.Email para Java](http://www.aspose.com/java/email-component.aspx)
+1. Esto copiará los archivos Java de **Ejemplos de Código** de la categoría seleccionada en el proyecto bajo el paquete **com.aspose.email.examples**. También se copiarán los recursos necesarios requeridos por los Ejemplos de Código en la carpeta **src/main/resources**
+1. Revisa el código del ejemplo, compila y ejecuta.
+1. Ahora puedes probar otros ejemplos y comenzar a construir tu propia aplicación usando [Aspose.Email for Java API](http://www.aspose.com/java/email-component.aspx)

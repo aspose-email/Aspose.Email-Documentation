@@ -1,10 +1,8 @@
 ---
-title: "Guía para desarrolladores: biblioteca de analizadores de correo electrónico de C++"
-description: "La sección de la guía para desarrolladores explica cómo usar la biblioteca analizadora de correo electrónico de C++ para trabajar con mensajes Mime, elementos de Outlook y el cliente Exchange EWS."
-url: /es/cpp/developer-guide/
+title: "Guía del Desarrollador - Biblioteca de Parser de Email en C++"
+description: "La sección de la guía del desarrollador explica cómo usar la Biblioteca de Parser de Email en C++ para trabajar con Mensajes Mime, elementos de Outlook, Cliente EWS de Exchange."
+url: /es/cpp/guia-del-desarrollador/
 weight: 20
 type: docs
-linktitle: "Guía para desarrolladores"
+linktitle: "Guía del Desarrollador"
 ---
-
-

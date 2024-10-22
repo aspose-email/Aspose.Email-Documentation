@@ -1,12 +1,12 @@
 ---
-title: "Administrar archivos adjuntos en mensajes de correo electrónico en Python"
+title: "Gestionar Archivos Adjuntos en Mensajes de Correo Electrónico en Python"
 url: /es/java/manage-attachments-in-email-message-in-python/
 weight: 60
 type: docs
 ---
 
-## **Aspose.Email - Administrar los archivos adjuntos en el correo electrónico**
-Para administrar los archivos adjuntos en el correo electrónico mediante **Aspose.Email Java para Python**, Usa el siguiente código.
+## **Aspose.Email - Gestionar Archivos Adjuntos en Correo Electrónico**
+Para gestionar archivos adjuntos en correo electrónico utilizando **Aspose.Email Java para Python**, usa el siguiente código.
 
 **Código Python**
 
@@ -14,53 +14,53 @@ Para administrar los archivos adjuntos en el correo electrónico mediante **Aspo
 
 
 
-\# Create a instance of MailMessage class
+\# Crear una instancia de la clase MailMessage
 
 message = self.MailMessage()
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-message.setSubject("New message created by Aspose.Email for Java")
+message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
 mail_address = self.MailAddress
 
-\# Set Html body
+\# Establecer el cuerpo HTML
 
-message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-    "<font color=blue>This line is in blue color</font>")
+    "<font color=blue>Esta línea está en color azul</font>")
 
-\# Set sender information
+\# Establecer la información del remitente
 
-message.setFrom(self.MailAddress("from@domain.com", "Sender Name", False))
+message.setFrom(self.MailAddress("from@domain.com", "Nombre del Remitente", False))
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Recipient 1", False))
+message.getTo().addMailAddress(self.MailAddress("to1@domain.com", "Destinatario 1", False))
 
-\# Adding attachment
+\# Agregar archivo adjunto
 
-\# Load an attachment
+\# Cargar un archivo adjunto
 
 attachment = self.Attachment(self.dataDir + "1.txt")
 
-\# Add attachment in instance of MailMessage class
+\# Añadir el archivo adjunto en la instancia de la clase MailMessage
 
 message.addAttachment(attachment)
 
-\# Save message to disc
+\# Guardar mensaje en disco
 
 messageFormat = self.MessageFormat
 
 message.save(self.dataDir + "Add-Attachment.msg", messageFormat.getMsg())
 
-\# Display Status
+\# Mostrar estado
 
-print "Added attachment successfully."
+print "Archivo adjunto añadido con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Administrar los archivos adjuntos en un mensaje de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código Ejecutable**
+Descarga **Gestionar Archivos Adjuntos en Mensajes de Correo Electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

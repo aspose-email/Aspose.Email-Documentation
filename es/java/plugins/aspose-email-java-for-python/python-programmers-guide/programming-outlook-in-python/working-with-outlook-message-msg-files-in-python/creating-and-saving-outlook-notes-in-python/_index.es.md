@@ -1,12 +1,12 @@
 ---
-title: "Crear y guardar notas de Outlook en Python"
-url: /es/java/creating-and-saving-outlook-notes-in-python/
+title: "Creando y Guardando Notas de Outlook en Python"
+url: /es/java/creando-y-guardando-notas-de-outlook-en-python/
 weight: 20
 type: docs
 ---
 
-## **Aspose.Email - Creación y almacenamiento de notas de Outlook**
-Para crear y guardar notas de Outlook usando **Aspose.Email Java para Python**, Usa el siguiente código.
+## **Aspose.Email - Creando y Guardando Notas de Outlook**
+Para crear y guardar notas de Outlook utilizando **Aspose.Email Java para Python**, use el siguiente código.
 
 **Código Python**
 
@@ -16,9 +16,9 @@ Para crear y guardar notas de Outlook usando **Aspose.Email Java para Python**, 
 
 note = self.MapiNote()
 
-note.setSubject("Blue color note")
+note.setSubject("Nota de color azul")
 
-note.setBody("This is a blue color note")
+note.setBody("Esta es una nota de color azul")
 
 noteColor = self.NoteColor
 
@@ -32,11 +32,11 @@ noteSaveFormat = self.NoteSaveFormat
 
 note.save(self.dataDir + "MapiNote.msg", noteSaveFormat.Msg)
 
-print "Created outlook note successfully."
+print "Nota de Outlook creada con éxito."
 
 ```
-## **Descargar Running Code**
-Download **Creación y almacenamiento de notas de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descargue **Creando y Guardando Notas de Outlook (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

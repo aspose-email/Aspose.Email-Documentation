@@ -1,22 +1,22 @@
 ---
-title: "Filtrar citas de Exchange Server"
+title: "Filtrar Citas del Servidor Exchange"
 url: /es/net/filter-appointments-from-exchange-server/
 weight: 130
 type: docs
 ---
 
 
-## **Filtrado de citas con EWS**
+## **Filtrando Citas con EWS**
 
-The [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) proporciona la posibilidad de filtrar las citas del servidor de Exchange mediante el [ExchangeQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder/). Las citas se pueden filtrar en función de:
+El [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) proporciona la facilidad de filtrar citas del servidor Exchange utilizando el [ExchangeQueryBuilder](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangequerybuilder/). Las citas pueden ser filtradas en base a:
 
-- Dates
-- Recurrences
- 
-### **Filtrar citas por fechas**
+- Fechas
+- Recurrencias
+  
+### **Filtrando Citas por Fechas**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterAppointmentsUsingEWS-FilterAppointmentsByDateUsingEWS.cs" >}}
 
-### **Filtrar citas por eventos recurrentes**
+### **Filtrando Citas por Eventos Recurrentes**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterAppointmentsUsingEWS-FilterAppointmentsByRecurrenceUsingEWS.cs" >}}

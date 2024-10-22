@@ -1,19 +1,19 @@
 ---
-title: "Configuración de la codificación de texto predeterminada en un mensaje de correo electrónico"
+title: "Establecer la Codificación de Texto Predeterminada en el Mensaje de Correo Electrónico"
 url: /es/java/setting-default-text-encoding-in-email-message/
 weight: 120
 type: docs
 ---
 
 
-Este artículo presenta la [MailMessage.PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) propiedad y explica cómo se usa. Con esta propiedad, puede establecer la codificación de texto predeterminada para las siguientes propiedades:
+Este artículo presenta la propiedad [MailMessage.PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) y explica cómo se utiliza. Usando esta propiedad, puedes establecer la codificación de texto predeterminada para las siguientes propiedades:
 
 - De: Nombre para mostrar
-- Para: Mostrar nombre
-- Subject
-- Body
-## **Configuración de la codificación de texto predeterminada**
-En las versiones anteriores de Aspose.Email, la codificación del texto para las propiedades de origen, destino, asunto y cuerpo se establecía por separado. Para mejorar la usabilidad, hemos añadido el [PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) propiedad que establece todo a la vez. Ahora es más fácil garantizar que todo el texto de las propiedades anteriores esté codificado correctamente en el mensaje de correo electrónico. En el siguiente fragmento de código, se muestra cómo usar una palabra en francés como nombre para mostrar en las direcciones de correo electrónico, el asunto y el cuerpo.
+- Para: Nombre para mostrar
+- Asunto
+- Cuerpo
+## **Establecer la Codificación de Texto Predeterminada**
+En versiones anteriores de Aspose.Email, la codificación de texto para las propiedades de de, para, asunto y cuerpo se establecía por separado. Para mejorar la usabilidad, añadimos la propiedad [PreferredTextEncoding](https://apireference.aspose.com/email/java/com.aspose.email/MailMessage#setPreferredTextEncoding\(java.nio.charset.Charset\)) que establece todo a la vez. Ahora es más fácil asegurar que todo el texto en las propiedades anteriores esté codificado correctamente en el mensaje de correo electrónico. El siguiente fragmento de código te muestra cómo usar una palabra francesa como nombre para mostrar en direcciones de correo electrónico, asunto y cuerpo.
 
 
 

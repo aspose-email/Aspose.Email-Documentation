@@ -5,56 +5,56 @@ weight: 230
 type: docs
 ---
 
-La siguiente es una lista de todos los cambios realizados en la API pública, como la adición, el cambio de nombre, la eliminación o la desaprobación de miembros, así como cualquier cambio no compatible con versiones anteriores realizado en Aspose.Email para Java. Si tienes dudas sobre algún cambio de la lista, comunícalo en el foro de soporte de Aspose.Email.
+A continuación se presenta una lista de los cambios realizados en la API pública, como miembros añadidos, renombrados, eliminados o en desuso, así como cualquier cambio que no sea compatible hacia atrás realizado en Aspose.Email para Java. Si tiene preocupaciones sobre algún cambio listado, por favor, hágalas en el foro de soporte de Aspose.Email.
 
-API añadidas:
-- Class `AppointmentCollection`
+APIs añadidas:
+- Clase `AppointmentCollection`
 
-- Method `AppointmentCollection.#ctor`
-- Method `AppointmentCollection.#ctor(IGenericEnumerable)`
+- Método `AppointmentCollection.#ctor`
+- Método `AppointmentCollection.#ctor(IGenericEnumerable)`
 
-- Method `ExchangeClient.moveItems(String, boolean, /**params**/ String...)`
-- Method `ExchangeClient.moveMessage(String, boolean, String)`
-- Method `ExchangeClient.moveMessage(String, String)`
-- Method `ExchangeMessageInfoCollection.#ctor(IGenericEnumerable)`
-- Method `IEWSClient.getContact(ObjectIdentifier)`
-- Method `IEWSClient.getContact(ObjectIdentifier, ExchangeListContactsOptions)`
-- Method `IEWSClient.getContact(String)`
-- Method `IEWSClient.getContact(String, ExchangeListContactsOptions)`
-- Method `IEWSClient.listAppointments(MailQuery, int)`
-- Method `IEWSClient.listAppointments(MailQuery, int, int)`
-- Method `IEWSClient.listAppointments(int)`
-- Method `IEWSClient.listAppointments(int, int)`
-- Method `IEWSClient.listAppointments(String, MailQuery, int)`
-- Method `IEWSClient.listAppointments(String, MailQuery, int, int)`
-- Method `IEWSClient.listAppointments(String, int)`
-- Method `IEWSClient.listAppointments(String, int, int)`
-- Method `IEWSClient.listMessages(String, ExchangeMessageInfoCollection, int, int, ExchangeListMessagesOptions)`
-- Method `IEWSClient.listMessages(String, int, int, ExchangeListMessagesOptions)`
+- Método `ExchangeClient.moveItems(String, boolean, /**params**/ String...)`
+- Método `ExchangeClient.moveMessage(String, boolean, String)`
+- Método `ExchangeClient.moveMessage(String, String)`
+- Método `ExchangeMessageInfoCollection.#ctor(IGenericEnumerable)`
+- Método `IEWSClient.getContact(ObjectIdentifier)`
+- Método `IEWSClient.getContact(ObjectIdentifier, ExchangeListContactsOptions)`
+- Método `IEWSClient.getContact(String)`
+- Método `IEWSClient.getContact(String, ExchangeListContactsOptions)`
+- Método `IEWSClient.listAppointments(MailQuery, int)`
+- Método `IEWSClient.listAppointments(MailQuery, int, int)`
+- Método `IEWSClient.listAppointments(int)`
+- Método `IEWSClient.listAppointments(int, int)`
+- Método `IEWSClient.listAppointments(String, MailQuery, int)`
+- Método `IEWSClient.listAppointments(String, MailQuery, int, int)`
+- Método `IEWSClient.listAppointments(String, int)`
+- Método `IEWSClient.listAppointments(String, int, int)`
+- Método `IEWSClient.listMessages(String, ExchangeMessageInfoCollection, int, int, ExchangeListMessagesOptions)`
+- Método `IEWSClient.listMessages(String, int, int, ExchangeListMessagesOptions)`
 
-- Method `ImapClient.beginListMessages(IConnection, int, int)`
-- Method `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback)`
-- Method `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback, Object)`
-- Method `ImapClient.beginListMessages(int, int)`
-- Method `ImapClient.beginListMessages(int, int, AsyncCallback)`
-- Method `ImapClient.beginListMessages(int, int, AsyncCallback, Object)`
-- Method `ImapClient.listMessages(IConnection, int, int)`
-- Method `ImapClient.listMessages(int, int)`
-- Method `ImapMessageInfoCollection.#ctor(IGenericEnumerable)`
-- Method `MapiAttachmentCollection.insert(int, String, MapiMessage)`
-- Method `MapiAttachmentCollection.replace(int, String, MapiMessage)`
-- Method `MapiContact.fromVCard(String, Encoding)`
-- Method `MapiObjectProperty.ToMapiMessage`
-- Property `AppointmentCollection.getLastItemOffset, setLastItemOffset`
-- Property `AppointmentCollection.getLastPage, setLastPage`
-- Property `AppointmentCollection.getTotalCount`
-- Property `ImapMessageInfoCollection.getLastItemOffset, setLastItemOffset`
-- Property `ImapMessageInfoCollection.getLastPage, setLastPage`
-- Property `ImapMessageInfoCollection.getTotalCount`
+- Método `ImapClient.beginListMessages(IConnection, int, int)`
+- Método `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback)`
+- Método `ImapClient.beginListMessages(IConnection, int, int, AsyncCallback, Object)`
+- Método `ImapClient.beginListMessages(int, int)`
+- Método `ImapClient.beginListMessages(int, int, AsyncCallback)`
+- Método `ImapClient.beginListMessages(int, int, AsyncCallback, Object)`
+- Método `ImapClient.listMessages(IConnection, int, int)`
+- Método `ImapClient.listMessages(int, int)`
+- Método `ImapMessageInfoCollection.#ctor(IGenericEnumerable)`
+- Método `MapiAttachmentCollection.insert(int, String, MapiMessage)`
+- Método `MapiAttachmentCollection.replace(int, String, MapiMessage)`
+- Método `MapiContact.fromVCard(String, Encoding)`
+- Método `MapiObjectProperty.ToMapiMessage`
+- Propiedad `AppointmentCollection.getLastItemOffset, setLastItemOffset`
+- Propiedad `AppointmentCollection.getLastPage, setLastPage`
+- Propiedad `AppointmentCollection.getTotalCount`
+- Propiedad `ImapMessageInfoCollection.getLastItemOffset, setLastItemOffset`
+- Propiedad `ImapMessageInfoCollection.getLastPage, setLastPage`
+- Propiedad `ImapMessageInfoCollection.getTotalCount`
 
-API eliminadas:
-- Class `MailMessageSaveOptions`
-- Event `SmtpClient.SendCompleted`
+APIs eliminadas:
+- Clase `MailMessageSaveOptions`
+- Evento `SmtpClient.SendCompleted`
 - Enum `MailMessageSaveOptions.HideExtraPrintHeader`
 - Enum `MailMessageSaveOptions.NoEncodeCharactersToMht`
 - Enum `MailMessageSaveOptions.None`
@@ -66,34 +66,34 @@ API eliminadas:
 - Enum `MailMessageSaveOptions.WriteHeaderToMht`
 - Enum `MailMessageSaveOptions.WriteOutlineAttachmentsToMht`
 - Enum `MhtFormatOptions.WriteCompleteEmailAddressToMht`
-- Method `ExchangeClient.moveItem(String, String)`
-- Method `IEWSClient.deleteContact(MapiContact, boolean)`
-- Method `IEWSClient.fetchMapiAttachments(IGenericEnumerable)`
-- Method `IEWSClient.listContacts(String, ExchangeListContactsOptions)`
-- Method `IEWSClient.loadContactPhoto(MapiContactPhoto)`
-- Method `IEWSClient.updateContact(MapiContact)`
-- Method `IMessage.save(Stream, MailMessageSaveType)`
-- Method `IMessage.save(String, MailMessageSaveType)`
-- Method `MailMessage.save(Stream, FileCompatibilityMode)`
-- Method `MailMessage.save(Stream, MailMessageSaveType)`
-- Method `MailMessage.save(Stream, MailMessageSaveType, MailMessageSaveOptions)`
-- Method `MailMessage.save(Stream, MessageFormat)`
-- Method `MailMessage.save(Stream, MessageFormat, MailMessageSaveOptions)`
-- Method `MailMessage.save(String, FileCompatibilityMode)`
-- Method `MailMessage.save(String, MailMessageSaveType)`
-- Method `MailMessage.save(String, MailMessageSaveType, MailMessageSaveOptions)`
-- Method `MailMessage.save(String, MessageFormat)`
-- Method `MailMessage.save(String, MessageFormat, MailMessageSaveOptions)`
-- Method `SmtpClient.sendAsyncCancel`
-- Method `HeaderCollection.add( imeHeader)`
-- Method `FollowUpManager.getFlag(MapiMessage)`
-- Method `FollowUpManager.setFlag(MapiMessage, FollowUpOptions)`
-- Method `MapiContactPhoto.#ctor(String, MapiContactPhotoImageFormat)`
-- Method `MapiContactPhoto.#ctor(String, byte[], MapiContactPhotoImageFormat)`
-- Method `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat)`
-- Method `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat, boolean)`
-- Method `PersonalStorage.changeDisplayName(String)`
-- Property `MailMessage.getPreserveOriginalBoundaries, setPreserveOriginalBoundaries`
-- Property `MailMessage.getPreserveOriginalDates, setPreserveOriginalDates`
-- Property `PersonalStorage.getDisplayName`
-- Property `PersonalStorage.MessageStoreProperties`
+- Método `ExchangeClient.moveItem(String, String)`
+- Método `IEWSClient.deleteContact(MapiContact, boolean)`
+- Método `IEWSClient.fetchMapiAttachments(IGenericEnumerable)`
+- Método `IEWSClient.listContacts(String, ExchangeListContactsOptions)`
+- Método `IEWSClient.loadContactPhoto(MapiContactPhoto)`
+- Método `IEWSClient.updateContact(MapiContact)`
+- Método `IMessage.save(Stream, MailMessageSaveType)`
+- Método `IMessage.save(String, MailMessageSaveType)`
+- Método `MailMessage.save(Stream, FileCompatibilityMode)`
+- Método `MailMessage.save(Stream, MailMessageSaveType)`
+- Método `MailMessage.save(Stream, MailMessageSaveType, MailMessageSaveOptions)`
+- Método `MailMessage.save(Stream, MessageFormat)`
+- Método `MailMessage.save(Stream, MessageFormat, MailMessageSaveOptions)`
+- Método `MailMessage.save(String, FileCompatibilityMode)`
+- Método `MailMessage.save(String, MailMessageSaveType)`
+- Método `MailMessage.save(String, MailMessageSaveType, MailMessageSaveOptions)`
+- Método `MailMessage.save(String, MessageFormat)`
+- Método `MailMessage.save(String, MessageFormat, MailMessageSaveOptions)`
+- Método `SmtpClient.sendAsyncCancel`
+- Método `HeaderCollection.add(imeHeader)`
+- Método `FollowUpManager.getFlag(MapiMessage)`
+- Método `FollowUpManager.setFlag(MapiMessage, FollowUpOptions)`
+- Método `MapiContactPhoto.#ctor(String, MapiContactPhotoImageFormat)`
+- Método `MapiContactPhoto.#ctor(String, byte[], MapiContactPhotoImageFormat)`
+- Método `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat)`
+- Método `MapiMessage.fromMailMessage(MailMessage, OutlookMessageFormat, boolean)`
+- Método `PersonalStorage.changeDisplayName(String)`
+- Propiedad `MailMessage.getPreserveOriginalBoundaries, setPreserveOriginalBoundaries`
+- Propiedad `MailMessage.getPreserveOriginalDates, setPreserveOriginalDates`
+- Propiedad `PersonalStorage.getDisplayName`
+- Propiedad `PersonalStorage.MessageStoreProperties`

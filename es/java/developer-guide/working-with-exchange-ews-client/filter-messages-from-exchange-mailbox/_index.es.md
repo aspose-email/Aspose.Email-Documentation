@@ -1,30 +1,29 @@
 ---
-title: "Filtrar mensajes del buzón de Exchange"
+title: "Filtrar Mensajes Desde el Buzón de Exchange"
 url: /es/java/filter-messages-from-exchange-mailbox/
 weight: 30
 type: docs
 ---
 
+{{% alert color="primary" %}} 
 
-{{% alert color="primary" %}}
+Aspose.Email para Java proporciona la capacidad de filtrar mensajes desde un Buzón de Exchange utilizando el [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) y [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Los mensajes pueden ser filtrados a través de diferentes criterios como por fecha, dominio, message-id, y por Notificaciones de Entrega de Correo. Este artículo muestra cómo filtrar mensajes desde un Servidor Exchange utilizando diferentes Criterios.
 
-Aspose.Email para Java ofrece la capacidad de filtrar los mensajes del buzón de Exchange mediante el [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) and [ExchangeQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/ExchangeQueryBuilder). Los mensajes se pueden filtrar según diferentes criterios, como por fecha, dominio, identificador de mensaje y notificaciones de entrega de correo. En este artículo se muestra cómo filtrar los mensajes de Exchange Server utilizando diferentes criterios.
+{{% /alert %}} 
+## **Filtrando Mensajes Usando EWS**
+La [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) clase proporciona el [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(\)) método que obtiene todos los mensajes de un buzón. Para obtener solo los mensajes que coinciden con alguna condición, utiliza el método sobrecargado [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20com.aspose.email.MailQuery\)) que toma la clase [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) como argumento. La clase [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) proporciona varias propiedades para especificar condiciones, por ejemplo, fecha, asunto, remitente y destinatario. Además, la API también permite aplicar filtros de case-sensitivity para recuperar correos del buzón.
+### **Filtrando Mensajes**
+Para obtener mensajes filtrados de un buzón:
 
-{{% /alert %}}
-## **Filtrado de mensajes mediante EWS**
-The [IEWSClient](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient) la clase proporciona la [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(\)) método que obtiene todos los mensajes de un buzón. Para recibir solo los mensajes que cumplen alguna condición, utilice el método sobrecargado [listMessages()](https://apireference.aspose.com/email/java/com.aspose.email/IEWSClient#listMessages\(java.lang.String,%20com.aspose.email.MailQuery\)) método que toma el [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) clase como argumento. El [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) La clase proporciona varias propiedades para especificar condiciones, por ejemplo, fecha, asunto, remitente y destinatario. Además, la API también permite aplicar filtros que distinguen mayúsculas y minúsculas para recuperar correos electrónicos del buzón.
-### **Filtrado de mensajes**
-Para obtener los mensajes filtrados de un buzón:
+1. Conectar al servidor de Exchange.
+1. Crear una instancia de MailQuery y configurar las propiedades deseadas.
+1. Llamar al método IEWSClient.listMessages() y pasar el MailQuery en los parámetros para obtener solo los mensajes filtrados.
 
-1. Conéctese al servidor Exchange.
-1. Crea una instancia de MailQuery y establece las propiedades deseadas.
-1. Llama al método iewsClient.listMessages () y pasa MailQuery a los parámetros para obtener solo los mensajes filtrados.
-
-El siguiente fragmento de código muestra cómo conectarse a un buzón IMAP y recibir los mensajes que tengan la cadena «Boletín» en el asunto y que se hayan enviado hoy.
+El siguiente fragmento de código muestra cómo conectarse a un buzón IMAP y obtener mensajes que tienen la cadena "Newsletter" en el asunto y fueron enviados hoy.
 
 ~~~Java
 try {
-    // Connect to EWS
+    // Conectar a EWS
     final String mailboxUri = "https://outlook.office365.com/ews/exchange.asmx";
     final String username = "username";
     final String password = "password";
@@ -32,92 +31,90 @@ try {
 
     IEWSClient client = EWSClient.getEWSClient(mailboxUri, username, password, domain);
 
-    // Query building by means of ExchangeQueryBuilder class
+    // Construcción de la consulta mediante la clase ExchangeQueryBuilder
     ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
 
-    // Set Subject and Emails that arrived today
+    // Establecer Asunto y Correos que llegaron hoy
     builder.getSubject().contains("Newsletter");
     builder.getInternalDate().on(new Date());
 
     MailQuery query = builder.getQuery();
 
-    // Get list of messages
+    // Obtener lista de mensajes
     ExchangeMessageInfoCollection messages = client.listMessages(client.getMailboxInfo().getInboxUri(), query, false);
-    System.out.println("EWS: " + messages.size() + " message(s) found.");
+    System.out.println("EWS: " + messages.size() + " mensaje(s) encontrado(s).");
 
-    // Disconnect from EWS
+    // Desconectar de EWS
     client.dispose();
 } catch (java.lang.RuntimeException ex) {
     System.out.println(ex.getMessage());
 }
-~~~
-### **Filtrar mensajes por criterios**
-Los ejemplos de código anteriores filtran los mensajes según el asunto y la fecha del correo electrónico. También podemos filtrar por otras propiedades. A continuación se muestran algunos ejemplos de cómo configurar las condiciones utilizando [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery).
-#### **Filtrar mensajes por fecha de hoy**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de la fecha actual.
+~~~ 
+### **Filtrar Mensajes por Criterios**
+Los ejemplos de código anteriores filtran mensajes basados en el asunto del correo y la fecha. También podemos filtrar otras propiedades. A continuación se presentan algunos ejemplos de cómo establecer las condiciones utilizando [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery).
+#### **Filtrar Mensajes por la Fecha de Hoy**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de la fecha de hoy.
 
 ~~~Java
-// Emails that arrived today
+// Correos que llegaron hoy
 MailQueryBuilder builder = new MailQueryBuilder();
 builder.getInternalDate().on(new Date());
-~~~
-#### **Filtrar mensajes por rango de fechas**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función del intervalo de fechas.
-
-
+~~~ 
+#### **Filtrar Mensajes por Rango de Fechas**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función del rango de fechas.
 
 ~~~Java
-// Emails that arrived in last 7 days
+// Correos que llegaron en los últimos 7 días
 Calendar cal = Calendar.getInstance();
 builder.getInternalDate().before(cal.getTime());
 cal.add(Calendar.DATE, -7);
 builder.getInternalDate().since(cal.getTime());
-~~~
-#### **Filtrar mensajes por remitente específico**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de un remitente específico.
+~~~ 
+#### **Filtrar Mensajes por Remitente Específico**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de un remitente específico.
 
 ~~~Java
-// Get emails from specific sender
+// Obtener correos de un remitente específico
 builder.getFrom().contains("saqib.razzaq@127.0.0.1");
-~~~
-#### **Filtrar mensajes por dominio específico**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de un dominio específico.
+~~~ 
+#### **Filtrar Mensajes por Dominio Específico**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de un dominio específico.
 
 ~~~Java
-// Get emails from specific domain
+// Obtener correos de un dominio específico
 builder.getFrom().contains("SpecificHost.com");
-~~~
-#### **Filtrar mensajes por destinatario específico**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de un destinatario específico.
+~~~ 
+#### **Filtrar Mensajes por Destinatario Específico**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de un destinatario específico.
 
 ~~~Java
-// Get emails sent to specific recipient
+// Obtener correos enviados a un destinatario específico
 builder.getTo().contains("recipient");
-~~~
-#### **Filtrar mensajes por MessageID**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de MessageID.
+~~~ 
+#### **Filtrar Mensajes por MessageID**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de MessageID.
 
 ~~~Java
-// Get email with specific MessageId
+// Obtener correo con un MessageId específico
 ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
 builder.getMessageId().equals("MessageID");
-~~~
-#### **Filtrar mensajes por todas las notificaciones de entrega de correo**
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de todas las notificaciones de entrega de correo.
+~~~ 
+#### **Filtrar Mensajes por Todas las Notificaciones de Entrega de Correo**
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de todas las notificaciones de entrega de correo.
 
 ~~~Java
-// Get Mail Delivery Notifications
+// Obtener Notificaciones de Entrega de Correo
 builder = new ExchangeQueryBuilder();
 builder.getContentClass().equals(ContentClassType.getMDN().toString());
-~~~
-#### **Filtrar mensajes por tamaño**
+~~~ 
+#### **Filtrar Mensajes por Tamaño**
 ~~~Java
 builder = new ExchangeQueryBuilder();
 builder.getItemSize().greater(80000);
-~~~
-#### **Filtrar mensajes por valor de cadena**
+~~~ 
+#### **Filtrar Mensajes por Valor de Cadena**
 
-El siguiente fragmento de código muestra cómo filtrar todos los correos electrónicos en función de la cadena especificada en los encabezados (asunto, de, a, cc). El [getText()](https://reference.aspose.com/email/java/com.aspose.email/exchangequerybuilder/#getText--) el método devuelve el valor de la cadena junto con el cuerpo del mensaje.
+El siguiente fragmento de código muestra cómo filtrar todos los correos en función de la cadena especificada en los encabezados (asunto, de, para, cc). El método [getText()](https://reference.aspose.com/email/java/com.aspose.email/exchangequerybuilder/#getText--) devuelve el valor de la cadena junto con el cuerpo del mensaje.
 
 ```java
  ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
@@ -128,57 +125,57 @@ MailQuery query = builder.getQuery();
 
 ExchangeMessageInfoCollection messages = ewsClient.listMessages("InboxUri", query, false);
 ```
-#### **Filtrar mensajes en orden ascendente/descendente**
+#### **Filtrar Mensajes en Orden Ascendente/Descendente**
 
-Aspose.Email proporciona la [ComparisonField.orderBy (booleano ascendente)](https://reference.aspose.com/email/java/com.aspose.email/comparisonfield/#orderBy-boolean-) método que establece el valor que indica que el cliente utiliza la clasificación ascendente o descendente en el campo de búsqueda. Le permite ordenar los mensajes de correo electrónico en orden ascendente/descendente según los criterios especificados por [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/).
+Aspose.Email proporciona el método [ComparisonField.orderBy(boolean ascending)](https://reference.aspose.com/email/java/com.aspose.email/comparisonfield/#orderBy-boolean-) que establece el valor que indica que el cliente utiliza ordenación ascendente o descendente en el campo de búsqueda. Permite ordenar los mensajes de correo en orden ascendente/descendente basado en los criterios especificados por [MailQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/mailquerybuilder/).
 
-El siguiente fragmento de código muestra cómo filtrar los mensajes en orden ascendente/descendente:
+El siguiente fragmento de código demuestra cómo filtrar mensajes en orden ascendente/descendente:
 
 ```java
 MailQueryBuilder builder = new MailQueryBuilder();
 builder.getSubject().contains("Report");
 builder.getInternalDate().since(sinceDate);
-builder.getSubject().orderBy(true); // sort the subject ascending
-builder.getInternalDate().orderBy(false); // sort the date descending  
+builder.getSubject().orderBy(true); // ordenar el asunto ascendente
+builder.getInternalDate().orderBy(false); // ordenar la fecha descendente  
 
 ExchangeMessageInfoCollection miColl = client.listMessages(client.getMailboxInfo().getInboxUri(), builder.getQuery());
 ```
-### **Creación de consultas complejas**
-Si es diferente [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) las propiedades se establecen en una declaración separada, se cumplen todas las condiciones. Por ejemplo, para recibir un mensaje en un intervalo de fechas determinado y de un anfitrión específico, escribe tres afirmaciones:
-#### **Combinación de consultas con AND**
+### **Construyendo Consultas Complejas**
+Si diferentes [MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) propiedades se establecen en una declaración separada, todas las condiciones se coinciden. Por ejemplo, para obtener un mensaje en un rango de fechas particular y de un host específico, escribe tres declaraciones:
+#### **Combinando Consultas con AND**
 El siguiente fragmento de código muestra cómo combinar consultas con AND.
 
 ~~~Java
-// Emails from specific host, get all emails that arrived before today and all emails that arrived since 7 days ago
+// Correos de un host específico, obtener todos los correos que llegaron antes de hoy y todos los correos que llegaron desde hace 7 días
 builder.getFrom().contains("SpecificHost.com");
 Calendar cal = Calendar.getInstance();
 builder.getInternalDate().before(cal.getTime());
 cal.add(Calendar.DATE, -7);
 builder.getInternalDate().since(cal.getTime());
-~~~
-#### **Combinación de consultas con OR**
+~~~ 
+#### **Combinando Consultas con OR**
 
-[MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) proporciona la [or()](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) método que requiere dos [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) instancias como parámetros. Recibe mensajes que cumplen cualquiera de las dos condiciones especificadas. El ejemplo siguiente filtra los mensajes que tienen la palabra «test» en el asunto o \"noreply@host.com\" como remitente. En el siguiente fragmento de código, se muestra cómo combinar consultas con OR.
+[MailQueryBuilder](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder) proporciona el [or()](https://apireference.aspose.com/email/java/com.aspose.email/MailQueryBuilder#or\(com.aspose.email.MailQuery,%20com.aspose.email.MailQuery\)) método que toma dos [MailQuery](https://apireference.aspose.com/email//java/com.aspose.email/mailquery) instancias como parámetros. Obtiene mensajes que coinciden con cualquiera de las dos condiciones especificadas. El ejemplo a continuación filtra mensajes que tienen la palabra "test" en el asunto o "noreply@host.com" como remitente. El siguiente fragmento de código muestra cómo combinar consultas con OR.
 
 ~~~Java
 builder.or(builder.getSubject().contains("test"), builder.getFrom().contains("noreply@host.com"));
-~~~
-### **Filtrado de correo electrónico sensible a mayúsculas**
-Los correos electrónicos se pueden filtrar en función de la distinción entre mayúsculas y minúsculas especificando el indicador IgnoreCase en los criterios de filtro, como se muestra en el siguiente fragmento de código.
+~~~ 
+### **Filtrado de Correos con Sensibilidad a Mayúsculas y Minúsculas**
+Los correos pueden ser filtrados en función de la sensibilidad a mayúsculas y minúsculas especificando la bandera IgnoreCase en los criterios de filtrado como se muestra en el siguiente fragmento de código.
 
 ~~~Java
-// Query building by means of ExchangeQueryBuilder class
+// Construcción de la consulta mediante la clase ExchangeQueryBuilder
 ExchangeQueryBuilder builder = new ExchangeQueryBuilder();
 builder.getSubject().contains("Newsletter", true);
 builder.getInternalDate().on(new Date());
 MailQuery query = builder.getQuery();
-~~~
-## **Filtrado de mensajes con soporte de paginación**
+~~~ 
+## **Filtrando Mensajes con Soporte de Paginación**
 ~~~Java
 int itemsPerPage = 5;
 String sGuid = UUID.randomUUID().toString();
-String str1 = sGuid + " - " + "Query 1";
-String str2 = sGuid + " - " + "Query 2";
+String str1 = sGuid + " - " + "Consulta 1";
+String str2 = sGuid + " - " + "Consulta 2";
 
 MailQueryBuilder queryBuilder1 = new MailQueryBuilder();
 queryBuilder1.getSubject().contains(str1);

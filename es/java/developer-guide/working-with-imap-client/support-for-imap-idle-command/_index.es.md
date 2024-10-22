@@ -6,7 +6,7 @@ type: docs
 ---
 
 
-API de correo electrónico Aspoe.Email [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) ofrece la posibilidad de abrir una conexión con el servidor y esperar la llegada de un mensaje de correo electrónico. Esto permite evitar sondear el servidor una y otra vez para detectar cualquier correo electrónico entrante. El siguiente fragmento de código muestra cómo utilizar el comando IMAP Idle.
+Aspoe.Email API [ImapClient](https://reference.aspose.com/email/java/com.aspose.email/imapclient/) proporciona la capacidad de abrir una conexión al servidor y esperar la llegada de un mensaje de correo electrónico. Esto permite evitar consultar al servidor una y otra vez por cualquier correo electrónico entrante. El siguiente fragmento de código muestra cómo soportar el comando IMAP Idle.
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

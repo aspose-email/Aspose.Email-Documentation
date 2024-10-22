@@ -1,98 +1,95 @@
 ---
-title: "Crear un nuevo PST, agregar subcarpetas y mensajes"
-url: /es/net/create-new-pst-add-sub-folders-and-messages/
+title: "Crear nuevo PST, agregar subcarpetas y mensajes"
+url: /es/net/crear-nuevo-pst-agregar-subcarpetas-y-mensajes/
 weight: 10
 type: docs
 ---
 
+Además de analizar un archivo PST existente, Aspose.Email proporciona los medios para crear un archivo PST desde cero. Este artículo demuestra cómo crear un archivo PST de Outlook y agregarle una subcarpeta.
 
-Además de analizar un archivo PST existente, Aspose.Email proporciona los medios para crear un archivo PST desde cero. Este artículo muestra cómo crear un archivo PST de Outlook y agregarle una subcarpeta.
-
-1. [Creación de un nuevo archivo PST](#creating-a-new-pst-file).
-1. [Cambiar la clase de contenedor de una carpeta](#changing-a-folders-container-class).
-1. [Agregue mensajes masivos con un rendimiento mejorado](#add-bulk-messages-with-improved-performance)
+1. [Creando un nuevo archivo PST](#creando-un-nuevo-archivo-pst).
+1. [Cambiando la clase contenedora de una carpeta](#cambiando-la-clase-contenedora-de-una-carpeta).
+1. [Agregar mensajes en bloque con mejor rendimiento](#agregar-mensajes-en-bloque-con-mejor-rendimiento)
 
 ## **Crear un nuevo archivo PST**
 
-Usa el [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/) clase para crear un archivo PST en alguna ubicación de un disco local. Para crear un archivo PST desde cero:
+Utilice la clase [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/) para crear un archivo PST en alguna ubicación en un disco local. Para crear un archivo PST desde cero:
 
-1. Cree un PST con el [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create/) method.
-1. Agregue una subcarpeta a la raíz del archivo PST; para ello, acceda a la carpeta raíz y, a continuación, llame al [AddSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addsubfolder/#addsubfolder/) method.
+1. Cree un PST utilizando el método [PersonalStorage.Create()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/create/#create/).
+1. Agregue una subcarpeta en la raíz del archivo PST accediendo a la carpeta Raíz y luego llamando al método [AddSubFolder](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addsubfolder/#addsubfolder/).
 
-El siguiente fragmento de código muestra cómo crear un archivo PST y agregar una subcarpeta denominada Bandeja de entrada.
+El siguiente fragmento de código muestra cómo crear un archivo PST y agregarle una subcarpeta llamada Inbox.
 
 ```csharp
-// Create new PST
+// Crear nuevo PST
 using var pst = PersonalStorage.Create(path, FileFormatVersion.Unicode);
 
-// Add new folder "Test"
+// Agregar nueva carpeta "Test"
 pst.RootFolder.AddSubFolder("Inbox");
 ```
-## **Comprobación de la coincidencia de clases de contenedor al agregar una carpeta a PST**
+## **Verificación de coincidencia de clase contenedora al agregar una carpeta a PST**
 
-Al crear nuevas carpetas o agregar elementos a las carpetas existentes, es importante asegurarse de que la clase contenedora del nuevo elemento o carpeta esté alineada con la clase contenedora de la carpeta principal para mantener la jerarquía organizativa dentro del archivo de almacenamiento PST. Para ello, Aspose.Email cuenta con [EnforceContainerClassMatching](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/enforcecontainerclassmatching/) propiedad del [FolderCreationOptions](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/#foldercreationoptions-class) clase. La propiedad especifica si se debe forzar la comparación de la clase contenedora de la carpeta que se está añadiendo con la clase de contenedor de la carpeta principal. Si se establece en «true», se generará una excepción si las clases de contenedor no coinciden. El valor predeterminado es «falso».
+Al crear nuevas carpetas o agregar elementos a carpetas existentes, es importante asegurarse de que la clase contenedora del nuevo elemento o carpeta coincida con la clase contenedora de la carpeta principal para mantener la jerarquía organizativa dentro del archivo de almacenamiento PST. Para este propósito, Aspose.Email tiene la propiedad [EnforceContainerClassMatching](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/enforcecontainerclassmatching/) de la clase [FolderCreationOptions](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/#foldercreationoptions-class). La propiedad especifica si se debe forzar la verificación de la clase contenedora de la carpeta que se está agregando en comparación con la clase contenedora de la carpeta principal. Si se establece en 'true', se generará una excepción si las clases contenedoras no coinciden. El valor predeterminado es 'false'.
 
-El siguiente ejemplo de código demuestra el uso del [EnforceContainerClassMatching](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/enforcecontainerclassmatching/) propiedad para controlar si se debe lanzar una excepción al agregar carpetas con clases de contenedor que no coinciden:
+El siguiente ejemplo de código demuestra el uso de la propiedad [EnforceContainerClassMatching](https://reference.aspose.com/email/net/aspose.email.storage.pst/foldercreationoptions/enforcecontainerclassmatching/) para controlar si se debe lanzar una excepción al agregar carpetas con clases contenedoras que no coinciden:
 
 ```cs
 using (var pst = PersonalStorage.Create("storage.pst", FileFormatVersion.Unicode))
 {
-    // Create a standard Contacts folder with the IPF.Contacts container class.
+    // Crear una carpeta de Contactos estándar con la clase contenedora IPF.Contacts.
     var contacts = pst.CreatePredefinedFolder("Contacts", StandardIpmFolder.Contacts);
-   
-    // An exception will not arise. EnforceContainerClassMatching is false by default.
+    
+    // No se generará ninguna excepción. EnforceContainerClassMatching es falso por defecto.
     contacts.AddSubFolder("Subfolder1", "IPF.Note");
-   
-    // An exception will occur as the container class of the subfolder being added (IPF.Note)
-    // does not match the container class of the parent folder (IPF.Contact).
+    
+    // Se generará una excepción ya que la clase contenedora de la subcarpeta que se está agregando (IPF.Note) 
+    // no coincide con la clase contenedora de la carpeta principal (IPF.Contact).
     contacts.AddSubFolder("Subfolder3", new FolderCreationOptions {EnforceContainerClassMatching = true, ContainerClass = "IPF.Note"});
 }
 ```
 
->Nota: Asegúrese de gestionar correctamente las excepciones al imponer la coincidencia de clases de contenedor para evitar un comportamiento inesperado durante la creación de carpetas en PST.
+>Nota: Asegúrese de manejar correctamente las excepciones al forzar la coincidencia de clases contenedoras para evitar comportamientos inesperados durante la creación de carpetas en PST.
 
-## **Cambiar la clase de contenedor de carpetas**
+## **Cambio de la clase contenedora de la carpeta**
 
-A veces es necesario cambiar la clase del contenedor de la carpeta. Un ejemplo común es cuando se agregan mensajes de diferentes tipos (citas, mensajes, etc.) a la misma carpeta. En estos casos, es necesario cambiar la clase de carpeta para que todos los elementos de la carpeta se muestren correctamente. El siguiente fragmento de código muestra cómo cambiar la clase contenedora de una carpeta en PST para este fin.
+A veces es necesario cambiar la clase contenedora de la carpeta. Un ejemplo común es cuando se agregan mensajes de diferentes tipos (citas, mensajes, etc.) a la misma carpeta. En tales casos, es necesario cambiar la clase de la carpeta para que todos los elementos en la carpeta se muestren correctamente. El siguiente fragmento de código muestra cómo cambiar la clase contenedora de una carpeta en PST para este propósito.
 
 ```csharp
-using var pst = PersonalStorage.FromFile("PersonalStorage1.pst);
+using var pst = PersonalStorage.FromFile("PersonalStorage1.pst");
 var folder = pst.RootFolder.GetSubFolder("Inbox");
 
 folder.ChangeContainerClass("IPF.Note");
 ```
 
-## **Agregue mensajes masivos con un rendimiento mejorado**
+## **Agregar mensajes en bloque con mejor rendimiento**
 
-Agregar mensajes individuales a un PST implica más operaciones de E/S en el disco y puede ralentizar el rendimiento. Para mejorar el rendimiento, se pueden agregar mensajes al PST de forma masiva para minimizar las operaciones de E/S.
-El [AddMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessages/) El método le permite agregar mensajes de forma masiva y se puede usar en los siguientes escenarios. Además, el [MessageAdded](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/messageadded/) el evento se produce cuando se agrega un mensaje a la carpeta.
+Agregar mensajes individuales a un PST implica más operaciones de I/O en el disco y puede ralentizar el rendimiento. Para mejorar el rendimiento, se pueden agregar mensajes al PST en modo de bloque para minimizar las operaciones de I/O. El método [AddMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/addmessages/) permite agregar mensajes en bloque y se puede usar en los siguientes escenarios. Además, el evento [MessageAdded](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/messageadded/) ocurre cuando se agrega un mensaje a la carpeta.
 
-### **Agregar mensajes de otro PST**
+### **Agregar mensajes desde otro PST**
 
-Para agregar mensajes de otro PST, utilice la [FolderInfo.EnumerateMapiMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemapimessages/) método que devuelve `IEnumerable<MapiMessage>`:
+Para agregar mensajes desde otro PST, utilice el método [FolderInfo.EnumerateMapiMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemapimessages/) que devuelve `IEnumerable<MapiMessage>`:
 
 ```csharp
 using var srcPst = PersonalStorage.FromFile(@"source.pst", false);
 using var destPst = PersonalStorage.FromFile(@"destination.pst");
 
-// Get the folder by name
+// Obtener la carpeta por nombre
 var srcFolder = srcPst.RootFolder.GetSubFolder("SomeFolder");
 var destFolder = destPst.RootFolder.GetSubFolder("SomeFolder");
 
 destFolder.MessageAdded += new MessageAddedEventHandler(OnMessageAdded);
 destFolder.AddMessages(srcFolder.EnumerateMapiMessages());
 
-
-// Handles the MessageAdded event.
+// Maneja el evento MessageAdded.
 static void OnMessageAdded(object sender, MessageAddedEventArgs e)
 {
-    Console.WriteLine($"Added: {e.EntryId}");
+    Console.WriteLine($"Agregado: {e.EntryId}");
 }
 ```
 
-### **Agregar mensajes desde el directorio**
+### **Agregar mensajes desde un directorio**
 
-Para agregar mensajes desde el directorio, cree el `GetMessages(string pathToDir)` método iterador con nombre que devuelve `IEnumerable<MapiMessage>`:
+Para agregar mensajes desde un directorio, cree el método iterador nombrado `GetMessages(string pathToDir)` que devuelve `IEnumerable<MapiMessage>`:
 
 ```csharp
 using var pst = PersonalStorage.FromFile(@"storage.pst");
@@ -100,7 +97,7 @@ var folder = pst.RootFolder.GetSubFolder("SomeFolder");
 folder.MessageAdded += OnMessageAdded;
 folder.AddMessages(GetMessages(@"MessageDirectory"));
 
-// Named iterator method to read messages from directory.
+// Método iterador nombrado para leer mensajes desde el directorio.
 static IEnumerable<MapiMessage> GetMessages(string pathToDir)
 {
     string[] files = Directory.GetFiles(pathToDir, "*.msg");
@@ -111,10 +108,9 @@ static IEnumerable<MapiMessage> GetMessages(string pathToDir)
     }
 }
 
-// Handles the MessageAdded event.
+// Maneja el evento MessageAdded.
 static void OnMessageAdded(object sender, MessageAddedEventArgs e)
 {
-    Console.WriteLine($"Added: {e.EntryId}");
+    Console.WriteLine($"Agregado: {e.EntryId}");
 }
 ```
-

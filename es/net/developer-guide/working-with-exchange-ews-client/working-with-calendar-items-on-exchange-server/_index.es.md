@@ -1,36 +1,38 @@
 ---
-title: "Trabajar con elementos del calendario en Exchange Server"
+title: "Trabajando con Elementos de Calendario en Exchange Server"
 url: /es/net/working-with-calendar-items-on-exchange-server/
 weight: 50
 type: docs
 ---
 
 
-## **Envío de convocatorias de reunión**
+## **Enviando Solicitudes de Reunión**
 
-En este artículo se muestra cómo enviar una convocatoria de reunión a varios destinatarios mediante Exchange Web Services y Aspose.Email.
+Este artículo muestra cómo enviar una solicitud de reunión a múltiples destinatarios usando Exchange Web Services y Aspose.Email.
 
-1. Cree una convocatoria de reunión mediante el [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) clase y establece el lugar, la hora y los asistentes.
-1. Crea una instancia del [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) clase y programe la cita usando el [MailMessage.AddAlternateView()](https://reference.aspose.com/email/net/aspose.email/mailmessage/addalternateview/#addalternateview) method.
-1. Conéctese al servidor Exchange y envíe la convocatoria de reunión mediante [Send(MailMessage)](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/send/#send) method.
+1. Crea una solicitud de reunión utilizando la clase [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) y establece la ubicación, la hora y los asistentes.
+1. Crea una instancia de la clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) y establece la cita usando el método [MailMessage.AddAlternateView()](https://reference.aspose.com/email/net/aspose.email/mailmessage/addalternateview/#addalternateview).
+1. Conéctate al Exchange Server y envía la solicitud de reunión usando el método [Send(MailMessage)](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/send/#send) .
 
-The [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) La clase se puede usar para conectarse a un servidor Exchange compatible con los servicios web de Exchange (EWS). Para que esto funcione, el servidor debe ser Exchange Server 2007 o posterior. El siguiente fragmento de código muestra cómo usar EWS para enviar convocatorias de reunión.
+La clase [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) se puede utilizar para conectarse a un Exchange Server con soporte para Exchange Web Services (EWS). Para que esto funcione, el servidor debe ser Exchange Server 2007 o posterior. El siguiente fragmento de código te muestra cómo utilizar EWS para enviar solicitudes de reunión.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SendMeetingRequestsUsingEWS-SendMeetingRequestsUsingEWS.cs" >}}
 
-## **Cómo trabajar con elementos del calendario mediante EWS**
 
-Aspose.Email ofrece la capacidad de agregar, actualizar y cancelar citas mediante el cliente Exchange Web Service (EWS). El cliente IEWS [CreateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createappointment/#createappointment/), [UpdateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateappointment/#updateappointment/), y [CancelAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/cancelappointment/#cancelappointment/) los métodos permiten manipular los elementos del calendario mediante EWS. Este artículo proporciona un ejemplo de código detallado sobre cómo trabajar con elementos del calendario. En el siguiente ejemplo de código se muestra cómo:
+## **Trabajando con Elementos de Calendario usando EWS**
 
-1. Crea una cita.
-1. Actualiza una cita.
-1. Eliminar o cancelar una cita.
+Aspose.Email proporciona la capacidad de agregar, actualizar y cancelar citas utilizando el cliente de Exchange Web Service (EWS). Los métodos IEWSClient [CreateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createappointment/#createappointment/), [UpdateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateappointment/#updateappointment/), y [CancelAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/cancelappointment/#cancelappointment/) permiten manipular elementos de calendario usando EWS. Este artículo proporciona un ejemplo de código detallado sobre cómo trabajar con elementos de calendario. El siguiente ejemplo de código muestra cómo:
+
+1. Crear una cita.
+1. Actualizar una cita.
+1. Eliminar/Cancela una cita.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CreatingUpdatingAndDeletingCalendarItemsUsingEWS-CreatingUpdatingAndDeletingCalendarItemsUsingEWS.cs" >}}
 
-## **Listar citas con soporte de paginación**
 
-El método ListAppointments expuesto por [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) La API recupera la lista completa de citas del servidor Exchange. Esto puede llevar tiempo si hay un gran número de citas en el servidor de Exchange. La API proporciona métodos sobrecargados de [ListAppointments](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listappointments/#listappointments/) método que brinda soporte de paginación a la operación. También se puede usar en diferentes combinaciones con la función de consulta. Los siguientes métodos sobrecargados están disponibles para enumerar las citas de Exchange Server con soporte de paginación.
+## **Listando Citas con Soporte de Paginación**
+
+El método ListAppointments expuesto por la API [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) recupera la lista completa de citas del servidor Exchange. Esto puede tomar tiempo si hay un gran número de citas en el Exchange Server. La API proporciona métodos sobrecargados del método [ListAppointments](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listappointments/#listappointments/) que otorgan soporte de paginación a la operación. Esto se puede usar en diferentes combinaciones con la característica de consulta también. Los siguientes métodos sobrecargados están disponibles para listar citas desde el Exchange Server con soporte de paginación.
 
 - `AppointmentCollection IEWSClient.ListAppointments(int itemsPerPage)`.
 - `AppointmentCollection IEWSClient.ListAppointments(string folderUri, int itemsPerPage)`.
@@ -41,45 +43,49 @@ El método ListAppointments expuesto por [IEWSClient](https://reference.aspose.c
 - `AppointmentCollection IEWSClient.ListAppointments(MailQuery query, int itemsPerPage, int itemOffset)`.
 - `AppointmentCollection IEWSClient.ListAppointments(string folderUri, MailQuery query, int itemsPerPage, int itemOffset)`.
 
-En el siguiente fragmento de código, se muestra cómo enumerar las citas con soporte de paginación.
+El siguiente fragmento de código te muestra cómo listar citas con soporte de paginación.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-PagingSupportForListingAppointments-PagingSupportForListingAppointments.cs" >}}
 
-## **Agregar un evento a la carpeta de calendario secundaria en Exchange Server**
 
-La API Aspose.Email le permite crear una carpeta de calendario secundaria en Exchange Server mediante el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). A continuación, se pueden añadir, actualizar o cancelar citas desde el calendario secundario mediante el [CreateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createappointment/#createappointment/), [UpdateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateappointment/#updateappointment/) and [CancelAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/cancelappointment/#cancelappointment/) métodos. Los siguientes métodos y propiedades de la API se utilizan en los ejemplos de código que aparecen a continuación para mostrar la funcionalidad de esta función. Tenga en cuenta que esta función es compatible con Aspose.Email para .NET 6.5.0 y versiones posteriores.
+## **Agregando Evento a la Carpeta de Calendario Secundario en Exchange Server**
 
-- Method `IEWSClient.CancelAppointment(Appointment, String)`.
-- Method `IEWSClient.CancelAppointment(String, String)`.
-- Method `IEWSClient.CreateAppointment(Appointment, String)`.
-- Method `IEWSClient.CreateFolder(String, String, ExchangeFolderPermissionCollection, String)`.
-- Method `IEWSClient.FetchAppointment(String, String)`.
-- Method `IEWSClient.UpdateAppointment(Appointment, String)`.
-- Property `IEWSClient.CurrentCalendarFolderUri`.
+La API Aspose.Email te permite crear una carpeta de Calendario secundaria en Exchange Server usando el [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). Las citas pueden ser agregadas, actualizadas o canceladas desde el calendario secundario usando los métodos [CreateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/createappointment/#createappointment/), [UpdateAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/updateappointment/#updateappointment/) y [CancelAppointment](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/cancelappointment/#cancelappointment/). Los siguientes métodos y propiedades de la API se utilizan en los ejemplos de código a continuación para mostrar la funcionalidad de esta característica. Ten en cuenta que esta característica es compatible con Aspose.Email para .NET 6.5.0 en adelante.
 
-En el siguiente fragmento de código se muestra cómo agregar un evento a la carpeta de calendario secundaria del servidor de Exchange.
+- Método `IEWSClient.CancelAppointment(Appointment, String)`.
+- Método `IEWSClient.CancelAppointment(String, String)`.
+- Método `IEWSClient.CreateAppointment(Appointment, String)`.
+- Método `IEWSClient.CreateFolder(String, String, ExchangeFolderPermissionCollection, String)`.
+- Método `IEWSClient.FetchAppointment(String, String)`.
+- Método `IEWSClient.UpdateAppointment(Appointment, String)`.
+- Propiedad `IEWSClient.CurrentCalendarFolderUri`.
+
+El siguiente fragmento de código te muestra cómo agregar un evento a la carpeta de calendario secundaria en el servidor de intercambio.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SecondaryCalendarEvents-SecondaryCalendarEvents.cs" >}}
 
-## **Invitación de calendario para compartir**
 
-El servidor Microsoft Exchange ofrece la capacidad de compartir calendarios mediante el envío de invitaciones de calendario a otros usuarios registrados en el mismo servidor de Exchange. La API Aspose.Email ofrece la misma capacidad al permitir compartir el calendario mediante la API EWS.
+## **Compartiendo Invitación de Calendario**
+
+El servidor Microsoft Exchange proporciona la capacidad de compartir calendarios enviando invitaciones de calendario a otros usuarios, registrados en el mismo servidor de Exchange. La API Aspose.Email proporciona la misma capacidad permitiendo compartir el calendario mediante la API EWS.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-SendCalendarInvitation-SendCalendarInvitation.cs" >}}
 
-## **Recuperación de la información de atributos extendidos de los elementos del calendario**
+
+## **Recuperando Información de Atributos Extendidos de Elementos de Calendario**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-RetreiveExtAttributesForCalendarItems-RetreiveExtAttributesForCalendarItems.cs" >}}
 
-## **Devolución de los elementos periódicos del calendario dentro del intervalo de fechas especificado**
 
-[EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) admite la devolución de los elementos del calendario periódicos dentro del rango especificado por StartDate y EndDate. [AppointmentQueryBuilder.SetCalendarView](https://reference.aspose.com/email/net/aspose.email.clients.exchange/appointmentquerybuilder/setcalendarview/) El método se utiliza para definir un rango de fechas específico y limitar el número de citas devueltas para recuperar la información relevante. Al establecer los siguientes parámetros, puede recuperar las citas que coincidan con los criterios especificados.
+## **Devolviendo los Elementos de Calendario Recurrentes Dentro del Rango de Fechas Especificado**
 
-- Fecha de inicio: la fecha de inicio de la vista del calendario. Las citas que comiencen a partir de esta fecha se incluirán en el resultado de la consulta.
+[EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) admite el retorno de los elementos de calendario recurrentes dentro del rango especificado por StartDate y EndDate. El método [AppointmentQueryBuilder.SetCalendarView](https://reference.aspose.com/email/net/aspose.email.clients.exchange/appointmentquerybuilder/setcalendarview/) se utiliza para definir un rango de fechas específico y limitar el número de citas devueltas para recuperar información relevante. Al establecer los siguientes parámetros, puedes recuperar las citas que coinciden con los criterios especificados.
 
-- Fecha de finalización: la fecha de finalización de la vista del calendario. Las citas que finalicen antes o en esta fecha se incluirán en el resultado de la consulta.
+- startDate: La fecha de inicio de la vista del calendario. Las citas que comienzan a partir de esta fecha se incluirán en el resultado de la consulta.
 
-- maxEntriesReturned: el número máximo de citas que se devolverán en el resultado de la consulta. El valor -1 indica que no hay un límite específico.
+- endDate: La fecha de finalización de la vista del calendario. Las citas que terminan antes o en esta fecha se incluirán en el resultado de la consulta.
+
+- maxEntriesReturned: El número máximo de citas que se devolverán en el resultado de la consulta. El valor de -1 indica que no hay un límite específico.
 
 ```cs
 ExchangeQueryBuilder builder = new ExchangeQueryBuilder();

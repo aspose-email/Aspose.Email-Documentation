@@ -1,55 +1,55 @@
 ---
-title: "Installation"
+title: "Instalación"
 url: /es/net/installation/
 weight: 70
 type: docs
 ---
 
 
-## **Instalación de Aspose.Email para.NET a través de NuGet**
-NuGet es la forma más sencilla de descargar e instalar las API de Aspose para.NET. Abra el administrador de paquetes Microsoft Visual Studio y NuGet. Busca «aspose» para encontrar la API de Aspose deseada. Haga clic en «Instalar», la API seleccionada se descargará y se consultará en su proyecto.
+## **Instalando Aspose.Email para .NET a través de NuGet**
+NuGet es la forma más fácil de descargar e instalar las APIs de Aspose para .NET. Abre Microsoft Visual Studio y el administrador de paquetes de NuGet. Busca "aspose" para encontrar la API de Aspose deseada. Haz clic en "Instalar"; la API seleccionada será descargada y referenciada en tu proyecto.
 
 ![todo:image_alt_text](installation_1.png)
-## **Instale o actualice Aspose.Email mediante la consola del administrador de paquetes**
-Puedes seguir los pasos que se indican a continuación para hacer referencia a la API Aspose.Email mediante la consola del administrador de paquetes:
+## **Instalar o Actualizar Aspose.Email usando la Consola del Administrador de Paquetes**
+Puedes seguir los pasos a continuación para referenciar la API de Aspose.Email usando la consola del administrador de paquetes:
 
-1. Abra su solución/proyecto en Visual Studio.
-1. Seleccione Herramientas -> Administrador de paquetes de biblioteca -> Consola de administrador de paquetes en el menú para abrir la consola del administrador de paquetes.
+1. Abre tu solución/proyecto en Visual Studio.
+1. Selecciona Herramientas -> Administrador de Paquetes de Biblioteca -> Consola del Administrador de Paquetes del menú para abrir la consola del administrador de paquetes.
 
 ![todo:image_alt_text](installation_2.png)
 
-Escriba el comando»**Paquete de instalación Aspose.Email -Versión x.x.0**» y pulse enter para instalar la última versión completa en su aplicación. Si lo prefiere, puede añadir el»**-prerelease**«sufijo del comando para especificar que también se debe instalar la última versión, incluidas las correcciones urgentes.
+Escribe el comando “**Install-Package Aspose.Email -Version x.x.0**” y presiona enter para instalar la última versión completa en tu aplicación. Alternativamente, puedes agregar el sufijo "**-prerelease**" al comando para especificar que también se debe instalar la última versión que incluye correcciones rápidas.
 
 ![todo:image_alt_text](installation_3.png)
 
-Si no está familiarizado con el [EULA de Aspose](http://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx) entonces es una buena idea leer la licencia a la que se hace referencia en la URL. 
+Si no estás familiarizado con el [Aspose EULA](http://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx), entonces es una buena idea leer la licencia referenciada en la URL.
 
-Ahora deberías comprobar que Aspose.Email se ha agregado correctamente y se ha hecho referencia a él en tu solicitud.
+Ahora deberías encontrar que Aspose.Email ha sido añadido y referenciado exitosamente en tu aplicación.
 
 ![todo:image_alt_text](installation_4.png)
 
-En la consola del administrador de paquetes, también puede usar el comando»**Paquete de actualización Aspose.Email.net**» y pulse enter para comprobar si hay actualizaciones en el paquete Aspose.Email e instálelas si las hubiera. También puedes añadir el sufijo «-prerelease» para actualizar la última versión.
-## **Hacer referencia al componente**
-Para usar cualquier componente de la aplicación, añada una referencia a él. En los pasos siguientes se describe qué hacer al usar Visual Studio .NET.
+En la consola del administrador de paquetes, también puedes usar el comando “**Update-Package Aspose.Email.NET**” y presionar enter para buscar actualizaciones en el paquete Aspose.Email e instalarlas si están presentes. También puedes agregar el sufijo "-prerelease" para actualizar la última versión.
+## **Referenciando el Componente**
+Para usar cualquier componente en tu aplicación, añade una referencia a él. Los pasos que siguen describen qué hacer cuando usas Visual Studio .NET.
 
-1. En el Explorador de soluciones, expanda el nodo del proyecto al que desea agregar una referencia.
-1. Haga clic derecho en **References** nodo para el proyecto y seleccione **Agregar referencia** del menú.
-1. En el cuadro de diálogo Agregar referencia, seleccione **.NET** pestaña (normalmente está seleccionada de forma predeterminada).
-1. Si ha utilizado el instalador MSI para instalar Aspose.Email, verá Aspose.Email en el panel superior. Selecciónelo y, a continuación, haga clic en **Select** button.
-1. Si solo ha descargado y desempaquetado la DLL, haga clic en **Browse** botón y localice el archivo Aspose.Email.dll. Ha hecho referencia a Aspose.Email y debería aparecer en **SelectedComponents** panel del cuadro de diálogo.
-1. Click **OK**. Aparece una referencia a Aspose.Email debajo del **References** nodo del proyecto.
-## **Desinstalar Aspose.Email para.NET**
-Si ha utilizado el instalador MSI para implementar Aspose.Email, siga estos pasos para eliminar por completo el componente y las demostraciones y la documentación asociadas:
+1. En el Explorador de Soluciones, expande el nodo del proyecto al que deseas agregar una referencia.
+1. Haz clic derecho en el nodo **Referencias** del proyecto y selecciona **Agregar Referencia** del menú.
+1. En el cuadro de diálogo Agregar Referencia, selecciona la pestaña **.NET** (generalmente está seleccionada por defecto).
+1. Si has utilizado un instalador MSI para instalar Aspose.Email, verás Aspose.Email en el panel superior. Selecciónalo y luego haz clic en el botón **Seleccionar**.
+1. Si solo has descargado y descomprimido el DLL, haz clic en el botón **Examinar** y localiza el archivo Aspose.Email.dll. Has referenciado Aspose.Email y debería aparecer en el panel **SelectedComponents** del cuadro de diálogo.
+1. Haz clic en **Aceptar**. Una referencia de Aspose.Email aparece bajo el nodo **Referencias** del proyecto.
+## **Desinstalando Aspose.Email para .NET**
+Si has utilizado un instalador MSI para desplegar Aspose.Email, sigue estos pasos para eliminar completamente el componente y las demostraciones y documentación asociadas:
 
-1. Desde el **Start** menú, seleccionar **Settings** seguido de **Panel de control**.
-1. Click **Agregar o quitar programas**.
-1. Select **Aspose.Email**.
-1. Haga clic en el **Change/Remove** botón para eliminar Aspose.Email.
-## **Dirigido a una versión específica de.NET Framework**
-Aunque Aspose.Email hace referencia a .NET Framework 1.1, es posible usarlo en una máquina que solo tenga instalada la versión 1.0. Sin embargo, es necesario añadir una entrada al archivo de configuración de la aplicación para redirigir las referencias, ya que, de lo contrario, el componente intentará cargar los ensamblajes desde .NET Framework 1.1. Todos los ensamblados que componen .NET Framework se deben redirigir para que usen la versión 1.0 de .NET Framework. El archivo de configuración es un archivo XML que se puede cambiar según sea necesario. Los desarrolladores pueden usarlo para cambiar la configuración sin tener que volver a compilar las aplicaciones. El nombre y la ubicación del archivo de configuración de la aplicación dependen del host de la aplicación, que puede ser uno de los siguientes:
+1. Desde el menú **Inicio**, selecciona **Configuración** seguido de **Panel de Control**.
+1. Haz clic en **Agregar/Quitar Programas**.
+1. Selecciona **Aspose.Email**.
+1. Haz clic en el botón **Cambiar/Quitar** para quitar Aspose.Email.
+## **Dirigiendo a una Versión Específica de .NET Framework**
+Aunque Aspose.Email referencia .NET Framework 1.1, es posible usarlo en una máquina con solo la versión 1.0 instalada. Pero necesitas agregar una entrada al archivo de configuración de la aplicación para redirigir las referencias porque de lo contrario el componente intentará cargar ensamblados de .NET Framework 1.1. Cada ensamblado que compone .NET Framework debe ser redirigido para usar la versión 1.0 de .NET Framework. El archivo de configuración es un archivo XML que puede ser cambiado según sea necesario. Los desarrolladores pueden usarlo para cambiar configuraciones sin recompilar aplicaciones. El nombre y la ubicación del archivo de configuración de la aplicación dependen del host de la aplicación, que puede ser uno de los siguientes:
 
-- Aplicación alojada en un ejecutable: el archivo de configuración de una aplicación alojada por el host ejecutable se encuentra en el mismo directorio que la aplicación. El nombre del archivo de configuración es el nombre de la aplicación con la extensión.config. Por ejemplo, una aplicación denominada myApp.exe se puede asociar a un archivo de configuración denominado MyApp.exe.config.
-- Aplicación alojada en ASP.NET: los archivos de configuración de ASP.NET se denominan Web.config y también se encuentran en el directorio de la aplicación. Introduzca el siguiente XML en el archivo de configuración de la aplicación:
+- Aplicación alojada en un ejecutable: El archivo de configuración para una aplicación alojada por el host ejecutable está en el mismo directorio que la aplicación. El nombre del archivo de configuración es el nombre de la aplicación con una extensión .config. Por ejemplo, una aplicación llamada myApp.exe puede estar asociada con un archivo de configuración llamado myApp.exe.config.
+- Aplicación alojada en ASP.NET: Los archivos de configuración de ASP.NET se llaman Web.config y también se colocan en el directorio de la aplicación. Ingresa el siguiente XML en el archivo de configuración de la aplicación:
 
 **XML**
 
@@ -361,8 +361,6 @@ Aunque Aspose.Email hace referencia a .NET Framework 1.1, es posible usarlo en u
 
 </configuration>
 
+``` 
 
-
-```
-
-Para obtener más información, consulte [Artículo de MSDN](http://msdn.microsoft.com/library/default.asp?url/library/en-us/cpguide/html/cpcontargetingnetframeworkversion.asp)
+Para más información consulta el [artículo de MSDN](http://msdn.microsoft.com/library/default.asp?url/library/en-us/cpguide/html/cpcontargetingnetframeworkversion.asp)

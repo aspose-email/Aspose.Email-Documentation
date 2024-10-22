@@ -1,6 +1,6 @@
 ---
-title: "Trabajando con correos electrónicos usando Aspose.Email"
-url: /es/java/working-with-emails-using-aspose-email/
+title: "Trabajando con correos electrónicos utilizando Aspose.Email"
+url: /es/java/trabajando-con-correos-electronicos-utilizando-aspose-email/
 weight: 20
 type: docs
 ---

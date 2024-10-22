@@ -1,59 +1,59 @@
 ---
-title: "Extraer el contenido de los mensajes de los correos electrónicos"
-url: /es/java/extracting-message-contents-from-emails/
+title: "Extracción de Contenidos de Mensajes de Correos Electrónicos"
+url: /es/java/extraccion-de-contenidos-de-mensajes-de-correos-electronicos/
 weight: 30
 type: docs
 ---
 
-## **Mostrar información de correo electrónico en la pantalla**
+## **Mostrando Información del Correo Electrónico en Pantalla**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getDate()) representa un mensaje de correo electrónico y permite a los desarrolladores acceder a las propiedades de los mensajes de correo electrónico. La información del encabezado (que se explica en [Extracción de encabezados de correo electrónico](#extracting-email-headers)) pueden extraerse y manipularse de diferentes maneras. En este artículo se explica cómo mostrar la información del encabezado del correo electrónico seleccionado y el cuerpo del correo electrónico en la pantalla.
+El [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getDate()) representa un mensaje de correo electrónico y permite a los desarrolladores acceder a las propiedades del mensaje de correo electrónico. La información del encabezado (discutida en [Extracción de Encabezados de Correo Electrónico](#extracting-email-headers)) puede ser extraída y manipulada de diferentes maneras. Este artículo explica cómo mostrar en pantalla la información del encabezado de correo electrónico seleccionada y el cuerpo del correo electrónico.
 
-1. Crea una instancia del **MailMessage**.
-2. Cargue un mensaje de correo electrónico en **MailMessage** instance.
+1. Crea una instancia de **MailMessage**.
+2. Carga un mensaje de correo electrónico en la instancia de **MailMessage**.
 3. Muestra el contenido del correo electrónico en la pantalla.
 
-El código siguiente muestra cómo cargar un mensaje de correo electrónico y mostrar su contenido (origen, destino, asunto y cuerpo del correo electrónico) en la pantalla.
+El código a continuación demuestra cómo cargar un mensaje de correo electrónico y mostrar su contenido - de, para, asunto y cuerpo del correo electrónico - en pantalla.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-DisplayEmailInformation-DisplayEmailInformation.java" >}}
 
-### **Obteniendo la fecha y hora del mensaje**
+### **Obteniendo la Fecha y Hora del Mensaje**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) La clase se puede usar para recuperar la fecha del mensaje en UTC o en la zona horaria local. Esta información se puede resumir de la siguiente manera:
+La clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) puede ser utilizada para recuperar la fecha del mensaje en UTC o en la zona horaria local. Esta información puede ser resumida de la siguiente manera:
 
 1. [MailMessage.getDate()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getDate--) - devuelve la fecha en UTC
 1. [MailMessage.getLocalDate()](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getLocalDate--) - devuelve la fecha en la zona horaria local
-2. [MailMessage.isLocalDate](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#isLocalDate--) Returns **true**, si **MailMessage.getDate()** está en la zona horaria local
+2. [MailMessage.isLocalDate](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#isLocalDate--) Devuelve **true**, si **MailMessage.getDate()** está en la zona horaria local
 
-## **Extracción de encabezados de correo electrónico**
+## **Extracción de Encabezados de Correo Electrónico**
 
-El encabezado del correo electrónico representa un conjunto estándar de campos de encabezado definido por Internet y RFC que se incluye en los mensajes de correo electrónico de Internet. Se puede especificar un encabezado de correo electrónico mediante el [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) clase. Los tipos de encabezados más comunes se definen en [HeaderType](https://reference.aspose.com/email/java/com.aspose.email/headertype/) clase. Es una clase sellada que funciona como una enumeración normal.
+El encabezado de correo electrónico representa un conjunto estándar de campos de encabezado definidos por Internet y RFC incluidos en los mensajes de correo electrónico de Internet. Un encabezado de correo electrónico puede ser especificado utilizando la clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/). Los tipos de encabezados comunes están definidos en la clase [HeaderType](https://reference.aspose.com/email/java/com.aspose.email/headertype/). Es una clase sellada que funciona como una enumeración normal.
 
-Para extraer los encabezados de un correo electrónico, sigue estos pasos:
+Para extraer encabezados de un correo electrónico, sigue estos pasos:
 
-1. Crea una instancia del **MailMessage** class.
-2. Cargue un mensaje de correo electrónico en la instancia de **MailMessage** class.
-3. Una vez que se haya cargado un mensaje de correo electrónico, obtendremos su contenido sin procesar. El **MailMessage** la clase en sí contiene propiedades como From, To, Cc, Subject, etc. Estas propiedades se pueden extraer de los encabezados.
-4. Muestra el contenido sin procesar.
+1. Crea una instancia de la clase **MailMessage**.
+2. Carga un mensaje de correo electrónico en la instancia de la clase **MailMessage**.
+3. Después de que un mensaje de correo electrónico ha sido cargado, obtendremos su contenido en bruto. La clase **MailMessage** contiene propiedades como De, Para, Cc, Asunto, etc. Estas propiedades pueden ser extraídas de los encabezados.
+4. Muestra el contenido en bruto.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-EmailHeaders-ExtractingEmailHeaders.java" >}}
 
-## **Obtener valores de encabezado decodificados**
+## **Obtener Valores de Encabezado Decodificados**
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-EmailHeaders-GetDecodedHeaderValueFromHeaderCollection.java" >}}
 
-## **Obtenga y modifique el encabezado de disposición de recursos vinculados**
+## **Obtener y Modificar el Encabezado de Disposición de Recurso Vinculado**
 
-Se puede acceder al recurso vinculado y manipularlo mediante programación en el objeto de mensaje de correo electrónico. El [getContentDisposition()](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/#getContentDisposition--) método del [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) la clase obtiene el encabezado Content-Disposition. El ejemplo de código siguiente muestra cómo acceder y modificar el nombre de archivo del recurso vinculado:
+El recurso vinculado puede ser accedido y manipulado programáticamente en el objeto del mensaje de correo electrónico. El método [getContentDisposition()](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/#getContentDisposition--) de la clase [LinkedResource](https://reference.aspose.com/email/java/com.aspose.email/linkedresource/) obtiene el encabezado Content-Disposition. El siguiente ejemplo de código demuestra cómo acceder y modificar el nombre del archivo del recurso vinculado:
 
 ```java
 MailMessage eml = MailMessage.load(fileName);
 eml.getLinkedResources().get_Item(0).getContentDisposition().setFileName("changed.png");
 ```
-## **Obtener el cuerpo del HTML como texto sin formato**
+## **Obtener el cuerpo HTML como texto plano**
 
-The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) La clase proporciona la función para extraer el cuerpo HTML del mensaje como texto sin formato. El **MailMessage** la clase proporciona una [GetHtmlBodyText](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBodyText-boolean-) método que devuelve el cuerpo HTML en texto plano. El **GetHtmlBodyText** El método acepta un parámetro booleano que indica si el cuerpo debe contener URL o no. Si se pasa el parámetro como verdadero, se indica que el cuerpo del HTML debe contener direcciones URL.
+La clase [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/) proporciona la función de extraer el cuerpo HTML del mensaje como texto plano. La clase **MailMessage** proporciona un método [GetHtmlBodyText](https://reference.aspose.com/email/java/com.aspose.email/mailmessage/#getHtmlBodyText-boolean-) que devuelve el cuerpo HTML en texto plano. El método **GetHtmlBodyText** acepta un parámetro booleano que indica si el cuerpo debe contener URLs o no. Pasar el parámetro como verdadero indica que el cuerpo HTML debe contener URLs.
 
-El siguiente fragmento de código demuestra el uso de **GetHtmlBodyText** método para extraer el cuerpo HTML del correo electrónico como texto sin formato.
+El siguiente fragmento de código demuestra el uso del método **GetHtmlBodyText** para extraer el cuerpo HTML del correo electrónico como texto plano.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-GetHTMLBodyAsPlainText-1.java" >}}

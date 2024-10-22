@@ -1,22 +1,22 @@
 ---
-title: "Lea la información sobre archivos OLM de Outlook para Mac y obtenga carpetas y subcarpetas"
+title: "Leer el archivo OLM de Outlook para Mac y obtener información de carpetas y subcarpetas"
 url: /es/python-net/read-outlook-for-mac-olm-file-and-get-folders-and-subfolders-information/
 weight: 120
 type: docs
 ---
 
-OLM (Outlook for Mac Archive) es un formato de archivo asociado a Microsoft Outlook para Mac. Se utiliza para archivar y almacenar mensajes de correo electrónico, contactos, elementos del calendario, tareas y otros datos de Outlook en ordenadores Mac. Los archivos OLM sirven como formato de copia de seguridad o archivo, lo que permite a los usuarios guardar sus datos de Outlook para Mac para consultarlos o migrarlos en el futuro. Es importante tener en cuenta que los archivos OLM son específicos de Outlook para Mac y no son compatibles con el formato de archivo PST (tabla de almacenamiento personal) que utiliza Outlook en Windows. Si necesitas transferir datos de Outlook entre diferentes plataformas, las herramientas de conversión serán útiles. Aspose.Email ofrece este tipo de herramientas que incluyen la apertura, la lectura y otras funcionalidades para trabajar con archivos OLM.
+OLM (Archivo de Outlook para Mac) es un formato de archivo asociado con Microsoft Outlook para Mac. Se utiliza para archivar y almacenar mensajes de correo electrónico, contactos, elementos de calendario, tareas y otros datos de Outlook en computadoras Mac. Los archivos OLM sirven como formato de respaldo o archivo, permitiendo a los usuarios guardar sus datos de Outlook para Mac para referencia futura o migración. Es importante señalar que los archivos OLM son específicos de Outlook para Mac y no son compatibles con el formato de archivo PST (Tabla de Almacenamiento Personal) utilizado por Outlook en Windows. Si necesita transferir datos de Outlook entre diferentes plataformas, las herramientas de conversión serán útiles. Aspose.Email ofrece tales herramientas, incluyendo abrir, leer y otras funcionalidades para trabajar con archivos OLM.
 
 ## **Apertura de archivos en formato OLM**
 
 Los archivos en formato OLM se pueden abrir de dos maneras:
 
-- uso del constructor
-- usando el método estático 'from_file'
+- utilizando el constructor
+- utilizando el método estático 'from_file'
 
 ### **Apertura de archivos por constructor**
 
-Para abrir un archivo, llame al constructor del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) clase y pasarle el nombre completo del archivo o la secuencia como argumento:
+Para abrir un archivo, llame al constructor de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) y pase el nombre completo del archivo o el flujo como argumento:
 
 ```py
 import aspose.email as ae
@@ -25,9 +25,9 @@ fileName = "my.olm"
 olm = ae.storage.olm.OlmStorage(fileName)
 ```
 
-### **Abrir archivos mediante el método estático fromFile**
+### **Apertura de archivos usando el método estático FromFile**
 
-Para abrir un archivo, utilice el método estático 'from_file' del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) clase y pasarle el nombre completo del archivo o la secuencia como argumento:
+Para abrir un archivo, use el método estático 'from_file' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) y pase el nombre completo del archivo o el flujo como argumento:
 
 ```py
 import aspose.email as ae
@@ -36,9 +36,9 @@ fileName = "my.olm"
 olm = ae.storage.olm.OlmStorage.from_file(fileName)
 ```
 
-## **Obtención de carpetas**
+## **Obteniendo carpetas**
 
-Puede visualizar y mostrar la jerarquía de carpetas recuperada de un archivo OLM mediante la función «print_all_folders». Toma la propiedad 'folder_hierarchy' de [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) clase y un nivel de indentación como entrada, luego recorre recursivamente la jerarquía para imprimir el nombre de cada carpeta junto con la sangría correspondiente. El ejemplo de código que aparece a continuación muestra cómo utilizar esta función para mostrar la jerarquía de carpetas desde un archivo OLM. Muestra la lista de todas las carpetas en orden jerárquico:
+Puede visualizar y mostrar la jerarquía de carpetas recuperada de un archivo OLM utilizando la función 'print_all_folders'. Esta toma la propiedad 'folder_hierarchy' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) y un nivel de sangrado como entrada, luego recorre recursivamente la jerarquía para imprimir el nombre de cada carpeta junto con la sangría apropiada. El siguiente ejemplo de código demuestra cómo usar esta función para mostrar la jerarquía de carpetas de un archivo OLM. Muestra la lista de todas las carpetas en orden jerárquico:
 
 ```py
 import aspose.email as ae
@@ -54,7 +54,7 @@ olm = ae.storage.olm.OlmStorage(fileName)
 print_all_folders(olm.folder_hierarchy, "")
 ```
 
-El ejemplo de código anterior pretende mostrar la jerarquía de carpetas del archivo OLM mediante una función recursiva en un formato más estructurado y legible. Aspose.Email también permite acceder directamente a la estructura de carpetas desde el archivo OLM mediante el método 'get_folders () 'del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) class.
+El ejemplo de código anterior está destinado a mostrar la jerarquía de carpetas del archivo OLM a través de una función recursiva en un formato más estructurado y legible. Aspose.Email también hace posible acceder directamente a la estructura de carpetas del archivo OLM utilizando el método 'get_folders()' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class).
 
 ```py
 import aspose.email as ae
@@ -64,7 +64,7 @@ olm = ae.storage.olm.OlmStorage.from_file(fileName)
 folders = olm.get_folders()
 ```
 
-Además, es posible obtener cualquier carpeta por nombre. El siguiente ejemplo de código utiliza el método 'get_folder (name, ignore_case) 'del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) clase pasando el nombre de la carpeta y la distinción entre mayúsculas y minúsculas como parámetros para recuperar la carpeta por su nombre:
+Además, es posible obtener cualquier carpeta por nombre. El siguiente ejemplo de código utiliza el método 'get_folder(name, ignore_case)' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) pasando el nombre de la carpeta y la sensibilidad de mayúsculas como parámetros para recuperar la carpeta por su nombre:
 
 
 ```py
@@ -77,10 +77,10 @@ folder = olm.get_folder("Inbox", True)
 
 ## **Lista de correos electrónicos**
 
-Los fragmentos de código que aparecen a continuación muestran cómo usar la biblioteca Aspose.Email para leer y extraer los asuntos de los correos electrónicos de un archivo de Outlook para Mac (OLM). [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) class, que representa una carpeta, tiene los siguientes métodos para obtener la lista de correos electrónicos:
+Los fragmentos de código a continuación demuestran cómo usar la biblioteca Aspose.Email para leer y extraer los asuntos de los correos electrónicos de un archivo de Outlook para Mac (OLM). La clase [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class), que representa una carpeta, tiene los siguientes métodos para obtener la lista de correos electrónicos:
 
-- 'enumerate_messages () ': recorre en iteración cada mensaje de correo electrónico de la carpeta. Este método devuelve los mensajes como instancias del [OlmMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) clase que proporciona información básica sobre cada mensaje de correo electrónico, como el asunto, el remitente, la fecha, etc.
-- 'enumerate_mapi_messages () ': también recorre en iteración cada mensaje de correo electrónico de una carpeta, pero en este caso, devuelve los mensajes como instancias del [MapiMessage](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/#mapimessage-class) clase que representa un mensaje de correo electrónico de una manera más detallada y específica de MAPI. Proporciona acceso a una amplia gama de propiedades y detalles del mensaje de correo electrónico, lo que permite un procesamiento más avanzado y especializado.
+- 'enumerate_messages()' - Itera a través de cada mensaje de correo electrónico en la carpeta. Este método devuelve mensajes como instancias de la clase [OlmMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) que proporciona información básica sobre cada mensaje de correo, como asunto, remitente, fecha, etc.
+- 'enumerate_mapi_messages()' - También itera a través de cada mensaje de correo electrónico en una carpeta, pero en este caso, devuelve mensajes como instancias de la clase [MapiMessage](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/#mapimessage-class) que representa un mensaje de correo de manera más detallada y específica de MAPI. Proporciona acceso a una amplia gama de propiedades y detalles del mensaje de correo, permitiendo un procesamiento más avanzado y especializado.
 
 ### **Uso del método EnumerateMessages**
 
@@ -110,10 +110,10 @@ for msg in folder.enumerate_mapi_messages():
 
 ### **Otras propiedades útiles**
 
-Las otras propiedades útiles del [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) las clases son:
+Las otras propiedades útiles de la clase [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) son: 
 
-- 'has_messages': obtiene un valor que indica si la carpeta actual tiene mensajes.
-- 'message_count': obtiene el recuento de mensajes.
+- 'has_messages' - Obtiene un valor que indica si la carpeta actual tiene mensajes.
+- 'message_count' - Obtiene el conteo de mensajes.
 
 ```py
 import aspose.email as ae
@@ -123,14 +123,14 @@ olm = ae.storage.olm.OlmStorage.from_file(fileName)
 folder = olm.get_folder("Inbox", True)
 
 if folder.has_messages:
-   print(f"Message count: {folder.message_count}")
+   print(f"Conteo de mensajes: {folder.message_count}")
 ```
 
 ### **Obtener o establecer la fecha de modificación de un mensaje**
 
-Puede recuperar información sobre la hora de la última modificación de un mensaje de correo electrónico. La propiedad 'modified_date' de [OlmMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) La clase representa la fecha y la hora en que se modificó el mensaje por última vez.
+Puede recuperar información sobre la hora de la última modificación de un mensaje de correo electrónico. La propiedad 'modified_date' de la clase [OlmMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) representa la fecha y hora en que se modificó por última vez el mensaje. 
 
-Este es un ejemplo que demuestra el uso de la propiedad:
+Aquí hay un ejemplo que demuestra el uso de la propiedad:
 
 ```py
 import aspose.email as ae
@@ -145,9 +145,9 @@ for message_info in folder.enumerate_messages():
 
 ## **Extracción de correos electrónicos**
 
-Puede recuperar los datos reales del mensaje MAPI de un almacenamiento de correo electrónico.El método 'extract_mapi_message (message_info) 'del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) La clase se usa para extraer el mensaje MAPI del almacenamiento en función del message_info proporcionado. 
+Puede recuperar los datos reales del mensaje MAPI de un almacenamiento de correos electrónicos. El método 'extract_mapi_message(message_info)' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) se utiliza para extraer el mensaje MAPI del almacenamiento según la información del mensaje proporcionada.  
 
-El ejemplo de código que aparece a continuación muestra cómo utilizar este método:
+El siguiente ejemplo de código demuestra cómo usar este método:
 
 ```py
 import aspose.email as ae
@@ -160,16 +160,16 @@ for message_info in folder.enumerate_messages():
     msg = olm.extract_mapi_message(message_info)
 ```
 
-## **Extraer todos los elementos de un correo electrónico mediante la API Traversal**
+## **Extracción de todos los ítems de un correo electrónico utilizando la API de recorrido**
 
-Puede extraer todos los elementos de un archivo OLM de Outlook en la medida de lo posible, sin descartar excepciones, incluso si algunos datos del archivo original están dañados. Para realizar esto, utilice [OLMStorage (devolución de llamada de TraversalExceptions)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#constructors) constructor y [Cargar (cadena FileName)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) método en lugar del método fromFile. El constructor permite definir un método de devolución de llamada.
+Puede extraer todos los ítems de un archivo OLM de Outlook tanto como sea posible, sin lanzar excepciones, incluso si algunos datos del archivo original están corruptos. Para realizar esto, use el constructor [OlmStorage(TraversalExceptionsCallback callback)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/#constructors) y el método [Load(string fileName)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) en lugar del método FromFile. El constructor permite definir un método de devolución de llamada.
 
 ```cs
-using (var olm = new OlmStorage((exception, id) => { /* Exception handling  code. */ }))
+using (var olm = new OlmStorage((exception, id) => { /* Código de manejo de excepciones. */ }))
 ```
-El método de devolución de llamada hace que estén disponibles las excepciones de carga y recorrido.
+El método de devolución de llamada hace que las excepciones de carga y recorrido estén disponibles.
 
-The [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) el método devuelve 'true' si el archivo se ha cargado correctamente y es posible recorrerlo más a fondo. Si un archivo está dañado y no es posible recorrerlo, se devuelve «falso».
+El método [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) devuelve 'true' si el archivo se ha cargado correctamente y se puede realizar un recorrido adicional. Si un archivo está dañado y no se puede realizar un recorrido, se devuelve 'false'.
 
 ```cs
 if (olm.Load(fileName))
@@ -177,18 +177,18 @@ if (olm.Load(fileName))
 
 El siguiente fragmento de código y los pasos muestran cómo usar esta API:
 
-1. Cree una nueva instancia del [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) class, pasando una llamada de manejo de excepciones para gestionar cualquier excepción encontrada durante el proceso.
-2. Cargue el archivo OLM llamando al [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) método de la instancia de OLMStorage.
-3. Si el archivo OLM se ha cargado correctamente, obtenga la jerarquía de carpetas llamando al [GetFolders](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getfolders/) método en la instancia de OLMStorage. Esto devuelve una lista de objetos OLMFolder.
-4. Llame al método ExtractItems y pase la instancia de OLMStorage y la lista de objetos OLMFolder.
-5. En el método ExtractItems, recorra en iteración cada carpeta de la lista de carpetas.
-6. Si la carpeta contiene mensajes (correos electrónicos), imprima el nombre de la carpeta en la consola mediante Console.WriteLine (folder).
-7. Revisa los mensajes de la carpeta actual llamando al método EnumerateMessages en la instancia de OLMStorage y pasando la carpeta actual como argumento.
-8. Imprima el asunto de cada mensaje en la consola mediante Console.writeLine (msg.Subject).
-9. Si la carpeta tiene subcarpetas, vuelva a llamar de forma recursiva al método ExtractItems y pase la instancia de OLMStorage y las subcarpetas de la carpeta actual.
+1. Cree una nueva instancia de la clase [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/), pasando un callback de manejo de excepciones para manejar cualquier excepción encontrada durante el proceso.
+2. Cargue el archivo OLM llamando al método [Load](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/load/#load_1) de la instancia de OlmStorage. 
+3. Si el archivo OLM se carga correctamente, obtenga la jerarquía de carpetas llamando al método [GetFolders](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getfolders/) en la instancia de OlmStorage. Esto devuelve una lista de objetos OlmFolder.
+4. Llame al método ExtractItems, pasando la instancia de OlmStorage y la lista de objetos OlmFolder.
+5. En el método ExtractItems, itere a través de cada carpeta en la lista de carpetas.
+6. Si la carpeta contiene mensajes (correos electrónicos), imprima el nombre de la carpeta en la consola usando Console.WriteLine(folder).
+7. Itere a través de los mensajes en la carpeta actual llamando al método EnumerateMessages en la instancia de OlmStorage, pasando la carpeta actual como argumento.
+8. Imprima el asunto de cada mensaje en la consola usando Console.WriteLine(msg.Subject).
+9. Si la carpeta tiene subcarpetas, llame recursivamente al método ExtractItems nuevamente, pasando la instancia de OlmStorage y las subcarpetas de la carpeta actual.
 
 ```cs
-using (var olm = new OlmStorage((exception, id) => { /* Exception handling  code. */ }))
+using (var olm = new OlmStorage((exception, id) => { /* Código de manejo de excepciones. */ }))
 {
     if (olm.Load(fileName))
     {
@@ -218,9 +218,9 @@ private static void ExtractItems(OlmStorage olm, List<OlmFolder> folders)
     }
 }
 ```
-## **Extraer mensajes de OLM mediante identificadores**
+## **Extraer mensajes de OLM por identificadores**
 
-Para acceder a los datos de los mensajes MAPI, puede usar la propiedad 'entry_id' para obtener el identificador único (ID de entrada) de un mensaje mediante el [OlmMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class) clase. Luego, puede utilizar el método 'extract_mapi_message (id) 'del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) class, pasando el ID de entrada como parámetro para recuperar el mensaje MAPI asociado a ese ID de entrada en particular. El siguiente fragmento de código muestra el uso de estas funciones:
+Para acceder a los datos del mensaje MAPI, puede usar la propiedad 'entry_id' para obtener el identificador único (Entry ID) de un mensaje utilizando la clase [OlmMessageInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmmessageinfo/#olmmessageinfo-class). Luego, puede utilizar el método 'extract_mapi_message(id)' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class), pasando el Entry ID como parámetro para recuperar el mensaje MAPI asociado con ese Entry ID particular. El siguiente fragmento de código demuestra el uso de estas características:
 
 ```py
 
@@ -236,7 +236,7 @@ for message_info in folder.enumerate_messages():
 
 ## **Obtener la ruta de la carpeta**
 
-También puede obtener la ruta jerárquica o la ubicación de la carpeta dentro del archivo OLM de Outlook. Aspose.Email proporciona la propiedad «ruta» del [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) clase que devuelve la ruta de la carpeta. El siguiente fragmento de código muestra el uso de esta propiedad:
+También puede obtener la ruta jerárquica o ubicación de la carpeta dentro del archivo OLM de Outlook. Aspose.Email proporciona la propiedad 'path' de la clase [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) que devuelve la ruta de la carpeta. El siguiente fragmento de código demuestra el uso de esta propiedad:
 
 ```py
 import aspose.email as ae
@@ -244,7 +244,7 @@ import aspose.email as ae
 
 def print_path(storage, folders):
     for folder in folders:
-        # print the current folder path
+        # imprime la ruta de la carpeta actual
         print(folder.path)
 
         if folder.sub_folders:
@@ -256,9 +256,9 @@ olm = ae.storage.olm.OlmStorage(fileName)
 print_path(olm, olm.folder_hierarchy)
 ```
 
-## **Cuente el número de elementos de la carpeta**
+## **Contar el número de ítems en la carpeta**
 
-Aspose.Email ofrece la posibilidad de contar el número total de mensajes de correo electrónico contenidos en la carpeta específica de un archivo OLM de Outlook. La propiedad 'message_count' de [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) la clase devuelve el recuento total de elementos (mensajes de correo electrónico) almacenados en una carpeta específica del archivo OLM. El siguiente fragmento de código muestra el uso de esta propiedad:
+Aspose.Email proporciona la capacidad de contar el número total de mensajes de correo electrónico contenidos dentro de una carpeta específica de un archivo OLM de Outlook. La propiedad 'message_count' de la clase [OlmFolder](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmfolder/#olmfolder-class) devuelve el conteo total de ítems (mensajes de correo electrónico) almacenados dentro de una carpeta específica en el archivo OLM. El siguiente fragmento de código demuestra el uso de esta propiedad:
 
 ```py
 import aspose.email as ae
@@ -266,7 +266,7 @@ import aspose.email as ae
 
 def print_message_count(folders):
     for folder in folders:
-        print(f"Message Count [{folder.name}]: {folder.message_count}")
+        print(f"Conteo de mensajes [{folder.name}]: {folder.message_count}")
 
 
 fileName = "my.olm"
@@ -274,10 +274,10 @@ olm = ae.storage.olm.OlmStorage(fileName)
 print_message_count(olm.folder_hierarchy)
 ```
 
-### **Obtenga el recuento total de artículos de OLMStorage**
+### **Obtener el conteo total de ítems de OlmStorage**
 
-El método 'get_total_items_count () 'del [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) la clase devuelve el número total de elementos de mensaje contenidos en el almacenamiento de OLM.
- 
+El método 'get_total_items_count()' de la clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) devuelve el número total de ítems de mensajes contenidos en el almacenamiento OLM.
+  
 ```py
 import aspose.email as ae
 
@@ -286,29 +286,29 @@ olm = ae.storage.olm.OlmStorage(fileName)
 count = olm.get_total_items_count()
 ```
 
-## **Recuperar los colores de las categorías de Outlook**
+## **Recuperar colores de categorías de Outlook**
 
-Con Aspose.Email, puede recuperar y utilizar fácilmente los colores de categoría asociados a las categorías de elementos de Outlook almacenadas en archivos OLM. El [OlmItemCategory](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmitemcategory/) La clase le permite acceder a los nombres de las categorías y sus respectivos colores representados en formato hexadecimal. El [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) La clase presenta el método 'getCategories () 'para recuperar una lista de categorías del almacenamiento de OLM. Al implementar el siguiente ejemplo de código, puedes recuperar sin esfuerzo todas las categorías usadas de un archivo de almacenamiento OML y acceder al nombre de la categoría junto con su color.
+Con Aspose.Email, puede recuperar y utilizar fácilmente los colores de las categorías asociadas con elementos de categoría de Outlook almacenados en archivos OLM. La clase [OlmItemCategory](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmitemcategory/) le permite acceder a los nombres de categoría y sus respectivos colores representados en formato hexadecimal. La clase [OlmStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.olm/olmstorage/#olmstorage-class) presenta el método 'GetCategories()' para recuperar una lista de categorías del almacenamiento OLM. Al implementar el siguiente fragmento de código, puede recuperar fácilmente todas las categorías utilizadas de un archivo de almacenamiento OML y acceder al nombre de la categoría junto con su color. 
 
 ```py
 with OlmStorage.FromFile("storage.olm") as olm:
     categories = olm.GetCategories()
-   
+    
     for category in categories:
-        print(f"Category name: {category.Name}")
-       
-        # Color is represented as a hexadecimal value: #rrggbb
-        print(f"Category color: {category.Color}")
+        print(f"Nombre de la categoría: {category.Name}")
+        
+        # El color se representa como un valor hexadecimal: #rrggbb
+        print(f"Color de la categoría: {category.Color}")
 ```
 
-Además, puede recuperar el color de la categoría asociado a mensajes específicos recorriendo los mensajes de una carpeta y accediendo al color de la categoría correspondiente según el nombre de la categoría.
+Además, puede recuperar el color de la categoría asociado con mensajes específicos iterando a través de los mensajes en una carpeta y accediendo al color de la categoría correspondiente según el nombre de la categoría.
 
 ```py
 for msg in olm.EnumerateMessages(folder):
     if msg.Categories is not None:
         for msgCategory in msg.Categories:
-            print(f"Category name: {msgCategory}")
+            print(f"Nombre de la categoría: {msgCategory}")
             categoryColor = next((c.Color for c in categories if c.Name.lower() == msgCategory.lower()), None)
             if categoryColor is not None:
-                print(f"Category color: {categoryColor}")
+                print(f"Color de la categoría: {categoryColor}")
 ```

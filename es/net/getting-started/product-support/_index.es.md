@@ -1,42 +1,42 @@
 ---
-title: "Soporte de productos"
+title: "Soporte de Producto"
 url: /es/net/product-support/
 weight: 110
 type: docs
 ---
 
-## **Soporte técnico**
+## **Soporte Técnico**
 
-Aspose ofrece soporte técnico gratuito e ilimitado para todos sus productos. El soporte está disponible para todos los usuarios, incluidos los que están realizando una evaluación.
+Aspose ofrece soporte técnico gratuito e ilimitado para todos sus productos. El soporte está disponible para todos los usuarios, incluidos aquellos que están en evaluación.
 
-Si necesitas ayuda, [**visita los foros de Aspose.**](https://forum.aspose.com/c/email). Publica tu pregunta en el foro Aspose.Email for.NET y será respondida en unas horas.
+Si necesitas ayuda, [**visita los Foros de Aspose**](https://forum.aspose.com/c/email). Publica tu pregunta en el foro de Aspose.Email para .NET y será respondida en pocas horas.
 
-Si esperas una respuesta en los foros, ten en cuenta las diferencias horarias.
-### **Reportar un problema**
-Si tienes un problema, sigue estos sencillos pasos para asegurarte de que se resuelva de manera eficiente:
+Cuando esperes una respuesta en los foros, por favor ten en cuenta las diferencias de huso horario.
+### **Reportando un Problema**
+Si tienes un problema, sigue estos simples pasos para asegurarte de que se resuelva de manera eficiente:
 
-- Asegúrate de usar la versión más reciente del producto antes de informar del problema. Consulte el [Página de descarga de Aspose.Email para.NET](https://downloads.aspose.com/email/net) para obtener información sobre la versión más reciente.
-- Eche un vistazo a la [forums](http://www.aspose.com/community/forums/default.aspx), esta Wiki de documentación y el [Referencia de API](https://apireference.aspose.com/email/net) antes de informar de un problema. Es posible que su pregunta ya tenga una respuesta.
-- Cuando denuncies un problema, incluye el documento original y, posiblemente, un fragmento del código que cause el problema. Si necesitas adjuntar varios archivos, comprímelos en uno solo. Adjuntar tus documentos en los foros es seguro, ya que solo tú y los desarrolladores de Aspose tenéis acceso a los archivos adjuntos.
-- Intenta informar de un problema por hilo. Si tienes otro problema, repórtalo en otro hilo.
+- Asegúrate de utilizar la última versión del producto antes de reportar el problema. Consulta la [página de descarga de Aspose.Email para .NET](https://downloads.aspose.com/email/net) para conocer la última versión.
+- Revisa los [foros](http://www.aspose.com/community/forums/default.aspx), esta Wiki de documentación y la [Referencia de API](https://apireference.aspose.com/email/net) antes de reportar un problema. Tu pregunta podría ya tener respuesta.
+- Al reportar un problema, incluye el documento original y posiblemente un fragmento de tu código que causa el problema. Si necesitas adjuntar múltiples archivos, comprímelos en uno solo. Es seguro adjuntar tus documentos en los foros ya que solo tú y los desarrolladores de Aspose tienen acceso a los archivos adjuntos.
+- Por favor, intenta reportar un problema por hilo. Si tienes otro problema, repórtalo en un hilo separado.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose no proporciona asistencia técnica por teléfono. La asistencia telefónica solo está disponible para preguntas sobre ventas y compras.
+Aspose no proporciona soporte técnico por teléfono. El soporte telefónico solo está disponible para preguntas de ventas y compras.
 
 {{% /alert %}}
 
-## **Resources**
+## **Recursos**
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-En esta tabla se enumeran los recursos técnicos importantes de Aspose.Email para .NET.
+Esta tabla enumera recursos técnicos importantes de Aspose.Email para .NET.
 
-|**Resource**|**Description**|
-|: - |: - |
-|[Página de inicio de Aspose.Email para .NET](https://products.aspose.com/email/es/net)|Página de inicio del producto. |
-|[Blog de Aspose.Email](https://blog.aspose.com/category/email/)|Compruébelo con frecuencia para obtener información sobre las nuevas versiones y consejos útiles sobre Aspose.Email. |
-|[Descargar Aspose.Email para.NET](https://downloads.aspose.com/email/net)|Descargue la última versión de Aspose.Email para Java desde aquí. |
-|[Foro de soporte de Aspose.Email](https://forum.aspose.com/c/email/12)|Publique sus preguntas y problemas aquí para una resolución rápida. |
-|[Documentación del producto Aspose.Email para .NET](/email/net)|Documentación completa en línea que incluye esta documentación y la referencia de la API Aspose.Email. |
+|**Recurso**|**Descripción**|
+| :- | :- |
+|[Página principal de Aspose.Email para .NET](https://products.aspose.com/email/es/net)|Página principal del producto.|
+|[Blog de Aspose.Email](https://blog.aspose.com/category/email/)|Revisa esto frecuentemente para obtener información sobre nuevas versiones y consejos útiles sobre Aspose.Email.|
+|[Descarga de Aspose.Email para .NET](https://downloads.aspose.com/email/net)|Descarga la última versión de Aspose.Email para Java desde aquí.|
+|[Foro de soporte de Aspose.Email](https://forum.aspose.com/c/email/12)|Publica tus preguntas y problemas aquí para una resolución rápida.|
+|[Documentación del producto Aspose.Email para .NET](/email/net)|Documentación completa en línea que incluye esta documentación así como la Referencia API de Aspose.Email.|
 {{% /alert %}}

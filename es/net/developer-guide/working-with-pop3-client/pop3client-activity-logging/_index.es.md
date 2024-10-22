@@ -1,19 +1,19 @@
 ---
-title: "Registro de actividad de Pop3Client"
+title: "Registro de Actividades de Pop3Client"
 url: /es/net/pop3client-activity-logging/
 weight: 40
 type: docs
 ---
 
-El registro de actividades se usa para depurar, así como para recopilar y analizar información de trabajo sobre el cliente POP3.
+El registro de actividades se utiliza para depuración, así como para recopilar y analizar información de trabajo sobre el cliente POP3.
 
-## **Habilitar el registro de actividades mediante el archivo appsettings.json**
+## **Habilitar el Registro de Actividades usando el Archivo appsettings.json**
 
-> **_NOTE:_** Esta opción es la preferida para las aplicaciones.NET Core.
+> **_NOTA:_** Esta opción es preferida para aplicaciones .NET Core.
 
-Iniciar sesión [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) se puede habilitar con los siguientes pasos y ejemplos de código:
+El registro en [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) se puede habilitar con los siguientes pasos y ejemplos de código:
 
-1. Agregue un archivo de configuración appsettings.json a un proyecto de C#, si no se ha agregado antes.
+1. Agregue un archivo de configuración appsettings.json a un proyecto de C#, si aún no se ha agregado.
 2. Asegúrese de que el archivo del proyecto contenga las siguientes líneas en la sección ItemGroup.
 
    ```xml
@@ -22,7 +22,7 @@ Iniciar sesión [Pop3Client](https://reference.aspose.com/email/net/aspose.email
       </Content>
    ```
 
-3. A continuación, añada el siguiente contenido al archivo appsettings.json.
+3. Luego, agregue el siguiente contenido al archivo appsettings.json.
 
    ```json
       {
@@ -31,70 +31,70 @@ Iniciar sesión [Pop3Client](https://reference.aspose.com/email/net/aspose.email
       }
    ```
 
-Las dos propiedades mencionadas anteriormente son:
+Las dos propiedades mencionadas arriba son:
 
 - **Pop3DiagnosticLog** - especifica la ruta relativa o absoluta al archivo de registro.
 
-- **Pop3DiagnosticLog_UseDate** - especifica si se debe añadir una representación en cadena de la fecha actual al nombre del archivo de registro.
+- **Pop3DiagnosticLog_UseDate** - especifica si se debe agregar una representación en forma de cadena de la fecha actual al nombre del archivo de registro.
 
-## **Habilitar el registro de actividades en el código del programa**
+## **Habilitar el Registro de Actividades en Código de Programa**
 
-También puede activar el registro de forma inmediata en el código.
+También puede habilitar el registro inmediatamente en el código.
 
-> **_NOTE:_** aunque ya haya habilitado el registro mediante archivos de configuración, se aplicará esta opción.
+> **_NOTA:_** incluso si ya ha habilitado el registro utilizando archivos de configuración, esta opción se aplicará.
 
-Iniciar sesión [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) se puede habilitar con los siguientes pasos y ejemplos de código:
+El registro en [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) se puede habilitar con los siguientes pasos y ejemplos de código:
 
-1. Crea un [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
-2. Establezca la ruta al archivo de registro mediante el [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/logfilename/) property.
-3. Configure el [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usedateinlogfilename/) propiedad si es necesario.
+1. Cree un [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
+2. Establezca la ruta al archivo de registro utilizando la propiedad [LogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/logfilename/).
+3. Establezca la propiedad [UseDateInLogFileName](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usedateinlogfilename/) si es necesario.
 
 ```cs
-   using (var client = new Pop3Client("your pop3 server", 995, "your username", "your password"))
+   using (var client = new Pop3Client("su servidor pop3", 995, "su nombre de usuario", "su contraseña"))
 {
-    // Set security mode
+    // Establecer modo de seguridad
     client.SecurityOptions = SecurityOptions.Auto;
 
-    // Establezca la ruta al archivo de registro mediante el LogFileName property.
+    // Establecer la ruta al archivo de registro utilizando la propiedad LogFileName.
     client.LogFileName = @"C:\Aspose.Email.Pop3.log";
 
-    // Configure el UseDateInLogFileName propiedad si es necesario.
+    // Establecer la propiedad UseDateInLogFileName si es necesario.
     client.UseDateInLogFileName = false;
 }
 ```
 
-## **Habilitar el registro de actividades mediante el archivo App.config**
+## **Habilitar el Registro de Actividades usando el Archivo App.config**
 
-[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) la actividad se puede registrar modificando las ConfigSections en el archivo de configuración. Los siguientes son los pasos para realizar el registro de diagnósticos:
+La actividad de [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) se puede registrar modificando las secciones configSections en el archivo de configuración. Los siguientes son los pasos para realizar el registro de diagnóstico:
 
-1. Añadir un **sectionGroup** llamado «ApplicationSettings».
-1. Añadir un **section** llamado «Aspose.Email.Properties.Settings».
-1. Incluya la configuración IMAPDiagonosticLog donde el nombre del archivo está definido en el **applicationSettings/Aspose.Email.Properties.Settings**.
+1. Agregue un **sectionGroup** llamado "applicationSettings".
+1. Agregue una **section** llamada "Aspose.Email.Properties.Settings".
+1. Incluya la configuración ImapDiagonosticLog donde se define el nombre del archivo en **applicationSettings/Aspose.Email.Properties.Settings**.
 
-Aquí hay un ejemplo de aplicación de formulario que utiliza [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) para procesar el correo. Toda esta actividad se registra modificando el archivo App.config.
+Aquí hay un ejemplo de una aplicación de formularios que utiliza [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) para procesar correos. Esta actividad se registra modificando el archivo App.config.
 
-- Cree una aplicación basada en formularios con un solo botón. Agregue el siguiente código de ejemplo para hacer clic en el botón:
+- Cree una aplicación basada en formularios con un solo botón. Agregue el siguiente código de ejemplo para el clic del botón:
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-Pop3ClientActivityLogging-Pop3ClientActivityLogging.cs" >}}
 
 - Agregue una referencia a Aspose.Email.
-- Ahora añada el archivo App.Config y modifíquelo para que el contenido del archivo sea el siguiente:
+- Ahora agregue el archivo App.Config y modifíquelo para que el contenido del archivo sea el siguiente:
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-App-Pop3ClientActivityLogging.config" >}}
 
-Para C# .NET, utilice la siguiente opción
+Para C# .NET use la siguiente opción
 
 |![todo:image_alt_text](pop3client-activity-logging_1.png)|
-|: - |
-Para VB.NET, utilice la siguiente opción
+| :- |
+Para VB .NET use la siguiente opción
 
-|![todo:image_alt_text](pop3client-activity-logging_1.png)| |![todo:image_alt_text](pop3client-activity-logging_3.png)| |
-|: - |: - |: - |: - |
+|![todo:image_alt_text](pop3client-activity-logging_1.png)| |![todo:image_alt_text](pop3client-activity-logging_3.png)| |
+| :- | :- | :- | :- |
 
-|![todo:image_alt_text](pop3client-activity-logging_4.png)| |
-|: - |: - |
+|![todo:image_alt_text](pop3client-activity-logging_4.png)| |
+| :- | :- |
 
-- Ejecute el código y, a continuación, observe la carpeta Log. Se generará el siguiente archivo.
+- Ejecute el código y luego observe la carpeta Log. Se generará el siguiente archivo.
 
-|![todo:image_alt_text](pop3client-activity-logging_5.png)| |
-|: - |: - |
+|![todo:image_alt_text](pop3client-activity-logging_5.png)| |
+| :- | :- |

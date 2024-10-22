@@ -1,27 +1,24 @@
 ---
-title: "Soporte para TLS 1.2 y AutoDiscoverService"
+title: "Soporte para TLS 1.2 y AutodiscoverService"
 url: /es/java/support-for-tls-1-2-and-autodiscoverservice/
 weight: 180
 type: docs
 ---
 
-Aspose.Email para Java ahora es compatible con TLS 1.2 mediante la API SAAJ. El [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) proporciona una propiedad estática [useSAAJAPI](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) que se puede configurar en **true** para usar TLS 1.2. Aspose.Email para Java también es compatible [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) para TLS 1.2. Los siguientes ejemplos de código demuestran el uso de la API SAAJ y [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) para TLS 1.2.
-## **Utilice la API SAAJ**
-El cliente SOAP Java EE utilizado con el modo SAAJAPI - <https://docs.oracle.com/cd/E19651-01/817-2151-10/wsgjaxm.html>.
+Aspose.Email para Java ahora soporta TLS 1.2 utilizando la API SAAJ. El [EWSClient](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient) proporciona una propiedad estática [useSAAJAPI](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) que se puede establecer en **true** para utilizar TLS 1.2. Aspose.Email para Java también soporta [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) para TLS 1.2. Los siguientes ejemplos de código demuestran el uso de la API SAAJ y [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) para TLS 1.2.
+## **Usar la API SAAJ**
+El Cliente SOAP de Java EE utilizado con el modo SAAJAPI - <https://docs.oracle.com/cd/E19651-01/817-2151-10/wsgjaxm.html>. 
 
+El siguiente ejemplo de código demuestra el uso de la API SAAJ estableciendo la propiedad [EWSClient.useSAAJAPI](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) en **true**.
 
-El siguiente ejemplo de código demuestra el uso de la API SAAJ mediante la configuración [EWSClient.useSAAJAPI](https://apireference.aspose.com/email/java/com.aspose.email/EWSClient#useSAAJAPI\(boolean\)) propiedad a **true**.
-
-En el siguiente fragmento de código, se asignará el encabezado de autenticación básica:
-
+En el siguiente fragmento de código se asignará el encabezado de autenticación básica:
 
 ~~~Java
 EWSClient.useSAAJAPI(true);
 IEWSClient client = EWSClient.getEWSClient("https://outlook.office365.com/ews/exchange.asmx", "testuser", "pw", "domain");
 client.listMessages();
 ~~~
-En el siguiente fragmento de código, se asignará el encabezado de autenticación OAUTH2:
-
+En el siguiente fragmento de código se asignará el encabezado de autenticación OAUTH2:
 
 ~~~Java
 EWSClient.useSAAJAPI(true);
@@ -55,10 +52,9 @@ client.listMessages();
 {{% alert color="primary" %}}
 
 Tenga en cuenta que en este modo, la API no controla el proceso de autenticación NTLM.
-Se requiere Java Authenticator para la autenticación NTLM.
+Se requiere un autenticador de Java para la autenticación NTLM.
 
 {{% /alert %}}
-
 
 El fragmento de código de autenticación NTLM para Java 8:
 
@@ -89,9 +85,9 @@ IEWSClient client = EWSClient.getEWSClient(new URL("https://domain.com/ews/Excha
 ~~~Java
 static Authenticator getAuthenticator() {
 
-    // This block is written for suppressing a bug in sun implementation.
-    // In Sun Impl client doesn't authenticate user for each connection,
-    // uses cached credentials instead.
+    // Este bloque está escrito para suprimir un error en la implementación de sun.
+    // En la implementación de Sun, el cliente no autentica al usuario para cada conexión,
+    // usa credenciales en caché en su lugar.
     sun.net.www.protocol.http.AuthCacheValue.setAuthCache(new sun.net.www.protocol.http.AuthCache() {
         public void remove(String pkey, sun.net.www.protocol.http.AuthCacheValue entry) {
         }
@@ -143,10 +139,9 @@ Authenticator.setDefault(getAuthenticator());
 System.setProperty("http.auth.preference", "NTLM");
 IEWSClient client1 = EWSClient.getEWSClient(getURL("https://domain.com/ews/Exchange.asmx", "user1", "pw", "domain"));
 IEWSClient client2 = EWSClient.getEWSClient(getURL("https://domain.com/ews/Exchange.asmx", "user2", "pw", "domain"));
-~~~
+~~~ 
 
-Desde Java 9, el autenticador se puede configurar para la conexión:
-
+Desde Java 9, el autenticador se puede establecer para la conexión:
 
 ~~~Java
 static Map<String, Authenticator> authInfo = new HashMap<String, Authenticator>();
@@ -155,7 +150,7 @@ static URL getURL(String url, final String user, final String pw, final String d
         protected URLConnection openConnection(URL url) throws IOException {
             URL target = new URL(url.toString());
             HttpURLConnection connection = (HttpURLConnection) target.openConnection();
-            // Cache for User@Url
+            // Caché para User@Url
             Authenticator auth = authInfo.get(user + "@" + url);
             if (auth == null) {
                 auth = new Authenticator() {
@@ -179,14 +174,14 @@ EWSClient.useSAAJAPI(true);
 System.setProperty("http.auth.preference", "NTLM");
 IEWSClient client1 = EWSClient.getEWSClient(getURL("https://domain.com/ews/Exchange.asmx", "user1", "pw", "domain"));
 IEWSClient client2 = EWSClient.getEWSClient(getURL("https://domain.com/ews/Exchange.asmx", "user2", "pw", "domain"));
-~~~
+~~~ 
 
 {{% alert color="primary" %}}
 
 Nota:
-Las API de JAXB se consideran API de Java EE y, por lo tanto, ya no figuran en la ruta de clases predeterminada de Java SE 9.
+Las APIs JAXB se consideran APIs de Java EE y, por lo tanto, ya no están contenidas en la ruta de clase predeterminada en Java SE 9.
 
-{{% /alert %}}
+{{% /alert %}} 
 
 Dependencias de Maven JAXB:
 
@@ -209,9 +204,8 @@ Dependencias de Maven JAXB:
 </dependency>
 ~~~
 
-## **Use AutodiscoverService**
-El siguiente ejemplo de código demuestra el uso de [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) para TLS 1.2
-
+## **Usar AutodiscoverService**
+El siguiente ejemplo de código demuestra el uso de [AutodiscoverService](https://apireference.aspose.com/email/java/com.aspose.email/AutodiscoverService) para TLS 1.2
 
 ~~~Java
 AutodiscoverService service = new AutodiscoverService();

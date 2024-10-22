@@ -1,24 +1,24 @@
 ---
-title: "Creación de un contacto de Outlook"
-url: /es/java/creating-an-outlook-contact/
+title: "Creando un Contacto de Outlook"
+url: /es/java/creando-un-contacto-de-outlook/
 weight: 70
 type: docs
 ---
 
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Este consejo de migración muestra cómo crear un contacto de Microsoft Outlook mediante [Automatización de Microsoft Office](#office-automation) and [Aspose.Email](#asposeemail-for-java). El ejemplo de código muestra cómo configurar diferentes datos de un contacto, como la información personal, profesional y empresarial. La creación de un contacto de Outlook consiste en los siguientes pasos:
+Este consejo de migración muestra cómo crear un contacto de Microsoft Outlook usando [Microsoft Office Automation](#office-automation) y [Aspose.Email](#asposeemail-for-java). El ejemplo de código muestra cómo establecer diferente información de un contacto como información Personal, Profesional y Comercial. Crear un contacto de Outlook consiste en los siguientes pasos:
 
-1. Creación de un objeto de contacto.
-1. Rellenar o configurar las distintas propiedades de la propiedad.
+1. Crear un objeto Contacto.
+1. Rellenar o establecer las diversas propiedades del objeto.
 1. Guardar el objeto.
 
-{{% /alert %}}
-## **Automatización de oficinas**
-Para usar Automatización de oficinas, Microsoft Outlook debe estar instalado en la máquina en la que se ejecuta el código. También es necesaria una referencia a Outlook.Interop.dll.
-### **Ejemplos de programación**
-El siguiente fragmento de código crea un contacto de Outlook en formato vCard y lo guarda en un disco mediante Automatización de oficinas.
+{{% /alert %}} 
+## **Office Automation**
+Para usar Office Automation, Microsoft Outlook debe estar instalado en la máquina donde se ejecuta el código. También se requiere una referencia a Outlook.interop.dll.
+### **Ejemplos de Programación**
+El siguiente fragmento de código crea un contacto de Outlook en formato VCard y lo guarda en disco utilizando Office Automation.
 
 **C#**
 
@@ -26,19 +26,19 @@ El siguiente fragmento de código crea un contacto de Outlook en formato vCard y
 
  Microsoft.Office.Interop.Outlook._Application OutlookObject = new Microsoft.Office.Interop.Outlook.Application();
 
-//Create a new Contact Item
+//Crear un nuevo elemento de contacto
 
 Microsoft.Office.Interop.Outlook.ContactItem contact = OutlookObject.CreateItem(
 
                         Microsoft.Office.Interop.Outlook.OlItemType.olContactItem);
 
-//Set different properties of this Contact Item.
+//Establecer diferentes propiedades de este elemento de contacto.
 
 contact.FirstName = "Mellissa";
 
 contact.LastName = "MacBeth";
 
-contact.JobTitle = "Account Representative";
+contact.JobTitle = "Representante de Cuenta";
 
 contact.CompanyName = "Contoso Ltd.";
 
@@ -54,7 +54,7 @@ contact.BusinessAddressState = "WA";
 
 contact.BusinessAddressPostalCode = "98052";
 
-contact.BusinessAddressCountry = "United States of America";
+contact.BusinessAddressCountry = "Estados Unidos de América";
 
 contact.Email1Address = "melissa@contoso.com";
 
@@ -62,23 +62,23 @@ contact.Email1AddressType = "SMTP";
 
 contact.Email1DisplayName = "Melissa MacBeth (mellissa@contoso.com)";
 
-//Save the Contact to disc
+//Guardar el contacto en disco
 
-contact.SaveAs("OutlookContact.vcf", OlSaveAsType.olVCard);
+contact.SaveAs("OutlookContact.vcf", OlSaveAsType.olVCard); 
 
 ~~~
-## **Aspose.Email para Java**
-Los ejemplos siguientes utilizan Aspose.Email para crear el contacto de Outlook en formato vCard y guardarlo en un disco. El ejemplo muestra cómo crear un contacto mediante el [MapiContact](https://apireference.aspose.com/email/java/com.aspose.email/MapiContact) clase y configuración de los detalles de contacto en el objeto antes de guardar el contacto.
-### **Ejemplos de programación**
+## **Aspose.Email for Java**
+Los ejemplos a continuación utilizan Aspose.Email para crear el contacto de Outlook en formato VCard y guardarlo en disco. El ejemplo muestra cómo crear un contacto usando la clase [MapiContact](https://apireference.aspose.com/email/java/com.aspose.email/MapiContact) y establecer los detalles del contacto en el objeto antes de guardar el contacto.
+### **Ejemplos de Programación**
 
 ~~~Java
 
-//Create a new MapiContact Object
+//Crear un nuevo objeto MapiContact
 MapiContact mapiContact = new MapiContact();
 
-//Set different properties of this Contact object
+//Establecer diferentes propiedades de este objeto de contacto
 mapiContact.setNameInfo(new MapiContactNamePropertySet("Mellissa", "", "MacBeth"));
-mapiContact.getProfessionalInfo().setTitle("Account Representative");
+mapiContact.getProfessionalInfo().setTitle("Representante de Cuenta");
 mapiContact.getProfessionalInfo().setCompanyName("Contoso Ltd.");
 mapiContact.getProfessionalInfo().setOfficeLocation("36/2529");
 mapiContact.getTelephones().setBusinessTelephoneNumber("4255551212 x432");
@@ -86,12 +86,12 @@ mapiContact.getPhysicalAddresses().getWorkAddress().setStreet("1 Microsoft Way")
 mapiContact.getPhysicalAddresses().getWorkAddress().setCity("Redmond");
 mapiContact.getPhysicalAddresses().getWorkAddress().setStateOrProvince("WA");
 mapiContact.getPhysicalAddresses().getWorkAddress().setPostalCode("98052");
-mapiContact.getPhysicalAddresses().getWorkAddress().setCountry("United States of America");
+mapiContact.getPhysicalAddresses().getWorkAddress().setCountry("Estados Unidos de América");
 mapiContact.getElectronicAddresses().getEmail1().setEmailAddress("milissa@contoso.com");
 mapiContact.getElectronicAddresses().getEmail1().setAddressType("SMTP");
 mapiContact.getElectronicAddresses().getEmail1().setDisplayName("Melissa MacBeth (mellissa@contoso.com)");
 
-//Save the Contact object to disc
+//Guardar el objeto de contacto en disco
 mapiContact.save("Contact.vcf", ContactSaveFormat.VCard);
 
 ~~~

@@ -1,12 +1,12 @@
 ---
-title: "Búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas en PHP"
+title: "Búsqueda de Cadenas en PST con Ignorar Mayúsculas en PHP"
 url: /es/java/string-searching-in-pst-with-ignore-case-in-php/
 weight: 80
 type: docs
 ---
 
-## **Aspose.Email: búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas**
-Para buscar cadenas en PST con ignorar mayúsculas y minúsculas usando **Aspose.Email Java para PHP**, simplemente invoca **StringSearchInPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Búsqueda de Cadenas en PST con Ignorar Mayúsculas**
+Para buscar cadenas en PST con ignorar mayúsculas usando **Aspose.Email Java para PHP**, simplemente invoca el módulo **StringSearchInPST**. Aquí puedes ver un ejemplo de código.
 
 **Código PHP**
 
@@ -39,8 +39,8 @@ $coll = $fi->getContents($query);
 print "Total Results:" . (string)$coll->size();
 
 ```
-## **Descargar Running Code**
-Download **Búsqueda de cadenas en PST con ignorar mayúsculas y minúsculas (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Búsqueda de Cadenas en PST con Ignorar Mayúsculas (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/StringSearchInPST.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/StringSearchInPST.php)

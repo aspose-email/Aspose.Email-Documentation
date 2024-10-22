@@ -1,5 +1,5 @@
 ---
-title: "Descripción general del producto"
+title: "Resumen del Producto"
 url: /es/net/product-overview/
 weight: 10
 type: docs
@@ -7,84 +7,86 @@ type: docs
 
 {{% alert color="primary" %}}
 
-![todo:image_alt_text](product-overview_1.png)
+![todo:texto_alt_imagen](product-overview_1.png)
 
-**Bienvenido a Aspose.Email for.NET**
+**Bienvenido a Aspose.Email para .NET**
 
-Aspose.Email para .NET es un conjunto de clases de.NET flexibles y fáciles de usar que se combinan para producir un componente de programación de correo electrónico único y poderoso. Aspose.Email le ahorra tiempo y esfuerzo al permitirle codificar el manejo de archivos de mensajes complejos en sus aplicaciones de forma rápida y sencilla.
+Aspose.Email para .NET es un conjunto de clases .NET flexibles y fáciles de usar que se han reunido para producir un potente componente de programación de correo electrónico único. Aspose.Email le ahorra tiempo y esfuerzo al permitirle codificar rápidamente y fácilmente el manejo de archivos de mensajes complejos en sus aplicaciones.
 
-Aspose.Email implementa varios protocolos de red, por ejemplo, SMTP, MIME, POP3 e IMAP; formatos de archivos de mensajes, por ejemplo, EML, MSG, MHT; formatos de almacenamiento de correo como PST y MBOX; y servidores Exchange para permitir a los desarrolladores crear una amplia variedad de aplicaciones de procesamiento de correo electrónico. Aspose.Email ayuda a los desarrolladores a programar sin perderse en la complejidad de los detalles del formato de los mensajes.
+Aspose.Email implementa una serie de protocolos de red, por ejemplo, SMTP, MIME, POP3, IMAP; formatos de archivo de mensajes, por ejemplo, EML, MSG, MHT; formatos de almacenamiento de correo como PST y MBOX; y servidores de Exchange para permitir que los desarrolladores creen una amplia variedad de aplicaciones de procesamiento de correo electrónico. Aspose.Email ayuda a los desarrolladores a programar sin perderse en las complejidades de los detalles del formato de mensaje.
 
 {{% /alert %}}
-## **Descripción del producto**
-Aspose.Email para .NET se implementa con Managed C# y se puede usar con cualquier lenguaje de.NET como C#, VB.NET y J#, etc. La biblioteca se puede integrar con cualquier tipo de aplicación, desde aplicaciones web de ASP.NET hasta aplicaciones de Windows. Aspose.Email también proporciona ejemplos completos escritos en C# para que los desarrolladores puedan empezar a trabajar rápidamente. Se puede usar para realizar una variedad de tareas en las aplicaciones:
 
-- **Lea y analice los mensajes de correo electrónico** desde varios formatos como EML, MSG, PST, OST y MBOX.
+## **Descripción del Producto**
 
-- **Redacción y envío de mensajes de correo electrónico.** Crea y envía mensajes de correo electrónico mediante programación.
+Aspose.Email para .NET se implementa utilizando C# administrado y puede usarse con cualquier lenguaje .NET como C#, VB.NET y J#, etc. La biblioteca se puede integrar con cualquier tipo de aplicación, desde aplicaciones web de ASP.NET hasta aplicaciones de Windows. Aspose.Email también proporciona ejemplos completos escritos en C# para que los desarrolladores puedan comenzar a trabajar rápidamente. Se puede utilizar para realizar una variedad de tareas en aplicaciones:
 
-- **Extraer archivos adjuntos** de los mensajes de correo electrónico y guárdelos por separado.
+-   **Leer y analizar mensajes de correo electrónico** de varios formatos como EML, MSG, PST, OST y MBOX.
 
-- **Gestión de los elementos de Outlook**, como eventos del calendario, contactos, listas de distribución, tareas, notas, etc.
+-   **Composición y envío de mensajes de correo electrónico.** Crear y enviar mensajes de correo electrónico programáticamente.
 
-- **Manipular propiedades de correo electrónico** como el remitente, el destinatario, el asunto, el cuerpo y los archivos adjuntos.
+-   **Extraer archivos adjuntos** de mensajes de correo electrónico y guardarlos por separado.
 
-- **Convierte mensajes de correo electrónico entre diferentes formatos de correo**, como EML, EMLX, HTML, ICS, MBOX, MHT, MSG, OFT, OST, PST y VCF.
+-   **Manejo de elementos de Outlook**, como eventos de calendario, contactos, listas de distribución, tareas, notas, etc.
 
-- **Trabajar con carpetas de correo electrónico** dentro de los archivos PST, OST y MBOX, realice operaciones como agregar, eliminar y mover correos electrónicos.
+-   **Manipular propiedades de correo electrónico** como remitente, destinatario, asunto, cuerpo y archivos adjuntos.
 
-- **Gestión de firmas y cifrado de correo electrónico**. Utilice varias funciones de seguridad, como las firmas digitales (SMIME), el cifrado y el descifrado para garantizar un procesamiento seguro del correo electrónico.
+-   **Convertir mensajes de correo electrónico entre diferentes formatos de correo electrónico**, como EML, EMLX, HTML, ICS, MBOX, MHT, MSG, OFT, OST, PST y VCF.
 
-- **Interacción con servidores de correo electrónico** mediante protocolos como POP3, IMAP, SMTP, Exchange Web Services (EWS) y MS Graph.
+-   **Trabajar con carpetas de correo electrónico** dentro de archivos PST, OST y MBOX, realizar operaciones como agregar, eliminar y mover correos electrónicos.
 
-- **Envío de correos electrónicos a través de SendGrid y MailGun**. Intégrese con los servicios de entrega SendGrid y MailGun y optimice los procesos de entrega de correo electrónico directamente desde sus aplicaciones.NET.
+-   **Manejo de firmas de correo electrónico y cifrado**. Utilice varias características de seguridad, como firmas digitales (SMIME), cifrado y descifrado para garantizar un procesamiento seguro del correo electrónico.
 
-- **Extracción y generación de datos de calendario:** Extraiga y genere datos de calendario, como invitaciones y citas, en formato ICS, lo que permite la integración con las aplicaciones de calendario.
+-   **Interacción con servidores de correo electrónico** utilizando protocolos como POP3, IMAP, SMTP, servicios web de Exchange (EWS) y MS Graph.
 
-- **Búsqueda y filtrado de correos electrónicos** en función de criterios como el remitente, el destinatario, el asunto, la fecha, etc.
+-   **Enviar correos electrónicos a través de SendGrid y MailGun**. Integrar con servicios de entrega SendGrid y MailGun, optimizar los procesos de entrega de correos electrónicos directamente dentro de sus aplicaciones .NET.
 
-- **Manejo de encabezados de correo electrónico** , por ejemplo, añadir encabezados personalizados o modificar los existentes.
+-   **Extracción y generación de datos de calendario:** Extraer y generar datos de calendario como invitaciones y citas en formato ICS, habilitando la integración con aplicaciones de calendario.
 
-- **Administración de contactos**. Trabaje fácilmente con archivos de información de contacto en formato VCF, incluida la lectura, escritura y modificación de contactos.
+-   **Búsqueda y filtrado de correos electrónicos** según criterios como remitente, destinatario, asunto, fecha, etc.
 
-- **Trabajando en modo asincrónico**. Gestione las operaciones de correo electrónico de manera eficiente sin bloquear el hilo principal.
+-   **Manejo de encabezados de correo electrónico**, por ejemplo, añadir encabezados personalizados o modificar los existentes.
 
-- **Combinación de correspondencia**. Cree correos electrónicos personalizados mediante combinaciones de correspondencia de varias fuentes de datos, como DataTable, DataReader y más.
+-   **Administrar contactos**. Trabajar fácilmente con archivos de información de contacto en formato VCF, incluida la lectura, escritura y modificación de contactos.
 
-- **Envío masivo de correos electrónicos**. Envía mensajes personalizados a varios destinatarios de forma simultánea gestionando campañas de correo electrónico a gran escala de forma eficiente.
+-   **Trabajo en modo asíncrono**. Manejar operaciones de correo electrónico de manera eficiente sin bloquear el hilo principal.
+
+-   **Combinar Correspondencia**. Crear correos electrónicos personalizados a través de combinaciones de correspondencia desde diversas fuentes de datos, como DataTable, DataReader y más.
+
+-   **Enviar correos electrónicos masivos**. Enviar mensajes personalizados a múltiples destinatarios simultáneamente gestionando campañas de correo electrónico a gran escala de manera eficiente.
 
 ## **¿Qué hace que Aspose.Email para .NET sea excepcional?**
 
-Hay varias razones convincentes para usar Aspose.Email for.NET en sus aplicaciones:
+Hay varias razones convincentes para usar Aspose.Email para .NET en sus aplicaciones:
 
--  Aspose.Email proporciona una amplia gama de funciones para gestionar varios aspectos del procesamiento del correo electrónico, incluida la lectura, la escritura, el análisis, la conversión y la manipulación de mensajes de correo electrónico en diferentes formatos.
+-   Aspose.Email ofrece una amplia gama de características para manejar varios aspectos del procesamiento de correos electrónicos, incluyendo leer, escribir, analizar, convertir y manipular mensajes de correo electrónico en diferentes formatos.
 
-- Aspose.Email para.NET está diseñado para funcionar sin problemas en diferentes plataformas, incluidas Windows, Linux y macOS.
+-   Aspose.Email para .NET está diseñado para funcionar sin problemas en diferentes plataformas, incluyendo Windows, Linux y macOS.
 
-- Soporta una amplia gama de formatos de archivos de correo electrónico como EML, MSG, PST, OST, MBOX, EMLX y más. Esta amplia compatibilidad le permite trabajar con correos electrónicos de diversas fuentes y sistemas, lo que mejora la versatilidad de sus aplicaciones.
+-   Soporta una diversa gama de formatos de archivo de correo electrónico como EML, MSG, PST, OST, MBOX, EMLX y más. Este amplio soporte le permite trabajar con correos electrónicos de diversas fuentes y sistemas, mejorando la versatilidad de sus aplicaciones.
 
-- Aspose.Email se integra con entornos de desarrollo populares como Visual Studio.
+-   Aspose.Email se integra con entornos de desarrollo populares como Visual Studio.
 
-- Aspose.Email cuenta con el respaldo de un equipo de desarrolladores que mejoran y optimizan continuamente la biblioteca. Recibe actualizaciones y mejoras periódicas para incorporar nuevas funciones y corregir errores. Además, Aspose proporciona un soporte técnico integral para ayudarlo con cualquier pregunta o problema que pueda surgir al usar la biblioteca.
+-   Aspose.Email cuenta con un equipo de desarrolladores que continuamente mejoran y optimizan la biblioteca. Recibe actualizaciones y mejoras regulares para incorporar nuevas características, abordar correcciones de errores. Además, Aspose ofrece soporte técnico integral para ayudarlo con cualquier pregunta o problema que pueda encontrar mientras usa la biblioteca.
 
-## **Soporte técnico**
+## **Soporte Técnico**
 
-Aspose ofrece soporte técnico gratuito e ilimitado para todos sus productos. El soporte está disponible para todos los usuarios, incluidos los que están realizando una evaluación.
+Aspose proporciona soporte técnico gratuito ilimitado para todos sus productos. El soporte está disponible para todos los usuarios, incluidos los que están en evaluación.
 
-Si necesitas ayuda, [**visita los foros de Aspose.**](https://forum.aspose.com/c/email). Publica tu pregunta en el foro Aspose.Email for.NET y será respondida en unas horas.
+Si necesita ayuda, [**visite los foros de Aspose**](https://forum.aspose.com/c/email). Publique su pregunta en el foro de Aspose.Email para .NET y se le responderá en unas pocas horas.
 
-### **Reportar un problema**
+### **Informar un Problema**
 
-Si tienes un problema, sigue estos sencillos pasos para asegurarte de que se resuelva de manera eficiente:
+Si tiene un problema, siga estos sencillos pasos para asegurarse de que se resuelva de manera eficiente:
 
-- Asegúrate de usar la versión más reciente del producto antes de informar del problema. Consulte el [Página de descarga de Aspose.Email para.NET](https://downloads.aspose.com/email/net) para obtener información sobre la versión más reciente.
-- Eche un vistazo a la [forums](http://www.aspose.com/community/forums/default.aspx), esta Wiki de documentación y el [Referencia de API](https://apireference.aspose.com/email/net) antes de informar de un problema. Es posible que su pregunta ya tenga una respuesta.
-- Cuando denuncies un problema, incluye el documento original y, posiblemente, un fragmento del código que cause el problema. Si necesitas adjuntar varios archivos, comprímelos en uno solo. Adjuntar tus documentos en los foros es seguro, ya que solo tú y los desarrolladores de Aspose tenéis acceso a los archivos adjuntos.
-- Intenta informar de un problema por hilo. Si tienes otro problema, repórtalo en otro hilo.
+-   Asegúrese de utilizar la última versión del producto antes de informar el problema. Considere la [página de descarga de Aspose.Email para .NET](https://downloads.aspose.com/email/net) para conocer la última versión.
+-   Revise los [foros](http://www.aspose.com/community/forums/default.aspx), esta documentación Wiki y la [Referencia de API](https://apireference.aspose.com/email/net) antes de informar un problema. Su pregunta puede ya tener respuesta.
+-   Al informar un problema, incluya el documento original y, posiblemente, un fragmento de su código que causa el problema. Si necesita adjuntar varios archivos, comprímalos en uno. Es seguro adjuntar sus documentos en los foros ya que solo usted y los desarrolladores de Aspose tienen acceso a los archivos adjuntos.
+-   Intente informar un problema por hilo. Si tiene otro problema, infórmelo en un hilo separado.
 
 {{% alert color="primary" %}}
 
-Aspose no proporciona asistencia técnica por teléfono. La asistencia telefónica solo está disponible para preguntas sobre ventas y compras.
+Aspose no proporciona soporte técnico por teléfono. El soporte telefónico solo está disponible para preguntas de ventas y compra.
 
 {{% /alert %}}
 

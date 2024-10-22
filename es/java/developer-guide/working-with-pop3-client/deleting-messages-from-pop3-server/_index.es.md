@@ -1,31 +1,31 @@
 ---
-title: "Eliminar mensajes del servidor POP3"
-url: /es/java/deleting-messages-from-pop3-server/
+title: "Eliminando Mensajes del Servidor POP3"
+url: /es/java/eliminando-mensajes-del-servidor-pop3/
 weight: 20
 type: docs
 ---
 
 
-Aspose.Email es un componente robusto que permite realizar operaciones personalizadas después de ciertas acciones. Aspose.Email desencadena muchos eventos sobre los que los usuarios pueden realizar operaciones. Esta función proporciona a los usuarios un mayor control sobre su aplicación. Por ejemplo, los usuarios pueden realizar las acciones que deseen cuando:
+Aspose.Email es un componente robusto que permite realizar operaciones personalizadas después de ciertas acciones. Aspose.Email genera muchos eventos sobre los cuales los usuarios pueden realizar operaciones. Esta función proporciona a los usuarios más control sobre su aplicación. Por ejemplo, los usuarios pueden realizar sus acciones deseadas cuando:
 
-- Se han enviado todos los correos electrónicos masivos.
-- Está a punto de enviarse un mensaje.
-- Se ha enviado un correo electrónico por completo.
+- Todos los correos electrónicos masivos han sido enviados.
+- Un mensaje está a punto de ser enviado.
+- Un correo electrónico ha sido completamente enviado.
 - Cuando un destinatario es rechazado por el servidor SMTP.
 
-Los buzones POP3 residen en un servidor POP3. El correo electrónico de estos buzones se puede recuperar en su PC de la siguiente manera [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/). El [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/) La clase usa el protocolo POP3 para copiar los mensajes de correo de su buzón POP3 a su PC. Una vez que se ha recuperado el correo, no necesita estar conectado a Internet mientras se lee, ya que puede leer el correo recuperado en su PC. Si no necesita o no quiere tener una copia de algunos mensajes de correo guardados en el servidor POP3, puede eliminarla. En esta sección se muestra cómo eliminar correos electrónicos mediante [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/) class.
+Las bandejas de entrada POP3 residen en un servidor POP3. Los correos en estas bandejas de entrada pueden ser recuperados a su PC mediante [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/). La clase [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/) utiliza el protocolo POP3 para copiar los mensajes de correo de su bandeja de entrada POP3 a su PC. Una vez que el correo ha sido recuperado, no necesita estar conectado a internet mientras se lee, ya que puede leer el correo recuperado en su PC. Si no necesita o quiere que se conserve una copia de algunos mensajes de correo en el servidor POP3, entonces los elimina. Esta sección muestra cómo eliminar correos electrónicos utilizando la clase [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/).
 
-## **Eliminar un correo electrónico por índice**
+## **Eliminar un Correo por Índice**
 
-El siguiente fragmento de código elimina todos los mensajes de correo de un buzón uno por uno, según su índice. El índice nunca debe ser <=0 en [Pop3Client.deleteMessage](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#deleteMessage-int-).
+El siguiente fragmento de código elimina todos los mensajes de correo de una bandeja de entrada uno por uno, basado en su índice. El índice nunca debe ser <=0 en [Pop3Client.deleteMessage](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#deleteMessage-int-).
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor vaya a https://github.com/aspose-email/Aspose.Email-for-Java
 
-// Create a POP3 client
-Pop3Client client = new Pop3Client("mail.aspose.com", 110, "username", "psw");
+// Crear un cliente POP3
+Pop3Client client = new Pop3Client("mail.aspose.com", 110, "nombredeusuario", "contraseña");
 try {
-    // Delete all the message one by one
+    // Eliminar todos los mensajes uno por uno
     int messageCount = client.getMessageCount();
     for (int i = 1; i <= messageCount; i++) {
         client.deleteMessage(i);
@@ -35,26 +35,26 @@ try {
 }
 ~~~
 
-## **Eliminar todos los correos electrónicos**
+## **Eliminar Todos los Correos Electrónicos**
 
-También podemos llamar [Pop3Client.deleteMessages](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#undeleteMessages--) para borrar todos los mensajes. El siguiente fragmento de código muestra cómo eliminar todos los correos electrónicos.
+También podemos llamar a [Pop3Client.deleteMessages](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#undeleteMessages--) para eliminar todos los mensajes. El siguiente fragmento de código le muestra cómo eliminar todos los correos electrónicos.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor vaya a https://github.com/aspose-email/Aspose.Email-for-Java
 
-// Delete all the messages
+// Eliminar todos los mensajes
 client.deleteMessages();
 ~~~
 
-Si la conexión con el servidor POP3 se interrumpe inmediatamente después de las operaciones de eliminación, ya no podrá llamar [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/).cancelDeletes () para hacer las cosas que quieras.
+Si la conexión al servidor POP3 se interrumpe inmediatamente después de las operaciones de eliminación, ya no puede llamar a [Pop3Client](https://reference.aspose.com/email/java/com.aspose.email/pop3client/).cancelDeletes() para hacer lo que desea.
 
-## **Cancelar eliminaciones**
+## **Cancelar Eliminaciones**
 
-[Pop3Client.undeleteMessages](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#undeleteMessages--) se puede usar para cancelar la eliminación de mensajes de correo electrónico. El siguiente fragmento de código muestra cómo cancelar las eliminaciones.
+[Pop3Client.undeleteMessages](https://reference.aspose.com/email/java/com.aspose.email/pop3client/#undeleteMessages--) puede usarse para cancelar la eliminación de mensajes de correo electrónico. El siguiente fragmento de código le muestra cómo cancelar eliminaciones.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor vaya a https://github.com/aspose-email/Aspose.Email-for-Java
 
-// Cancel deletes
+// Cancelar eliminaciones
 client.undeleteMessages();
 ~~~

@@ -1,12 +1,12 @@
 ---
-title: "Actualizar y guardar un correo electrónico en Jython"
+title: "Actualizar y Guardar un Correo Electrónico en Jython"
 url: /es/java/update-and-save-an-email-in-jython/
 weight: 70
 type: docs
 ---
 
-## **Aspose.Email - Actualizar y guardar un correo electrónico**
-Para actualizar y guardar un correo electrónico usando **Aspose.Email Java para Jython**, simplemente invoca **UpdateEmail** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Actualizar y Guardar un Correo Electrónico**
+Para Actualizar y Guardar un Correo Electrónico utilizando **Aspose.Email Java para Jython**, simplemente invoca el módulo **UpdateEmail**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -30,89 +30,85 @@ class UpdateEmail:
 
 
 
-        # Initialize and Load an existing MSG file by specifying the MessageFormat
+        # Inicializar y cargar un archivo MSG existente especificando el MessageFormat
 
         mailMessage=MailMessage()
 
         email = mailMessage.load(dataDir + "Message.msg")
 
-        # Initialize a String variable to get the Email Subject
+        # Inicializar una variable String para obtener el Asunto del Correo
 
         subject = email.getSubject()
 
-        # Append some more information to Subject
+        # Agregar más información al Asunto
 
-        subject = subject + " This text is added to the existing subject"
+        subject = subject + " Este texto se agrega al asunto existente"
 
-        # Set the Email Subject
+        # Establecer el Asunto del Correo
 
-        email.setSubject('This text is added to the existing subject')
+        email.setSubject('Este texto se agrega al asunto existente')
 
-        # Initialize a String variable to get the Email's HTML Body
+        # Inicializar una variable String para obtener el Cuerpo HTML del Correo
 
         body = email.getHtmlBody()
 
-        # Apppend some more information to the Body variable
+        # Agregar más información a la variable Cuerpo
 
-        body = body + "<br> This text is added to the existing body"
+        body = body + "<br> Este texto se agrega al cuerpo existente"
 
-        # Set the Email Body
+        # Establecer el Cuerpo del Correo
 
         email.setHtmlBody(body)
 
-        # Initialize MailAddressCollection object
+        # Inicializar el objeto MailAddressCollection
 
         contacts = MailAddressCollection()
 
-        # Retrieve Email's TO list
+        # Recuperar la lista TO del Correo
 
         contacts = email.getTo()
 
-        # Add another email address to collection
+        # Agregar otra dirección de correo electrónico a la colección
 
         contacts.add("to1@domain.com")
 
-        # Set the collection as Email's TO list
+        # Establecer la colección como la lista TO del Correo
 
         email.setTo(contacts)
 
-        # Initialize MailAddressCollection
+        # Inicializar MailAddressCollection
 
         contacts = MailAddressCollection()
 
-        # Retrieve Email's CC list
+        # Recuperar la lista CC del Correo
 
         contacts = email.getCC()
 
-        # Add another email address to collection
+        # Agregar otra dirección de correo electrónico a la colección
 
         contacts.add("cc2@domain.com")
 
-        # Set the collection as Email's CC list
+        # Establecer la colección como la lista CC del Correo
 
         email.setCC(contacts)
 
-        # Save the Email message to disk by specifying the MessageFormat
+        # Guardar el mensaje del Correo en disco especificando el MessageFormat
 
         mailMessageSaveType=MailMessageSaveType
 
         email.save(dataDir + "UpdateMessage.msg", mailMessageSaveType.getOutlookMessageFormat())
 
-        # Display Status
+        # Mostrar Estado
 
-        print "Updated email message Successfully."
+        print "Mensaje de correo electrónico actualizado con éxito."
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     UpdateEmail()
 
 ```
-## **Descargar Running Code**
-Download **Actualizar y guardar un correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descargar **Actualizar y Guardar un Correo Electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://asposeemailjavajython.codeplex.com/releases/view/620655)

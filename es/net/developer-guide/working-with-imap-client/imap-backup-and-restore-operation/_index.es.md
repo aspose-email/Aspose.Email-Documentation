@@ -1,42 +1,42 @@
 ---
-title: "Operación de respaldo y restauración de IMAP"
+title: "Operación de Respaldo y Restauración de IMAP"
 url: /es/net/imap-backup-and-restore-operation/
 weight: 120
 type: docs
 ---
 
 
-Aspose.Email para.NET ofrece la posibilidad de realizar copias de seguridad y restaurar mensajes. Para ello, la API proporciona los siguientes métodos.
+Aspose.Email para .NET proporciona la capacidad de respaldar y restaurar mensajes. Para esto, la API proporciona los siguientes métodos.
 
 - [ImapClient.Backup](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/backup/#backup/)
 - [ImapClient.Restore](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/restore/)
 
-En este artículo se muestra cómo hacer copias de seguridad y restaurar los mensajes mediante el [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) class.
+Este artículo demuestra cómo respaldar y restaurar mensajes usando la clase [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/).
 
-## **Mensajes de respaldo**
+## **Respaldar Mensajes**
 
-Para hacer copias de seguridad de los mensajes, utilice la [ImapClient.Backup](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/backup/#backup/) método como se muestra en el siguiente fragmento de código.
+Para respaldar mensajes, utiliza el método [ImapClient.Backup](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/backup/#backup/) como se demuestra en el siguiente fragmento de código.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapBackupOperation-1.cs" >}}
 
-## **Restaurar mensajes**
+## **Restaurar Mensajes**
 
-Para restaurar los mensajes, utilice el [ImapClient.Restore](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/restore/) método como se muestra en el siguiente fragmento de código.
+Para restaurar mensajes, utiliza el método [ImapClient.Restore](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/restore/) como se demuestra en el siguiente fragmento de código.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapRestoreOperation-1.cs" >}}
 
-## **Operación de respaldo y restauración de IMAP con MultiConnection**
+## **Operación de Respaldo y Restauración de IMAP con MultiConnection**
 
-Cuando se trabaja con una gran cantidad de mensajes, la operación de copia de seguridad o restauración puede tardar mucho tiempo. Para ello, la API admite varias conexiones durante la operación de copia de seguridad y restauración. Para habilitar el modo de conexión múltiple, defina [ImapClient.UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/) propiedad a [MultiConnectionMode.Enable](https://reference.aspose.com/email/net/aspose.email.clients/multiconnectionmode/). Los siguientes fragmentos de código muestran las operaciones de copia de seguridad y restauración con el modo MultiConexión habilitado.
+Al trabajar con un gran número de mensajes, la operación de respaldo/restauración puede tardar mucho tiempo. Para esto, la API proporciona soporte para múltiples conexiones durante la operación de respaldo y restauración. Para habilitar el modo MultiConnection, establece la propiedad [ImapClient.UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/) en [MultiConnectionMode.Enable](https://reference.aspose.com/email/net/aspose.email.clients/multiconnectionmode/). Los siguientes fragmentos de código demuestran la operación de respaldo y restauración con el modo MultiConnection habilitado.
 
-### **Mensajes de respaldo con MultiConnection**
+### **Respaldar Mensajes con MultiConnection**
 
-En los siguientes fragmentos de código se muestra el funcionamiento de la copia de seguridad con el modo multiconexión activado.
+Los siguientes fragmentos de código demuestran la operación de respaldo con el modo MultiConnection habilitado.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapBackupOperationWithMultiConnection-1.cs" >}}
 
-### **Restaurar mensajes con MultiConnection**
+### **Restaurar Mensajes con MultiConnection**
 
-Los siguientes fragmentos de código muestran la operación de restauración con el modo multiconexión activado.
+Los siguientes fragmentos de código demuestran la operación de restauración con el modo MultiConnection habilitado.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-IMAP-ImapRestoreOperationWithMultiConnection-1.cs" >}}

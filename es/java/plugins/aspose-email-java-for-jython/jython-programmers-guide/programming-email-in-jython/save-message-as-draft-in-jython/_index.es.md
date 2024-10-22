@@ -6,7 +6,7 @@ type: docs
 ---
 
 ## **Aspose.Email - Guardar mensaje como borrador**
-Para guardar el mensaje como borrador usando **Aspose.Email Java para Jython**, simplemente invoca **SaveMessageAsDraft** módulo. Aquí puedes ver un ejemplo de código.
+Para guardar un mensaje como borrador usando **Aspose.Email Java para Jython**, simplemente invoca el módulo **SaveMessageAsDraft**. Aquí puedes ver un código de ejemplo.
 
 **Código Jython**
 
@@ -26,69 +26,59 @@ class SaveMessageAsDraft:
 
     def __init__(self):
 
-
-
         dataDir = Settings.dataDir + 'ProgrammingEmail/SaveMessageAsDraft/'
 
-
-
-        # Create a instance of MailMessage class
+        # Crear una instancia de la clase MailMessage
 
         message = MailMessage()
 
-            # Set subject of the message
+            # Establecer el asunto del mensaje
 
-        message.setSubject("New message created by Aspose.Email for Java")
+        message.setSubject("Nuevo mensaje creado por Aspose.Email para Java")
 
         mail_address = MailAddress
 
-        # Set Html body
+        # Establecer el cuerpo en Html
 
-        message.setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" +
+        message.setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" +
 
-            "<font color=blue>This line is in blue color</font>")
+            "<font color=blue>Esta línea está en color azul</font>")
 
-        # Set sender information
+        # Establecer la información del remitente
 
-        message.setFrom(MailAddress("from@domain.com", "Sender Name", False))
+        message.setFrom(MailAddress("from@domain.com", "Nombre del Remitente", False))
 
-        # Add TO recipients
+        # Agregar destinatarios
 
-        message.getTo().add(MailAddress("to1@domain.com", "Recipient 1", False))
+        message.getTo().add(MailAddress("to1@domain.com", "Destinatario 1", False))
 
-        message.getTo().add(MailAddress("to2@domain.com", "Recipient 2", False))
+        message.getTo().add(MailAddress("to2@domain.com", "Destinatario 2", False))
 
-        # Create an instance of MapiMessage and load the MailMessag instance into it
+        # Crear una instancia de MapiMessage y cargar la instancia de MailMessage en ella
 
         mapiMessage=MapiMessage()
 
         mapi_msg = mapiMessage.fromMailMessage(message)
 
-        # Set the MapiMessageFlags as UNSENT and FROMME
+        # Establecer las MapiMessageFlags como UNSENT y FROMME
 
         mapi_message_flags = MapiMessageFlags()
 
-
-
-        # Save the MapiMessage to disk
+        # Guardar el MapiMessage en disco
 
         mapi_msg.save(dataDir + "New-Draft.msg")
 
-        # Display Status
+        # Mostrar estado
 
-        print "Draft saved Successfully."
+        print "Borrador guardado con éxito."
 
-
-
-
-
-if __name__ == '__main__':       
+if __name__ == '__main__':        
 
     SaveMessageAsDraft()
 
 ```
-## **Descargar Running Code**
-Download **Guardar mensaje como borrador (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar el código en ejecución**
+Descarga **Guardar mensaje como borrador (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Jython-v1.0)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavajython)

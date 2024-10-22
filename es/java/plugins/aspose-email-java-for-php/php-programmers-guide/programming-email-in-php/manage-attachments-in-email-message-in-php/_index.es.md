@@ -1,12 +1,12 @@
 ---
-title: "Administrar archivos adjuntos en mensajes de correo electrónico en PHP"
+title: "Administrar Adjuntos en Mensajes de Correo en PHP"
 url: /es/java/manage-attachments-in-email-message-in-php/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Administrar los archivos adjuntos en un mensaje de correo electrónico**
-Para agregar archivos adjuntos a un nuevo mensaje de correo electrónico mediante **Aspose.Email Java para PHP**, llama **add_attachments** método de **ManageAttachments** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Administrar Adjuntos en Mensajes de Correo**
+Para agregar adjuntos a un nuevo mensaje de correo utilizando **Aspose.Email Java para PHP**, llama al método **add_attachments** del módulo **ManageAttachments**. Aquí puedes ver el código de ejemplo.
 
 **Código PHP**
 
@@ -14,55 +14,55 @@ Para agregar archivos adjuntos a un nuevo mensaje de correo electrónico mediant
 
  public static function add_attachments($dataDir=null){
 
-\# Create a new instance of MailMessage class
+\# Crear una nueva instancia de la clase MailMessage
 
 $message =new MailMessage();
 
-\# Set subject of the message
+\# Establecer el asunto del mensaje
 
-$message->setSubject("New message created by Aspose.Email for Java");
+$message->setSubject("Nuevo mensaje creado por Aspose.Email para Java");
 
 $mail_address = new MailAddress();
 
-\# Set Html body
+\# Establecer cuerpo Html
 
-$message->setHtmlBody("<b>This line is in bold.</b> <br/> <br/>" .
+$message->setHtmlBody("<b>Esta línea está en negrita.</b> <br/> <br/>" .
 
-"<font color=blue>This line is in blue color</font>");
+"<font color=blue>Esta línea está en color azul</font>");
 
-\# Set sender information
+\# Establecer información del remitente
 
-$message->setFrom(new MailAddress("from@domain.com", "Sender Name", false));
+$message->setFrom(new MailAddress("from@domain.com", "Nombre del Remitente", false));
 
-\# Add TO recipients
+\# Agregar destinatarios TO
 
-$message->getTo()->add(new MailAddress("to1@domain.com", "Recipient 1", false));
+$message->getTo()->add(new MailAddress("to1@domain.com", "Destinatario 1", false));
 
-\# Adding attachment
+\# Agregando adjunto
 
-\# Load an attachment
+\# Cargar un adjunto
 
 $attachment = new Attachment($dataDir . "1.txt");
 
-\# Add attachment in instance of MailMessage class
+\# Agregar adjunto en la instancia de la clase MailMessage
 
 $message->addAttachment($attachment);
 
-\# Save message to disc
+\# Guardar mensaje en disco
 
 $messageFormat=new MessageFormat();
 
 $message->save($dataDir . "Add-Attachment.msg", $messageFormat->getMsg());
 
-\# Display Status
+\# Mostrar Estado
 
-print "Added attachment successfully.".PHP_EOL;
+print "Adjunto agregado con éxito.".PHP_EOL;
 
 }
 
 ```
-## **Descargar Running Code**
-Download **Administrar los archivos adjuntos en un mensaje de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Administrar Adjuntos en Mensajes de Correo (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingEmail/ManageAttachments.php)
 - [CodePlex](https://asposeemailjavaphp.codeplex.com/SourceControl/latest#src/aspose/email/ProgrammingEmail/ManageAttachments.php)

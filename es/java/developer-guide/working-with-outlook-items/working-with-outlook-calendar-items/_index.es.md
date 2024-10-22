@@ -1,5 +1,5 @@
 ---
-title: "Trabajar con los elementos del calendario de Outlook"
+title: "Trabajando con Elementos del Calendario de Outlook"
 url: /es/java/working-with-outlook-calendar-items/
 weight: 120
 type: docs
@@ -7,28 +7,28 @@ type: docs
 
 ## **Trabajando con MapiCalendar**
 
-Aspose.Email's [MapiCalendar](https://reference.aspose.com/email/java/com.aspose.email/mapicalendar/) La clase proporciona métodos y atributos para establecer varias propiedades de un elemento del calendario. Este artículo proporciona ejemplos de código para:
+La clase [MapiCalendar](https://reference.aspose.com/email/java/com.aspose.email/mapicalendar/) de Aspose.Email proporciona métodos y atributos para establecer diversas propiedades de un elemento del calendario. Este artículo proporciona ejemplos de código para:
 
 - [**Trabajando con MapiCalendar**](#working-with-mapicalendar)
-  - [**Creación y almacenamiento de elementos del calendario**](#creating-and-saving-calendar-items)
-  - [**Guardar el elemento del calendario como MSG**](#saving-the-calendar-item-as-msg)
-  - [**Agregar un recordatorio de pantalla a un calendario**](#adding-display-reminder-to-a-calendar)
-  - [**Añadir un recordatorio de audio a un calendario**](#adding-audio-reminder-to-a-calendar)
-  - [**Añadir/recuperar archivos adjuntos de archivos de calendario**](#addretrieve-attachments-from-calendar-files)
-  - [**Estado de los destinatarios de una convocatoria de reunión**](#status-of-recipients-from-a-meeting-request)
-  - [**Crear MapiCalendarTimezone a partir de una zona horaria estándar**](#create-mapicalendartimezone-from-standard-timezone)
-- [**Configurar un recordatorio con la cita creada**](#setting-reminder-with-the-created-appointment)
-  - [**Establecer un recordatorio añadiendo etiquetas**](#setting-a-reminder-by-adding-tags)
-- [**Convierta Appointment EML a MSG con HTML Body**](#convert-appointment-eml-to-msg-with-html-body)
+  - [**Creando y Guardando Elementos del Calendario**](#creating-and-saving-calendar-items)
+  - [**Guardando el Elemento del Calendario como MSG**](#saving-the-calendar-item-as-msg)
+  - [**Añadiendo Recordatorio Visual a un Calendario**](#adding-display-reminder-to-a-calendar)
+  - [**Añadiendo Recordatorio de Audio a un Calendario**](#adding-audio-reminder-to-a-calendar)
+  - [**Añadir/Recuperar Adjuntos de Archivos del Calendario**](#addretrieve-attachments-from-calendar-files)
+  - [**Estado de los Destinatarios de una Solicitud de Reunión**](#status-of-recipients-from-a-meeting-request)
+  - [**Crear MapiCalendarTimeZone desde la Zona Horaria Estándar**](#create-mapicalendartimezone-from-standard-timezone)
+- [**Estableciendo Recordatorio con la Cita Creada**](#setting-reminder-with-the-created-appointment)
+  - [**Estableciendo un Recordatorio Añadiendo Etiquetas**](#setting-a-reminder-by-adding-tags)
+- [**Convertir Cita EML a MSG con Cuerpo HTML**](#convert-appointment-eml-to-msg-with-html-body)
 
 
-### **Creación y almacenamiento de elementos del calendario**
+### **Creando y Guardando Elementos del Calendario**
 
 El siguiente fragmento de código muestra cómo crear y guardar un elemento del calendario en formato ICS.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de Archivos.
 String dataDir = "outlook/";
 
 Calendar cal = Calendar.getInstance();
@@ -37,29 +37,29 @@ Date startDate = cal.getTime();
 cal.set(2012, Calendar.OCTOBER, 2, 14, 0, 0);
 Date endDate = cal.getTime();
 
-MapiCalendar calendar = new MapiCalendar("LAKE ARGYLE WA 6743",
-                                         "Appointment",
-                                         "This is a very important meeting :)",
-                                         startDate,
+MapiCalendar calendar = new MapiCalendar("LAKE ARGYLE WA 6743", 
+                                         "Cita", 
+                                         "Esta es una reunión muy importante :)", 
+                                         startDate, 
                                          endDate);
 
 calendar.save(dataDir + "CalendarItem_out.ics", AppointmentSaveFormat.Ics);
 ~~~
 
-### **Guardar el elemento del calendario como MSG**
+### **Guardando el Elemento del Calendario como MSG**
 
 El siguiente fragmento de código muestra cómo guardar el elemento del calendario como MSG.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
 calendar.save(dataDir + "CalendarItemAsMSG_out.Msg", AppointmentSaveFormat.Msg);
 ~~~
 
-### **Configuración de un identificador de producto al guardar un elemento del calendario en ICS**
+### **Estableciendo un ID de producto al guardar un Elemento del Calendario en ICS**
 
-The [ProductIdentifier](https://reference.aspose.com/email/java/com.aspose.email/mapicalendaricssaveoptions/#getProductIdentifier--) propiedad del [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mapicalendaricssaveoptions/) La clase se usa para guardar un elemento del calendario MAPI en un archivo iCalendar (ICS) que conserva la información original de fecha y hora, así como un identificador de producto personalizado. La propiedad especifica el identificador del producto que creó el objeto iCalendar.
+La propiedad [ProductIdentifier](https://reference.aspose.com/email/java/com.aspose.email/mapicalendaricssaveoptions/#getProductIdentifier--) de la clase [MapiCalendarIcsSaveOptions](https://reference.aspose.com/email/java/com.aspose.email/mapicalendaricssaveoptions/) se utiliza para guardar un elemento del calendario MAPI en un archivo iCalendar (ICS) preservando la información de fecha y hora original así como un identificador de producto personalizado. La propiedad especifica el identificador del producto que creó el objeto iCalendar.
 
-El siguiente ejemplo de código muestra cómo trabajar con datos de iCalendar (ICS) en un objeto de calendario MAPI:
+El siguiente ejemplo de código muestra cómo trabajar con datos de iCalendar (ICS) dentro de un objeto de calendario MAPI:
 
 ```java
 MapiCalendarIcsSaveOptions icsSaveOptions = new MapiCalendarIcsSaveOptions();
@@ -69,13 +69,13 @@ icsSaveOptions.setProductIdentifier("Foo Ltd");
 mapiCalendar.save("my.ics", icsSaveOptions);
 ```
 
-### **Agregar un recordatorio de pantalla a un calendario**
+### **Añadiendo Recordatorio Visual a un Calendario**
 
-En el siguiente fragmento de código, se muestra cómo añadir un recordatorio de pantalla a un calendario.
+El siguiente fragmento de código muestra cómo añadir un recordatorio visual a un calendario.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de Archivos.
 String dataDir = "outlook/";
 Calendar jCalendar = Calendar.getInstance();
 jCalendar.add(Calendar.HOUR, 1);
@@ -83,33 +83,33 @@ Date startDate = jCalendar.getTime();
 Date endDate = jCalendar.getTime();
 
 MailAddressCollection attendees = new MailAddressCollection();
-attendees.addItem(new MailAddress("attendee@domain.com", "Attendee"));
-// Create Appointment
-Appointment app = new Appointment("Home",
-                                  startDate,
-                                  endDate,
-                                  new MailAddress("organizer@domain.com", "Organizer"),
+attendees.addItem(new MailAddress("attendee@domain.com", "Asistente"));
+// Crear Cita
+Appointment app = new Appointment("Inicio", 
+                                  startDate, 
+                                  endDate, 
+                                  new MailAddress("organizer@domain.com", "Organizador"), 
                                   attendees);
 MailMessage msg = new MailMessage();
 msg.addAlternateView(app.requestApointment());
 MapiMessage mapi = MapiMessage.fromMailMessage(msg);
 MapiCalendar calendar = (MapiCalendar) mapi.toMapiMessageItem();
 
-// Set calendar Properties
+// Establecer Propiedades del calendario
 calendar.setReminderSet(true);
-calendar.setReminderDelta(5); // 45 min before start of event
+calendar.setReminderDelta(5); // 45 min antes del inicio del evento
 
 String savedFile = (dataDir + "calendarWithDisplayReminder.ics");
 calendar.save(savedFile, AppointmentSaveFormat.Ics);
 ~~~
 
-### **Añadir un recordatorio de audio a un calendario**
+### **Añadiendo Recordatorio de Audio a un Calendario**
 
-En el siguiente fragmento de código, se muestra cómo añadir un recordatorio de audio a un calendario.
+El siguiente fragmento de código muestra cómo añadir un recordatorio de audio a un calendario.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de Archivos.
 String dataDir = "outlook/";
 Calendar jCalendar = Calendar.getInstance();
 jCalendar.add(Calendar.HOUR, 1);
@@ -117,12 +117,12 @@ Date startDate = jCalendar.getTime();
 Date endDate = jCalendar.getTime();
 
 MailAddressCollection attendees = new MailAddressCollection();
-attendees.addItem(new MailAddress("attendee@domain.com", "Attendee"));
+attendees.addItem(new MailAddress("attendee@domain.com", "Asistente"));
 
-Appointment app = new Appointment("Home",
-                                  startDate,
-                                  endDate,
-                                  new MailAddress("organizer@domain.com", "Organizer"),
+Appointment app = new Appointment("Inicio", 
+                                  startDate, 
+                                  endDate, 
+                                  new MailAddress("organizer@domain.com", "Organizador"), 
                                   attendees);
 
 MailMessage msg = new MailMessage();
@@ -131,20 +131,20 @@ MapiMessage mapi = MapiMessage.fromMailMessage(msg);
 MapiCalendar cal = (MapiCalendar) mapi.toMapiMessageItem();
 
 cal.setReminderSet(true);
-cal.setReminderDelta(58); // 58 min before start of event
+cal.setReminderDelta(58); // 58 min antes del inicio del evento
 cal.setReminderFileParameter(dataDir + "Alarm01.wav");
 
 String savedFile = dataDir + "calendarWithAudioReminder_out.ics";
 cal.save(savedFile, AppointmentSaveFormat.Ics);
 ~~~
 
-### **Añadir/recuperar archivos adjuntos de archivos de calendario**
+### **Añadir/Recuperar Adjuntos de Archivos del Calendario**
 
-El siguiente fragmento de código muestra cómo añadir o recuperar archivos adjuntos de los archivos de calendario.
+El siguiente fragmento de código muestra cómo añadir/recuperar adjuntos de archivos del calendario.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de Archivos.
 String dataDir = "outlook/";
 Calendar jCalendar = Calendar.getInstance();
 jCalendar.add(Calendar.HOUR, 1);
@@ -157,12 +157,12 @@ files[1] = "download.png";
 files[2] = "Desert.jpg";
 
 MailAddressCollection attendees = new MailAddressCollection();
-attendees.addItem(new MailAddress("attendee@domain.com", "Attendee"));
+attendees.addItem(new MailAddress("attendee@domain.com", "Asistente"));
 
-Appointment app1 = new Appointment("Home",
-                                   startDate,
-                                   endDate,
-                                   new MailAddress("organizer@domain.com", "Organizer"),
+Appointment app1 = new Appointment("Inicio", 
+                                   startDate, 
+                                   endDate, 
+                                   new MailAddress("organizer@domain.com", "Organizador"), 
                                    attendees);
 for (String file : files) {
     app1.getAttachments().addItem(new Attachment(dataDir + file));
@@ -176,12 +176,12 @@ for (Attachment att : app2.getAttachments())
     System.out.println(att.getName());
 ~~~
 
-### **Estado de los destinatarios de una convocatoria de reunión**
+### **Estado de los Destinatarios de una Solicitud de Reunión**
 
-El siguiente fragmento de código muestra cómo obtener el estado de los destinatarios de una convocatoria de reunión.
+El siguiente fragmento de código muestra cómo obtener el estado de los destinatarios de una solicitud de reunión.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
 String fileName = "outlook/test.msg";
 
 MapiMessage message = MapiMessage.fromFile(fileName);
@@ -190,42 +190,42 @@ for (MapiRecipient recipient : message.getRecipients()) {
 }
 ~~~
 
-### **Crear MapiCalendarTimezone a partir de una zona horaria estándar**
+### **Crear MapiCalendarTimeZone desde la Zona Horaria Estándar**
 
 El siguiente fragmento de código muestra cómo crear [MapiCalendarTimeZone](https://reference.aspose.com/email/java/com.aspose.email/mapicalendartimezone/) desde la zona horaria estándar.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-MapiCalendarTimeZone timeZone = new MapiCalendarTimeZone("Eastern Standard Time");
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+MapiCalendarTimeZone timeZone = new MapiCalendarTimeZone("Hora Estándar del Este");
 ~~~
 
-## **Configurar un recordatorio con la cita creada**
+## **Estableciendo Recordatorio con la Cita Creada**
 
-Se puede agregar un recordatorio cuando se crea una cita. Estas alarmas pueden activarse en función de diferentes criterios, como n minutos antes de que comience la programación o repetirse n veces a intervalos de n. Se pueden usar diferentes etiquetas para crear estos activadores en el script incluido entre BEGIN:VALARM y END:VALARM dentro de una cita. Hay varias variantes en las que se puede configurar el recordatorio en una cita.
+Se puede añadir un recordatorio cuando se crea una cita. Estas alarmas pueden activarse en función de diferentes criterios, como n minutos antes de que comience el programa, repetir n veces a intervalos de n. Se pueden utilizar diferentes etiquetas para crear estos disparadores en el script encerrado entre BEGIN:VALARM y END:VALARM dentro de una cita. Hay varias variantes en las que se puede establecer el recordatorio en una cita.
 
-### **Establecer un recordatorio añadiendo etiquetas**
+### **Estableciendo un Recordatorio Añadiendo Etiquetas**
 
-En el siguiente fragmento de código, se muestra cómo configurar un recordatorio añadiendo etiquetas.
+El siguiente fragmento de código muestra cómo establecer un recordatorio añadiendo etiquetas.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de Archivos.
 String dataDir = RunExamples.getDataDir_Outlook();
 long MIN_MS = 60 * 1000;
 long HR_MS = 60 * MIN_MS;
 long DAY_MS = 24 * HR_MS;
 
-String location = "Meeting Location: Room 5";
+String location = "Ubicación de la Reunión: Sala 5";
 Date startDate = getDate(1997, 3, 18, 18, 30, 00);
 Date endDate = getDate(1997, 3, 18, 19, 30, 00);
-MailAddress organizer = new MailAddress("aaa@amail.com", "Organizer");
+MailAddress organizer = new MailAddress("aaa@amail.com", "Organizador");
 MailAddressCollection attendees = new MailAddressCollection();
-attendees.addItem(new MailAddress("bbb@bmail.com", "First attendee"));
+attendees.addItem(new MailAddress("bbb@bmail.com", "Primer asistente"));
 
 Appointment target = new Appointment(location, startDate, endDate, organizer, attendees);
 
-// Audio alarm that will sound at a precise time and
-// Repeat 4 more times at 15 minute intervals:
+// Alarmas de audio que sonarán en un momento preciso y
+// Repetir 4 veces más en intervalos de 15 minutos:
 AppointmentReminder audioReminder = new AppointmentReminder();
 audioReminder.setTrigger(new ReminderTrigger(getDate(1997, 3, 17, 13, 30, 0)));
 audioReminder.setRepeat(4);
@@ -236,36 +236,35 @@ audioReminder.getAttachments().addItem(attach);
 target.getReminders().addItem(audioReminder);
 
 
-// Display alarm that will trigger 30 minutes before the
-// Scheduled start of the event it is
-// Associated with and will repeat 2 more times at 15 minute intervals:
+// Alarmas visuales que se activarán 30 minutos antes del
+// Inicio programado del evento con el que están
+// Asociadas y se repetirán 2 veces más a intervalos de 15 minutos:
 AppointmentReminder displayReminder = new AppointmentReminder();
 ReminderDuration dur = new ReminderDuration(-30 * MIN_MS);
 displayReminder.setTrigger(new ReminderTrigger(dur, ReminderRelated.Start));
 displayReminder.setRepeat(2);
 displayReminder.setDuration(new ReminderDuration(15 * MIN_MS));
 displayReminder.setAction(ReminderAction.Display);
-displayReminder.setDescription("Breakfast meeting with executive team at 8:30 AM EST");
+displayReminder.setDescription("Reunión de desayuno con el equipo ejecutivo a las 8:30 AM EST");
 target.getReminders().addItem(displayReminder);
 
-// Email alarm that will trigger 2 days before the
-// Scheduled due date/time. It does not
-// Repeat. The email has a subject, body and attachment link.
+// Alarmas por email que se activarán 2 días antes de la
+// Fecha/hora límite programada. No se repite. El email tiene un asunto, cuerpo y enlace de adjunto.
 AppointmentReminder emailReminder = new AppointmentReminder();
 ReminderDuration dur1 = new ReminderDuration(-2 * DAY_MS);
 emailReminder.setTrigger(new ReminderTrigger(dur1, ReminderRelated.Start));
 ReminderAttendee attendee = new ReminderAttendee("john_doe@host.com");
 emailReminder.getAttendees().addItem(attendee);
 emailReminder.setAction(ReminderAction.Email);
-emailReminder.setSummary("REMINDER: SEND AGENDA FOR WEEKLY STAFF MEETING");
-emailReminder.setDescription("A draft agenda needs to be sent out to the attendees to the weekly managers meeting (MGR-LIST). Attached is a pointer the document template for the agenda file.");
+emailReminder.setSummary("RECORDATORIO: ENVIAR AGENDA PARA LA REUNIÓN SEMANAL DEL PERSONAL");
+emailReminder.setDescription("Se necesita enviar un borrador de agenda a los asistentes a la reunión semanal de gerentes (MGR-LIST). Adjunta está una referencia al documento plantilla para el archivo de agenda.");
 ReminderAttachment attach1 = new ReminderAttachment(new URI("http://Host.com/templates/agenda.doc"));
 emailReminder.getAttachments().addItem(attach1);
 target.getReminders().addItem(emailReminder);
 
-// Procedural alarm that will trigger at a precise date/time
-// And will repeat 23 more times at one hour intervals. The alarm will
-// Invoke a procedure file.
+// Alarmas procesales que se activarán en una fecha/hora precisa
+// Y se repetirán 23 veces más a intervalos de una hora. La alarma
+// Invocará un archivo de procedimiento.
 AppointmentReminder procReminder = new AppointmentReminder();
 procReminder.setTrigger(new ReminderTrigger(getDate(1998, 1, 1, 5, 0, 0)));
 procReminder.setRepeat(23);
@@ -277,15 +276,15 @@ target.getReminders().addItem(procReminder);
 target.save(dataDir + "savedFile_out.ics");
 ~~~
 
-## **Convierta Appointment EML a MSG con HTML Body**
+## **Convertir Cita EML a MSG con Cuerpo HTML**
 
-Desde la versión 19.3, Aspose.Email ofrece la posibilidad de convertir Appointment EML en MSG conservando el cuerpo HTML de la cita. Aspose.Email proporciona un [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) propiedad que tiene un valor predeterminado de **true.** Cuando el valor de [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) está configurado en **true**, el organismo de la designación se convierte al formato RTF. Para mantener el formato del cuerpo de la cita en formato HTML, defina el valor de [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) to **false.**
+Desde la versión 19.3, Aspose.Email proporciona la capacidad de convertir Cita EML a MSG mientras conserva el cuerpo HTML de la cita. Aspose.Email proporciona una [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) propiedad que tiene un valor por defecto de **true.** Cuando el valor de [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) se establece en **true**, el cuerpo de la cita se convierte al formato RTF. Para mantener el formato del cuerpo de la cita en formato HTML, establezca el valor de [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) en **false.**
 
-El siguiente ejemplo demuestra el uso de [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) propiedad para mantener el formato del cuerpo de la cita en formato HTML.
+El siguiente ejemplo demuestra el uso de la propiedad [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/java/com.aspose.email/mapiconversionoptions/#getForcedRtfBodyForAppointment--) para mantener el formato del cuerpo de la cita en formato HTML.
 
 ~~~Java
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
-// The path to the File directory.
+// Para ejemplos completos y archivos de datos, por favor visite https://github.com/aspose-email/Aspose.Email-for-Java
+// La ruta al directorio de Archivos.
 String dataDir = "outlook/";
 
 MailMessage mailMessage = MailMessage.load(dataDir + "TestAppointment.eml");
@@ -293,15 +292,15 @@ MailMessage mailMessage = MailMessage.load(dataDir + "TestAppointment.eml");
 MapiConversionOptions conversionOptions = new MapiConversionOptions();
 conversionOptions.setFormat(OutlookMessageFormat.Unicode);
 
-// default value for ForcedRtfBodyForAppointment is true
+// valor por defecto para ForcedRtfBodyForAppointment es true
 conversionOptions.setForcedRtfBodyForAppointment(false);
 
 MapiMessage mapiMessage = MapiMessage.fromMailMessage(mailMessage, conversionOptions);
 
 if (mapiMessage.getBodyType() == BodyContentType.Html) {
-    System.out.println("Body Type: Html");
+    System.out.println("Tipo de Cuerpo: Html");
 } else if (mapiMessage.getBodyType() == BodyContentType.Rtf) {
-    System.out.println("Body Type: Rtf");
+    System.out.println("Tipo de Cuerpo: Rtf");
 }
 
 mapiMessage.save(dataDir + "TestAppointment_out.msg");

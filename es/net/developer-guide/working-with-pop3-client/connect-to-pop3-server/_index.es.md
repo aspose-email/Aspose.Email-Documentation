@@ -1,97 +1,97 @@
 ---
-title: "Conectarse al servidor POP3"
+title: "Conectar a un Servidor POP3"
 url: /es/net/connect-to-pop3-server/
 weight: 10
 type: docs
 ---
 
-## Conexión a un servidor POP3
+## Conectando a un Servidor POP3
 
-The [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) La clase permite a las aplicaciones administrar los buzones de correo electrónico mediante el Protocolo de oficina de correos, versión 3 (POP3). Para conectarse a un servidor, utilice el [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) clase. El [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class es la entrada principal para los desarrolladores que desean agregar la administración de POP3 a sus aplicaciones.NET. En este artículo se explica cómo utilizarla. Para conectarse a un servidor POP3:
+La clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) permite a las aplicaciones gestionar buzones de correo utilizando el Protocolo de Oficina de Correos, Versión 3 (POP3). Para conectarse a un servidor, use la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/). La clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) es la principal entrada para los desarrolladores que desean agregar gestión POP3 a sus aplicaciones .NET. Este artículo explica cómo utilizarla. Para conectarse a un servidor POP3:
 
-1. Crea una instancia del [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class.
-2. Especifique el host, el nombre de usuario y la contraseña en [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) instance.
+1. Cree una instancia de la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
+2. Especifique el host, nombre de usuario y contraseña en la instancia de [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 
-El siguiente fragmento de código muestra cómo conectarse con el servidor POP3.
+El siguiente fragmento de código muestra cómo conectarse al servidor POP3.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-ConnectingToPOP3-ConnectingToPOP3.cs" >}}
 
-## **Conexión al servidor SSL**
+## **Conectando a un servidor SSL**
 
-[Conexión a un servidor POP3](#connecting-to-a-pop3-server) describió cómo conectarse a un servidor POP3 en dos sencillos pasos:
+[Conectando a un Servidor POP3](#connecting-to-a-pop3-server) describe cómo conectarse a un servidor POP3 en dos pasos simples:
 
-1. Crea una instancia del [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class.
-1. Especifique el host, el nombre de usuario y la contraseña.
+1. Cree una instancia de la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
+1. Especifique el host, nombre de usuario y contraseña.
 
-El proceso para conectarse a un servidor POP3 con SSL habilitado es similar, pero requiere establecer otras propiedades:
+El proceso para conectarse a un servidor POP3 habilitado para SSL es similar, pero requiere que configure algunas propiedades adicionales:
 
 - [SecurityOptions](https://reference.aspose.com/email/net/aspose.email.clients/securityoptions/)
-- Port
+- Puerto
 
-Para conectarse a un servidor POP3 con SSL habilitado, utilice el [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) clase y establece el [SecurityOptions](https://reference.aspose.com/email/net/aspose.email.clients/securityoptions/) y propiedades portuarias. El siguiente fragmento de código muestra cómo conectarse a un servidor POP3 con SSL habilitado.
+Para conectarse a un servidor POP3 habilitado para SSL, use la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) y establezca las propiedades [SecurityOptions](https://reference.aspose.com/email/net/aspose.email.clients/securityoptions/) y Puerto. El siguiente fragmento de código muestra cómo conectarse a un servidor POP3 habilitado para SSL.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-SSLEnabledPOP3Server-SSLEnabledPOP3Server.cs" >}}
 
-## **Conexión con un servidor APOP**
+## **Conectando con un Servidor APOP**
 
-POP son las siglas de Post Office Protocol. APOP son las siglas de Authenticated Post Office Protocol. APOP es una versión ampliada de la configuración del servidor POP3 que cifra el nombre de usuario y la contraseña y utiliza un mecanismo de autenticación diseñado para proteger la contraseña de la cuenta POP3 al revisar el correo electrónico. La autenticación APOP no requiere que la contraseña de la cuenta se envíe como texto sin formato al servidor de correo POP3.
+POP significa Protocolo de Oficina de Correos. APOP significa Protocolo de Oficina de Correos Autenticado. APOP es una versión extendida de la configuración del servidor POP3 que encripta su nombre de usuario y contraseña y utiliza un mecanismo de autenticación diseñado para proteger la contraseña de su cuenta POP3 al verificar el correo electrónico. La autenticación APOP no requiere que se envíe la contraseña de la cuenta como texto plano al servidor de correo POP3.
 
-## **Conexión al servidor mediante proxy**
+## **Conectando a un Servidor a través de Proxy**
 
-Los servidores proxy son muy comunes para comunicarse con el mundo exterior. En estos casos, las direcciones proxy se utilizan para que los clientes de correo electrónico accedan a los buzones a través de Internet. Aspose.Email admite las versiones 4, 4a y 5 del protocolo de proxy SOCKS. Este artículo proporciona un ejemplo práctico de cómo recuperar correo electrónico mediante un servidor de correo proxy. Para recuperar el correo electrónico a través de un servidor proxy:
+Los servidores proxy son muy comunes para comunicarse con el exterior. En tales casos, se utilizan direcciones proxy para que los clientes de correo accedan a los buzones a través de Internet. Aspose.Email proporciona soporte para las versiones 4, 4a y 5 del protocolo de proxy SOCKS. Este artículo proporciona un ejemplo funcional de recuperación de correo electrónico utilizando un servidor de correo proxy. Para recuperar correo electrónico a través de un servidor proxy:
 
-1. Initialize [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) con la información requerida, es decir, la dirección del proxy, el puerto y la versión de SOCKS.
-1. Initialize [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) con la dirección del host, el nombre de usuario, la contraseña y cualquier otra configuración.
-1. Establezca la propiedad Proxy de un cliente en [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) objeto creado anteriormente.
+1. Inicialice [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) con la información requerida, es decir, dirección proxy, puerto y versión de SOCKS.
+1. Inicialice [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) con la dirección del host, nombre de usuario, contraseña y cualquier otra configuración.
+1. Establezca la propiedad Proxy de un cliente al objeto [Proxy](https://reference.aspose.com/email/net/aspose.email.clients/proxy/) creado anteriormente.
 
-El siguiente fragmento de código muestra cómo recuperar el correo electrónico a través de un servidor proxy.
+El siguiente fragmento de código muestra cómo recuperar correo electrónico a través de un servidor proxy.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-RetrieveEmailViaProxyServer-RetrieveEmailViaProxyServer.cs" >}}
 
-## **Conexión al servidor mediante un proxy HTTP**
+## **Conectando a un servidor a través de un Proxy HTTP**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-AccessMailboxViaHttpProxy-AccessPOP3MailboxViaHttpProxy.cs" >}}
 
-## **Conexión al servidor mediante el mecanismo de autenticación CRAM-MD5**
+## **Conectando al servidor mediante el mecanismo de autenticación CRAM-MD5**
 
-Mediante la autenticación CRAM-MD5, Aspose.Email para.NET permite a los usuarios autenticar y acceder de forma segura a los servidores de correo electrónico que admiten este método de autenticación. El ejemplo de código que aparece a continuación muestra cómo utilizar el mecanismo en su proyecto:
+Usando la autenticación CRAM-MD5, Aspose.Email para .NET permite a los usuarios autenticar y acceder de manera segura a servidores de correo electrónico que soportan este método de autenticación. El siguiente ejemplo de código muestra cómo utilizar el mecanismo en su proyecto:
 
 ```cs
 popClient.AllowedAuthentication = Pop3KnownAuthenticationType.CramMD5;
 ```
 
-## **Cómo configurar el tiempo de espera para las operaciones de correo**
+## **Cómo Establecer el Tiempo de Espera para Operaciones de Correo**
 
-Cada operación de correo lleva algún tiempo dependiendo de muchos factores (retrasos en la red, tamaño de los datos, rendimiento del servidor, etc.). Puede establecer un tiempo de espera para todas las operaciones de correo. El ejemplo de código que aparece a continuación muestra cómo hacerlo mediante el [Timeout](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/timeout/) propiedad. Nota: no debes establecer valores altos para evitar largas esperas en tu aplicación.
+Cada operación de correo toma algún tiempo dependiendo de muchos factores (retardos en la red, tamaño de los datos, rendimiento del servidor, etc.). Puede establecer un tiempo de espera para todas las operaciones de correo. El ejemplo de código a continuación muestra cómo hacerlo utilizando la propiedad [Timeout](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/timeout/). Nota: no debe establecer valores grandes para evitar esperas prolongadas en su aplicación.
 
 ```csharp
 using (Pop3Client pop3Client = new Pop3Client("host", 995, "username", "password", SecurityOptions.Auto))
 {
-    pop3Client.Timeout = 60000; // 60 seconds
+    pop3Client.Timeout = 60000; // 60 segundos
 
-    // some code...
+    // algún código...
 }
 ```
 
-## **Uso de protocolos criptográficos con un cliente POP3**
+## **Usando Protocolos Criptográficos con el Cliente POP3**
 
-Aspose.Email admite los protocolos criptográficos SSL (obsoletos) y TLS para brindar seguridad en las comunicaciones. Puede habilitar el cifrado criptográfico para proteger el intercambio de datos entre la aplicación y los servidores de correo.
+Aspose.Email soporta SSL (obsoleto) y protocolos criptográficos TLS para proporcionar seguridad en las comunicaciones. Puede habilitar la encriptación criptográfica para proteger el intercambio de datos entre su aplicación y los servidores de correo.
 
-> **_NOTE:_**  Debe establecer únicamente las versiones del protocolo compatibles con .NET Framework. Si su versión actual de .NET Framework no admite algunas versiones del protocolo criptográfico, se ignorarán y se omitirán. En este caso, no se generarán excepciones. Utilice, por favor [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) método si desea configurar los protocolos sin ninguna comprobación de compatibilidad.
+> **_NOTA:_** Debe establecer solo aquellas versiones del protocolo que son soportadas por .NET Framework. Si algunas versiones del protocolo criptográfico no son soportadas por su versión actual de .NET Framework, serán ignoradas y omitidas. En este caso, no se generarán excepciones. Utilice el método [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) si desea establecer los protocolos sin ninguna verificación de compatibilidad.
 
-El ejemplo de código siguiente muestra cómo configurar TLS 1.3 para [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) instancia de clase.
+El siguiente ejemplo de código muestra cómo establecer TLS 1.3 para la instancia de la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 
 ```csharp
 using (Pop3Client pop3Client = new Pop3Client("host", 995, "username", "password", SecurityOptions.Auto))
 {
     pop3Client.SupportedEncryption = EncryptionProtocols.Tls13;
 
-    // some code...
+    // algún código...
 }
 ```
 
-En caso de que la versión actual de.NET Framework no admita un protocolo de cifrado especificado, la diferencia de comportamiento entre [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) método y [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) la propiedad es la siguiente:
+En caso de que un protocolo de encriptación especificado no sea soportado en la versión actual de .NET Framework, la diferencia en el comportamiento entre el método [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) y la propiedad [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) es la siguiente:
 
-- If [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/) si se utiliza esta propiedad, el cliente de correo electrónico reduce el protocolo de cifrado a un nivel compatible.
- 
-- If [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe) si se utiliza este método, el cliente de correo electrónico lanza excepciones.
+- Si se utiliza la propiedad [SupportedEncryption](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/supportedencryption/), el cliente de correo degradará el protocolo de encriptación a un nivel soportado.
+  
+- Si se utiliza el método [SetSupportedEncryptionUnsafe](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/setsupportedencryptionunsafe/#setsupportedencryptionunsafe), el cliente de correo lanzará excepciones.

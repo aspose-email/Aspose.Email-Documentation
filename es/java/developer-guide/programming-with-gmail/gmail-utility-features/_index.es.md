@@ -1,21 +1,21 @@
 ---
-title: "Funciones de la utilidad Gmail"
+title: "Funciones de utilidad de Gmail"
 url: /es/java/gmail-utility-features/
 weight: 10
 type: docs
 ---
 
 
-## **Trabajando con FreeBusy Query**
-Aspose.Email proporciona un mecanismo de consulta para comprobar si alguna cita vence o no según los criterios. [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery) Se proporciona una clase para este propósito que permite preparar una consulta para un calendario en particular.
-### **Consulta de un calendario**
-En este ejemplo de código se muestra la función de consultar un calendario. En este ejemplo se realizan las siguientes tareas:
+## **Trabajando con la consulta FreeBusy**
+Aspose.Email proporciona un mecanismo de consulta para verificar si una cita está pendiente o no según los criterios. La clase [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery) se proporciona para este propósito, que permite preparar una consulta para un calendario particular.
+### **Consultando un calendario**
+Este ejemplo de código demuestra la funcionalidad de consultar un calendario. Se realizan las siguientes tareas en este ejemplo:
 
 1. Crear e insertar un calendario
-1. Crea una cita
+1. Crear una cita
 1. Insertar cita
-1. Prepara un [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery)
-1. Obtenga el [FreebusyResponse](https://reference.aspose.com/email/java/com.aspose.email/FreebusyResponse)
+1. Preparar una [FreebusyQuery](https://reference.aspose.com/email/java/com.aspose.email/FreebusyQuery)
+1. Obtener la [FreebusyResponse](https://reference.aspose.com/email/java/com.aspose.email/FreebusyResponse)
 
 ```java
 // Use the OAuthUser and GoogleOAuthHelper classes below to receive an access token
@@ -61,7 +61,7 @@ try {
         query.setTimeMax(c.getTime());
         query.setTimeZone("Europe/Kiev");
 
-        // Set calendar item to search and Obtenga el reponse of query containing
+        // Set calendar item to search and Get the reponse of query containing
         query.getItems().add(calendarId);
         FreebusyResponse resp = client.getFreebusyInfo(query);
 
@@ -73,38 +73,38 @@ try {
     client.dispose();
 }
 ```
-## **Creación de un proyecto en Google Developer Console**
-Se va a crear un proyecto en Google Developer Console para un usuario que tenga una cuenta de Gmail. En la página API y autenticación -> Credenciales del proyecto de Google, debe indicarse información como el ID del cliente y el secreto del cliente. Esta información, junto con el nombre de usuario y la contraseña de la cuenta de Gmail, serán necesarios para ejecutar el código, por ejemplo, el calendario de Google, las listas de control de acceso, las citas, los contactos, la configuración, etc. de esta sección.
+## **Creando un proyecto en Google Developer Console**
+Se debe crear un proyecto en Google Developer Console para un usuario que tenga una cuenta de Gmail. En la página de API y autenticación -> Credenciales del proyecto de Google, se debe anotar información como el ID del cliente y el secreto del cliente. Esta información junto con el nombre de usuario y la contraseña de la cuenta de gmail será necesaria para ejecutar el código, por ejemplo, calendario de Google, listas de control de acceso, citas, contactos, configuraciones, etc. en esta sección.
 ### **Pasos para crear un proyecto en Google Developer Console**
-El siguiente es un tutorial paso a paso para crear un proyecto en Google Developer Console.
+A continuación se presenta un tutorial paso a paso para crear un proyecto en Google Developer Console.
 
-1. Ir al enlace <https://console.cloud.google.com> e inicie sesión con sus credenciales de Gmail
+1. Ir al enlace <https://console.cloud.google.com> e iniciar sesión con tus credenciales de gmail
 
-2. Selecciona la casilla «He leído y acepto todas las condiciones de servicio de los productos de Google Cloud Platform» y pulsa **NUEVO PROYECTO** button
+2. Seleccionar la casilla de verificación "He leído y acepto todos los Términos de Servicio para los productos de Google Cloud Platform." y presionar el botón **NUEVO PROYECTO**
 
 ![todo:image_alt_text](gmail-utility-features_1.png)
 
-3. **Create** and **Select** nuevo proyecto
+3. **Crear** y **Seleccionar** nuevo proyecto
 
 ![todo:image_alt_text](gmail-utility-features_2.png)
 
-4. Select **Library** y habilite la API de contactos y calendario
+4. Seleccionar **Biblioteca** y habilitar la API de Contactos y el API de Calendario
 
 ![todo:image_alt_text](gmail-utility-features_6.png)
 
-5. Open **Pantalla de consentimiento de OAuth**
+5. Abrir la **pantalla de consentimiento de OAuth**
 
 ![todo:image_alt_text](gmail-utility-features_3.png)
 
-6. Select **External** marque la casilla y presione **CREATE** button
+6. Seleccionar la casilla de verificación **Externo** y presionar el botón **CREAR**
 
 ![todo:image_alt_text](gmail-utility-features_4.png)
 
-7. Edite el registro de la aplicación y presione **GUARDAR Y CONTINUAR** button
+7. Editar el registro de la aplicación y presionar el botón **GUARDAR Y CONTINUAR**
 
 ![todo:image_alt_text](gmail-utility-features_5.png)
 
-8. Agregue ámbitos y presione **UPDATE** button
+8. Agregar ámbitos y presionar el botón **ACTUALIZAR**
 
 ![todo:image_alt_text](gmail-utility-features_7.png)
 
@@ -112,14 +112,14 @@ El siguiente es un tutorial paso a paso para crear un proyecto en Google Develop
 
 ![todo:image_alt_text](gmail-utility-features_8.png)
 
-10. Aquí están el ID de cliente y el secreto del cliente que se utilizarán en los códigos de muestra de esta sección.
+10. ID de cliente y secreto de cliente aquí que se utilizarán en los ejemplos de código en esta sección.
 
 ![todo:image_alt_text](gmail-utility-features_9.png)
 
 ## **Clases de ayuda**
-Se requieren las siguientes clases auxiliares para ejecutar los ejemplos de código de esta sección. Estas clases `GoogleOAuthHelper` and `OAuthUser` son solo para simplificar la demostración. Los métodos de estas clases utilizan una estructura no pública de páginas web que puede cambiar en cualquier momento.
+Las siguientes clases de ayuda son necesarias para ejecutar los ejemplos de código en esta sección. Estas clases `GoogleOAuthHelper` y `OAuthUser` son solo para simplificar la demostración. Los métodos en estas clases utilizan estructuras no públicas de las páginas web que pueden cambiar en cualquier momento.
 ### **Clase GoogleOAuthHelper**
-El siguiente fragmento de código muestra cómo implementar `GoogleOAuthHelper` class.
+El siguiente fragmento de código muestra cómo implementar la clase `GoogleOAuthHelper`.
 
 ```java
 import java.io.BufferedReader;
@@ -143,7 +143,7 @@ import javax.xml.bind.DatatypeConverter;
 
 /**
  * <p>
- * Developers console https://console.developers.google.com/projectselector/apis/credentials?pli=1
+ * Developers console https://console.developers.google.com/projectselector/apis/credentials?pli=1 
  * Documentation https://developers.google.com/identity/protocols/OAuth2InstalledApp
  * </p>
  */
@@ -325,11 +325,11 @@ class GoogleOAuthHelper {
 }
 ```
 
-**Ayudante de Google OAuth** debe usarse de la siguiente manera:
-1. Primero se debe generar una URL de código de autorización.
-1. Abre la URL en un navegador y completa todas las operaciones. Como resultado, recibirá un código de autorización.
+**Google OAuth Helper** debe ser utilizado de la siguiente manera:
+1. Primero hay que generar una URL de código de autorización.
+1. Abrir la URL en un navegador y completar todas las operaciones. Como resultado, recibirás un código de autorización.
 1. Usa el código de autorización para recibir un token de actualización.
-1. Cuando exista el token de actualización, puede usarlo para recuperar los tokens de acceso.
+1. Cuando el token de actualización exista, puede usarlo para recuperar tokens de acceso.
 
 ```java
 static class OAuthUser {
@@ -367,7 +367,7 @@ static void getRefreshToken() {
 
     // Get "Access Token"
     String accessToken = GoogleOAuthHelper.getAccessTokenByRefreshToken(user);
-   
+    
     // Use "Access Token" in API
     IGmailClient client = GmailClient.getInstance(accessToken, user.email);
 }

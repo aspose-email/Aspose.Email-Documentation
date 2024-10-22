@@ -1,20 +1,20 @@
 ---
-title: "Mostrar información de correo electrónico en la pantalla en Python"
-url: /es/java/displaying-email-information-on-screen-in-python/
+title: "Mostrando Información de Correo Electrónico en Pantalla en Python"
+url: /es/java/mostrando-informacion-de-correo-electronico-en-pantalla-en-python/
 weight: 40
 type: docs
 ---
 
-## **Aspose.Email - Mostrar información de correo electrónico**
-Para mostrar información de correo electrónico mediante **Aspose.Email Java para Python**, Usa el siguiente código.
+## **Aspose.Email - Mostrando Información de Correo Electrónico**
+Para mostrar información de correo electrónico usando **Aspose.Email Java para Python**, utilice el siguiente código.
 
-**Código Python**
+**Código en Python**
 
 ``` python
 
 
 
-\# Create MailMessage instance by loading an Eml file
+\# Crear instancia de MailMessage cargando un archivo Eml
 
 message_format = self.MessageFormat
 
@@ -22,29 +22,29 @@ mailMessage = self.MailMessage
 
 message = mailMessage.load(self.dataDir + "Message.eml")
 
-print "From: "
+print "De: " 
 
 print message.getFrom()
 
-print "To: "
+print "Para: " 
 
 print message.getTo()
 
-print "Subject: "
+print "Asunto: " 
 
 print message.getSubject()
 
-print "HtmlBody: "
+print "CuerpoHtml: " 
 
 print message.getHtmlBody()
 
-print "TextBody: "
+print "CuerpoTexto: " 
 
 print message.getTextBody()
 
 ```
-## **Descargar Running Code**
-Download **Mostrar información de correo electrónico (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descargue **Mostrando Información de Correo Electrónico (Aspose.Email)** de cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Python-v1.0)
 - [CodePlex](http://asposeemailjavapython.codeplex.com/releases/)

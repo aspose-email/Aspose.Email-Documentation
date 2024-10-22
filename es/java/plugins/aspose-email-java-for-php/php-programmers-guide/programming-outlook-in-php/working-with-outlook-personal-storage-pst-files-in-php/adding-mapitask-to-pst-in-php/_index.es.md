@@ -1,12 +1,12 @@
 ---
-title: "Agregar MapiTask a PST en PHP"
+title: "Añadiendo MapiTask a PST en PHP"
 url: /es/java/adding-mapitask-to-pst-in-php/
 weight: 50
 type: docs
 ---
 
-## **Aspose.Email - Agregar MapiTask a PST**
-Para agregar MapiTask a PST usando **Aspose.Email Java para PHP**, simplemente invoca **AddMapiTaskToPST** módulo. Aquí puedes ver un ejemplo de código.
+## **Aspose.Email - Añadiendo MapiTask a PST**
+Para añadir MapiTask a PST usando **Aspose.Email Java para PHP**, simplemente invoca el módulo **AddMapiTaskToPST**. Aquí puedes ver un código de ejemplo.
 
 **Código PHP**
 
@@ -51,8 +51,8 @@ $task_folder->addMapiMessageItem($task);
 print "Added MapiTask Successfully.".PHP_EOL;
 
 ```
-## **Descargar Running Code**
-Download **Agregar MapiTask a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
+## **Descargar Código en Ejecución**
+Descarga **Añadiendo MapiTask a PST (Aspose.Email)** desde cualquiera de los sitios de codificación social mencionados a continuación:
 
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/blob/master/Plugins/Aspose_Email_Java_for_PHP/src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiTaskToPST.php)
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaphp#src/aspose/email/ProgrammingOutlook/WorkingWithOutlookPersonalStorage/AddMapiTaskToPST.php)

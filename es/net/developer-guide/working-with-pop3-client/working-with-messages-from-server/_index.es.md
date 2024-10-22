@@ -1,168 +1,167 @@
 ---
-title: "Trabajando con mensajes del servidor"
+title: "Trabajando con Mensajes del Servidor"
 url: /es/net/working-with-messages-from-server/
 weight: 50
 type: docs
 ---
 
+## **Obteniendo Información de la Buzón de Correo**
 
-## **Obtener información sobre el buzón**
+Podemos obtener información sobre la bandeja de entrada, como el número de mensajes y el tamaño de la bandeja, utilizando los métodos [GetMailBoxSize](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxsize/#getmailboxsize/v) y [GetMailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxinfo/#getmailboxinfo/) de la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
 
-Podemos obtener información sobre el buzón, como el número de mensajes y el tamaño del buzón, mediante el [GetMailBoxSize](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxsize/#getmailboxsize/v) and [GetMailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxinfo/#getmailboxinfo/) métodos del [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class.
+- El método [GetMailBoxSize](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxsize/#getmailboxsize/) devuelve el tamaño de la bandeja de entrada en bytes.
+- El método [GetMailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxinfo/#getmailboxinfo/) devuelve un objeto de tipo [Pop3MailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/).
 
-- The [GetMailBoxSize](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxsize/#getmailboxsize/) el método devuelve el tamaño del buzón en bytes.
-- The [GetMailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/getmailboxinfo/#getmailboxinfo/) método devuelve un objeto de tipo [Pop3MailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/).
+También es posible obtener el número de mensajes usando la propiedad [MessageCount](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/messagecount/) y el tamaño usando la propiedad [OccupiedSize](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/occupiedsize/) de la clase [Pop3MailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/). El siguiente código de ejemplo muestra cómo obtener información sobre la bandeja de entrada. Muestra cómo:
 
-También es posible obtener el número de mensajes mediante el [MessageCount](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/messagecount/) propiedad y el tamaño utilizando el [OccupiedSize](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/occupiedsize/) propiedad del [Pop3MailBoxInfo](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3mailboxinfo/) clase. El siguiente código de ejemplo muestra cómo obtener información sobre el buzón. Muestra cómo:
-
-1. Crea un [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
-1. Conéctese a un servidor POP3.
-1. Obtenga el tamaño del buzón.
-1. Obtenga información sobre el buzón.
-1. Obtenga el número de mensajes del buzón.
-1. Consigue el tamaño ocupado.
+1. Crear un [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/).
+1. Conectarse a un servidor POP3.
+1. Obtener el tamaño de la bandeja de entrada.
+1. Obtener información de la bandeja de entrada.
+1. Obtener el número de mensajes en la bandeja de entrada.
+1. Obtener el tamaño ocupado.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GettingMailboxInfo-GettingMailboxInfo.cs" >}}
 
-## **Obteniendo el recuento de correos electrónicos en el buzón**
+## **Obteniendo el conteo de correos en la bandeja de entrada**
 
-El siguiente fragmento de código muestra cómo contar los mensajes de correo electrónico de un buzón.
+El siguiente fragmento de código te muestra cómo contar los mensajes de correo en una bandeja de entrada.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GetEmailCountIntheMailbox-GetEmailCountIntheMailbox.cs" >}}
 
-Aspose.Email permite a los desarrolladores trabajar con los correos electrónicos de muchas maneras diferentes. Por ejemplo, pueden recuperar la información del encabezado antes de decidir si descargan un correo electrónico. O pueden recuperar los correos electrónicos de un servidor y guardarlos sin analizarlos (más rápido) o después de analizarlos (más lento). En este artículo se muestra cómo recuperar y convertir correos electrónicos.
+Aspose.Email permite a los desarrolladores trabajar con correos electrónicos de muchas maneras diferentes. Por ejemplo, pueden recuperar información del encabezado antes de decidir si descargar un correo electrónico. O pueden recuperar correos electrónicos de un servidor y guardarlos sin analizarlos (más rápido) o después de analizarlos (más lento). Este artículo muestra cómo recuperar y convertir correos electrónicos.
 
-## **Recuperación de información de encabezados de correo electrónico**
+## **Recuperando Información de Encabezados de Correo Electrónico**
 
-Los encabezados de correo electrónico pueden proporcionarnos información sobre un mensaje de correo electrónico que podemos usar para decidir si queremos recuperar o no el mensaje de correo electrónico completo. Por lo general, la información del encabezado contiene el remitente, el asunto, la fecha de recepción, etc. (los encabezados de los correos electrónicos se describen en detalle en [Personalización de encabezados de correo electrónico](https://docs.aspose.com/email/es/net/creating-and-setting-contents-of-emails/#set-email-headers). Ese tema trata específicamente sobre el envío de un correo electrónico con SMTP, pero la información sobre el contenido del encabezado del correo electrónico sigue siendo válida (para los correos electrónicos POP3). En los siguientes ejemplos se muestra cómo recuperar los encabezados de correo electrónico de un servidor POP3 por el número de secuencia del mensaje.
+Los encabezados de correo electrónico pueden darnos información sobre un mensaje de correo que podemos usar para decidir si recuperar o no el mensaje completo. Típicamente, la información del encabezado contiene el remitente, el asunto, la fecha de recepción, etc. (Los encabezados de correo electrónico se describen en detalle en [Personalizando Encabezados de Correo Electrónico](https://docs.aspose.com/email/es/net/creating-and-setting-contents-of-emails/#set-email-headers). Ese tema es específicamente sobre el envío de un correo electrónico con SMTP, pero la información del contenido del encabezado sigue siendo válida para los correos electrónicos POP3). Los siguientes ejemplos muestran cómo recuperar encabezados de correo de un servidor POP3 por el número de secuencia del mensaje.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-RetrievingEmailHeaders-RetrievingEmailHeaders.cs" >}}
 
-## **Recuperación de mensajes de correo electrónico**
+## **Recuperando Mensajes de Correo Electrónico**
 
-The [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) el componente de clase proporciona la capacidad de recuperar mensajes de correo electrónico del servidor POP3 y analizarlos en un [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instancia con la ayuda de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) componentes. El [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) La clase contiene varias propiedades y métodos para manipular el contenido del correo electrónico. Mediante el uso [FetchMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/fetchmessage/#fetchmessage/) método del [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) clase, puedes obtener un [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instancia directamente desde el servidor POP3. El siguiente fragmento de código muestra cómo recuperar un mensaje de correo electrónico completo del servidor POP3.
+La clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) proporciona la capacidad de recuperar mensajes de correo electrónico del servidor POP3 y analizarlos en una instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) con la ayuda de los componentes [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). La clase [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) contiene varias propiedades y métodos para manipular el contenido del correo electrónico. Al usar el método [FetchMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/fetchmessage/#fetchmessage/) de la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/), puedes obtener una instancia de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) directamente desde el servidor POP3. El siguiente fragmento de código te muestra cómo recuperar un mensaje de correo electrónico completo del servidor POP3.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-RetrievingEmailMessages-RetrievingEmailMessages.cs" >}}
 
-## **Recuperación de la información resumida del mensaje mediante un identificador único**
+## **Recuperando Información de Resumen del Mensaje usando Id Único**
 
-El cliente POP3 de la API puede recuperar la información resumida del mensaje del servidor mediante el identificador único del mensaje. Esto proporciona un acceso rápido a la información breve del mensaje sin tener que recuperar primero el mensaje completo del servidor. El siguiente fragmento de código muestra cómo recuperar la información resumida del mensaje.
+El cliente POP3 de la API puede recuperar información de resumen del mensaje desde el servidor usando el id único del mensaje. Esto proporciona acceso rápido a la información breve del mensaje sin tener que recuperar primero el mensaje completo del servidor. El siguiente fragmento de código te muestra cómo recuperar información de resumen del mensaje.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-RetrieveMessageSummaryInformationUsingUniqueId-RetrieveMessageSummaryInformationUsingUniqueId.cs" >}}
 
-## **Listar mensajes con MultiConnection**
+## **Listando Mensajes con MultiConexión**
 
-[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) proporciona un [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/) propiedad que se puede usar para crear múltiples conexiones para operaciones pesadas. También puede establecer el número de conexiones que se usarán durante el modo multiconexión utilizando [Pop3Client.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/connectionsquantity/). El siguiente fragmento de código muestra el uso del modo multiconexión para enumerar los mensajes y compara su rendimiento con el modo de conexión única.
+[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) proporciona una propiedad [UseMultiConnection](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/usemulticonnection/) que puede ser utilizada para crear múltiples conexiones para operaciones pesadas. También puedes establecer el número de conexiones que se utilizarán durante el modo de multi-conexión usando [Pop3Client.ConnectionsQuantity](https://reference.aspose.com/email/net/aspose.email.clients/emailclient/connectionsquantity/). El siguiente fragmento de código demuestra el uso del modo de multi-conexión para listar mensajes y compara su rendimiento con el modo de conexión única.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-POP3-Pop3ListMessagesWithMultiConnection-1.cs" >}}
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Tenga en cuenta que el uso del modo multiconexión no garantiza un aumento del rendimiento.
+Por favor, ten en cuenta que el uso del modo de multi-conexión no garantiza un aumento en el rendimiento.
 
-{{% /alert %}}
+{{% /alert %}} 
 
-## **Obtener mensajes del servidor y guardarlos en el disco**
+## **Recuperando Mensajes del Servidor y Guardando en Disco**
 
-### **Guardar el mensaje en el disco sin analizarlo**
+### **Guardar Mensaje en Disco sin Analizar**
 
-Si desea descargar mensajes de correo electrónico del servidor POP3 sin analizarlos, utilice el [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) class [SaveMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/savemessage/#savemessage/) función. El [SaveMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/savemessage/#savemessage/) la función no analiza el mensaje de correo electrónico, por lo que es más rápida que [FetchMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/fetchmessage/#fetchmessage/) función. El siguiente fragmento de código muestra cómo guardar un mensaje por su número de secuencia. En este caso, el [SaveMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/savemessage/#savemessage/) El método guarda el mensaje en el formato EML original sin analizarlo.
+Si deseas descargar mensajes de correo del servidor POP3 sin analizarlos, utiliza la función [SaveMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/savemessage/#savemessage/) de la clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/). La función [SaveMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/savemessage/#savemessage/) no analiza el mensaje de correo, por lo que es más rápido que la función [FetchMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/fetchmessage/#fetchmessage/). El siguiente fragmento de código muestra cómo guardar un mensaje por su número de secuencia. En este caso, el método [SaveMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/savemessage/#savemessage/) guarda el mensaje en el formato EML original sin analizarlo.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-SaveToDiskWithoutParsing-SaveToDiskWithoutParsing.cs" >}}
 
-### **Analiza el mensaje antes de guardarlo**
+### **Analizar el Mensaje Antes de Guardar**
 
-El siguiente fragmento de código usa el [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) [FetchMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/fetchmessage/#fetchmessage/) método para recuperar un mensaje de un servidor POP3 por su número de secuencia y, a continuación, guardar el mensaje en el disco con el asunto como nombre de archivo.
+El siguiente fragmento de código utiliza el método [FetchMessage](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/fetchmessage/#fetchmessage/) de [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) para recuperar un mensaje de un servidor POP3 por su número de secuencia, y luego guarda el mensaje en disco usando el asunto como nombre de archivo.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-ParseMessageAndSave-ParseMessageAndSave.cs" >}}
 
-## **Mensajes de búsqueda grupales**
+## **Recuperación Agrupada de Mensajes**
 
-[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) proporciona un [FetchMessages](https://docs.aspose.com/email/es/net/working-with-messages-from-server/) método que acepta números de secuencia iterables o ID únicos y devuelve una lista de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). El siguiente fragmento de código demuestra el uso del [FetchMessages](https://docs.aspose.com/email/es/net/working-with-messages-from-server/) método para buscar mensajes por números de secuencia e ID único.
+[Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) proporciona un método [FetchMessages](https://docs.aspose.com/email/es/net/working-with-messages-from-server/) que acepta números de secuencia o ID únicos iterables y devuelve una lista de [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/). El siguiente fragmento de código demuestra el uso del método [FetchMessages](https://docs.aspose.com/email/es/net/working-with-messages-from-server/) para recuperar mensajes por números de secuencia y ID únicos.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-POP3-Pop3FetchGroupMessages-1.cs" >}}
 
-## **Filtrar mensajes por remitente, destinatario o fecha**
+## **Filtrando Mensajes por Remitente, Destinatario o Fecha**
 
-The [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) clase, descrita en [Conexión a un servidor POP3](https://docs.aspose.com/email/es/net/connect-to-pop3-server/), proporciona la [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages/) método que obtiene todos los mensajes de un buzón. Para recibir solo los mensajes que cumplen alguna condición, utilice el método sobrecargado [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages/) método que toma [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) como argumento. El [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) La clase proporciona varias propiedades para especificar las condiciones de la consulta, por ejemplo, fecha, asunto, remitente, destinatario, etc. El [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/) la clase se usa para construir la expresión de búsqueda. En primer lugar, se establecen todas las condiciones y restricciones y, a continuación [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) se rellena con la consulta desarrollada por [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/). El [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) el objeto de clase es utilizado por [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) para extraer la información filtrada del servidor. En este artículo se muestra cómo filtrar los mensajes de correo electrónico de un buzón. El primer ejemplo ilustra cómo filtrar los mensajes según la fecha y el asunto. También mostramos cómo filtrar según otros criterios y cómo crear consultas más complejas. También muestra la aplicación del filtro de fecha y hora para recuperar los correos electrónicos específicos del buzón. Además, también muestra cómo aplicar el filtrado que distingue entre mayúsculas y minúsculas.
+La clase [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/), descrita en [Conectando a un Servidor POP3](https://docs.aspose.com/email/es/net/connect-to-pop3-server/), proporciona el método [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages/) que obtiene todos los mensajes de una bandeja de entrada. Para obtener solo los mensajes que coinciden con alguna condición, utiliza el método sobrecargado [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages/) que toma [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) como argumento. La clase [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) proporciona varias propiedades para especificar las condiciones de consulta, por ejemplo, fecha, asunto, remitente, destinatario, etc. La clase [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/) se usa para construir la expresión de búsqueda. Primero, se establecen todas las condiciones y restricciones y luego [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) se completa con la consulta desarrollada por [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/). El objeto de la clase [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) es utilizado por [Pop3Client](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/) para extraer la información filtrada del servidor. Este artículo muestra cómo filtrar mensajes de correo electrónico de una bandeja de entrada. El primer ejemplo ilustra cómo filtrar mensajes en función de la fecha y el asunto. También mostramos cómo filtrar según otros criterios y cómo construir consultas más complejas. También muestra la aplicación de un filtro de fecha y hora para recuperar correos electrónicos específicos de la bandeja de entrada. Además, también se muestra cómo aplicar filtros que diferencian mayúsculas y minúsculas.
 
-### **Filtrar mensajes del buzón**
+### **Filtrando Mensajes de la Bandeja de Entrada**
 
-Para filtrar los mensajes de un buzón:
+Para filtrar mensajes de una bandeja de entrada:
 
-1. [Conectarse e iniciar sesión en un servidor POP3](https://docs.aspose.com/email/es/net/connect-to-pop3-server/#connecting-to-pop3-server).
-2. Crea una instancia de [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) y defina las propiedades deseadas.
-3. Llame al [`Pop3Client.ListMessages(MailQuery query)`](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages_8) método y pase el [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) en los parámetros para obtener solo los mensajes filtrados.
+1. [Conéctate e inicia sesión en un servidor POP3](https://docs.aspose.com/email/es/net/connect-to-pop3-server/#connecting-to-pop3-server).
+2. Crea una instancia de [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) y establece las propiedades deseadas.
+3. Llama al método [`Pop3Client.ListMessages(MailQuery query)`](https://reference.aspose.com/email/net/aspose.email.clients.pop3/pop3client/listmessages/#listmessages_8) y pasa el [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) como parámetro para obtener solo los mensajes filtrados.
 
-El siguiente fragmento de código muestra cómo conectarse a un buzón POP3 y recibir los mensajes que llegaron hoy y que tienen la palabra «boletín» en el asunto.
+El siguiente fragmento de código te muestra cómo conectarte a una bandeja de entrada POP3 y obtener los mensajes que llegaron hoy y tienen la palabra "newsletter" en el asunto.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-FilterMessagesFromPOP3Mailbox-FilterMessagesFromPOP3Mailbox.cs" >}}
 
-### **Recibir mensajes que cumplan con criterios específicos**
+### **Obteniendo Mensajes que Cumplen Criterios Específicos**
 
-[Los ejemplos de código anteriores](https://docs.aspose.com/email/es/net/working-with-messages-from-server/#filtering-messages-from-mailbox) muestra cómo puede filtrar los mensajes según el asunto y la fecha del correo electrónico. También podemos usar otras propiedades para establecer otras condiciones admitidas. A continuación se muestran algunos ejemplos de cómo configurar las condiciones mediante [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/).
+[Los ejemplos de código anteriores](https://docs.aspose.com/email/es/net/working-with-messages-from-server/#filtering-messages-from-mailbox) muestran cómo puedes filtrar mensajes en función del asunto del correo y la fecha. También podemos usar otras propiedades para establecer otras condiciones admitidas. A continuación se presentan algunos ejemplos de establecer condiciones usando [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/).
 
-Los siguientes fragmentos de código muestran cómo filtrar los correos electrónicos según otros criterios:
+Los fragmentos de código que siguen muestran cómo filtrar correos electrónicos según otros criterios:
 
-- Encuentra los correos electrónicos enviados hoy.
-- Busca los correos electrónicos recibidos dentro de un rango.
-- Busca correos electrónicos de un remitente específico.
-- Busca correos electrónicos enviados desde un dominio específico.
-- Busca los correos electrónicos enviados a un destinatario específico.
- 
-#### **Fecha de hoy**
+- Encontrar correos electrónicos entregados hoy.
+- Encontrar correos electrónicos recibidos dentro de un rango.
+- Encontrar correos electrónicos de un remitente específico.
+- Encontrar correos electrónicos enviados desde un dominio específico.
+- Encontrar correos electrónicos enviados a un destinatario específico.
 
-En el siguiente fragmento de código, se muestra cómo encontrar los correos electrónicos que se han entregado hoy.
+#### **Fecha de Hoy**
+
+El siguiente fragmento de código te muestra cómo encontrar correos electrónicos entregados hoy.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GetMessagesUsingSpecificCriteria-GetEmailsWithTodayDate.cs" >}}
 
-#### **Intervalo de fechas**
+#### **Rango de Fechas**
 
-El siguiente fragmento de código muestra cómo buscar los correos electrónicos recibidos dentro de un rango.
+El siguiente fragmento de código te muestra cómo encontrar correos electrónicos recibidos dentro de un rango.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GetMessagesUsingSpecificCriteria-GetEmailsOverDateRange.cs" >}}
 
-#### **Remitente específico**
+#### **Remitente Específico**
 
-El siguiente fragmento de código muestra cómo buscar correos electrónicos de un remitente específico.
+El siguiente fragmento de código te muestra cómo encontrar correos electrónicos de un remitente específico.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GetMessagesUsingSpecificCriteria-GetSpecificSenderEmails.cs" >}}
 
-#### **Dominio específico**
+#### **Dominio Específico**
 
-El siguiente fragmento de código muestra cómo encontrar los correos electrónicos enviados desde un dominio específico.
+El siguiente fragmento de código te muestra cómo encontrar correos electrónicos enviados desde un dominio específico.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GetMessagesUsingSpecificCriteria-GetSpecificDomainEmails.cs" >}}
 
-#### **Destinatario específico**
+#### **Destinatario Específico**
 
-El siguiente fragmento de código muestra cómo encontrar los correos electrónicos enviados a un destinatario específico.
+El siguiente fragmento de código te muestra cómo encontrar correos electrónicos enviados a un destinatario específico.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-GetMessagesUsingSpecificCriteria-GetSpecificRecipientEmails.cs" >}}
 
-### **Creación de consultas complejas**
+### **Construyendo Consultas Complejas**
 
-Si es diferente [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/) las propiedades se establecen en declaraciones separadas, entonces todas las condiciones coincidirían. Por ejemplo, si queremos recibir mensajes entre un intervalo de fechas y los de un anfitrión específico, necesitamos escribir tres declaraciones.
+Si se establecen diferentes propiedades de [MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/) en declaraciones separadas, se cumplirán todas las condiciones. Por ejemplo, si queremos obtener mensajes entre un rango de fechas y de un host específico, necesitamos escribir tres declaraciones.
 
-#### **Combinación de consultas con AND**
+#### **Combinando Consultas con AND**
 
-El siguiente fragmento de código muestra cómo combinar consultas con AND.
+El siguiente fragmento de código te muestra cómo combinar consultas usando AND.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-BuildComplexQueries-CombineQueriesWithAND.cs" >}}
 
-#### **Combinación de consultas con OR**
+#### **Combinando Consultas con OR**
 
-[MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/) proporciona la [Or()](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/or/#or) método que requiere dos [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) instancias como parámetros. Obtiene los mensajes que cumplen cualquiera de las dos condiciones especificadas. El siguiente fragmento de código muestra cómo filtrar los mensajes que tienen la palabra «test» en el asunto o «noreply@host.com» como remitente. En el siguiente fragmento de código, se muestra cómo combinar consultas con OR.
+[MailQueryBuilder](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/) proporciona el método [Or()](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquerybuilder/or/#or) que toma dos instancias de [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) como parámetros. Obtiene los mensajes que coinciden con cualquiera de las dos condiciones especificadas. El siguiente fragmento de código muestra cómo filtrar mensajes que tengan "test" en el asunto o "noreply@host.com" como remitente. El siguiente fragmento de código te muestra cómo combinar consultas usando OR.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-BuildComplexQueries-CombiningQueriesWithOR.cs" >}}
 
-#### **Aplicar filtros que distinguen mayúsculas y minúsculas**
+#### **Aplicando Filtros Sensibles a Mayúsculas y Minúsculas**
 
-La API también ofrece la capacidad de filtrar los correos electrónicos del buzón según un criterio que distingue mayúsculas y minúsculas. Los siguientes métodos permiten buscar correos electrónicos especificando la distinción entre mayúsculas y minúsculas.
+La API también proporciona la capacidad de filtrar correos electrónicos de la bandeja de entrada basándose en un criterio sensible a mayúsculas y minúsculas. Los siguientes métodos ofrecen la capacidad de buscar correos electrónicos especificando una bandera sensible a mayúsculas y minúsculas.
 
-- Method `Aspose.Email.StringComparisonField.Contains(string value, bool ignoreCase)`
-- Method `Aspose.Email.StringComparisonField.Equals(string value, bool ignoreCase)`
-- Method `Aspose.Email.StringComparisonField.NotContains(string value, bool ignoreCase)`
-- Method `Aspose.Email.StringComparisonField.NotEquals(string value, bool ignoreCase)`
+- Método `Aspose.Email.StringComparisonField.Contains(string value, bool ignoreCase)`
+- Método `Aspose.Email.StringComparisonField.Equals(string value, bool ignoreCase)`
+- Método `Aspose.Email.StringComparisonField.NotContains(string value, bool ignoreCase)`
+- Método `Aspose.Email.StringComparisonField.NotEquals(string value, bool ignoreCase)`
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-POP3-ApplyCaseSensitiveFilters-ApplyCaseSensitiveFilters.cs" >}}

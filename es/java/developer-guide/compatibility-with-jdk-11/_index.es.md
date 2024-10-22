@@ -6,16 +6,16 @@ type: docs
 ---
 
 
-La API Aspose.Email EWSClient es totalmente compatible y se puede usar con JDK 11. Para trabajar con el JDK 11, necesitamos agregar dependencias de JAXB. Todas las demás API de Aspose.Email funcionarán normalmente sin dependencias adicionales.
+La API Aspose.Email EWSClient es completamente compatible y se puede usar con JDK 11. Para trabajar con JDK 11, necesitamos agregar las dependencias de JAXB. Todas las demás API de Aspose.Email funcionarán normalmente sin ninguna dependencia adicional.
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Las API de JAXB se consideran API de Java EE y, por lo tanto, ya no figuran en la ruta de clases predeterminada de Java SE 9. En Java 11, se eliminan por completo del JDK.
+Las API de JAXB se consideran API de Java EE, y por lo tanto ya no están contenidas en la ruta de clase por defecto en Java SE 9. En Java 11 se eliminan por completo del JDK.
 
-{{% /alert %}}
+{{% /alert %}} 
 
 
-Se añadirán al proyecto las siguientes dependencias JAXB de Maven:
+Las siguientes dependencias de Maven JAXB deben ser agregadas al proyecto:
 
 ~~~Java
 
@@ -57,6 +57,6 @@ Se añadirán al proyecto las siguientes dependencias JAXB de Maven:
 
     <version>1.5.0</version>
 
-</dependency>
+</dependency> 
 
 ~~~

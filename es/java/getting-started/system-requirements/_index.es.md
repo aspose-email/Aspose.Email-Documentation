@@ -1,21 +1,21 @@
 ---
-title: "Requisitos del sistema"
+title: "Requisitos del Sistema"
 url: /es/java/system-requirements/
 weight: 40
 type: docs
 ---
 
-{{% alert color="primary" %}}
+{{% alert color="primary" %}} 
 
-Aspose.Email para Java no requiere tener instalado Microsoft Outlook, ya que Aspose.Email en sí es una biblioteca de creación, conversión y manipulación de documentos de Microsoft Outlook.
+Aspose.Email para Java no requiere tener Microsoft Outlook instalado, ya que Aspose.Email es en sí una biblioteca para la creación, conversión y manipulación de documentos de Microsoft Outlook.
 
-{{% /alert %}}
-## **Sistemas operativos compatibles**
-Aspose.Email para Java es compatible con cualquier sistema operativo que ejecute el tiempo de ejecución de Java, incluidos, entre otros:
+{{% /alert %}} 
+## **Sistemas Operativos Soportados**
+Aspose.Email para Java soporta cualquier sistema operativo que ejecute el entorno de ejecución de Java, incluyendo, pero no limitado a:
 ### **Windows**
-- Servidor Microsoft Windows 2003
-- Servidor Microsoft Windows 2008
-- Servidor Microsoft Windows 2012
+- Microsoft Windows 2003 Server
+- Microsoft Windows 2008 Server
+- Microsoft Windows 2012 Server
 - Microsoft Windows XP 
 - Microsoft Windows Vista
 - Microsoft Windows 7
@@ -25,10 +25,10 @@ Aspose.Email para Java es compatible con cualquier sistema operativo que ejecute
 - Linux (Ubuntu, openSUSE, CentOS y otros)
 ### **Mac**
 - Mac OS X, etc.
-## **Versiones de Java compatibles**
-Aspose.Email para Java admite las siguientes versiones de Java:
+## **Versiones de Java Soportadas**
+Aspose.Email para Java soporta las siguientes versiones de Java:
 
-- J2SE 6.0 (1,6)
-- J2SE 7.0 (1,7)
+- J2SE 6.0 (1.6)
+- J2SE 7.0 (1.7)
 - J2SE 8.0 (1.8)
-- o por encima
+- o superior

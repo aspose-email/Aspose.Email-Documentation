@@ -1,6 +1,6 @@
 ---
-title: "Sincronización de bibliotecas de documentos"
-url: /es/sharepoint/document-library-synchronization/
+title: "Sincronización de Biblioteca de Documentos"
+url: /es/sharepoint/sincronizacion-biblioteca-documentos/
 weight: 30
 type: docs
 ---
