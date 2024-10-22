@@ -1,20 +1,24 @@
 ---
-title: "Características de la utilidad - MailMessage"
-description: "Puede leer los mensajes de correo electrónico con archivos adjuntos de TNEF utilizados por Microsoft Outlook y Exchange Server, y modificar el contenido del archivo adjunto mediante la API de biblioteca de analizadores de correo electrónico de C++."
+title: "Funciones de utilidad - MailMessage"
+description: "Puede leer mensajes de correo electrónico con archivos adjuntos TNEF utilizados por Microsoft Outlook y Exchange Server, y modificar el contenido del archivo adjunto utilizando la API de la Biblioteca de Análisis de Correo Electrónico en C++."
 url: /es/cpp/utility-features-mailmessage/
 weight: 40
 type: docs
 ---
 
-## **Mensajes de correo que contienen archivos adjuntos de TNEF**
-El formato de encapsulación neutral para el transporte (TNEF) es un formato patentado de archivos adjuntos de correo electrónico que utilizan Microsoft Outlook y Microsoft Exchange Server. La API Aspose.Email le permite leer los mensajes de correo electrónico que tienen archivos adjuntos en TNEF y modificar el contenido de los archivos adjuntos. Luego, el correo electrónico se puede guardar como correo electrónico normal o en el mismo formato, conservando los archivos adjuntos de TNEF. En este artículo se muestran diferentes ejemplos de código para trabajar con mensajes que contienen archivos adjuntos de TNEF. En este artículo también se muestra cómo trabajar con la creación de archivos EML de TNEF a partir de archivos MSG de Outlook.
+## **MailMessages que contienen archivos adjuntos TNEF**
 
-### **Lectura del mensaje conservando los archivos adjuntos del TNEF**
-El siguiente fragmento de código muestra cómo leer un mensaje conservando los archivos adjuntos de TNEF.
+El Formato de Encapsulación Neutral de Transporte (TNEF) es un formato de archivo adjunto de correo electrónico propietario utilizado por Microsoft Outlook y Microsoft Exchange Server. La API de Aspose.Email le permite leer mensajes de correo electrónico que tienen archivos adjuntos TNEF y modificar el contenido del archivo adjunto. El correo electrónico puede ser guardado como un correo electrónico normal o en el mismo formato, preservando los archivos adjuntos TNEF. Este artículo muestra diferentes ejemplos de código para trabajar con mensajes que contienen archivos adjuntos TNEF. Este artículo también muestra cómo crear archivos EML TNEF a partir de archivos MSG de Outlook.
+
+### **Lectura de mensajes preservando archivos adjuntos TNEF**
+
+El siguiente fragmento de código le muestra cómo leer un mensaje preservando los archivos adjuntos TNEF.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-ReadMessageByPreservingTNEFAttachments-ReadMessageByPreservingTNEFAttachments.cpp" >}}
 
-## **Comprueba los mensajes devueltos**
-Es muy común que un mensaje enviado a un destinatario rebote por cualquier motivo, como una dirección de destinatario no válida. La API Aspose.Email tiene la capacidad de procesar un mensaje de este tipo para comprobar si se trata de un correo electrónico devuelto o de un mensaje de correo electrónico normal. El método checkBounced de MailMessage devuelve un resultado válido si el mensaje de correo electrónico es un correo devuelto. Este artículo muestra el uso de la clase BounceResult, que proporciona la capacidad de comprobar si un mensaje es un correo electrónico devuelto. Además, proporciona información detallada sobre los destinatarios, las medidas adoptadas y el motivo de la notificación. El siguiente fragmento de código muestra cómo procesar los mensajes devueltos.
+## **Comprobar mensajes devueltos**
+
+Es muy común que un mensaje enviado a un destinatario pueda rebotar por cualquier motivo, como una dirección de destinatario no válida. La API de Aspose.Email tiene la capacidad de procesar dicho mensaje para verificar si es un correo electrónico rebotado o un mensaje de correo electrónico regular. El método CheckBounced de MailMessage devuelve un resultado válido si el mensaje de correo electrónico es un correo rebotado. Este artículo muestra el uso de la clase BounceResult que proporciona la capacidad de verificar si un mensaje es un correo electrónico rebotado. Además, proporciona información detallada sobre los destinatarios, la acción tomada y la razón de la notificación. El siguiente fragmento de código le muestra cómo procesar mensajes rebotados.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-CheckBouncedMessage-CheckBouncedMessage.cpp" >}}
+
