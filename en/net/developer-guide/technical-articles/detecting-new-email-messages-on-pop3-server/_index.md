@@ -1,5 +1,6 @@
 ---
 title: Detecting New Email Messages on POP3 Server
+ArticleTitle: Detecting New Email Messages on POP3 Server
 type: docs
 weight: 100
 url: /net/detecting-new-email-messages-on-pop3-server/

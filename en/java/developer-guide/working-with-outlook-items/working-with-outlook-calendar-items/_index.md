@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Calendar Items
+ArticleTitle: Working with Outlook Calendar Items
 type: docs
 weight: 120
 url: /java/working-with-outlook-calendar-items/

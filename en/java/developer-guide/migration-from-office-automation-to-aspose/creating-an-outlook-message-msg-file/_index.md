@@ -1,5 +1,6 @@
 ---
 title: Creating an Outlook Message (MSG) File
+ArticleTitle: Creating an Outlook Message (MSG) File
 type: docs
 weight: 20
 url: /java/creating-an-outlook-message-msg-file/

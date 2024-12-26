@@ -1,5 +1,6 @@
 ---
 title: Manage Attachments in Email Message in PHP
+ArticleTitle: Manage Attachments in Email Message in PHP
 type: docs
 weight: 50
 url: /java/manage-attachments-in-email-message-in-php/

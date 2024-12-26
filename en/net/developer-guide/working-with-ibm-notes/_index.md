@@ -1,5 +1,6 @@
 ---
 title: Working with IBM Notes
+ArticleTitle: Working with IBM Notes
 type: docs
 weight: 130
 url: /net/working-with-ibm-notes/

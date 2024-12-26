@@ -1,62 +1,11 @@
 ---
-title: Utility Features
+title: Advanced Email Management for .NET Applications
+ArticleTitle: Utility Features in Aspose.Email for .NET
 type: docs
-weight: 120
+weight: 170
 url: /net/utility-features/
 ---
 
-
-## **Sending a Message with Voting Option**
-
-Microsoft Outlook allows users to create a poll when composed a new message. This is done by including voting options such as Yes, No, Maybe, etc. The FollowUpOptions class offered by Aspose.Email, provides the VotingButtons property that can be used to set or get the value of the voting options. This article provides a detailed example of creating a MapiMessage with voting options for creating a poll and then sending the message using Exchange Web Service (EWS) client.
-
-### **Creating and Sending a Message with Voting Options**
-
-The following code snippet shows you how to create a new message and then send it with voting options.
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateAndSendingMessageWithVotingOptions-CreateAndSendingMessageWithVotingOptions.cs" >}}
-
-### **Sample Methods Used in Examples**
-
-The following code snippet shows you how to use methods used in the above example.
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateAndSendingMessageWithVotingOptions-CreateTestMessage.cs" >}}
-
-## **Ignore or Bypass Invalid or Expired SSL Certificate**
-
-Aspose.Email can handle SSL certificates on Exchange Server using both the [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/) and [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) classes. If the SSL certificate has expired or become invalid, Aspose.Email throws an exception due to invalid SSL certificate. Avoid such SSL certificate errors by ignoring them using the method used in the code below. Register the callback handler in your main() or init() method and add the method below as the member of the class.
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-IgnoringInvalidSSLCertificates-IgnoringInvalidSSLCertificates.cs" >}}
-
-## **Creating RE and FW messages from MSG files**
-
-[IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) lets developers create RE (Reply/Reply All) and FW (Forward) messages from a source message. The source message is identified by selecting a particular [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) from [ExchangeMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfocollection/exchangemessageinfocollection/) obtained by [IEWSClient.ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/). The other argument is the actual [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) to be sent as RE or FW message. The following code snippet shows you how to create a sample account which is used to send a message and then the Reply and Forward message features are demonstrated against that sample message. To perform this task:
-
-1. Initialize the [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) object by providing valid credentials.
-1. Send a few sample messages.
-1. Call the [IEWSClient.Reply()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/reply/), [IEWSClient.ReplyAll()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/replyall/) and [IEWSClient.Forward()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/forward/) functions to send messages.
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-CreateREAndFWMessages-CreateREAndFWMessages.cs" >}}
-
-## **Support for Email Tracking**
-
-Aspose.Email API provides support of email tracking using Message Disposition Notification (MDN). This is achieved by requesting the read receipts and creating the required information. The [MailMessage.ReadReceiptTo](https://reference.aspose.com/email/net/aspose.email/mailmessage/readreceiptto/) property gets or sets the set read receipt address. The [CreateReadReceipt](https://reference.aspose.com/email/net/aspose.email/mailmessage/createreadreceipt/) and [ReadReceiptRequested](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/readreceiptrequested/) methods are used for creating and retrieving the information whether read receipts are requested. The following code snippet shows you how to email track using Aspose.Email API.
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange-EmailTracking-EmailTracking.cs" >}}
-
-## **Support for Logging in Exchange Clients**
-
-Aspose.Email API provides the capability to provide logging facility of Exchange Web Service client. This can be achieved by configuring the App.config file.
-
-### **Logging for EWS Client**
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "LoggingForEWSClient.xml" >}}
-
-## **Adding Headers in EWS Requests**
-
-Aspose.Email API allows adding headers to Exchange requests. This can be used to add headers to the EWS requests for different headers that can be used for different purposes. Once such example could be adding the X-AnchorMailbox header that is used to manage the throttling issues on Exchange server. The [AddHeader](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/addheader/) method of the [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) is used to add headers to the EWS requests as shown in the following code snippet.
-
-{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-AddingHeadersToEWSRequests-AddingHeadersToEWSRequests.cs" >}}
 
 ## **Working with Unified Messaging**
 

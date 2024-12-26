@@ -1,5 +1,6 @@
 ---
 title: Working with Attachments and Embedded Objects using C++ Email Parser Library
+ArticleTitle: Working with Attachments and Embedded Objects using C++ Email Parser Library
 linktitle: Working with Attachments and Embedded Objects
 type: docs
 weight: 50

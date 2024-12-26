@@ -1,5 +1,6 @@
 ---
 title: Working with Distribution Lists on Exchange Server
+ArticleTitle: Working with Distribution Lists on Exchange Server
 type: docs
 weight: 70
 url: /java/working-with-distribution-lists-on-exchange-server/

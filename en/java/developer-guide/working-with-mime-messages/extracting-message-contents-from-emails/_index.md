@@ -1,5 +1,6 @@
 ---
 title: Extracting Message Contents from Emails
+ArticleTitle: Extracting Message Contents from Emails
 type: docs
 weight: 30
 url: /java/extracting-message-contents-from-emails/
@@ -33,7 +34,8 @@ To extract headers from an email, follow these steps:
 
 1. Create an instance of the **MailMessage** class.
 2. Load an email message in the instance of **MailMessage** class.
-3. After an email message has been loaded, we will get its raw content. The **MailMessage** class itself contains properties such as From, To, Cc, Subject and so on. These properties can be extracted from headers.
+3. After an email message has been loaded, we will get its raw content.
+   The **MailMessage** class itself contains properties such as From, To, Cc, Subject and so on. These properties can be extracted from headers.
 4. Display the raw content.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-EmailHeaders-ExtractingEmailHeaders.java" >}}

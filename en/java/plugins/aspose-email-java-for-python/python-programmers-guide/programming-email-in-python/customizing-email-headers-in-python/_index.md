@@ -1,5 +1,6 @@
 ---
 title: Customizing Email Headers in Python
+ArticleTitle: Customizing Email Headers in Python
 type: docs
 weight: 30
 url: /java/customizing-email-headers-in-python/

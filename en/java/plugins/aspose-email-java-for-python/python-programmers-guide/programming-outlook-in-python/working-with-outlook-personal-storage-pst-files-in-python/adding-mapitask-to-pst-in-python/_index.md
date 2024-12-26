@@ -1,5 +1,6 @@
 ---
 title: Adding MapiTask to PST in Python
+ArticleTitle: Adding MapiTask to PST in Python
 type: docs
 weight: 40
 url: /java/adding-mapitask-to-pst-in-python/
@@ -10,7 +11,7 @@ To Add MapiTask to PST using **Aspose.Email Java for Python**, Use following cod
 
 **Python Code**
 
-```python
+{{< highlight python >}}
 
 
 
@@ -52,7 +53,7 @@ task_folder.addMapiMessageItem(task)
 
 print "Added MapiTask Successfully."
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiTask to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

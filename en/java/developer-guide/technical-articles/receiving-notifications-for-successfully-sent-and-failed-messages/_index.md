@@ -1,5 +1,6 @@
 ---
 title: Receiving Notifications for Successfully Sent and Failed Messages
+ArticleTitle: Receiving Notifications for Successfully Sent and Failed Messages
 type: docs
 weight: 90
 url: /java/receiving-notifications-for-successfully-sent-and-failed-messages/

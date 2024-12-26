@@ -1,5 +1,6 @@
 ---
 title: Adding MapiNote to PST in Ruby
+ArticleTitle: Adding MapiNote to PST in Ruby
 type: docs
 weight: 50
 url: /java/adding-mapinote-to-pst-in-ruby/

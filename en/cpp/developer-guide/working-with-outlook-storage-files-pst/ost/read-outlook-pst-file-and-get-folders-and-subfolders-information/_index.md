@@ -1,5 +1,6 @@
 ---
 title: Read Outlook PST File and Get Folders and SubFolders Information
+ArticleTitle: Read Outlook PST File and Get Folders and SubFolders Information
 type: docs
 weight: 30
 url: /cpp/read-outlook-pst-file-and-get-folders-and-subfolders-information/

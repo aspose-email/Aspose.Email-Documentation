@@ -1,5 +1,6 @@
 ---
 title: Listing IMAP Server Extensions
+ArticleTitle: Listing IMAP Server Extensions
 type: docs
 weight: 80
 url: /java/listing-imap-server-extensions/

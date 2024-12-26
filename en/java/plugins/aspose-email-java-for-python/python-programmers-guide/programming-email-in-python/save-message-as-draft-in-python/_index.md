@@ -1,5 +1,6 @@
 ---
 title: Save Message as Draft in Python
+ArticleTitle: Save Message as Draft in Python
 type: docs
 weight: 70
 url: /java/save-message-as-draft-in-python/

@@ -1,5 +1,6 @@
 ---
 title: Activation and De-activation after Installation
+ArticleTitle: Activation and De-activation after Installation
 type: docs
 weight: 30
 url: /sharepoint/activation-and-de-activation-after-installation/

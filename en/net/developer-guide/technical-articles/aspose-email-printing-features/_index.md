@@ -1,5 +1,6 @@
 ---
 title: Aspose.Email.Printing Features
+ArticleTitle: Aspose.Email.Printing Features
 type: docs
 weight: 150
 url: /net/aspose-email-printing-features/

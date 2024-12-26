@@ -1,16 +1,14 @@
 ---
-title: Working with Appointments
+title: "Manage Appointments: Create & Manipulate, Convert ICS to MSG"
+ArticleTitle: "Manage Appointments: Create & Manipulate, Convert ICS to MSG"
 type: docs
 weight: 20
-url: /net/working-with-appointments/
+url: /net/create-and-manipulate-appointments-convert-ics-to-msg/
 ---
-## **Create an Appointment**
 
-The [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) class in Aspose.Email for .NET can be used to create a new appointment. In this article, we first create an appointment and save it to a disk in ICS format.
+## **Create an Appointment and Save to Disk in MSG or ICS Format**
 
-### **Create an Appointment and Save to a Disk in MSG or ICS Format**
-
-Following steps are required to create an appointment and save it to a disk.
+The [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) class in Aspose.Email for .NET can be used to create a new appointment. In this article, we first create an appointment and save it to a disk in ICS format.Following steps are required to create an appointment and save it to a disk.
 
 1. Create an instance of the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) class and initialize it with this constructor.
 1. Pass the following arguments in the above constructor
@@ -64,8 +62,8 @@ Try the following code sample to create an appointment with alternative HTML des
    - Specify the attendee.
 3. Set the [HtmlDescription](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/htmldescription/#appointmenthtmldescription-property) property of the appointment object, indicating that the description is in HTML format.
 4. Set the Description property of the appointment object to an HTML-formatted string, enclosed within a multiline string:
-   - The HTML markup includes a `<style>` block defining a CSS class named "text" with font styles.
-   - The HTML body contains a paragraph tag `<p>` with the CSS class "text", and the actual invitation message.
+   - The HTML markup includes a &lt;style&gt; block defining a CSS class named "text" with font styles.
+   - The HTML body contains a paragraph tag &lt;p&gt; with the CSS class "text", and the actual invitation message.
 5. The appointment object is now ready, and you can perform further operations or save it as an iCalendar file.
 
 ```cs
@@ -140,6 +138,8 @@ MapiMessage msg = MapiMessage.FromMailMessage(message);
 msg.Save(dataDir + "draft_out.msg");
 ```
 
+## **Customize Appointments**
+
 ### **Set Participants Status of Appointment Attendees**
 
 Aspose.Email for .NET API lets you set the status of appointment attendees while formulating a reply message. This adds the PARTSTAT property to the ICS file.
@@ -174,7 +174,7 @@ saveOptions.ProductId = "Test Corporation";
 app.Save(dataDir + "ChangeProdIdOfICS.ics", saveOptions);
 ```
 
-## **Load and Save an Appointment in ICS Format**
+## **Loading Appointments**
 
 Also, the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/) class can be used to load an appointment from ICS file.
 
@@ -203,7 +203,7 @@ Console.WriteLine("Attendees: " + appointment.Attendees);
 Console.WriteLine(Environment.NewLine + "Appointment loaded successfully from " + dstEmail);
 ```
 
-### **Load and Convert an ICS File to a Message Format**
+### **Convert ICS to MSG**
 
 The API allows you easily convert an Appointment to a message object. The following code example shows how to convert an appointment request into a MailMessage or MapiMessage:
 

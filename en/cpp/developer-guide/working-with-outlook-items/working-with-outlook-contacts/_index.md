@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Contacts using C++ Email Parser Library
+ArticleTitle: Working with Outlook Contacts using C++ Email Parser Library
 linktitle: Working with Outlook Contacts
 type: docs
 weight: 90

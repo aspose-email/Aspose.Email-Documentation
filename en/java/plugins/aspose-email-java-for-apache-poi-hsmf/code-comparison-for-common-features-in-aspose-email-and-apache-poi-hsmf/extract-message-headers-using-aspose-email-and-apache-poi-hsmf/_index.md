@@ -1,5 +1,6 @@
 ---
 title: Extract Message Headers using Aspose.Email and Apache POI HSMF
+ArticleTitle: Extract Message Headers using Aspose.Email and Apache POI HSMF
 type: docs
 weight: 30
 url: /java/extract-message-headers-using-aspose-email-and-apache-poi-hsmf/
@@ -10,7 +11,7 @@ The email header represents an Internet and RFC defined standard set of header f
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  //Gets Email Headers
 
@@ -24,13 +25,13 @@ System.out.println("Bcc: " 	+ message.getBcc());
 
 System.out.println("Subject: " 	+ message.getSubject());
 
-```
+{{< /highlight >}}
 ## **Apache POI HSMF - Extract Message Headers**
 MAPIMessage class provides the methods to access headers of email messages.
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  MAPIMessage msg = new MAPIMessage(dataDir + "message.msg");
 
@@ -44,7 +45,7 @@ System.out.println("BCC: " + msg.getDisplayBCC());
 
 System.out.println("Subject: " + msg.getSubject());
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/releases/view/618811)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

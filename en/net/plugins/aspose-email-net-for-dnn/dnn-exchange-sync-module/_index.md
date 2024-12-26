@@ -1,5 +1,6 @@
 ---
 title: DNN Exchange Sync Module
+ArticleTitle: DNN Exchange Sync Module
 type: docs
 weight: 10
 url: /net/dnn-exchange-sync-module/

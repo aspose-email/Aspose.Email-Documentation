@@ -1,5 +1,6 @@
 ---
 title: Working with Message Attachments using IMAP
+ArticleTitle: Working with Message Attachments using IMAP
 type: docs
 weight: 30
 url: /java/working-with-message-attachments-using-imap/

@@ -1,5 +1,6 @@
 ---
 title: Working with Distribution Lists
+ArticleTitle: Working with Distribution Lists
 type: docs
 weight: 130
 url: /java/working-with-distribution-lists/

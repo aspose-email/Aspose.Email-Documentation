@@ -1,5 +1,6 @@
 ---
 title: Create New Email in Jython
+ArticleTitle: Create New Email in Jython
 type: docs
 weight: 20
 url: /java/create-new-email-in-jython/

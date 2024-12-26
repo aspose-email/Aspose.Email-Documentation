@@ -1,5 +1,6 @@
 ---
 title: Adding MapiCalendar to PST in Jython
+ArticleTitle: Adding MapiCalendar to PST in Jython
 type: docs
 weight: 20
 url: /java/adding-mapicalendar-to-pst-in-jython/
@@ -10,7 +11,7 @@ To Add MapiCalendar to PST using **Aspose.Email Java for Jython**, simply invoke
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -60,7 +61,7 @@ if __name__ == '__main__':
 
     AddFileToPST()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiCalendar to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

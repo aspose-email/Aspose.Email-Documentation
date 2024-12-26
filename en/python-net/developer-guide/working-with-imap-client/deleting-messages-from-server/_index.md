@@ -1,5 +1,6 @@
 ---
 title: Deleting Messages from Server
+ArticleTitle: Deleting Messages from Server
 type: docs
 weight: 20
 url: /python-net/deleting-messages-from-server/

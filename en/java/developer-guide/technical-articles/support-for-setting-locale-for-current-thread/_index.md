@@ -1,5 +1,6 @@
 ---
 title: Support for setting Locale for Current Thread
+ArticleTitle: Support for setting Locale for Current Thread
 type: docs
 weight: 50
 url: /java/support-for-setting-locale-for-current-thread/

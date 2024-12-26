@@ -1,5 +1,6 @@
 ---
 title: Uninstalling Aspose.Email for SharePoint License
+ArticleTitle: Uninstalling Aspose.Email for SharePoint License
 type: docs
 weight: 30
 url: /sharepoint/uninstalling-aspose-email-for-sharepoint-license/

@@ -1,5 +1,6 @@
 ---
 title: Read Outlook Storage PST
+ArticleTitle: Read Outlook Storage PST
 type: docs
 weight: 30
 url: /java/read-outlook-storage-pst/

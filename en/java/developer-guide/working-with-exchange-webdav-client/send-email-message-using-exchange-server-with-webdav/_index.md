@@ -1,5 +1,6 @@
 ---
 title: Send Email Message using Exchange Server with WebDav
+ArticleTitle: Send Email Message using Exchange Server with WebDav
 type: docs
 weight: 100
 url: /java/send-email-message-using-exchange-server-with-webdav/

@@ -1,5 +1,6 @@
 ---
 title: About Document Library Synchronization
+ArticleTitle: About Document Library Synchronization
 type: docs
 weight: 10
 url: //harepoint/about-document-library-synchronization/

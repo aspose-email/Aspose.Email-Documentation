@@ -1,5 +1,6 @@
 ---
 title: Create New Calendar Item
+ArticleTitle: Create New Calendar Item
 type: docs
 weight: 10
 url: /java/create-new-calendar-item/

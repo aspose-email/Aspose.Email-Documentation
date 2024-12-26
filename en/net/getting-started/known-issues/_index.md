@@ -1,5 +1,6 @@
 ---
 title: Known Issues
+ArticleTitle: Known Issues
 type: docs
 weight: 50
 url: /net/known-issues/

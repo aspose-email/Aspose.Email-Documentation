@@ -1,13 +1,16 @@
 ---
-title: ImapClient Activity Logging
+title: How to Enable IMAP Activity Logging
+ArticleTitle: Enable and Configure IMAP Activity Logging in .NET Applications
 type: docs
-weight: 90
-url: /net/imapclient-activity-logging/
+weight: 70
+url: /net/enable-imap-activity-logging/
 ---
 
 Activity logging is used for debugging, as well as for collecting and analyzing working information about the IMAP client.
 
-## **Enable Activity Logging using appsettings.json File**
+## **Enable Activity Logging**
+
+### **Use appsettings.json File to Enable Activity Logging**
 
 > **_NOTE:_** This option is preferred for .NET Core applications.
 
@@ -37,7 +40,7 @@ The two properties mentioned above are:
 
 - **ImapDiagnosticLog_UseDate** - specifies whether to add a string representation of the current date to the log file name.
 
-## **Enable Activity Logging in Programm Code**
+### **Enable Activity Logging in Programm Code**
 
 You can also enable logging immediately in the code.
 
@@ -63,7 +66,7 @@ Logging in [ImapClient](https://reference.aspose.com/email/net/aspose.email.clie
 }
 ```
 
-## **Enable Activity Logging using App.config File**
+### **Use App.config File to Enable Activity Logging**
 
 [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) activity can be logged by modifying the configSections in the config file. Following are the steps to perform diagnostics logging:
 

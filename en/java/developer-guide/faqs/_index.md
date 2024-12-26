@@ -1,5 +1,6 @@
 ---
 title: FAQs
+ArticleTitle: FAQs
 type: docs
 weight: 220
 url: /java/faqs/

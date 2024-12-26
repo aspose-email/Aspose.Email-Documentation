@@ -1,5 +1,6 @@
 ---
 title: Live Demos
+ArticleTitle: Live Demos
 type: docs
 weight: 100
 url: /cpp/live-demos/

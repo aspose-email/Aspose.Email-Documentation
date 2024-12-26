@@ -1,5 +1,6 @@
 ---
 title: Read Emails from Other User's Mailbox using WebDav
+ArticleTitle: Read Emails from Other User's Mailbox using WebDav
 type: docs
 weight: 80
 url: /java/read-emails-from-other-user-s-mailbox-using-webdav/

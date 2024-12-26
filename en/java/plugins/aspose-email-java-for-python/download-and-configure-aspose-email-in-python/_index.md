@@ -1,5 +1,6 @@
 ---
 title: Download and Configure Aspose.Email in Python
+ArticleTitle: Download and Configure Aspose.Email in Python
 type: docs
 weight: 10
 url: /java/download-and-configure-aspose-email-in-python/

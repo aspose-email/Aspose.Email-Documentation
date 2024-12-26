@@ -1,5 +1,6 @@
 ---
 title: Working with Contacts on Exchange Server
+ArticleTitle: Working with Contacts on Exchange Server
 type: docs
 weight: 60
 url: /java/working-with-contacts-on-exchange-server/

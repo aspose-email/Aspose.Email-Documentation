@@ -1,5 +1,6 @@
 ---
 title: Utility Features - MailMessage
+ArticleTitle: Utility Features - MailMessage
 type: docs
 weight: 50
 url: /java/utility-features-mailmessage/

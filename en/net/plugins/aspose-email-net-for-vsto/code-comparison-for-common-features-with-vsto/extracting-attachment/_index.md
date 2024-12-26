@@ -1,5 +1,6 @@
 ---
 title: Extracting Attachment
+ArticleTitle: Extracting Attachment
 type: docs
 weight: 120
 url: /net/extracting-attachment/

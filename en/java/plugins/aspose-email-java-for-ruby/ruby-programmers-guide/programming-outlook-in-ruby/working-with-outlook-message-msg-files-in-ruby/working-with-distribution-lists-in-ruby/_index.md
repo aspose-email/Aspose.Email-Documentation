@@ -1,5 +1,6 @@
 ---
 title: Working with Distribution Lists in Ruby
+ArticleTitle: Working with Distribution Lists in Ruby
 type: docs
 weight: 50
 url: /java/working-with-distribution-lists-in-ruby/

@@ -1,5 +1,6 @@
 ---
 title: Working with Contacts in PST File
+ArticleTitle: Working with Contacts in PST File
 type: docs
 weight: 40
 url: /java/working-with-contacts-in-pst-file/

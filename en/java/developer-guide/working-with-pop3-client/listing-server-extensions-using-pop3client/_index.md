@@ -1,5 +1,6 @@
 ---
 title: Listing Server Extensions using Pop3Client
+ArticleTitle: Listing Server Extensions using Pop3Client
 type: docs
 weight: 30
 url: /java/listing-server-extensions-using-pop3client/

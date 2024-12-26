@@ -1,5 +1,6 @@
 ---
 title: Extraction of Embedded Objects data
+ArticleTitle: Extraction of Embedded Objects data
 type: docs
 weight: 220
 url: /net/extraction-of-embedded-objects-data/

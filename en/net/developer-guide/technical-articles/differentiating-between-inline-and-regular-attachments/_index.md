@@ -1,5 +1,6 @@
 ---
 title: Differentiating between Inline and Regular Attachments
+ArticleTitle: Differentiating between Inline and Regular Attachments
 type: docs
 weight: 200
 url: /net/differentiating-between-inline-and-regular-attachments/

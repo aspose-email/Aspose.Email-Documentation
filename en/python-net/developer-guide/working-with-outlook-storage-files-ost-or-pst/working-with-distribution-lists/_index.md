@@ -1,5 +1,6 @@
 ---
 title: Working with Distribution Lists in PST File
+ArticleTitle: Working with Distribution Lists in PST File
 type: docs
 weight: 90
 url: /python-net/working-with-distribution-lists/

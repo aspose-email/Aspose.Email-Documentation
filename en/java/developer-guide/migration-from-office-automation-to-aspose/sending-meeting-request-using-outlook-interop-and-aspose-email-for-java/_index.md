@@ -1,5 +1,6 @@
 ---
 title: Sending Meeting Request Using Outlook Interop and Aspose.Email for Java
+ArticleTitle: Sending Meeting Request Using Outlook Interop and Aspose.Email for Java
 type: docs
 weight: 40
 url: /java/sending-meeting-request-using-outlook-interop-and-aspose-email-for-java/

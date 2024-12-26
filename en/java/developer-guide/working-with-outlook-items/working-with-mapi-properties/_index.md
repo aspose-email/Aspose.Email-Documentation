@@ -1,5 +1,6 @@
 ---
 title: Working with MAPI Properties
+ArticleTitle: Working with MAPI Properties
 type: docs
 weight: 60
 url: /java/working-with-mapi-properties/

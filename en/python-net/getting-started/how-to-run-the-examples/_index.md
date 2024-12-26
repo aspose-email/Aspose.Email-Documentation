@@ -1,5 +1,6 @@
 ---
 title: How to Run the Examples
+ArticleTitle: How to Run the Examples
 type: docs
 weight: 70
 url: /python-net/how-to-run-the-examples/

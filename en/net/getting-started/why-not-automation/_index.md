@@ -1,5 +1,6 @@
 ---
 title: Why not Automation
+ArticleTitle: Why not Automation
 type: docs
 weight: 40
 url: /net/why-not-automation/

@@ -1,5 +1,6 @@
 ---
 title: Splitting and Merging PST files
+ArticleTitle: Splitting and Merging PST files
 type: docs
 weight: 40
 url: /python-net/splitting-and-merging-pst-files/

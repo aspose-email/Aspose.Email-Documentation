@@ -1,5 +1,6 @@
 ---
 title: String Searching in PST with Ignore Case in PHP
+ArticleTitle: String Searching in PST with Ignore Case in PHP
 type: docs
 weight: 80
 url: /java/string-searching-in-pst-with-ignore-case-in-php/
@@ -10,7 +11,7 @@ To string Searching in PST with Ignore Case using **Aspose.Email Java for PHP**,
 
 **PHP Code**
 
-```php
+{{< highlight php >}}
 
  $personalStorage=new PersonalStorage();
 
@@ -38,7 +39,7 @@ $coll = $fi->getContents($query);
 
 print "Total Results:" . (string)$coll->size();
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 

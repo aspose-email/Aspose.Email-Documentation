@@ -1,5 +1,6 @@
 ---
 title: Add Embedded Images to Email Message in Aspose.Email
+ArticleTitle: Add Embedded Images to Email Message in Aspose.Email
 type: docs
 weight: 20
 url: /java/add-embedded-images-to-email-message-in-aspose-email/

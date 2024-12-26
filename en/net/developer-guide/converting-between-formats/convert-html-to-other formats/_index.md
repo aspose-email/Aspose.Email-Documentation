@@ -1,14 +1,14 @@
 ---
 title: Convert HTML to Other Formats
+ArticleTitle: Convert HTML to Other Formats
 type: docs
-weight: 60
+weight: 30
 url: /net/converting-between-formats/convert-html-to-other-formats
 ---
 
 ## **Convert HTML to EML**
 
 Aspose.Email for .NET provides a method to convert HTML files to EML format using the [MailMessage.Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) and [MailMessage.Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) methods to load the existing HTML file and save it in EML format respectively:
-
 
 ```cs
 var eml = MailMessage.Load("myContent.html", new HtmlLoadOptions());
@@ -43,6 +43,7 @@ You can easily convert HTML files to EMLX. All the properties and classes provid
 var eml = MailMessage.Load("myContent.html", new HtmlLoadOptions());
 eml.Save("output.emlx", SaveOptions.DefaultEmlx);
 ```
+
 For additional settings, see [Convert HTML to EML](#convert-html-to-eml) paragraph.
 
 ## **Convert HTML to ICS**
@@ -70,11 +71,9 @@ var appointment = new Appointment(
 appointment.Save("output.ics", AppointmentSaveFormat.Ics);
 ```
 
-
 ## **Generate MBOX from HTML content**
 
 To perform HTML to MBOX conversion, use the [Load](https://reference.aspose.com/email/net/aspose.email/mailmessage/load/#load_3) method of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class) class, specifying the HTML content file path and an instance of [HtmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/htmlloadoptions/). This method parses the HTML content and generates a corresponding MailMessage object, preserving the structure and formatting of the original HTML. After loading the HTML content into a MailMessage object, write the message to an MBOX file using the [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/#mboxrdstoragewriter-class) class:
-
 
 ```cs
 using (var eml = MailMessage.Load("content.html", new HtmlLoadOptions())){
@@ -168,7 +167,7 @@ using (var ost = PersonalStorage.FromFile("storage.ost"))
     var folderInfo = ost.RootFolder.GetSubFolder("Inbox");
     folderInfo.AddMessage(msg);
 }
-``` 
+```
 
 ## **Convert HTML to VCF**
 

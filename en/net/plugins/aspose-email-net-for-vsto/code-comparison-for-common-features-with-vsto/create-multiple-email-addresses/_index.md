@@ -1,5 +1,6 @@
 ---
 title: Create Multiple Email Addresses
+ArticleTitle: Create Multiple Email Addresses
 type: docs
 weight: 70
 url: /net/create-multiple-email-addresses/

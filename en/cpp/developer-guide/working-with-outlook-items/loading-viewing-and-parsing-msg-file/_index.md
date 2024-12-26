@@ -1,5 +1,6 @@
 ---
 title: Load, View and Parse Outlook MSG file using C++ Email Library
+ArticleTitle: Load, View and Parse Outlook MSG file using C++ Email Library
 linktitle: Loading, Viewing and Parsing MSG file
 type: docs
 weight: 20

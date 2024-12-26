@@ -1,5 +1,6 @@
 ---
 title: Features Overview
+ArticleTitle: Features Overview
 type: docs
 weight: 10
 url: /java/features-overview/

@@ -1,5 +1,6 @@
 ---
 title: Adding MapiTask to PST in PHP
+ArticleTitle: Adding MapiTask to PST in PHP
 type: docs
 weight: 50
 url: /java/adding-mapitask-to-pst-in-php/

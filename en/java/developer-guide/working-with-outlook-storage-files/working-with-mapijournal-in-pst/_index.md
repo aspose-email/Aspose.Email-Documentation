@@ -1,5 +1,6 @@
 ---
 title: Working with MapiJournal in PST
+ArticleTitle: Working with MapiJournal in PST
 type: docs
 weight: 70
 url: /java/working-with-mapijournal-in-pst/

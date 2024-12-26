@@ -1,5 +1,6 @@
 ---
 title: Compatibility with JDK 11
+ArticleTitle: Compatibility with JDK 11
 type: docs
 weight: 210
 url: /java/compatibility-with-jdk-11/

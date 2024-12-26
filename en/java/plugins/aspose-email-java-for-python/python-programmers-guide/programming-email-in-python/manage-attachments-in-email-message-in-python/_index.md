@@ -1,5 +1,6 @@
 ---
 title: Manage Attachments in Email Message in Python
+ArticleTitle: Manage Attachments in Email Message in Python
 type: docs
 weight: 60
 url: /java/manage-attachments-in-email-message-in-python/

@@ -1,5 +1,6 @@
 ---
 title: Programming with Thunderbird
+ArticleTitle: Programming with Thunderbird
 type: docs
 weight: 100
 url: /java/programming-with-thunderbird/

@@ -1,5 +1,6 @@
 ---
 title: Installing and Using Aspose.Email for IntelliJ IDEA - Maven
+ArticleTitle: Installing and Using Aspose.Email for IntelliJ IDEA - Maven
 type: docs
 weight: 10
 url: /java/installing-and-using-aspose-email-for-intellij-idea-maven/

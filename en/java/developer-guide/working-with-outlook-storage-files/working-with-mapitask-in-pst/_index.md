@@ -1,5 +1,6 @@
 ---
 title: Working with MapiTask in PST
+ArticleTitle: Working with MapiTask in PST
 type: docs
 weight: 60
 url: /java/working-with-mapitask-in-pst/

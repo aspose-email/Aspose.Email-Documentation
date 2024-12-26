@@ -1,5 +1,6 @@
 ---
 title: Create New Email in Ruby
+ArticleTitle: Create New Email in Ruby
 type: docs
 weight: 20
 url: /java/create-new-email-in-ruby/

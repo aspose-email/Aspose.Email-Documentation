@@ -1,5 +1,6 @@
 ---
 title: Working with User Configuration on Server
+ArticleTitle: Working with User Configuration on Server
 type: docs
 weight: 110
 url: /cpp/working-with-user-configuration-on-server/

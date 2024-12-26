@@ -1,5 +1,6 @@
 ---
 title: Adding MapiDistributionList to PST
+ArticleTitle: Adding MapiDistributionList to PST
 type: docs
 weight: 120
 url: /java/adding-mapidistributionlist-to-pst/

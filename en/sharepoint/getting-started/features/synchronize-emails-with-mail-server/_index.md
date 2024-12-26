@@ -1,5 +1,6 @@
 ---
 title: Synchronize Emails with Mail Server
+ArticleTitle: Synchronize Emails with Mail Server
 type: docs
 weight: 30
 url: /sharepoint/synchronize-emails-with-mail-server/

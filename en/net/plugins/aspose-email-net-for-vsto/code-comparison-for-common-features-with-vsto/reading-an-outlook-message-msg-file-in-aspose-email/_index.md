@@ -1,5 +1,6 @@
 ---
 title: Reading an Outlook Message (MSG) File in Aspose.Email
+ArticleTitle: Reading an Outlook Message (MSG) File in Aspose.Email
 type: docs
 weight: 190
 url: /net/reading-an-outlook-message-msg-file-in-aspose-email/

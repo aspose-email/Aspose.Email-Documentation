@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Tasks
+ArticleTitle: Working with Outlook Tasks
 type: docs
 weight: 110
 url: /python-net/working-with-outlook-tasks/

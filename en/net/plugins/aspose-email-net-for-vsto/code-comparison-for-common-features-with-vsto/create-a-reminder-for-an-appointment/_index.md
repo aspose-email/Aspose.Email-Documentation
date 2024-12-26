@@ -1,5 +1,6 @@
 ---
 title: Create a Reminder for an Appointment
+ArticleTitle: Create a Reminder for an Appointment
 type: docs
 weight: 40
 url: /net/create-a-reminder-for-an-appointment/

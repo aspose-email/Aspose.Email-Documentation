@@ -1,5 +1,6 @@
 ---
 title: Create New PST, Add Sub-folders and Messages
+ArticleTitle: Create New PST, Add Sub-folders and Messages
 type: docs
 weight: 10
 url: /java/create-new-pst-add-sub-folders-and-messages/

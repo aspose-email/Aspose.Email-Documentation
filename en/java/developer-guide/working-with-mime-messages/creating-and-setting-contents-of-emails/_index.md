@@ -1,5 +1,6 @@
 ---
 title: Creating and Setting Contents of Emails
+ArticleTitle: Creating and Setting Contents of Emails
 type: docs
 weight: 10
 url: /java/creating-and-setting-contents-of-emails/
@@ -150,7 +151,8 @@ Normally an email header contains these fields:
 - ReplyTo: This header field is meant to indicate where the sender wants replies to go.
 - Subject: Title, heading, subject. Often used as thread indicator for messages replying to or commenting on other messages.
 - Date: This header specifies a date (and time). Normally this is the date at which message was composed and sent.
-- XMailer: Information about the client software of the originator. Example: X-Mailer: Aspose.Email. XMailer is used by mail clients. Different mail clients will have different XMailer values. MS Outlook's XMailer value is Microsoft Office Outlook, Build 11.0.5510. It is ignored by the email receiver or email reader.
+- XMailer: Information about the client software of the originator. Example: X-Mailer: Aspose.Email
+  XMailer is used by mail clients. Different mail clients will have different XMailer values. MS Outlook's XMailer value is Microsoft Office Outlook, Build 11.0.5510. It is ignored by the email receiver or email reader.
 
 Normally, an email header looks something like this:
 

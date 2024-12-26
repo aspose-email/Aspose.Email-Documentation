@@ -1,5 +1,6 @@
 ---
 title: Working with Message Attachments
+ArticleTitle: Working with Message Attachments
 type: docs
 weight: 70
 url: /java/working-with-message-attachments/

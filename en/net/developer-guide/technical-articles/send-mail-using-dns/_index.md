@@ -1,5 +1,6 @@
 ---
 title: Send Mail Using DNS
+ArticleTitle: Send Mail Using DNS
 type: docs
 weight: 210
 url: /net/send-mail-using-dns/

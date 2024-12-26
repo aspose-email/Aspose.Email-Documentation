@@ -1,5 +1,6 @@
 ---
 title: Introducing Recurrence Patterns
+ArticleTitle: Introducing Recurrence Patterns
 type: docs
 weight: 60
 url: /net/introducing-recurrence-patterns/

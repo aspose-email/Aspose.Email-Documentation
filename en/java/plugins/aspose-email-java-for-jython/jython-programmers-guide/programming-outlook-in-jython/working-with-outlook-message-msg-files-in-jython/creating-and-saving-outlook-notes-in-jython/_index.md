@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving Outlook Notes in Jython
+ArticleTitle: Creating and Saving Outlook Notes in Jython
 type: docs
 weight: 20
 url: /java/creating-and-saving-outlook-notes-in-jython/
@@ -10,7 +11,7 @@ To Create Outlook Notes using **Aspose.Email Java for Jython**, simply invoke **
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -58,7 +59,7 @@ if __name__ == '__main__':
 
     CreateOutlookNote()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Creating and Saving Outlook Notes (Aspose.Email)** from any of the below mentioned social coding sites:
 

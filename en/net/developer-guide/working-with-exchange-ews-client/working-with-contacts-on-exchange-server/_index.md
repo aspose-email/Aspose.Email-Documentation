@@ -1,30 +1,31 @@
 ---
-title: Working with Contacts on Exchange Server
+title: Manage Contacts in Exchange Server Using EWS 
+ArticleTitle: Retrieve, Manage, and Update Contacts in Exchange Server Using EWS
 type: docs
 weight: 60
-url: /net/working-with-contacts-on-exchange-server/
+url: /net/manage-contacts-on-exchange-server-using-ews/
 ---
 
 
 {{% alert color="primary" %}} Exchange Server accounts hold more than just email messages. As well as [fetching](https://docs.aspose.com/email/net/working-with-exchange-mailbox-and-messages/#fetch-messages-from-an-exchange-server-mailbox), [moving](https://docs.aspose.com/email/net/working-with-exchange-mailbox-and-messages/#moving-messages), [sending](https://docs.aspose.com/email/net/working-with-exchange-mailbox-and-messages/#sending-email-messages) and [deleting email messages](https://docs.aspose.com/email/net/working-with-exchange-mailbox-and-messages/#deleting-messages) from Exchange Servers, Aspose.Email allows you to work with contacts. This article explains how to retrieve contact information using Exchange Web Services. This article also shows how you can list contacts from the Contacts folder or resolve contacts based on contact name. {{% /alert %}} 
 
-## **Getting Contacts with EWS**
+## **Get Contacts with EWS**
 
 Aspose.Email provides the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) class to connect to Microsoft Exchange Server using Exchange Web Services. The code snippets that follow use Exchange Web Services to read all the contacts. The following code snippet shows you how to get Contacts with EWS.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-GettingContactsUsingEWS-GettingContactsUsingEWS.cs" >}}
 
-## **Resolve Contacts using Contact Name**
+## **Resolve Contacts by Name**
 
 The following code snippet shows you how to use get contacts with EWS
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-ResolveContactsUsingContactName-ResolveContactsUsingContactName.cs" >}}
 
-## **Determining Contact Notes Format**
+## **Determine Contact Notes Format**
 
 The Aspose.Email.Mail.Contact.NotesFormat specifies the contacts notes text format type defined by Aspose.Email.TextFormat enumerator.
 
-## **Fetch Contact using Id**
+## **Fetch Contacts by ID**
 
 A particular contact can be retrieved from the server using its contact id as shown in the following code sample.
 
@@ -64,7 +65,7 @@ The following code snippets show you how to delete contacts from an exchange ser
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Exchange_EWS-DeleteContactsFromExchangeServerUsingEWS-DeleteContactsFromExchangeServerUsingEWS.cs" >}}
 
-## **Working with Extended Properties of Contacts on Exchange Server**
+## **Working with Extended Contact Properties**
 
 ``` cs
 

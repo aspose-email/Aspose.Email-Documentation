@@ -1,5 +1,6 @@
 ---
 title: EML to MSG and MSG to EML File Conversion
+ArticleTitle: EML to MSG and MSG to EML File Conversion
 type: docs
 weight: 20
 url: /sharepoint/eml-to-msg-and-msg-to-eml-file-conversion/
@@ -20,7 +21,8 @@ Convert emails & message archives online with the free [**Aspose.Email Conversio
 To convert a file:
 
 1. In the document library, right-click a file.
-1. Select **Convert Email To** from the menu. A new dialog is displayed. It shows the name of the file about to be converted and the output message format. 
+1. Select **Convert Email To** from the menu.
+   A new dialog is displayed. It shows the name of the file about to be converted and the output message format. 
 
    **The Email Conversion dialog.** 
 
@@ -30,7 +32,8 @@ To convert a file:
 
 
 1. Check the **MSG Format** and **TXT FOrmat** options.
-1. Click **Convert**. The conversion starts.
+1. Click **Convert**.
+   The conversion starts.
 
 If the conversion is successful, two new files (MSG and TXT) are added to the document library. 
 

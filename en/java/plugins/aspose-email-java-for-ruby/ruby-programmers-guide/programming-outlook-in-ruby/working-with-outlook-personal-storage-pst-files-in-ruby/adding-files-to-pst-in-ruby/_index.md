@@ -1,5 +1,6 @@
 ---
 title: Adding Files to PST in Ruby
+ArticleTitle: Adding Files to PST in Ruby
 type: docs
 weight: 10
 url: /java/adding-files-to-pst-in-ruby/

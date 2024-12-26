@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving Outlook Tasks in Ruby
+ArticleTitle: Creating and Saving Outlook Tasks in Ruby
 type: docs
 weight: 30
 url: /java/creating-and-saving-outlook-tasks-in-ruby/

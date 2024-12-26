@@ -1,5 +1,6 @@
 ---
 title: Support for IMAP IDLE Command
+ArticleTitle: Support for IMAP IDLE Command
 type: docs
 weight: 100
 url: /java/support-for-imap-idle-command/

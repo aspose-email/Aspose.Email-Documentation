@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving MSG files
+ArticleTitle: Creating and Saving MSG files
 type: docs
 weight: 10
 url: /python-net/creating-and-saving-msg-files/

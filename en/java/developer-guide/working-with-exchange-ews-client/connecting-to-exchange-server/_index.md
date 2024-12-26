@@ -1,5 +1,6 @@
 ---
 title: Connecting to Exchange Server
+ArticleTitle: Connecting to Exchange Server
 type: docs
 weight: 10
 url: /java/connecting-to-exchange-server/

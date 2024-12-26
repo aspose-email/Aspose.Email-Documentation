@@ -1,5 +1,6 @@
 ---
 title: Read and Convert Outlook OST File
+ArticleTitle: Read and Convert Outlook OST File
 type: docs
 weight: 20
 url: /cpp/read-and-convert-outlook-ost-file/

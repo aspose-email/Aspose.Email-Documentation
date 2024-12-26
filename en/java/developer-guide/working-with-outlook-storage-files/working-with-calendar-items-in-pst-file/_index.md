@@ -1,5 +1,6 @@
 ---
 title: Working with Calendar Items in PST File
+ArticleTitle: Working with Calendar Items in PST File
 type: docs
 weight: 50
 url: /java/working-with-calendar-items-in-pst-file/

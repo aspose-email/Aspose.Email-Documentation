@@ -1,5 +1,6 @@
 ---
 title: Adding MapiTask to PST in Jython
+ArticleTitle: Adding MapiTask to PST in Jython
 type: docs
 weight: 50
 url: /java/adding-mapitask-to-pst-in-jython/
@@ -10,7 +11,7 @@ To Add MapiTask to PST using **Aspose.Email Java for Jython**, simply invoke **A
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -86,7 +87,7 @@ if __name__ == '__main__':
 
     AddMapiTaskToPST()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiTask to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

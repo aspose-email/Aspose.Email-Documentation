@@ -1,5 +1,6 @@
 ---
 title: Adding Files to PST in Jython
+ArticleTitle: Adding Files to PST in Jython
 type: docs
 weight: 10
 url: /java/adding-files-to-pst-in-jython/
@@ -10,7 +11,7 @@ To Add File to PST using **Aspose.Email Java for Jython**, simply invoke **AddFi
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -54,7 +55,7 @@ if __name__ == '__main__':
 
     AddFileToPST()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding Files to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

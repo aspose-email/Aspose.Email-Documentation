@@ -1,5 +1,6 @@
 ---
 title: Sending and Forwarding Messages
+ArticleTitle: Sending and Forwarding Messages
 type: docs
 weight: 20
 url: /python-net/sending-and-forwarding-messages/

@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Notes
+ArticleTitle: Working with Outlook Notes
 type: docs
 weight: 100
 url: /java/working-with-outlook-notes/

@@ -1,5 +1,6 @@
 ---
 title: Working with PST Password Protection Properties
+ArticleTitle: Working with PST Password Protection Properties
 type: docs
 weight: 110
 url: /cpp/working-with-pst-password-protection-properties/

@@ -1,5 +1,6 @@
 ---
 title: Check PST Password Protection
+ArticleTitle: Check PST Password Protection
 type: docs
 weight: 10
 url: /java/check-pst-password-protection/

@@ -1,5 +1,6 @@
 ---
 title: Formatting an Appointment in Aspose.Email
+ArticleTitle: Formatting an Appointment in Aspose.Email
 type: docs
 weight: 20
 url: /java/formatting-an-appointment-in-aspose-email/

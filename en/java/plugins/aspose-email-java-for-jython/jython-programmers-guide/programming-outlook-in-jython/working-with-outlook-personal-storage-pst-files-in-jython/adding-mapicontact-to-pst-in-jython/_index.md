@@ -1,5 +1,6 @@
 ---
 title: Adding MapiContact to PST in Jython
+ArticleTitle: Adding MapiContact to PST in Jython
 type: docs
 weight: 30
 url: /java/adding-mapicontact-to-pst-in-jython/
@@ -10,7 +11,7 @@ To Add MapiContact to PST using **Aspose.Email Java for Jython**, simply invoke 
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -142,7 +143,7 @@ if __name__ == '__main__':
 
     AddMapiContactToPST()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiContact to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

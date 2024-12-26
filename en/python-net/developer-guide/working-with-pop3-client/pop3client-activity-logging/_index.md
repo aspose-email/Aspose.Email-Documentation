@@ -1,5 +1,6 @@
 ---
 title: Pop3Client Activity Logging
+ArticleTitle: Pop3Client Activity Logging
 type: docs
 weight: 40
 url: /python-net/pop3client-activity-logging/

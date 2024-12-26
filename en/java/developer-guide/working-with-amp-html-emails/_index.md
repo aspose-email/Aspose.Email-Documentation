@@ -1,5 +1,6 @@
 ---
 title: Working with AMP HTML Emails
+ArticleTitle: Working with AMP HTML Emails
 type: docs
 weight: 140
 url: /java/working-with-amp-html-emails/

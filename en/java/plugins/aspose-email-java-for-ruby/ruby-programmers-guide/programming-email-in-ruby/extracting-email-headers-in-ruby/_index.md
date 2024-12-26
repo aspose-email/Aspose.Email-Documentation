@@ -1,5 +1,6 @@
 ---
 title: Extracting Email Headers in Ruby
+ArticleTitle: Extracting Email Headers in Ruby
 type: docs
 weight: 50
 url: /java/extracting-email-headers-in-ruby/

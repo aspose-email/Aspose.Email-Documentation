@@ -1,5 +1,6 @@
 ---
 title: How to Run Aspose.Email
+ArticleTitle: How to Run Aspose.Email
 type: docs
 weight: 24
 url: /net/how-to-run-aspose-email/

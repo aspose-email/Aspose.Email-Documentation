@@ -1,5 +1,6 @@
 ---
 title: Adding MapiJournal to PST in Jython
+ArticleTitle: Adding MapiJournal to PST in Jython
 type: docs
 weight: 40
 url: /java/adding-mapijournal-to-pst-in-jython/
@@ -10,7 +11,7 @@ To Add MapiJournal to PST using **Aspose.Email Java for PHP**, simply invoke **A
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -76,7 +77,7 @@ if __name__ == '__main__':
 
     AddMapiJournalToPST()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiJournal to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

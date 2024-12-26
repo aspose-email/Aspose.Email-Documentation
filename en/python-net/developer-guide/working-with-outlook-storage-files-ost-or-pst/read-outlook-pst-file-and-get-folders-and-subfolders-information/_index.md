@@ -1,5 +1,6 @@
 ---
 title: Read Outlook PST File and Get Folders and SubFolders Information
+ArticleTitle: Read Outlook PST File and Get Folders and SubFolders Information
 type: docs
 weight: 30
 url: /python-net/read-outlook-pst-file-and-get-folders-and-subfolders-information/
@@ -116,7 +117,7 @@ The method takes the following parameters:
 
 - **ignore_case** - is a boolean value that determines whether the method should ignore the case sensitivity when comparing the name of the subfolder. If set to True, the method will consider the name matching without considering the case (e.g., "folder" and "Folder" will be treated as the same). If set to False, the method will perform a case-sensitive comparison.
 
-- **handle_path_separator** - is a boolean value that specifies whether the method should handle the path separator when searching for the subfolder. Path separators are characters used to separate folders in a directory path (e.g., `\` in Windows or `/` in Unix). If set to True, the method will handle the path separator automatically, ensuring correct folder matching. If set to False, it will treat the path separator as part of the subfolder name, resulting in a different search behavior.
+- **handle_path_separator** - is a boolean value that specifies whether the method should handle the path separator when searching for the subfolder. Path separators are characters used to separate folders in a directory path (e.g., "\" in Windows or "/" in Unix). If set to True, the method will handle the path separator automatically, ensuring correct folder matching. If set to False, it will treat the path separator as part of the subfolder name, resulting in a different search behavior.
 
 The following code sample shows how to retrieve a PST subfolder by path:
 

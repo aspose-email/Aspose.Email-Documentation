@@ -1,5 +1,6 @@
 ---
 title: Using a Microsoft Word Document as the Message Body and Sending Email
+ArticleTitle: Using a Microsoft Word Document as the Message Body and Sending Email
 type: docs
 weight: 140
 url: /java/using-a-microsoft-word-document-as-the-message-body-and-sending-email/

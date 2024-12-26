@@ -1,5 +1,6 @@
 ---
 title: Retrieving Attachments from Calendar Items
+ArticleTitle: Retrieving Attachments from Calendar Items
 type: docs
 weight: 70
 url: /java/retrieving-attachments-from-calendar-items/

@@ -1,5 +1,6 @@
 ---
 title: Top Reasons to Buy Aspose.Email
+ArticleTitle: Top Reasons to Buy Aspose.Email
 type: docs
 weight: 10
 url: /net/top-reasons-to-buy-aspose-email/

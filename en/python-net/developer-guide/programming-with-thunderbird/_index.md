@@ -1,5 +1,6 @@
 ---
 title: Programming with Thunderbird
+ArticleTitle: Programming with Thunderbird
 type: docs
 weight: 80
 url: /python-net/programming-with-thunderbird/

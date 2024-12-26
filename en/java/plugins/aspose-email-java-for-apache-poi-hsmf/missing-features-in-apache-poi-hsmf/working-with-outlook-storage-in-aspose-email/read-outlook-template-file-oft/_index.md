@@ -1,5 +1,6 @@
 ---
 title: Read Outlook Template File OFT
+ArticleTitle: Read Outlook Template File OFT
 type: docs
 weight: 40
 url: /java/read-outlook-template-file-oft/

@@ -1,5 +1,6 @@
 ---
 title: Loading and Saving Messages
+ArticleTitle: Loading and Saving Messages
 type: docs
 weight: 40
 url: /java/loading-and-saving-message/

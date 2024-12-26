@@ -1,5 +1,6 @@
 ---
-title: Filter Messages From Exchange Mailbox
+title: Filter and Sort Messages in Exchange Server Mailbox Using EWS
+ArticleTitle: Filter and Sort Messages in Exchange Server Mailbox Using EWS
 type: docs
 weight: 30
 url: /net/filter-messages-from-exchange-mailbox/
@@ -12,11 +13,11 @@ Aspose.Email for .NET provides the capability to filter messages from Exchange M
 
 {{% /alert %}} 
 
-## **Filtering Messages using EWS**
+## **Filter and Sort Messages using EWS**
 
 The [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/) interface provides the [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/#listmessages) method which gets all messages from a mailbox. To get only messages which match some condition, use the overloaded [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/#listmessages) method which takes the [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) class as an argument. The [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/) class provides various properties for specifying conditions, for example, date, subject, sender and recipient. In addition, the API also allows applying case-sensitivity filters for retrieving emails from the mailbox.
 
-### **Filter Messages on Criteria**
+### **Filter Messages by Criteria**
 
 To get filtered messages from a mailbox:
 
@@ -28,49 +29,49 @@ The following code snippet shows you how to connect to an IMAP mailbox and get m
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesUsingEWS-FilterMessagesUsingEWS.cs" >}}
 
-#### **Filter Messages by Today's Date**
+#### **By Today's Date**
 
 The following code snippet shows you how to filter all emails on the basis of today's date.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetEmailsWithTodayDate.cs" >}}
 
-#### **Filter Messages by Date Range**
+#### **By Date Range**
 
 The following code snippet shows you how to filter all emails on the basis of the date range.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetEmailsOverDateRange.cs" >}}
 
-#### **Filter Messages by Specific Sender**
+#### **By Sender**
 
 The following code snippet shows you how to filter all emails on the basis of a specific sender.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificSenderEmails.cs" >}}
 
-#### **Filter Messages by Specific Domain**
+#### **By Domain**
 
 The following code snippet shows you how to filter all emails on the basis of a specific domain.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificDomainEmails.cs" >}}
 
-#### **Filter Messages by Specific Recipient**
+#### **By Recipient**
 
 The following code snippet shows you how to filter all emails on the basis of a specific recipient.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificRecipientEmails.cs" >}}
 
-#### **Filter Messages By MessageID**
+#### **By MessageID**
 
 The following code snippet shows you how to filter all emails on the basis of MessageID.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetSpecificMessageIdEmail.cs" >}}
 
-#### **Filter Messages by All Mail Delivery Notifications**
+#### **By Mail Delivery Notifications**
 
 The following code snippet shows you how to filter all emails on the basis of all mail delivery notifications.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-GetMailDeliveryNotifications.cs" >}}
 
-#### **Filter Messages by Message Size**
+#### **By Message Size**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-FilterMessagesByMessageSize.cs" >}}
 
@@ -91,17 +92,17 @@ The following code snippet shows you how to Combine Queries with AND.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterWithComplexQueriesUsingEWS-CombiningQueriesWithOR.cs" >}}
 
-### **Case-Sensitive Email Filtering**
+#### **Case-Sensitive Email Filtering**
 
 Emails can be filtered based on case-sensitivity by specifying the IgnoreCase flag in the filter criteria as shown in the following code snippet.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CaseSensitiveEmailsFilteringUsingEWS-CaseSensitiveEmailsFiltering.cs" >}}
 
-## **Filtering Messages with Paging Support**
+### **Filter Messages with Paging Support**
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FilterMessagesOnCriteriaUsingEWS-FilterMessagesWithPagingSupport.cs" >}}
 
-## **Sorting filtered messages in ascending/descending order**
+### **Sort Filtered messages in Ascending/Descending Order**
 
 Email filtering can be supported with sorting of messages in ascending/descending order. In this case, [OrderBy](https://reference.aspose.com/email/net/aspose.email.tools.search/comparisonfield/orderby/) method is used to specify the order in which the results of an email search are sorted using the MailQueryBuilder class. This method allows you to define sorting criteria for a search query, specifying whether the results should be sorted in ascending or descending order based on a particular property.
 
@@ -121,3 +122,7 @@ ExchangeMessageInfoCollection messages = client.ListMessages(client.MailboxInfo.
 ```
 
 In the above code snippet, the OrderBy method is applied twice, once for the subject and once for the date of the emails. As a result of executing the ListMessages method with the passed request, we will get a list of messages with the subject containing the word "Report" which were received on the specified date or later. At the same time, the results will be sorted by subject in ascending order. This means that the messages will be sorted alphabetically from A to Z, depending on their subject. Also, the results will be sorted by date in descending order. This means that posts will be ordered from newest to oldest.
+
+### **Filter Messages Using AQS**
+
+With Aspose.Email for .NET, users can leverage the powerful capabilities of Advanced Query Syntax (AQS) to filter messages directly from an Exchange mailbox. AQS provides a robust and intuitive means of constructing queries that can precisely target emails based on specific criteria such as date, sender, and subject. For more detailed insights on its itegration into your email filtering processes and comprehensive code samples on implementing message filtering using AQS with Aspose.Email for .NET, please refer to the [Filter Messages With AQS From Exchange Mailbox](https://docs.aspose.com/email/net/filter-messages-with-aqs-from-exchange-mailbox/) article.

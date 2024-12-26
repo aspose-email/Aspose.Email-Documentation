@@ -1,5 +1,6 @@
 ---
 title: Create New PST in Python
+ArticleTitle: Create New PST in Python
 type: docs
 weight: 50
 url: /java/create-new-pst-in-python/

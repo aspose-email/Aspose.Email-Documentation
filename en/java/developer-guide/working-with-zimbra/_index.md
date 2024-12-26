@@ -1,5 +1,6 @@
 ---
 title: Working with Zimbra
+ArticleTitle: Working with Zimbra
 type: docs
 weight: 110
 url: /java/working-with-zimbra/

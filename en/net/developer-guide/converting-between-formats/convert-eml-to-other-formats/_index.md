@@ -1,7 +1,8 @@
 ---
 title: Convert EML to HTML
+ArticleTitle: Convert EML to HTML
 type: docs
-weight: 60
+weight: 10
 url: /net/converting-between-formats/
 ---
 
@@ -75,6 +76,7 @@ if (icsView != null)
     File.WriteAllText("appointment.ics", icsView);
 }
 ```
+
 ### **Customization**
 
 Aspose.Email for .NET provides tools for customizing ICS (iCalendar) content extracted from EML (Electronic Mail) files.
@@ -103,6 +105,7 @@ appointment.Attendees.Add("custom@example.com");
 // Save the customized ICS content to a file
 appointment.Save("customized_appointment.ics");
 ```
+
 **Create a recurrence pattern**
 
 The following code sample demonstrates how to create a weekly recurrence pattern for an appointment, where the appointment occurs every 5 weeks on Saturdays. The code utilizes the [Recurrence](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/recurrence/#appointmentrecurrence-property) property of the [Appointment](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/#appointment-class) class which gets or sets the recurrence pattern.
@@ -213,8 +216,8 @@ using (var ost = PersonalStorage.FromFile("storage.ost"))
     folderInfo.AddMessage(msg);
 }
 ```
-The [EmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/emlloadoptions/#emlloadoptions-class) parameter specifies additional options for loading EML files, such as preserving embedded message formats, removing signatures, and more. 
 
+The [EmlLoadOptions](https://reference.aspose.com/email/net/aspose.email/emlloadoptions/#emlloadoptions-class) parameter specifies additional options for loading EML files, such as preserving embedded message formats, removing signatures, and more. 
 
 ## **Convert EML to VCF**
 

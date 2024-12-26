@@ -1,5 +1,6 @@
 ---
 title: Accessing Gmail on SSL
+ArticleTitle: Accessing Gmail on SSL
 type: docs
 weight: 40
 url: /net/accessing-gmail-on-ssl/

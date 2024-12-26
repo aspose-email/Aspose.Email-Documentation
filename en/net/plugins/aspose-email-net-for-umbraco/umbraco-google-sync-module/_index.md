@@ -1,5 +1,6 @@
 ---
 title: Umbraco Google Sync Module
+ArticleTitle: Umbraco Google Sync Module
 type: docs
 weight: 20
 url: /net/umbraco-google-sync-module/

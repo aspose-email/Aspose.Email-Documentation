@@ -1,5 +1,6 @@
 ---
 title: Connecting to SMTP Server
+ArticleTitle: Connecting to SMTP Server
 type: docs
 weight: 10
 url: /java/connecting-to-smtp-server/

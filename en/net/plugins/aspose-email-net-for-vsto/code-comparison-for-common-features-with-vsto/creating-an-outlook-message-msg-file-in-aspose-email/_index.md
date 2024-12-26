@@ -1,5 +1,6 @@
 ---
 title: Creating an Outlook Message (MSG) File in Aspose.Email
+ArticleTitle: Creating an Outlook Message (MSG) File in Aspose.Email
 type: docs
 weight: 90
 url: /net/creating-an-outlook-message-msg-file-in-aspose-email/

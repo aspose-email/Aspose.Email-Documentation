@@ -1,5 +1,6 @@
 ---
 title: Working with Attachments and Embedded Objects
+ArticleTitle: Working with Attachments and Embedded Objects
 type: docs
 weight: 20
 url: /java/working-with-attachments-and-embedded-objects/

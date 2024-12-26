@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving Outlook Contacts in Python
+ArticleTitle: Creating and Saving Outlook Contacts in Python
 type: docs
 weight: 10
 url: /java/creating-and-saving-outlook-contacts-in-python/
@@ -10,7 +11,7 @@ To Create and Save Outlook Contacts using **Aspose.Email Java for Python**, Use 
 
 **Python Code**
 
-```python
+{{< highlight python >}}
 
 
 
@@ -112,7 +113,7 @@ contact.save(self.dataDir + "OutlookContact.vcf", contactSaveFormat.VCard)
 
 print "Created outlook contact successfully."
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Creating and Saving Outlook Contacts (Aspose.Email)** from any of the below mentioned social coding sites:
 

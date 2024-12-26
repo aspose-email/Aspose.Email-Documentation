@@ -1,5 +1,6 @@
 ---
 title: IMAP Backup and Restore Operation in Python
+ArticleTitle: IMAP Backup and Restore Operation in Python
 type: docs
 weight: 120
 url: /python-net/imap-backup-and-restore-operation/

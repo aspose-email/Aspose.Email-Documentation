@@ -1,5 +1,6 @@
 ---
 title: Working with Distribution Lists
+ArticleTitle: Working with Distribution Lists
 type: docs
 weight: 40
 url: /python-net/working-with-distribution-lists/

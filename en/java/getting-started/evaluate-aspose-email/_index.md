@@ -1,5 +1,6 @@
 ---
 title: Evaluate Aspose.Email
+ArticleTitle: Evaluate Aspose.Email
 type: docs
 weight: 100
 url: /java/evaluate-aspose-email/

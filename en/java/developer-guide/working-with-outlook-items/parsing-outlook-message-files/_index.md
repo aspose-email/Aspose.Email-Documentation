@@ -1,5 +1,6 @@
 ---
 title: Parsing Outlook Message Files
+ArticleTitle: Parsing Outlook Message Files
 type: docs
 weight: 40
 url: /java/parsing-outlook-message-files/

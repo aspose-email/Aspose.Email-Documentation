@@ -1,8 +1,9 @@
 ---
-title: Working with Gmail Contacts
+title: Google Contacts Management in .NET Applications
+ArticleTitle: Manage Google Contacts using Gmail Client
 type: docs
 weight: 30
-url: /net/working-with-gmail-contacts/
+url: /net/manage-google-contacts/
 ---
 
 
@@ -22,25 +23,25 @@ The following is a sample application which can be used to access the detail of 
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-AccessGmailContacts-AccessGmailContacts.cs" >}}
 
-## **Creating Contact**
+## **Create Google Contacts**
 
-The following code snippet shows you how to create a contact.
+The following code snippet shows you how to create a contact in Gmail.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-CreateGmailContact-CreateGmailContact.cs" >}}
 
-## **Updating Contact**
+## **Update Google Contacts**
 
 Once a contact is retrieved, its attributes can be updated and the contact can be saved back to the Gmail account. The following code snippet shows you how to retrieve contacts from a Gmail account and then modify one of these which is then saved back.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-UpdateGmailContact-UpdateGmailContact.cs" >}}
 
-## **Deleting Contact**
+## **Delete Google Contacts**
 
 In order to delete a Gmail contact, the Gmail client [DeleteContact](https://reference.aspose.com/email/net/aspose.email.clients.google/igmailclient/deletecontact/#igmailclientdeletecontact-method) method is used as shown in the following sample snippet.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Gmail-DeleteGmailContact-DeleteGmailContact.cs" >}}
 
-## **Saving Contact**
+## **Save Google Contacts**
 
 Aspose.Email allows saving contacts to various output formats such as MSG and VCF. The [Save](https://reference.aspose.com/email/net/aspose.email.personalinfo/contact/save/) method provides the capability to achieve this. The following code snippet shows you how to save a contact.
 

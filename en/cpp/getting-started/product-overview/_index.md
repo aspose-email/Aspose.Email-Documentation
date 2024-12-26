@@ -1,5 +1,6 @@
 ---
 title: Product Overview
+ArticleTitle: Product Overview
 type: docs
 weight: 10
 url: /cpp/product-overview/

@@ -1,5 +1,6 @@
 ---
 title: Managing Outlook Message Files with C++ Email Parser API
+ArticleTitle: Managing Outlook Message Files with C++ Email Parser API
 linktitle: Managing Message Files with Aspose.Email.Outlook
 type: docs
 weight: 30

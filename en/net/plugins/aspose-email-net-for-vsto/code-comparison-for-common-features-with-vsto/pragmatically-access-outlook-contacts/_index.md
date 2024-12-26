@@ -1,5 +1,6 @@
 ---
 title: Pragmatically access Outlook Contacts
+ArticleTitle: Pragmatically access Outlook Contacts
 type: docs
 weight: 180
 url: /net/pragmatically-access-outlook-contacts/

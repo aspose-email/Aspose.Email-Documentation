@@ -1,13 +1,14 @@
 ---
-title: Set Up Activity Logging
+title: Enable Activity Logging for EWS Client in .NET Applications
+ArticleTitle: Enabling Activity Logging in EWS Client for .NET
 type: docs
-weight: 41
-url: /net/set-up-activity-logging/
+weight: 160
+url: /net/enable-activity-logging-in-ews-client-csharp/
 ---
 
 Logging is used for debugging, as well as for collecting and analyzing working information about the application. Log files contain system information about the operation of the client application.
 
-## **Enable Activity Logging using appsettings.json File**
+## **Set Up Logging Using appsettings.json File**
 
 > **_NOTE:_** This option is preferred for .NET Core applications.
 
@@ -35,7 +36,7 @@ There are two properties:
 - `EWSDiagnosticLog` - Specifies the relative or absolute path to the log file.
 - `EWSDiagnosticLog_UseDate` - specifies whether to add a string representation of the current date to the log file name.
 
-## **Enable Activity Logging in Programm Code**
+## **Set Up Logging in Programm Code**
 
 You can also enable logging immediately in the code.
 
@@ -55,7 +56,7 @@ using (var client = EWSClient.GetEWSClient("https://outlook.office365.com/EWS/Ex
 }
 ```
 
-## **Enable Activity Logging using App.config File**
+## **Set Up Logging using App.config File**
 
 This option is suitable for applications where `app.config` is the preferred way for keeping the app configuration.
 

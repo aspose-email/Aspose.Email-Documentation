@@ -1,5 +1,6 @@
 ---
 title: Create Draft Appointment Request
+ArticleTitle: Create Draft Appointment Request
 type: docs
 weight: 40
 url: /java/create-draft-appointment-request/

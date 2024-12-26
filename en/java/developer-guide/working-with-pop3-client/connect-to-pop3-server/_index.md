@@ -1,5 +1,6 @@
 ---
 title: Connect to POP3 Server
+ArticleTitle: Connect to POP3 Server
 type: docs
 weight: 10
 url: /java/connect-to-pop3-server/

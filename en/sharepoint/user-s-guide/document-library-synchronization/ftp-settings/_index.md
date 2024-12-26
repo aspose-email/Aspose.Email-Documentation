@@ -1,5 +1,6 @@
 ---
 title: FTP Settings
+ArticleTitle: FTP Settings
 type: docs
 weight: 30
 url: /sharepoint/ftp-settings/
@@ -14,9 +15,11 @@ You can save one or more FTP settings with Aspose.Email for SharePoint. These se
 
 To access the FTP Settings: 
 
-1. On the [**Aspose Tools** ribbon](/email/sharepoint/about-document-library-synchronization/), click **FTP Settings**. The FTP Settings Collections dialog is displayed.
+1. On the [**Aspose Tools** ribbon](/email/sharepoint/about-document-library-synchronization/), click **FTP Settings**.
+   The FTP Settings Collections dialog is displayed.
 1. Create, add or modify an FTP setting.
-1. Click **Click to test connection parameters**. If the connection is successful, a message appears. 
+1. Click **Click to test connection parameters**.
+   If the connection is successful, a message appears. 
 1. Click **OK** to close the success message.
 1. Click **Save** to save the settings and exit the dialog.
 

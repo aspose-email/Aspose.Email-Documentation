@@ -1,5 +1,6 @@
 ---
 title: Adding MapiJournal to PST in PHP
+ArticleTitle: Adding MapiJournal to PST in PHP
 type: docs
 weight: 40
 url: /java/adding-mapijournal-to-pst-in-php/

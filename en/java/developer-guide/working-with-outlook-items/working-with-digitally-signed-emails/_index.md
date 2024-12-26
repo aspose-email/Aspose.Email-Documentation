@@ -1,5 +1,6 @@
 ---
 title: Managing Digitally Signed Messages
+ArticleTitle: Managing Digitally Signed Messages
 type: docs
 weight: 100
 url: /java/working-with-outlook-notes/

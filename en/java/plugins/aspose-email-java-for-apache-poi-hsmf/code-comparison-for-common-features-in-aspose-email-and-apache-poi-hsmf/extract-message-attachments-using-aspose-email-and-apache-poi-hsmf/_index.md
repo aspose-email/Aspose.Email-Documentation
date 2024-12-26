@@ -1,5 +1,6 @@
 ---
 title: Extract Message Attachments using Aspose.Email and Apache POI HSMF
+ArticleTitle: Extract Message Attachments using Aspose.Email and Apache POI HSMF
 type: docs
 weight: 10
 url: /java/extract-message-attachments-using-aspose-email-and-apache-poi-hsmf/
@@ -17,7 +18,7 @@ To save attachments from existing messages:
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  MailMessage message = MailMessage.load(dataDir + "message.msg");
 
@@ -39,13 +40,13 @@ for (int i = 0; i < message.getAttachments().size(); i++)
 
 }
 
-```
+{{< /highlight >}}
 ## **Apache POI HSMF - Extract Message Attachments**
 AttachmentChunks class can be used to access attachments of MAPIMessage.
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  MAPIMessage msg = new MAPIMessage(dataDir + "message.msg");
 
@@ -109,7 +110,7 @@ if (attachments.length > 0)
 
 }
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

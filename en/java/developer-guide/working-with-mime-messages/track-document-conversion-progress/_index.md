@@ -1,5 +1,6 @@
 ---
 title: Track Document Conversion Progress
+ArticleTitle: Track Document Conversion Progress
 type: docs
 weight: 60
 url: /java/track-document-conversion-progress/

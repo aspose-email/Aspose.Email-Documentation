@@ -1,5 +1,6 @@
 ---
 title: Loading, Saving and Converting different Email Message formats in C++
+ArticleTitle: Loading, Saving and Converting different Email Message formats in C++
 linktitle: Loading and Saving Message
 type: docs
 weight: 30

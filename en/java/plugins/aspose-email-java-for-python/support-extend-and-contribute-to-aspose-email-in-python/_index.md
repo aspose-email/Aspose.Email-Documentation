@@ -1,5 +1,6 @@
 ---
 title: Support, Extend and Contribute to Aspose.Email in Python
+ArticleTitle: Support, Extend and Contribute to Aspose.Email in Python
 type: docs
 weight: 30
 url: /java/support-extend-and-contribute-to-aspose-email-in-python/

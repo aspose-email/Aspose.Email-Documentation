@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Contacts
+ArticleTitle: Working with Outlook Contacts
 type: docs
 weight: 80
 url: /java/working-with-outlook-contacts/
@@ -33,10 +34,11 @@ Below is the hierarchy implemented for contacts in Aspose.Email for Java. The re
       1. Home Fax
       1. Primary Fax
       1. Business Fax
-   1. [Events](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--) (`MapiContactEventPropertySet`). See below for an example of how to set events.
+   1. [Events](https://reference.aspose.com/email/java/com.aspose.email/mapicontacteventpropertyset/#MapiContactEventPropertySet--) (MapiContactEventPropertySet)
+      See below for an example of how to set events.
       1. Birthday
       1. Wedding Anniversary
-   1. [Name Info](https://reference.aspose.com/email/java/com.aspose.email/mapicontactnamepropertyset/#MapiContactNamePropertySet--) (`MapiContactNamePropertySet`)
+   1. [Name Info](https://reference.aspose.com/email/java/com.aspose.email/mapicontactnamepropertyset/#MapiContactNamePropertySet--) (MapiContactNamePropertySet)
       1. Display Name
       1. Display Name Prefix
       1. File Under

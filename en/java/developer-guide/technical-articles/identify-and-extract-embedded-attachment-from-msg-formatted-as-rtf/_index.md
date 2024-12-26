@@ -1,5 +1,6 @@
 ---
 title: Identify and Extract Embedded Attachment from MSG Formatted as RTF
+ArticleTitle: Identify and Extract Embedded Attachment from MSG Formatted as RTF
 type: docs
 weight: 20
 url: /java/identify-and-extract-embedded-attachment-from-msg-formatted-as-rtf/

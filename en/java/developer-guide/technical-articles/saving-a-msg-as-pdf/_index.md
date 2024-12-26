@@ -1,5 +1,6 @@
 ---
 title: Saving A MSG as PDF
+ArticleTitle: Saving A MSG as PDF
 type: docs
 weight: 30
 url: /java/saving-a-msg-as-pdf/

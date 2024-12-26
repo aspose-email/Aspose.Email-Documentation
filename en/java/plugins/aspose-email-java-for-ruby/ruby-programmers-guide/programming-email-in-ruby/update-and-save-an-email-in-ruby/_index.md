@@ -1,5 +1,6 @@
 ---
 title: Update and Save an Email in Ruby
+ArticleTitle: Update and Save an Email in Ruby
 type: docs
 weight: 80
 url: /java/update-and-save-an-email-in-ruby/

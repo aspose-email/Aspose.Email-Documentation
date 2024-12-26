@@ -1,8 +1,9 @@
 ---
-title: Get Messages from a Shared Mailbox
+title: Retrieve Emails from a Shared Mailbox Using C# and EWS API
+ArticleTitle: Access and List Emails from a Shared Mailbox with Exchange Web Services (EWS) 
 type: docs
-weight: 160
-url: /net/get-messages-from-a-shared-mailbox/
+weight: 140
+url: /net/retrieve-email-messages-from-shared-mailbox-using-ews-api/
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: Working with Messages from Server
+ArticleTitle: Working with Messages from Server
 type: docs
 weight: 50
 url: /java/working-with-messages-from-server/

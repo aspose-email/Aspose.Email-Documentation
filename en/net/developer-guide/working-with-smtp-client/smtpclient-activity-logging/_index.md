@@ -1,13 +1,16 @@
 ---
-title: SmtpClient Activity Logging
+title: Enable SMTP Activity Logging in .NET Using appsettings.json
+ArticleTitle: Set Up SMTP Client Activity Logging in .NET Core
 type: docs
 weight: 26
-url: /net/smtpclient-activity-logging/
+url: /net/enable-smtp-activity-logging/
 ---
 
 Activity logging is used for debugging, as well as for collecting and analyzing working information about the SMTP client.
 
-## **Enable Activity Logging using appsettings.json File**
+## **Enable Activity Logging**
+
+### **Use appsettings.json File to Enable Activity Logging**
 
 > **_NOTE:_** This option is preferred for .NET Core applications.
 
@@ -37,7 +40,7 @@ The two properties mentioned above are:
 
 - **SmtpDiagnosticLog_UseDate** - specifies whether to add a string representation of the current date to the log file name.
 
-## **Enable Activity Logging in Programm Code**
+### **Enable Activity Logging in Programm Code**
 
 You can also enable logging immediately in the code. 
 
@@ -70,7 +73,7 @@ Logging in [SmtpClient](https://reference.aspose.com/email/net/aspose.email.clie
    }
 ```
 
-## **Enable Activity Logging using App.config File**
+### **Use App.config File to Enable Activity Logging**
 
 SMTP client activity can be logged by modifying the configSections in the config file. Diagnostics logging can be performed with the following steps:
 

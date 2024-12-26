@@ -1,5 +1,6 @@
 ---
 title: Utility Features
+ArticleTitle: Utility Features
 type: docs
 weight: 120
 url: /cpp/utility-features/

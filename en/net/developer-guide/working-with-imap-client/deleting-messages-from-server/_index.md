@@ -1,8 +1,9 @@
 ---
-title: Deleting Messages from Server
+title: How to Delete Messages from IMAP Server using .NET Core
+ArticleTitle: Delete Single and Multiple Email Messages with ImapClient
 type: docs
-weight: 50
-url: /net/deleting-messages-from-server/
+weight: 100
+url: /net/delete-messages-from-imap-server/
 ---
 
 
@@ -32,7 +33,6 @@ client.CommitDeletes();
 ## **Deleting Multiple Messages**
 
 Multiple emails can be deleted from mailbox using the [ImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/) of Aspose.Email API. The [DeleteMessages](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/deletemessages/#deletemessages/) method provides a number of options to delete multiple messages from the server using unique ids, sequence numbers or [ImapMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapmessageinfocollection/) elements. The following code snippet shows you how to delete multiple messages.
-
 
 ```csharp
 using var client = new ImapClient("host", "username", "password");

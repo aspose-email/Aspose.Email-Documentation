@@ -1,5 +1,6 @@
 ---
 title: Product Support
+ArticleTitle: Product Support
 type: docs
 weight: 110
 url: /net/product-support/

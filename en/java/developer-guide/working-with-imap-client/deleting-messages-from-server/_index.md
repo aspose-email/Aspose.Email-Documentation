@@ -1,5 +1,6 @@
 ---
 title: Deleting Messages from Server
+ArticleTitle: Deleting Messages from Server
 type: docs
 weight: 50
 url: /java/deleting-messages-from-server/

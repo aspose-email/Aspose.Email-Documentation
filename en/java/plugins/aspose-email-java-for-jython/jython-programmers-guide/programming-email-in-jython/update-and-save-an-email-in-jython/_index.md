@@ -1,5 +1,6 @@
 ---
 title: Update and Save an Email in Jython
+ArticleTitle: Update and Save an Email in Jython
 type: docs
 weight: 70
 url: /java/update-and-save-an-email-in-jython/

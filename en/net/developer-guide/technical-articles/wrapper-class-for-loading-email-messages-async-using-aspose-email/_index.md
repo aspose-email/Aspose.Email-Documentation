@@ -1,5 +1,6 @@
 ---
 title: Wrapper class for loading Email Messages Async using Aspose.Email
+ArticleTitle: Wrapper class for loading Email Messages Async using Aspose.Email
 type: docs
 weight: 170
 url: /net/wrapper-class-for-loading-email-messages-async-using-aspose-email/

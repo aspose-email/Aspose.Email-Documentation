@@ -1,5 +1,6 @@
 ---
 title: Extracting Message Contents from Emails
+ArticleTitle: Extracting Message Contents from Emails
 type: docs
 weight: 20
 url: /python-net/extracting-message-contents-from-emails/

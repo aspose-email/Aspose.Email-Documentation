@@ -1,5 +1,6 @@
 ---
 title: Reading an Outlook Message (MSG) file
+ArticleTitle: Reading an Outlook Message (MSG) file
 type: docs
 weight: 10
 url: /java/reading-an-outlook-message-msg-file/

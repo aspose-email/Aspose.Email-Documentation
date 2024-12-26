@@ -1,5 +1,6 @@
 ---
 title: Difference between POP3 and IMAP
+ArticleTitle: Difference between POP3 and IMAP
 type: docs
 weight: 30
 url: /net/difference-between-pop3-and-imap/

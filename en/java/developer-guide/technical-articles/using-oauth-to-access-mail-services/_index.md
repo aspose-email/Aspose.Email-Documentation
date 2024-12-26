@@ -1,5 +1,6 @@
 ---
 title: Using OAuth to access Mail Services
+ArticleTitle: Using OAuth to access Mail Services
 type: docs
 weight: 192
 url: /java/using-oauth-to-access-mail-services/

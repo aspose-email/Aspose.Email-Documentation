@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving Outlook MSG files using C++ Email API
+ArticleTitle: Creating and Saving Outlook MSG files using C++ Email API
 linktitle: Creating and Saving MSG files
 type: docs
 weight: 10

@@ -1,5 +1,6 @@
 ---
 title: Customizing Email Headers in Ruby
+ArticleTitle: Customizing Email Headers in Ruby
 type: docs
 weight: 30
 url: /java/customizing-email-headers-in-ruby/

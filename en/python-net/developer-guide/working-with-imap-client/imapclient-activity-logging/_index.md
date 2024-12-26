@@ -1,5 +1,6 @@
 ---
 title: ImapClient Activity Logging in Python
+ArticleTitle: ImapClient Activity Logging in Python
 type: docs
 weight: 40
 url: /python-net/imapclient-activity-logging/

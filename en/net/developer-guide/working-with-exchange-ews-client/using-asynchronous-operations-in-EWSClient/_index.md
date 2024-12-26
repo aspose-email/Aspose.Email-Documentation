@@ -1,15 +1,17 @@
 ---
-title: Using Asynchronous Operations in EWSClient
+title: Async OAuth Token and EWS Email Management in C#
+ArticleTitle: Asynchronous Email Operations with OAuth Authentication & EWS Client
 type: docs
-weight: 42
-url: /net/using-asynchronous-operations-in-ewsclient/
+weight: 150
+url: /net/async-oauth-token-ews-email-management-csharp/
 ---
+
+## **Async Method to Fetch OAuth Token**
 
 Unlike the synchronous methods, the asynchronous methods are non-blocking and allow to perform multiple requests simultaneously. Asynchronous methods are named with the Async postfix.
 
 > **_NOTE:_** Async methods are available in versions targeting .NET Core, .NET Framework 4.5, and later.
 
-## Implementing IAsyncTokenProvider to get OAuth Tokens Asynchronously
 
 The following code sample defines a `SomeAsyncTokenProvider` class, which implements the [IAsyncTokenProvider](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/) interface.
 The class implements [GetAccessTokenAsync](https://reference.aspose.com/email/net/aspose.email.clients/iasynctokenprovider/getaccesstokenasync/) asynchronous method that returns a Task of type OAuthToken. This method fetches a valid [OAuthToken](https://reference.aspose.com/email/net/aspose.email.clients/oauthtoken/) asynchronously.
@@ -36,7 +38,7 @@ private class SomeAsyncTokenProvider : IAsyncTokenProvider
 }
 ```
 
-## Creating the IAsyncEwsClientInstance
+## **Asynchronous EWS Client Setup with OAuth Authentication**
 
 The next code example obtains an Exchange Web Services (EWS) client asynchronously using OAuth authentication. The code performs the following steps:
 
@@ -56,7 +58,7 @@ var ewsClient = await EWSClient.GetEwsClientAsync(mailboxUri, new OAuthNetworkCr
     cancellationToken: cancellationToken);
 ```
 
-## Sending a Message
+## **Send Email Messages**
 
 The code example below is attempting to send an email message asynchronously. The code performs the following steps:
 
@@ -68,7 +70,7 @@ MailMessage message = new MailMessage("from@aspose.com", "to@aspose.com", "Some 
 await ewsClient.SendAsync(message, cancellationToken: cancellationToken);
 ```
 
-## Fetching a Message with Attachments
+## **Fetch Email Messages**
 
 To fetch an email message asynchronously, use the following code example with the steps described below:
 
@@ -83,7 +85,7 @@ To fetch an email message asynchronously, use the following code example with th
       var fetched = await ewsClient.FetchItemAsync(messageUri, cancellationToken: cancellationToken);
    ```
 
-## Appending Messages
+## **Append Email Messages**
 
 The code example below is attempting to append email messages asynchronously. The code performs the following steps:
 
@@ -94,7 +96,7 @@ The code example below is attempting to append email messages asynchronously. Th
    - [SetFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setfolder/) sets the target folder URI for the append operation.
    - [SetCancellationToken](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setcancellationtoken/) sets the cancellation token that can be used to cancel the asynchronous operation.
 
-3. The [AppendMessagesAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/) method returns a Task object that resolves to an IEnumerable<string> object when the asynchronous operation is complete. The "await" keyword is used to wait for the Task object to complete before proceeding.
+3. The [AppendMessagesAsync]((https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/)) method returns a Task object that resolves to an IEnumerable<string> object when the asynchronous operation is complete. The "await" keyword is used to wait for the Task object to complete before proceeding.
 4. The `uris` variable is assigned the result of the completed Task, which is an IEnumerable<string> object containing the URIs of the appended messages.
 
 ```cs
@@ -106,7 +108,7 @@ IEnumerable<string> uris = await ewsClient.AppendMessagesAsync(
         .SetCancellationToken(cancellationToken));
 ```
 
-## Copying Items
+## **Copy Items**
 
 The code sample below shows how to copy items and performs the following steps:
 
@@ -124,7 +126,7 @@ The code sample below shows how to copy items and performs the following steps:
 string newItemUri = await ewsClient.CopyItemAsync(messageUri, destinationFolderUri, cancellationToken);
 ```
 
-## Deleting Items
+## **Delete Items**
 
 The following code is attempting to delete an email message asynchronously.
 
@@ -140,7 +142,7 @@ The method returns a Task object that completes when the asynchronous operation 
 await ewsClient.DeleteItemAsync(newItemUri, DeletionOptions.DeletePermanently, cancellationToken);
 ```
 
-## Deleting Folders
+## **Delete Folders**
 
 The following code is attempting to delete a folder asynchronously.
 
@@ -157,7 +159,7 @@ const bool deletePermanently = true;
 await ewsClient.DeleteFolderAsync(folderUri, deletePermanently, cancellationToken);
 ```
 
-## Updating Items
+## **Update Items**
 
 The code example below is attempting to update an item asynchronously. It performs the following steps:
 

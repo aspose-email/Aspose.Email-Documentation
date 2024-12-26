@@ -1,5 +1,6 @@
 ---
 title: Filter Appointments from Exchange Server
+ArticleTitle: Filter Appointments from Exchange Server
 type: docs
 weight: 130
 url: /java/filter-appointments-from-exchange-server/

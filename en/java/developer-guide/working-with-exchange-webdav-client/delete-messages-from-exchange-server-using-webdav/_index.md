@@ -1,5 +1,6 @@
 ---
 title: Delete Messages from Exchange Server using WebDav
+ArticleTitle: Delete Messages from Exchange Server using WebDav
 type: docs
 weight: 20
 url: /java/delete-messages-from-exchange-server-using-webdav/

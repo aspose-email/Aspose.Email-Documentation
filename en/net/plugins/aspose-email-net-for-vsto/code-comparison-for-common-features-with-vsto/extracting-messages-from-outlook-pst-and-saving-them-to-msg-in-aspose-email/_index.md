@@ -1,5 +1,6 @@
 ---
 title: Extracting Messages from Outlook PST and Saving them to MSG in Aspose.Email
+ArticleTitle: Extracting Messages from Outlook PST and Saving them to MSG in Aspose.Email
 type: docs
 weight: 130
 url: /net/extracting-messages-from-outlook-pst-and-saving-them-to-msg-in-aspose-email/

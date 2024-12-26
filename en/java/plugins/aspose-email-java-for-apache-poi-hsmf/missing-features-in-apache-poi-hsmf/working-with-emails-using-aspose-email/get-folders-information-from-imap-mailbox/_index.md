@@ -1,5 +1,6 @@
 ---
 title: Get Folders Information from IMAP Mailbox
+ArticleTitle: Get Folders Information from IMAP Mailbox
 type: docs
 weight: 10
 url: /java/get-folders-information-from-imap-mailbox/

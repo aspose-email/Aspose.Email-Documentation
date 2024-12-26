@@ -1,5 +1,6 @@
 ---
 title: Display information in custom order in MHTML files
+ArticleTitle: Display information in custom order in MHTML files
 type: docs
 weight: 80
 url: /java/display-information-in-custom-order-in-mhtml-files/

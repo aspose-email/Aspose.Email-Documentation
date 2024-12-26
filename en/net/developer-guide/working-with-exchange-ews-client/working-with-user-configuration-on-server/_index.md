@@ -1,18 +1,17 @@
 ---
-title: Working with User Configuration on Server
+title: Manage User Configurations on Exchange Server Using EWS in C#
+ArticleTitle: Manage User Configurations on Exchange Server with EWS
 type: docs
 weight: 110
-url: /net/working-with-user-configuration-on-server/
+url: /net/manage-user-configuration-on--exchange-server/
 ---
 
-
-## **Managing User Configuration**
 
 Aspose.Email for .NET can be used to manage user configuration on an Exchange Server with the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. In this article, we will see how to read, create, update, and delete user configurations on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features described in this article. The following code snippet shows you how to connect to Exchange Server 2010 in all the examples in this article.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ConnectingToExchangeServerUsingEWS-ConnectingToExchangeServerUsingEWS.cs" >}}
 
-### **Reading User Configuration**
+## **Read User Configurations**
 
 To get the user configuration information of a specific folder from the Exchange Server:
 
@@ -24,7 +23,7 @@ The following code snippet shows you how to read user configuration.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ReadUserConfiguration-ReadUserConfiguration.cs" >}}
 
-### **Creating User Configurations**
+## **Create User Configurations**
 
 To create the user configuration for a specific folder on an Exchange Server:
 
@@ -35,7 +34,7 @@ The following code snippet shows you how to create user configurations.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CreatUserConfigurations-CreatUserConfigurations.cs" >}}
 
-### **Updating User Configuration**
+## **Update User Configurations**
 
 To update the user configuration for a specific folder in the Exchange Server:
 
@@ -46,7 +45,7 @@ The following code snippet shows you how to update user configuration.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-UpdateUserConfiguration-UpdatUserConfiguration.cs" >}}
 
-### **Deleting User Configuration**
+## **Delete User Configurations**
 
 To delete the user configuration for a specific folder in the Exchange Server:
 

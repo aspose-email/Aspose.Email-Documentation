@@ -1,5 +1,6 @@
 ---
 title: Filter Messages From Exchange Mailbox
+ArticleTitle: Filter Messages From Exchange Mailbox
 type: docs
 weight: 30
 url: /cpp/filter-messages-from-exchange-mailbox/
@@ -76,7 +77,6 @@ The following code snippet shows you how to Combine Queries with AND.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FilterWithComplexQueriesUsingEWS-CombineQueriesWithAND.cpp" >}}
 ###  **Combining Queries with OR**
-
 [MailQueryBuilder](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/) provides the [Or()](https://apireference.aspose.com/cpp/email/class/aspose.email.tools.search.mail_query_builder/#afc735b8cd80758418502678ac69eecd4) method which takes two *MailQuery* instances as parameters. It gets messages that match any of the two conditions specified. The example below filters messages that either has the word “test” in the subject or “noreply@host.com” as the sender. The following code snippet shows you how to combine queries with OR.
 
 

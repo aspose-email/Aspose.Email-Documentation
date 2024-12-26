@@ -1,5 +1,6 @@
 ---
 title: Create, Save and Read Outlook Contacts
+ArticleTitle: Create, Save and Read Outlook Contacts
 type: docs
 weight: 10
 url: /java/create-save-and-read-outlook-contacts/

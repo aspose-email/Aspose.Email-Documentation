@@ -1,12 +1,13 @@
 ---
 title: Programming with Thunderbird
+ArticleTitle: Programming with Thunderbird
 type: docs
 weight: 110
 url: /net/programming-with-thunderbird/
 ---
 
 
-## **Reading MBOX files**
+## **Reading MBOX Files**
 
 [Mozilla Thunderbird](https://www.thunderbird.net/en-US/) is an open-source, cross-platform email client, developed by the Mozilla Foundation. It stores emails in its own file structure, managing messages indices and subfolders through proprietary file formats. Aspose.Email can work with Thunderbird mail storage structures. The [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) class lets developers read messages from Mozilla Thunderbird mail storage file. This article shows how to read the messages from Thunderbird email storage:
 
@@ -47,7 +48,7 @@ reader.Dispose();
 stream.Close();
 ```
 
-### **Retrieving message properties**
+### **Retrieving Message Properties**
 
 [MboxMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/#mboxmessageinfo-class) class contains the following properties to retrieve information about a message:
 
@@ -57,8 +58,6 @@ stream.Close();
 - MailAddressCollection [To](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/to/) - Gets the address collection that contains the recipients of message
 - MailAddressCollection [CC](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/cc/) - Gets the address collection that contains CC recipients
 - MailAddressCollection [Bcc](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxmessageinfo/bcc/) - Gets the address collection that contains BCC recipients of message
-
-**Code sample**
 
 ```cs
 MboxStorageReader reader = MboxStorageReader.CreateReader(fileName, new MboxLoadOptions());
@@ -93,15 +92,13 @@ foreach (MboxMessageInfo msgInfo in reader.EnumerateMessageInfo())
 }
 ```
 
-### **Configuring the load options when reading messages from MBOX** 
+### **Configuring the Load Options when Reading Messages from MBOX** 
 
 The following features will allow you to specify various options related to loading and processing messages:
 
 - MailStorageConverter.MboxMessageOptions property - Gets or sets email load options when parsing an Mbox storage.
 
 - MboxrdStorageReader.ReadNextMessage(EmlLoadOptions options) method - EmlLoadOptions parameter specifies options when reading message from Mbox storage.
-
-**Code sample**
 
 ```cs
 var reader = new MboxrdStorageReader(fileName, new MboxLoadOptions());
@@ -121,7 +118,7 @@ var reader = new MboxrdStorageReader("sample.mbox", new MboxLoadOptions() { Pref
 var message = reader.ReadNextMessage();
 ```
 
-### **Getting Total Number of Messages from MBox File**
+### **Getting Total Number of Messages from MBOX File**
 
 The [MboxrdStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragereader/) class provides the capability to read the number of items available in an MBox file. This can be used to develop applications for showing the progress of activity while processing such a file.
 
@@ -167,7 +164,7 @@ personalStorage,
 new MboxToPstConversionOptions() { RemoveSignature = true });
 ```
 
-## **Writing MBOX files**
+## **Writing MBOX Files**
 
 The [MboxrdStorageWriter](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxrdstoragewriter/) class provides the facility to write new messages to Thunderbird mail storage file. To write messages:
 
@@ -195,3 +192,69 @@ writer.Dispose();
 stream.Close();
 ```
 
+## **Split MBOX Storage/Cancel Splitting Operation**
+
+Aspose.Email provides methods for splitting Mbox storage into smaller parts, making it easier to handle large email archives. Depending on the .NET version you are using, the available methods and their parameters may vary. Below are the methods of the [MboxStorageReader](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/) class used for both .NET Framework 4.5 and .NET Core versions as well as for versions below 4.5.
+
+**Members for .NET Framework 4.5 and .NET Core Versions:**
+
+- [SplitInto(long chunkSize, string outputPath, CancellationToken token)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/splitinto/#splitinto_1) - Splits the Mbox storage into smaller parts based on the specified chunk size.
+
+- Parameters:
+    - chunkSize: The approximate size of each chunk in bytes.
+    - outputPath: The folder path where the chunks will be created.
+    - token: A CancellationToken that allows for the possible cancellation of the operation.
+
+- [SplitInto(long chunkSize, string outputPath, string partFileNamePrefix, CancellationToken token)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/splitinto/#splitinto) - Splits the Mbox storage into smaller parts with a specified filename prefix for each part.
+
+- Parameters:
+    - chunkSize: The approximate size of each chunk in bytes.
+    - outputPath: The folder path where the chunks will be created.
+    - partFileNamePrefix: The prefix to be added to the filename of each part.
+    - token: A CancellationToken that allows for the possible cancellation of the operation.
+
+**Members for .NET Framework Versions Below 4.5:**
+
+- [SplitInto(long chunkSize, string outputPath)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/splitinto/#splitinto_2) - Splits the Mbox storage into smaller parts based on the specified chunk size.
+
+- [SplitInto(long chunkSize, string outputPath, string partFileNamePrefix)](https://reference.aspose.com/email/net/aspose.email.storage.mbox/mboxstoragereader/splitinto/#splitinto_3) - Splits the Mbox storage into smaller parts with a specified filename prefix for each part.
+
+- Cancel() - Interrupts an ongoing split operation.
+
+The folowing code samples demonstrate how to split an MBOX file into parts while limiting the process to a maximum of five parts, utilizing a cancellation mechanism:
+
+**.NET Framework 4.5 and .NET Core:**
+
+```cs
+int partCount = 0;
+
+var tokenSource = new CancellationTokenSource();
+
+var mbox = new MboxrdStorageReader(fileName, new MboxLoadOptions { LeaveOpen = false });
+
+// Subscribe to events
+mbox.MboxFileCreated += (sender, e) =>
+{
+    partCount++;
+    if (partCount >= 5)
+        tokenSource.Cancel();
+};
+
+System.Threading.Tasks.Task task = mbox.SplitInto(10000000, outputPath, tokenSource.Token);
+task.Wait();
+```
+
+**.NET Framework Below 4.5:**
+
+```cs
+int partCount = 0;
+var mbox = new MboxrdStorageReader(fileName, new MboxLoadOptions { LeaveOpen = false });
+mbox.SplitInto(10000000, outputPath);
+
+mbox.MboxFileCreated += (sender, e) =>
+{
+    partCount++;
+    if (partCount >= 5)
+        mbox.Cancel();
+};
+```

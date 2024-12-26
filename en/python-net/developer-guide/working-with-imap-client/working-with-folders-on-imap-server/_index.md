@@ -1,5 +1,6 @@
 ---
 title: Working with Folders on IMAP Server
+ArticleTitle: Working with Folders on IMAP Server
 type: docs
 weight: 50
 url: /python-net/working-with-folders-on-imap-server/

@@ -1,5 +1,6 @@
 ---
 title: Adding Files to PST in Python
+ArticleTitle: Adding Files to PST in Python
 type: docs
 weight: 10
 url: /java/adding-files-to-pst-in-python/
@@ -10,7 +11,7 @@ To Add Files to PST using **Aspose.Email Java for Python**, Use following code.
 
 **Python Code**
 
-```python
+{{< highlight python >}}
 
 
 
@@ -30,7 +31,7 @@ pst.dispose()
 
 print "Added file to PST"
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding Files to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

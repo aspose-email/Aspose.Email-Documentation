@@ -1,5 +1,6 @@
 ---
 title: Troubleshooting Installation
+ArticleTitle: Troubleshooting Installation
 type: docs
 weight: 40
 url: /sharepoint/troubleshooting-installation/

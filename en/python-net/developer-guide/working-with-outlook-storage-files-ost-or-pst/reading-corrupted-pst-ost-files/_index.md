@@ -1,5 +1,6 @@
 ---
 title: Reading corrupted PST/OST files
+ArticleTitle: Reading corrupted PST/OST files
 type: docs
 weight: 90
 url: /python-net/reading-corrupted-pst-ost-files/

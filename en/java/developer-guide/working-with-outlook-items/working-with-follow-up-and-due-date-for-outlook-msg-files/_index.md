@@ -1,5 +1,6 @@
 ---
 title: Working with Follow Up and Due Date for Outlook MSG Files
+ArticleTitle: Working with Follow Up and Due Date for Outlook MSG Files
 type: docs
 weight: 50
 url: /java/working-with-follow-up-and-due-date-for-outlook-msg-files/

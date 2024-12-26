@@ -1,9 +1,10 @@
 ---
 title: Convert ICS Other Formats
+ArticleTitle: Convert ICS Other Formats
 type: docs
-weight: 60
+weight: 50
 url: /net/converting-between-formats/convert-ics-to-other-formats
----
+--- 
 
 ## **Convert ICS to EML**
 
@@ -13,7 +14,6 @@ For a calendar event or appointment representation, Aspose.Email has the [Appoin
 2. Create a new [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/#mailmessage-class) object to hold the calendar data. 
 3. Add the appointment from the ICS file to the EML as an alternate view using the [RequestApointment()](https://reference.aspose.com/email/net/aspose.email.calendar/appointment/requestapointment/#requestapointment) method. 
 4. Save the EML file with the converted data using the [Save](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) method with the [EmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/emlsaveoptions/emlsaveoptions/#emlsaveoptions-constructor) specifying the save type as EmlFormat. 
-
 
 ```cs
 // load the ICS file to be converted
@@ -56,7 +56,6 @@ eml.Save("Saved File.html", new HtmlSaveOptions { HtmlFormatOptions = HtmlFormat
 ```
 
 Use other values and properties of the [HtmlFormatOptions](https://reference.aspose.com/email/net/aspose.email/htmlformatoptions/#htmlformatoptions-enumeration) enumeration and [HtmlSaveOptions](https://reference.aspose.com/email/net/aspose.email/htmlsaveoptions/#htmlsaveoptions-class) class to set format options as required.
-
 
 ## **Convert ICS to MBOX**
 

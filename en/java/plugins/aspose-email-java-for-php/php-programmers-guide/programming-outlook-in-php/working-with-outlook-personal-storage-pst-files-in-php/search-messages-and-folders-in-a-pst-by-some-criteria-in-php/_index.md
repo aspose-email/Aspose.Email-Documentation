@@ -1,5 +1,6 @@
 ---
 title: Search Messages and Folders in a PST by Some Criteria in PHP
+ArticleTitle: Search Messages and Folders in a PST by Some Criteria in PHP
 type: docs
 weight: 70
 url: /java/search-messages-and-folders-in-a-pst-by-some-criteria-in-php/
@@ -10,7 +11,7 @@ To Search Messages and Folders in a PST using **Aspose.Email Java for PHP**, sim
 
 **PHP Code**
 
-```php
+{{< highlight php >}}
 
  # Load the Outlook PST file
 
@@ -78,7 +79,7 @@ $messages = $folder->getContents($builder->getQuery());
 
 print "Unread msgs with atts: " . (string)$messages->size();
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Search Messages and Folders in a PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

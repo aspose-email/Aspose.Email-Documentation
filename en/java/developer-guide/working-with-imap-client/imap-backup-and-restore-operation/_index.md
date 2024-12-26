@@ -1,5 +1,6 @@
 ---
 title: IMAP Backup and Restore Operation
+ArticleTitle: IMAP Backup and Restore Operation
 type: docs
 weight: 120
 url: /java/imap-backup-and-restore-operation/

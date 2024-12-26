@@ -1,5 +1,6 @@
 ---
 title: Pricing Plan
+ArticleTitle: Pricing Plan
 type: docs
 weight: 100
 url: /net/pricing-plan/

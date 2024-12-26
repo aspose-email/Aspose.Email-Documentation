@@ -1,5 +1,6 @@
 ---
 title: Getting List of Messages from Inbox Folder of Microsoft Exchange Server Mailbox in Aspose.Email
+ArticleTitle: Getting List of Messages from Inbox Folder of Microsoft Exchange Server Mailbox in Aspose.Email
 type: docs
 weight: 150
 url: /net/getting-list-of-messages-from-inbox-folder-of-microsoft-exchange-server-mailbox-in-aspose-email/

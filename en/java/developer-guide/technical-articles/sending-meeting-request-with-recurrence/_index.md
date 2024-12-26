@@ -1,5 +1,6 @@
 ---
 title: Sending meeting request with recurrence
+ArticleTitle: Sending meeting request with recurrence
 type: docs
 weight: 240
 url: /java/sending-meeting-request-with-recurrence/

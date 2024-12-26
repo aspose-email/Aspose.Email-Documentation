@@ -1,5 +1,6 @@
 ---
 title: Create a Task
+ArticleTitle: Create a Task
 type: docs
 weight: 50
 url: /net/create-a-task/

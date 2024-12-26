@@ -1,5 +1,6 @@
 ---
 title: Create an Appointment
+ArticleTitle: Create an Appointment
 type: docs
 weight: 20
 url: /net/create-an-appointment/

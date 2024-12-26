@@ -1,5 +1,6 @@
 ---
 title: Working with Voting Option Using MapiMessage
+ArticleTitle: Working with Voting Option Using MapiMessage
 type: docs
 weight: 120
 url: /python-net/working-with-voting-option-using-mapimessage/

@@ -1,5 +1,6 @@
 ---
-title: Managing Conversation Items
+title: Managing Conversation Items on Exchange Server 
+ArticleTitle: Managing Conversation Items on Exchange Server 
 type: docs
 weight: 40
 url: /net/managing-conversation-items/
@@ -8,7 +9,7 @@ url: /net/managing-conversation-items/
 
 Aspose.Email for .NET can be used to manage the conversation items on Exchange Server with the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) class. This class uses Exchange Web Services, which are only available in Exchange Server 2007 and later releases. This article shows how to [find](#finding-conversations), [copy](#copying-conversations), [move](#moving-conversations) and [delete](#deleting-conversations) conversation items on Exchange Server 2010. Microsoft Exchange Server 2010 Service Pack 1 is required for all the features included in this section.
 
-## **Finding Conversations**
+## **Find Conversations**
 
 To get the conversation information from a specific folder on the Exchange Server:
 
@@ -20,7 +21,7 @@ The following code snippet shows you how to find conversations.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-FindConversationsOnExchangeServer-FindConversationsOnExchangeServer.cs" >}}
 
-## **Copying Conversations**
+## **Copy Conversations**
 
 To copy conversations from one folder to another:
 
@@ -31,7 +32,7 @@ The following code snippet shows you how to copying conversations.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CopyConversations-CopyConversations.cs" >}}
 
-## **Moving Conversations**
+## **Move Conversations**
 
 To move conversations from one folder to another:
 
@@ -42,7 +43,7 @@ The following code snippet shows you how to moving conversations.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-MoveConversations-MoveConversations.cs" >}}
 
-## **Deleting Conversations**
+## **Delete Conversations**
 
 To delete conversations from a folder:
 

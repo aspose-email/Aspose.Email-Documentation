@@ -1,5 +1,6 @@
 ---
 title: Working with Messages in a PST File
+ArticleTitle: Working with Messages in a PST File
 type: docs
 weight: 30
 url: /java/working-with-messages-in-a-pst-file/
@@ -625,10 +626,10 @@ inbox.changeMessages(changeList, updatedProperties);
 
 Sometimes its required to mark items that are processed within the PST file. Aspose.Email API allows to achieve this using the MapiProperty and MapiNamedProperty. The following methods are helpful in achieving this.
 
-- `constructor MapiNamedProperty(long propertyTag, String nameIdentifier, UUID propertyGuid, byte[] propertyValue)`
-- `constructor MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, byte[] propertyValue)`
-- `FolderInfo.changeMessages(MapiPropertyCollection updatedProperties)` - changes all messages in folder
-- `PersonalStorage.changeMessage(String entryId, MapiPropertyCollection updatedProperties)` - change message properties
+- constructor MapiNamedProperty(long propertyTag, String nameIdentifier, UUID propertyGuid, byte[] propertyValue)
+- constructor MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, byte[] propertyValue)
+- FolderInfo.changeMessages(MapiPropertyCollection updatedProperties) - changes all messages in folder
+- PersonalStorage.changeMessage(String entryId, MapiPropertyCollection updatedProperties) - change message properties
 
 ~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java

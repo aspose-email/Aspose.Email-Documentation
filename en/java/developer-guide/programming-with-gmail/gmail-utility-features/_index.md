@@ -1,5 +1,6 @@
 ---
 title: Gmail Utility Features
+ArticleTitle: Gmail Utility Features
 type: docs
 weight: 10
 url: /java/gmail-utility-features/

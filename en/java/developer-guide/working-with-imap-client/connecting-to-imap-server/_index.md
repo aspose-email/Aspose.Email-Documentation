@@ -1,5 +1,6 @@
 ---
 title: Connecting to IMAP Server
+ArticleTitle: Connecting to IMAP Server
 type: docs
 weight: 10
 url: /java/connecting-to-imap-server/

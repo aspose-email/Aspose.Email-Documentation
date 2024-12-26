@@ -1,5 +1,6 @@
 ---
 title: Working with Follow Up and Due Date for Outlook MSG Files in C++
+ArticleTitle: Working with Follow Up and Due Date for Outlook MSG Files in C++
 linktitle: Working with Follow Up and Due Date for Outlook MSG Files
 type: docs
 weight: 50

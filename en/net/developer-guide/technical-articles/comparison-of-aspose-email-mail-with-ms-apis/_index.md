@@ -1,5 +1,6 @@
 ---
 title: Comparison of Aspose.Email.Mail with MS APIs
+ArticleTitle: Comparison of Aspose.Email.Mail with MS APIs
 type: docs
 weight: 20
 url: /net/comparison-of-aspose-email-mail-with-ms-apis/

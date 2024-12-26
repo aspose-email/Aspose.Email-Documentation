@@ -1,5 +1,6 @@
 ---
 title: Create New Email in Python
+ArticleTitle: Create New Email in Python
 type: docs
 weight: 20
 url: /java/create-new-email-in-python/

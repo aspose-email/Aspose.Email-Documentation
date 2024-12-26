@@ -1,5 +1,6 @@
 ---
 title: Displaying Email Information on Screen in Python
+ArticleTitle: Displaying Email Information on Screen in Python
 type: docs
 weight: 40
 url: /java/displaying-email-information-on-screen-in-python/

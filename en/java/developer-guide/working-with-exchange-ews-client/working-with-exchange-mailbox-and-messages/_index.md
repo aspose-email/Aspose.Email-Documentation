@@ -1,5 +1,6 @@
 ---
 title: Working with Exchange Mailbox and Messages - Read Email from Exchange Server in Java
+ArticleTitle: Working with Exchange Mailbox and Messages - Read Email from Exchange Server in Java
 linktitle: Working with Exchange Mailbox and Messages
 type: docs
 weight: 20

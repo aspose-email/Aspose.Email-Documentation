@@ -1,5 +1,6 @@
 ---
 title: Extracting Email Headers in Python
+ArticleTitle: Extracting Email Headers in Python
 type: docs
 weight: 50
 url: /java/extracting-email-headers-in-python/

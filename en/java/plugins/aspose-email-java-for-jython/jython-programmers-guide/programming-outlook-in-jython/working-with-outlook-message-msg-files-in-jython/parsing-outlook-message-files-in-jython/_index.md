@@ -1,5 +1,6 @@
 ---
 title: Parsing Outlook Message Files in Jython
+ArticleTitle: Parsing Outlook Message Files in Jython
 type: docs
 weight: 30
 url: /java/parsing-outlook-message-files-in-jython/
@@ -10,7 +11,7 @@ To Parse Outlook Message file using **Aspose.Email Java for Jython**, simply inv
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -56,7 +57,7 @@ if __name__ == '__main__':
 
     ParseOutlookMessageFile()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Parsing Outlook Message Files (Aspose.Email)** from any of the below mentioned social coding sites:
 

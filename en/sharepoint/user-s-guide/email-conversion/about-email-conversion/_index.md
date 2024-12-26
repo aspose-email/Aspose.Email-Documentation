@@ -1,5 +1,6 @@
 ---
 title: About Email Conversion
+ArticleTitle: About Email Conversion
 type: docs
 weight: 10
 url: /sharepoint/about-email-conversion/

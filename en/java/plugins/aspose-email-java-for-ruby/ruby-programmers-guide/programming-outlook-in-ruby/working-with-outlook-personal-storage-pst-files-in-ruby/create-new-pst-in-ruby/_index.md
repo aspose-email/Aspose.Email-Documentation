@@ -1,5 +1,6 @@
 ---
 title: Create New PST in Ruby
+ArticleTitle: Create New PST in Ruby
 type: docs
 weight: 70
 url: /java/create-new-pst-in-ruby/

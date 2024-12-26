@@ -1,5 +1,6 @@
 ---
 title: Splitting and Merging PST Files
+ArticleTitle: Splitting and Merging PST Files
 type: docs
 weight: 90
 url: /java/splitting-and-merging-pst-files/

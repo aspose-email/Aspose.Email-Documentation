@@ -1,5 +1,6 @@
 ---
 title: Move Messages from One Folder to Another using WebDav
+ArticleTitle: Move Messages from One Folder to Another using WebDav
 type: docs
 weight: 70
 url: /java/move-messages-from-one-folder-to-another-using-webdav/

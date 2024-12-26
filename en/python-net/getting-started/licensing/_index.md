@@ -1,5 +1,6 @@
 ---
 title: Licensing
+ArticleTitle: Licensing
 type: docs
 weight: 60
 url: /python-net/licensing/

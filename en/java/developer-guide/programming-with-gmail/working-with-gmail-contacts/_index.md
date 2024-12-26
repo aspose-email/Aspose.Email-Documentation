@@ -1,5 +1,6 @@
 ---
 title: Working with Gmail Contacts
+ArticleTitle: Working with Gmail Contacts
 type: docs
 weight: 30
 url: /java/working-with-gmail-contacts/

@@ -1,5 +1,6 @@
 ---
 title: Extracting Email Headers in Jython
+ArticleTitle: Extracting Email Headers in Jython
 type: docs
 weight: 40
 url: /java/extracting-email-headers-in-jython/

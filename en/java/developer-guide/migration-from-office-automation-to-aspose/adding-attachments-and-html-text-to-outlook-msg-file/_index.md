@@ -1,5 +1,6 @@
 ---
 title: Adding Attachments and HTML Text to Outlook MSG File
+ArticleTitle: Adding Attachments and HTML Text to Outlook MSG File
 type: docs
 weight: 30
 url: /java/adding-attachments-and-html-text-to-outlook-msg-file/

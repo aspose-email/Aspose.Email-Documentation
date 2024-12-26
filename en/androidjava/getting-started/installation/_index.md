@@ -1,5 +1,6 @@
 ---
 title: Installation
+ArticleTitle: Installation
 type: docs
 weight: 50
 url: /androidjava/installation/

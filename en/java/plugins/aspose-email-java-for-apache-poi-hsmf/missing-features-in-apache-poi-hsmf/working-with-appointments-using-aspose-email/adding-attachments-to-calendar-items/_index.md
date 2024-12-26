@@ -1,5 +1,6 @@
 ---
 title: Adding Attachments to Calendar Items
+ArticleTitle: Adding Attachments to Calendar Items
 type: docs
 weight: 60
 url: /java/adding-attachments-to-calendar-items/

@@ -1,5 +1,6 @@
 ---
 title: Send Email via MailGun and SendGrid in Java
+ArticleTitle: Send Email via MailGun and SendGrid in Java
 type: docs
 weight: 10
 url: /java/send-email-messages-via-mailgun-and-sendgrid/

@@ -1,5 +1,6 @@
 ---
 title: Get Messages from a Shared Mailbox
+ArticleTitle: Get Messages from a Shared Mailbox
 type: docs
 weight: 160
 url: /java/get-messages-from-a-shared-mailbox/

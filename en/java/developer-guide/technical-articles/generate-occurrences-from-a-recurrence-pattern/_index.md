@@ -1,5 +1,6 @@
 ---
 title: Generate Occurrences from a Recurrence Pattern
+ArticleTitle: Generate Occurrences from a Recurrence Pattern
 type: docs
 weight: 180
 url: /java/generate-occurrences-from-a-recurrence-pattern/

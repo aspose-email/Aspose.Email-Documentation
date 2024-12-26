@@ -1,5 +1,6 @@
 ---
 title: Support, Extend and Contribute to Aspose.Email in PHP
+ArticleTitle: Support, Extend and Contribute to Aspose.Email in PHP
 type: docs
 weight: 30
 url: /java/support-extend-and-contribute-to-aspose-email-in-php/

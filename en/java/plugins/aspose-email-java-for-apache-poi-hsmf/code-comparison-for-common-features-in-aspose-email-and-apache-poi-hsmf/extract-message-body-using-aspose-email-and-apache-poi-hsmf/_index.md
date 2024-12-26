@@ -1,5 +1,6 @@
 ---
 title: Extract Message Body using Aspose.Email and Apache POI HSMF
+ArticleTitle: Extract Message Body using Aspose.Email and Apache POI HSMF
 type: docs
 weight: 20
 url: /java/extract-message-body-using-aspose-email-and-apache-poi-hsmf/
@@ -10,7 +11,7 @@ The MailMessage represents an email message and allows developers to access em
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  MailMessage msg = MailMessage.load(dataDir + "message.msg");
 
@@ -20,19 +21,19 @@ System.out.println("Text Body:"+ msg.getTextBody());
 
 System.out.println("Text Body HTML:"+ msg.getHtmlBody());
 
-```
+{{< /highlight >}}
 ## **Apache POI HSMF - Extract Message Body**
 MAPIMessage can access email message body.
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  MAPIMessage msg = new MAPIMessage(dataDir + "message.msg");
 
 System.out.println("Text Body:"+ msg.getTextBody());
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 - [CodePlex](https://archive.codeplex.com/?p=asposeemailjavaapachepoi)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

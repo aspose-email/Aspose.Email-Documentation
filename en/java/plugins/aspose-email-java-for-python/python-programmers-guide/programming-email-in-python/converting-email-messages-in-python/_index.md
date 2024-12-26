@@ -1,5 +1,6 @@
 ---
 title: Converting Email Messages in Python
+ArticleTitle: Converting Email Messages in Python
 type: docs
 weight: 10
 url: /java/converting-email-messages-in-python/

@@ -1,5 +1,6 @@
 ---
 title: Creating an Outlook Contact
+ArticleTitle: Creating an Outlook Contact
 type: docs
 weight: 70
 url: /java/creating-an-outlook-contact/

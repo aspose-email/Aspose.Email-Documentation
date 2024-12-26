@@ -1,5 +1,6 @@
 ---
 title: Evaluate Aspose.Email for SharePoint
+ArticleTitle: Evaluate Aspose.Email for SharePoint
 type: docs
 weight: 60
 url: /sharepoint/evaluate-aspose-email-for-sharepoint/

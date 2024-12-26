@@ -1,5 +1,6 @@
 ---
 title: Adding Attachments and HTML Text to Outlook Msg File in Aspose.Email
+ArticleTitle: Adding Attachments and HTML Text to Outlook Msg File in Aspose.Email
 type: docs
 weight: 10
 url: /net/adding-attachments-and-html-text-to-outlook-msg-file-in-aspose-email/

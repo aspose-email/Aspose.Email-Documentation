@@ -1,5 +1,6 @@
 ---
 title: Viewing Emails from within a SharePoint Document Library
+ArticleTitle: Viewing Emails from within a SharePoint Document Library
 type: docs
 weight: 20
 url: /sharepoint/viewing-emails-from-within-a-sharepoint-document-library/
@@ -15,7 +16,8 @@ Aspose.Email for SharePoint supports viewing MSG and EML files from a SharePoint
 To view emails from within a SharePoint Document library:
 
 1. Upload MSG or EML files to the document library.
-1. Open the context menu for the file. You'll see the option **View Email**. 
+1. Open the context menu for the file. 
+   You'll see the option **View Email**. 
 
    **The context menu for an email message as seen in a SharePoint message** 
 
@@ -24,7 +26,8 @@ To view emails from within a SharePoint Document library:
 
 
 
-1. Click the **View Email** option. Email contents will be displayed in a new window. 
+1. Click the **View Email** option. 
+   Email contents will be displayed in a new window. 
 
    **The Aspose.Email viewer showing an email from within a SharePoint library** 
 

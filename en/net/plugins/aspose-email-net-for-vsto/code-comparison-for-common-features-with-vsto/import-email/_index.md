@@ -1,5 +1,6 @@
 ---
 title: Import Email
+ArticleTitle: Import Email
 type: docs
 weight: 160
 url: /net/import-email/

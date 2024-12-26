@@ -1,5 +1,6 @@
 ---
 title: Synchronize Emails with Gmail
+ArticleTitle: Synchronize Emails with Gmail
 type: docs
 weight: 10
 url: /sharepoint/synchronize-emails-with-gmail/
@@ -27,7 +28,8 @@ To enable POP3 and IMAP:
 1. Enable POP and choose the appropriate “Enable POP” option: 
    1. **Enable POP for all mail** to download all emails (new and old).
    1. **Enable POP for mail that arrives from now on** to download new emails only.
-1. Enable IMAP. For IMAP, there are only two choices: 
+1. Enable IMAP. 
+   For IMAP, there are only two choices: 
    1. **Enable** to download all messages from your mailbox.
    1. **Disable** turns off the service. Don't select this option. 
 
@@ -57,7 +59,8 @@ To enable POP3 and IMAP:
 
 
 1. Verify the connection by clicking **Click to test connection parameters**. If there is anything wrong with the credentials or host address, an error message is displayed.
-1. Click **Save** to save the settings. Aspose.Email for SharePoint tries to connect to Gmail every 5 minutes (or any other time specified). It downloads messages and updates email list.
+1. Click **Save** to save the settings.
+   Aspose.Email for SharePoint tries to connect to Gmail every 5 minutes (or any other time specified). It downloads messages and updates email list.
 
 All attachments, embedded images and body formatting is preserved when downloading the messages and creating emails in SharePoint’s custom list of emails. 
 ### **Synchronizing Emails Manually**

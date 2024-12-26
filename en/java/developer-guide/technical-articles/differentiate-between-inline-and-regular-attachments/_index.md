@@ -1,5 +1,6 @@
 ---
 title: Differentiate between Inline and Regular Attachments
+ArticleTitle: Differentiate between Inline and Regular Attachments
 type: docs
 weight: 10
 url: /java/differentiate-between-inline-and-regular-attachments/

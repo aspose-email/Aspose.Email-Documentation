@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Contacts
+ArticleTitle: Working with Outlook Contacts
 type: docs
 weight: 90
 url: /python-net/working-with-outlook-contacts/

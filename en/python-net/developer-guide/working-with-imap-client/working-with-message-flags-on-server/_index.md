@@ -1,5 +1,6 @@
 ---
 title: Working with Message Flags on Server
+ArticleTitle: Working with Message Flags on Server
 type: docs
 weight: 60
 url: /python-net/working-with-message-flags-on-server/

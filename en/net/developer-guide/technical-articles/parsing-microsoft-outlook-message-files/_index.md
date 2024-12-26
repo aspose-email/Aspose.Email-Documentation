@@ -1,5 +1,6 @@
 ---
 title: Parsing Microsoft Outlook Message Files
+ArticleTitle: Parsing Microsoft Outlook Message Files
 type: docs
 weight: 80
 url: /net/parsing-microsoft-outlook-message-files/

@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Notes
+ArticleTitle: Working with Outlook Notes
 type: docs
 weight: 100
 url: /python-net/working-with-outlook-notes/

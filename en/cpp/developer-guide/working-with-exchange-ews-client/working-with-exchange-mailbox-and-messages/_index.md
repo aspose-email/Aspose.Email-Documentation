@@ -1,5 +1,6 @@
 ---
 title: Working with Exchange Mailbox and Messages
+ArticleTitle: Working with Exchange Mailbox and Messages
 type: docs
 weight: 20
 url: /cpp/working-with-exchange-mailbox-and-messages/

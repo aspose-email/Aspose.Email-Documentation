@@ -1,5 +1,6 @@
 ---
 title: Read corrupted PST/OST files
+ArticleTitle: Read corrupted PST/OST files
 type: docs
 weight: 112
 url: /java/read-corrupted-pst-ost-files/

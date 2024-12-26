@@ -1,5 +1,6 @@
 ---
 title: Adding Files to PST in PHP
+ArticleTitle: Adding Files to PST in PHP
 type: docs
 weight: 10
 url: /java/adding-files-to-pst-in-php/

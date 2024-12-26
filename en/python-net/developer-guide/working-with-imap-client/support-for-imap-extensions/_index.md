@@ -1,5 +1,6 @@
 ---
 title: Support for IMAP Extensions
+ArticleTitle: Support for IMAP Extensions
 type: docs
 weight: 110
 url: /python-net/support-for-imap-extensions/

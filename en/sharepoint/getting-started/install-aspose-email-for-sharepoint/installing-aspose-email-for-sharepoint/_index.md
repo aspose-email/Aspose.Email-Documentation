@@ -1,5 +1,6 @@
 ---
 title: Installing Aspose.Email for SharePoint
+ArticleTitle: Installing Aspose.Email for SharePoint
 type: docs
 weight: 20
 url: /sharepoint/installing-aspose-email-for-sharepoint/

@@ -1,5 +1,6 @@
 ---
 title: Technical Support
+ArticleTitle: Technical Support
 type: docs
 weight: 80
 url: /java/technical-support/

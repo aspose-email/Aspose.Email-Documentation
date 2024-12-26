@@ -1,5 +1,6 @@
 ---
 title: Save Email Message As PDF
+ArticleTitle: Save Email Message As PDF
 type: docs
 weight: 30
 url: /java/save-email-message-as-pdf/

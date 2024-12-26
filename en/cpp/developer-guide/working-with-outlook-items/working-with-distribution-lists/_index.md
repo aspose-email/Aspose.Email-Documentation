@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Distribution Lists using Email C++ Library 
+ArticleTitle: Working with Outlook Distribution Lists using Email C++ Library 
 linktitle: Working with Distribution Lists
 type: docs
 weight: 40

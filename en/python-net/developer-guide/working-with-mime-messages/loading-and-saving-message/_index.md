@@ -1,5 +1,6 @@
 ---
 title: Loading and Saving Message
+ArticleTitle: Loading and Saving Message
 type: docs
 weight: 30
 url: /python-net/loading-and-saving-message/

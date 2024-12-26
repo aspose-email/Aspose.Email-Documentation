@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Tasks
+ArticleTitle: Working with Outlook Tasks
 type: docs
 weight: 90
 url: /java/working-with-outlook-tasks/

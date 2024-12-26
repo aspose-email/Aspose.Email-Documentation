@@ -1,5 +1,6 @@
 ---
 title: Support for TLS 1.2 and AutodiscoverService
+ArticleTitle: Support for TLS 1.2 and AutodiscoverService
 type: docs
 weight: 180
 url: /java/support-for-tls-1-2-and-autodiscoverservice/

@@ -1,5 +1,6 @@
 ---
 title: Adding MapiContact to PST in PHP
+ArticleTitle: Adding MapiContact to PST in PHP
 type: docs
 weight: 30
 url: /java/adding-mapicontact-to-pst-in-php/

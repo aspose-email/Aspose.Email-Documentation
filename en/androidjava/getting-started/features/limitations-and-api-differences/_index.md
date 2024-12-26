@@ -1,5 +1,6 @@
 ---
 title: Limitations and API Differences
+ArticleTitle: Limitations and API Differences
 type: docs
 weight: 20
 url: /androidjava/limitations-and-api-differences/

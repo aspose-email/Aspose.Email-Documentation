@@ -1,5 +1,6 @@
 ---
 title: Creating and Setting Contents of Emails in C++ and Send Email using SmtpClient
+ArticleTitle: Creating and Setting Contents of Emails in C++ and Send Email using SmtpClient
 linktitle: Creating and setting contents of Emails
 type: docs
 weight: 10

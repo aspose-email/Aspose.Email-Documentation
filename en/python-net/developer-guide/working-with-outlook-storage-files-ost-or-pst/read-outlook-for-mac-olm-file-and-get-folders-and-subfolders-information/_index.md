@@ -1,5 +1,6 @@
 ---
 title: Read Outlook for Mac OLM File & Get Folders & SubFolders Information
+ArticleTitle: Read Outlook for Mac OLM File & Get Folders & SubFolders Information
 type: docs
 weight: 120
 url: /python-net/read-outlook-for-mac-olm-file-and-get-folders-and-subfolders-information/

@@ -1,5 +1,6 @@
 ---
 title: Umbraco Exchange Sync Module
+ArticleTitle: Umbraco Exchange Sync Module
 type: docs
 weight: 10
 url: /net/umbraco-exchange-sync-module/

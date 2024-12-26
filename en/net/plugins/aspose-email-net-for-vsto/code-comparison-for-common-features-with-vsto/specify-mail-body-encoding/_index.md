@@ -1,5 +1,6 @@
 ---
 title: Specify Mail Body Encoding
+ArticleTitle: Specify Mail Body Encoding
 type: docs
 weight: 210
 url: /net/specify-mail-body-encoding/

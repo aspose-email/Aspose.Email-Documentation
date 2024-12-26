@@ -1,5 +1,6 @@
 ---
 title: Working with AMP HTML Emails
+ArticleTitle: Working with AMP HTML Emails
 type: docs
 weight: 160
 url: /net/working-with-amp-html-emails/

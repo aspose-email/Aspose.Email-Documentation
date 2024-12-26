@@ -1,5 +1,6 @@
 ---
 title: Adding MapiCalendar to PST in Ruby
+ArticleTitle: Adding MapiCalendar to PST in Ruby
 type: docs
 weight: 20
 url: /java/adding-mapicalendar-to-pst-in-ruby/
@@ -10,7 +11,7 @@ To Add MapiCalendar to PST using **Aspose.Email Java for Ruby**, simply invoke *
 
 **Ruby Code**
 
-```ruby
+{{< highlight ruby >}}
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
@@ -64,7 +65,7 @@ calendar_folder.addMapiMessageItem(meeting)
 
 puts "Added MapiCalendar Successfully."
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiCalendar to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

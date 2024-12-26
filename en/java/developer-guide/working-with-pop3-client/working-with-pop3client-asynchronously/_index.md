@@ -1,5 +1,6 @@
 ---
 title: Working with Pop3Client Asynchronously
+ArticleTitle: Working with Pop3Client Asynchronously
 type: docs
 weight: 60
 url: /java/working-with-pop3client-asynchronously/

@@ -1,5 +1,6 @@
 ---
 title: Download and Configure Aspose.Email in Ruby
+ArticleTitle: Download and Configure Aspose.Email in Ruby
 type: docs
 weight: 10
 url: /java/download-and-configure-aspose-email-in-ruby/

@@ -1,5 +1,6 @@
 ---
 title: Show or Hide Extra Print Headers
+ArticleTitle: Show or Hide Extra Print Headers
 type: docs
 weight: 50
 url: /java/show-or-hide-extra-print-headers/

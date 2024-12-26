@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Calendar Items using C++ Email Library
+ArticleTitle: Working with Outlook Calendar Items using C++ Email Library
 linktitle: Working with Outlook Calendar Items
 type: docs
 weight: 80

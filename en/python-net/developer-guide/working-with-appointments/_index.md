@@ -1,5 +1,6 @@
 ---
 title: Working with  Appointments
+ArticleTitle: Working with  Appointments
 type: docs
 weight: 20
 url: /python-net/working-with-appointments/

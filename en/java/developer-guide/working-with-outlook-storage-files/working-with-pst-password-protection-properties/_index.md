@@ -1,5 +1,6 @@
 ---
 title: Working with PST Password Protection Properties
+ArticleTitle: Working with PST Password Protection Properties
 type: docs
 weight: 100
 url: /java/working-with-pst-password-protection-properties/

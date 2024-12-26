@@ -1,5 +1,6 @@
 ---
 title: Using Aspose Outlook Control to Drag and Drop Outlook Messages to Windows Forms
+ArticleTitle: Using Aspose Outlook Control to Drag and Drop Outlook Messages to Windows Forms
 type: docs
 weight: 45
 url: /net/using-aspose-outlook-control-to-drag-and-drop-outlook-messages-to-windows-forms/

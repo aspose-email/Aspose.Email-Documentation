@@ -1,5 +1,6 @@
 ---
 title: Simple Mail Transfer Protocol
+ArticleTitle: Simple Mail Transfer Protocol
 type: docs
 weight: 10
 url: /java/simple-mail-transfer-protocol/

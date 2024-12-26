@@ -1,5 +1,6 @@
 ---
 title: Converting Email Messages in Jython
+ArticleTitle: Converting Email Messages in Jython
 type: docs
 weight: 10
 url: /java/converting-email-messages-in-jython/

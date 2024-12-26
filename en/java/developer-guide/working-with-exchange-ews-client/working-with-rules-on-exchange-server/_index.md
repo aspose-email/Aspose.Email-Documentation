@@ -1,5 +1,6 @@
 ---
 title: Working with Rules On Exchange Server
+ArticleTitle: Working with Rules On Exchange Server
 type: docs
 weight: 90
 url: /java/working-with-rules-on-exchange-server/

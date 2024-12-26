@@ -1,5 +1,6 @@
 ---
 title: Saving an Email as PDF
+ArticleTitle: Saving an Email as PDF
 type: docs
 weight: 230
 url: /net/saving-an-email-as-pdf/

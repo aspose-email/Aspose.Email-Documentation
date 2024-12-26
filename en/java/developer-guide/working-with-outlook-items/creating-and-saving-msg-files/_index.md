@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving MSG Files
+ArticleTitle: Creating and Saving MSG Files
 type: docs
 weight: 10
 url: /java/creating-and-saving-msg-files/

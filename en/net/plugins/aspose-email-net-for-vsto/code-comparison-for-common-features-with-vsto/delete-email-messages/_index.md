@@ -1,5 +1,6 @@
 ---
 title: Delete Email Messages
+ArticleTitle: Delete Email Messages
 type: docs
 weight: 100
 url: /net/delete-email-messages/

@@ -1,5 +1,6 @@
 ---
 title: Extracting Message Contents from Emails in C++
+ArticleTitle: Extracting Message Contents from Emails in C++
 linktitle: Extracting Message Contents from Emails
 type: docs
 weight: 20
@@ -25,7 +26,7 @@ The email header represents an Internet and RFC defined standard set of header f
 1. Load an email message in the instance of [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class.
 1. After an email message has been loaded, we will get its raw content.
 
-The [`MailMessage`](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class itself contains properties such as From, To, Cc, Subject and so on. These properties can be extracted from headers.
+The [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class itself contains properties such as From, To, Cc, Subject and so on. These properties can be extracted from headers.
 
 1. Display the raw content.
 

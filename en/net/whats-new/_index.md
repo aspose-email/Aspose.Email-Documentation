@@ -1,5 +1,6 @@
 ---
 title: What's New in Aspose.Email for .NET
+ArticleTitle: What's New in Aspose.Email for .NET
 type: docs
 weight: 5
 url: /net/whats-new/
@@ -106,10 +107,10 @@ To customize the signature attachment process, users can utilize the [SignatureO
 ## [Aspose.Email for .NET 23.4](https://releases.aspose.com/email/net/release-notes/2023/aspose-email-for-net-23-4-release-notes/)
 
 - **Add a Reference Attachment to a Message** - We have added a new [Add](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/add/#add_4) method to the [MapiAttachmentCollection](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/#mapiattachmentcollection-class) class with the following parameters:
-  - `name` - the name of attachment
-  - `sharedLink` - a fully qualified shared link to the attachment provided by web service manipulating the attachment
-  - `url` - a file location
-  - `providerName` - a name of reference attachment provider
+  'name' - the name of attachment
+  'sharedLink' - a fully qualified shared link to the attachment provided by web service manipulating the attachment
+  'url' - a file location
+  'providerName' - a name of reference attachment provider
 - **Multiple VCard Contacts Check** - Check whether a source file contains multi contacts with the new [VCardContact.IsMultiContacts(string filePath)](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardcontact/ismulticontacts/#ismulticontacts_1) method.
 - **Convert Calendar ICS Format to Message Formats** - Convert appointments to message objects such as MapiMessage and MailMessage.  
 - **Additional Options for Saving Messages in HTML and MHTML Formats**:
@@ -190,12 +191,12 @@ MailAddressCollection Bcc - Gets the address collection that contains BCC recipi
 
 - **Enumerate Messages with Paging Support via Graph Client** - The API provides the paging and filtering support for listing messages. This is very helpful where the mailbox has a large number of messages and requires a lot of time for retrieving the summary information about these.
 - **Asynchronous Mode in Handling Mail Clients** - A new approach to the task includes the following API members:
-  - [`IAsyncSmtpClient`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/) - Allows applications to send messages by using the Simple Mail Transfer Protocol (SMTP).
-  - [`SmtpClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/#smtpclientcreateasync-method) - Creates a new instance of the `Aspose.Email.Clients.Smtp.SmtpClient` class.
-  - [`IAsyncSmtpClient.SendAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpSend`) method parameter set.
-  - [`IAsyncSmtpClient.ForwardAsync`](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/)(`Aspose.Email.Clients.Smtp.Models.SmtpForward`) arguments.
-  - [`IAsyncImapClient`](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Allows applications to access and manipulate messages by using the Internet Message Access Protocol (IMAP).
-  - [`ImapClient.CreateAsync`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Creates a new instance of the `Aspose.Email.Clients.Imap.ImapClient` class.
+  - [IAsyncSmtpClient](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/) - Allows applications to send messages by using the Simple Mail Transfer Protocol (SMTP).
+  - [SmtpClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/smtpclient/createasync/#smtpclientcreateasync-method) - Creates a new instance of the Aspose.Email.Clients.Smtp.SmtpClient class.
+  - [IAsyncSmtpClient.SendAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/sendasync/)(Aspose.Email.Clients.Smtp.Models.SmtpSend) method parameter set.
+  - [IAsyncSmtpClient.ForwardAsync](https://reference.aspose.com/email/net/aspose.email.clients.smtp/iasyncsmtpclient/forwardasync/)(Aspose.Email.Clients.Smtp.Models.SmtpForward) arguments.
+  - [IAsyncImapClient](https://reference.aspose.com/email/net/aspose.email.clients.imap/iasyncimapclient/#iasyncimapclient-interface) - Allows applications to access and manipulate messages by using the Internet Message Access Protocol (IMAP).
+  - [ImapClient.CreateAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/createasync/) - Creates a new instance of the Aspose.Email.Clients.Imap.ImapClientclass.
 
 ## [Aspose.Email for .NET 22.4](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-4-release-notes/)
 
@@ -204,17 +205,18 @@ MailAddressCollection Bcc - Gets the address collection that contains BCC recipi
 
 ## [Aspose.Email for .NET 22.3](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-3-release-notes/)
 
-- **List Message Attachments using IMAP Client** - Get information about attachments such as name, size without fetching the attachment data. API members involved in the operation: 
-  - [`Aspose.Email.Clients.Imap.ImapAttachmentInfo`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfo/) - Represents an attachment information.
-  - [`Aspose.Email.Clients.Imap.ImapAttachmentInfoCollection`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfocollection/) - Represents a collection of ImapAttachmentInfo. 
-  - [`Aspose.Email.Clients.Imap.ListAttachments(int sequenceNumber)`](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/) - Gets an information for each attachment in message.
-- **Fetch Items with Attachments via EWS Client** - We added the [`FetchItems(EwsFetchItems options)`](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitems/#iewsclientfetchitems-method) method to [EwsClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/#iewsclient-interface). It accepts an instance of [EwsFetchItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsfetchitems/#ewsfetchitems-class) class as a parameter to control the behavior of the method.
+- **List Message Attachments using IMAP Client** - Get information about attachments such as name, size without fetching the attachment data. 
+    API members involved in the operation: 
+  - [Aspose.Email.Clients.Imap.ImapAttachmentInfo](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfo/) - Represents an attachment information.
+  - [Aspose.Email.Clients.Imap.ImapAttachmentInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapattachmentinfocollection/) - Represents a collection of ImapAttachmentInfo. 
+  - [Aspose.Email.Clients.Imap.ListAttachments(int sequenceNumber)](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/listattachments/) - Gets an information for each attachment in message.
+- **Fetch Items with Attachments via EWS Client** - We added the [FetchItems(EwsFetchItems options)](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitems/#iewsclientfetchitems-method) method to [EwsClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/#iewsclient-interface). It accepts an instance of [EwsFetchItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsfetchitems/#ewsfetchitems-class) class as a parameter to control the behavior of the method.
 
 ## [Aspose.Email for .NET 22.2](https://releases.aspose.com/email/net/release-notes/2022/aspose-email-for-net-22-2-release-notes/)
 
 - **Adding Reference Attachments**
     Introduced API members:
-  - [`Aspose.Email.ReferenceAttachment`](https://reference.aspose.com/email/net/aspose.email/referenceattachment/#referenceattachment-class) - represents a reference attachment.
-  - [`Aspose.Email.AttachmentPermissionType`](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) - The permission type data associated with a web reference attachment.
-  - [`Aspose.Email.AttachmentProviderType`](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) - The type of web service manipulating the attachment.
+  - [Aspose.Email.ReferenceAttachment](https://reference.aspose.com/email/net/aspose.email/referenceattachment/#referenceattachment-class) - represents a reference attachment.
+  - [Aspose.Email.AttachmentPermissionType](https://reference.aspose.com/email/net/aspose.email/attachmentpermissiontype/) - The permission type data associated with a web reference attachment.
+  - [Aspose.Email.AttachmentProviderType](https://reference.aspose.com/email/net/aspose.email/attachmentprovidertype/) - The type of web service manipulating the attachment.
 - **Retrieve message class** - We have added [MessageClass](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/messageclass/#exchangemessageinfomessageclass-propertyм) property to [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/#exchangemessageinfo-class) class to  retrieve the class of each message in the collection from a public folder, after establishing a connection to an EWS client.

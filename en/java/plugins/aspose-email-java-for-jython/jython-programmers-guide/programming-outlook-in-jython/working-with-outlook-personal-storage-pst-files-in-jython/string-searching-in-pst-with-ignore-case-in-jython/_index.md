@@ -1,5 +1,6 @@
 ---
 title: String Searching in PST with Ignore Case in Jython
+ArticleTitle: String Searching in PST with Ignore Case in Jython
 type: docs
 weight: 80
 url: /java/string-searching-in-pst-with-ignore-case-in-jython/
@@ -10,7 +11,7 @@ To string Searching in PST with Ignore Case using **Aspose.Email Java for Jython
 
 **Jython Code**
 
-```python
+{{< highlight python >}}
 
  from aspose-email import Settings
 
@@ -72,7 +73,7 @@ if __name__ == '__main__':
 
     StringSearchInPST()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 

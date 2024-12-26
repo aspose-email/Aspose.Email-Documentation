@@ -1,5 +1,6 @@
 ---
 title: String Searching in PST with Ignore Case in Python
+ArticleTitle: String Searching in PST with Ignore Case in Python
 type: docs
 weight: 70
 url: /java/string-searching-in-pst-with-ignore-case-in-python/
@@ -10,7 +11,7 @@ String Searching in PST with Ignore Case using **Aspose.Email Java for Python**,
 
 **Python Code**
 
-```python
+{{< highlight python >}}
 
 
 
@@ -42,7 +43,7 @@ print "Total Results:"
 
 print coll.size()
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **String Searching in PST with Ignore Case (Aspose.Email)** from any of the below mentioned social coding sites:
 

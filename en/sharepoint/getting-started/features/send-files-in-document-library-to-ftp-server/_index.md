@@ -1,5 +1,6 @@
 ---
 title: Send Files in Document Library to FTP Server
+ArticleTitle: Send Files in Document Library to FTP Server
 type: docs
 weight: 40
 url: /sharepoint/send-files-in-document-library-to-ftp-server/

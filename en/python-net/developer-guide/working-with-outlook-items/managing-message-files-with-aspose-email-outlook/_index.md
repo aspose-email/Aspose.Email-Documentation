@@ -1,5 +1,6 @@
 ---
 title: Managing Message Files with Aspose.Email.Outlook
+ArticleTitle: Managing Message Files with Aspose.Email.Outlook
 type: docs
 weight: 30
 url: /python-net/managing-message-files-with-aspose-email-outlook/

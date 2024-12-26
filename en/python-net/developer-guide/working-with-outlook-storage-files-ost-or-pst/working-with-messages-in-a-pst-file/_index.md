@@ -1,5 +1,6 @@
 ---
 title: Working with Messages in a PST File
+ArticleTitle: Working with Messages in a PST File
 type: docs
 weight: 100
 url: /python-net/working-with-messages-in-a-pst-file/

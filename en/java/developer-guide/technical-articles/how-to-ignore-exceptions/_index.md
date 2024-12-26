@@ -1,5 +1,6 @@
 ---
 title: How to Ignore Exceptions
+ArticleTitle: How to Ignore Exceptions
 type: docs
 weight: 290
 url: /java/how-to-ignore-exceptions/

@@ -1,5 +1,6 @@
 ---
 title: Adding MapiContact to PST in Ruby
+ArticleTitle: Adding MapiContact to PST in Ruby
 type: docs
 weight: 30
 url: /java/adding-mapicontact-to-pst-in-ruby/
@@ -10,7 +11,7 @@ To Add MapiContact to PST using **Aspose.Email Java for Ruby**, simply invoke **
 
 **Ruby Code**
 
-```ruby
+{{< highlight ruby >}}
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
@@ -98,7 +99,7 @@ contactFolder.addMapiMessageItem(contact6)
 
 puts "Added MapiContacts Successfully."
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiContact to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

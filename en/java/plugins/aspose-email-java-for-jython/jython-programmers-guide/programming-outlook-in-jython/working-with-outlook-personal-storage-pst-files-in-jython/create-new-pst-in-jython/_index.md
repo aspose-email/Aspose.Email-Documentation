@@ -1,5 +1,6 @@
 ---
 title: Create New PST in Jython
+ArticleTitle: Create New PST in Jython
 type: docs
 weight: 60
 url: /java/create-new-pst-in-jython/

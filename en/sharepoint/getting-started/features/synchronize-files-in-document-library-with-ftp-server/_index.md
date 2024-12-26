@@ -1,5 +1,6 @@
 ---
 title: Synchronize Files in Document Library with FTP Server
+ArticleTitle: Synchronize Files in Document Library with FTP Server
 type: docs
 weight: 50
 url: /sharepoint/synchronize-files-in-document-library-with-ftp-server/

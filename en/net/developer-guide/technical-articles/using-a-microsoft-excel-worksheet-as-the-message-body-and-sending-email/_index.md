@@ -1,5 +1,6 @@
 ---
 title: Using a Microsoft Excel Worksheet as the Message Body and Sending Email
+ArticleTitle: Using a Microsoft Excel Worksheet as the Message Body and Sending Email
 type: docs
 weight: 160
 url: /net/using-a-microsoft-excel-worksheet-as-the-message-body-and-sending-email/

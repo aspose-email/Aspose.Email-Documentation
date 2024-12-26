@@ -1,5 +1,6 @@
 ---
 title: Creating an Outlook Contact in Aspose.Email
+ArticleTitle: Creating an Outlook Contact in Aspose.Email
 type: docs
 weight: 80
 url: /net/creating-an-outlook-contact-in-aspose-email/

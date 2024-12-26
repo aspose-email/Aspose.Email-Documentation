@@ -1,5 +1,6 @@
 ---
 title: Getting Mailbox Information using WebDav Client
+ArticleTitle: Getting Mailbox Information using WebDav Client
 type: docs
 weight: 50
 url: /java/getting-mailbox-information-using-webdav-client/

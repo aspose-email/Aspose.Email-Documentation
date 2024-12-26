@@ -1,5 +1,6 @@
 ---
 title: Programming Email Verification
+ArticleTitle: Programming Email Verification
 type: docs
 weight: 140
 url: /net/programming-email-verification/
@@ -21,7 +22,8 @@ Aspose.Email.Verifications is a powerful and useful component to check the valid
 To create an application that uses Aspose.Email.Verifications to verify email addresses:
 
 - Open Visual Studio.
-- On the **File** menu, click **New** and then **Project**. For simplicity, this will be a console program. Choose C# or VB.NET project as you like.
+- On the **File** menu, click **New** and then **Project**.
+  For simplicity, this will be a console program. Choose C# or VB.NET project as you like.
 
 |**Creating a new project**|
 | :- |

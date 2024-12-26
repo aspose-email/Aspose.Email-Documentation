@@ -1,5 +1,6 @@
 ---
 title: First Application with Aspose.Email Outlook
+ArticleTitle: First Application with Aspose.Email Outlook
 type: docs
 weight: 280
 url: /java/first-application-with-aspose-email-outlook/

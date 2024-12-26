@@ -1,5 +1,6 @@
 ---
 title: Working with Recurrences
+ArticleTitle: Working with Recurrences
 type: docs
 weight: 140
 url: /java/working-with-recurrences/

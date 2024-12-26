@@ -1,5 +1,6 @@
 ---
 title: Save Message as Draft in PHP
+ArticleTitle: Save Message as Draft in PHP
 type: docs
 weight: 60
 url: /java/save-message-as-draft-in-php/

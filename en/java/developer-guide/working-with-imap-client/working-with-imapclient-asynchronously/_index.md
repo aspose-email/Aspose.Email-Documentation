@@ -1,5 +1,6 @@
 ---
 title: Working with ImapClient Asynchronously
+ArticleTitle: Working with ImapClient Asynchronously
 type: docs
 weight: 70
 url: /java/working-with-imapclient-asynchronously/

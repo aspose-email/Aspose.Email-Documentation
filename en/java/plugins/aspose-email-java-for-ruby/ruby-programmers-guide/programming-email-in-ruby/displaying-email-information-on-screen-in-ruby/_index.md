@@ -1,5 +1,6 @@
 ---
 title: Displaying Email Information on Screen in Ruby
+ArticleTitle: Displaying Email Information on Screen in Ruby
 type: docs
 weight: 40
 url: /java/displaying-email-information-on-screen-in-ruby/

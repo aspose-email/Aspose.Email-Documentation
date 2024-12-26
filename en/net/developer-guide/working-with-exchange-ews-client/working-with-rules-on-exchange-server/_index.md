@@ -1,12 +1,11 @@
 ---
-title: Working with Rules On Exchange Server
+title: How to Manage Exchange Server Rules with EWS in C#
+ArticleTitle: Manage Exchange Server Rules with EWS
 type: docs
 weight: 90
-url: /net/working-with-rules-on-exchange-server/
+url: /net/manage-exchange-server-rules-with-ews/
 ---
 
-
-## **Managing Rules**
 
 Aspose.Email for .NET can be used to manage the rules on Exchange Server using the [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) class. This class uses Exchange Web Services (EWS), which are available in Exchange Server 2007 and later releases. This article explains how to manage the rules:
 
@@ -16,7 +15,7 @@ Aspose.Email for .NET can be used to manage the rules on Exchange Server using t
 
 Microsoft Exchange Server 2010 Service Pack 1 is required for all features described in this article.
 
-### **Read Rules**
+## **Read Rules**
 
 To get all the rules from the Exchange Server:
 
@@ -28,7 +27,7 @@ The following code snippet shows you how to read rules.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-ExchangeServerReadRules-ExchangeServerReadRules.cs" >}}
 
-### **Creating a New Rule**
+## **Create Rules**
 
 To create a new rule on the Exchange Server, perform the following steps:
 
@@ -43,7 +42,7 @@ The following code snippet shows you how to create a new rule.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Exchange_EWS-CreateNewRuleOntheExchangeServer-CreateNewRuleOntheExchangeServer.cs" >}}
 
-### **Updating a Rule**
+## **Update Rules**
 
 To update a rule on the Exchange Server:
 

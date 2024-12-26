@@ -1,5 +1,6 @@
 ---
 title: Create a Recurring Task
+ArticleTitle: Create a Recurring Task
 type: docs
 weight: 30
 url: /net/create-a-recurring-task/

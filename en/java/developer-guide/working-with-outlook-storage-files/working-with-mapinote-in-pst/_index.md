@@ -1,5 +1,6 @@
 ---
 title: Working with MapiNote in PST
+ArticleTitle: Working with MapiNote in PST
 type: docs
 weight: 80
 url: /java/working-with-mapinote-in-pst/

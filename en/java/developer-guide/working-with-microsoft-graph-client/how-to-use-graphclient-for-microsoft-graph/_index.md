@@ -1,5 +1,6 @@
 ---
 title: How to use GraphClient for Microsoft Graph
+ArticleTitle: How to use GraphClient for Microsoft Graph
 type: docs
 weight: 20
 url: /java/how-to-use-graphclient-for-microsoft-graph/

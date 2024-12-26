@@ -1,5 +1,6 @@
 ---
 title: Managing Conversation Items
+ArticleTitle: Managing Conversation Items
 type: docs
 weight: 40
 url: /java/managing-conversation-items/

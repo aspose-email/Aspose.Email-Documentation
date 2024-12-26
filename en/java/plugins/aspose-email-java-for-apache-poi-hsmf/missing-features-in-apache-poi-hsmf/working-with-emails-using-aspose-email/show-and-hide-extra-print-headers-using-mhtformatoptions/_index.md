@@ -1,5 +1,6 @@
 ---
 title: Show and Hide Extra Print Headers using MHTFormatOptions
+ArticleTitle: Show and Hide Extra Print Headers using MHTFormatOptions
 type: docs
 weight: 40
 url: /java/show-and-hide-extra-print-headers-using-mhtformatoptions/
@@ -10,7 +11,7 @@ Extra print headers can be shown or hidden with MhtFormatOptions and MailMessage
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  String dataPath = "src/asposefeatures/programmingemail/showhideextraprintheaders/data/";
 
@@ -32,7 +33,7 @@ else
 
 	System.out.println("False");
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Show and Hide Extra Print Headers using MHTFormatOptions** from any of the below mentioned social coding sites:
 

@@ -1,5 +1,6 @@
 ---
 title: Working with Outlook Message Attachments using C++ Email Parser API
+ArticleTitle: Working with Outlook Message Attachments using C++ Email Parser API
 linktitle: Working with Message Attachments
 type: docs
 weight: 70

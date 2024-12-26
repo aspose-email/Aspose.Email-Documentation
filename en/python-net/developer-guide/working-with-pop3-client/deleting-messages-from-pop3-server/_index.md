@@ -1,5 +1,6 @@
 ---
 title: Deleting Messages from POP3 Server
+ArticleTitle: Deleting Messages from POP3 Server
 type: docs
 weight: 20
 url: /python-net/deleting-messages-from-pop3-server/

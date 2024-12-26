@@ -1,5 +1,6 @@
 ---
 title: Create New PST in PHP
+ArticleTitle: Create New PST in PHP
 type: docs
 weight: 60
 url: /java/create-new-pst-in-php/

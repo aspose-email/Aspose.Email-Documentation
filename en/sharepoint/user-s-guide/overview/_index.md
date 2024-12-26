@@ -1,5 +1,6 @@
 ---
 title: Overview
+ArticleTitle: Overview
 type: docs
 weight: 10
 url: /sharepoint/overview/

@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving Outlook Contacts in Ruby
+ArticleTitle: Creating and Saving Outlook Contacts in Ruby
 type: docs
 weight: 10
 url: /java/creating-and-saving-outlook-contacts-in-ruby/
@@ -10,7 +11,7 @@ To Create Outlook Contacts using **Aspose.Email Java for Ruby**, simply invoke *
 
 **Ruby Code**
 
-```ruby
+{{< highlight ruby >}}
 
  data_dir = File.dirname(File.dirname(File.dirname(File.dirname(__FILE__)))) + '/data/'
 
@@ -110,7 +111,7 @@ contact.save(data_dir + "OutlookContact.vcf", Rjb::import('com.aspose.email.Cont
 
 puts "Created outlook contact successfully."
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Creating and Saving Outlook Contacts (Aspose.Email)** from any of the below mentioned social coding sites:
 

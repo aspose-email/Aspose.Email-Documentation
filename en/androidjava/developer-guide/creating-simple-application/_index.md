@@ -1,5 +1,6 @@
 ---
 title: Creating Simple Application
+ArticleTitle: Creating Simple Application
 type: docs
 weight: 10
 url: /androidjava/creating-simple-application/

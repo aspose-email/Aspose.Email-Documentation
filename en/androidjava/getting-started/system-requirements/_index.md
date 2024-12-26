@@ -1,5 +1,6 @@
 ---
 title: System Requirements
+ArticleTitle: System Requirements
 type: docs
 weight: 40
 url: /androidjava/system-requirements/

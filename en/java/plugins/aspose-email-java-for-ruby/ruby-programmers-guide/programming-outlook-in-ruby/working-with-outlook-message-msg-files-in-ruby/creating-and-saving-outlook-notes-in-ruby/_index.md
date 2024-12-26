@@ -1,5 +1,6 @@
 ---
 title: Creating and Saving Outlook Notes in Ruby
+ArticleTitle: Creating and Saving Outlook Notes in Ruby
 type: docs
 weight: 20
 url: /java/creating-and-saving-outlook-notes-in-ruby/

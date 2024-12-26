@@ -1,12 +1,13 @@
 ---
-title: Working with large PST files
+title: Working with Large PST Files
+ArticleTitle: Working with Large PST Files
 type: docs
-weight: 130
+weight: 100
 url: /net/working-with-large-pst-files/
 ---
 
 Performance may be degraded when processing large PST files.
-The following suggestions will help you to improve the performance of your app when processing large files.
+The following solutions will help you improve the performance of your app when processing large storage files.
 
 {{% alert color="primary" %}}
 Consider methods returning `IEnumerable` when traversing folders or messages in a pst.
@@ -79,7 +80,7 @@ foreach (var msgId in folder.EnumerateMessagesEntryId())
 ```
 
 {{% alert color="primary" %}}
-Use [seach criteria](https://docs.aspose.com/email/net/working-with-messages-in-a-pst-file/#searching-messages-and-folders-in-pst)-based filtering to get the messages you require.
+Use [Search by Criteria](https://docs.aspose.com/email/net/managing-messages-in-pst-files/#search-by-criteria)-based filtering to get the messages you require.
 {{% /alert %}}
 
 ```csharp
@@ -119,6 +120,6 @@ foreach (var id in folder.EnumerateMessagesEntryId())
 ```
 
 {{% alert color="primary" %}}
-Prefer bulk methods to [add](https://docs.aspose.com/email/net/working-with-messages-in-a-pst-file/#adding-bulk-messages) or [delete](https://docs.aspose.com/email/net/working-with-messages-in-a-pst-file/#delete-items-in-bulk-from-pst-file) multiple items.
+Prefer bulk methods to [add](https://docs.aspose.com/email/net/create-and-manage-pst-files/#add-bulk-messages-with-improved-performance) or [delete](https://docs.aspose.com/email/net/managing-messages-in-pst-files/#bulk-deletion) multiple items.
 {{% /alert %}}
 

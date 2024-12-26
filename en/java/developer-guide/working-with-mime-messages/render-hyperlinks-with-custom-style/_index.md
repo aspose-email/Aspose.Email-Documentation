@@ -1,5 +1,6 @@
 ---
 title: Render Hyperlinks with custom style
+ArticleTitle: Render Hyperlinks with custom style
 type: docs
 weight: 70
 url: /java/render-hyperlinks-with-custom-style/

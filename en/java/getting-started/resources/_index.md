@@ -1,5 +1,6 @@
 ---
 title: Resources
+ArticleTitle: Resources
 type: docs
 weight: 90
 url: /java/resources/

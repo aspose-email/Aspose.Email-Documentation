@@ -1,5 +1,6 @@
 ---
 title: Getting List of Messages from Inbox Folder of Microsoft Exchange Server Mailbox
+ArticleTitle: Getting List of Messages from Inbox Folder of Microsoft Exchange Server Mailbox
 type: docs
 weight: 50
 url: /java/getting-list-of-messages-from-inbox-folder-of-microsoft-exchange-server-mailbox/

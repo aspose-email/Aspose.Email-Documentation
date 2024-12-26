@@ -1,5 +1,6 @@
 ---
 title: Read Outlook PST and Get Folders and Subfolders Information
+ArticleTitle: Read Outlook PST and Get Folders and Subfolders Information
 type: docs
 weight: 20
 url: /java/read-outlook-pst-and-get-folders-and-subfolders-information/
@@ -12,7 +13,7 @@ After loading the PST file into the [PersonalStorage](https://apireference.aspo
 
 **Java**
 
-```java
+{{< highlight java >}}
 
  // Load the Outlook PST file
 
@@ -44,7 +45,7 @@ for (int i = 0; i < folderInfoCollection.size(); i++)
 
 }
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 - [CodePlex](https://asposeemailjavaapachepoi.codeplex.com/releases/view/618811)
 - [GitHub](https://github.com/aspose-email/Aspose.Email-for-Java/releases/tag/Aspose.Email_Java_for_Apache_POI-v1.0.0)

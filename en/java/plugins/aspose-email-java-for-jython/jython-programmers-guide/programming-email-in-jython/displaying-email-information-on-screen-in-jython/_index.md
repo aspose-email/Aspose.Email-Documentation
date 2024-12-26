@@ -1,5 +1,6 @@
 ---
 title: Displaying Email Information on Screen in Jython
+ArticleTitle: Displaying Email Information on Screen in Jython
 type: docs
 weight: 30
 url: /java/displaying-email-information-on-screen-in-jython/

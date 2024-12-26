@@ -1,5 +1,6 @@
 ---
 title: Working with Folders on IMAP Server
+ArticleTitle: Working with Folders on IMAP Server
 type: docs
 weight: 60
 url: /java/working-with-folders-on-imap-server/
@@ -32,15 +33,14 @@ A folder on an IMAP server can be deleted or renamed in a single line with Aspos
 
 - The [deleteFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#deleteFolder-java.lang.String-) method accepts the folder name as a parameter.
 - For the [renameFolder()](https://reference.aspose.com/email/java/com.aspose.email/imapclient/#renameFolder-java.lang.String-java.lang.String-) method, you need to pass the current folder name and new folder name.
+  The following code snippet shows you how to remove a folder from an IMAP server, and how to rename a folder. Each operation is performed with one line of code.
 
-The following code snippet shows you how to remove a folder from an IMAP server, and how to rename a folder. Each operation is performed with one line of code.
-
-```java
+~~~Java
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-Java
 // Delete a folder and Rename a folder
 client.deleteFolder("foldername");
 client.renameFolder("foldername", "newfoldername");
-```
+~~~
 
 ## **Adding a New Message in a Folder**
 

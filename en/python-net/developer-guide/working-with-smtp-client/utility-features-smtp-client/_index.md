@@ -1,5 +1,6 @@
 ---
 title: Utility Features - SMTP Client
+ArticleTitle: Utility Features - SMTP Client
 type: docs
 weight: 30
 url: /python-net/utility-features-smtp-client/

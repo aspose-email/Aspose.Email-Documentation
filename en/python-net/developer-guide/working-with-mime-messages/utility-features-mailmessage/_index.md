@@ -1,5 +1,6 @@
 ---
 title: Utility Features - MailMessage
+ArticleTitle: Utility Features - MailMessage
 type: docs
 weight: 40
 url: /python-net/utility-features-mailmessage/

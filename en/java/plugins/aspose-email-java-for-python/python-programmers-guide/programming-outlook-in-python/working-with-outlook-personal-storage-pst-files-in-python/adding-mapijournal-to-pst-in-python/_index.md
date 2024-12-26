@@ -1,5 +1,6 @@
 ---
 title: Adding MapiJournal to PST in Python
+ArticleTitle: Adding MapiJournal to PST in Python
 type: docs
 weight: 30
 url: /java/adding-mapijournal-to-pst-in-python/
@@ -10,7 +11,7 @@ To Add MapiJournal to PST using **Aspose.Email Java for Python**, Use following 
 
 **Python Code**
 
-```python
+{{< highlight python >}}
 
 
 
@@ -46,7 +47,7 @@ journal_folder.addMapiMessageItem(journal)
 
 print "Added MapiJournal Successfully."
 
-```
+{{< /highlight >}}
 ## **Download Running Code**
 Download **Adding MapiJournal to PST (Aspose.Email)** from any of the below mentioned social coding sites:
 

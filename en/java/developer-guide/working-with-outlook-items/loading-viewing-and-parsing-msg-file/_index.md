@@ -1,5 +1,6 @@
 ---
 title: Loading, Viewing and Parsing MSG file
+ArticleTitle: Loading, Viewing and Parsing MSG file
 type: docs
 weight: 20
 url: /java/loading-viewing-and-parsing-msg-file/

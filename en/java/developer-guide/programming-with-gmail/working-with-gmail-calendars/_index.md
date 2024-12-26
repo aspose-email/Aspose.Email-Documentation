@@ -1,5 +1,6 @@
 ---
 title: Working with Gmail Calendars
+ArticleTitle: Working with Gmail Calendars
 type: docs
 weight: 20
 url: /java/working-with-gmail-calendars/

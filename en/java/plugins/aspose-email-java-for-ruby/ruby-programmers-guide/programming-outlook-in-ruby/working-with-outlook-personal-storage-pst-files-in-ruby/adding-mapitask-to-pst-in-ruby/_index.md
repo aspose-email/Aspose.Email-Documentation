@@ -1,5 +1,6 @@
 ---
 title: Adding MapiTask to PST in Ruby
+ArticleTitle: Adding MapiTask to PST in Ruby
 type: docs
 weight: 60
 url: /java/adding-mapitask-to-pst-in-ruby/

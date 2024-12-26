@@ -1,5 +1,6 @@
 ---
 title: Synchronize Files with FTP Server
+ArticleTitle: Synchronize Files with FTP Server
 type: docs
 weight: 40
 url: /sharepoint/synchronize-files-with-ftp-server/
@@ -29,7 +30,8 @@ Either specify the FTP credentials manually in this window or load them using [p
 
 To do the synchronization:
 
-1. Click **Sync List with FTP** on the **Aspose Tools** ribbon. The Sync with FTP dialog is displayed. 
+1. Click **Sync List with FTP** on the **Aspose Tools** ribbon.
+   The Sync with FTP dialog is displayed. 
 
    **The Sync with FTP dialog.** 
 

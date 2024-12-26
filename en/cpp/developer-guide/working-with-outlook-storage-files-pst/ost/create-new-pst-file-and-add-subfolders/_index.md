@@ -1,5 +1,6 @@
 ---
 title: Create New PST File and Add SubFolders
+ArticleTitle: Create New PST File and Add SubFolders
 type: docs
 weight: 10
 url: /cpp/create-new-pst-file-and-add-subfolders/

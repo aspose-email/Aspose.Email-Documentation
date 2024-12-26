@@ -1,5 +1,6 @@
 ---
 title: Important iCalendar RFC 2445 Details
+ArticleTitle: Important iCalendar RFC 2445 Details
 type: docs
 weight: 70
 url: /net/important-icalendar-rfc-2445-details/

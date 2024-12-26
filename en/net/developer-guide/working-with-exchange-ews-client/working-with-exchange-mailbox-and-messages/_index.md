@@ -1,5 +1,6 @@
 ---
-title: Working with Exchange Mailbox and Messages - Read Email from Exchange Server in C#
+title: Retrieve and Manage Exchange Server Mailbox Information Using EWS
+ArticleTitle: Retrieve and Manage Exchange Server Mailbox Information Using EWS
 linktitle: Working with Exchange Mailbox and Messages
 type: docs
 weight: 20
@@ -8,7 +9,7 @@ keywords: c# read email from exchange server
 ---
 
 
-## **Getting Mailbox Information Using EWS**
+## **Get Mailbox Information Using EWS**
 
 The [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) class has members that can be used to get mailbox information from an Exchange Server by calling the [IEWSClient.GetMailboxInfo()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/getmailboxinfo/) method. It returns an instance of type [ExchangeMailboxInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/). Get mailbox information from properties such as [MailboxUri](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/mailboxuri/), [InboxUri](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/inboxuri/) and [DraftsUri](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/draftsuri/). This article shows how to access mailbox information using Exchange Web Services.
 
@@ -28,7 +29,7 @@ Console.WriteLine("Sent Items URI: " + mailboxInfo.SentItemsUri);
 Console.WriteLine("Drafts folder URI: " + mailboxInfo.DraftsUri);
 ```
 
-## **Sending Email Messages**
+## **Send Email Messages**
 
 You can send email messages using an Exchange Server with the help of the tools in [Aspose.Email.Exchange](https://reference.aspose.com/email/net/aspose.email.clients.exchange/). The [IEWSClient.Send()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/send/) method accepts a [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) instance as a parameter and sends the email. This article explains how to send email messages using Exchange Web Services.
 
@@ -50,7 +51,7 @@ msg.HtmlBody = "<h3>sending message from exchange server</h3>";
 client.Send(msg);
 ```
 
-## **Getting Sent Item Uri**
+## **Retrieve Sent Item Uri**
 
 A sent email Id can be retrieved from Exchange server with the following sample code:
 
@@ -80,7 +81,7 @@ private static void ItemSentHandler(object sender, SentItemEventArgs e)
 }
 ```
 
-## **Reading Emails from other User’s Mailbox**
+## **Read Emails from Another User’s Mailbox**
 
 Some accounts on Exchange Servers have the right to access multiple mailboxes, and some users have multiple email accounts on the same Exchange Server. In both cases, users can access other user's mailboxes using Aspose.Email for .NET. This API provides mechanism for accessing folders and emails from other mailboxes using the [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/#methods) interface. This functionality can be achieved using the overloaded [GetMailboxInfo()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/getmailboxinfo/#getmailboxinfo) method and providing the user email address as a parameter.
 
@@ -128,7 +129,7 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-### **Listing Messages From Different Folders**
+### **List Messages From Folders**
 
 [The above code snippets](#simple-messages-listing) list all the messages in the Inbox folder. It's possible to get the list of messages from other folders as well. The [IEWSClient.ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) method accepts a folder URI as a parameter. As long as the folder URI is valid, you can get the list of messages from that folder. Use the [IEWSClient.MailboxInfo.xxxFolderUri](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemailboxinfo/#properties) property to get the URI of different folders. The rest of the code is the same as for getting a list of messages. The following code snippet shows you how to list messages from different folders using EWS.
 
@@ -148,7 +149,7 @@ strFolderURI = client.MailboxInfo.SentItemsUri;
 ExchangeMessageInfoCollection msgCollection = client.ListMessages(strFolderURI);
 ```
 
-### **Listing Messages with Paging Support**
+### **List Messages with Paging Support**
 
 The following code snippet shows you how to get a list of messages with paging support.
 
@@ -200,7 +201,7 @@ using (IEWSClient client = EWSClient.GetEWSClient("exchange.domain.com", "userna
 }          
 ```
 
-### **Getting Message Type Information from ExchangeMessageInfo**
+### **Retrieve Message Type Information**
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -215,7 +216,7 @@ IEWSClient client = EWSClient.GetEWSClient(mailboxUri, credentials);
 ExchangeMessageInfoCollection list = client.ListMessages(client.MailboxInfo.DeletedItemsUri);
 Console.WriteLine(list[0].MessageInfoType.ToString());
 ```
-### **Retrieving Message Class from ExchangeMessageInfo Object**
+### **Retrieve Message Class**
 
 The message class represents the type of an item in the Exchange store. By getting the message class, you can determine the type of the Exchange email message and perform specific operations based on its classification. 
 
@@ -243,7 +244,7 @@ This article shows how to get messages from an Exchange Server mailbox and save 
 - Save to memory stream.
 - Save as MSG.
   
-### **Saving Messages to EML**
+### **Save Messages as EML**
 
 To get messages and save in EML format:
 
@@ -275,7 +276,7 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-### **Saving Messages to a Memory Stream**
+### **Save Messages to Memory Stream**
 
 Instead of saving EML files to disk, it is possible to save it to a memory stream. This is useful when you want to save the stream to some storage location like a database. Once the stream has been saved to a database, you can reload the EML file into the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class. The following code snippet shows you how to save messages from an Exchange Server mailbox to a memory stream using EWS.
 
@@ -299,7 +300,7 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-### **Saving Messages in MSG Format**
+### **Save Messages as MSG**
 
 The [IEWSClient.SaveMessage()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/savemessage/) method can directly save the message to EML format. To save the messages to MSG format, first call the [IEWSClient.FetchMessage()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchmessage/) method which returns an instance of the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class. Then call the [MailMessage.Save()](https://reference.aspose.com/email/net/aspose.email/mailmessage/save/#save_3) method to save the message to MSG. The following code snippet shows you how to get messages from an Exchange Server mailbox and save them to MSG format using EWS.
 
@@ -323,7 +324,9 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-## **Getting ExchangeMessageInfo from Message URI**
+## **Fetching Messages**
+
+### **Fetch Messages by URI**
 
 An email message is represented by its unique identifier, URI, and is integral part of the [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) object. In case, only message URI is available, then [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) object can also be retrieved using this available information. The overload version of [ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) takes a list of Ids to use [ExchangeMessageInfoCollection](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfocollection/exchangemessageinfocollection/). The following code snippet shows you how to get [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) from message URI.
 
@@ -351,7 +354,7 @@ foreach (ExchangeMessageInfo messageInfo in messageInfoCol)
 }
 ```
 
-## **Fetch Messages from an Exchange Server Mailbox**
+### **Fetch Messages from Mailbox**
 
 For listing messages on an Exchange Server [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) method is used to get a list of messages from an Exchange Server mailbox. The [ListMessages()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) method gets basic information about messages, for example, the subject, the message ID, from and to. To get the complete message details, Aspose.Email.Exchange provides the [IEWSClient.FetchMessage()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchmessage/) method. This method accepts the message URI as a parameter and returns an instance of the [Aspose.Email.MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class. The [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class then provides message details like body, headers and attachments. Find out more about the MailMessage API, or find out how to manage emails with the [MailMessage](https://reference.aspose.com/email/net/aspose.email/mailmessage/) class. To fetch messages from Exchange Server Mailbox:
 
@@ -386,7 +389,7 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-### **Using the FetchItem method to fetch a message**
+### **Fetch Messages without Attachments**
 
 {{% alert color="primary" %}}
 
@@ -413,7 +416,7 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-### **Using the FetchItems method**
+### **Fetch Emails with Attachments**
 
 The described above [FetchItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitem/) method returns message **without attachments**, in an attempt to keep performance.
 
@@ -424,7 +427,7 @@ var uriList = client.ListItems(client.MailboxInfo.InboxUri);
 var items = client.FetchItems(EwsFetchItems.Create().AddUris(uriList).WithAttachments());
 ```
 
-## **Fetching Items with Attachments**
+### **Fetch Items with Attachments Using EWS Client**
 
 The [FetchItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/fetchitems/#iewsclientfetchitems-method)(EwsFetchItems options) method of the EwsClient retrieves email items from an Exchange server. It accepts an instance of [EwsFetchItems](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsfetchitems/#ewsfetchitems-class) class as a parameter to define various options for fetching the items.
 
@@ -444,7 +447,7 @@ var uriList = messageInfoList.Select(item => item.UniqueUri).ToList();
 var items = ewsClient.FetchItems(options.AddUris(uriList).WithAttachments());
 ```
 
-## **Pre-Fetch Message Size**
+### **Pre-Fetching Message Size**
 
 Microsoft Outlook InterOp provides the feature of retrieving message size before actually fetching the complete message from the server. In case of Aspose.Email API, the summary information retreived from Exchange server is represented by [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) class. It provides the same feature of retrieving message size using the [Size](https://reference.aspose.com/email/net/aspose.email.clients/messageinfobase/size/) property. In order to retrieve the message size, the standard call to [IEWSClient.ListMessages](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/listmessages/) is used that retrieves collection of [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/). The following code snippet shows you how to display message size using the [ExchangeMessageInfo](https://reference.aspose.com/email/net/aspose.email.clients.exchange/exchangemessageinfo/) class.
 
@@ -467,7 +470,7 @@ foreach (ExchangeMessageInfo msgInfo in msgCollection)
 }
 ```
 
-## **Download Messages Recursively**
+### **Download Messages Recursively**
 
 The [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) [ListSubFolders()](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/listsubfolders/#listsubfolders/) method can be used to get messages from folders and subfolders from an Exchange Server mailbox recursively. This requires Exchange Server 2007 or greater, because it uses EWS. The following code snippet shows how to download the whole mailbox (folders and subfolders) of an Exchange Server. The folder structure is created locally and all messages download.
 
@@ -567,7 +570,7 @@ private static bool RemoteCertificateValidationHandler(object sender, X509Certif
 }
 ```
 
-## **Download Messages from Public Folders**
+### **Download Messages from Public Folders**
 
 Microsoft Exchange Server lets users create public folders and post messages in them. To do this through your application, use Aspose.Email [EWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/ewsclient/) class to connect to the Exchange Server and read and download messages and posts from public folders. The following code snippet shows you how to read all public folders, and subfolders, and list and download any messages found in these folders. This example only works with Microsoft Exchange Server 2007 or above since only these support EWS.
 
@@ -636,7 +639,7 @@ You can move email messages from one folder to another with the help of the [IEW
 - The unique URI of the message which is to be moved.
 - The unique URI of the destination folder.
   
-### **Moving Messages between Folders**
+### **Move Messages between Folders**
 
 The following code snippet shows you how to move a message in a mailbox from the Inbox folder to a folder called Processed. In this example, the application:
 
@@ -670,7 +673,7 @@ foreach (ExchangeMessageInfo msgInfo in msgInfoColl)
 }
 ```
 
-## **Deleting Messages**
+## **Delete Messages**
 
 You can delete email messages from a folder with the help of the [ExchangeClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/exchangeclient/) class [DeleteMessage](https://reference.aspose.com/email/net/aspose.email.clients.exchange.dav/exchangeclient/deletemessage/) method. It takes a  unique URI of a message as a parameter.
 
@@ -706,11 +709,11 @@ foreach (ExchangeMessageInfo msgInfo in msgInfoColl)
 }
 ```
 
-## **Copying Messages**
+## **Copy Messages**
 
 Aspose.Email API allows to copy a message from one folder to another folder using the [CopyItem](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/copyitem/) method. The overloaded version of this method returns the Unique URI of the copied message as shown in this article.
 
-### **Copying a Message to Another Folder**
+### **Copy Messages to Another Folder**
 
 The following code snippet shows you how to copy a message to another folder.
 

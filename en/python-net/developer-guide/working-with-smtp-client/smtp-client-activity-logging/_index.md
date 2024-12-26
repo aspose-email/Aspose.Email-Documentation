@@ -1,5 +1,6 @@
 ---
 title: SmtpClient Activity Logging
+ArticleTitle: SmtpClient Activity Logging
 type: docs
 weight: 30
 url: /python-net/smtpclient-activity-logging/

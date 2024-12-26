@@ -1,5 +1,6 @@
 ---
 title: About Email Synchronization
+ArticleTitle: About Email Synchronization
 type: docs
 weight: 10
 url: /sharepoint/about-email-synchronization/

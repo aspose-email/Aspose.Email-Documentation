@@ -1,5 +1,6 @@
 ---
 title: DNN Gmail Sync Module
+ArticleTitle: DNN Gmail Sync Module
 type: docs
 weight: 20
 url: /net/dnn-gmail-sync-module/

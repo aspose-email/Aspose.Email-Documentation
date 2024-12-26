@@ -1,5 +1,6 @@
 ---
 title: Multipurpose Internet Mail Extensions Protocol
+ArticleTitle: Multipurpose Internet Mail Extensions Protocol
 type: docs
 weight: 20
 url: /java/multipurpose-internet-mail-extensions-protocol/

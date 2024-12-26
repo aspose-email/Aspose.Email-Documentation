@@ -1,131 +1,68 @@
 ---
-title: Gmail Utility Features
+title: Configuring OAuth 2.0 API Access to Google Services
+ArticleTitle: Configuring OAuth 2.0 API Access to Google Services
 type: docs
 weight: 10
-url: /net/gmail-utility-features/
+url: /net/configuring-oauth2-api-access-google-services/
 ---
 
 
-## **Working with FreeBusy Query**
+## **Create a Google Developer Console Project for API Access**
 
-Aspose.Email provides querying mechanism to check whether some appointment is due or not as per the criteria. FreebusyQuery class is provided for this purpose which allows to prepare a query for a particular calendar.
+Creating a project in the Google Developer Console is an essential step for accessing and utilizing Google APIs for your applications. This process involves setting up a project, agreeing to terms, verifying your identity, and configuring API settings to suit your needs. The following steps will guide you through the process of creating a project and obtaining the required credentials for services like Calendar and Contacts APIs.
 
-### **Querying a calendar**
-
-This code sample demonstrates the feature of querying a calendar. The following tasks are performed in this sample:
-
-1. Create and insert a calendar
-1. Create an appointment
-1. Insert appointment
-1. Prepare a FreeBusyQuery
-1. Get the FreebusyResponse
-
-```csharp
-// For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
-
-// Use the GoogleUser and GoogleOAuthHelper classes below to receive an access token
-using (IGmailClient client = GmailClient.GetInstance(accessToken, user.Email))
-{
-    // Initialize calendar item
-    Aspose.Email.Clients.Google.Calendar calendar1 = new Aspose.Email.Clients.Google.Calendar("summary - " + Guid.NewGuid().ToString(), null, null, "Europe/Kiev");
-
-    // Insert calendar and get back id of newly inserted calendar and Fetch the same calendar using calendar id
-    string id = client.CreateCalendar(calendar1);
-    Aspose.Email.Clients.Google.Calendar cal1 = client.FetchCalendar(id);
-    string calendarId1 = cal1.Id;
-    try
-    {
-        // Get list of appointments in newly inserted calendar. It should be zero
-        Appointment[] appointments = client.ListAppointments(calendarId1);
-        if (appointments.Length != 0)
-        {
-            Console.WriteLine("Wrong number of appointments");
-            return;
-        }
-
-        // Create a new appointment and Calculate appointment start and finish time
-        DateTime startDate = DateTime.Now;
-        DateTime endDate = startDate.AddHours(1);
-
-        // Create attendees list for appointment
-        MailAddressCollection attendees = new MailAddressCollection();
-        attendees.Add("user1@domain.com");
-        attendees.Add("user2@domain.com");
-
-        // Create appointment
-        Appointment app1 = new Appointment("Location - " + Guid.NewGuid().ToString(), startDate, endDate, "user2@domain.com", attendees);
-        app1.Summary = "Summary - " + Guid.NewGuid().ToString();
-        app1.Description = "Description - " + Guid.NewGuid().ToString();
-        app1.StartTimeZone = "Europe/Kiev";
-        app1.EndTimeZone = "Europe/Kiev";
-
-        // Insert the newly created appointment and get back the same in case of successful insertion
-        Appointment app2 = client.CreateAppointment(calendarId1, app1);
-
-        // Create Freebusy query by setting min/max timeand time zone
-        FreebusyQuery query = new FreebusyQuery();
-        query.TimeMin = DateTime.Now.AddDays(-1);
-        query.TimeMax = DateTime.Now.AddDays(1);
-        query.TimeZone = "Europe/Kiev";
-
-        // Set calendar item to search and Get the reponse of query containing 
-        query.Items.Add(cal1.Id);
-        FreebusyResponse resp = client.GetFreebusyInfo(query);
-        // Delete the appointment
-        client.DeleteAppointment(calendarId1, app2.UniqueId);
-    }
-    finally
-    {
-        // Delete the calendar
-        client.DeleteCalendar(cal1.Id);
-    }
-}
-```
-
-## **Creating project in Google Developer Console**
-
-A Project is to be created on Google Developer Console for a user having Gmail account. In the API & auth -> Credentials page of the Google project, information is to be noted like Client ID and Client Secret. This information along with the gmail account user name and password will be required for executing the code e.g. google calendar, access control lists, appointments, contacts, settings etc. in this section.
-
-### **Steps to create a project in Google Developer Console**
-
-Below is a step by step tutorial for creating a project in Google Developer Console.
+### **Steps to Create a Project in Google Developer Console**
 
 1. Go to link <https://cloud.google.com/console/project> and login using your gmail credentials
 
 |![todo:image_alt_text](gmail-utility-features_1.png)|
 | :- |
+
 2. Select the check box "I have read and agree to all Terms of Service for the Google Cloud Platform products." and Press Create button
 
 |![todo:image_alt_text](gmail-utility-features_2.png)|
 | :- |
+
 3. "SMS Verification" will be requested. Press continue button:
 
 |![todo:image_alt_text](gmail-utility-features_3.png)|
 | :- |
+
 4. Enter your country name and enter mobile number. Press button: Send Verification Code
 
 |![todo:image_alt_text](gmail-utility-features_4.png)|
 | :- |
+
 5. Enter the verification code received on your mobile.
 
 |![todo:image_alt_text](gmail-utility-features_5.png)|
 | :- |
+
 6. In the APIs & auth \ APIs list switch on status of Calendar API and Contacts API. Switch OFF all others.
 
 |![todo:image_alt_text](gmail-utility-features_6.png)|
 | :- |
+
 7. On the APIs & auth -> Credentials, press button "CREAET NEW CLIENT ID" under "OAuth" section. Select "Installed application" and "Other" from the given choices, and press the "Create Client ID" button. Note the Client ID and Client Secret here that will be used in the sample codes in this section.
 
 |![todo:image_alt_text](gmail-utility-features_7.png)|
 | :- |
 
-## **Helper Classes**
+## **Secure Google OAuth 2.0 Integration**
 
-Following helper classes is required to run the code examples in this section. These classes `GoogleOAuthHelper` and `GoogleUser` are just for simplification of demonstration. The methods in these classes use non-public structure of web-pages that may change any time.
+When working with Google OAuth 2.0 in Aspose.Email for .NET, you will need the following classes:
 
-### **GoogleOAuthHelper Class**
+- **GoogleOAuthHelper** class - Simplifies the process of authenticating a Google user and obtaining the necessary tokens to interact with Google APIs, such as Calendar, Contacts, and Gmail. 
 
-The following code snippet shows you how to implement `GoogleOAuthHelper` class.
+- **GoogleUser** class - It is designed to encapsulate and manage the credentials required for a user to authenticate and interact with Google services, specifically APIs that require OAuth 2.0 authentication like Google Calendar. 
+
+- **TokenResponse** class - It is a model designed to represent and handle the response data from an OAuth 2.0 token endpoint, where access tokens are obtained in exchange for authorization.
+
+In the following articles you will find code samples demonstrating how to use these classes in .NET environment for establishing a secure interaction with OAuth 2.0 services.
+
+### **OAuth 2.0 Authentication with GoogleOAuthHelper Class**
+
+The class handles the creation of the authorization code URL, the generation of code challenges, and the retrieval of access and refresh tokens. By using `GoogleOAuthHelper`, developers can streamline the OAuth 2.0 flow, ensuring secure and efficient communication with Google services. The following code snippet shows you how to implement the `GoogleOAuthHelper` class into a project:
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -326,8 +263,9 @@ Console.WriteLine(tokenInfo.AccessToken);
 Console.WriteLine();
 ```
 
-### **GoogleUser Class**
-The following code snippet shows you how to implement `GoogleUser` class.
+### **GoogleUser Class for OAuth 2.0 Authentication**
+
+The following code snippet shows you how to implement the `GoogleUser` class:
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -357,9 +295,9 @@ public class GoogleUser
 }
 ```
 
-### **TokenResponse Class**
+### **Authenticate with OAuth 2.0 using TokenResponse Class**
 
-The following code snippet shows you how to implement `TokenResponse` class.
+The following code snippet shows you how the `TokenResponse` class can be implemented:
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET

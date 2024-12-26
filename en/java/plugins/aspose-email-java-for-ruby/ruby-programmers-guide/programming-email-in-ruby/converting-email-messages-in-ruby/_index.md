@@ -1,5 +1,6 @@
 ---
 title: Converting Email Messages in Ruby
+ArticleTitle: Converting Email Messages in Ruby
 type: docs
 weight: 10
 url: /java/converting-email-messages-in-ruby/

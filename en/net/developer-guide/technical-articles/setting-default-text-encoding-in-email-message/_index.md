@@ -1,5 +1,6 @@
 ---
 title: Setting Default Text Encoding in Email Message
+ArticleTitle: Setting Default Text Encoding in Email Message
 type: docs
 weight: 120
 url: /net/setting-default-text-encoding-in-email-message/

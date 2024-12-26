@@ -1,5 +1,6 @@
 ---
 title: Get the number of emails in the mailbox
+ArticleTitle: Get the number of emails in the mailbox
 type: docs
 weight: 140
 url: /net/get-the-number-of-emails-in-the-mailbox/

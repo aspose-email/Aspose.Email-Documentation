@@ -1,5 +1,6 @@
 ---
 title: Working with Folders on Exchange Server
+ArticleTitle: Working with Folders on Exchange Server
 type: docs
 weight: 80
 url: /cpp/working-with-folders-on-exchange-server/

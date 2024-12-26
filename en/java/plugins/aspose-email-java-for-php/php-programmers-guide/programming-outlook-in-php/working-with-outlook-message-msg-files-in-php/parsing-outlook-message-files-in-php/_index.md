@@ -1,5 +1,6 @@
 ---
 title: Parsing Outlook Message Files in PHP
+ArticleTitle: Parsing Outlook Message Files in PHP
 type: docs
 weight: 30
 url: /java/parsing-outlook-message-files-in-php/

@@ -1,5 +1,6 @@
 ---
 title: Parsing Outlook Message Files in Ruby
+ArticleTitle: Parsing Outlook Message Files in Ruby
 type: docs
 weight: 40
 url: /java/parsing-outlook-message-files-in-ruby/

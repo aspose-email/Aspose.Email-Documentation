@@ -1,5 +1,6 @@
 ---
 title: Working with Exchange Extended Attributes of Exchange Items
+ArticleTitle: Working with Exchange Extended Attributes of Exchange Items
 type: docs
 weight: 140
 url: /java/working-with-exchange-extended-attributes-of-exchange-items/

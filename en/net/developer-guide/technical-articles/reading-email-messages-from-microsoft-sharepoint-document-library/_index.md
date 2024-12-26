@@ -1,5 +1,6 @@
 ---
 title: Reading Email Messages from Microsoft SharePoint Document Library
+ArticleTitle: Reading Email Messages from Microsoft SharePoint Document Library
 type: docs
 weight: 110
 url: /net/reading-email-messages-from-microsoft-sharepoint-document-library/

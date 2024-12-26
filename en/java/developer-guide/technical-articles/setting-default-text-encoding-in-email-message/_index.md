@@ -1,5 +1,6 @@
 ---
 title: Setting Default Text Encoding in Email Message
+ArticleTitle: Setting Default Text Encoding in Email Message
 type: docs
 weight: 120
 url: /java/setting-default-text-encoding-in-email-message/

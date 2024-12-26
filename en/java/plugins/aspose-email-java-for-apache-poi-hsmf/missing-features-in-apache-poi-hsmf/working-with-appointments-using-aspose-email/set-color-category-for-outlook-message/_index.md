@@ -1,5 +1,6 @@
 ---
 title: Set Color Category for Outlook Message
+ArticleTitle: Set Color Category for Outlook Message
 type: docs
 weight: 30
 url: /java/set-color-category-for-outlook-message/

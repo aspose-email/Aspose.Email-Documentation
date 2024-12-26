@@ -1,5 +1,6 @@
 ---
 title: Read Outlook for Mac OLM File and Get Folders and SubFolders Information
+ArticleTitle: Read Outlook for Mac OLM File and Get Folders and SubFolders Information
 type: docs
 weight: 130
 url: /java/read-outlook-for-mac-olm-file-and-get-folders-and-subfolders-information/

@@ -1,5 +1,6 @@
 ---
 title: Save Message as Draft in Ruby
+ArticleTitle: Save Message as Draft in Ruby
 type: docs
 weight: 70
 url: /java/save-message-as-draft-in-ruby/

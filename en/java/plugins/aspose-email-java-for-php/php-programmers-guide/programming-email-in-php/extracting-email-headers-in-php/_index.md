@@ -1,5 +1,6 @@
 ---
 title: Extracting Email Headers in PHP
+ArticleTitle: Extracting Email Headers in PHP
 type: docs
 weight: 40
 url: /java/extracting-email-headers-in-php/

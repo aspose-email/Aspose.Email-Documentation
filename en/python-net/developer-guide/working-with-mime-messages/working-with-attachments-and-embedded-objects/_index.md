@@ -1,5 +1,6 @@
 ---
 title: Working with Attachments and Embedded Objects
+ArticleTitle: Working with Attachments and Embedded Objects
 type: docs
 weight: 50
 url: /python-net/working-with-attachments-and-embedded-objects/

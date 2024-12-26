@@ -1,5 +1,6 @@
 ---
 title: Working with MAPI Properties using Email C++ Library
+ArticleTitle: Working with MAPI Properties using Email C++ Library
 linktitle: Working with MAPI Properties
 type: docs
 weight: 60

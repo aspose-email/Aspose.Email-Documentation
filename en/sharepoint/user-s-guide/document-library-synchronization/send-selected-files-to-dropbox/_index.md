@@ -1,5 +1,6 @@
 ---
 title: Send Selected Files to Dropbox
+ArticleTitle: Send Selected Files to Dropbox
 type: docs
 weight: 60
 url: /sharepoint/send-selected-files-to-dropbox/
@@ -24,7 +25,8 @@ To send files to Dropbox:
 
 
 1. Specify the Dropbox credentials and directory name (optional) that the files should be transferred to.
-1. Click **Send** to transfer the files. After successful transfer, the files are available from Dropbox. 
+1. Click **Send** to transfer the files.
+   After successful transfer, the files are available from Dropbox. 
 
    **The transferred files in Dropbox.** 
 

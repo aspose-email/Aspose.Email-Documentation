@@ -1,5 +1,6 @@
 ---
 title: Update and Save an Email in PHP
+ArticleTitle: Update and Save an Email in PHP
 type: docs
 weight: 70
 url: /java/update-and-save-an-email-in-php/

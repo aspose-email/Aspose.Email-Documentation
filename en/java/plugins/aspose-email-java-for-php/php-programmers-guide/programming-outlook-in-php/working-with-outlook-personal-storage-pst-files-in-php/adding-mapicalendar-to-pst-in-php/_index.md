@@ -1,5 +1,6 @@
 ---
 title: Adding MapiCalendar to PST in PHP
+ArticleTitle: Adding MapiCalendar to PST in PHP
 type: docs
 weight: 20
 url: /java/adding-mapicalendar-to-pst-in-php/

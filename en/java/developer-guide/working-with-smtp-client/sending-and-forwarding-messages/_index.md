@@ -1,5 +1,6 @@
 ---
 title: Sending and Forwarding Messages - Send Outlook Email Messages using Java Program
+ArticleTitle: Sending and Forwarding Messages - Send Outlook Email Messages using Java Program
 linktitle: Sending and Forwarding Messages
 type: docs
 weight: 20

@@ -1,5 +1,6 @@
 ---
 title: Testing a License
+ArticleTitle: Testing a License
 type: docs
 weight: 20
 url: /sharepoint/testing-a-license/

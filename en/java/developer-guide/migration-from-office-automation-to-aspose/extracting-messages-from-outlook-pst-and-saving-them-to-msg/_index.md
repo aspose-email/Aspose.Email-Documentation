@@ -1,5 +1,6 @@
 ---
 title: Extracting Messages from Outlook PST and Saving them to MSG
+ArticleTitle: Extracting Messages from Outlook PST and Saving them to MSG
 type: docs
 weight: 60
 url: /java/extracting-messages-from-outlook-pst-and-saving-them-to-msg/

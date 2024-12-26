@@ -1,5 +1,6 @@
 ---
 title: Manage Attachments in Email Message in Jython
+ArticleTitle: Manage Attachments in Email Message in Jython
 type: docs
 weight: 50
 url: /java/manage-attachments-in-email-message-in-jython/

@@ -1,5 +1,6 @@
 ---
 title: Save Message as Draft in Jython
+ArticleTitle: Save Message as Draft in Jython
 type: docs
 weight: 60
 url: /java/save-message-as-draft-in-jython/
