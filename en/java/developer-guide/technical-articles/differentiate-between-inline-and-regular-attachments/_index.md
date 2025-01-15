@@ -27,46 +27,32 @@ public static boolean isInlineAttachment(MapiAttachment att, MapiMessage msg) {
         return false;
     else if (msg.getBodyType() == BodyContentType.Html) {
         // check the PidTagAttachFlags property
-        if (att.getProperties().containsKey(0x37140003)) {
-            Long attachFlagsValue = att.getPropertyLong(0x37140003);
-            if (attachFlagsValue != null && (attachFlagsValue > 3 || attachFlagsValue < 1)) {
-                // check PidTagAttachContentId property
-                if (att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID) 
-                        || att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID_W)) {
-                    String contentId = att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID) 
-                            ? att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_ID)
-                            : att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_ID_W);
-                    if (!contentId.isEmpty() && msg.getBodyHtml().contains(contentId)) {
-                        return true;
-                    }
-                }
-                // check PidTagAttachContentLocation property
-                if (att.getProperties().containsKey(0x3713001E) 
-                        || att.getProperties().containsKey(0x3713001F)) {
-                    String contentLocation = att.getProperties().containsKey(0x3713001E) 
-                            ? att.getPropertyString(0x3713001E) : att.getPropertyString(0x3713001F);
-                    if (!contentLocation.isEmpty() && msg.getBodyHtml().contains(contentLocation)) {
-                        return true;
-                    }
-                }
-            } else if ((att.getProperties().containsKey(0x3716001F) && att.getPropertyString(0x3716001F).equalsIgnoreCase("inline"))
-                    || (att.getProperties().containsKey(0x3716001E) && att.getPropertyString(0x3716001E).equalsIgnoreCase("inline"))) {
+        Long attachFlagsValue = att.getPropertyLong(MapiPropertyTag.PR_ATTACH_FLAGS);
+        if (attachFlagsValue != null && (attachFlagsValue > 3 || attachFlagsValue < 1)) {
+            // check PidTagAttachContentId property
+            String contentId = att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_ID)
+                    ? att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_ID)
+                    : att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_ID_W);
+            if (contentId != null && !contentId.isEmpty() && msg.getBodyHtml().contains("cid:" + contentId)) {
                 return true;
             }
-        } else if ((att.getProperties().containsKey(0x3716001F) && att.getPropertyString(0x3716001F).equalsIgnoreCase("inline"))
-                || (att.getProperties().containsKey(0x3716001E) && att.getPropertyString(0x3716001E).equalsIgnoreCase("inline"))) {
-            return true;
+            // check PidTagAttachContentLocation property
+            String contentLocation = att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_CONTENT_LOCATION)
+                    ? att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_LOCATION)
+                    : att.getPropertyString(MapiPropertyTag.PR_ATTACH_CONTENT_LOCATION_W);
+            if (contentLocation != null && !contentLocation.isEmpty() && msg.getBodyHtml().contains(contentLocation)) {
+                return true;
+            }
         }
-        return false;
+        return "inline".equals(att.getPropertyString(0x3716001F)) || "inline".equals(att.getPropertyString(0x3716001E));
     } else if (msg.getBodyType() == BodyContentType.Rtf) {
         // If the body is RTF, then all OLE attachments are inline attachments.
         // OLE attachments have 0x00000006 for the value of the PidTagAttachMethod property
-        if (att.getProperties().containsKey(MapiPropertyTag.PR_ATTACH_METHOD)) {
-            return att.getPropertyLong(MapiPropertyTag.PR_ATTACH_METHOD) == 0x00000006;
-        }
-        return false;
-    } else
+        Long attachMethod = att.getPropertyLong(MapiPropertyTag.PR_ATTACH_METHOD);
+        return attachMethod != null && attachMethod == 0x00000006;
+    } else {
         throw new ArgumentOutOfRangeException();
+    }
 }
 ~~~
 
