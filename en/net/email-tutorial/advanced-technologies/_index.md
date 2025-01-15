@@ -10,7 +10,7 @@ url: /net/advanced-technologies/
 
 **Secure/Multipurpose Internet Mail Extensions (S/MIME)** is a widely used standard for securing email communication. It provides a method for sending and receiving signed and encrypted email messages, ensuring message integrity, authenticity, and confidentiality.
 
-### Key Features
+**Key Features:**
 
 - S/MIME ensures that only the intended recipient can read the email content. It uses a combination of symmetric (for speed) and asymmetric (for key exchange) encryption algorithms. Commonly used algorithms include RSA (used for asymmetric encryption), AES or Advanced Encryption Standard (one of the symmetric algorithms), and Triple DES.
 - Confirms the identity of the sender. 
@@ -22,7 +22,7 @@ url: /net/advanced-technologies/
 
 **DomainKeys Identified Mail (DKIM)** is an email authentication mechanism designed to detect forged sender addresses, a common technique used in phishing and email spoofing. It allows an organization to take responsibility for an email during its transit by associating a domain name with the message, thereby ensuring its authenticity and integrity. DKIM verifies that an email purportedly coming from a specific domain was indeed authorized by the domain owner, primarily focusing on the authenticity of the "From" email address. This is achieved by enabling the sender to electronically sign their email with a private key, while the recipient verifies this signature using a public key published in the sender's DNS records.
 
-### Key Features*
+**Key Features:**
 
 - DKIM adds a "DKIM-Signature" header to the email which contains the digital signature and several key parameters. The email body and select headers are hashed using a hashing algorithm like SHA-256. This hash is then encrypted using the sender’s private key to generate the digital signature.
 - The sender publishes the public key in their DNS records. The recipient’s email server looks up the sender’s public key in DNS to verify the digital signature.
@@ -31,7 +31,7 @@ url: /net/advanced-technologies/
 
 **Accelerated Mobile Pages (AMP)** for Email is an open-source framework designed to create dynamic, interactive, and engaging email experiences. It's designed to make emails more dynamic and functional, transforming a medium that has traditionally been static and passive.
 
-### Key features
+**Key Features:**
 
 - Allows users to take actions directly within the email, such as RSVPing to events, filling out forms, or interacting with product carousels.
 - Emails can serve dynamic content that updates at the time of opening. This ensures that users see the most current information whether it be the latest pricing, stock status, or news updates.
@@ -43,7 +43,7 @@ url: /net/advanced-technologies/
 
 AntiSpam refers to a range of techniques, technologies, and strategies designed to detect, prevent, and mitigate unsolicited and often harmful email messages, commonly known as spam.
 
-### AntiSpam Techniques
+**AntiSpam Techniques:**
 
 1. **Filtering Methods**
    - Content-Based Filtering: Analyzes the content of the email for common spam indicators.
@@ -83,7 +83,7 @@ Email servers typically return bounce codes that can help diagnose the reason fo
 
 Email threading is a method used by email clients and applications to group related emails together based on their subject or conversation, making it easier for users to follow and manage email exchanges.
 
-### Key features
+**Key features:**
 
 - **In-Reply-To and References Headers**. Email headers that point to previous messages in the thread, helping the email client to link replies and forwards to the original email.
 - Subject Lines. Often used to group emails into threads. Emails with the same subject line, typically prefixed with "Re:" (reply) or "Fwd:" (forward), are grouped together.

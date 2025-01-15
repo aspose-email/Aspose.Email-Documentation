@@ -12,7 +12,7 @@ url: /net/email-storage-formats/
 
 MBOX was first developed in the 1970s and has since seen various versions and implementations over the years. It has been implemented in numerous email clients such as Unix mail, Mozilla Thunderbird, Eudora, and more.
 
-### Key Features
+**Key Features:**
 
 - MBOX is supported across a wide range of platforms, including Unix, Linux, and macOS.
 - Clients like Mozilla Thunderbird, Apple Mail, and many others can read and write MBOX files.
@@ -20,7 +20,7 @@ MBOX was first developed in the 1970s and has since seen various versions and im
 - Due to its simple structure, MBOX is popularly used for archiving and backup purposes.
 - Since all emails are stored in a single file, the file can become quite large over time, leading to inefficiencies.
 
-### Variants of MBOX
+**Variants of MBOX:**
 
 MBOX comes in several variants, each with slight differences in how they handle messages:
 
@@ -54,7 +54,7 @@ From user2@example.com Fri Jan 01 00:01:00 2021
 
 **Personal Storage Table (PST)** and **Offline Storage Table (OST)** are file formats used by Microsoft Outlook to store copies of emails, calendar events, and other items.
 
-### Key Features
+**Key Features:**
 
 - PST files are used to store personal information and are typically used for archiving older emails and data. Primarily used by home users and small organizations for local storage of email messages, contacts, and calendar events.
 - OST files are used for offline storage and synchronization of emails and other data with the Exchange server. Primarily used by users who access Microsoft Exchange Server or Office 365.
@@ -66,7 +66,7 @@ From user2@example.com Fri Jan 01 00:01:00 2021
 
 **Outlook for Mac Archive File (OLM)** is a file format used by Microsoft Outlook for Mac to store email messages, calendar events, contacts, tasks, and other items.
 
-### Key Features
+**Key Features:**
 
 - OLM files are primarily used for archiving and backing up emails and other Outlook items on Mac systems.
 - OLM files are stored locally on the user's Mac.

@@ -20,7 +20,7 @@ It uses the SOAP (Simple Object Access Protocol) over HTTP and HTTPS to send and
 
 **Microsoft Graph** is a powerful API that provides a unified endpoint for accessing a wide range of data and services in the Microsoft 365 ecosystem. It allows developers to interact with a variety of Microsoft services, including Office 365, Azure Active Directory, SharePoint, OneDrive, Outlook, Microsoft Teams, and more. It serves as a gateway to data and insights across Microsoft 365.
 
-### Key Features
+**Key Features:**
 
 - The base URL for the API is https://graph.microsoft.com.
 - Uses OAuth 2.0 for authentication and authorization.
@@ -30,7 +30,7 @@ It uses the SOAP (Simple Object Access Protocol) over HTTP and HTTPS to send and
 
 **Gmail API** is a RESTful API provided by Google that allows developers to interact programmatically with Gmail mailboxes and perform various operations on email data (read, send, delete, and organize email messages). It offers a more flexible and powerful alternative to the traditional IMAP and SMTP protocols, enabling developers to access and manage Gmail messages, threads, labels, drafts, and more. It is available through the Google Cloud Platform.
 
-### Key Features
+**Key Features:**
 
 - Perform multiple API requests in a single HTTP call to improve efficiency and reduce the number of network requests.
 - Uses OAuth 2.0 for secure authentication and authorization, ensuring that applications only access data that users have explicitly granted permission for.
