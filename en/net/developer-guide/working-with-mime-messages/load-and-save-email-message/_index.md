@@ -52,7 +52,7 @@ Signature preservation is supported by default when loading EML files. To remove
 The code sample below shows how to remove a signature when loading a message:
 
 ```cs
-var msg = MapiMessage.Load(fileName, new EmlLoadOptions() { RemoveSignature = true});
+var msg = MailMessage.Load(fileName, new EmlLoadOptions() { RemoveSignature = true});
 ```
 
 ### **Load from EMLX**

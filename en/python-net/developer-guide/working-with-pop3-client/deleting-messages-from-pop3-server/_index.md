@@ -1,28 +1,25 @@
 ---
-title: Deleting Messages from POP3 Server
+title: Deleting Emails from POP3 Server in Python
 ArticleTitle: Deleting Messages from POP3 Server
 type: docs
 weight: 20
-url: /python-net/deleting-messages-from-pop3-server/
+url: /python-net/delete-email-from-pop3-server-python/
 ---
 
-Aspose.Email.Mail is a robust component that allows performing customized operations after certain actions. Aspose.Email.Mail fires many events upon which users can perform operations. This feature provides users more control over their application. For example, users can perform their desired actions when:
+Aspose.Email for .NET provides complete control over managing messages on a POP3 server. Using the [Pop3Client](https://reference.aspose.com/email/python-net/aspose.email.clients.pop3/pop3client/) class, developers can connect to a mailbox and programmatically perform numerous tasks on the messages from the server including deleting specific messages or all of them. This is particularly useful in server-side mail processing applications where email cleanup is required after retrieval or based on custom logic.
 
-- All bulk emails have been sent.
-- A message is about to send.
-- An email is completely sent.
-- When a recipient is rejected by SMTP server.
+This article explains how to delete messages using Aspose.Email POP3 client in different scenarios.
 
-POP3 mailboxes reside on a POP3 server. The email in these mailboxes can be retrieved to your PC by Aspose.Email.Pop3.Pop3Client. Pop3Client Namespace uses POP3 protocol to copy the mail messages from your POP3 mailbox to your PC. Once the mail has been retrieved you do not need to be connected to the internet while it is being read as you could read the retrieved mail on your PC. If you don't need or want a copy of some mail messages kept on the POP3 server, you then delete it. This section shows how to delete emails using Pop3Client Namespace.
-## **Delete an Email by Index**
-The following code snippet deletes all the mail message of a mail box one by one, based on its index. Index should never be <=0 in Pop3Client.DeleteMessage.
+## **Delete Email by Index**
 
+The following code snippet shows how to delete all message in a mailbox one by one, based on their index. The index number should never be <=0 in Pop3Client.DeleteMessage.
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-POP3-DeleteEmailByIndex-DeleteEmailByIndex.py" >}}
-## **Delete All Emails**
-We might also call Pop3Client.DeleteAllMessages() to delete all the messages. The following code snippet shows you how to delete all emails.
 
+## **Delete All Emails**
+
+It is also possible to call `delete_messages()` method to delete all the messages. The following code snippet shows you how to use this method:
 
 
 ```py
@@ -34,12 +31,11 @@ client = ae.clients.pop3.Pop3Client("imap.example.com", "username", "password")
 client.delete_messages()
 ```
 
+If the connection to the POP3 server is lost immediately after the deletion operation, the `undelete_messages()` method can no longer be called to restore data.
 
+## **Cancel Deletion Operations**
 
-If the connection to the POP3 server is broken immediately after delete operations, you can no longer call Pop3Client.CancelDeletes() to do the things you want.
-## **Cancel Deletes**
-Pop3Client.UndeleteMessages can be used to cancel the deletion of email messages. The following code snippet shows you how to cancel deletes.
-
+The method `undelete_messages` can be used to cancel the deletion of email messages. The following code snippet shows you how to use this method:
 
 
 ```py

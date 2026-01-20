@@ -107,7 +107,7 @@ using (var olm = OlmStorage.FromFile(fileName))
 
 Also, it’s possible to get any folder by name:
 
-1. Call [GetFolder](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/getfolder/) method.
+1. Call [GetFolder](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/getfolder/) method.
 2. Pass folder name as the first argument and value, which shows whether to ignore case sensitivity when searching for a folder, as the second parameter.
 
 ```cs
@@ -270,7 +270,7 @@ The code below shows how to extract messages from OLM by identifiers.
 
 The code performs the following steps:
 
-1. Initiates a foreach loop to iterate through a list of [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/) objects. The loop uses the [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/) method of the olmFolder object to retrieve a list of all messages in the current folder being iterated.
+1. Initiates a foreach loop to iterate through a list of [OlmMessageInfo](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/) objects. The loop uses the [EnumerateMessages](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmfolder/enumeratemessages/#enumeratemessages) method of the olmFolder object to retrieve a list of all messages in the current folder being iterated.
 2. The loop extracts the corresponding MapiMessage object from the storage by calling the [ExtractMapiMessage(string id)](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/extractmapimessage/#extractmapimessage_1) method of [OlmStorage](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmstorage/) class, passing in the [EntryId](https://reference.aspose.com/email/net/aspose.email.storage.olm/olmmessageinfo/entryid/) of the current message as a parameter.
 
 The retrieved MapiMessage object can be used to access and manipulate the contents of the message. The loop continues until all messages in the folder have been processed.

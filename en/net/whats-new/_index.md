@@ -7,6 +7,114 @@ url: /net/whats-new/
 ---
 
 
+## [Aspose.Email for .NET 25.8](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-8-release-notes/)
+
+- The `X500Address` property of the [MailAddress](https://reference.aspose.com/email/net/aspose.email/mailaddress/) class provides access to the email address in Exchange (X.500) format, if available. 
+
+- The `Aspose.Email.Clients.Graph.ODataQueryBuilder` class simplifies the construction of OData query parameters for Microsoft Graph. This enhancement enables advanced filtering, ordering, selection, and paging when working with Graph data.
+
+- The `Aspose.Email.Clients.Graph.IGraphClientAsync` interface enables asynchronous operations with the GraphClient for improved performance and responsiveness.
+
+## [Aspose.Email for .NET 25.7](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-7-release-notes/)
+
+- Extract externally linked image resources from the HTML body and embed them directly into the HTML output. The original appearance of email messages containing linked content is preserved when saving or processing emails. The [HtmlSaveOptions.ExtractHTMLBodyResourcesAsAttachments](https://reference.aspose.com/email/net/aspose.email/headersformattingoptions/extracthtmlbodyresourcesasattachments/) - when set to true - extracts linked images and other resources from the HTML body and embeds them as attachments, maintaining the message’s visual fidelity.
+
+## [Aspose.Email for .NET 25.6](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-6-release-notes/)
+
+- Enumerate messages that have been deleted twice **(soft-deleted)** in PST files. The [PersonalStorage.FindAndEnumerateSoftDeletedItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/findandenumeratesoftdeleteditems/) method returns an enumerable collection of [RestoredItemEntry](https://reference.aspose.com/email/net/aspose.email.storage.pst/restoreditementry/) objects, each containing a deleted [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) and its corresponding FolderId.
+
+- Retrieve folder contents from PST files in a **paginated manner** using the overloaded [FolderInfo.GetContents(MailQuery query, int startIndex, int count)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/getcontents/#getcontents_3) method which retrieves a subset of messages that match the specified query, starting from a given index and limited by a count.
+
+## [Aspose.Email for .NET 25.4](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-4-release-notes/)
+
+- Several classes have been updated with **asynchronous methods** to enhance scalability and performance in modern applications. They improve working with **TGZ, PST, MBOX and VCard** files.
+
+- The [MapiContact.FromVCard](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/fromvcard/#fromvcard_4) method is now overloaded and accepts a [VCardLoadOptions](https://reference.aspose.com/email/net/aspose.email.personalinfo.vcard/vcardloadoptions/) parameter instead of an encoding. 
+
+## [Aspose.Email for .NET 25.3](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-3-release-notes/)
+
+- Save and load attachments in TNEF format, commonly used in Outlook messages (winmail.dat). Use the following methods:
+
+  - static MapiAttachment [MapiAttachment.LoadFromTnef(string fileName)](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/loadfromtnef/#loadfromtnef_1) – Loads an attachment from a TNEF file.
+  - static MapiAttachment [MapiAttachment.LoadFromTnef(Stream stream)](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/loadfromtnef/#loadfromtnef) – Loads an attachment from a TNEF stream.
+  - void [MapiAttachment.SaveToTnef(string filename)](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/savetotnef/#savetotnef_1) – Saves an attachment to a TNEF file.
+  - void [MapiAttachment.SaveToTnef(Stream stream)](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/savetotnef/#savetotnef) – Saves an attachment to a TNEF stream.
+
+-  Set the state of a [MapiCalendar](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendar/) object, overriding its default behavior explicitly using the void [MapiCalendar.SetStateForced(MapiCalendarState state)](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendar/setstateforced/) method.
+
+## [Aspose.Email for .NET 25.2](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-2-release-notes/)
+
+- Filter or search messages within MBOX files using a query. Retrieve only the messages that match specific criteria. Improve performance and usability when working with large MBOX files.
+
+- Retrieve messages in smaller batches using paginated retrieval. This feature allows for reducing memory consumption and improving performance when processing large MBOX files.
+
+## [Aspose.Email for .NET 25.1](https://releases.aspose.com/email/net/release-notes/2025/aspose-email-for-net-25-1-release-notes/)
+
+- Expand your capabilities for working with Gmail messages using the [IGmailClient](https://reference.aspose.com/email/net/aspose.email.clients.google/igmailclient/#igmailclient-interface) interface. Developers can now list, fetch, send, append, and delete emails, as well as manage Gmail filters programmatically.
+
+## [Aspose.Email for .NET 24.12](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-12-release-notes/)
+
+- **Customize MIME boundary strings** through the new [EmlSaveOptions.BoundariesTemplate](https://reference.aspose.com/email/net/aspose.email/emlsaveoptions/boundariestemplate/) property. This feature provides greater control over boundary formatting — the {#} placeholder in the template is automatically replaced with the boundary number, allowing dynamic and personalized boundary string generation.
+
+## [Aspose.Email for .NET 24.11](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-11-release-notes/)
+
+- Improve reference attachments handling with the following new members:
+
+  - overload [MapiAttachmentCollection.Add](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachmentcollection/add/#add_3) method - Adds a reference attachment to the collection using the specified name and configuration options.
+  - [ReferenceAttachmentOptions](https://reference.aspose.com/email/net/aspose.email.mapi/referenceattachmentoptions/#referenceattachmentoptions-class) class - Defines reference attachment properties by configuring options for adding an attachment to a MAPI message.
+  - [IsReference](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isreference/) property - Identifies reference attachments in a message.
+
+- Enhance message search and retrieval with the new overloaded methods in the [FolderInfo]() class:
+
+  - [IEnumerable<MessageInfo> EnumerateMessages(MailQuery mailQuery)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/#enumeratemessages_2) - Filter messages using a [MailQuery](https://reference.aspose.com/email/net/aspose.email.tools.search/mailquery/#mailquery-class).
+  - [IEnumerable<MessageInfo> EnumerateMessages(MessageKind kind)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/#enumeratemessages_1) - Retrieve messages by type (MessageKind).
+  - [IEnumerable<MessageInfo> EnumerateMessages(int startIndex, int count)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/#enumeratemessages_3) - Paginate message retrieval using a starting index and count.
+
+- Customize the base URL for the SendGrid client using the [SendGridRegion](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice.sendgrid/sendgridregion/) enumeration and related properties in the [SendGridClientOptions](https://reference.aspose.com/email/net/aspose.email.clients.deliveryservice.sendgrid/sendgridclientoptions/) class.
+
+- Enable secure connection to GCC High O365 endpoints with the [EndPoint](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphclient/endpoint/) property of the [GraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/graphclient/#graphclient-class) class.
+
+
+## [Aspose.Email for .NET 24.10](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-10-release-notes/)
+
+- Access user reactions in MSG files. The new [GetReactions](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/getreactions/) method, added to the [FollowUpManager](https://reference.aspose.com/email/net/aspose.email.mapi/followupmanager/#followupmanager-class) class, allows you to **retrieve a list of reactions** on a MAPI message, making it easy to analyze user engagement.
+
+
+## [Aspose.Email for .NET 24.9](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-9-release-notes/)
+
+- **Add custom headers** when creating an instance of [IEWSClient](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice/iewsclient/). This feature is particularly useful for scenarios where specific headers are required during client initialization, such as the `X-AnchorMailbox` header in EWS.
+
+- **Retrieve category colors** from PST files. Access a list of categories along with their names and assigned colors, making it easier to maintain visual consistency and improve data organization when processing Outlook data.
+
+## [Aspose.Email for .NET 24.6](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-6-release-notes/)
+
+
+-  Access, manage, and interact with users’ tasks and task lists in Microsoft Graph with the following methods of the [IGraphClient](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/#igraphclient-interface) interface:
+
+   - [ListTaskLists()](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listtasklists/) - Retrieves a collection of task list information.
+   - [GetTaskList(string id)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/gettasklist/) - Retrieves a specific task list based on the provided ID.
+   - [DeleteTaskList(string id)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/deletetasklist/) - Deletes the specified task list.
+   - [ListTasks(string id](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/listtasks/) - Retrieves a collection of tasks associated with the specified task list ID.
+   - [FetchTask(string id)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/fetchtask/) - Retrieves a specific task based on the provided ID.
+   - [CreateTask(MapiTask task, string taskListUri)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/createtask/) - Creates a new task in the specified task list.
+   - [UpdateTask(MapiTask task)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/updatetask/#updatetask) - Updates an existing task with the provided information.
+   - [UpdateTask(MapiTask task, UpdateSettings updateSettings)](https://reference.aspose.com/email/net/aspose.email.clients.graph/igraphclient/updatetask/#updatetask_1) - Updates an existing task with specified update settings.
+
+- You can cancel ongoing MBOX split operations when needed without restarting the entire workflow. Developers can now use a `CancellationToken` (in .NET Framework 4.5 and .NET Core) or the new [Cancel()]() method (for earlier .NET versions) to safely interrupt long-running split processes.
+
+## [Aspose.Email for .NET 24.5](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-5-release-notes/)
+
+- **Extract recipients** from messages stored in a PST file.
+  - by specifying a message entry ID. 
+  - by iterating through all messages in the Inbox folder, and extracting the recipients from each message.
+
+  This feature is available in the [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/) class.
+
+- **Recover soft deleted items** from local PST and OST files. 
+
+- Convert multi-contact VCF files into a distribution list.
+
+
 ## [Aspose.Email for .NET 24.3](https://releases.aspose.com/email/net/release-notes/2024/aspose-email-for-net-24-3-release-notes/)
 
 - **Support for Contacts and Calendar in MS Graph** - IGraphClient interface methods allow you to access, manage, and interact with users’ contacts and calendar events:

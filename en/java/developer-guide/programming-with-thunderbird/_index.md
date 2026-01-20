@@ -88,7 +88,52 @@ for (MboxMessageInfo msgInfo : reader.enumerateMessageInfo()) {
 ```
 **Note:** The message ID is unique within the storage file. IDs are created by Aspose.Email and cannot be used in other third-party MBOX processing libs or apps.
 
+## **Filter and Search Emails in MBOX Files**
+
+Aspose.Email for Java provides the ability to filter or search messages within MBOX files using a query. This allows for retrieving only the messages that match specific criteria. This way, you can improve an application performance and usability when working with large MBOX files.
+
+The code sample below demonstrates how to implement this feature by realizing the following methods:
+
+- `enumerateMessages(MailQuery query)` - returns an enumerable collection of MailMessage instances that match the specified query.
+
+- `enumerateMessageInfo(MailQuery query)` - returns an enumerable collection of MboxMessageInfo instances that match the specified query.
+
+
+```java
+MboxStorageReader reader = MboxStorageReader.createReader("input.mbox", new MboxLoadOptions());
+MailQueryBuilder mqb = new MailQueryBuilder();
+mqb.getSubject().contains("Project Update");
+mqb.getSentDate().before(new Date());
+
+for (MailMessage message : reader.enumerateMessages(mqb.getQuery())) {
+    System.out.println("Subject: " + message.getSubject());
+}
+```
+
+## **Paginated Message Retrieval from MBOX Files**
+
+Aspose.Email for Java supports paginated retrieval of messages from MBOX files. This feature allows for efficient processing of large MBOX files by retrieving messages in smaller batches, reducing memory consumption and improving performance.
+
+The code sample below demonstrates how to implement this feature by realizing the following methods:
+
+- `enumerateMessages(int startIndex, int count)` - retrieves a specified number of MailMessage instances starting from a given index.
+
+- `enumerateMessageInfo(int startIndex, int count)` - retrieves a specified number of MboxMessageInfo instances starting from a given index.
+
+
+```java
+MboxStorageReader reader = MboxStorageReader.createReader("input.mbox", new MboxLoadOptions());
+int startIndex = 0;
+int count = 10; // Retrieve messages in batches of 10
+
+for (MailMessage message : reader.enumerateMessages(startIndex, count)) {
+    System.out.println("Subject: " + message.getSubject());
+}
+```
+
+
 ## **Writing Messages**
+
 The [MboxrdStorageWriter](https://apireference.aspose.com/email/java/com.aspose.email/mboxrdstoragewriter) class provides the facility to write new messages to Thunderbird’s mail storage file. To write messages:
 
 1. Open the Thunderbird storage file in *FileStream*.

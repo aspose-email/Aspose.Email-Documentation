@@ -1,52 +1,100 @@
 ---
-title: "Zimbra Overview: Email, Calendar, and TGZ File Management"
-ArticleTitle: "Zimbra Overview: Email, Calendar, and TGZ File Management"
+title: Read and Export Zimbra TGZ Files in Node.js via .NET
+ArticleTitle: Read and Export Zimbra TGZ Files 
 type: docs
 weight: 120
-url: /net/zimbra-overview-email-calendar-tgz-management/
+url: /nodejs-net/read-export-zimbra-tgz-files/
 ---
 
 
-## **About Zimbra**
+**Zimbra** is a cloud-based email and collaboration suite that provides email, contacts, calendars, file sharing, tasks, and messaging - all accessible through the Zimbra Web Client on any device.
 
-Zimbra is an email, calendar and collaboration suite built for the cloud. Zimbra includes complete email, contacts, calendar, file sharing, tasks and messaging/videoconferencing, all accessed from the Zimbra Web Client from any device.
+**Aspose.Email for Node.js via .NET** enables developers to read, extract, and export data from Zimbra TGZ backup files using the [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/) class. You can easily access all messages, count total items, and export messages, contacts, or calendar data from TGZ files to common formats.
 
-## **Read All Messages from Zimbra TGZ Storage**
+## **Read All Messages from a Zimbra TGZ File**
 
-Aspose.Email provides the TgzReader class to read Zimbra TGZ storage files. The following sample code demonstrates the use of the TgzReader class to read all messages from the file. 
+The [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/) class allows you to read all messages stored in a Zimbra TGZ backup file.
 
-{{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-ReadAllMessagesFromZimbraTgzStorage-1.cs" >}}
+The following example demonstrates how to iterate through all messages and display their folder location and subject.
 
-## **Count Total Items in Zimbra TGZ Files**
+```javascript
+const asposeemail = require('@aspose/email');
+const fs = require('fs');
 
-The [GetTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/gettotalitemscount/#tgzreadergettotalitemscount-method) method of the [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/#tgzreader-class) class will return the total number of message items contained in the storage.
+// Path to the Zimbra TGZ file
+const tgzPath = "ZimbraSample.tgz";
+
+// Create a TgzReader instance
+const reader = new asposeemail.TgzReader(tgzPath);
+
+// Read and display all messages
+while (reader.readNextMessage()) {
+    const directoryName = reader.currentDirectory;
+    console.log("Directory:", directoryName);
+
+    const message = reader.currentMessage;
+    console.log("Subject:", message.subject);
+}
+
+reader.dispose();
+console.log("All messages read successfully from the Zimbra TGZ file.");
+```
+
+## **Count Total Items in a Zimbra TGZ File**
+
+You can quickly determine how many email items exist in a TGZ backup using the [getTotalItemsCount()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/gettotalitemscount/#tgzreadergettotalitemscount-method) method of the [TgzReader](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/#tgzreader-class) class.
 
 The following code sample will show you how to implement this method in your project:
 
-```cs
-using (TgzReader reader = new TgzReader(fileName))
-{
-    int count = reader.GetTotalItemsCount();
-}
+```javascript
+const asposeemail = require('@aspose/email');
+
+const tgzFile = "ZimbraSample.tgz";
+const reader = new asposeemail.TgzReader(tgzFile);
+
+const totalCount = reader.getTotalItemsCount();
+console.log(`Total items in TGZ file: ${totalCount}`);
+
+reader.dispose();
 ```
 
-## **Save Zimbra Messages and Directory Structure**
+## **Save Messages and Folder Structure from a Zimbra TGZ File**
 
-You may also save all the message with directory structure from the Zimbra TGZ storage file. For this, the TgzReader class provides a method ExportTo which takes the output path as a parameter.
+The [exportTo()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/exportto/) method allows you to save all messages from a TGZ file while preserving the original folder structure. This is useful when restoring or migrating mailbox data.
 
-The following code snippet demonstrates the use of the TgzReader.ExportTo method to save all messages from the Zimbra TGZ storage file.
+The following code sample demonstrates how to extract and export all Zimbra email messages from a TGZ archive file using the Aspose.Email library.
 
-{{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Email-SaveMessagesFromZimbraTgzStorage-1.cs" >}}
+```javascript
+const asposeemail = require('@aspose/email');
+
+const tgzFile = "ZimbraSample.tgz";
+const outputDir = "Output/Zimbra/";
+
+const reader = new asposeemail.TgzReader(tgzFile);
+reader.exportTo(outputDir);
+
+reader.dispose();
+console.log(`All Zimbra messages exported to: ${outputDir}`);
+```
 
 ## **Export Calendar and Contacts from Zimbra Backup Files**
 
-To export Zimbra’s calendar and contacts and save them in iCalendar and VCard formats, you can use the following code snippet:
+Zimbra TGZ backups may include contact and calendar folders. You can export these to VCard (.vcf) and iCalendar (.ics) formats using the same [exportTo()](https://reference.aspose.com/email/net/aspose.email.storage.zimbra/tgzreader/exportto/) method.
 
-```cs
-using (var reader = new TgzReader(@"test2.tgz"))
-{
-    //contacts files can be found in Contacts and Emailed Contacts subfolders
-    //calendar files can be found in Calendar subfolder
-    reader.ExportTo(@"out");
-}
+```javascript
+const asposeemail = require('@aspose/email');
+
+const tgzFile = "ZimbraBackup.tgz";
+const outputPath = "Output/ZimbraData/";
+
+const reader = new asposeemail.TgzReader(tgzFile);
+
+// Contacts can be found in "Contacts" and "Emailed Contacts" folders.
+// Calendar entries can be found in the "Calendar" folder.
+reader.exportTo(outputPath);
+
+reader.dispose();
+console.log("Zimbra calendar and contacts exported successfully.");
 ```
+
+

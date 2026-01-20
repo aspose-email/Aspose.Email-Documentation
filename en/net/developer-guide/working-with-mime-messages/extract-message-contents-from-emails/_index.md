@@ -87,3 +87,13 @@ string body_without_url = mail.GetHtmlBodyText(false);// body will not contain U
 Console.WriteLine("Body with URL: " + body_with_url);
 Console.WriteLine("Body without URL: " + body_without_url);
 ```
+
+## **Access X.500 Exchange Address**
+
+The [MailAddress](https://reference.aspose.com/email/net/aspose.email/mailaddress/#mailaddress-class) class has the `X500Address` property which is built to expose Exchange X.500 formatted addresses if present in a message. It provides read-only access to the X.500 (Exchange) address string for [MailAddress](https://reference.aspose.com/email/net/aspose.email/mailaddress/#mailaddress-class) instances and returns the X.500 address if it is included in message metadata, otherwise returns null or empty. No parsing required — the property returns the raw X.500 string.
+
+```cs
+var mailMessage = MailMessage.Load(fileName);
+string exaddr = mailMessage.From.X500Address;
+```
+

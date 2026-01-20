@@ -3,29 +3,33 @@ title: Reading corrupted PST/OST files
 ArticleTitle: Reading corrupted PST/OST files
 type: docs
 weight: 90
-url: /python-net/reading-corrupted-pst-ost-files/
+url: /python-net/read-corrupted-pst-ost-files/
 ---
 
 
-## **Reading corrupted PST/OST files**
+## **Reading Corrupted PST/OST Files**
 
-Sometimes it may not be possible to open a PST file due to some issues. One of those issues is the file corruption. If a PST file is corrupted or damaged, it may not be possible to open the file using Outlook email client. Aspose.Email provides API designed to scan a damaged PST file and read the undamaged messages within a file by their IDs.
+In some cases, a PST or OST file may become inaccessible due to corruption or damage. When this happens, Outlook may fail to open the file, making it difficult to retrieve important emails and other mailbox data.
 
-The following methods of the [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class are essential to cope with these tasks: 
+Aspose.Email provides an API that allows you to scan and extract undamaged messages from a corrupted PST file using message and folder IDs.
 
-To get the list of IDs:
+The following methods of the [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class are essential for recovering data from a corrupted PST file:
 
-- **find_messages(parent_entry_id)** - retrieves a list of message IDs within a specified folder.
+- Retrieve Message and Folder IDs:
 
-- **find_subfolders(parent_entry_id)** - obtains a list of subfolder IDs within the root folder.
+    **find_messages(parent_entry_id)** - retrieves a list of message IDs within a specified folder.
 
-To use these IDs to get the contents of the file:
+    **find_subfolders(parent_entry_id)** - obtains a list of subfolder IDs within a given folder.
 
-- **extract_message(entry_id)** - attempts to retrieve a message.
+- Access Messages and Folders Using Their IDs:
 
-- **get_folder_by_id(entry_id)** - accesses each folder.
+    **extract_message(entry_id)** - extracts a message from the PST file using its entry ID.
 
-The following code sample demonstrates how to explore and access the contents of a potentially corrupted PST file:
+    **get_folder_by_id(entry_id)** - retrieves a folder from the PST file using its entry ID.
+
+
+The following code sample demonstrates how to navigate through a potentially corrupted PST file, extract undamaged messages, and explore subfolders:
+
 
 ```py
 import aspose.email as ae

@@ -294,5 +294,24 @@ foreach (var attachment in eml.Attachments)
 }
 ```
 
+## **Extract Linked Images in HTML Emails**
 
+Extract linked image resources externally from the HTML body and embed them in HTML output with Aspose.Email for .NET. Set `HtmlSaveOptions.ExtractHTMLBodyResourcesAsAttachments` to True, and linked images and other resources in the HTML body will be extracted and embeded. This helps to preserve the original appearance of messages with linked content. The following code sample demonstrates how to load an email message, extract its external HTML resources as attachments, optionally handle resource rendering events, and then save the message as an HTML file using Aspose.Email for .NET.
 
+```cs
+// Load the email message
+var mailMessage = MailMessage.Load("input.eml");
+
+// Set options to extract external HTML resources
+var options = new HtmlSaveOptions();
+options.ExtractHTMLBodyResourcesAsAttachments = true;
+
+// Optional: Handle resource rendering events
+options.ResourceHtmlRendering += (sender, e) =>
+{
+    Console.WriteLine(e.PathToResourceFile + " " + ((Attachment)sender).ContentId);
+};
+
+// Save the HTML representation of the email
+mailMessage.Save("output.html", options);
+```

@@ -118,3 +118,28 @@ Since version 19.3, Aspose.Email provides the ability to convert Appointment EML
 The following example demonstrates the use of [MapiConversionOptions.ForcedRtfBodyForAppointment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiconversionoptions/forcedrtfbodyforappointment/) property to keep the appointment body format in HTML format.
 
 {{< gist "aspose-com-gists" "522d47278b8ca448dc1d7eb97193322c" "Examples-CSharp-Outlook-ConvertAppointmentEMLToMSGWithHTMLBody-1.cs" >}}
+
+## **Set the State of MAPI Calendar Items Manually**
+
+Set the state of a MAPI Calendar object explicitly, overriding default behavior. This allows better control over calendar event states, particularly when handling received meeting requests. By default, when a meeting is created, its state is `MapiCalendarState.Meeting`. When received in a recipient’s inbox, it automatically changes to `MapiCalendarState.Received`, and its message class is updated to “IPM.Schedule.Meeting.Request”. Using [SetStateForced](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendarstate/#values) allows manually setting the state to *Received*, which can be useful for preserving organizer information when saving the calendar as an MSG file. However, this may prevent proper forwarding or resending of the meeting.
+
+The code sample below demonstrates how to create a [MapiCalendar](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendar/) object, assign an organizer, and explicitly set its state to both `Meeting` and `Received` using [SetStateForced](https://reference.aspose.com/email/net/aspose.email.mapi/mapicalendarstate/#values). It then saves the calendar item as an .msg file. 
+
+```cs
+MapiCalendar appointment = new MapiCalendar(
+    "LAKE ARGYLE WA 6743",
+    "Appointment",
+    "This is a very important meeting :)",
+    new DateTime(2024, 5, 10, 12, 30, 0, DateTimeKind.Utc),
+    new DateTime(2024, 5, 10, 13, 30, 0, DateTimeKind.Utc));
+
+appointment.Organizer = new MapiElectronicAddress
+{
+    EmailAddress = "test@aaa.com",
+    DisplayName = "test display Name"
+};
+
+appointment.SetStateForced(MapiCalendarState.Meeting | MapiCalendarState.Received);
+
+appointment.Save("appointment.msg", AppointmentSaveFormat.Msg);
+```

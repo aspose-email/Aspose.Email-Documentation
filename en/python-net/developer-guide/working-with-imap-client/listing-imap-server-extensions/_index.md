@@ -1,14 +1,13 @@
 ---
-title: Listing IMAP Server Extensions
-ArticleTitle: Listing IMAP Server Extensions
+title: List IMAP Server Extensions in Python
+ArticleTitle: List IMAP Server Extensions
 type: docs
 weight: 40
-url: /python-net/listing-imap-server-extensions/
+url: /python-net/list-imap-server-extensions/
 ---
 
 
-## **Listing Server Extensions**
-Aspose.Email's ImapClient lets you retrieve the server extensions that a server supports such as IDLE, UNSELECT,QUOTA, etc. This helps in identifying the availability of an extension before using the client for that particular functionality. The GetCapabilities() method returns the supported extension types in the form of a string array. The following code snippet shows you how to retrieve extensions.
+Aspose.Email [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) allows you to retrieve the server extensions supported by the mail server such as IDLE, UNSELECT, QUOTA, and others. This helps ensure the availability of specific features before performing operations that rely on them. The `get_capabilities()` method of the [ImapClient](https://reference.aspose.com/email/python-net/aspose.email.clients.imap/imapclient/#imapclient-class) class returns a list of supported IMAP extension types as strings. The following code snippet shows you how to retrieve the list of IMAP extensions:
 
 
 

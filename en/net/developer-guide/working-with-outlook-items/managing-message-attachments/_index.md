@@ -27,7 +27,7 @@ foreach (var attach in message.Attachments)
 
 ### **Check Attachment Type (IsReference)**
 
-The [MapiAttachment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/#mapiattachment-class) class includes the [IsReference](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isreference/) property which allows developers to identify reference attachments in a message. With thefollowing code sample, you can check if an attachment is a reference attachment:
+The [MapiAttachment](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/#mapiattachment-class) class includes the [IsReference](https://reference.aspose.com/email/net/aspose.email.mapi/mapiattachment/isreference/) property which allows developers to identify reference attachments in a message. With the following code sample, you can check if an attachment is a reference attachment:
 
 ```cs
 foreach (var attachment in msg.Attachments)
@@ -115,7 +115,7 @@ The following code snippet shows you how to removing Attachments.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-RemoveAttachmentsFromFile-RemoveAttachmentsFromFile.cs" >}}
 
-You can also call the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) class static method [DestoryAttachment()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/destroyattachments/). It works faster than RemoveAttachment(), because the RemoveAttachment() method parses the message file.
+You can also call the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) class static method [DestroyAttachment()](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/destroyattachments/). It works faster than RemoveAttachment(), because the RemoveAttachment() method parses the message file.
 
 {{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Outlook-DestroyAttachment-DestroyAttachment.cs" >}}
 

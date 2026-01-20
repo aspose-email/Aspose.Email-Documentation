@@ -1,38 +1,38 @@
 ---
-title: Connecting to SMTP Server
-ArticleTitle: Connecting to SMTP Server
+title: SMTP Client Connection Setup
+ArticleTitle: Connect to SMTP Server
 type: docs
 weight: 10
-url: /python-net/connecting-to-smtp-server/
+url: /python-net/connect-to-smtp-server-python/
 ---
 
 
-## **Connecting SSL Enabled SMTP Server**
-The following properties need to be set when connecting with an SMTP server with SSL support.
+## **Connect to SMTP Server with SSL**
 
-- SecurityOptions
-- Port
+To establish a secure connection with an SMTP server that supports SSL, you need to configure the following key properties of the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/) class:
 
-In the examples below we show how to:
+- **Host:** The address of the SMTP server (e.g., smtp.gmail.com)
 
-1. Set a username.
-1. Set a password.
-1. Set the port.
-1. Set security option.
+- **Port:** The port used for SSL-enabled communication (commonly 465 for implicit SSL or 587 for explicit SSL/TLS)
 
-The following code snippet shows you how to connect SSL enabled SMTP server.
+- **Username:** The account name used for authentication
+
+- **Password:** The password for the SMTP account
+
+- **Security Options:** The type of encryption to be used (SSLEXPLICIT, SSLIMPLICIT, etc.)
+
+
+The following code sample demonstrates how to configure and connect to an SSL-Enabled SMTP server:
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-SMTP-SSLEnabledSMTPServer-SSLEnabledSMTPServer.py" >}}
 
 ### **Set a Timeout for the Greeting Response from the Server**
 
-To enhance the efficiency of email client operations, developers often rely on the timeout property to limit the duration of lengthy processes. However, specifying excessively long intervals for this property can hinder operations that require extended processing times. A notable scenario is during the establishment of a connection, where relying solely on the Timeout property may result in prolonged connection times.
+When establishing a connection with an SMTP server, the server typically sends a greeting string after a successful connection. This response confirms that the server is ready to proceed with the communication.
 
-In specific cases, the email client may employ an automatic mode for connection establishment, systematically cycling through various connection parameters until a successful connection is established. SMTP, IMAP, and POP3 servers, upon successful connection initiation, send a greeting string to the client. Notably, servers may employ either implicit or explicit (START TLS) SSL/TLS connection initiation methods.
+In some scenarios, email clients operate in automatic connection mode, trying multiple combinations of security protocols and ports (such as implicit SSL or STARTTLS) to establish a successful connection. If the client's configuration doesn't match the server's expected security mode, the server won't send the greeting string. This mismatch causes the client to wait until the general timeout expires before trying the next combination — resulting in slow connection handling.
 
-A potential challenge arises when the connection mode mismatches between the server and the client. For example, if the server anticipates an implicit SSL connection while the client attempts to establish a non-secured or explicitly SSL connection, the server refrains from sending a greeting string. Consequently, users experience prolonged wait times until the timeout is reached, prompting the client to move on to the next connection option.
-
-To address this issue, developers can leverage the 'greeting_timeout' property of the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class. This property enables the specification of a timeout (in milliseconds) specifically for the greeting string, minimizing the time required for automatic connection establishment. By incorporating the 'greeting_timeout' property, developers can optimize connection processes and ensure a more responsive and efficient email client experience.
+To improve this behavior, Aspose.Email provides the `greeting_timeout` property in the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class. This property sets a specific timeout (in milliseconds) for waiting on the server greeting string. If the greeting isn’t received within the specified interval, the client immediately attempts the next connection configuration — significantly speeding up automatic connection processes.
 
 The following code sample demonstrates how to implement the property into a project:
 
@@ -42,7 +42,8 @@ import aspose.email as ae
 client = ae.clients.smtp.SmtpClient("localhost", 25, "username", "password")
 client.greeting_timeout = 4000
 ```
-## **Send an Email via Socks Proxy Server**
+
+## **Send Emails via SMTP using a SOCKS Proxy**
 
 Aspose.Email provides support for versions 4, 4a and 5 of SOCKS proxy protocol. The following code sample demonstrates how to send an email using SMTP with SOCKS proxy: 
 
@@ -61,7 +62,7 @@ client.proxy = socks_proxy
 client.send(ae.MailMessage("sender@domain.com", "receiver@domain.com", "Sending Email via proxy", "Implement socks proxy protocol for versions 4, 4a, 5 (only Username/Password authentication)"))
 ```
 
-## **Connecting to Server via HTTP Proxy Server**
+## **Send Emails via SMTP using an HTTP Proxy**
 
 The code sample below demonstrates the use of an HTTP proxy to send an email via an SMTP server: 
 
@@ -74,22 +75,29 @@ client.proxy = http_proxy
 client.send(ae.MailMessage("sender@domain.com", "receiver@domain.com", "Sending Email via proxy", "Body"))
 ```
 
-## **Connecting to Server using Supported Authentication Method**
+## **Select Supported SMTP Authentication Methods in Python**
 
-To establish a secure and successful connection to the server for sending emails, a client can select a supported authentication method based on the server's capabilities. Aspose.Email provides properties which return lists of supported authentication methods: 
+To ensure a secure and compatible connection to an SMTP server, it's important to use an authentication method supported by both the client and the server. Aspose.Email for Python via .NET provides built-in [properties](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#properties) to manage this:
 
-- 'supported_authentication' property gets enumeration of authentication types supported by server 
-- 'allowed_authentication' property gets or sets enumeration of authentication types allowed by user 
+- `supported_authentication` — retrieves a list of authentication methods supported by the SMTP server.
 
-Using these properties, developers can ensure that the SMTP client and server are compatible in terms of supported authentication methods and establish a connection with an SMTP server. The following code snippet provides an example of using 'allowed_authentication' property in a project:
+- `allowed_authentication` — gets or sets the authentication methods that the client is permitted to use.
+
+By using these properties, developers can align the client's capabilities with the server's requirements and avoid authentication failures during the connection process.
+
+The following code snippet demonstrates how to specify the allowed SMTP authentication method using the `allowed_authentication` property:
 
 ```py
 client.allowed_authentication = ae.clients.smtp.SmtpKnownAuthenticationType.LOGIN
 ```
 
-## **How to Set Timeout for Mail Operations**
+## **Set SMTP Server Timeout**
 
-Setting a timeout can be important for handling network communication effeciently. The 'timeout' property of the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class is used to specify the maximum time (in milliseconds) to wait for a response from the SMTP server. This property allows the user to control the duration the client will wait for the server to respond to a particular operation, such as a connection or sending a command. If the server takes longer than the specified time to respond, the client will throw an exception, indicating a timeout error. This helps in managing the client's behavior when interacting with the server, ensuring that the client does not hang indefinitely if the server does not respond in a timely manner. Use the following code snippet to set the timeout for the server response:
+When sending emails over a network, setting an appropriate timeout is essential for preventing your application from hanging if the server fails to respond. The `timeout` property of the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class in Aspose.Email for Python via .NET allows you to define the maximum wait time (in milliseconds) for server responses.
+
+This property applies to operations such as establishing a connection or sending SMTP commands. If the server does not respond within the specified duration, the client throws a timeout exception, helping you handle unresponsive servers more effectively.  
+
+Use the following code snippet to set the timeout for the server response:
 
 ```py
 import aspose.email as ae
@@ -99,14 +107,15 @@ client = ae.clients.smtp.SmtpClient("host", 587, "username", "password", ae.clie
 client.timeout = 60000
 ```
 
-## **Using Cryptographic Protocols with SMTP Client**
+## **Enable TLS Encryption for Secure SMTP Connections**
 
-Aspose.Email supports SSL (obsolete) and TLS cryptographic protocols to provide communications security. You can enable cryptographic encryption to protect data exchange between your application and mail servers.
+Aspose.Email supports secure communication with SMTP servers using SSL and TLS cryptographic protocols. These protocols help protect the data exchanged between your application and the mail server, ensuring confidentiality and integrity during transmission.
 
 ```
-NOTE: You should set only those versions of the protocol, which are supported by Python Framework. If some versions of the cryptographic protocol are not supported by your current version of Python Framework, they will be ignored and skipped. In this case, exceptions won't be generated. Please use 'set_supported_encryption_unsafe(value)' method of the SmtpClient class if you want to set the protocols without any compatibility checks.
+NOTE: Only versions of SSL/TLS supported by your current Python framework can be applied. Unsupported protocol versions will be silently ignored without raising exceptions. If you need to bypass compatibility checks and explicitly set the encryption protocols, use the `set_supported_encryption_unsafe(value)` method of the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class.
 ```
-The code example below shows you how to set TLS 1.3 for SmtpClient class instance.
+
+The following code example demonstrates how to set TLS 1.3 for SMTP communication:
 
 ```py
 import aspose.email as ae
@@ -117,7 +126,9 @@ client.supported_encryption = ae.clients.base.EncryptionProtocols.TLS13
 
 ## **Using the CRAM-MD5 Mechanism for Authentication**
 
-The CRAM-MD5 authentication mechanism of Aspose.Email for Python provides an additional layer of security when accessing the server. The following code snippet shows how to implement this feature into your project:
+Aspose.Email for Python via .NET supports the CRAM-MD5 authentication mechanism, which enhances security by avoiding the transmission of plain-text passwords during SMTP authentication. This method is particularly useful when connecting to servers that require challenge-response authentication.
+
+To enable CRAM-MD5 authentication, set the `allowed_authentication` property of the [SmtpClient](https://reference.aspose.com/email/python-net/aspose.email.clients.smtp/smtpclient/#smtpclient-class) class to CRAM_MD5, as shown in the following code sample:
 
 ```py
 client.allowed_authentication = ae.clients.smtp.SmtpKnownAuthenticationType.CRAM_MD5

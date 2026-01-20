@@ -150,6 +150,42 @@ for (Attachment attachment : eml.getAttachments()) {
 }
 ```
 
+#### **Load and Save TNEF Attachments**
+
+Aspose.Email for Java provides methods in the [MapiAttachment](https://reference.aspose.com/email/java/com.aspose.email/mapiattachment/) class to perform the following operations:
+
+**Load from TNEF**
+
+- `static MapiAttachment loadFromTnef(String fileName)` – Loads an attachment from a TNEF file.
+
+- `static MapiAttachment loadFromTnef(InputStream stream)` – Loads an attachment from a TNEF stream.
+
+**Save to TNEF**
+
+- `void saveToTnef(String fileName)` – Saves an attachment to a TNEF file.
+
+- `void saveToTnef(OutputStream stream)` – Saves an attachment to a TNEF stream.
+
+The following code sample demonstrates how to extract a TNEF attachment from a message, save it to a stream or file, and then load it back into the message as a [MapiAttachment](https://reference.aspose.com/email/java/com.aspose.email/mapiattachment/):
+
+```java
+// Load message containing a TNEF attachment (winmail.dat)
+MapiMessage msg = MapiMessage.load("message.eml");
+
+// Save the first attachment to a TNEF stream
+ByteArrayOutputStream bos = new ByteArrayOutputStream();
+msg.getAttachments().get(0).saveToTnef(bos);
+
+// Load attachment back from the TNEF stream
+ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+MapiAttachment fromtnefAttachment = MapiAttachment.loadFromTnef(bis);
+msg.getAttachments().addMapiAttachment(fromtnefAttachment);
+
+// Load TNEF attachment directly from a file
+fromtnefAttachment = MapiAttachment.loadFromTnef("winmail.dat");
+msg.getAttachments().addMapiAttachment(fromtnefAttachment);
+```
+
 #### **Extracting Attachment URI if Attachment is URI-attachment**
 
 The following code snippet demonstrates how to extract Attachment URI.

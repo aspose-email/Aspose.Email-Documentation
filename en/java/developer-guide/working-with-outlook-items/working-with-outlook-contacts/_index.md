@@ -150,7 +150,12 @@ The [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapic
 
 #### **Load a contact from VCard**
 
-{{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-outlook-msg-CreateSaveAndReadOutlookContact-LoadingAContactFromVCard.java" >}}
+The following code shows how to create a [MapiContact](https://reference.aspose.com/email/java/com.aspose.email/mapicontact/) by loading data from a VCard file using [VCardLoadOptions](https://reference.aspose.com/email/java/com.aspose.email/vcardloadoptions/):
+
+```java
+MapiContact mapiContact = MapiContact.fromVCard("contact.vcf", new VCardLoadOptions());
+System.out.println(mapiContact.getNameInfo().getDisplayName());
+```
 
 #### **Load VCard Contact with specified Encoding**
 

@@ -11,7 +11,7 @@ url: /net/working-with-outlook-tasks/
 
 Aspose.Email for .NET allows you to create Outlook tasks and save them to MSG format. The [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) class provides a number of properties such as [PercentComplete](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/percentcomplete/), [EstimatedEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/estimatedeffort/), [ActualEffort](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/actualeffort/), [History](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/history/), [LastUpdate](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/lastupdate/), and others, to accommodate and set information required for an Outlook task. This article shows how to create, save and read a [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) from disk. To create and save a task to disk:
 
-1. Instantiate a new object of the [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) class.
+1. Instantiate a new object of the [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) class.
 1. Enter task property information.
 1. Save the task to disc in MSG format.
 
@@ -21,13 +21,13 @@ The following code snippet shows you how to create, save and read Tasks.
 
 ## **Read MAPI Tasks**
 
-The [MapiContact](https://reference.aspose.com/email/net/aspose.email.mapi/mapicontact/) class object is used to cast the [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) object that loads a task from the disk as MSG format. The following code snippet shows you how to read a [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/).
+Tasks saved in MSG format can be loaded into [MapiMessage](https://reference.aspose.com/email/net/aspose.email.mapi/mapimessage/) and then converted to [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) with access to their specific properties, such as the subject and status. The following code sample demonstrates how to read and manipulate task details from saved MSG files:
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-LoadingContactFromMSG-LoadingContactFromMSG.cs" >}}
 
 ## **Read VToDo Tasks**
 
-Google Tasks exported in iCalendar format as VToDo events can be loaded using the [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) class as shown in the following code sample. The following code snippet shows you how to read a VToDo Task.
+Outlook tasks exported in iCalendar format as VToDo events can be loaded using the [MapiTask](https://reference.aspose.com/email/net/aspose.email.mapi/mapitask/) class as shown in the following code sample. The following code snippet shows you how to read a VToDo Task.
 
 {{< gist "aspose-com-gists" "6e5185a63aec6fd70d83098e82b06a32" "Examples-CSharp-Outlook-ReadingVToDoTask-ReadingVToDoTask.cs" >}}
 

@@ -413,6 +413,30 @@ try (PersonalStorage personalStorage = PersonalStorage.fromFile(dataDir)) {
 }
 ~~~
 
+## **Enumerate and Recover Soft-Deleted Messages from PST**
+
+It's possible to retrieve permanently deleted messages with Aspose.Email for Java. Its API allows you to enumerate soft-deleted messages in PST files. Soft-deleted items are messages that have been deleted twice - first moved to the Deleted Items folder and then removed from there. These messages are still recoverable, and Aspose.Email provides a convenient way to access them. The [PersonalStorage.findAndEnumerateSoftDeletedItems()](https://reference.aspose.com/email/java/com.aspose.email/personalstorage/#methods) method returns a collection of [RestoredItemEntry](https://reference.aspose.com/email/net/aspose.email.storage.pst/restoreditementry/) objects. Each entry contains:
+
+- [MapiMessage](https://reference.aspose.com/email/java/com.aspose.email/mapimessage/) item — the recovered message.
+- String [FolderId](https://reference.aspose.com/email/net/aspose.email.storage.pst/restoreditementry/folderid/) - the identifier of the folder where the message originally belonged.
+
+The following code sample demonstrates how to enumerate soft-deleted (recoverable) email items in PST files:
+
+```java
+// Load the PST file
+try (PersonalStorage pst = PersonalStorage.fromFile(fileName)) {
+    // Enumerate soft-deleted items
+    for (RestoredItemEntry entry : pst.findAndEnumerateSoftDeletedItems()) {
+        MapiMessage message = entry.getItem();
+        String folderId = entry.getFolderId();
+        
+        System.out.println("Subject: " + message.getSubject());
+        System.out.println("Deleted from Folder ID: " + folderId);
+        System.out.println("-----------------------------------");
+    }
+}
+```
+
 ## **Search Messages and Folders in a PST by Criterion**
 
 Personal Storage (PST) files can contain a huge amount of data and searching for data that meets a specific criteria in such large files needs to include multiple check points in the code to filter the information. With the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) class, Aspose.Email makes it possible to search for specific records in a PST based on a specified search criteria. A PST can be searched for messages based on search parameters such as sender, receiver, subject, message importance, presence of attachments, message size, and even message ID. The [PersonalStorageQueryBuilder](https://reference.aspose.com/email/java/com.aspose.email/personalstoragequerybuilder/) can also be used to search for subfolders.
@@ -555,6 +579,40 @@ try (PersonalStorage storage = PersonalStorage.fromFile("example.pst"))
     }
 }
 ~~~
+
+## **Paginated Retrieval of PST Folder Contents**
+
+Improve your application performance and control when navigating large folders. Retrieve folder contents in a paginated manner using the Aspose.Email overload of the [getContents](https://reference.aspose.com/email/java/com.aspose.email/folderinfo/#getContents-com.aspose.email.MailQuery-int-int-) method. This method - `FolderInfo.getContents(MailQuery query, int startIndex, int count)` - retrieves a subset of messages that match the specified query, starting from a given index and limited by a count. The following code sample demonstrates paginated retrieval and processing of filtered messages from a PST folder:
+
+
+```java
+// Load the PST file
+try (PersonalStorage pst = PersonalStorage.fromFile(fileName)) {
+    // Access a specific subfolder
+    FolderInfo folder = pst.getRootFolder().getSubFolder("Inbox");
+
+    // Build a query to filter messages by sender address
+    PersonalStorageQueryBuilder queryBuilder = new PersonalStorageQueryBuilder();
+    queryBuilder.getFrom().contains("report-service", true);
+
+    // Define the page size
+    int pageSize = 5;
+
+    // Retrieve and process messages in pages
+    for (int pageIndex = 0; pageIndex < 6; pageIndex++) {
+        int startIndex = pageIndex * pageSize;
+
+        // Get a page of messages
+        MessageInfoCollection messages = folder.getContents(queryBuilder.getQuery(), startIndex, pageSize);
+
+        for (MessageInfo messageInfo : messages) {
+            // Output basic info about each message
+            System.out.println("Subject: " + messageInfo.getSubject() + ", Sender: " + messageInfo.getSenderRepresentativeName());
+        }
+    }
+}
+```
+
 
 ## **Move Items to Other Folders of PST File**
 

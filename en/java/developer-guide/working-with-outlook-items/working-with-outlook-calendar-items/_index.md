@@ -191,6 +191,35 @@ for (MapiRecipient recipient : message.getRecipients()) {
 }
 ~~~
 
+### **Set Calendar Appointment State Explicitly**
+
+Aspose.Email allows you to set the state of a [MapiCalendar](https://reference.aspose.com/email/java/com.aspose.email/mapicalendar/) object explicitly, overriding the default behavior. The `setStateForced` method provides better control over calendar event states, particularly when handling received meeting requests. By default, when a meeting is created, its state is `MapiCalendarState.Meeting`. When received in a recipient’s inbox, it automatically changes to `MapiCalendarState.Received`, and its message class is updated to `IPM.Schedule.Meeting.Request`. Using `SetStateForced` allows manually setting the state to Received, which can be useful for preserving organizer information when saving the calendar as an MSG file. However, this may prevent proper forwarding or resending of the meeting.
+
+The following code sample will help you implement this feature:
+
+```java
+Calendar c = Calendar.getInstance();
+c.set(2024, Calendar.MAY, 10, 12, 30, 0);
+Date startDate = c.getTime();
+c.set(2024, Calendar.MAY, 10, 13, 30, 0);
+Date endDate = c.getTime();
+MapiCalendar appointment = new MapiCalendar(
+        "LAKE ARGYLE WA 6743",
+        "Appointment",
+        "This is a very important meeting :)",
+        startDate,
+        endDate);
+
+MapiElectronicAddress organizer = new MapiElectronicAddress();
+organizer.setEmailAddress("test@aaa.com");
+organizer.setDisplayName("test display Name");
+appointment.setOrganizer(organizer);
+
+appointment.setStateForced(MapiCalendarState.Meeting | MapiCalendarState.Received);
+
+appointment.save("appointment.msg", AppointmentSaveFormat.Msg);
+```
+
 ### **Create MapiCalendarTimeZone from Standard Timezone**
 
 The following code snippet shows you how to сreate [MapiCalendarTimeZone](https://reference.aspose.com/email/java/com.aspose.email/mapicalendartimezone/) from the standard Timezone.

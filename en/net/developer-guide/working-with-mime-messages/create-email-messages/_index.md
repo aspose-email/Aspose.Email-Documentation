@@ -43,6 +43,21 @@ var message = new MailMessage
     </html>"
 };
 ```
+### **Set Default Text Encoding**
+
+Set the default text encoding for the following properties:
+
+- From: Display name
+- To: Display name
+- Subject
+- Body
+
+Use the [MailMessage.PreferredTextEncoding](http://www.aspose.com/api/net/email/aspose.email/mailmessage/properties/preferredtextencoding) property to ensure that all the text in the above properties is encoded properly in the email message. The following code snippet shows you how to use a French word as the display name for email addresses, subject and body.
+
+
+
+{{< gist "aspose-email" "9e8fbeb51a8cbc4129dc71ca8cd55f0b" "Examples-CSharp-Email-SetDefaultTextEncoding-SetDefaultTextEncoding.cs" >}}
+
 
 ## **Set Mail Body**
 

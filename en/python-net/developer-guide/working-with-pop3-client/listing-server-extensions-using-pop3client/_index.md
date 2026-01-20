@@ -1,16 +1,15 @@
 ---
-title: Listing Server Extensions using Pop3Client
-ArticleTitle: Listing Server Extensions using Pop3Client
+title: List Supported POP3 Server Extensions
+ArticleTitle: List Supported POP3 Server Extensions
 type: docs
 weight: 30
-url: /python-net/listing-server-extensions-using-pop3client/
+url: /python-net/list-pop3-server-extensions-python/
 ---
 
-## **Listing Server Extensions using Pop3Client**
-Aspose.Email's Pop3Client lets you retrieve the server extensions that a server supports such as IDLE, UNSELECT,QUOTA, etc. This helps in identifying the availability of an extension before using the client for that particular functionality. The GetCapabilities() method returns the supported extension types in the form of a string array.
-### **Retrieving Server Extensions**
-The following code sample demonstrates retrieving server extensions using ImapClient for Gmail server.
 
+Aspose.Email provides a [Pop3Client](https://reference.aspose.com/email/python-net/aspose.email.clients.pop3/pop3client/) class that allows you to retrieve the supported extensions of a POP3 server, such as IDLE, UNSELECT, QUOTA, and more. Knowing which extensions are available is crucial for determining if specific functionalities can be utilized. The `get_capabilities()` method returns the types of supported extensions as a string array.
+
+The following code sample demonstrates how to retrieve server extensions using Pop3Client for the Gmail server:
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-POP3-ListingServerExtensions-ListingServerExtensions.py" >}}

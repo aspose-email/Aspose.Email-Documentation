@@ -59,3 +59,31 @@ The [MailMessage](https://reference.aspose.com/email/java/com.aspose.email/mail
 The following code snippet demonstrates the use of **GetHtmlBodyText** method to extract the HTML body of the email as plain text.
 
 {{< gist "aspose-com-gists" "709d733586ce50505c3bca3f6e8bd18d" "Examples-src-main-java-com-aspose-email-examples-email-GetHTMLBodyAsPlainText-1.java" >}}
+
+## **Retrieve X.500 Exchange Addresses from Emails**
+
+Aspose.Email for Java allows you to access X.500 Exchange addresses directly through the [MailAddress](https://reference.aspose.com/email/java/com.aspose.email/mailaddress/) class. With the `X500Address` property, you can retrieve the email address in the Exchange X.500 format when it is available. The following code sample shows how to load an email message and get the sender’s X.500 address:
+
+```java
+MailMessage mailMessage = MailMessage.load(fileName);
+String exaddr = mailMessage.getFrom().getX500Address();
+```
+
+If the X.500 address exists, it will be returned as a string and can be used for further processing or logging in applications that interact with Exchange-based systems.
+
+## **Extract and Embed Linked Images as Attachments in HTML Emails**
+
+Aspose.Email `ExtractHTMLBodyResourcesAsAttachments` method of the [HtmlSaveOption](https://reference.aspose.com/email/java/com.aspose.email/htmlsaveoptions/) class defines whether to extract HTML body resources as attachments. Thus, you can extract image-linked content from the HTML body and embed it as an attachment in a MIME message. The linked images are preserved and properly associated with the email, improving content integrity and offline accessibility.
+
+The following code sample demonstrates how to perform this task:
+
+```java
+MailMessage mailMessage = MailMessage.load("input.eml");
+HtmlSaveOptions options = new HtmlSaveOptions();
+options.setExtractHTMLBodyResourcesAsAttachments(true);
+options.setResourceHtmlRenderingHandler(new ResourceHtmlRenderingHandler() {
+    public void invoke(final Object sender, final ResourceHtmlRenderingEventArgs e) {
+        System.out.println(e.getPathToResourceFile() + " " + ((Attachment)sender).getContentId());
+    }
+});
+```

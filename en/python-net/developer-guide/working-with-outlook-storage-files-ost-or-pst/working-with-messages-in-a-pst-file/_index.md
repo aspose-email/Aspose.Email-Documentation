@@ -7,42 +7,71 @@ url: /python-net/working-with-messages-in-a-pst-file/
 ---
 
 
-## **Adding Messages to PST Files**
-Create a New PST File and Add Subfolders showed how to create a PST file and add a subfolder to it. With Aspose.Email you can add messages to subfolders of a PST file that you have created or loaded. This article adds two messages from disk to the Inbox subfolder of a PST. Use the PersonalStorage and FolderInfo classes to add messages to PST files. To add messages to a PST file's Inbox folder:
+## **Add Messages to Outlook PST Files**
 
-1. Create an instance of the FolderInfo class and load it with the contents of the Inbox folder.
-1. Add messages from disk to the Inbox folder by calling the FolderInfo.add_message() method. The FolderInfo class exposes the add_messages method that enables to add large number of messages to the folder, reducing I/O operations to disc and improving performance. A complete example can be found below, in Adding Bulk Messages.
+### **Add a Single Message to a PST File**
 
-The code snippets below shows how to add messages to a PST subfolder called Inbox.
+[Create a New PST File and Add Subfolders](https://docs.aspose.com/email/python-net/create-new-pst-file-and-add-subfolders/) shows how to create a PST file and add a subfolder to it. With Aspose.Email you can also add messages to subfolders of a PST file that you have created or loaded. The code sample below demonstrates how to create a new PST file, add an "Inbox" folder, and then add a message to that folder. The [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) and the [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) classes are used to perform the task.
+
+1. Use the [PersonalStorage.create](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods) method to initiate a new PST file specifying the file path and the file format version as Unicode.
+2. Create a new folder named "Inbox" in the root directory of the PST file.
+3. Add a message to the newly created "Inbox" folder using the [add_message](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) method.
+4. Load the message using [MapiMessage.load](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapimessage/#methods).
 
 
+```py
+pst = PersonalStorage.create(dataDir + "AddMessagesToPst_out.pst", FileFormatVersion.UNICODE)
 
-{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddMessagesToPSTFiles-AddMessagesToPSTFiles.py" >}}
-### **Adding Bulk Messages**
-Adding individual messages to a PST implies more I/O operations to disc and hence may slow down performance. For improved performance, messages can be added to the PST in bulk mode to minimize I/O operations. The add_messages method allows you to define a range of message be added to the PST for improved performance and can be used as in the following scenarios.
-### **Loading Messages from Disc**
-The following code snippet shows you how to loading messages from disc.
+# Add new folder "Inbox"
+inboxFolder = pst.root_folder.add_sub_folder("Inbox");
+
+# Add message to Inbox Folder
+inboxFolder.add_message(MapiMessage.load(dataDir + "MapiMsgWithPoll.msg"))
+
+pst.dispose()
+```
+
+## **Add Multiple Messages to PST Files for Better Performance**
+
+Adding individual messages to a PST implies more I/O operations to disc and hence may slow down performance. To improve performance, messages can be added to PST in bulk mode, and minimize I/O operations.
+
+### **Load and Add Messages from Disk**
+
+The [add_messages](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) method allows you to define a range of messages to be added to a PST file. The code sample below demonstrates how to add multiple messages from disk to a PST file for improved performance: 
+
+1. Define a function by creating `add_messages_in_bulk_mode` with parameters for the PST filename and the folder with messages.
+2. Open the specified PST file using [PersonalStorage.from_file()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods).
+3. Retrieve subfolder "myInbox" from the PST root folder.
+4. Add messages from the specified folder in bulk using [folder.add_messages()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods).
+5. Call `add_messages_in_bulk_mode()` with the PST file and folder name as arguments.
 
 ```py
 from aspose.email.storage.pst import PersonalStorage, StandardIpmFolder, FileFormatVersion
-
 
 def add_messages_in_bulk_mode(file_name, msg_folder_name):
     with PersonalStorage.from_file(file_name) as personal_storage:
         folder = personal_storage.root_folder.get_sub_folder("myInbox")
         folder.add_messages(message_collection(msg_folder_name))
 
-# Usage
+# Add multiple messages from the specified folder to the PST file for improved performance
 add_messages_in_bulk_mode("file.pst", "folder_with_messages")
 ```
-### **MapiMessageCollection Implementation**
-The following code snippet shows you how to implement MapiMessageCollection.
+
+### **Use `MapiMessageEnumerator` for Bulk Operations**
+
+To streamline bulk message processing, you can implement the `MapiMessageEnumerator` class which efficiently iterates through messages stored in a specified folder. The following Python script provides a structured approach to enumerating and iterating over MAPI messages using the Aspose.Email library. It defines two helper classes:
+
+- `MapiMessageEnumerator` for reading messages from a directory,
+
+- and `MapiMessageCollection` for managing them during batch operations.
+
+This approach facilitates the traversal and handling of MAPI message files.
 
 ```py
 import os
 from aspose.email.mapi import MapiMessage
 
-
+# Define a class to enumerate through MAPI message files in a directory
 class MapiMessageEnumerator:
     def __init__(self, path):
         self.files = os.listdir(path)
@@ -58,7 +87,7 @@ class MapiMessageEnumerator:
     def __iter__(self):
         return self
 
-
+# Define a collection class for managing MAPI messages
 class MapiMessageCollection:
     def __init__(self, path):
         self.path = path
@@ -67,29 +96,30 @@ class MapiMessageCollection:
         return MapiMessageEnumerator(self.path)
 
 
-# Usage
+# Iterate through MAPI messages in a specific directory
 msg_folder_name = "\\Files\\msg"
 
+# Initialize a collection with the directory containing message files
 message_collection = MapiMessageCollection(msg_folder_name)
 for message in message_collection:
-    # Do something with each MapiMessage
+    # Process each MAPI message object as needed
     pass
 ```
-### **Adding Messages from Other PST**
-For adding messages from the another PST, use the FolderInfo.enumerate_mapi_messages() method. The following code snippet shows you how to add messages from other PST.
 
+### **Add Messages from Another PST**
+
+To import messages from one PST file to another, Aspose.Email provides the [FolderInfo.enumerate_mapi_messages()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) method. The following code sample demonstrates how to copy messages from an "Inbox" folder in one PST file to another PST file:
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddMessagesFromOtherPST-AddMessagesFromOtherPST.py" >}}
-## **Get Messages Information from an Outlook PST File**
-In Read Outlook PST File and Get Folders and Subfolders Information, we discussed loading an Outlook PST file and browse its folders to get the folder names and the number of messages in them. This article explains how to read all the folders and subfolders in the PST file and display the information about messages, for example, subject, sender, and recipients. The Outlook PST file may contain nested folders. To get message information from these, as well as the top-level folders, use a recursive method to read all the folders. The following code snippet shows you how to reads an Outlook PST file and display the folder and message contents recursively.
 
+## **Retrieve Messages from Outlook PST Files**
 
+In [Read Outlook PST Files, Retrieve Folders and SubFolders Information](https://docs.aspose.com/email/python-net/read-outlook-pst-files-python), we discussed loading an Outlook PST file and browse its folders to get the folder names and the number of messages in them. This article explains how to access and extract messages from Outlook PST files: retrieve basic message details, count the number of items in a folder, and extract a specific number of messages for processing or analysis. 
 
-{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-GetMessagesInformation-GetMessagesInformation.py" >}}
-## **Extracting Messages Form PST Files**
+### **Retrieve Basic Message Information**
 
-This article shows how to read Microsoft Outlook PST files and extract messages. Below is a code snippet showing how to extract messages from a PST file.
+The code sample below demonstrates how to extract and display key information from MAPI messages stored in a PST file using the Aspose.Email library. It initializes a [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/) object from an "Outlook.pst" file, retrieves the contents of the root folder, and iterates through each message. The script prints details such as the subject, sender information, recipient addresses, delivery time, and message body, providing a comprehensive overview of each email in the specified PST file.
 
 ```python
 from aspose.email.storage.pst import *
@@ -113,9 +143,29 @@ for messageInfo in messageInfoCollection:
    print("Delivery time: ", str(mapi.delivery_time))
    print("Body: " + mapi.body)
 ```
-### **Extracting n Number of Messages from a PST File**
 
-To extract a specific number of messages from a PST file, use the *get_contents(start_index, count)* method of the [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) class. It takes two parameters:
+### **Recursive Reading of Nested Folders**
+
+An Outlook PST file may contain nested folders. To get message information from these, as well as the top-level folders, use a recursive method to read all the folders. The following code snippet shows you how to read an Outlook PST file and display the folder and message contents recursively:
+
+
+{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-GetMessagesInformation-GetMessagesInformation.py" >}}
+
+### **Retrieve the Total Number of Items in a PST Folder**
+
+To retrieve the total number of items (such as emails, appointments, tasks, contacts, etc.) present in the message store, use the *get_total_items_count()* method of the [MessageStore](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/messagestore/#messagestore-class) class. It provides a convenient way to quickly gather information about the size and volume of data within the store. The following code snippet shows how to get the total number of items from a PST file:
+
+```python
+import aspose.email as ae
+
+pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
+
+count = pst.store.get_total_items_count()
+```
+
+### **Extract a Specific Number of Messages**
+
+To extract a specified number of messages from a PST file, use the *get_contents(start_index, count)* method of the [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) class. It takes two parameters:
 
 - **start_index** - the number of the starting message, for example the 10th;
 - **count** - total number of messages to retrieve.
@@ -132,91 +182,65 @@ folder = pst.root_folder.get_sub_folder("Inbox")
 # Extracts messages starting from 10th index top and extract total 100 messages
 messages = folder.get_contents(10, 100)
 ```
-### **Getting Total Items Count from a PST File**
 
-To retrieve the total number of items (such as emails, appointments, tasks, contacts, etc.) present in the message store, use the *get_total_items_count()* method of the [MessageStore](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/messagestore/#messagestore-class) class. It provides a convenient way to quickly gather information about the size and volume of data within the store. The following code snippet shows how to get the total number of items from a PST file:
+## **Work with Attachments in PST Files**
 
-```python
-import aspose.email as ae
+### **Extract Attachments without Extracting Entire Messages**
 
-pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
+Aspose.Email for Python allows extracting attachments from PST messages without the need to first extract the entire message. This can be done using the [extract_attachments](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods) method of the [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class. The following code snippet demonstrates how to extract attachments while skipping .msg files:
 
-count = pst.store.get_total_items_count()
+```py
+from aspose.email.storage.pst import PersonalStorage
+
+# Open the PST file 
+with PersonalStorage.from_file(data_dir + "my.pst") as personal_storage:
+    # Get the "Inbox" subfolder from the root folder in the personal storage
+    folder = personal_storage.root_folder.get_sub_folder("Inbox")
+
+    # Iterate over each message entry ID in the Inbox folder
+    for message_info in folder.enumerate_messages_entry_id():
+        # Extract attachments for the current message
+        attachments = personal_storage.extract_attachments(message_info)
+
+        # Check if the message has any attachments
+        if attachments.count > 0:
+            # Iterate over each attachment in the list
+            for attachment in attachments:
+                # Ignore attachments that are message files (.msg)
+                if attachment.long_file_name and attachment.long_file_name.endswith(".msg"):
+                    continue
+                # Save the attachment with its original file name
+                attachment.save(data_dir + attachment.long_file_name)
 ```
 
-## **Delete Messages from PST Files**
-Add Messages to PST Files showed how to add messages to PST files. It is, of course, also possible to delete items (contents) from a PST file and it may also be desirable to delete messages in bulk. Items from a PST file can be deleted using the FolderInfo.delete_child_item() method. The API also provides FolderInfo.delete_child_items() method to delete items in bulk from the PST file.
-### **Deleting Messages from PST Files**
-This articles shows how to Use the FolderInfo class to access specific folders in a PST file. To delete messages from the Sent subfolder of a previously loaded or created PST file:
+## **Add Files as Attachments to PST Messages**
 
-1. Create an instance of the FolderInfo class and load it with the contents of the sent subfolder.
-1. Delete messages from the Sent folder by calling the FolderInfo.delete_child_item() method and passing the MessageInfo.entry_id as a parameter. The following code snippet shows you how to delete messages from a PST file's Sent subfolder.
+Microsoft Outlook is a powerful tool for managing emails, calendars, tasks, contacts, and journal entries. Beyond these core functionalities, it also allows for the addition of files to PST folders, enabling users to keep a comprehensive record of associated documents. Aspose.Email simplifies the process of adding files to a PST folder, functioning similarly to how it handles messages, contacts, tasks, and journal entries.
+
+The following code snippet illustrates how to add a document to a PST folder with Aspose.Email:
 
 
+```py
+from aspose.email.storage.pst import PersonalStorage, FileFormatVersion
 
-{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-DeleteMessagesFromPSTFile-DeleteMessagesFromPSTFile.py" >}}
+# Create a new PST file
+personal_storage = PersonalStorage.create(data_dir + "AddFilesToPst_out.pst", FileFormatVersion.UNICODE)
 
-### **Deleting Folders from PST Files**
+# Add a new folder to store files
+folder = personal_storage.root_folder.add_sub_folder("Files")
 
-You can delete a PST folder by moving it to the Deleted Items folder.
-
-```python
-import aspose.email as ae
-
-pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
-
-deleted_items_folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.DELETED_ITEMS)
-empty_folder = pst.root_folder.get_sub_folder("Empty folder")
-some_folder = pst.root_folder.get_sub_folder("Some folder")
-pst.move_item(empty_folder, deleted_items_folder)
-pst.move_item(some_folder, deleted_items_folder)
-```
-The advantage of this method is that the deleted folder can be easily recovered.
-
-
-```python
-some_folder = pst.root_folder.get_sub_folder("Some folder")
-pst.move_item(some_folder, pst.root_folder)
-```
-You can also permanently remove a folder from the Deleted Items folder, if necessary.
-
-
-```python
-deleted_items_folder.delete_child_item(empty_folder.entry_id)
-```
-The *delete_child_item* method can be used for any folders if you want to immediately and permanently delete a subfolder, bypassing the Deleted Items folder.
-
-
-```python
-some_folder = pst.root_folder.get_sub_folder("Some folder")
-pst.root_folder.delete_child_item(some_folder.entry_id)
-```
-### **Delete Items from PST**
-
-In many messaging systems or email clients, each item (such as an email, appointment, or task) is assigned a unique identifier called an entry ID. The *delete_item(entry_id)* method of the [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) class takes this entry ID as a parameter and removes the corresponding item from the message store. Use the following code to delete an item from the message store:
-
-```python
-import aspose.email as ae
-
-pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
-
-# ...
-
-pst.delete_item(entry_id)
-
-# ...
+# Add a file to the PST folder
+folder.add_file(data_dir + "FileToBeAddedToPST.txt", "")
 ```
 
-### **Delete Items in Bulk from PST File**
-Aspose.Email API can be used to delete items in bulk from a PST file. This is achieved using the delete_child_items() method which accepts a list of Entry ID items referring to the items to be deleted. The following code snippet shows you how to delete Items in bulk from PST file.
+## **Search and Filter Messages in PST Files**
+
+Personal Storage (PST) files can contain a large amount of data, and it requires incorporating multiple filtration to find data matching specific criteria. With the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/) class, Aspose.Email enables you to search for specific records in a PST based on defined search criteria. You can search for messages using parameters such as sender, recipient, subject, message importance, presence of attachments, message size, and even message ID. Additionally, the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/) can be used for searching within subfolders. The following sections provide a comprehensive guide on searching Outlook PST files. 
 
 
+### **Search Outlook Messages and Folders**
 
-{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-DeleteBulkItemsFromPst-DeleteBulkItemsFromPst.py" >}}
-## **Search Messages and Folders in a PST by Criterion**
-Personal Storage (PST) files can contain a huge amount of data and searching for data that meets a specific criteria in such large files needs to include multiple check points in the code to filter the information. With the PersonalStorageQueryBuilder class, Aspose.Email makes it possible to search for specific records in a PST based on a specified search criteria. A PST can be searched for messages based on search parameters such as sender, receiver, subject, message importance, presence of attachments, message size, and even message ID. The PersonalStorageQueryBuilder can also be used to search for subfolders.
-### **Searching Messages and Folders in PST**
-The following code snippet shows you how to use the PersonalStorageQueryBuilder class to search for contents in a PST based on different search criteria. For example, it shows searching a PST based on:
+The following code snippet shows you how to use the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/) class to search for contents in a PST based on different search criteria. It particularly demonstrates searching a PST based on:
 
 - Message importance.
 - Message class.
@@ -224,7 +248,7 @@ The following code snippet shows you how to use the PersonalStorageQueryBuilder 
 - Message size.
 - Unread messages.
 - Unread messages with attachments, and
-- folders with specific subfolder name.
+folders with specific subfolder name.
 
 ```py
 from aspose.email.mapi import MapiMessageFlags
@@ -282,16 +306,17 @@ with PersonalStorage.from_file(data_dir + "my.pst") as personal_storage:
     folders = folder.get_sub_folders(builder.get_query())
     print("Folders with subfolders:", folders.count)
 ```
-### **Searching for a String in PST with the Ignore Case Parameter**
-The following code snippet shows you how to search for a string in PST with the ignore case parameter.
 
+### **Search with Case-Insensitive Matching**
+
+By utilizing Aspose.Email [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/), you can specify search conditions for email messages while ignoring case sensitivity, enabling a more flexible and user-friendly search experience. The following code sample demonstrates how to load a PST file, access the "Inbox" folder, and apply case-insensitive search filters to locate emails based on sender information. This feature is especially helpful when dealing with varied capitalization in email data.
 
 
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-SearchingStringInPSTWithIgnoreCaseParameter-SearchingStringInPSTWithIgnoreCaseParameter.py" >}}
 
-### **Searching for Message Subjects by Multiple Keywords in a PST File**
+### **Search Subject Lines Using Multiple Keywords**
 
-Retrieve specific messages or items from a personal storage file (PST) or message store by implementing the *either(query1, query2)* method of the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/#personalstoragequerybuilder-class) class in your project. It takes two parameters allowing you to combine two different queries, query1 and query2, and find a message subject matching either of the two specified words. See the code sample below:
+Retrieve specific messages or items from a personal storage file (PST) or message store by implementing the `either(query1, query2)` method of the [PersonalStorageQueryBuilder](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstoragequerybuilder/#personalstoragequerybuilder-class) class. It takes two parameters allowing you to combine two different queries, query1 and query2, and find a message subject matching either of the two specified words. See the code sample below:
 
 ```python
 import aspose.email as ae
@@ -316,7 +341,65 @@ for message in messages:
     print(f"Message: {message.subject}")
 ```
 
-## **Move Items to Other Folders of PST File**
+### **Filter Emails in PST on Specific Criteria**
+
+Retrieve only the messages that match a specific filter, such as subject, sender, or date, using the [MailQuery](https://reference.aspose.com/email/python-net/aspose.email.tools.search/mailquery/) class. The following code sample demonstrates how to use the Aspose.Email library to load a PST file and filter messages within a specific folder, in this case, the "Inbox" folder:
+
+```py
+import aspose.email as ae
+
+# Load the PST file and access a folder
+pst = ae.PersonalStorage.from_file("sample.pst")
+inbox = pst.root_folder.get_sub_folder("Inbox")
+
+# Create a MailQuery to filter messages by subject
+query_builder = ae.MailQueryBuilder()
+query_builder.subject.contains("Invoice")
+
+query = query_builder.get_query()
+
+# Enumerate filtered messages
+for info in inbox.enumerate_mapi_messages(query):
+    print("Subject:", info.subject)
+```
+
+### **Retrieve Messages by Type**
+
+The Aspose.Email [MessageKind](https://reference.aspose.com/email/net/aspose.email.storage.pst/messagekind/#messagekind-enumeration) overload allows you to get messages of a specific type, such as only emails, appointments, or contacts. The following code sample demonstrates how to access and filter specific types of messages from a designated folder:
+
+```py
+import aspose.email as ae
+
+# Load the PST and target folder
+pst = ae.PersonalStorage.from_file("sample.pst")
+inbox = pst.root_folder.get_sub_folder("Inbox")
+
+# Retrieve only email messages (not calendar items, contacts, etc.)
+for info in inbox.enumerate_mapi_messages(ae.MessageKind.MAPI_MESSAGE):
+    print("Email Message:", info.subject)
+```
+
+### **Paginate Message Retrieval for Large PST Files**
+
+When working with folders containing a large number of messages, you can use pagination to load messages in chunks using the `start_index` and `count` parameters. The following code sample demonstrates how to access and retrieve a specific range of email messages from a PST file rather than all of them at once:
+
+
+```python
+import aspose.email as ae
+
+# Load the PST and access the target folder
+pst = ae.PersonalStorage.from_file("sample.pst")
+inbox = pst.root_folder.get_sub_folder("Inbox")
+
+# Retrieve messages from index 0 to 9
+for info in inbox.enumerate_mapi_messages(0, 10):
+    print("Paged Message:", info.subject)
+```
+
+## **Update and Organize Outlook PST Content**
+
+### **Move Messages between Folders**
+
 Aspose.Email makes it possible to move items from a source folder to another folder in the same Personal Storage (PST) file. This includes:
 
 - Moving a specified folder to a new parent folder.
@@ -327,10 +410,12 @@ Aspose.Email makes it possible to move items from a source folder to another fol
 The following code snippet shows you how to move items such as messages and folders from a source folder to another folder in the same PST file.
 
 
-
 {{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-MoveItemsToOtherFolders-MoveItemsToOtherFolders.py" >}}
-## **Updating Message Properties in a PST File**
-It's sometimes required to update certain properties of messages such as changing the subject, marking message importance and similarly others. Updating a message in a PST file, with such changes in the message properties, can be achieved using the FolderInfo.change_messages method. This article shows how to update messages in bulk in a PST file for changes in the properties. The following code snippet shows you how to update properties of messages in bulk mode for multiple messages in a PST file.
+
+### **Update Message Properties**
+
+It's sometimes required to modify certain properties of messages such as changing the subject, marking message importance and more. Updating these properties within a PST file can be achieved by using the [FolderInfo.change_messages](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) method provided by Aspose.Email for Python. This article showcases the process of bulk updating message properties, allowing for automated adjustments across multiple messages within a PST file. Below there is a code snippet illustrating how to perform bulk updates on various message properties.
+
 
 ```py
 from aspose.email.storage.pst import PersonalStorage, PersonalStorageQueryBuilder
@@ -367,13 +452,15 @@ with PersonalStorage.from_file(pst_file_path) as personal_storage:
     # Update messages having From = "someuser@domain.com" with new properties
     inbox.change_messages(change_list, updated_properties)
 ```
-## **Updating Custom Properites in a PST File**
-Sometimes its required to mark items that are processed with in the PST file. Aspose.Email API allows to achieve this using the MapiProperty and MapiNamedProperty. The following methods are helpful in achieving this.
 
-- ctor MapiNamedProperty(long propertyTag, string nameIdentifier, UUID propertyGuid, bytearray[] propertyValue)
-- ctor MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, bytearray[] propertyValue)
-- FolderInfo.change_messages(MapiPropertyCollection updatedProperties) - changes all messages in folder
-- PersonalStorage.change_messages(string entryId, MapiPropertyCollection updatedProperties) - change message properties
+### **Modify Custom MAPI Properties**
+
+Sometimes you may need to identify and mark items that have been processed within a PST file. The Aspose.Email API offers a solution for this task through the use of [MapiProperty](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapiproperty/) and [MapiNamedProperty](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapinamedproperty/) classes. These classes enable you to label processed items by assigning custom properties to them. Below, you will find methods that are particularly useful for accomplishing this marking process:
+
+- [MapiNamedProperty(long propertyTag, string nameIdentifier, UUID propertyGuid, bytearray[] propertyValue)](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapinamedproperty/#constructors)
+- [MapiNamedProperty(long propertyTag, long nameIdentifier, UUID propertyGuid, bytearray[] propertyValue)](https://reference.aspose.com/email/python-net/aspose.email.mapi/mapinamedproperty/#constructors)
+- [FolderInfo.change_messages(MapiPropertyCollection updatedProperties)](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) - changes all messages in a folder
+- [PersonalStorage.change_message(string entryId, MapiPropertyCollection updatedProperties)](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods) - changes message properties
 
 ```py
 from uuid import UUID
@@ -419,29 +506,92 @@ def run():
 # Usage
 run()
 ```
-## **Extract Attachments without Extracting Complete Message**
-Aspose.Email API can be used to extract attachments from PST messages without extracting the complete message first. The extract_attachments method of IEWSClient can be used to do this. The following code snippet shows you how to extract attachments without extracting complete message.
 
-```py
-from aspose.email.storage.pst import PersonalStorage
+## **Delete Messages and Folders from Outlook PST Files**
+
+Managing the content of Outlook PST files often involves removing unnecessary messages, folders, or multiple items at once. Aspose.Email for Python via .NET provides efficient methods to delete messages and folders from a PST file, whether you need to remove individual emails, [FolderInfo.delete_child_item()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) method, or perform bulk deletions, [FolderInfo.delete_child_items()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods) method, for better file management.
+
+### **Delete Messages from PST Files**
+
+Aspose.Email provides the [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) class to access specific folders in a PST file. The code sample below demonstrates how to use this class for accessing and deleting messages from the Sent subfolder of a previously loaded or created PST files. Specifically, it retrieves the message count and deletes the first item in the "Sent Items" folder.
+
+1. A PST object is initialized  by opening the "Outlook.pst" file located in the specified directory using [PersonalStorage.from_file()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods).
+2. The Sent Items folder is accessed using [pst.get_predefined_folder(StandardIpmFolder.SENT_ITEMS)](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods).
+3. Then, the code retrieves the contents of the "Sent Items" folder with [folder.get_contents()](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods), counts them, and prints the total number of messages in this folder.
+4. The code accesses the first message in the "Sent Items" folder with *msgsColl[0]* and deletes it using [folder.delete_child_item(msgInfo.entry_id)](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#methods). This function uses the entry ID of the message to remove it from the folder.
 
 
-with PersonalStorage.from_file(data_dir + "my.pst") as personal_storage:
-    folder = personal_storage.root_folder.get_sub_folder("Inbox")
+{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-DeleteMessagesFromPSTFile-DeleteMessagesFromPSTFile.py" >}}
 
-    for message_info in folder.enumerate_messages_entry_id():
-        attachments = personal_storage.extract_attachments(message_info)
+After deletion, the code again counts the messages in the "Sent Items" folder and prints the updated count.
 
-        if attachments.count != 0:
-            for attachment in attachments:
-                if attachment.long_file_name is not None and attachment.long_file_name.endswith(".msg"):
-                    continue
-                else:
-                    attachment.save(data_dir + attachment.long_file_name)
+### **Delete Items from PST Files**
+
+In many messaging systems or email clients, each item (such as an email, appointment, or task) is assigned a unique identifier called an entry ID. The `delete_item(entry_id)` method of the [FolderInfo](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/folderinfo/#folderinfo-class) class takes this entry ID as a parameter and removes the corresponding item from the message store. Use the following code to delete an item from the message store:
+
+```python
+import aspose.email as ae
+
+pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
+
+pst.delete_item(entry_id)
 ```
-## **Adding Files to PST**
-Microsoft Outlook's key functionality is managing emails, calendars, tasks, contacts and journal entries. In addition, files can also be added to a PST folder and the resulting PST keeps record of the documents added. Aspose.Email provides the facility to add files to a folder in the same way in addition to adding messages, contacts, tasks and journal entries to PST. The following code snippet shows you how to add documents to a PST folder using Aspose.Email.
+
+### **Delete Items in Bulk**
+
+Aspose.Email API can be used to delete items in bulk from a PST file. This is achieved using the `delete_child_items()` method which accepts a list of Entry ID items referring to the items to be deleted. The following code snippet shows you how to delete Items in bulk from a PST file.
+
+
+{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-DeleteBulkItemsFromPst-DeleteBulkItemsFromPst.py" >}}
+
+### **Delete Folders from PST Files**
+
+Outlook PST files may contain folders that are no longer needed. Aspose.Email for Python via .NET allows you to delete these folders either by moving them to the Deleted Items folder (making them recoverable) or by permanently removing them. The following examples demonstrate both approaches.
+
+#### **Move a Folder to Deleted Items (Soft Delete)**
+
+The `move_item` method of the [PersonalStorage](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#personalstorage-class) class allows folders to be recovered later, as they are not permanently removed but moved to the Deleted Items folder. The following code snippet shows how to implement this method into a python project:
+
+```python
+import aspose.email as ae
+
+pst = ae.storage.pst.PersonalStorage.from_file("my.pst")
+
+deleted_items_folder = pst.get_predefined_folder(ae.storage.pst.StandardIpmFolder.DELETED_ITEMS)
+empty_folder = pst.root_folder.get_sub_folder("Empty folder")
+some_folder = pst.root_folder.get_sub_folder("Some folder")
+pst.move_item(empty_folder, deleted_items_folder)
+pst.move_item(some_folder, deleted_items_folder)
+```
+
+The advantage of this method is that the deleted folder can be easily recovered.
+
+#### **Restore a Folder from Deleted Items**
+
+The [move_item](https://reference.aspose.com/email/python-net/aspose.email.storage.pst/personalstorage/#methods) method allows you to restore a folder, if it was mistakenly deleted, by moving it back from Deleted Items to its original location.
+
+
+```python
+some_folder = pst.root_folder.get_sub_folder("Some folder")
+pst.move_item(some_folder, pst.root_folder)
+```
+
+#### **Permanently Delete a Folder from Deleted Items**
+
+The `delete_child_item` method can be used for any folders if you want to immediately and permanently delete a subfolder, bypassing the Deleted Items folder. The following code sample shows how to remove the folder completely from Deleted Items, making recovery impossible:
+
+```python
+deleted_items_folder.delete_child_item(empty_folder.entry_id)
+```
+
+#### **Permanently Delete a Folder Immediately**
+
+If a folder should be deleted without moving it to Deleted Items, the `delete_child_item` method ensures immediate and permanent removal.
+
+```python
+some_folder = pst.root_folder.get_sub_folder("Some folder")
+pst.root_folder.delete_child_item(some_folder.entry_id)
+```
 
 
 
-{{< gist "aspose-email" "356f0e128b9d45a7ee779fc813eb87e5" "Examples-WorkingWithOutlookStorageFiles-AddFilesToPST-AddFilesToPST.py" >}}

@@ -153,7 +153,7 @@ private static void ExtractMsgFiles(FolderInfo folderInfo, PersonalStorage pst)
 
 ## **Identifying MAPI Item Types**
 
-The [MapiItemType](https://reference.aspose.com/email/net/aspose.email.mapi/mapiitemtype/) enum represents a MAPI item type that can be explicitly converted into an object of the corresponding class derived from the [IMapiMessageItem](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/#imapimessageitem-interface)interface. This way users can avoid checking the [MessageClass](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/messageclass/) property value before message conversion.
+The [MapiItemType](https://reference.aspose.com/email/net/aspose.email.mapi/mapiitemtype/) enum represents a MAPI item type that can be explicitly converted into an object of the corresponding class derived from the [IMapiMessageItem](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/#imapimessageitem-interface) interface. This way users can avoid checking the [MessageClass](https://reference.aspose.com/email/net/aspose.email.mapi/imapimessageitem/messageclass/) property value before message conversion.
 
 The following code sample shows how to define a type for the item to be converted:
 
@@ -199,13 +199,62 @@ foreach (var messageInfo in folder.EnumerateMessages())
 }
 ```
 
-### **Message Search and Retrieval**
+## **Message Search and Retrieval**
 
 Aspose.Email provides the following overloaded methods of the [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) class to filter and retrieve messages:
 
 - IEnumerable<MessageInfo> [EnumerateMessages(MailQuery mailQuery)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/#enumeratemessages_2) - Filter messages using a MailQuery.
 - IEnumerable<MessageInfo> [EnumerateMessages(MessageKind kind)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/#enumeratemessages_1) - Retrieve messages by type (MessageKind).
 - IEnumerable<MessageInfo> [EnumerateMessages(int startIndex, int count)](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/enumeratemessages/#enumeratemessages_3) - Paginate message retrieval using a starting index and count.
+
+### **Paginated Retrieval of Folder Contents**
+
+When working with large PST folders, retrieving all messages at once can be inefficient. To improve performance and control, Aspose.Email for .NET offers pagination support in the [FolderInfo.GetContents](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/#methods) method. This method retrieves a subset of messages that match the specified query, starting from a given index and limited by a count. This allows you to fetch messages in smaller, manageable batches. The method takes the following parameters:
+
+```
+IList<MessageInfo> FolderInfo.GetContents(MailQuery query, int startIndex, int count)
+```
+
+- *query* — a filter to apply to messages (optional)
+
+- *startIndex* — the zero-based index to start retrieving from
+
+- *count* — the number of messages to return
+
+The code sample below demonstrates how to implement this method into a project:
+
+```cs
+// Load the PST file
+using (var pst = PersonalStorage.FromFile(fileName))
+{
+    // Access a specific subfolder
+    var folder = pst.RootFolder.GetSubFolder("Inbox");
+
+    // Build a query to filter messages by sender address
+    var queryBuilder = new PersonalStorageQueryBuilder();
+    queryBuilder.From.Contains("report-service", true);
+
+    // Define the page size
+    int pageSize = 5;
+
+    // Retrieve and process messages in pages
+    for (int pageIndex = 0; pageIndex < 6; pageIndex++)
+    {
+        int startIndex = pageIndex * pageSize;
+
+        // Get a page of messages
+        var messages = folder.GetContents(queryBuilder.GetQuery(), startIndex, pageSize);
+
+        foreach (MessageInfo messageInfo in messages)
+        {
+            // Output basic info about each message
+            Console.WriteLine($"Subject: {messageInfo.Subject}, Sender: {messageInfo.SenderRepresentativeName}");
+        }
+    }
+}
+```
+
+
 
 ### **Save Messages Directly from PST to Stream**
 
@@ -287,7 +336,7 @@ using (var pst = PersonalStorage.FromFile("my.pst", false))
 
 ### **Extract Attachments without Extracting Complete Message**
 
-Aspose.Email API can be used to extract attachments from PST messages without extracting the complete message first. The ExtractAttachments method of IEWSClient can be used to do this. The following code snippet shows you how to extract attachments without extracting a complete message.
+Aspose.Email API can be used to extract attachments from PST messages without extracting the complete message first. The [ExtractAttachments](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/extractattachments/#extractattachments) method of [PersonalStorage](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#personalstorage-class) can be used to do this. The following code snippet shows you how to extract attachments without extracting a complete message.
 
 ```csharp
 // For complete examples and data files, please go to https://github.com/aspose-email/Aspose.Email-for-.NET
@@ -588,7 +637,7 @@ private static long GenerateNamedPropertyTag(long index, MapiPropertyType dataTy
 
 ### **Delete Messages**
 
-This articles shows how to Use the [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) class to access specific folders in a PST file. To delete messages from the Sent subfolder of a previously loaded or created PST file:
+This articles shows how to use the [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) class to access specific folders in a PST file. To delete messages from the Sent subfolder of a previously loaded or created PST file:
 
 1. Create an instance of the [FolderInfo](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/) class and load it with the contents of the sent subfolder.
 1. Delete messages from the Sent folder by calling the [FolderInfo.DeleteChildItem()](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/deletechilditem/#deletechilditem) method and passing the [MessageInfo.EntryId](https://reference.aspose.com/email/net/aspose.email.storage.pst/folderinfo/entryid/) as a parameter. The following code snippet shows you how to delete messages from a PST file Sent subfolder.
@@ -703,7 +752,7 @@ using (PersonalStorage personalStorage = PersonalStorage.FromFile(dataDir))
 }
 ```
 
-## **Recover Soft Deleted Items from PST and OST Files**
+## **Recover Soft-Deleted Items from PST and OST Files**
 
 Aspose.Email for .NET provides a method to recover soft deleted items from PST and OST files. This functionality is implemented through the `PersonalStorage` class, which includes the [FindAndExtractSoftDeletedItems](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/findandextractsoftdeleteditems/) method. This method allows you to locate and restore items that have been soft deleted, enabling you to recover important data that might otherwise be lost. The recovered items are saved in their respective folders as `.msg` files, ensuring that the original folder structure is maintained. The code sample below demonstrates how to implement this feature into your project:
 
@@ -730,6 +779,34 @@ using (var pst = PersonalStorage.FromFile(fileName))
         
         // The restored item is saved as a .msg file
         msg.Save(Path.Combine(path, folderInfo.DisplayName, $"{index}.msg"));
+    }
+}
+```
+## **Enumerate Soft-Deleted Messages in PST Files**
+
+Soft-deleted messages in a PST file are items that have been deleted twice—first moved to Deleted Items, then removed again. Such messages are not permanently erased and can still be accessed programmatically. Aspose.Email for .NET supports retrieving these soft-deleted messages for review or recovery.
+
+To enumerate and recover items that have been soft-deleted (deleted twice) in PST files, use the [FindAndEnumerateSoftDeletedItems()](https://reference.aspose.com/email/net/aspose.email.storage.pst/personalstorage/#methods) method. This method retrieves an enumerable list of such items, each of them includes both the message and the ID of the folder it was deleted from.
+
+The following code sample demonstrates how to enumerate and recover emails that have been deleted twice. It returns the [RestoredItemEntry](https://reference.aspose.com/email/net/aspose.email.storage.pst/restoreditementry/#restoreditementry-class) class which represents an entry for a soft-deleted item recovered from a PST file. The class contains the following properties:
+
+- [Item (MapiMessage)](https://reference.aspose.com/email/net/aspose.email.storage.pst/restoreditementry/item/): The recovered message object.
+
+- [FolderId (string)](https://reference.aspose.com/email/net/aspose.email.storage.pst/restoreditementry/folderid/): The identifier of the folder from which the message was originally deleted.
+
+```cs
+// Load the PST file
+using (var pst = PersonalStorage.FromFile("archive.pst"))
+{
+    // Enumerate soft-deleted items
+    foreach (var entry in pst.FindAndEnumerateSoftDeletedItems())
+    {
+        var message = entry.Item;
+        var folderId = entry.FolderId;
+
+        Console.WriteLine($"Subject: {message.Subject}");
+        Console.WriteLine($"Deleted from Folder ID: {folderId}");
+        Console.WriteLine("-----------------------------------");
     }
 }
 ```

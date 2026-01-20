@@ -7,7 +7,7 @@ url: /python-net/splitting-and-merging-pst-files/
 ---
 
 
-Aspose.Email API provides the capability to split a single PST file into multiple PST files of desired file size. It can also merge multiple PST files into a single PST file. Both the splitting and merging of PSTs operations can be tracked by adding events to these operations.
+Aspose.Email API provides the capability to split a single PST file into multiple PST files of the desired file size. It can also merge multiple PST files into a single PST file. Both the splitting and merging of PSTs operations can be tracked by adding events to these operations.
 
 {{% alert %}}
 **Try it out!**
@@ -15,8 +15,11 @@ Aspose.Email API provides the capability to split a single PST file into multipl
 Merge and combine multiple email files online into a single one with the free [**Aspose.Email Merger App**](https://products.aspose.app/email/merger).
 {{% /alert %}}
 
-## **Splitting into multiple PSTs**
-The following code snippet shows you how to split multiple PSTs.
+## **Splitting PST Files**
+
+### **Splitting into Multiple PSTs**
+
+The following code snippet shows you how to split a storage file into multiple files:
 
 ```py
 import os
@@ -44,8 +47,10 @@ except Exception as ex:
           "You can purchase a full license or get a 30-day"
           " temporary license from http://www.aspose.com/purchase/default.aspx.")
 ```
-## **Splitting PST based on Specified Criterion**
-The following code snippet shows you how to split PST based on specified criterion.
+
+### **Splitting by Specific Criterion**
+
+The following code snippet shows you how to split a storage file by a specified criterion:
 
 ```py
 import os
@@ -74,8 +79,12 @@ if os.path.exists(path_to_pst):
 with PersonalStorage.from_file(pst_file) as personal_storage:
     personal_storage.split_into(query, path_to_pst)
 ```
-## **Merging into a single PST**
-The following code snippet shows you how to merge into a single PST.
+
+## **Merging PST Files**
+
+### **Merging into a Single PST**
+
+The following code snippet shows you how to merge multiple storage files into a single one:
 
 ```py
 import os
@@ -99,8 +108,10 @@ except Exception as ex:
           "You can purchase a full license or get a 30-day temporary license "
           "from http://www.aspose.com/purchase/default.aspx.")
 ```
-## **Merging Folders from another PST**
-The following code snippet shows you how to merging folders from another PST.
+
+## **Merging Folders from Another PST**
+
+The following code snippet shows you how to merge folders from another PST:
 
 ```py
 from aspose.email.storage.pst import PersonalStorage, StandardIpmFolder
