@@ -1,43 +1,68 @@
 ---
-title: Working with Outlook Message Attachments using C++ Email Parser API
-ArticleTitle: Working with Outlook Message Attachments using C++ Email Parser API
+title: Manage Attachments in Outlook MSG Files Using Aspose.Email for C++
+ArticleTitle: Manage Attachments in Outlook MSG Files 
 linktitle: Working with Message Attachments
 type: docs
 weight: 70
-url: /cpp/working-with-message-attachments/
-description: You can manage Outlook message attachments with the C++ Email Parser Library, save and delete them, and embed messages as an attachment.
+url: /cpp/manage-outlook-msg-attachments/
+description: Learn how to save, remove, and add attachments in Outlook MSG files using Aspose.Email for C++.
 ---
 
-## **Managing Attachments with Aspose Outlook**
-Creating and Saving Outlook Message (MSG) Files explained how to create and save messages, and how to create MSG files with attachments. This article explains how to manage Microsoft Outlook attachments with Aspose.Email. Attachments from a message file are accessed and saved to disk using the MapiMessage class Attachments property. The Attachments property is a collection of type MapiAttachmentCollection class.
+**Aspose.Email for C++** provides a rich API for accessing, saving, removing, and embedding attachments when working with Microsoft Outlook MSG files. Attachments are handled through the [MapiMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_message/) class, using its `Attachments` property, which exposes a [MapiAttachmentCollection](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_attachment_collection).
 
-### **Save Attachments from Outlook Message (MSG) file**
-To save attachments from an MSG file:
+## **Save Attachments from an MSG File**
 
-1. Iterate through the MapiAttachmentCollection collection and get the individual attachments.
-1. To save the attachments, call the MapiAttachment class Save() method.
+To extract and save attachments from an MSG file:
 
-The following code snippet shows you how to saves attachments to the local disk.
+1. Load the message using [MapiMessage::Load](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_message#ad48c273564de4cc74907117bc62fd4ac).
+2. Iterate through the [MapiAttachmentCollection](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_attachment_collection).
+3. Save each attachment using the [MapiAttachment::Save()](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_attachment#a859598c4794757761e3b9b469e132805) method.
 
-{{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-SaveAttachmentsFromOutlookMSGFile-SaveAttachmentsFromOutlookMSGFile.cpp" >}}
+```cpp
+// Create an instance of MapiMessage from file
+System::SharedPtr<MapiMessage> message = MapiMessage::Load(fileName);
+    
+// Iterate through the attachments collection
+    
+{
+    auto attachment_enumerator = (message->get_Attachments())->GetEnumerator();
+    decltype(attachment_enumerator->get_Current()) attachment;
+    while (attachment_enumerator->MoveNext() && (attachment = attachment_enumerator->get_Current(), true))
+    {
+        // Save the individual attachment
+        attachment->Save(dataDir + attachment->get_FileName());
+    }
+}
+```
 
-### **Removing Attachments**
-Aspose Outlook library provides the functionality to remove attachments from Microsoft Outlook Message (.msg) files:
+## **Remove Attachments**
 
-- Call the RemoveAttachments() method. It takes the path of the message file as a parameter. It is implemented as a public static method, so you don’t need to instantiate the object.
+Aspose.Email for C++ offers two ways to remove attachments from MSG files:
 
-The following code snippet shows you how to remove Attachments using C++ Email Parser Library.
+- **Call the [RemoveAttachments()](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_message#a15d2c8f06c732af9f8a941ba4670f4e7) method** 
+
+It takes the path of the message file as a parameter. It is implemented as a public static method, so you don’t need to instantiate the object. This static helper method removes all attachments from a message file.
+
+The following code snippet shows how to use this method.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-RemoveAttachmentsFromFile-RemoveAttachmentsFromFile.cpp" >}}
 
-You can also call the MapiMessage class static method DestoryAttachment(). It works faster than RemoveAttachment(), because the RemoveAttachment() method parses the message file.
+- **Call the [DestoryAttachment()](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_message#a62f51f12ca13caefd6a7c11cfde1df14) method** 
+
+It works faster because it removes attachments without fully parsing the MSG file.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-DestroyAttachment-DestroyAttachment.cpp" >}}
 
-### **Adding MSG Attachments**
-An Outlook message can contain other Microsoft Outlook messages in attachments either as regular or embedded messages. The MapiAttachmentCollection provides overloaded members of the Add method to create Outlook messages with both types of attachments.
+## **Add MSG Attachments**
 
-### **Embedding Message as Attachment**
-The following code snippet shows you how to outlook MSG files embedded in a MSG file contains a PR_ATTACH_METHOD whose value equals 5.
+MSG files can contain other MSG files either as standard or embedded attachments. Use the overloaded `Add` methods in [MapiAttachmentCollection](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_attachment_collection/) to embed Outlook messages.
 
-{{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-EmbedMessageAsAttachment-EmbedMessageAsAttachment.cpp" >}}
+The following code sample demonstrates how to create a new MAPI message with specified sender, recipient, subject, and body, then attach an existing MSG file as an embedded message, and finally save the resulting message with the embedded attachment to a new MSG file.
+
+
+```cpp
+System::SharedPtr<MapiMessage> message = System::MakeObject<MapiMessage>(L"from@test.com", L"to@test.com", L"Subj", L"This is a message body");
+System::SharedPtr<MapiMessage> attachMsg = MapiMessage::Load(L"Message.msg");
+message->get_Attachments()->Add(L"Weekly report.msg", attachMsg);
+message->Save(dataDir + L"WithEmbeddedMsg_out.msg");
+```

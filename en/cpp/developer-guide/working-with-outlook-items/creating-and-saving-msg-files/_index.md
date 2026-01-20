@@ -1,47 +1,63 @@
 ---
-title: Creating and Saving Outlook MSG files using C++ Email API
-ArticleTitle: Creating and Saving Outlook MSG files using C++ Email API
+title: Create and Save Outlook MSG files using C++ Email API
+ArticleTitle: Create and Save Outlook MSG files 
 linktitle: Creating and Saving MSG files
 type: docs
 weight: 10
 url: /cpp/creating-and-saving-msg-files/
-description: C++ Email Parser API supports creating Outlook message MSG files with attachments, RTF body, and save message in draft status.
+description: Learn how to create, save, and customize Outlook MSG files in C++, including adding attachments, using RTF bodies, saving drafts, and managing body compression.
 ---
 
-## **Creating and Saving MSG Files**
-Aspose.Email supports creating Outlook message (MSG) files. This article explains how to:
 
-- Create MSG messages.
-- Create MSG messages with attachments.
-- Create a MSG message with an RTF body.
-- Save a message as draft.
-- Work with body compression.
+**Aspose.Email for C++** allows developers to programmatically create, modify, and save Outlook MSG files with full control over message properties and formatting. You can generate MSG messages from scratch, add attachments, use rich text (RTF) bodies, save drafts, and optimize message size using body compression options.
 
-### **Creating and Saving Outlook Messages**
-The MailMessage class has the Save() method that can save Outlook MSG files to disk or stream. The code snippets below create an instance of the MailMessage class, set properties like from, to, subject and body. The Save() method takes the file name as an argument. In addition, the Outlook Messages can be created with a compressed RTF body using the MapiConversionOptions. To set up, create a new Windows application and add a reference to the Aspose.Email dll into the project.
 
-1. Create a new instance of the MailMessage class and set the From, To, Subject and Body properties.
-1. Call the MailMessage class FromMailMessage method which accepts object of the MailMessage type. The FromMailMessage() method converts the MailMessage into a MailMessage (MSG).
-1. Call the MapiMessage.Save() method to save the MSG file.
+## **Create and Save Outlook Messages**
 
-Write the following code in the click event of the button control of the Windows application.
+The [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class provides the `Save()` method to save MSG files to disk or stream. You can define the sender, recipients, subject, and body, and then convert the message into the Outlook MSG format using the [MapiMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_message/) class.
+
+The following code sample demonstrates how to create a simple email message by setting the sender, recipient, subject, and body, then convert this email message into a MAPI message compatible with Outlook, and finally save it as an MSG file.
+
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-CreatingAndSavingOutlookMessages-CreatingAndSavingOutlookMessages.cpp" >}}
 
-### **Creating MSG Files With RTF Body**
-You can also create Outlook Message (MSG) files with rich text (RTF) bodies with Aspose.Email. The RTF body supports text formatting. Create one by setting the MailMessage.HtmlBody property. When you convert a MailMessage instance into a MailMessage instance, the HTML body is converted into RTF. This way, the formatting of the email body is preserved.
 
-The following example creates an MSG file with an RTF body. There is one heading, bold and underline formatting applied in the HTML body. This formatting is retained when the HTML is converted into RTF.
+
+## **Create MSG Files with RTF Body**
+
+Outlook messages support **Rich Text Format (RTF)** bodies that retain advanced text formatting such as bold, underline, and headings.
+Aspose.Email automatically converts the `HtmlBody` of a `MailMessage` into RTF when saving as MSG, preserving all formatting.
+
+The following code sample demonstrates how to create an email message with an HTML-formatted body, including headers and styled text, then convert this email into a MAPI Outlook message, and save it as an MSG file. This allows generating Outlook-compatible email files that preserve rich text formatting using Aspose.Email.
+
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-CreatingMSGFilesWithRTFBody-CreatingMSGFilesWithRTFBody.cpp" >}}
 
-### **Saving Message in Draft Status**
-Emails are saved as drafts when someone has started editing them but wants to return to them to complete them later. Aspose.Email supports saving email message in draft status by setting a message flag. Below is the sample code to save an Outlook email message (MSG) as a draft.
+
+## **Save a Message in Draft Status**
+
+You can mark a message as **draft** by setting the appropriate flag before saving it as MSG. Drafts can later be reopened and edited.
+
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-SavingMessageInDraftStatus-SavingMessageInDraftStatus.cpp" >}}
 
-### **Implications of Body Compression**
-The RTF body compression method can be used to generate a smaller size MSG. However, this results in slower speed. To creating messages with improved speed, set the flag to false. This flag, in turn, has effect on the created PSTs: smaller MSG files results in smaller PST, and large MSG files returns in slower PST creation.
+
+## **Optimizing with Body Compression**
+
+Aspose.Email provides body compression for MSG files through the [MapiConversionOptions](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_conversion_options/) class. Enabling compression creates smaller MSG and PST files but can slightly slow down processing.
+
+The following code sample demonstrates how to load an existing email message from a file, create conversion options with body compression enabled, and convert the loaded [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) to a [MapiMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_message/) format using these options. This process optimizes the email body size during conversion for better handling within Outlook message files.
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Outlook-SetBodyCompression-SetBodyCompression.cpp" >}}
+
+
+* **UseBodyCompression = true** → smaller file size, slower performance.
+* **UseBodyCompression = false** → faster conversion, larger output.
+
+
+
+
+
+
+
 

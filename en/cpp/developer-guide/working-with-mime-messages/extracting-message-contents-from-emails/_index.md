@@ -1,40 +1,56 @@
 ---
-title: Extracting Message Contents from Emails in C++
-ArticleTitle: Extracting Message Contents from Emails in C++
+title: Read and Display Email Messages & Headers in C++
+ArticleTitle: Read and Display Email Messages & Headers in C++
 linktitle: Extracting Message Contents from Emails
 type: docs
 weight: 20
-url: /cpp/extracting-message-contents-from-emails/
-description: Using C++ Email Parser Library, you can access email message properties, header information and manipulate it in different ways programmatically.
+url: /cpp/read-display-email-messages-headers/
+description: Learn how to load, view, and extract email content and headers from EML files with Aspose.Email for C++.
 ---
 
-## **Displaying Email Information on Screen**
-The [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) represents an email message and allows developers to access email message properties. The header information (discussed in Extracting Email Headers) can be extracted and manipulated in different ways. This article explains how to display selected email header information and the email body on screen. To Display Email Information on the screen, follow these steps:
 
-- Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class.
-- Load an email message into the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) instance.
-- Display the email content on the screen.
+**Aspose.Email for C++** provides the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class, which represents an email message and allows developers to access and display its contents and headers. You can easily extract information such as sender, recipients, subject, body, and headers from an existing email file (EML).
 
-The following C++ code snippet shows you how to display email information on the screen.
+
+## **Display Email Information**
+
+Load an email file and display its key properties on the screen, such as the sender, recipients, subject, and body. The code sample below will show you how to display email information on the screen using Aspose.Email API.
+
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+2. Load an email message into the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) instance.
+3. Display the desired properties (for example, From, To, Subject, and Body) on the console.
+
+
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-EmailCPP-Email-DisplayEmailInformation-DisplayEmailInformation.cpp" >}}
 
-## **Extracting Email Headers**
-The email header represents an Internet and RFC defined standard set of header fields included in Internet email messages. An email header can be specified using the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class. Common header types are defined in the HeaderType class. It is a sealed class working like normal enumeration. To extract headers from an email, follow these steps:
+> **Note:** For complete examples and data files, visit the [Aspose.Email for C++ GitHub repository](https://github.com/aspose-email/Aspose.Email-for-C).
 
-1. Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class.
-1. Load an email message in the instance of [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class.
-1. After an email message has been loaded, we will get its raw content.
 
-The [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message) class itself contains properties such as From, To, Cc, Subject and so on. These properties can be extracted from headers.
 
-1. Display the raw content.
+## **Extract Email Headers**
 
-The following  C++ code snippet shows you how to extract email headers.
+An **email header** is a set of metadata fields that describe the message, including routing information, content type, encoding, and sender/recipient details.
+
+Aspose.Email for C++ allows you to extract and work with these headers using the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+
+The most common header types are available through the [HeaderType](https://reference.aspose.com/email/cpp/class/aspose.email.header_type) class, which provides named constants for standard header fields.
+
+The following code snippet shows how to **extract email headers**:
+
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+2. Load an email file into the instance.
+3. Retrieve the header collection using the [get_Headers()](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message#a0e0c441069f3971dcc6e456a2d4471a2) method.
+4. Iterate through the collection to read or display header names and values.
+
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-EmailCPP-Email-ExtractingEmailHeaders-ExtractingEmailHeaders.cpp" >}}
 
+
 ## **Get Decoded Header Values**
+
+Some email headers may contain encoded text (for example, subject lines or custom headers using encoded words). You can easily retrieve a decoded value using the [GetDecodedValue()](https://reference.aspose.com/email/cpp/class/aspose.email.mime.header_collection#a2a41a5b3ca41346c25865d0419976a32) method of the [HeaderCollection](https://reference.aspose.com/email/cpp/class/aspose.email.mime.header_collection/) class.
+
 The following code snippet shows you how to get decoded header values.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-EmailCPP-Email-GetDecodedHeaderValues-GetDecodedHeaderValue.cpp" >}}

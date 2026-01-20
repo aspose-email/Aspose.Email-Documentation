@@ -1,63 +1,86 @@
 ---
-title: Working with Calendar Items on Exchange Server
-ArticleTitle: Working with Calendar Items on Exchange Server
+title: Manage Calendar & Meeting Requests with Exchange Web Services (EWS)
+ArticleTitle: Manage Calendar & Meeting Requests with Exchange Web Services (EWS)
 type: docs
 weight: 50
-url: /cpp/working-with-calendar-items-on-exchange-server/
+url: /cpp/manage-calendar-items-on-exchange-server/
+description: Learn how to create, send, update, list, and manage meeting requests and calendar items in Exchange Web Services (EWS) using Aspose.Email for C++.
 ---
 
-## **Sending Meeting Requests**
-This article shows how to send a meeting request to multiple recipients using Exchange Web Services and Aspose.Email.
 
-1. Create a meeting request using the [Appointment](https://apireference.aspose.com/email/cpp/class/aspose.email.calendar.appointment) class and set the location, time and attendees.
-1. Create an instance of the [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) class and set the appointment using the [MailMessage->AddAlternateView()](https://docs.aspose.com/email/cppfilter-messages-from-exchange-mailbox/) method.
-1. Connect to the Exchange Server and send the meeting request using the [IEWSClient->Send(MailMessage)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) method.
+This article explains how to work with meeting requests and calendar items using Aspose.Email for C++ and Exchange Web Services (EWS). You will learn how to:
 
-The [EWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.e_w_s_client) class can be used to connect to an Exchange Servers with Exchange Web Services (EWS) support. For this to work, the server has to be Exchange Server 2007 or later. The following code snippet shows you how to use EWS to send the meeting requests.
+- Send meeting requests to one or multiple recipients
+- Create, update, and cancel appointments
+- List calendar items with paging support
+- Add events to secondary calendars
+- Share calendars with users
+- Retrieve extended properties from calendar items
 
+All scenarios include C++ code examples using [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+
+
+## **Send a Meeting Request via EWS**
+
+You can create and send a meeting request by building an [Appointment](https://apireference.aspose.com/email/cpp/class/aspose.email.calendar.appointment) object and attaching it to a [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) before sending it through [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+
+The following code sample demonstrates how to create and send a recurring meeting request via Exchange Web Services:
+
+1. Create an [Appointment](https://apireference.aspose.com/email/cpp/class/aspose.email.calendar.appointment) and set the location, time, attendees.
+2. Add recurrence if needed.
+3. Create an email message using the [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) class.
+4. Attach the meeting request via [AddAlternateView()](https://docs.aspose.com/email/cppfilter-messages-from-exchange-mailbox/).
+5. Connect to the Exchange Server and send the message using the [IEWSClient->Send(MailMessage)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) method.
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SendMeetingRequestsUsingEWS-SendMeetingRequestsUsingEWS.cpp" >}}
-## **Working with Calendar Items using EWS**
-Aspose.Email provides the capability to add, update and cancel appointments using Exchange Web Service (EWS) client. The [IEWSClient->CreateAppointment](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), [IEWSClient->UpdateAppointment](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), and [IEWSClient->CancelAppointment](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) methods allow manipulating calendar items using EWS. This article provides a detailed code sample of working with Calendar items. The following code sample shows how to:
-
-1. Create an appointment.
-1. Update an appointment.
-1. Delete/Cancel an appointment.
 
 
+## **Create, Update, and Cancel Appointments**
+
+
+Aspose.Email provides dedicated [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) methods to manage calendar items:
+
+- `CreateAppointment()`
+- `UpdateAppointment()`
+- `CancelAppointment()`
+- `FetchAppointment()`
+
+The following code sample demonstrates how to manage calendar operations on an Exchange Server using Aspose.Email for C++. It shows the full lifecycle of creating, retrieving, updating, and canceling appointments through Exchange Web Services, including setting timezone information, listing all appointments, and verifying changes by fetching and displaying appointment details before and after modifications.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-CreatingUpdatingAndDeletingCalendarItemsUsingEWS-CreatingUpdatingAndDeletingCalendarItemsUsingEWS.cpp" >}}
-## **Listing Appointments with Paging Support**
-The [ListAppointments](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) method exposed by the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) API retrieves the complete list of appointments from the Exchange server. This may take time if there are a large number of appointments on the Exchange Server. The API provides overloaded methods of [ListAppointmentsByPage](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) method that gives paging support to the operation. This can be used in different combinations with the querying feature as well. The following overloaded methods are available to list appointments from Exchange Server with Paging support.
 
-- [IEWSClient.ListAppointmentsByPage(int itemsPerPage)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(string folderUri, int itemsPerPage)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(MailQuery query, int itemsPerPage)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(string folderUri, MailQuery query, int itemsPerPage)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(int itemsPerPage, int itemOffset)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(string folderUri, int itemsPerPage, int itemOffset)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(MailQuery query, int itemsPerPage, int itemOffset)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-- [IEWSClient.ListAppointmentsByPage(string folderUri, MailQuery query, int itemsPerPage, int itemOffset)](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
 
-The following code snippet shows you how to list appointments with paging support.
+## **List Appointments with Paging Support**
 
+
+When a mailbox contains many appointments, paging helps retrieve items efficiently. For this purpose, Aspose.Email provides multiple overloads of the [ListAppointmentsByPage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) method including querying feature combinations.
+
+The following code sample demonstrates how to create multiple calendar appointments with sequential time slots, then implement pagination to list all appointments by retrieving them in smaller, manageable pages rather than loading the entire collection at once, which is useful for handling large numbers of calendar items.
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-PagingSupportForListingAppointments-PagingSupportForListingAppointments.cpp" >}}
-## **Adding Event to Secondary Calendar folder on Exchange Server**
-Aspose.Email API lets you create a secondary Calendar folder on Exchange Server using the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client). Appointments can then be added, updated or canceled from the secondary calendar using the [IEWSClient->CreateAppointment](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), [IEWSClient->UpdateAppointment](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client), and [IEWSClient->CancelAppointment](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) methods. 
 
-The following code snippet shows you how to add an event to a secondary calendar folder on the exchange server.
 
+## **Add Events to a Secondary Calendar Folder**
+
+You can create custom calendar folders and manage appointments inside them. The following code sample demonstrates how to create and manage a secondary calendar folder in Exchange Server and perform appointment operations within it. This includes checking for an existing custom calendar folder, creating a new calendar folder if it doesn't exist, then performing full CRUD operations (create, read, update, delete) on appointments within both the custom calendar folder and the default calendar folder, including setting a current calendar context for simplified API calls.
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SecondaryCalendarEvents-SecondaryCalendarEvents.cpp" >}}
-## **Sharing Calendar Invitation**
+
+
+## **Share Calendar Invitation**
+
 Microsoft Exchange server provides the capability to share calendars by sending calendar invitations to other users, registered on the same Exchange server. Aspose.Email API provides the same capability by allowing to share the calendar using the EWS API.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SendCalendarInvitation-SendCalendarInvitation.cpp" >}}
-## **Retrieving Extended Attributes Information from Calendar Items**
+
+## **Retrieve Extended Properties from Calendar Items**
+
+Aspose.Email allows you to fetch custom MAPI properties from calendar items using property descriptors.
+
+
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-RetreiveExtAttributesForCalendarItems-RetreiveExtAttributesForCalendarItems.cpp" >}}

@@ -1,119 +1,139 @@
 ---
-title: Working with Attachments and Embedded Objects using C++ Email Parser Library
-ArticleTitle: Working with Attachments and Embedded Objects using C++ Email Parser Library
+title: Working with Attachments and Embedded Objects using C++ API
+ArticleTitle: Working with Attachments and Embedded Objects
 linktitle: Working with Attachments and Embedded Objects
 type: docs
-weight: 50
+weight: 40
 url: /cpp/working-with-attachments-and-embedded-objects/
-description: You can add and remove email attachments, display the attachment file name, and work with embedded objects using the C++ Email Parser Library API.
+description: Add, remove, extract, and display email attachments and embedded objects using Aspose.Email for C++ classes and methods.
 ---
 
-## **Managing Email Attachments**
-An email attachment is a computer file which is sent along with an email message. The file may be sent as a separate message as well as a part of the message to which it is attached. The Attachment class is used with the MailMessage class class. All messages include a body. In addition to the body, you might want to send additional files. These are sent as attachments and are represented as instance of the Attachment class. You can send any number of attachments but the size of the attachment is limited by the mail server. Gmail, for example, does not support file sizes greater than 10MB.
+
+## **Working with Attachments**
+
+**Email attachments** are files sent along with an email message. These files can include documents, images, archives, and more.
+
+In Aspose.Email for C++, attachments are managed through the [Attachment](https://reference.aspose.com/email/cpp/class/aspose.email.attachment/) class, which works together with the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class. You can add, remove, extract, or display attachments programmatically.
+
+>**Note:** The maximum attachment size depends on the mail server (for example, Gmail limits attachments to 10 MB).
+
 {{% alert %}}
 **Try it out!**
 
 Add or remove email attachments with the free [**Aspose.Email Editor App**](https://products.aspose.app/email/editor).
 {{% /alert %}}
-### **Adding Attachment**
-To attach an attachment to an email, please follow these steps:
 
-1. Create an instance of the MailMessage class class.
-1. Create an instance of the Attachment class.
-1. Load attachment into the Attachment instance.
-1. Add the Attachment instance into the MailMessage class instance.
 
-The following code snippet shows you how to add an attachment to an email.
+
+### **Adding Attachments to an Email**
+
+To attach one or more files to an email message, follow the steps below:
+
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+2. Create [Attachment](https://reference.aspose.com/email/cpp/class/aspose.email.attachment/) objects for each file.
+3. Add the attachments to the message using `AddAttachment()`.
+4. Save the message if needed.
+
+**Code sample** 
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-AddEmailAttachments-AddEmailAttachments.cpp" >}}
 
-Above, we described how to add attachments to your email message with Aspose.Email. What follows shows how to remove attachments, and display information about them on screen.
+### **Removing Attachments from an Email**
 
-### **Removing an Attachment**
-To remove an attachment, follow the steps given below:
+You can easily remove attachments from a message using the `Remove()` method of the [Attachments](https://reference.aspose.com/email/cpp/class/aspose.email.attachment_collection/) collection.
 
-- Create an instance of Attachment class.
-- Load attachment in the instance of Attachment class.
-- Add attachment to the instance of MailMessage class.
-- Remove the attachments from the instance of Attachment class using MailMessage class instance.
+The following code snippet demonstrates how to remove an attachment:
 
-The following code snippet shows you how to remove an attachment.
+1. Load or create a [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) instance.
+2. Add one or more attachments.
+3. Remove the desired attachment.
+4. Optionally, display remaining attachments.
+
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-RemoveAttachments-RemoveAttachments.cpp" >}}
 
-### **Displaying Attachment File Name**
-To display the attachment file name, follow these steps:
+### **Displaying Attachment File Names**
 
-1. Loop through the attachments in the email message and
-   1. Save each attachment.
-   1. Display each attachment's name on screen.
-
-The following code snippet shows you how to display an attachment file name on the screen.
+You can loop through all attachments and display their names on the console:
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-DisplayAttachmentFileName-DisplayAttachmentFileName.cpp" >}}
 
-### **Extracting Email Attachments**
-This topic explains how to extract an attachment from an email file. An email attachment is a computer file which is sent along with an email message. The file may be sent as a separate message as well as a part of the message to which it is attached. All emails messages includes a body. As well as the body, you might want to send additional files. These are sent as attachments and are represented as instances of the Attachment class. The Attachment class is used with the MailMessage class to work with attachments. To extract attachments from an email message, follow these steps:
+### **Extracting Attachments from an Email**
 
-- Create an instance of the MailMessage class.
-- Load an email file into the MailMessage instance.
-- Create an instance of the Attachment class and use it in a loop to extract all attachments.
-- Save the attachment and display it on screen.
-- Specify sender and recepient address in the MailMessage instance.
-- The code snippets extract attachments from an email.
+To extract and save attachments from an existing email file, follow the steps below:
+
+1. Load the message using the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+2. Loop through the [Attachments](https://reference.aspose.com/email/cpp/class/aspose.email.attachment_collection/) collection.
+3. Save each attachment to disk and optionally display its name.
+
+The following code snippet demonstrates how to extract email attachments:
+
+{{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-ExtractEmbeddedObjectsFromEmail-ExtractEmbeddedObjectsFromEmail.cpp" >}}
+
 
 |**Extracted attachments in email**|
 | :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_1.png)|
-The following code snippet shows you how to Extracting Email Attachments.
 
 
 
-{{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-ExtractEmbeddedObjectsFromEmail-ExtractEmbeddedObjectsFromEmail.cpp" >}}
-#### **Retrieving Content-Description from Attachment**
-Aspose.Email API provides the capability to read attachment's Content-Description from attachment header. The following code snippet shows you how to retrieving content description from attachment.
+### **Reading Attachment Content Description**
 
+Aspose.Email allows you to read an attachment’s **Content-Description** header for additional metadata.
 
+**Code sample**
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-RetrieveContentDescriptionFromAttachment-RetrieveContentDescriptionFromAttachment.cpp" >}}
+
+
 ## **Working with Embedded Objects**
-An embedded object is an object that was created with one application an enclosed within a document or file created by another application. For example, a Microsoft Excel spreadsheet can be embedded into a Microsoft Word report, or a video file can be embedded into a Microsoft PowerPoint presentation. When a file is embedded, rather than inserted or pasted into another document, it retains its original format. The embedded document can be opened in the original application and modified.
+
+An **embedded object** is a file created in one application and enclosed within another document or email. For example, a Microsoft Excel spreadsheet can be embedded in a Word document, or an image can be embedded directly into an email body.
+
+When an object is embedded (not just attached or linked), it retains its original format and can be opened or edited in its native application.
+
 ### **Embedding Objects into an Email**
-The LinkedResources class is used with MailMessage class to embed objects in your email messages. To add an embedded object, follow these steps
 
-1. Create an instance of the MailMessage class.
-1. Specify the from, to and subject values in MailMessage instance.
-1. Create an instance of the AlternateView class.
-1. Create an instance of the LinkedResources class.
-1. Load an embedded object into the LinkedResources instance.
-1. Add the loaded embedded object into the MailMessage class instance.
-1. Add the AlternateViews instance to the MailMessage class instance.
+To embed an image or other object in an email message, use the [LinkedResource](https://reference.aspose.com/email/cpp/class/aspose.email.linked_resource/) class together with the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) and [AlternateView](https://reference.aspose.com/email/cpp/class/aspose.email.alternate_view) classes. This allows you to include inline images or media content that appears directly in the message body.
 
-The code snippets below produce an email message with both plain text and HTML bodies and an image embedded into the HTML
+The following code sample demonstrates how to create an email message with both plain text and HTML content that includes an embedded image:
 
-|**Image embedded into email**|
-| :- |
-|![todo:image_alt_text](/plugins/servlet/confluence/placeholder/unknown-attachment)|
-You can send any number of embedded objects. The size of the attachment is limited by the mail server. Gmail, for example, does not support file sizes greater then 10MB. The code snippets below shows how to embed objects into an Email.
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+2. Set the sender, recipient, and subject fields.
+3. Create a plain-text body using [AlternateView](https://reference.aspose.com/email/cpp/class/aspose.email.alternate_view).
+4. Create an HTML body containing a reference to the embedded object using the `cid` (Content-ID).
+5. Create an instance of the [LinkedResource](https://reference.aspose.com/email/cpp/class/aspose.email.linked_resource/) class and load the object.
+6. Assign a Content-ID to the linked resource.
+7. Add the linked resource and alternate views to the message.
+8. Save or send the email message.
 
 
 
 {{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-EmbeddedObjects-EmbeddedObjects.cpp" >}}
-### **Extracting Embedded Objects**
-This topic explains how to extract embedded objects from an email file. An embedded object is an object that was created with one application an enclosed within a document or file created by another application. For example, a Microsoft Excel spreadsheet can be embedded into a Microsoft Word report, or a video file can be embedded into a Microsoft PowerPoint presentation. When a file is embedded, rather than inserted or pasted into another document, it retains its original format. The embedded document can be opened in the original application and modified.To extract an embedded object from an email message, follow these steps:
 
-1. Create an instance of the MailMessage class.
-1. Load an email file in the MailMessage instance.
-1. Create a loop and create an instance of the Attachment class in it.
-1. Save the attachment and display it on screen.
-1. Specify sender and recepient address in the MailMessage instance.
-1. The code snippet below extract embedded objects from an email.
+
+> **Note:**
+> You can embed multiple objects, but the maximum message size is limited by your mail server. For example, Gmail restricts message size to 10 MB.
+
+
+### **Extracting Embedded Objects from an Email**
+
+You can also extract embedded objects, such as images or files, from an existing email message. The process is similar to extracting attachments:
+
+1. Create an instance of the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) class.
+2. Load the email file into the [MailMessage](https://reference.aspose.com/email/cpp/class/aspose.email.mail_message/) instance.
+3. Iterate through the attachments collection.
+4. Save each embedded object to disk.
+5. Optionally, display the file names in the console.
+
+
+{{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-ExtractEmbeddedObjectsFromEmail-ExtractEmbeddedObjectsFromEmail.cpp" >}}
 
 |**Extracted embedded objects in email**|
 | :- |
 |![todo:image_alt_text](working-with-attachments-and-embedded-objects_2.png)|
-The following code snippet shows you how to Extracting Embedded Objects.
 
 
 
-{{< gist "aspose-email" "ef0db907527892c88c557bb418093cee" "Examples-EmailCPP-Email-ExtractEmbeddedObjectsFromEmail-ExtractEmbeddedObjectsFromEmail.cpp" >}}
+
+

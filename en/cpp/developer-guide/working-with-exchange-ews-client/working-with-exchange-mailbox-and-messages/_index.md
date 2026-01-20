@@ -1,153 +1,219 @@
 ---
-title: Working with Exchange Mailbox and Messages
-ArticleTitle: Working with Exchange Mailbox and Messages
+title: EWS Email Management Guide: Send, Read, and Organize Messages
+ArticleTitle: Send, Read, and Organize Messages on Exchange Server
 type: docs
 weight: 20
-url: /cpp/working-with-exchange-mailbox-and-messages/
+url: /cpp/exchange-server-ews-email-management-guide/
 ---
 
-## **Getting Mailbox Information Using EWS**
-You can get mailbox information from an Exchange Server by calling the [GetMailboxInfo ](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ab7a471f46b5ebe0e3bf2c7f9166e2927)method of the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class. It returns an instance of type [ExchangeMailboxInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_mailbox_info). Get mailbox information from properties such as MailboxUri, InboxUri, and DraftsUri. This article shows how to access mailbox information using Exchange Web Services.
+## **Retrieve Exchange Mailbox Information with EWS**
 
-To connect to the Exchange Server using Exchange Web Services (EWS), use the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class. This class uses EWS to connect to and manage items on an Exchange Server. The following code snippet shows you how to get mailbox information using the exchange web services.
+Aspose.Email allows you to retrieve mailbox details from Microsoft Exchange using the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class. By calling the [GetMailboxInfo()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ab7a471f46b5ebe0e3bf2c7f9166e2927) method, the client returns an [ExchangeMailboxInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_mailbox_info) object containing useful folder URIs such as Mailbox, Inbox, Drafts, and Sent Items.
+
+To connect to the Exchange Server with Exchange Web Services (EWS), use the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class. This class uses EWS to connect to and manage items on an Exchange Server. 
+
+The following code snippet demonstrates how to **get mailbox information** using the exchange web services.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-GetMailboxInformationFromExchangeWebServices-GetMailboxInformationFromExchangeWebServices.cpp" >}}
-## **Sending Email Messages**
-You can send email messages using an Exchange Server with the [IEWSClient->Send()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a02875ffd55c4033e7d88007a9ac2a83c) method accepts a [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) instance as a parameter and sends the email. This article explains how to send email messages using Exchange Web Services.
+## **Send Email Messages via EWS**
 
-The following code snippet shows you how to sends email messages using [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+You can send emails through Exchange by calling the [IEWSClient->Send()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a02875ffd55c4033e7d88007a9ac2a83c) method. It takes a [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) object and submits it directly through the server using EWS.
 
+The following code sample demonstrates how to send an HTML email message through an Exchange Server using Exchange Web Services (EWS) with Aspose.Email for C++. It shows the complete process of establishing a connection to Exchange, creating a mail message with sender, recipient, subject, and HTML content, and then sending the message using the EWS client's Send method.
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SendEmailMessagesUsingExchangeWebServices-SendEmailMessagesUsingExchangeWebServices.cpp" >}}
-## **Reading Emails from other User’s Mailbox**
-Some accounts on Exchange Servers have the right to access multiple mailboxes, and some users have multiple email accounts on the same Exchange Server. In both cases, users can access other user's mailboxes using Aspose.Email. This API provides a mechanism for accessing folders and emails from other mailboxes using the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class. This functionality can be achieved using the overloaded [GetMailboxInfo()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ac95e7c7a5e8678b70b4f5c4356d88582) method and providing the user email address as a parameter.
+## **Reading Emails from Other User’s Mailbox**
+Some accounts on Exchange Servers have the right to access multiple mailboxes, and some users have multiple email accounts on the same Exchange Server. In both cases, users can access other users' mailboxes with Aspose.Email. The API provides a mechanism for accessing folders and emails from other mailboxes using the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class. This functionality can be achieved using the overloaded [GetMailboxInfo()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ac95e7c7a5e8678b70b4f5c4356d88582) method and providing the user email address as a parameter.
 
 The following code snippet shows you how to read emails using the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-AccessAnotherMailboxUsingExchangeWebServiceClient-1.cpp" >}}
-## **Listing Messages**
-A list of the email messages in an Exchange mailbox can be fetched by calling the [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) method. Get the basic information about messages, such as subject, from, to and message ID, using the [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) method.
-### **Simple Messages Listing**
-To list the messages in an Exchange mailbox:
+## **List Messages Using EWS**
 
-1. Create an instance of the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
-1. Call the [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) method to get the message collection.
-1. Loop through the collection and display message information.
+Aspose.Email for C++ allows you to retrieve message metadata from Exchange Server mailboxes through the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client). Using the EWS-based [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) API, you can list messages from any folder, browse message metadata, and implement paging for large mailboxes.
 
-The following code snippet shows you how to connect to an exchange server using EWS and lists messages from the inbox folder.
+
+### **List Messages from the Inbox**
+
+Use [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) to retrieve basic message information such as subject, sender, recipients, and message ID from the Inbox or any folder.
+
+The following code sample demonstrates how to list and display basic information for all messages in an Exchange Server.
+
+1. Create an instance of [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
+2. Call [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) with the target folder URI.
+3. Iterate through [ExchangeMessageInfoCollection](https://reference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection/).
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-ListingMessagesUsingEWS-ListingMessagesUsingEWS.cpp" >}}
-### **Listing Messages From Different Folders**
-The above code snippet list all the messages in the Inbox folder. It is possible to get the list of messages from other folders as well. The [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) method accepts a folder URI as a parameter. As long as the folder URI is valid, you can get the list of messages from that folder. Use the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client)->[get_MailboxInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a63b3972a738e652a9bab4e3fcfd23a26)->xxxFolderUri property to get the URI of different folders. The rest of the code is the same as for getting a list of messages. The following code snippet shows you how to list messages from different folders using EWS.
+### **List Messages from Any Folder**
 
+[ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) accepts any valid folder URI, allowing you to list items from Deleted Items, Drafts, Sent Items, or custom folders. Use the `IEWSClient->get_MailboxInfo->xxxFolderUri` property to get the URI of different folders.
 
+The following code sample demonstrates how to access different Exchange Server folder URIs and retrieve messages from a specified folder.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-ListingMessagesFromFolders-ListingMessagesFromFolders.cpp" >}}
-### **Listing Messages with Paging Support**
-The following code snippet shows you how to get a list of messages with paging support.
+### **Pagination in Message Listing**
+For large mailboxes, use [ListMessagesByPage](https://reference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a50ea10548ed8e1b305bdeb322b8c109f) to load messages in smaller blocks.
+
+The following code sample demonstrates how to implement pagination for retrieving large numbers of messages from an Exchange Server inbox.
+
+1. First, it creates multiple test messages on the server.
+2. Then, uses the [ListMessagesByPage](https://reference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a50ea10548ed8e1b305bdeb322b8c109f) method to retrieve messages in smaller batches (5 messages per page in this case), iterating through all pages until the last page is reached.
+3. Finally, the code verifies that all messages were successfully retrieved by counting the total items across all pages.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-PagingSupportForListingMessages-PagingSupportForListingMessages.cpp" >}}
-### **Getting Message Type Information from ExchangeMessageInfo**
+### **Get Message Type Information**
+
+Use [ExchangeMessageInfo->MessageInfoType](https://reference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info#ad0019f9e3e774fa0f763456f41028b91) to determine the underlying Exchange message type (e.g., email, meeting request, etc.).
+
+The following code sample demonstrates how to connect to an Exchange Server and retrieve message type information from the Deleted Items folder.
+
+
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-GetMessageTypeFromExchangeMessageInfo-GetMessageTypeFromExchangeMessageInfo.cpp" >}}
-## **Saving Messages**
-This article shows how to get messages from an Exchange Server mailbox and save them to disk in EML and MSG formats:
 
-- Save as EML on disk.
-- Save to memory stream.
-- Save as MSG.
-### **Saving Messages to EML**
-To get messages and save in EML format:
+## **Save Messages Using Exchange Web Services (EWS)**
 
-1. Create an instance of the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class.
-1. Provide the mailboxUri, username, password and domain.
-1. Call the [IEWSClient->ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) method to get an instance of the [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection) collection.
-1. Loop through the [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection) collection to get the unique URI for each message.
-1. Call the [IEWSClient->SaveMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a1a735b25973171ac5111c3469a54f7fa) method and pass the unique URI and save location as parameters.
+Aspose.Email enables you to **retrieve messages from an Exchange Server mailbox** and **save them in multiple formats**, such as EML, memory streams, and MSG. The examples below demonstrate how to fetch message information and store messages using the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) API.
 
-The following code snippet shows you how to use EWS to connect to the Exchange Server and save messages as EML files.
+### **Save Messages as EML Files**
+
+To save mailbox messages as EML files:
+
+1. Create an [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) instance using valid credentials.
+2. Call [ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) to retrieve an [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection).
+3. Loop through the collection to access each message unique URI.
+4. Call [SaveMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a1a735b25973171ac5111c3469a54f7fa) to store each message on disk in EML format.
+
+The following code sample demonstrates how to save email messages from an Exchange Server inbox as individual EML files locally using Aspose.Email for C++.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SaveMessagesUsingExchangeWebServices-SaveMessagesUsingExchangeWebServices.cpp" >}}
-### **Saving Messages to a Memory Stream**
-Instead of saving EML files to disk, it is possible to save it to a memory stream. This is useful when you want to save the stream to some storage location like a database. Once the stream has been saved to a database, you can reload the EML file into the [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) class. The following code snippet shows you how to save messages from an Exchange Server mailbox to a memory stream using EWS.
 
+### **Save Messages to a Memory Stream**
 
+Instead of writing to disk, you can save messages to a memory stream—useful for storing emails in a database or processing them in memory.
+
+The following code sample demonstrates how to save email messages from an Exchange Server inbox into memory streams.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SaveMessagesToMemoryStreamUsingEWS-SaveMessagesToMemoryStream.cpp" >}}
-### **Saving Messages in MSG Format**
-The [IEWSClient->SaveMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a1a735b25973171ac5111c3469a54f7fa) method can directly save the message to EML format. To save the messages to MSG format, first, call the [IEWSClient->FetchMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ae0edf4afafbe6339541687aeacc84905) method which returns an instance of the [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) class. Then call the [MailMessage->Save()](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message#a41d3ada3ca8b7ca8130629b616f0b91c) method to save the message to MSG. The following code snippet shows you how to get messages from an Exchange Server mailbox and saves them to MSG format using EWS.
+
+### **Save Messages in MSG Format**
+
+To save messages as MSG:
+
+1. Retrieve the message using [FetchMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ae0edf4afafbe6339541687aeacc84905), which returns a [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message).
+2. Call [MailMessage::Save()](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message#a41d3ada3ca8b7ca8130629b616f0b91c) with MSG save options.
+
+The following code sample demonstrates how to fetch and save email messages from an Exchange Server inbox as Outlook MSG format files.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-SaveMessagesInMSGFormatExchangeEWS-SaveMessagesInMSGFormatExchangeEWS.cpp" >}}
-## **Getting ExchangeMessageInfo from Message URI**
-An email message is represented by its unique identifier, URI, and is an integral part of the ExchangeMessageInfo object. In case, only message URI is available, then [ExchangeMessageInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info) object can also be retrieved using this available information. The overload version of [ListMessages](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a2b3b4ebfdd9423eeb63d59b5e74cc53a) takes a list of Ids and returns an [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection) collection. The following code snippet shows you how to get [ExchangeMessageInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info) from message URI.
+
+## **Retrieve Message Details by Message URI**
+
+When only a message unique URI is available, you can still retrieve full [ExchangeMessageInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info) objects. The [IEWSClient::ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a2b3b4ebfdd9423eeb63d59b5e74cc53a) overload accepts a list of message IDs (URIs) and returns an [ExchangeMessageInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection). Use this feature when you store or receive message URIs externally and need to load metadata (subject, sender, size, etc.) without fetching full messages.
+
+The following code sample demonstrates how to create multiple email messages on an Exchange Server and then retrieve their message information using unique identifiers.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-GetExchangeMessageInfoFromMessageURI-GetExchangeMessageInfoFromMessageURI.cpp" >}}
-## **Fetch Messages from an Exchange Server Mailbox**
-The [ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#aad8420247acd17cb1d73303ed1982d1e) method is used to get a list of messages from an Exchange Server mailbox. The [ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#aad8420247acd17cb1d73303ed1982d1e) method gets basic information about messages, for example, the subject, the message ID, from, and to. To get the complete message details, Aspose.Email provides the [IEWSClient->FetchMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ae0edf4afafbe6339541687aeacc84905) method. This method accepts the message URI as a parameter and returns an instance of the [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) class. The [MailMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.mail_message) class then provides message details like the body, headers, and attachments. To fetch messages from Exchange Server Mailbox:
 
-1. Create an instance of type [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client).
-1. Specify the server name, user name, password, and domain.
-1. Call [IEWSClient->ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) method to get the [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection).
-1. Loop through the [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection) collection to get [ExchangeMessageInfo->get_UniqueUri()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info#a3cb9feb99e2ac195529cf9e5e7867cb7) values.
-1. Call [IEWSClient->FetchMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ae0edf4afafbe6339541687aeacc84905) and pass [ExchangeMessageInfo->get_UniqueUri()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info#a3cb9feb99e2ac195529cf9e5e7867cb7) as parameter.
+## **Fetch Full Message Content**
 
-The following code snippet demonstrates fetching all the messages using EWS.
+[ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#aad8420247acd17cb1d73303ed1982d1e) returns **summary information** (subject, sender, IDs). To load **full message content** — body, headers, attachments — use [FetchMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ae0edf4afafbe6339541687aeacc84905).
+
+The following code sample demonstrates how to fetch complete messages from an Exchange Server inbox and extract attachment information:
+
+1. Create an [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) instance.
+2. Call [ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) to get basic message metadata.
+3. Extract each message UniqueUri.
+4. Call [FetchMessage()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#ae0edf4afafbe6339541687aeacc84905) to retrieve full message details.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-FetchMessageUsingEWS-FetchMessageUsingEWS.cpp" >}}
-## **Pre-Fetch Message Size**
-Microsoft Outlook InterOp provides the feature of retrieving message size before actually fetching the complete message from the server. In case of Aspose.Email API, the summary information retrieved from the Exchange server is represented by the [ExchangeMessageInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info) class. It provides the feature of retrieving message size by using the [Size](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.message_info_base#a04bc106203ed5cfec65f4d0320d14e8a) property. In order to retrieve the message size, the standard call to [IEWSClient->ListMessages()](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a37cfefda7e1ab560a073b3e31f4d27ca) is used to retrieve the [ExchangeMessagesInfoCollection](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info_collection). The following code snippet shows you how to display message size using the [ExchangeMessageInfo](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.exchange_message_info) class.
+
+## **Fetch Message Size (Without Downloading Full Message)**
+
+Aspose.Email provides message size information without fetching the entire email, through the [ExchangeMessageInfo::Size](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.message_info_base#a04bc106203ed5cfec65f4d0320d14e8a) property.
+
+This is useful for:
+
+- mailbox statistics
+- quota calculations
+- filtering large messages before downloading
+
+The following code sample demonstrates how to list and display message metadata including size from an Exchange Server inbox.
 
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-PreFetchMessageSizeUsingIEWSClient-PreFetchMessageSizeUsingIEWSClient.cpp" >}}
-## **Download Messages from Public Folders**
-Microsoft Exchange Server lets users create public folders and post messages in them. To do this through your application, use Aspose.Email's [EWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.e_w_s_client) class to connect to the Exchange Server and read and download messages and posts from public folders. The following code snippet shows you how to reads all public folders and subfolders, and list and download any messages found in these folders. This example only works with Microsoft Exchange Server 2007 or above since only these support EWS.
 
+## **Download Emails from Exchange Public Folders**
+
+Exchange public folders allow storing shared messages across users.
+
+Aspose.Email [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) allows you to perform the following operations wih these folders and messages stored in them:
+
+- List public folders
+- Browse subfolders recursively 
+- Download messages and save them (e.g., as MSG files)
+
+>**Note:** Microsoft Exchange Server 2007 or later is required, as earlier versions do not support EWS.
+
+The following code sample demonstrates how to download messages from all public folders and their subfolders on an Exchange Server recursively, and save them as Outlook MSG files locally.
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-DownloadMessagesFromPublicFolders-DownloadMessagesFromPublicFolders.cpp" >}}
-## **Moving Messages**
-You can move email messages from one folder to another with the help of the [IEWSClient](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client) class Move method. It takes the following parameters:
 
-- The unique URI of the message which is to be moved.
-- The unique URI of the destination folder.
-### **Moving Messages between Folders**
-The following code snippet shows you how to move a message in a mailbox from the Inbox folder to a folder called Processed. In this example, the application:
+## **Move Messages Between Exchange Folders**
 
-1. Reads messages from the Inbox folder.
-1. Processes some of the messages based on some criteria (in this example, we find a keyword in the message subject).
-1. Moves messages which fulfill the given condition to the processed folder.
+You can move messages from one Exchange folder to another using the [IEWSClient::MoveItem](https://reference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a9fcc589e5315a803263cf528e084737a) method.
+It requires:
+
+- The unique URI of the message to move.
+- The destination folder unique URI.
+
+The following code sample demonstrates how to filter and move specific email messages from an Exchange Server inbox to another folder based on content criteria.
+
+1. Connect to Exchange Server using EWS credentials.
+2. Get mailbox information (folder URIs).
+3. List all messages from the Inbox.
+4. Iterate through each message.
+5. Check if subject contains "process this message".
+6. Move matching messages to Deleted Items folder.
+7. Output confirmation for each moved message.
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-MoveMessageFromOneFolderToAnotherusingEWS-MoveMessageFromOneFolderToAnotherusingEWS.cpp" >}}
-## **Deleting Messages**
+
+## **Delete Messages from an Exchange Folder**
+
 You can delete email messages from a folder with the help of the [IEWSClient->DeleteMessage](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a576fb78dcbac3bdb8b2bb87cab5d33c1) method. It takes the message's unique URI as a parameter.
 
-The following code snippet shows you how to delete a message from the Inbox folder. For the purpose of this example, the code:
+The following code sample demonstrates how to filter and delete specific email messages from an Exchange Server inbox based on subject criteria.
 
-1. Reads messages from the Inbox folder.
-1. Process messages based on some criteria (in this example, we find a keyword in the message subject).
-1. Deletes the message.
+1. Iterate through Inbox messages.
+2. Process messages based on some criteria (in this example, we find a keyword in the message subject).
+3. Delete matching messages.
+
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-DeleteMessagesFromUsingEWS-DeleteMessagesFromusingEWS.cpp" >}}
-## **Copying Messages**
-Aspose.Email API allows copying a message from one folder to another folder using the [IEWSClient->CopyItem](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a6e340250e1e0f51d68d4ffe7727f4e7f) method. The overloaded version of this method returns the Unique URI of the copied message as shown in this article.
-### **Copying a Message to Another Folder**
-The following code snippet shows you how to copy a message to another folder.
 
+## **Copy Messages to Another Exchange Folder**
+
+Use [IEWSClient::CopyItem](https://apireference.aspose.com/email/cpp/class/aspose.email.clients.exchange.web_service.i_e_w_s_client#a6e340250e1e0f51d68d4ffe7727f4e7f) to duplicate a message into a different folder.
+The overloaded version returns the URI of the newly created copy.
+
+The following code sample demonstrates how to create an email message on an Exchange Server and copy it to another folder.
 
 
 {{< gist "aspose-com-gists" "525dd06c8783ebb18fb75cfc4b31d1ef" "Examples-Cpp-source-Exchange_EWS-CopyingMessageToAnotherFolder-CopyingMessageToAnotherFolder.cpp" >}}
