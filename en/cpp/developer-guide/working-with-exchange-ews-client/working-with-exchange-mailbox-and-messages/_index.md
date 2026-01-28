@@ -1,5 +1,5 @@
 ---
-title: EWS Email Management Guide: Send, Read, and Organize Messages
+title: "EWS Email Management Guide: Send, Read, and Organize Messages"
 ArticleTitle: Send, Read, and Organize Messages on Exchange Server
 type: docs
 weight: 20

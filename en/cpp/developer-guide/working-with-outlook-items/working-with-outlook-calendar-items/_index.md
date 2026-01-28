@@ -5,7 +5,7 @@ linktitle: Working with Outlook Calendar Items
 type: docs
 weight: 80
 url: /cpp/working-with-outlook-calendar-items/
-description: Manage Outlook calendar items in C++: create and save events, set reminders, handle attachments, and read meeting attendee status.
+description: "Manage Outlook calendar items in C++: create and save events, set reminders, handle attachments, and read meeting attendee status."
 ---
 
 **Aspose.Email for C++** provides the [MapiCalendar](https://reference.aspose.com/email/cpp/class/aspose.email.mapi.mapi_calendar/) class to create, edit, and manage Microsoft Outlook calendar items. You can work with reminders, attachments, meeting recipient status, and time zones programmatically.

@@ -96,7 +96,7 @@ The code example below is attempting to append email messages asynchronously. Th
    - [SetFolder](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setfolder/) sets the target folder URI for the append operation.
    - [SetCancellationToken](https://reference.aspose.com/email/net/aspose.email.clients.exchange.webservice.models/ewsappendmessage/setcancellationtoken/) sets the cancellation token that can be used to cancel the asynchronous operation.
 
-3. The [AppendMessagesAsync]((https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/)) method returns a Task object that resolves to an IEnumerable<string> object when the asynchronous operation is complete. The "await" keyword is used to wait for the Task object to complete before proceeding.
+3. The [AppendMessagesAsync](https://reference.aspose.com/email/net/aspose.email.clients.imap/imapclient/appendmessagesasync/) method returns a Task object that resolves to an IEnumerable<string> object when the asynchronous operation is complete. The "await" keyword is used to wait for the Task object to complete before proceeding.
 4. The `uris` variable is assigned the result of the completed Task, which is an IEnumerable<string> object containing the URIs of the appended messages.
 
 ```cs
